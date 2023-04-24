@@ -1,0 +1,51 @@
+{
+  "name": "hsr-builds",
+  "author": "dvaji",
+  "version": "0.8.1",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/*",
+    "index.d.ts"
+  ],
+  "engines": {
+    "node": ">=13"
+  },
+  "scripts": {
+    "clean:dist": "rimraf dist/",
+    "build:types": "tsc src/index.ts --declarationDir dist/ --lib esnext --emitDeclarationOnly --declaration",
+    "build:lib": "vite build",
+    "build": "pnpm clean:dist && pnpm build:lib && pnpm build:types",
+    "lint": "eslint src/ --ext .ts",
+    "generate": "node ./scripts/gen/index.mjs",
+    "format-data": "prettier --loglevel warn --write \"src/data/**/*.json\"",
+    "prepublishOnly": "pnpm generate && pnpm build"
+  },
+  "devDependencies": {
+    "@aws-sdk/client-s3": "^3.317.0",
+    "@types/node": "^18.16.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/parser": "^5.59.0",
+    "chalk": "^5.1.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.39.0",
+    "prettier": "^2.8.8",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4",
+    "vite": "^4.3.1"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  }
+}
