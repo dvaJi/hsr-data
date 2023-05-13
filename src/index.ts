@@ -39,7 +39,7 @@ export interface QueryOpts<T> {
   select?: (keyof T)[];
 }
 
-export default class GenshinData {
+export default class HSRData {
   options: Options = {
     language: 'en',
   };
