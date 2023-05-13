@@ -1,7 +1,7 @@
 {
-  "name": "hsr-builds",
+  "name": "hsr-data",
   "author": "dvaji",
-  "version": "0.8.1",
+  "version": "0.0.1",
   "license": "MIT",
   "type": "module",
   "exports": {
@@ -24,7 +24,7 @@
     "build:lib": "vite build",
     "build": "pnpm clean:dist && pnpm build:lib && pnpm build:types",
     "lint": "eslint src/ --ext .ts",
-    "generate": "node ./scripts/gen/index.mjs",
+    "generate": "node ./scripts/generate.mjs",
     "format-data": "prettier --loglevel warn --write \"src/data/**/*.json\"",
     "prepublishOnly": "pnpm generate && pnpm build"
   },

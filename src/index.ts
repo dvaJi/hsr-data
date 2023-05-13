@@ -1,30 +1,35 @@
-import type { Character } from './types/character';
-import type { LightCone } from './types/lightcone';
-import type { Relic } from './types/relic';
+import type { Character } from './types/characters';
+import type { LightCone } from './types/lightcones';
+import type { Relic } from './types/relics';
+import type { Achievement } from './types/achievements';
+import type { Element } from './types/elements';
 
-export type { Character, LightCone, Relic };
+export type { Character, LightCone, Relic, Achievement, Element };
 
 export const languages = [
   'en',
   'es',
-  'ja',
-  'chs',
+  'jp',
+  'cn',
   'cht',
   'fr',
   'de',
   'id',
-  'it',
-  'ko',
+  'kr',
   'pt',
   'ru',
   'th',
-  'tr',
   'vi',
 ] as const;
 
 export type Languages = (typeof languages)[number];
 
-type Folders = 'characters' | 'lightcones' | 'relics';
+type Folders =
+  | 'characters'
+  | 'lightcones'
+  | 'relics'
+  | 'elements'
+  | 'achievements';
 
 export interface Options {
   language: Languages;
@@ -70,6 +75,26 @@ export default class GenshinData {
     return await this.findById(lang, 'characters', id, query);
   }
 
+  async relics(query?: QueryOpts<Relic>): Promise<Relic[]> {
+    const lang = this.getLang();
+    return await this.findByFolder(lang, 'relics', query);
+  }
+
+  async achievements(query?: QueryOpts<Achievement>): Promise<Achievement[]> {
+    const lang = this.getLang();
+    return await this.findByFolder(lang, 'achievements', query);
+  }
+
+  async lightcones(query?: QueryOpts<LightCone>): Promise<LightCone[]> {
+    const lang = this.getLang();
+    return await this.findByFolder(lang, 'lightcones', query);
+  }
+
+  async elements(query?: QueryOpts<Element>): Promise<Element[]> {
+    const lang = this.getLang();
+    return await this.findByFolder(lang, 'elements', query);
+  }
+
   private async findByFolder<T>(
     lang: Languages,
     folder: Folders,
@@ -109,4 +134,28 @@ export default class GenshinData {
 
     return results;
   }
+}
+
+/**
+ * Replace #n[i]% in description based on params value
+ *
+ *
+ * @param desc
+ * @param params
+ * @returns
+ */
+export function renderDescription(desc: string, params: number[]): string {
+  let str = desc;
+  for (let i = 0; i < params.length; i++) {
+    const value = roundTwoDecimals(params[i]);
+    str = str.replaceAll(`#${i + 1}[i]`, value.toString());
+    str = str.replaceAll(`#${i + 1}[f1]%`, roundTwoDecimals(value * 100) + '%');
+    str = str.replaceAll(`#${i + 1}[i]%`, roundTwoDecimals(value * 100) + '%');
+  }
+
+  return str;
+}
+
+function roundTwoDecimals(value: number) {
+  return Math.round(value * 100) / 100;
 }
