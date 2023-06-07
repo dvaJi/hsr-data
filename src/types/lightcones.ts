@@ -33,6 +33,5 @@ export interface Material {
 
 export interface SuperImposition {
   rank: number;
-  effect: string;
   params: string[];
 }
