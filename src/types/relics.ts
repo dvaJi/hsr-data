@@ -10,6 +10,7 @@ export interface Relic {
 
 export interface Piece {
     _id:       number;
+    ids:       number[];
     id:        string;
     name:      string;
     type:      Type;

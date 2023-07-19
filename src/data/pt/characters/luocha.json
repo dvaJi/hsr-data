@@ -392,7 +392,7 @@
       "_id": 120302,
       "id": "prayer_of_abyss_flower",
       "name": "Prece da Flor do Abismo",
-      "desc": "Após usar a sua Perícia, restaura os PV do aliado-alvo imediatamente em #1[i]% do ATQ de Luocha + #2[i]. Enquanto isso, Luocha ganha 1 acúmulo de Flor do Abismo.\nQuando a porcentagem dos PV de qualquer aliado chega em #3[i]% ou menos, um efeito equivalente à Perícia de Luocha será imediatamente ativado por Luocha, e aplicado a este aliado uma vez (sem consumir Pontos de Perícia). Este efeito pode ser ativado novamente após #4[i] rodada(s).",
+      "desc": "Após usar a sua Perícia, Luocha restaura os PV do aliado-alvo imediatamente em #1[i]% do ATQ de Luocha + #2[i]. Enquanto isso, Luocha ganha 1 acúmulo de Flor do Abismo.\nQuando a porcentagem dos PV de qualquer aliado chega a #3[i]% ou menos, um efeito equivalente à Perícia de Luocha será imediatamente ativado e aplicado a este aliado uma vez (sem consumir Pontos de Perícia). Este efeito pode ser ativado novamente após #4[i] rodada(s).",
       "simpleDesc": "Restaura PV de um único aliado e ganha 1 acúmulo de Flor do Abismo.",
       "type": "Perícia",
       "tag": "Restauração",
@@ -656,7 +656,7 @@
       "_id": 120303,
       "id": "death_wish",
       "name": "Desejo de Morte",
-      "desc": "Remove #2[i] melhoria(s) de todos os inimigos e causa #1[i]% do ATQ de Luocha como Dano Imaginário a todos os inimigos. Luocha ganha 1 acúmulo de Flor do Abismo.",
+      "desc": "Remove #2[i] melhoria(s) de todos os inimigos e causa #1[i]% do ATQ de Luocha como Dano Imaginário a todos os inimigos. Ao mesmo tempo, Luocha ganha 1 acúmulo de Flor do Abismo.",
       "simpleDesc": "Remove 1 melhoria de todos os inimigos, causa Dano Imaginário a todos os inimigos, e ganha 1 acúmulo de Flor do Abismo.",
       "type": "Perícia Suprema",
       "tag": "Área",
@@ -920,8 +920,8 @@
       "_id": 120304,
       "id": "cycle_of_life",
       "name": "Ciclo da Vida",
-      "desc": "Quando a Flor do Abismo alcança #1[i] acúmulo(s), Luocha consome todos os acúmulos de Flor do Abismo para ativar um Campo contra o inimigo.\nQuando qualquer inimigo dentro do Campo é atacado por um aliado, esse aliado imediatamente restaura uma quantidade de PV igual a #2[f1]% do ATQ de Luocha mais #4[i].\nO efeito do Campo dura #3[i] rodadas. Quando Luocha é derrubado, o Campo é desativado.",
-      "simpleDesc": "Cria um Campo ao obter 2 acúmulos de Flor do Abismo. Enquanto o Campo estiver ativo, todos os aliados restauram PV após atacar.",
+      "desc": "Quando a Flor do Abismo alcança #1[i] acúmulo(s), Luocha consome todos os acúmulos de Flor do Abismo para ativar um Campo contra o inimigo.\nQuando qualquer inimigo dentro do Campo é atacado por um aliado, o PV desse aliado é imediatamente restaurado em uma quantidade igual a #2[f1]% do ATQ de Luocha mais #4[i].\nO efeito do Campo dura #3[i] rodadas. Quando Luocha é derrubado, o Campo é desativado.",
+      "simpleDesc": "Cria um Campo ao obter 2 acúmulos de Flor do Abismo. Enquanto o Campo estiver ativo, os aliados restauram PV após atacar.",
       "type": "Talento",
       "tag": "Restauração",
       "levels": [
@@ -1184,8 +1184,8 @@
       "_id": 120307,
       "id": "mercy_of_a_fool",
       "name": "Misericórdia dos Tolos",
-      "desc": "Após usar sua Técnica, no início da próxima batalha, o Talento será ativado imediatamente.",
-      "simpleDesc": "Após usar sua Técnica, ativa imediatamente o efeito de seu Talento no início da próxima batalha.",
+      "desc": "Após a Técnica ser utilizada, o Talento será acionado imediatamente no início da próxima batalha.",
+      "simpleDesc": "Após a Técnica ser utilizada, ativa imediatamente o efeito do Talento no início da próxima batalha.",
       "type": "Técnica",
       "tag": "Restauração",
       "levels": [
@@ -1208,12 +1208,12 @@
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "Concessão da Pureza",
-      "desc": "Quando sua Perícia é ativada, se os PV do aliado-alvo forem inferiores a <nobr>50%</nobr>, a Cura Realizada por Luocha aumenta em <nobr>30%</nobr>. Se o aliado-alvo tiver <nobr>50%</nobr> ou mais de PV, o aliado recebe um Escudo que pode absorver Dano igual a <nobr>18%</nobr> do ATQ de Luocha mais <nobr>240</nobr>, e que dura por <nobr>2</nobr> rodadas."
+      "desc": "Quando sua Perícia é ativada, se os PV do aliado-alvo forem inferiores a <nobr>50%</nobr>, a Cura Realizada por Luocha aumenta em <nobr>30%</nobr>. Se o aliado-alvo tiver <nobr>50%</nobr> ou mais de PV, o aliado recebe um Escudo que pode absorver Dano igual a <nobr>18%</nobr> do ATQ de Luocha + <nobr>240</nobr>, que dura por <nobr>2</nobr> rodadas."
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
-      "name": "Questionamento dos Tolos",
+      "name": "Questionamento pelos Tolos",
       "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
     },
     {
@@ -1232,7 +1232,7 @@
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "De Volta ao Pó",
-      "desc": "Quando a Perícia Suprema é utilizada, há uma chance fixa de <nobr>100%</nobr> de reduzir a RES a Todos os Tipos de todos os inimigos em <nobr>20%</nobr> por <nobr>2</nobr> rodada(s)."
+      "desc": "Ao usar a Perícia Suprema, há uma chance fixa de <nobr>100%</nobr> de reduzir a RES a Todos os Tipos de todos os inimigos em <nobr>20%</nobr> por <nobr>2</nobr> rodada(s)."
     }
   ],
   "skillTreePoints": [
@@ -1418,7 +1418,7 @@
       "embedBonusSkill": {
         "id": "sanctified",
         "name": "Santificado",
-        "desc": "Quando um inimigo no Campo é atacado por um aliado, todos os aliados, exceto o atacante, restauram PV igual a <nobr>#1[f1]%</nobr> do ATQ de Luocha mais <nobr>93</nobr>.",
+        "desc": "Quando um inimigo no Campo é atacado por um aliado, todos os aliados, exceto o atacante, restauram PV igual a <nobr>#1[f1]%</nobr> do ATQ de Luocha + <nobr>93</nobr>.",
         "type": "",
         "tag": "",
         "levels": [

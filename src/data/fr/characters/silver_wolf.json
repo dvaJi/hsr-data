@@ -392,8 +392,8 @@
       "_id": 100602,
       "id": "allow_changes",
       "name": "Autoriser les modifications ?",
-      "desc": "Il y a #2[i]% de chances de base d'appliquer 1 Faiblesse du type d'un allié présent sur le champ de bataille à une cible ennemie. Réduit également la RÉS aux DGT de ce type de faiblesse de l'ennemi de #4[i]% pendant #3[i] tours. Si l'ennemi a déjà ce type de faiblesse, l'effet de réduction de RÉS aux DGT ne sera pas déclenché.\nChaque ennemi ne peut avoir qu'une seule Faiblesse appliquée par Louve d'argent à la fois. Si Louve d'argent applique une nouvelle Faiblesse, elle remplace la précédente.\nD'autre part, il y a #5[i]% de chances de base de réduire toutes les RÉS de type de l'ennemi de #6[f1]% pendant #7[i] tours.\nInflige des DGT quantiques équivalents à #1[i]% de l'ATQ de Louve d'argent à cet ennemi.",
-      "simpleDesc": "Fortes chances d'appliquer une Faiblesse de type supplémentaire et inflige des DGT quantiques à la cible ennemie.",
+      "desc": "Il y a #2[i]% de chances de base d'appliquer 1 Faiblesse du type d'un personnage présent sur le champ de bataille à une cible ennemie. Réduit également la RÉS aux DGT de ce type de faiblesse de l'ennemi de #4[i]% pendant #3[i] tours. Si l'ennemi a déjà ce type de faiblesse, l'effet de réduction de RÉS aux DGT ne sera pas déclenché.\nChaque ennemi ne peut avoir qu'une seule Faiblesse appliquée par Louve d'argent à la fois. Si Louve d'argent applique une nouvelle Faiblesse, elle remplace la précédente.\nD'autre part, il y a #5[i]% de chances de base de réduire toutes les RÉS de type de l'ennemi de #6[f1]% pendant #7[i] tours.\nInflige des DGT quantiques équivalents à #1[i]% de l'ATQ de Louve d'argent à cet ennemi.",
+      "simpleDesc": "Fortes chances d'appliquer une Faiblesse de type supplémentaire à un ennemi unique et de lui infliger des DGT quantiques.",
       "type": "Compétence",
       "tag": "Incapacitation",
       "levels": [
@@ -657,7 +657,7 @@
       "id": "user_banned",
       "name": "Compte bloqué",
       "desc": "Il y a #2[i]% de chances de base de réduire la DÉF d'une cible ennemie de #3[f1]% pendant #4[i] tours. D'autre part, inflige à la cible ennemie des DGT quantiques équivalent à #1[i]% de l'ATQ de Louve d'argent.",
-      "simpleDesc": "Fortes chances de réduire la DÉF d'un ennemi unique et inflige des DGT quantiques massifs à la cible ennemie.",
+      "simpleDesc": "Fortes chances de réduire la DÉF d'un ennemi unique et inflige des DGT quantiques massifs à cette cible ennemie.",
       "type": "Ultime",
       "tag": "Incapacitation",
       "levels": [
@@ -921,7 +921,7 @@
       "id": "awaiting_system_response",
       "name": "En attente de la réponse du système...",
       "desc": "Louve d'argent peut créer trois types de Bugs : une réduction d'ATQ de #1[f1]%, une réduction de DÉF de #2[f1]% ou une réduction de VIT de #3[f1]%.\nChaque fois que Louve d'argent attaque, elle a #4[i]% de chances de base d'implanter un Bug aléatoire qui dure #5[i] tours aux cibles attaquées.",
-      "simpleDesc": "Après une attaque, il y a une chance d'implanter 1 Bug aléatoire à l'ennemi attaqué.",
+      "simpleDesc": "Après chaque attaque, il y a une chance d'implanter 1 Bug aléatoire à l'ennemi attaqué.",
       "type": "Talent",
       "tag": "Incapacitation",
       "levels": [
@@ -1201,7 +1201,7 @@
       "_id": 100601,
       "id": "social_engineering",
       "name": "Piratage psychologique",
-      "desc": "Lorsque qu'elle utilise son ultime pour attaquer un ennemi, Louve d'argent régénère <nobr>7</nobr> points d'énergie pour chaque malus actuellement subi par la cible ennemie. Cet effet peut être déclenché jusqu'à <nobr>5</nobr> fois pour chaque utilisation de son ultime."
+      "desc": "Lorsqu'elle utilise son ultime pour attaquer un ennemi, Louve d'argent régénère <nobr>7</nobr> points d'énergie pour chaque malus actuellement subi par la cible ennemie. Cet effet peut être déclenché jusqu'à <nobr>5</nobr> fois pour chaque utilisation de son ultime."
     },
     {
       "_id": 100602,
@@ -1254,7 +1254,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "L'ATQ augmente de <nobr>#1[f1]%</nobr>",
+                    "key": "L'ATQ augmente de <nobr>#1[f1]%</nobr>.",
                     "value": 0.04
                   }
                 ],
@@ -1285,7 +1285,7 @@
             "promotionReq": 2,
             "statusList": [
               {
-                "key": "Les chances d'appliquer des effets augmentent de <nobr>#1[f1]%</nobr>",
+                "key": "Les chances d'appliquer des effets augmentent de <nobr>#1[f1]%</nobr>.",
                 "value": 0.04
               }
             ],
@@ -1359,7 +1359,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "Les chances d'appliquer des effets augmentent de <nobr>#1[f1]%</nobr>",
+                    "key": "Les chances d'appliquer des effets augmentent de <nobr>#1[f1]%</nobr>.",
                     "value": 0.06
                   }
                 ],
@@ -1390,7 +1390,7 @@
             "promotionReq": 4,
             "statusList": [
               {
-                "key": "L'ATQ augmente de <nobr>#1[f1]%</nobr>",
+                "key": "L'ATQ augmente de <nobr>#1[f1]%</nobr>.",
                 "value": 0.06
               }
             ],
@@ -1465,7 +1465,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "Les DGT quantiques augmentent de <nobr>#1[f1]%</nobr>",
+                "key": "Les DGT quantiques augmentent de <nobr>#1[f1]%</nobr>.",
                 "value": 0.048
               }
             ],
@@ -1499,7 +1499,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "Les chances d'appliquer des effets augmentent de <nobr>#1[f1]%</nobr>",
+                "key": "Les chances d'appliquer des effets augmentent de <nobr>#1[f1]%</nobr>.",
                 "value": 0.08
               }
             ],
@@ -1526,7 +1526,7 @@
       "embedBonusSkill": {
         "id": "side_note",
         "name": "Annotation complémentaire",
-        "desc": "Lorsque l'ennemi subit au moins <nobr>3</nobr> malus, la compétence diminue ses RÉS à tous les types de <nobr>3%</nobr> supplémentaires.",
+        "desc": "Lorsque l'ennemi subit au moins <nobr>3</nobr> malus, la compétence diminue toutes ses RÉS de type de <nobr>3%</nobr> supplémentaires.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1574,7 +1574,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "L'ATQ augmente de <nobr>#1[f1]%</nobr>",
+                "key": "L'ATQ augmente de <nobr>#1[f1]%</nobr>.",
                 "value": 0.08
               }
             ],
@@ -1605,7 +1605,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "L'ATQ augmente de <nobr>#1[f1]%</nobr>",
+            "key": "L'ATQ augmente de <nobr>#1[f1]%</nobr>.",
             "value": 0.04
           }
         ],
