@@ -1,0 +1,87 @@
+{
+  "id": 50010,
+  "contacts": {
+    "id": 1000,
+    "name": "Pom-Pom",
+    "icon": "UI_Message_Contacts_Pam",
+    "signature": "Come to Pom-Pom for Trailblazing rewards!",
+    "typeId": 1,
+    "type": "Characters"
+  },
+  "relatedMessages": [
+    11118, 11500, 11501, 11502, 11509, 12134, 50009, 50010, 50011
+  ],
+  "sections": [
+    {
+      "id": 5001000,
+      "startingMessageId": [500100000],
+      "messages": {
+        "500100000": {
+          "id": 500100000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "I was tidying the cabins when I realized this!",
+          "next": [500100001]
+        },
+        "500100001": {
+          "id": 500100001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "{NICKNAME}, you don't have luggage, do you? Or did I not find your suitcase?",
+          "next": [500100002, 500100004]
+        },
+        "500100002": {
+          "id": 500100002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "I pack light when I travel",
+          "next": [500100003]
+        },
+        "500100003": {
+          "id": 500100003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "That may be true, but don't underestimate the Express' capacity! We can carry as much luggage as you want!",
+          "next": [500100006]
+        },
+        "500100004": {
+          "id": 500100004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "I'm poor. Can't afford luggage",
+          "next": [500100005]
+        },
+        "500100005": {
+          "id": 500100005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "...Seriously? Every passenger should have their personal possessions",
+          "next": [500100006]
+        },
+        "500100006": {
+          "id": 500100006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "You need to prepare and have resources ready when you're adventuring... But I don't see any of that from you, {NICKNAME}. That won't do!",
+          "next": [500100007]
+        },
+        "500100007": {
+          "id": 500100007,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "You can't be this reckless! Mmm, come back when you can. Pom-Pom has something to say to you. Don't push it off!",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1000, 8001]
+    }
+  ]
+}

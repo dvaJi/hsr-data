@@ -1,0 +1,87 @@
+{
+  "id": 50010,
+  "contacts": {
+    "id": 1000,
+    "name": "폼폼",
+    "icon": "UI_Message_Contacts_Pam",
+    "signature": "개척 보상은 날 찾아와! 앞으로 최적화될 거야",
+    "typeId": 1,
+    "type": "캐릭터"
+  },
+  "relatedMessages": [
+    11118, 11500, 11501, 11502, 11509, 12134, 50009, 50010, 50011
+  ],
+  "sections": [
+    {
+      "id": 5001000,
+      "startingMessageId": [500100000],
+      "messages": {
+        "500100000": {
+          "id": 500100000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "방금 차량을 정리하다가 폼폼이 뭔가를 발견했거든!",
+          "next": [500100001]
+        },
+        "500100001": {
+          "id": 500100001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "{NICKNAME}, 너는 짐이 없어? 아니면 폼폼이 네 가방을 못 찾은 건가?",
+          "next": [500100002, 500100004]
+        },
+        "500100002": {
+          "id": 500100002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "밖에 다닐 땐 간편한 게 좋아",
+          "next": [500100003]
+        },
+        "500100003": {
+          "id": 500100003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "맞는 말이긴 하지만, 열차를 얕보지 말라고. 열차가 넓어서 얼마든지 다 실을 수 있단 말이야!",
+          "next": [500100006]
+        },
+        "500100004": {
+          "id": 500100004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "가난해서 살 돈이 없어",
+          "next": [500100005]
+        },
+        "500100005": {
+          "id": 500100005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "…뭐야, 승객들은 다 개인 물품이 있는데",
+          "next": [500100006]
+        },
+        "500100006": {
+          "id": 500100006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "밖에서 모험하려면 물품을 미리 준비해야지…. 근데 {NICKNAME}, 넌 별 신경 안 쓰는 것 같아. 그럼 안 된다고!",
+          "next": [500100007]
+        },
+        "500100007": {
+          "id": 500100007,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "그렇게 무모하게 굴면 안 돼! 음, 차장으로서 할 말이 있으니까 돌아와. 핑계 대지 말고!",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1000, 8001]
+    }
+  ]
+}

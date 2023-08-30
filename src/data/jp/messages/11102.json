@@ -1,0 +1,69 @@
+{
+  "id": 11102,
+  "contacts": {
+    "id": 1108,
+    "name": "サンポ",
+    "icon": "1108",
+    "signature": "古代遺物収集代行、検査通過実績あり",
+    "typeId": 1,
+    "type": "キャラクター"
+  },
+  "relatedMessages": [11102, 20020, 20039, 20040],
+  "sections": [
+    {
+      "id": 1110200,
+      "startingMessageId": [111020000],
+      "messages": {
+        "111020000": {
+          "id": 111020000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "{NICKNAME}さん、僕の救世主！やっと連絡が取れました、僕を助けてください！",
+          "next": [111020001, 111020002]
+        },
+        "111020001": {
+          "id": 111020001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "いやだ、と言ったら？",
+          "next": [111020003]
+        },
+        "111020002": {
+          "id": 111020002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "送信に失敗しました。しばらく経ってから再度お試しください",
+          "next": [111020004]
+        },
+        "111020003": {
+          "id": 111020003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "返事が早い…！お願いします。これは人の命に関わることなんです！",
+          "next": [111020005]
+        },
+        "111020004": {
+          "id": 111020004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "失敗？調子が悪いのでしょうか…",
+          "next": [111020005]
+        },
+        "111020005": {
+          "id": 111020005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "とにかく、急いで大鉱区に来てください！時間は待ってくれません。このサンポの命は今、あなたに懸かっているんです！",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1108, 8001]
+    }
+  ]
+}

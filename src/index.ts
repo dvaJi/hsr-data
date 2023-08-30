@@ -3,6 +3,8 @@ import type { LightCone } from './types/lightcones';
 import type { Relic } from './types/relics';
 import type { Achievement } from './types/achievements';
 import type { Element } from './types/elements';
+import type { Items } from './types/items';
+import type { Messages } from './types/messages';
 
 export type { Character, LightCone, Relic, Achievement, Element };
 
@@ -29,7 +31,9 @@ type Folders =
   | 'lightcones'
   | 'relics'
   | 'elements'
-  | 'achievements';
+  | 'achievements'
+  | 'items'
+  | 'messages';
 
 export interface Options {
   language: Languages;
@@ -93,6 +97,16 @@ export default class HSRData {
   async elements(query?: QueryOpts<Element>): Promise<Element[]> {
     const lang = this.getLang();
     return await this.findByFolder(lang, 'elements', query);
+  }
+
+  async items(query?: QueryOpts<Items>): Promise<Items[]> {
+    const lang = this.getLang();
+    return await this.findByFolder(lang, 'items', query);
+  }
+
+  async messages(query?: QueryOpts<Messages>): Promise<Messages[]> {
+    const lang = this.getLang();
+    return await this.findByFolder(lang, 'messages', query);
   }
 
   private async findByFolder<T>(

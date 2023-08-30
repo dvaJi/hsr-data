@@ -1,0 +1,79 @@
+{
+  "id": 50009,
+  "contacts": {
+    "id": 1000,
+    "name": "Пом-Пом",
+    "icon": "UI_Message_Contacts_Pam",
+    "signature": "Приходите ко мне за наградами Первопроходца!",
+    "typeId": 1,
+    "type": "Персонаж"
+  },
+  "relatedMessages": [
+    11118, 11500, 11501, 11502, 11509, 12134, 50009, 50010, 50011
+  ],
+  "sections": [
+    {
+      "id": 5000900,
+      "startingMessageId": [500090000],
+      "messages": {
+        "500090000": {
+          "id": 500090000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "Как же долго тебя не было на экспрессе, {NICKNAME}.",
+          "next": [500090001, 500090003]
+        },
+        "500090001": {
+          "id": 500090001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Не так много времени прошло с нашей последней встречи ведь?",
+          "next": [500090002]
+        },
+        "500090002": {
+          "id": 500090002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "Не придирайся к словам! Пом!",
+          "next": [500090005]
+        },
+        "500090003": {
+          "id": 500090003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Да... Давненько не виделись. Я уж и не помню, как выглядит Пом-Пом.",
+          "next": [500090004]
+        },
+        "500090004": {
+          "id": 500090004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "Ну, не настолько долго!",
+          "next": [500090005]
+        },
+        "500090005": {
+          "id": 500090005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "Заходи, как будет время. У меня кое-что для тебя есть.",
+          "next": [500090006]
+        },
+        "500090006": {
+          "id": 500090006,
+          "type": "Sticker",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "[Одобрение]",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1000, 8001]
+    }
+  ]
+}

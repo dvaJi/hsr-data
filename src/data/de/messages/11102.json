@@ -1,0 +1,69 @@
+{
+  "id": 11102,
+  "contacts": {
+    "id": 1108,
+    "name": "Sampo",
+    "icon": "1108",
+    "signature": "Agent für alte Relikte mit Qualitätsprüfungserfahrung",
+    "typeId": 1,
+    "type": "Figuren"
+  },
+  "relatedMessages": [11102, 20020, 20039, 20040],
+  "sections": [
+    {
+      "id": 1110200,
+      "startingMessageId": [111020000],
+      "messages": {
+        "111020000": {
+          "id": 111020000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "{NICKNAME}, {F#meine Heldin}{M#mein Held}! Endlich habe ich dich erreicht! Du musst mich retten!",
+          "next": [111020001, 111020002]
+        },
+        "111020001": {
+          "id": 111020001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Und wenn ich es nicht tue?",
+          "next": [111020003]
+        },
+        "111020002": {
+          "id": 111020002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Deine Nachricht wurde leider nicht gesendet. Bitte versuche es später erneut.",
+          "next": [111020004]
+        },
+        "111020003": {
+          "id": 111020003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "Bitte antworte bald! Ich flehe dich an. Es geht um Leben und Tod!",
+          "next": [111020005]
+        },
+        "111020004": {
+          "id": 111020004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "Gescheitert? Kann ich mich auf dieses Ding verlassen oder nicht ...",
+          "next": [111020005]
+        },
+        "111020005": {
+          "id": 111020005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "Wenn du einen Moment Zeit hast, triff mich bei der Großen Mine, {M#mein geschätzter Gönner}{F#meine geschätzte Gönnerin}! Jede Sekunde zählt. Mein Leben ist jetzt in deiner Hand.",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1108, 8001]
+    }
+  ]
+}

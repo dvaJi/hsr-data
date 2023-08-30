@@ -1,0 +1,53 @@
+{
+  "id": 11108,
+  "contacts": {
+    "id": 1105,
+    "name": "娜塔莎",
+    "icon": "1105",
+    "signature": "机械聚落巡诊，切勿跑空",
+    "typeId": 1,
+    "type": "角色"
+  },
+  "relatedMessages": [11108, 20017, 20033, 20034],
+  "sections": [
+    {
+      "id": 1110800,
+      "startingMessageId": [111080000],
+      "messages": {
+        "111080000": {
+          "id": 111080000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1105,
+          "text": "打扰你了，{NICKNAME}，这个小装置我还用得不太熟练呢。等你有空的时候，能来诊所一趟吗？我有件比较私人的事想找你聊聊",
+          "next": [111080001, 111080002]
+        },
+        "111080001": {
+          "id": 111080001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "没问题，这就来",
+          "next": [111080003]
+        },
+        "111080002": {
+          "id": 111080002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "好，等我把手头的事忙完",
+          "next": [111080003]
+        },
+        "111080003": {
+          "id": 111080003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1105,
+          "text": "谢谢你，{NICKNAME}。领导地火这样的组织，让我已经快忘了该怎么去依靠别人了。谢谢你帮我找回了那种感觉",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1105, 8001]
+    }
+  ]
+}

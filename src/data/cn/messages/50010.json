@@ -1,0 +1,87 @@
+{
+  "id": 50010,
+  "contacts": {
+    "id": 1000,
+    "name": "帕姆",
+    "icon": "UI_Message_Contacts_Pam",
+    "signature": "开拓奖励找我！以后会优化",
+    "typeId": 1,
+    "type": "角色"
+  },
+  "relatedMessages": [
+    11118, 11500, 11501, 11502, 11509, 12134, 50009, 50010, 50011
+  ],
+  "sections": [
+    {
+      "id": 5001000,
+      "startingMessageId": [500100000],
+      "messages": {
+        "500100000": {
+          "id": 500100000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "列车长刚才在整理车厢，然后帕姆发现一件事！",
+          "next": [500100001]
+        },
+        "500100001": {
+          "id": 500100001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "{NICKNAME}乘客，你好像没什么行李？还是说帕姆没找到你的箱子？",
+          "next": [500100002, 500100004]
+        },
+        "500100002": {
+          "id": 500100002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "出门在外，轻车从简",
+          "next": [500100003]
+        },
+        "500100003": {
+          "id": 500100003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "话是这么说没错，但可不能小瞧列车帕，车厢这么大，再多的东西都能装得下！",
+          "next": [500100006]
+        },
+        "500100004": {
+          "id": 500100004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "穷，买不起",
+          "next": [500100005]
+        },
+        "500100005": {
+          "id": 500100005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "…什么嘛，每个乘客都会有私人物品帕",
+          "next": [500100006]
+        },
+        "500100006": {
+          "id": 500100006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "在外面冒险，得提前准备好物资…但我看{NICKNAME}乘客好像完全没有这种意识，这可不行帕！",
+          "next": [500100007]
+        },
+        "500100007": {
+          "id": 500100007,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "这么莽撞绝对不行！唔，你还是回来一趟帕，列车长有话要跟你说，不许推脱哦",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1000, 8001]
+    }
+  ]
+}

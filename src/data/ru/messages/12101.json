@@ -1,0 +1,93 @@
+{
+  "id": 12101,
+  "contacts": {
+    "id": 36,
+    "name": "Мясная лавка",
+    "icon": "UI_Message_Contacts_Anonymous",
+    "signature": "Свежее мясо каждый день! Первым пришёл, первым обслужен!",
+    "typeId": 2,
+    "type": "Другое"
+  },
+  "relatedMessages": [12101],
+  "sections": [
+    {
+      "id": 1210100,
+      "startingMessageId": [121010000],
+      "messages": {
+        "121010000": {
+          "id": 121010000,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "Вы знакомы с Мэй? Вы член её семьи?",
+          "next": [121010001]
+        },
+        "121010001": {
+          "id": 121010001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Кажется, ты ошибаешься. Я не её родственник.",
+          "next": [121010002]
+        },
+        "121010002": {
+          "id": 121010002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Но я знаю её. Что-то произошло? Сегодня она ещё не заходила. А я ведь даже отложил для неё хороший кусок.",
+          "next": [121010003, 121010007]
+        },
+        "121010003": {
+          "id": 121010003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "С Мэй произошёл несчастный случай. Я помогаю найти родственников.",
+          "next": [121010004]
+        },
+        "121010004": {
+          "id": 121010004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Правда?",
+          "next": [121010005]
+        },
+        "121010005": {
+          "id": 121010005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Не может быть.",
+          "next": [121010006]
+        },
+        "121010006": {
+          "id": 121010006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Если я могу чем-нибудь помочь, пожалуйста, дай мне знать.",
+          "next": []
+        },
+        "121010007": {
+          "id": 121010007,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Всё в порядке, не волнуйтесь, но сегодня она не придёт.",
+          "next": [121010008]
+        },
+        "121010008": {
+          "id": 121010008,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Хорошо, я понял.",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [8001, 36]
+    }
+  ]
+}

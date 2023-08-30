@@ -1,0 +1,69 @@
+{
+  "id": 11102,
+  "contacts": {
+    "id": 1108,
+    "name": "삼포",
+    "icon": "1108",
+    "signature": "고대 유물 대리. 검수 기록 있음",
+    "typeId": 1,
+    "type": "캐릭터"
+  },
+  "relatedMessages": [11102, 20020, 20039, 20040],
+  "sections": [
+    {
+      "id": 1110200,
+      "startingMessageId": [111020000],
+      "messages": {
+        "111020000": {
+          "id": 111020000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "{NICKNAME}, 나의 구세주! 드디어 연락이 됐네! 날 꼭 구하러 와야 돼",
+          "next": [111020001, 111020002]
+        },
+        "111020001": {
+          "id": 111020001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "만일 내가 싫다고 하면요?",
+          "next": [111020003]
+        },
+        "111020002": {
+          "id": 111020002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "죄송합니다, 메시지 전송에 실패했습니다. 잠시 후 다시 시도해주세요",
+          "next": [111020004]
+        },
+        "111020003": {
+          "id": 111020003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "칼답이네! 내가 이렇게 빌게. 생사가 달린 문제야!",
+          "next": [111020005]
+        },
+        "111020004": {
+          "id": 111020004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "실패? 이거 대체 되는 거야 안 되는 거야…",
+          "next": [111020005]
+        },
+        "111020005": {
+          "id": 111020005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "아무튼 시간 나면 큰 광산구역으로 빨리 와, 고객님! 시간은 사람을 기다리지 않지, 이 늙은 삼포 {F#오빠}{M#형}의 목숨이 전부 너한테 달려 있다고",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1108, 8001]
+    }
+  ]
+}

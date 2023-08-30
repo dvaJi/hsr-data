@@ -1,0 +1,77 @@
+{
+  "id": 10100,
+  "contacts": {
+    "id": 1008,
+    "name": "Arlan",
+    "icon": "1008",
+    "signature": "Contacto de emergencia de Peppy",
+    "typeId": 1,
+    "type": "Personajes"
+  },
+  "relatedMessages": [10100, 10107, 10111, 10119, 20014, 20027, 20028],
+  "sections": [
+    {
+      "id": 1010000,
+      "startingMessageId": [101000000],
+      "messages": {
+        "101000000": {
+          "id": 101000000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "¡Hola! Humm, soy yo, pedí tu contacto sin tu consentimiento.",
+          "next": [101000001]
+        },
+        "101000001": {
+          "id": 101000001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "¿Sigues en la Estación Espacial?",
+          "next": [101000002, 101000003, 101000004]
+        },
+        "101000002": {
+          "id": 101000002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Claro, aún no me despedí de ti.",
+          "next": [101000005]
+        },
+        "101000003": {
+          "id": 101000003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Me fui con el Expreso para viajar por las estrellas.",
+          "next": [101000005]
+        },
+        "101000004": {
+          "id": 101000004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Si estoy o no dependerá del motivo por el que me busques...",
+          "next": [101000005]
+        },
+        "101000005": {
+          "id": 101000005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "La Estación Espacial puso en marcha un programa llamado Plan de renovación. Si tienes tiempo, me gustaría pedirte ayuda.",
+          "next": [101000007]
+        },
+        "101000007": {
+          "id": 101000007,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "Uf, si mando otro mensaje más me quedaré sin créditos este mes... ¡Ven! ¡Te estaré esperando!",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1008, 8001]
+    }
+  ]
+}

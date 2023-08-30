@@ -1,0 +1,69 @@
+{
+  "id": 11102,
+  "contacts": {
+    "id": 1108,
+    "name": "Sampo",
+    "icon": "1108",
+    "signature": "Agente de reliquias con experiencia en inspección",
+    "typeId": 1,
+    "type": "Personajes"
+  },
+  "relatedMessages": [11102, 20020, 20039, 20040],
+  "sections": [
+    {
+      "id": 1110200,
+      "startingMessageId": [111020000],
+      "messages": {
+        "111020000": {
+          "id": 111020000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "{NICKNAME}, ¡mi {F#heroína}{M#héroe}! ¡Por fin logro contactar contigo! ¡Tienes que salvarme!",
+          "next": [111020001, 111020002]
+        },
+        "111020001": {
+          "id": 111020001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "¿Y si no lo hago?",
+          "next": [111020003]
+        },
+        "111020002": {
+          "id": 111020002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "No se pudo enviar su mensaje. Inténtelo de nuevo más tarde.",
+          "next": [111020004]
+        },
+        "111020003": {
+          "id": 111020003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "¡Gracias por responder tan rápido! Te lo ruego, es una cuestión de vida o muerte.",
+          "next": [111020005]
+        },
+        "111020004": {
+          "id": 111020004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "¿No se pudo enviar? ¿Es que esta cosa no funciona?",
+          "next": [111020005]
+        },
+        "111020005": {
+          "id": 111020005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "Cuando tengas un minuto, ven a verme a la mina principal. ¡Cada segundo cuenta! ¡La vida de tu amigo Sampo depende de ti!",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1108, 8001]
+    }
+  ]
+}

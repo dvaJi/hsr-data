@@ -1,0 +1,53 @@
+{
+  "id": 11108,
+  "contacts": {
+    "id": 1105,
+    "name": "나타샤",
+    "icon": "1105",
+    "signature": "기계 부락 회진 중. 헛걸음하게 하지 마세요",
+    "typeId": 1,
+    "type": "캐릭터"
+  },
+  "relatedMessages": [11108, 20017, 20033, 20034],
+  "sections": [
+    {
+      "id": 1110800,
+      "startingMessageId": [111080000],
+      "messages": {
+        "111080000": {
+          "id": 111080000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1105,
+          "text": "{NICKNAME}, 방해해서 미안한데, 아직 이 조그만 장치의 사용법을 잘 모르겠어. 시간 있을 때 진료소에 올 수 있어? 개인적으로 할 얘기가 있어",
+          "next": [111080001, 111080002]
+        },
+        "111080001": {
+          "id": 111080001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "문제없죠, 바로 갈게요",
+          "next": [111080003]
+        },
+        "111080002": {
+          "id": 111080002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "알겠어요, 하던 일만 끝내고 갈게요",
+          "next": [111080003]
+        },
+        "111080003": {
+          "id": 111080003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1105,
+          "text": "고마워, {NICKNAME}. 와일드 파이어같은 조직을 이끌다 보니 남한테 의지하는 법도 잊어버렸어. 이런 기분 오랜만이야, 고마워",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1105, 8001]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "id": 12102,
+  "contacts": {
+    "id": 37,
+    "name": "Service client automatisé de Aux manches de nuage",
+    "icon": "UI_Message_Contacts_Anonymous",
+    "signature": "De superbes ventes sont en cours ! Laissez des commentaires positifs afin d'obtenir des réductions !",
+    "typeId": 2,
+    "type": "Autres"
+  },
+  "relatedMessages": [12102],
+  "sections": [
+    {
+      "id": 1210200,
+      "startingMessageId": [121020000],
+      "messages": {
+        "121020000": {
+          "id": 121020000,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "Est-ce que par hasard vous connaissez Mei ? Vous êtes de sa famille ?",
+          "next": [121020001]
+        },
+        "121020001": {
+          "id": 121020001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 37,
+          "text": "Salutations, et bienvenue Aux manches de nuage. Un article vous intéresse ? Je peux vous renseigner à son sujet. Je suis Intella, votre chargée de clientèle en ligne !",
+          "next": [121020002]
+        },
+        "121020002": {
+          "id": 121020002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 37,
+          "text": "Souhaitez-vous être {M#transféré}{F#transférée} vers un chargé de clientèle humain ?",
+          "next": [121020003, 121020005]
+        },
+        "121020003": {
+          "id": 121020003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Veuillez me transférer à un chargé de clientèle humain, merci.",
+          "next": [121020004]
+        },
+        "121020004": {
+          "id": 121020004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 39,
+          "text": "J'ai bien peur que vous ne vous adressiez à la mauvaise personne.",
+          "next": []
+        },
+        "121020005": {
+          "id": 121020005,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Excusez-moi. Je dois effectivement parler à la mauvaise personne.",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [8001, 37, 39]
+    }
+  ]
+}

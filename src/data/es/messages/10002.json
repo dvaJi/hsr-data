@@ -1,0 +1,77 @@
+{
+  "id": 10002,
+  "contacts": {
+    "id": 1013,
+    "name": "Herta",
+    "icon": "1013",
+    "signature": "Esta cuenta está deshabilitada | Contacto comercial: Asta",
+    "typeId": 1,
+    "type": "Personajes"
+  },
+  "relatedMessages": [10002, 12176, 12178, 20015, 20029, 20030, 50001, 50002],
+  "sections": [
+    {
+      "id": 1000200,
+      "startingMessageId": [100020001],
+      "messages": {
+        "100020001": {
+          "id": 100020001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1013,
+          "text": "Hola, {NICKNAME}, soy Herta. Te necesito para algo bueno.",
+          "next": [100020002]
+        },
+        "100020002": {
+          "id": 100020002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1013,
+          "text": "¡Ven rápido a mi oficina! ¡Te espero!",
+          "next": [100020003]
+        },
+        "100020003": {
+          "id": 100020003,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "¿?",
+          "next": [100020004, 100020005]
+        },
+        "100020004": {
+          "id": 100020004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Pero estás justo a mi lado.",
+          "next": [100020006]
+        },
+        "100020005": {
+          "id": 100020005,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "¿No puedes decírmelo simplemente?",
+          "next": [100020006]
+        },
+        "100020006": {
+          "id": 100020006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1013,
+          "text": "[Respuesta automática] Hola. En este momento no estoy disponible. Tampoco me pondré en contacto contigo más tarde.",
+          "next": [100020007]
+        },
+        "100020007": {
+          "id": 100020007,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "¿?",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1013, 8001]
+    }
+  ]
+}

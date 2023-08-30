@@ -1,0 +1,69 @@
+{
+  "id": 11102,
+  "contacts": {
+    "id": 1108,
+    "name": "Sampo",
+    "icon": "1108",
+    "signature": "Agent de reliques anciennes certifié",
+    "typeId": 1,
+    "type": "Personnages"
+  },
+  "relatedMessages": [11102, 20020, 20039, 20040],
+  "sections": [
+    {
+      "id": 1110200,
+      "startingMessageId": [111020000],
+      "messages": {
+        "111020000": {
+          "id": 111020000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "{NICKNAME}, mon {M#héros}{F#héroïne} ! J'ai enfin réussi à te contacter ! Tu dois venir me sauver !",
+          "next": [111020001, 111020002]
+        },
+        "111020001": {
+          "id": 111020001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Et si je n'ai pas envie ?",
+          "next": [111020003]
+        },
+        "111020002": {
+          "id": 111020002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Désolé, votre message n'a pas pu être envoyé. Veuillez réessayer plus tard.",
+          "next": [111020004]
+        },
+        "111020003": {
+          "id": 111020003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "S'il te plaît, réponds ! Je t'en supplie. C'est une question de vie ou de mort !",
+          "next": [111020005]
+        },
+        "111020004": {
+          "id": 111020004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "N'a pas pu être envoyé ? Est-ce que ça fonctionne au moins...?",
+          "next": [111020005]
+        },
+        "111020005": {
+          "id": 111020005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1108,
+          "text": "Quand tu auras une minute, viens me retrouver à la Grande mine, {M#estimé client}{F#estimée cliente} ! Chaque seconde compte. Ma vie est désormais entre tes mains, {M#cher ami}{F#chère amie}",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1108, 8001]
+    }
+  ]
+}

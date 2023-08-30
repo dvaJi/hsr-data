@@ -1,0 +1,69 @@
+{
+  "id": 12102,
+  "contacts": {
+    "id": 37,
+    "name": "Cloudbreadth Sleeves Automated Customer Service",
+    "icon": "UI_Message_Contacts_Anonymous",
+    "signature": "Big sales are on! Leave positive comments for discounts!",
+    "typeId": 2,
+    "type": "Others"
+  },
+  "relatedMessages": [12102],
+  "sections": [
+    {
+      "id": 1210200,
+      "startingMessageId": [121020000],
+      "messages": {
+        "121020000": {
+          "id": 121020000,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "Do you happen to know Mei? Are you her relative?",
+          "next": [121020001]
+        },
+        "121020001": {
+          "id": 121020001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 37,
+          "text": "Greetings! Welcome to Cloudbreadth Sleeves. Have you seen an item of interest? I can give you more details about it~ I'm your online e-customer service representative, Intella!",
+          "next": [121020002]
+        },
+        "121020002": {
+          "id": 121020002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 37,
+          "text": "Do you wish to transfer to a live customer support representative?",
+          "next": [121020003, 121020005]
+        },
+        "121020003": {
+          "id": 121020003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Please transfer me to a live customer support representative, thank you.",
+          "next": [121020004]
+        },
+        "121020004": {
+          "id": 121020004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 39,
+          "text": "I'm afraid you might have the wrong person.",
+          "next": []
+        },
+        "121020005": {
+          "id": 121020005,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Sorry, I think I have the wrong person.",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [8001, 37, 39]
+    }
+  ]
+}

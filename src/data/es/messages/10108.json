@@ -1,0 +1,69 @@
+{
+  "id": 10108,
+  "contacts": {
+    "id": 7,
+    "name": "Sistema de vigilancia de Herta",
+    "icon": "UI_Message_Contacts_Anonymous",
+    "signature": "Nous te vigila",
+    "typeId": 2,
+    "type": "Otros"
+  },
+  "relatedMessages": [10108, 10120],
+  "sections": [
+    {
+      "id": 1010800,
+      "startingMessageId": [101080001],
+      "messages": {
+        "101080001": {
+          "id": 101080001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 7,
+          "text": "Tarjeta de acceso especial detectada, 3 en total, nivel de clasificación desconocido.",
+          "next": [101080002]
+        },
+        "101080002": {
+          "id": 101080002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 7,
+          "text": "El sistema activó el comando de triple acceso. Le damos la bienvenida, está donde siempre.",
+          "next": [101080003, 101080004, 101080005]
+        },
+        "101080003": {
+          "id": 101080003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "¿Dónde es \"donde siempre\"?",
+          "next": [101080006]
+        },
+        "101080004": {
+          "id": 101080004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "¿Cuándo conseguí 3 tarjetas de acceso especial?",
+          "next": [101080006]
+        },
+        "101080005": {
+          "id": 101080005,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "¿Se trata de alguna clase de oferta VIP?",
+          "next": [101080006]
+        },
+        "101080006": {
+          "id": 101080006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 7,
+          "text": "Verificación de respuesta inválida. El sistema activó el comando de triple acceso. Le damos la bienvenida, está donde siempre.",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [7, 8001]
+    }
+  ]
+}

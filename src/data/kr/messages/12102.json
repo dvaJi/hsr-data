@@ -1,0 +1,69 @@
+{
+  "id": 12102,
+  "contacts": {
+    "id": 37,
+    "name": "「광운 의상점」 자동 응답 서비스",
+    "icon": "UI_Message_Contacts_Anonymous",
+    "signature": "이벤트 진행 중! 후기 약속하면 할인 제공!",
+    "typeId": 2,
+    "type": "기타"
+  },
+  "relatedMessages": [12102],
+  "sections": [
+    {
+      "id": 1210200,
+      "startingMessageId": [121020000],
+      "messages": {
+        "121020000": {
+          "id": 121020000,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "메이 씨를 아세요? 메이 씨 가족이신가요?",
+          "next": [121020001]
+        },
+        "121020001": {
+          "id": 121020001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 37,
+          "text": "안녕하세요~ 「광운 의상점」을 찾아주셔서 감사합니다. 마음이 드는 게 있으면 말씀해주세요~ 전 온라인 고객센터 「똑똑」이에요~",
+          "next": [121020002]
+        },
+        "121020002": {
+          "id": 121020002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 37,
+          "text": "상담직원을 연결해드릴까요?",
+          "next": [121020003, 121020005]
+        },
+        "121020003": {
+          "id": 121020003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "상담직원을 연결해주세요, 감사해요",
+          "next": [121020004]
+        },
+        "121020004": {
+          "id": 121020004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 39,
+          "text": "사람을 잘못 찾았어요",
+          "next": []
+        },
+        "121020005": {
+          "id": 121020005,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "아니에요, 제가 사람을 잘못 찾은 것 같아요",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [8001, 37, 39]
+    }
+  ]
+}

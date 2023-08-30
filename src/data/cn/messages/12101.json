@@ -1,0 +1,93 @@
+{
+  "id": 12101,
+  "contacts": {
+    "id": 36,
+    "name": "肉店镇屠",
+    "icon": "UI_Message_Contacts_Anonymous",
+    "signature": "每日鲜肉，先到先得。",
+    "typeId": 2,
+    "type": "其他"
+  },
+  "relatedMessages": [12101],
+  "sections": [
+    {
+      "id": 1210100,
+      "startingMessageId": [121010000],
+      "messages": {
+        "121010000": {
+          "id": 121010000,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "请问您认识梅姐吗，您是梅姐的亲属吗？",
+          "next": [121010001]
+        },
+        "121010001": {
+          "id": 121010001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "啊，你找错人了，我不是梅姐的亲属",
+          "next": [121010002]
+        },
+        "121010002": {
+          "id": 121010002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "不过我认识梅姐，梅姐怎么了吗？今天没见着她来啊，我还专门给她留了块好肉呢",
+          "next": [121010003, 121010007]
+        },
+        "121010003": {
+          "id": 121010003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "梅姐出了事故，我在帮她联系亲属",
+          "next": [121010004]
+        },
+        "121010004": {
+          "id": 121010004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "真的吗？",
+          "next": [121010005]
+        },
+        "121010005": {
+          "id": 121010005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "不会吧",
+          "next": [121010006]
+        },
+        "121010006": {
+          "id": 121010006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "有什么需要我帮忙，记得告诉我呀",
+          "next": []
+        },
+        "121010007": {
+          "id": 121010007,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "没有什么事，不用担心，不过今天可能不会来了",
+          "next": [121010008]
+        },
+        "121010008": {
+          "id": 121010008,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "嗯嗯，我了解了",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [8001, 36]
+    }
+  ]
+}

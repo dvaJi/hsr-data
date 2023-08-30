@@ -1,0 +1,93 @@
+{
+  "id": 12101,
+  "contacts": {
+    "id": 36,
+    "name": "Le boucher",
+    "icon": "UI_Message_Contacts_Anonymous",
+    "signature": "De la viande fraîche quotidiennement ! Premier arrivé, premier servi !",
+    "typeId": 2,
+    "type": "Autres"
+  },
+  "relatedMessages": [12101],
+  "sections": [
+    {
+      "id": 1210100,
+      "startingMessageId": [121010000],
+      "messages": {
+        "121010000": {
+          "id": 121010000,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "Est-ce que par hasard vous connaissez Mei ? Vous êtes de sa famille ?",
+          "next": [121010001]
+        },
+        "121010001": {
+          "id": 121010001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Ah, je crois que vous vous êtes {M#trompé}{F#trompée} de personne. Je ne suis pas de sa famille",
+          "next": [121010002]
+        },
+        "121010002": {
+          "id": 121010002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "En revanche, je la connais. Il est arrivé quelque chose ? Je ne l'ai pas vue aujourd'hui. Je lui ai même mis un morceau de viande de côté",
+          "next": [121010003, 121010007]
+        },
+        "121010003": {
+          "id": 121010003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Mei a eu un accident. J'aide simplement à contacter ses proches",
+          "next": [121010004]
+        },
+        "121010004": {
+          "id": 121010004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Vraiment ?",
+          "next": [121010005]
+        },
+        "121010005": {
+          "id": 121010005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Oh non",
+          "next": [121010006]
+        },
+        "121010006": {
+          "id": 121010006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Si je peux faire quoi que ce soit pour me rendre utile, dites-le-moi.",
+          "next": []
+        },
+        "121010007": {
+          "id": 121010007,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Ne vous inquiétez pas. Ce n'est rien de grave, mais je ne pense pas qu'elle vous rende visite aujourd'hui",
+          "next": [121010008]
+        },
+        "121010008": {
+          "id": 121010008,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 36,
+          "text": "Je vois",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [8001, 36]
+    }
+  ]
+}

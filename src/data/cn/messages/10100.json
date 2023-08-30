@@ -1,0 +1,77 @@
+{
+  "id": 10100,
+  "contacts": {
+    "id": 1008,
+    "name": "阿兰",
+    "icon": "1008",
+    "signature": "佩佩紧急联系人",
+    "typeId": 1,
+    "type": "角色"
+  },
+  "relatedMessages": [10100, 10107, 10111, 10119, 20014, 20027, 20028],
+  "sections": [
+    {
+      "id": 1010000,
+      "startingMessageId": [101000000],
+      "messages": {
+        "101000000": {
+          "id": 101000000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "嗨！那个，是我…未经同意要了你的联系方式",
+          "next": [101000001]
+        },
+        "101000001": {
+          "id": 101000001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "你还在「黑塔」吗？",
+          "next": [101000002, 101000003, 101000004]
+        },
+        "101000002": {
+          "id": 101000002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "当然，我还没和你告别呢",
+          "next": [101000005]
+        },
+        "101000003": {
+          "id": 101000003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "我已经跟着列车环游千星去啦",
+          "next": [101000005]
+        },
+        "101000004": {
+          "id": 101000004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "我在不在取决于你找我啥事儿…",
+          "next": [101000005]
+        },
+        "101000005": {
+          "id": 101000005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "空间站正推行「复兴计划」，如果有空，希望你能过来帮把手",
+          "next": [101000007]
+        },
+        "101000007": {
+          "id": 101000007,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "不行再发下去的话我这个月的信用点就不够用了…这是最后一条，总之快来吧我等你！",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1008, 8001]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": 10100,
+  "contacts": {
+    "id": 1008,
+    "name": "Arlan",
+    "icon": "1008",
+    "signature": "Contato de emergência do Peppy.",
+    "typeId": 1,
+    "type": "Personagens"
+  },
+  "relatedMessages": [10100, 10107, 10111, 10119, 20014, 20027, 20028],
+  "sections": [
+    {
+      "id": 1010000,
+      "startingMessageId": [101000000],
+      "messages": {
+        "101000000": {
+          "id": 101000000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "Ei, hm, sou eu... Peguei seu número sem pedir",
+          "next": [101000001]
+        },
+        "101000001": {
+          "id": 101000001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "Você ainda está na Estação Espacial?",
+          "next": [101000002, 101000003, 101000004]
+        },
+        "101000002": {
+          "id": 101000002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "É claro, a gente ainda não disse tchau",
+          "next": [101000005]
+        },
+        "101000003": {
+          "id": 101000003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Já tô no Expresso pra viajar nas estrelas",
+          "next": [101000005]
+        },
+        "101000004": {
+          "id": 101000004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Depende do que você precisa de mim...",
+          "next": [101000005]
+        },
+        "101000005": {
+          "id": 101000005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "A Estação está lançando um programa chamado \"Projeto Revitalização\". Se der, eu gostaria que desse uma ajuda.",
+          "next": [101000007]
+        },
+        "101000007": {
+          "id": 101000007,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "Ah, os créditos do meu celular desse mês estão acabando... Essa é a última mensagem. Venha! Vou estar esperando.",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1008, 8001]
+    }
+  ]
+}

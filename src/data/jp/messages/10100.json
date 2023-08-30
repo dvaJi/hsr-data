@@ -1,0 +1,77 @@
+{
+  "id": 10100,
+  "contacts": {
+    "id": 1008,
+    "name": "アーラン",
+    "icon": "1008",
+    "signature": "ペペの緊急連絡先",
+    "typeId": 1,
+    "type": "キャラクター"
+  },
+  "relatedMessages": [10100, 10107, 10111, 10119, 20014, 20027, 20028],
+  "sections": [
+    {
+      "id": 1010000,
+      "startingMessageId": [101000000],
+      "messages": {
+        "101000000": {
+          "id": 101000000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "お！えっと、俺だ…同意なく貴様の連絡先をもらっておいた",
+          "next": [101000001]
+        },
+        "101000001": {
+          "id": 101000001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "まだ「ヘルタ」にいるか？",
+          "next": [101000002, 101000003, 101000004]
+        },
+        "101000002": {
+          "id": 101000002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "もちろん、まださようならも言ってない",
+          "next": [101000005]
+        },
+        "101000003": {
+          "id": 101000003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "もう列車に乗って星々を旅してる",
+          "next": [101000005]
+        },
+        "101000004": {
+          "id": 101000004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "いるかいないかは…{F#あんた}{M#お前}の「用事」次第かな",
+          "next": [101000005]
+        },
+        "101000005": {
+          "id": 101000005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "ステーションは今「復興計画」を進めている、時間があれば、手伝いに来て欲しい",
+          "next": [101000007]
+        },
+        "101000007": {
+          "id": 101000007,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1008,
+          "text": "いやダメだ、これ以上送信すると今月の信用ポイントが足りなくなる…これが最後だ、とにかく早く来い、待ってるぞ！",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1008, 8001]
+    }
+  ]
+}

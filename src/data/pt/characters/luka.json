@@ -392,7 +392,7 @@
       "_id": 111102,
       "id": "lacerating_fist",
       "name": "Punho Lacerante",
-      "desc": "Causa Dano Físico igual a #1[i]% do ATQ de Luka a um único inimigo-alvo. Além disso, há uma chance-base de #2[i]% de infligir Sangramento neles, durando #5[i] rodada(s).\nEnquanto estiver com Sangramento, o inimigo recebe #3[f1]% de seus PV máximos como Dano Contínuo Físico ao início de cada rodada. Este Dano não pode exceder #4[i]% do ATQ de Luka.",
+      "desc": "Causa Dano Físico igual a #1[i]% do ATQ de Luka a um único inimigo-alvo. Além disso, há uma chance-base de #2[i]% de infligir Sangramento a ele, durando #5[i] rodada(s).\nEnquanto estiver com Sangramento, o inimigo recebe #3[f1]% de seus PV máximos como Dano Físico Contínuo ao início de cada rodada. Este Dano não pode exceder #4[i]% do ATQ de Luka.",
       "simpleDesc": "Causa Dano Físico a um único inimigo, com uma alta chance de causar Sangramento no inimigo.",
       "type": "Perícia",
       "tag": "Alvo Único",
@@ -908,7 +908,7 @@
       "_id": 111104,
       "id": "flying_sparks",
       "name": "Faíscas Voadoras",
-      "desc": "Após Luka usar seu ATQ Básico \"Punho Certeiro\" ou sua Perícia \"Punho Lacerante\", ele recebe #1[i] acúmulo de Desejo de Lutar, até um máximo de 4 acúmulos. Quando ele tiver 2 ou mais acúmulos de Desejo de Lutar, seu ATQ Básico \"Punho Certeiro\" é aprimorado para \"Punho Demolidor de Céus\". Depois que \"Gancho Ascendente\" do seu ATQ Básico Aprimorado atinge um inimigo-alvo com Sangramento, o Sangramento causa Dano ao alvo imediatamente por 1 vez igual a #2[i]% do Dano original. No início da batalha, Luka possuirá 1 acúmulo de Desejo de Lutar.",
+      "desc": "Após Luka usar seu ATQ Básico \"Punho Certeiro\" ou sua Perícia \"Punho Lacerante\", ele recebe #1[i] acúmulo de Desejo de Lutar, até um máximo de 4 acúmulos. Quando ele tiver 2 ou mais acúmulos de Desejo de Lutar, seu ATQ Básico \"Punho Certeiro\" é aprimorado para \"Punho Demolidor de Céus\". Depois que o \"Gancho Ascendente\" do seu ATQ Básico Aprimorado atinge um inimigo-alvo com Sangramento, o Sangramento causa Dano ao alvo imediatamente por 1 vez igual a #2[i]% do Dano original. No início da batalha, Luka possuirá 1 acúmulo de Desejo de Lutar.",
       "simpleDesc": "Após usar seu ATQ Básico \"Punho Certeiro\" ou sua Perícia \"Punho Lacerante\", recebe 1 acúmulo de Desejo de Lutar. Quando 2 ou mais acúmulos de Desejo de Lutar estão presentes, o ATQ Básico se torna Aprimorado.\nSe o inimigo estiver com Sangramento, o ATQ Básico Aprimorado causa Dano extra por 1 vez.",
       "type": "Talento",
       "tag": "Aprimoramento",
@@ -1189,7 +1189,7 @@
       "_id": 111102,
       "id": "the_enemy_is_weak_i_am_strong",
       "name": "O Inimigo é Fraco, Eu Sou Forte",
-      "desc": "Se a Perícia atingir um inimigo-alvo com Fraqueza a Físico, ganha <nobr>1</nobr> acúmulo(s) de Desejo de Lutar."
+      "desc": "Se a Perícia atingir um inimigo-alvo com Fraqueza Física, ganha <nobr>1</nobr> acúmulo(s) de Desejo de Lutar."
     },
     {
       "_id": 111103,
@@ -1441,8 +1441,8 @@
           "type": 1,
           "children": [],
           "embedBuff": {
-            "id": "atk_boost",
-            "name": "Bônus de ATQ",
+            "id": "def_boost",
+            "name": "Bônus de DEF",
             "levelReq": 0,
             "promotionReq": 6,
             "statusList": [

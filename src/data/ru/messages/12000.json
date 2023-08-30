@@ -1,0 +1,64 @@
+{
+  "id": 12000,
+  "contacts": {
+    "id": 1002,
+    "name": "Дань Хэн",
+    "icon": "1002",
+    "signature": "По всем вопросам, связанным с базой данных, обращайтесь ко мне.",
+    "typeId": 1,
+    "type": "Персонаж"
+  },
+  "relatedMessages": [
+    10000, 11131, 12000, 12011, 12117, 12141, 20004, 20005, 20006, 20091, 20092,
+    20093
+  ],
+  "sections": [
+    {
+      "id": 1200000,
+      "startingMessageId": [120000000],
+      "messages": {
+        "120000000": {
+          "id": 120000000,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "Эй, ребята, с вами всё в порядке?",
+          "next": [120000001]
+        },
+        "120000001": {
+          "id": 120000001,
+          "type": "Text",
+          "sender": "System",
+          "senderContactId": 8001,
+          "text": "Ошибка отправки сообщения",
+          "next": [120000002, 120000003]
+        },
+        "120000002": {
+          "id": 120000002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Я с Март 7 на миссии на Сяньчжоу...",
+          "next": [120000004]
+        },
+        "120000003": {
+          "id": 120000003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Ты норм?..",
+          "next": [120000004]
+        },
+        "120000004": {
+          "id": 120000004,
+          "type": "Text",
+          "sender": "System",
+          "senderContactId": 8001,
+          "text": "Ошибка отправки сообщения",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [8001]
+    }
+  ]
+}

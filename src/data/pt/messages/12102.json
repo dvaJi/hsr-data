@@ -1,0 +1,69 @@
+{
+  "id": 12102,
+  "contacts": {
+    "id": 37,
+    "name": "Atendimento ao cliente automatizado das Mangas Nuviosas",
+    "icon": "UI_Message_Contacts_Anonymous",
+    "signature": "Chegaram grandes ofertas! Deixem comentários positivos para ganharem descontos!",
+    "typeId": 2,
+    "type": "Outros"
+  },
+  "relatedMessages": [12102],
+  "sections": [
+    {
+      "id": 1210200,
+      "startingMessageId": [121020000],
+      "messages": {
+        "121020000": {
+          "id": 121020000,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "Você por acaso conhece a Mei? É parente dela?",
+          "next": [121020001]
+        },
+        "121020001": {
+          "id": 121020001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 37,
+          "text": "Saudações! Boas-vindas às Mangas Nuviosas. Viu alguma coisa que te interessou? Eu posso te dar mais detalhes, sou sua representante online do atendimento ao cliente, Intella!",
+          "next": [121020002]
+        },
+        "121020002": {
+          "id": 121020002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 37,
+          "text": "Você quer que eu te transfira para uma pessoa representante do atendimento ao cliente?",
+          "next": [121020003, 121020005]
+        },
+        "121020003": {
+          "id": 121020003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Me transfere pra uma pessoa representante do atendimento ao cliente, por favor. {F#Obrigada}{M#Obrigado}",
+          "next": [121020004]
+        },
+        "121020004": {
+          "id": 121020004,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 39,
+          "text": "Você está falando com a pessoa errada",
+          "next": []
+        },
+        "121020005": {
+          "id": 121020005,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Desculpa, acho que eu tô falando com a pessoa errada",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [8001, 37, 39]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": 10002,
+  "contacts": {
+    "id": 1013,
+    "name": "黑塔",
+    "icon": "1013",
+    "signature": "此帳號停用 | 商務聯絡：艾絲妲",
+    "typeId": 1,
+    "type": "角色"
+  },
+  "relatedMessages": [10002, 12176, 12178, 20015, 20029, 20030, 50001, 50002],
+  "sections": [
+    {
+      "id": 1000200,
+      "startingMessageId": [100020001],
+      "messages": {
+        "100020001": {
+          "id": 100020001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1013,
+          "text": "嘿，{NICKNAME}，我是黑塔，有好事找你",
+          "next": [100020002]
+        },
+        "100020002": {
+          "id": 100020002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1013,
+          "text": "速來我的辦公室！等你！",
+          "next": [100020003]
+        },
+        "100020003": {
+          "id": 100020003,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "？",
+          "next": [100020004, 100020005]
+        },
+        "100020004": {
+          "id": 100020004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "但你就在我旁邊啊",
+          "next": [100020006]
+        },
+        "100020005": {
+          "id": 100020005,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "你直接說不就好了",
+          "next": [100020006]
+        },
+        "100020006": {
+          "id": 100020006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1013,
+          "text": "[自動回覆]您好，我現在有事不在，晚點也不會和您聯絡",
+          "next": [100020007]
+        },
+        "100020007": {
+          "id": 100020007,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "？？",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1013, 8001]
+    }
+  ]
+}

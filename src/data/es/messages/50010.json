@@ -1,0 +1,87 @@
+{
+  "id": 50010,
+  "contacts": {
+    "id": 1000,
+    "name": "Pom-Pom",
+    "icon": "UI_Message_Contacts_Pam",
+    "signature": "¡Búscame para recoger recompensas trazacaminos!",
+    "typeId": 1,
+    "type": "Personajes"
+  },
+  "relatedMessages": [
+    11118, 11500, 11501, 11502, 11509, 12134, 50009, 50010, 50011
+  ],
+  "sections": [
+    {
+      "id": 5001000,
+      "startingMessageId": [500100000],
+      "messages": {
+        "500100000": {
+          "id": 500100000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "¡Estaba ordenando los vagones cuando me di cuenta de algo!",
+          "next": [500100001]
+        },
+        "500100001": {
+          "id": 500100001,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "{NICKNAME}, no tienes equipaje, ¿verdad? ¿O es que no he encontrado tu maleta?",
+          "next": [500100002, 500100004]
+        },
+        "500100002": {
+          "id": 500100002,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Es mejor viajar con un equipaje ligero.",
+          "next": [500100003]
+        },
+        "500100003": {
+          "id": 500100003,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "Puede ser cierto, pero no subestimes la capacidad del Expreso. Podemos llevar todo el equipaje que quieras.",
+          "next": [500100006]
+        },
+        "500100004": {
+          "id": 500100004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Soy pobre. No puedo permitirme llevar equipaje.",
+          "next": [500100005]
+        },
+        "500100005": {
+          "id": 500100005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "... ¿En serio? Todos los pasajeros deberían tener posesiones personales.",
+          "next": [500100006]
+        },
+        "500100006": {
+          "id": 500100006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "Hay que tener recursos preparados cuando uno se aventura en el exterior... Pero no veo que traigas nada. ¡Eso no está bien!",
+          "next": [500100007]
+        },
+        "500100007": {
+          "id": 500100007,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 1000,
+          "text": "¡No puedes ser tan imprudente! Humm, ¡vuelve cuando puedas! Tengo algo que decirte. ¡No lo pospongas!",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [1000, 8001]
+    }
+  ]
+}
