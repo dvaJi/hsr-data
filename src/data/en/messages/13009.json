@@ -1,0 +1,61 @@
+{
+  "id": 13009,
+  "contacts": {
+    "id": 108,
+    "name": "???",
+    "icon": "UI_Message_Contacts_Anonymous",
+    "signature": null,
+    "typeId": 2,
+    "type": "Others"
+  },
+  "relatedMessages": [13007, 13009],
+  "sections": [
+    {
+      "id": 1300900,
+      "startingMessageId": [130090000],
+      "messages": {
+        "130090000": {
+          "id": 130090000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 108,
+          "text": "If you really want to help, transfer 50,000 credits first.",
+          "next": [130090001]
+        },
+        "130090001": {
+          "id": 130090001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "<color=#eb4d3dff>[Pending Receipt]</color> 50,000 Credits",
+          "next": [130090002]
+        },
+        "130090002": {
+          "id": 130090002,
+          "type": "Text",
+          "sender": "System",
+          "senderContactId": 8001,
+          "text": "Transfer failed.",
+          "next": [130090003]
+        },
+        "130090003": {
+          "id": 130090003,
+          "type": "Text",
+          "sender": "System",
+          "senderContactId": 8001,
+          "text": "Transfer cancelled.",
+          "next": [130090004]
+        },
+        "130090004": {
+          "id": 130090004,
+          "type": "Text",
+          "sender": "PlayerAuto",
+          "senderContactId": 8001,
+          "text": "?",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [108, 8001]
+    }
+  ]
+}

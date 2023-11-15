@@ -81,6 +81,7 @@ export enum Sender {
 
 export enum MessageType {
     Image = "Image",
+    Link = "Link",
     RAID = "Raid",
     Sticker = "Sticker",
     Text = "Text",
