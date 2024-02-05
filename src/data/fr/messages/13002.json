@@ -1,0 +1,77 @@
+{
+  "id": 13002,
+  "contacts": {
+    "id": 106,
+    "name": "Dr Edward",
+    "icon": "UI_Message_Contacts_DreamStore",
+    "signature": "L'inconscient est le langage du grand Autre.",
+    "typeId": 2,
+    "type": "Autres"
+  },
+  "relatedMessages": [13002],
+  "sections": [
+    {
+      "id": 1300200,
+      "startingMessageId": [130020000],
+      "messages": {
+        "130020000": {
+          "id": 130020000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 106,
+          "text": "Bonjour, {M#Monsieur}{F#Mademoiselle} {NICKNAME}. Quelqu'un a fait don d'une bulle onirique à notre magasin, et, suite à une analyse spectrale psychométrique, j'ai estimé que vous pourriez être {M#intéressé}{F#intéressée} par son contenu.",
+          "next": [130020001, 130020003, 130020004]
+        },
+        "130020001": {
+          "id": 130020001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Ça a l'air suspect...",
+          "next": [130020002]
+        },
+        "130020002": {
+          "id": 130020002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 106,
+          "text": "Ne vous inquiétez pas, tous les rêves de notre magasin ont été examinés minutieusement, il n'y a absolument aucune chance pour qu'ils recèlent des vices cachés à même de nuire.",
+          "next": [130020006]
+        },
+        "130020003": {
+          "id": 130020003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Qui vous en a fait don ?",
+          "next": [130020006]
+        },
+        "130020004": {
+          "id": 130020004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "Et pourquoi serais-je {F#intéressée}{M#intéressé} ?",
+          "next": [130020005]
+        },
+        "130020005": {
+          "id": 130020005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 106,
+          "text": "La psychanalyse a parlé pour vous, {M#mon bon monsieur}{F#ma bonne dame} !",
+          "next": [130020006]
+        },
+        "130020006": {
+          "id": 130020006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 106,
+          "text": "Le donateur est une dame élégante du nom de « Cygne noir ». Si le temps vous le permet, notre boutique vous accueillera toujours avec grand plaisir.",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [106, 8001]
+    }
+  ]
+}

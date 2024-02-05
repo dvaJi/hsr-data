@@ -1,8 +1,9 @@
 export interface Messages {
-    id:              number;
-    contacts:        Contacts;
-    relatedMessages: number[];
-    sections:        Section[];
+    id:                number;
+    contacts:          Contacts;
+    relatedMessages:   number[];
+    sections:          Section[];
+    activityModuleId?: number;
 }
 
 export interface Contacts {
@@ -70,6 +71,7 @@ export interface Message {
     text?:           string;
     next:            number[];
     image?:          string;
+    video?:          Video;
 }
 
 export enum Sender {
@@ -85,4 +87,10 @@ export enum MessageType {
     RAID = "Raid",
     Sticker = "Sticker",
     Text = "Text",
+    Video = "Video",
+}
+
+export enum Video {
+    PhoneMessagePic10016 = "PhoneMessagePic_10016",
+    PhoneMessagePic10017 = "PhoneMessagePic_10017",
 }

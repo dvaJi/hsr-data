@@ -1,0 +1,77 @@
+{
+  "id": 13002,
+  "contacts": {
+    "id": 106,
+    "name": "爱德华医生",
+    "icon": "UI_Message_Contacts_DreamStore",
+    "signature": "无意识就是大他者的话语。",
+    "typeId": 2,
+    "type": "其他"
+  },
+  "relatedMessages": [13002],
+  "sections": [
+    {
+      "id": 1300200,
+      "startingMessageId": [130020000],
+      "messages": {
+        "130020000": {
+          "id": 130020000,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 106,
+          "text": "您好，{NICKNAME}{M#先生}{F#女士}。方才有人向鄙店捐赠了一枚梦泡，经过精神波谱分析，猜测您会对这枚梦泡的内容感兴趣。",
+          "next": [130020001, 130020003, 130020004]
+        },
+        "130020001": {
+          "id": 130020001,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "听起来有点可疑…",
+          "next": [130020002]
+        },
+        "130020002": {
+          "id": 130020002,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 106,
+          "text": "请勿担心，鄙店的梦境全部经过严格检定，绝无暗藏危害的可能。",
+          "next": [130020006]
+        },
+        "130020003": {
+          "id": 130020003,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "是谁捐赠给你的？",
+          "next": [130020006]
+        },
+        "130020004": {
+          "id": 130020004,
+          "type": "Text",
+          "sender": "Player",
+          "senderContactId": 8001,
+          "text": "你怎么知道我会感兴趣？",
+          "next": [130020005]
+        },
+        "130020005": {
+          "id": 130020005,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 106,
+          "text": "这就是精神分析，{M#先生}{F#女士}！",
+          "next": [130020006]
+        },
+        "130020006": {
+          "id": 130020006,
+          "type": "Text",
+          "sender": "NPC",
+          "senderContactId": 106,
+          "text": "捐赠者是一位优雅的女士，署名是「黑天鹅」。若您时间允许，本店随时恭候莅临。",
+          "next": []
+        }
+      },
+      "participatingContactsIds": [106, 8001]
+    }
+  ]
+}
