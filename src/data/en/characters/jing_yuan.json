@@ -1028,7 +1028,7 @@
       "_id": 120404,
       "id": "prana_extirpated",
       "name": "Prana Extirpated",
-      "desc": "Summons Lightning-Lord at the start of the battle. Lightning-Lord has #1[i] base SPD and #4[i] base Hits Per Action. When the Lightning-Lord takes action, its hits are considered as follow-up attacks, with each hit dealing Lightning DMG equal to #2[i]% of Jing Yuan's ATK to a random single enemy, and enemies adjacent to it also receive Lightning DMG equal to #5[i]% of the DMG dealt to the target enemy.\nThe Lightning-Lord's Hits Per Action can reach a max of #6[i]. Every time Lightning-Lord's Hits Per Action increases by 1, its SPD increases by #3[i]. After the Lightning-Lord's action ends, its SPD and Hits Per Action return to their base values.\nWhen Jing Yuan is knocked down, the Lightning-Lord will disappear.\nWhen Jing Yuan is affected by Crowd Control debuff, the Lightning-Lord is unable to take action.",
+      "desc": "Summons Lightning-Lord at the start of the battle. Lightning-Lord has #1[i] base SPD and #4[i] base Hits Per Action. When the Lightning-Lord takes action, its hits are considered as follow-up attacks, with each hit dealing Lightning DMG equal to #2[i]% of Jing Yuan's ATK to a random single enemy, and enemies adjacent to it also receive Lightning DMG equal to #5[i]% of the DMG dealt to the primary target enemy.\nThe Lightning-Lord's Hits Per Action can reach a max of #6[i]. Every time Lightning-Lord's Hits Per Action increases by 1, its SPD increases by #3[i]. After the Lightning-Lord's action ends, its SPD and Hits Per Action return to their base values.\nWhen Jing Yuan is knocked down, the Lightning-Lord will disappear.\nWhen Jing Yuan is affected by Crowd Control debuff, the Lightning-Lord is unable to take action.",
       "simpleDesc": "Summons Lightning-Lord at the start of the battle. Lightning-Lord automatically deals minor Lightning DMG to a random enemy and enemies adjacent to it.",
       "type": "Talent",
       "tag": "Bounce",
@@ -1395,8 +1395,8 @@
     },
     {
       "_id": 120407,
-      "id": "spirit_invocation",
-      "name": "Spirit Invocation",
+      "id": "spiritus_invocation",
+      "name": "Spiritus Invocation",
       "desc": "After the Technique is used, the Lightning-Lord's Hits Per Action in the first turn increases by #1[i] at the start of the next battle.",
       "simpleDesc": "After using Technique, for the next battle, increases Lightning-Lord's Hits Per Action.",
       "type": "Technique",
@@ -1417,13 +1417,13 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "Slash, Seas Split",
-      "desc": "When Lightning-Lord attacks, the DMG multiplier on enemies adjacent to the target enemy increases by an extra amount equal to <nobr>25%</nobr> of the DMG multiplier against the target enemy."
+      "desc": "When Lightning-Lord attacks, the DMG multiplier on enemies adjacent to the target enemy increases by an extra amount equal to <nobr>25%</nobr> of the DMG multiplier against the primary target enemy."
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "Swing, Skies Squashed",
-      "desc": "After Lightning-Lord takes action, DMG caused by Jing Yuan's Basic ATK, Skill, and Ultimate increases by <nobr>20%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "After Lightning-Lord takes action, DMG dealt by Jing Yuan's Basic ATK, Skill, and Ultimate increases by <nobr>20%</nobr>, lasting for <nobr>2</nobr> turn(s)."
     },
     {
       "_id": 120403,
@@ -1451,406 +1451,6 @@
     }
   ],
   "skillTreePoints": [
-    {
-      "id": 1204101,
-      "type": 3,
-      "children": [
-        {
-          "id": 1204202,
-          "type": 1,
-          "children": [
-            {
-              "id": 1204203,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "atk_boost",
-                "name": "ATK Boost",
-                "levelReq": 0,
-                "promotionReq": 3,
-                "statusList": [
-                  {
-                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
-                    "value": 0.04
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "Credit",
-                    "amount": 10000
-                  },
-                  {
-                    "id": "key_of_knowledge",
-                    "name": "Key of Knowledge",
-                    "amount": 3
-                  },
-                  {
-                    "id": "immortal_aeroblossom",
-                    "name": "Immortal Aeroblossom",
-                    "amount": 3
-                  }
-                ]
-              }
-            },
-            {
-              "id": 1204204,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "def_boost",
-                "name": "DEF Boost",
-                "levelReq": 0,
-                "promotionReq": 3,
-                "statusList": [
-                  {
-                    "key": "DEF increases by <nobr>#1[f1]%</nobr>",
-                    "value": 0.05
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "Credit",
-                    "amount": 10000
-                  },
-                  {
-                    "id": "key_of_knowledge",
-                    "name": "Key of Knowledge",
-                    "amount": 3
-                  },
-                  {
-                    "id": "immortal_aeroblossom",
-                    "name": "Immortal Aeroblossom",
-                    "amount": 3
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "crit_rate_boost",
-            "name": "CRIT Rate Boost",
-            "levelReq": 0,
-            "promotionReq": 2,
-            "statusList": [
-              {
-                "key": "CRIT Rate increases by <nobr>#1[f1]%</nobr>",
-                "value": 0.027
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 5000
-              },
-              {
-                "id": "key_of_inspiration",
-                "name": "Key of Inspiration",
-                "amount": 3
-              },
-              {
-                "id": "immortal_scionette",
-                "name": "Immortal Scionette",
-                "amount": 6
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "battalia_crush",
-        "name": "Battalia Crush",
-        "desc": "If the Lightning-Lord's Hits Per Action is greater or equal to <nobr>6</nobr> in the next turn, its CRIT DMG increases by <nobr>25%</nobr> for the next turn.",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              6,
-              0.25
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 5000
-              },
-              {
-                "id": "key_of_inspiration",
-                "name": "Key of Inspiration",
-                "amount": 3
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "Destroyer's Final Road",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": 1204102,
-      "type": 3,
-      "children": [
-        {
-          "id": 1204205,
-          "type": 1,
-          "children": [
-            {
-              "id": 1204206,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "crit_rate_boost",
-                "name": "CRIT Rate Boost",
-                "levelReq": 0,
-                "promotionReq": 5,
-                "statusList": [
-                  {
-                    "key": "CRIT Rate increases by <nobr>#1[f1]%</nobr>",
-                    "value": 0.04
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "Credit",
-                    "amount": 45000
-                  },
-                  {
-                    "id": "key_of_wisdom",
-                    "name": "Key of Wisdom",
-                    "amount": 3
-                  },
-                  {
-                    "id": "immortal_lumintwig",
-                    "name": "Immortal Lumintwig",
-                    "amount": 3
-                  }
-                ]
-              }
-            },
-            {
-              "id": 1204207,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "atk_boost",
-                "name": "ATK Boost",
-                "levelReq": 0,
-                "promotionReq": 5,
-                "statusList": [
-                  {
-                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
-                    "value": 0.06
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "Credit",
-                    "amount": 45000
-                  },
-                  {
-                    "id": "key_of_wisdom",
-                    "name": "Key of Wisdom",
-                    "amount": 3
-                  },
-                  {
-                    "id": "immortal_lumintwig",
-                    "name": "Immortal Lumintwig",
-                    "amount": 3
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "atk_boost",
-            "name": "ATK Boost",
-            "levelReq": 0,
-            "promotionReq": 4,
-            "statusList": [
-              {
-                "key": "ATK increases by <nobr>#1[f1]%</nobr>",
-                "value": 0.06
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 20000
-              },
-              {
-                "id": "key_of_knowledge",
-                "name": "Key of Knowledge",
-                "amount": 5
-              },
-              {
-                "id": "immortal_aeroblossom",
-                "name": "Immortal Aeroblossom",
-                "amount": 4
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "savant_providence",
-        "name": "Savant Providence",
-        "desc": "At the start of the battle, immediately regenerates <nobr>15</nobr> Energy.",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              15
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 20000
-              },
-              {
-                "id": "key_of_knowledge",
-                "name": "Key of Knowledge",
-                "amount": 5
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Tracks of Destiny",
-                "amount": 1
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "Destroyer's Final Road",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": 1204103,
-      "type": 3,
-      "children": [
-        {
-          "id": 1204208,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "def_boost",
-            "name": "DEF Boost",
-            "levelReq": 0,
-            "promotionReq": 6,
-            "statusList": [
-              {
-                "key": "DEF increases by <nobr>#1[f1]%</nobr>",
-                "value": 0.075
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 160000
-              },
-              {
-                "id": "key_of_wisdom",
-                "name": "Key of Wisdom",
-                "amount": 8
-              },
-              {
-                "id": "immortal_lumintwig",
-                "name": "Immortal Lumintwig",
-                "amount": 8
-              }
-            ]
-          }
-        },
-        {
-          "id": 1204209,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "crit_rate_boost",
-            "name": "CRIT Rate Boost",
-            "levelReq": 75,
-            "promotionReq": 0,
-            "statusList": [
-              {
-                "key": "CRIT Rate increases by <nobr>#1[f1]%</nobr>",
-                "value": 0.053
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 160000
-              },
-              {
-                "id": "key_of_wisdom",
-                "name": "Key of Wisdom",
-                "amount": 8
-              },
-              {
-                "id": "immortal_lumintwig",
-                "name": "Immortal Lumintwig",
-                "amount": 8
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "war_marshal",
-        "name": "War Marshal",
-        "desc": "After the Skill is used, the CRIT Rate increases by <nobr>10%</nobr> for <nobr>2</nobr> turn(s).",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.1,
-              2
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 160000
-              },
-              {
-                "id": "key_of_wisdom",
-                "name": "Key of Wisdom",
-                "amount": 8
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Tracks of Destiny",
-                "amount": 1
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "Destroyer's Final Road",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
     {
       "id": 1204201,
       "type": 1,
@@ -1910,6 +1510,129 @@
             "id": "immortal_lumintwig",
             "name": "Immortal Lumintwig",
             "amount": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 1204101,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "battalia_crush",
+        "name": "Battalia Crush",
+        "desc": "If the Lightning-Lord's Hits Per Action is greater or equal to <nobr>6</nobr> in the next turn, its CRIT DMG increases by <nobr>25%</nobr> for the next turn.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              6,
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "key_of_inspiration",
+                "name": "Key of Inspiration",
+                "amount": 3
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 1204102,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "savant_providence",
+        "name": "Savant Providence",
+        "desc": "At the start of the battle, immediately regenerates <nobr>15</nobr> Energy.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              15
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "key_of_knowledge",
+                "name": "Key of Knowledge",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 1204103,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "war_marshal",
+        "name": "War Marshal",
+        "desc": "After the Skill is used, the CRIT Rate increases by <nobr>10%</nobr> for <nobr>2</nobr> turn(s).",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "key_of_wisdom",
+                "name": "Key of Wisdom",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
           }
         ]
       }

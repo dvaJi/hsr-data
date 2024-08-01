@@ -1058,8 +1058,8 @@
       "_id": 120304,
       "id": "cycle_of_life",
       "name": "Cycle of Life",
-      "desc": "Saat tumpukan \"Abyss Flower\" mencapai #1[i] lapis, Luocha akan mengonsumsi semua \"Abyss Flower\" dan membuat sebuah Field pada musuh.\nSetelah musuh dalam Field diserang rekan tim, rekan tim yang menyerang akan segera memulihkan HP sebesar #2[f1]% ATK Luocha +#4[i].\nEfek Field berlangsung selama #3[i] giliran. Saat Luocha gugur, efek Field akan menghilang.",
-      "simpleDesc": "Saat memiliki 2 lapis \"Abyss Flower\", sebuah Field akan dihasilkan. Selama durasi Field, setiap rekan yang menyerang akan memperoleh pemulihan HP.",
+      "desc": "Saat tumpukan \"Abyss Flower\" mencapai #1[i] lapis, Luocha akan mengonsumsi semua \"Abyss Flower\" dan membuat sebuah area pembatas pada musuh.\nSetelah musuh dalam area pembatas diserang rekan tim, rekan tim yang menyerang akan segera memulihkan HP sebesar #2[f1]% ATK Luocha +#4[i].\nEfek area pembatas berlangsung selama #3[i] giliran. Saat Luocha gugur, efek area pembatas akan menghilang.",
+      "simpleDesc": "Saat memiliki 2 lapis \"Abyss Flower\", sebuah area pembatas akan dihasilkan. Selama durasi area pembatas, setiap rekan yang menyerang akan memperoleh pemulihan HP.",
       "type": "Talent",
       "tag": "Restore",
       "levels": [
@@ -1415,7 +1415,7 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Ablution of the Quick",
-      "desc": "Meningkatkan <nobr>20%</nobr> ATK seluruh rekan tim saat Field aktif."
+      "desc": "Meningkatkan <nobr>20%</nobr> ATK seluruh rekan tim saat area pembatas aktif."
     },
     {
       "_id": 120302,
@@ -1433,7 +1433,7 @@
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "Heavy Lies the Crown",
-      "desc": "Membuat target musuh memasuki status Weaken saat Field aktif, mengurangi <nobr>12%</nobr> DMG yang diakibatkannya."
+      "desc": "Membuat target musuh memasuki status Weaken saat area pembatas aktif, mengurangi <nobr>12%</nobr> DMG yang diakibatkannya."
     },
     {
       "_id": 120305,
@@ -1557,230 +1557,6 @@
       }
     },
     {
-      "id": 1203102,
-      "type": 3,
-      "children": [
-        {
-          "id": 1203205,
-          "type": 1,
-          "children": [
-            {
-              "id": 1203206,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "hp_boost",
-                "name": "Peningkatan HP",
-                "levelReq": 0,
-                "promotionReq": 5,
-                "statusList": [
-                  {
-                    "key": "Max HP +<nobr>#1[f1]%</nobr>",
-                    "value": 0.06
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "Credit",
-                    "amount": 45000
-                  },
-                  {
-                    "id": "flower_of_eternity",
-                    "name": "Flower of Eternity",
-                    "amount": 3
-                  },
-                  {
-                    "id": "artifexs_gyreheart",
-                    "name": "Artifex's Gyreheart",
-                    "amount": 3
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "atk_boost",
-            "name": "Peningkatan ATK",
-            "levelReq": 0,
-            "promotionReq": 4,
-            "statusList": [
-              {
-                "key": "ATK +<nobr>#1[f1]%</nobr>",
-                "value": 0.06
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 20000
-              },
-              {
-                "id": "sprout_of_life",
-                "name": "Sprout of Life",
-                "amount": 5
-              },
-              {
-                "id": "artifexs_cogwheel",
-                "name": "Artifex's Cogwheel",
-                "amount": 4
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "sanctified",
-        "name": "Sanctified",
-        "desc": "Setelah target musuh mana pun dalam Field terkena serangan rekan tim, seluruh rekan tim (selain penyerang) akan memulihkan HP sebesar <nobr>#1[f1]%</nobr> ATK Luocha +<nobr>93</nobr>.",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.07,
-              93
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 20000
-              },
-              {
-                "id": "sprout_of_life",
-                "name": "Sprout of Life",
-                "amount": 5
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Tracks of Destiny",
-                "amount": 1
-              },
-              {
-                "id": "guardians_lament",
-                "name": "Guardian's Lament",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": 1203103,
-      "type": 3,
-      "children": [
-        {
-          "id": 1203208,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "def_boost",
-            "name": "Peningkatan DEF",
-            "levelReq": 0,
-            "promotionReq": 6,
-            "statusList": [
-              {
-                "key": "DEF +<nobr>#1[f1]%</nobr>",
-                "value": 0.075
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 160000
-              },
-              {
-                "id": "flower_of_eternity",
-                "name": "Flower of Eternity",
-                "amount": 8
-              },
-              {
-                "id": "artifexs_gyreheart",
-                "name": "Artifex's Gyreheart",
-                "amount": 8
-              }
-            ]
-          }
-        },
-        {
-          "id": 1203209,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "hp_boost",
-            "name": "Peningkatan HP",
-            "levelReq": 75,
-            "promotionReq": 0,
-            "statusList": [
-              {
-                "key": "Max HP +<nobr>#1[f1]%</nobr>",
-                "value": 0.08
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 160000
-              },
-              {
-                "id": "flower_of_eternity",
-                "name": "Flower of Eternity",
-                "amount": 8
-              },
-              {
-                "id": "artifexs_gyreheart",
-                "name": "Artifex's Gyreheart",
-                "amount": 8
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "through_the_valley",
-        "name": "Through the Valley",
-        "desc": "Meningkatkan <nobr>70%</nobr> peluang untuk menahan Crowd Control Debuff.",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.7
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 160000
-              },
-              {
-                "id": "flower_of_eternity",
-                "name": "Flower of Eternity",
-                "amount": 8
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Tracks of Destiny",
-                "amount": 1
-              },
-              {
-                "id": "guardians_lament",
-                "name": "Guardian's Lament",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "id": 1203201,
       "type": 1,
       "children": [],
@@ -1839,6 +1615,91 @@
             "id": "artifexs_gyreheart",
             "name": "Artifex's Gyreheart",
             "amount": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 1203102,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "sanctified",
+        "name": "Sanctified",
+        "desc": "Setelah target musuh mana pun dalam area pembatas terkena serangan rekan tim, seluruh rekan tim (selain penyerang) akan memulihkan HP sebesar <nobr>#1[f1]%</nobr> ATK Luocha +<nobr>93</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.07,
+              93
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "sprout_of_life",
+                "name": "Sprout of Life",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Guardian's Lament",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 1203103,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "through_the_valley",
+        "name": "Through the Valley",
+        "desc": "Meningkatkan <nobr>70%</nobr> peluang untuk menahan Crowd Control Debuff.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.7
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "flower_of_eternity",
+                "name": "Flower of Eternity",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Guardian's Lament",
+                "amount": 1
+              }
+            ]
           }
         ]
       }

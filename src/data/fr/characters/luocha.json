@@ -1058,8 +1058,8 @@
       "_id": 120304,
       "id": "cycle_of_life",
       "name": "Cycle de la vie",
-      "desc": "Lorsque le nombre de cumuls de Fleur de l'abîme atteint #1[i], Luocha consomme tous les cumuls de Fleur de l'abîme pour déployer un Champ hostile aux ennemis.\nLorsqu'un ennemi situé dans le Champ est attaqué par un allié, les PV de ce dernier sont immédiatement restaurés à hauteur de #2[f1]% de l'ATQ de Luocha + #4[i].\nL'effet du Champ dure #3[i] tours. Le Champ se dissipe lorsque Luocha est à terre.",
-      "simpleDesc": "Déploie un Champ lorsque Fleur de l'abîme atteint 2 cumuls. Tant que le Champ est actif, les alliés récupèrent des PV après avoir attaqué.",
+      "desc": "Lorsque le nombre de cumuls de Fleur de l'abîme atteint #1[i], Luocha consomme tous les cumuls de Fleur de l'abîme pour déployer une zone hostile aux ennemis.\nLorsqu'un ennemi situé dans la zone est attaqué par un allié, les PV de ce dernier sont immédiatement restaurés à hauteur de #2[f1]% de l'ATQ de Luocha + #4[i].\nL'effet de la zone dure #3[i] tours. La zone se dissipe lorsque Luocha est à terre.",
+      "simpleDesc": "Déploie une zone lorsque Fleur de l'abîme atteint 2 cumuls. Tant que la zone est active, les alliés récupèrent des PV après avoir attaqué.",
       "type": "Talent",
       "tag": "Restauration",
       "levels": [
@@ -1415,7 +1415,7 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Ablution de rapidité",
-      "desc": "Tant que le Champ est actif, l'ATQ de tous les alliés augmente de <nobr>20%</nobr>."
+      "desc": "Tant que la zone est active, l'ATQ de tous les alliés augmente de <nobr>20%</nobr>."
     },
     {
       "_id": 120302,
@@ -1433,7 +1433,7 @@
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "Lourde est la couronne",
-      "desc": "Lorsque le Champ de Luocha est actif, les ennemis sont affaiblis et les DGT qu'ils infligent diminuent de <nobr>12%</nobr>."
+      "desc": "Lorsque la zone de Luocha est active, les ennemis sont affaiblis et les DGT qu'ils infligent diminuent de <nobr>12%</nobr>."
     },
     {
       "_id": 120305,
@@ -1557,230 +1557,6 @@
       }
     },
     {
-      "id": 1203102,
-      "type": 3,
-      "children": [
-        {
-          "id": 1203205,
-          "type": 1,
-          "children": [
-            {
-              "id": 1203206,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "hp_boost",
-                "name": "Augmentation de PV",
-                "levelReq": 0,
-                "promotionReq": 5,
-                "statusList": [
-                  {
-                    "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
-                    "value": 0.06
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "Crédits",
-                    "amount": 45000
-                  },
-                  {
-                    "id": "flower_of_eternity",
-                    "name": "Fleur de l'éternité",
-                    "amount": 3
-                  },
-                  {
-                    "id": "artifexs_gyreheart",
-                    "name": "Gyrocœur artisanal",
-                    "amount": 3
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "atk_boost",
-            "name": "Augmentation d'ATQ",
-            "levelReq": 0,
-            "promotionReq": 4,
-            "statusList": [
-              {
-                "key": "L'ATQ augmente de <nobr>#1[f1]%</nobr>.",
-                "value": 0.06
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Crédits",
-                "amount": 20000
-              },
-              {
-                "id": "sprout_of_life",
-                "name": "Pousse de la vie",
-                "amount": 5
-              },
-              {
-                "id": "artifexs_cogwheel",
-                "name": "Roue dentée artisanale",
-                "amount": 4
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "sanctified",
-        "name": "Sanctifié",
-        "desc": "Lorsqu'un ennemi est attaqué par un allié dans le Champ, tous les alliés (à l'exception de l'attaquant) restaurent un montant de PV équivalent à <nobr>#1[f1]%</nobr> de l'ATQ de Luocha + <nobr>93</nobr>.",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.07,
-              93
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Crédits",
-                "amount": 20000
-              },
-              {
-                "id": "sprout_of_life",
-                "name": "Pousse de la vie",
-                "amount": 5
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Voies de la destinée",
-                "amount": 1
-              },
-              {
-                "id": "guardians_lament",
-                "name": "Complainte d'une gardienne",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": 1203103,
-      "type": 3,
-      "children": [
-        {
-          "id": 1203208,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "def_boost",
-            "name": "Augmentation de DÉF",
-            "levelReq": 0,
-            "promotionReq": 6,
-            "statusList": [
-              {
-                "key": "La DÉF augmente de <nobr>#1[f1]%</nobr>.",
-                "value": 0.075
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Crédits",
-                "amount": 160000
-              },
-              {
-                "id": "flower_of_eternity",
-                "name": "Fleur de l'éternité",
-                "amount": 8
-              },
-              {
-                "id": "artifexs_gyreheart",
-                "name": "Gyrocœur artisanal",
-                "amount": 8
-              }
-            ]
-          }
-        },
-        {
-          "id": 1203209,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "hp_boost",
-            "name": "Augmentation de PV",
-            "levelReq": 75,
-            "promotionReq": 0,
-            "statusList": [
-              {
-                "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
-                "value": 0.08
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Crédits",
-                "amount": 160000
-              },
-              {
-                "id": "flower_of_eternity",
-                "name": "Fleur de l'éternité",
-                "amount": 8
-              },
-              {
-                "id": "artifexs_gyreheart",
-                "name": "Gyrocœur artisanal",
-                "amount": 8
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "through_the_valley",
-        "name": "À travers la vallée",
-        "desc": "Les chances de résister aux malus de contrôle augmentent de <nobr>70%</nobr>.",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.7
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Crédits",
-                "amount": 160000
-              },
-              {
-                "id": "flower_of_eternity",
-                "name": "Fleur de l'éternité",
-                "amount": 8
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Voies de la destinée",
-                "amount": 1
-              },
-              {
-                "id": "guardians_lament",
-                "name": "Complainte d'une gardienne",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "id": 1203201,
       "type": 1,
       "children": [],
@@ -1839,6 +1615,91 @@
             "id": "artifexs_gyreheart",
             "name": "Gyrocœur artisanal",
             "amount": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 1203102,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "sanctified",
+        "name": "Sanctifié",
+        "desc": "Lorsqu'un ennemi est attaqué par un allié dans la zone, tous les alliés (à l'exception de l'attaquant) restaurent un montant de PV équivalent à <nobr>#1[f1]%</nobr> de l'ATQ de Luocha + <nobr>93</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.07,
+              93
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 20000
+              },
+              {
+                "id": "sprout_of_life",
+                "name": "Pousse de la vie",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Voies de la destinée",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Complainte d'une gardienne",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 1203103,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "through_the_valley",
+        "name": "À travers la vallée",
+        "desc": "Les chances de résister aux malus de contrôle augmentent de <nobr>70%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.7
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 160000
+              },
+              {
+                "id": "flower_of_eternity",
+                "name": "Fleur de l'éternité",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Voies de la destinée",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Complainte d'une gardienne",
+                "amount": 1
+              }
+            ]
           }
         ]
       }

@@ -410,7 +410,7 @@
       "_id": 120202,
       "id": "soothing_melody",
       "name": "{RUBY_B#しょうおんわいん}祥音和韻{RUBY_E#}",
-      "desc": "指定した味方単体に「賜福」を付与し、その味方の攻撃力+#2[i]%、攻撃力アップ量は停雲の現在の攻撃力の#4[i]%を超えない。\n「賜福」を付与された味方が攻撃を行った後、敵にその味方の攻撃力#1[i]%分の雷属性付加ダメージを1回与える。\n「賜福」は#3[i]ターン継続し、停雲の戦闘スキルの最後のターゲットにのみ効果を発揮する。",
+      "desc": "指定した味方単体に「賜福」を付与し、その味方の攻撃力+#2[i]%、攻撃力アップ量は停雲の現在の攻撃力の#4[i]%を超えない。\n「賜福」を付与された味方が攻撃を行った後、敵にその味方の攻撃力#1[i]%分の雷属性付加ダメージを1回与える。\n「賜福」は#3[i]ターン継続し、停雲の戦闘スキルで最後に指定したターゲットにのみ効果を発揮する。",
       "simpleDesc": "味方単体の攻撃力をアップさせ、「賜福」を与える。「賜福」がある味方は攻撃を行った時に少量の雷属性付加ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "サポート",
@@ -1511,118 +1511,6 @@
       }
     },
     {
-      "id": 1202102,
-      "type": 3,
-      "children": [
-        {
-          "id": 1202205,
-          "type": 1,
-          "children": [
-            {
-              "id": 1202206,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "def_boost",
-                "name": "防御強化",
-                "levelReq": 0,
-                "promotionReq": 5,
-                "statusList": [
-                  {
-                    "key": "防御力+<nobr>#1[f1]%</nobr>",
-                    "value": 0.075
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "信用ポイント",
-                    "amount": 36000
-                  },
-                  {
-                    "id": "stellaris_symphony",
-                    "name": "群星の楽章",
-                    "amount": 2
-                  },
-                  {
-                    "id": "immortal_lumintwig",
-                    "name": "永寿の栄枝",
-                    "amount": 2
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "atk_boost",
-            "name": "攻撃強化",
-            "levelReq": 0,
-            "promotionReq": 4,
-            "statusList": [
-              {
-                "key": "攻撃力+<nobr>#1[f1]%</nobr>",
-                "value": 0.06
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "信用ポイント",
-                "amount": 16000
-              },
-              {
-                "id": "ancestral_hymn",
-                "name": "ファミリー賛歌",
-                "amount": 4
-              },
-              {
-                "id": "immortal_aeroblossom",
-                "name": "永寿の天華",
-                "amount": 3
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "knell_subdual",
-        "name": "{RUBY_B#じょさい}除災{RUBY_E#}",
-        "desc": "通常攻撃によるダメージ+<nobr>40%</nobr>。",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.4
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "信用ポイント",
-                "amount": 16000
-              },
-              {
-                "id": "ancestral_hymn",
-                "name": "ファミリー賛歌",
-                "amount": 4
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "運命の足跡",
-                "amount": 1
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "壊滅者の末路",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "id": 1202103,
       "type": 3,
       "children": [
@@ -1862,6 +1750,48 @@
             "id": "immortal_scionette",
             "name": "永寿の萌芽",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 1202102,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "knell_subdual",
+        "name": "{RUBY_B#じょさい}除災{RUBY_E#}",
+        "desc": "通常攻撃によるダメージ+<nobr>40%</nobr>。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.4
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用ポイント",
+                "amount": 16000
+              },
+              {
+                "id": "ancestral_hymn",
+                "name": "ファミリー賛歌",
+                "amount": 4
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "運命の足跡",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "壊滅者の末路",
+                "amount": 1
+              }
+            ]
           }
         ]
       }

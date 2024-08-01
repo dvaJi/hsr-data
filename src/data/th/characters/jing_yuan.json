@@ -1395,8 +1395,8 @@
     },
     {
       "_id": 120407,
-      "id": "spirit_invocation",
-      "name": "Spirit Invocation",
+      "id": "spiritus_invocation",
+      "name": "Spiritus Invocation",
       "desc": "หลังจากที่ใช้เทคนิคแล้ว เมื่อเริ่มการต่อสู้ครั้งต่อไป จำนวนการโจมตีของ \"Lightning-Lord\" ในเทิร์นที่ 1 จะเพิ่มขึ้น #1[i] ครั้ง",
       "simpleDesc": "หลังจากที่ใช้เทคนิคแล้ว เมื่อเข้าสู่การต่อสู้ครั้งถัดไป จะเพิ่มจำนวนการโจมตีของ \"Lightning-Lord\"",
       "type": "เทคนิค",
@@ -1451,406 +1451,6 @@
     }
   ],
   "skillTreePoints": [
-    {
-      "id": 1204101,
-      "type": 3,
-      "children": [
-        {
-          "id": 1204202,
-          "type": 1,
-          "children": [
-            {
-              "id": 1204203,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "atk_boost",
-                "name": "เสริมการโจมตี",
-                "levelReq": 0,
-                "promotionReq": 3,
-                "statusList": [
-                  {
-                    "key": "ATK เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
-                    "value": 0.04
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "เครดิต",
-                    "amount": 10000
-                  },
-                  {
-                    "id": "key_of_knowledge",
-                    "name": "Key of Knowledge",
-                    "amount": 3
-                  },
-                  {
-                    "id": "immortal_aeroblossom",
-                    "name": "Immortal Aeroblossom",
-                    "amount": 3
-                  }
-                ]
-              }
-            },
-            {
-              "id": 1204204,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "def_boost",
-                "name": "เสริมการป้องกัน",
-                "levelReq": 0,
-                "promotionReq": 3,
-                "statusList": [
-                  {
-                    "key": "DEF เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
-                    "value": 0.05
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "เครดิต",
-                    "amount": 10000
-                  },
-                  {
-                    "id": "key_of_knowledge",
-                    "name": "Key of Knowledge",
-                    "amount": 3
-                  },
-                  {
-                    "id": "immortal_aeroblossom",
-                    "name": "Immortal Aeroblossom",
-                    "amount": 3
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "crit_rate_boost",
-            "name": "เสริมอัตราคริติคอล",
-            "levelReq": 0,
-            "promotionReq": 2,
-            "statusList": [
-              {
-                "key": "อัตราคริติคอลเพิ่มขึ้น <nobr>#1[f1]%</nobr>",
-                "value": 0.027
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "เครดิต",
-                "amount": 5000
-              },
-              {
-                "id": "key_of_inspiration",
-                "name": "Key of Inspiration",
-                "amount": 3
-              },
-              {
-                "id": "immortal_scionette",
-                "name": "Immortal Scionette",
-                "amount": 6
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "battalia_crush",
-        "name": "Battalia Crush",
-        "desc": "หากจำนวนการโจมตีในเทิร์นถัดไปของ \"Lightning-Lord\" มากกว่าหรือเท่ากับ <nobr>6</nobr> ครั้ง DMG คริติคอลในเทิร์นถัดไปของ \"Lightning-Lord\" จะเพิ่มขึ้น <nobr>25%</nobr>",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              6,
-              0.25
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "เครดิต",
-                "amount": 5000
-              },
-              {
-                "id": "key_of_inspiration",
-                "name": "Key of Inspiration",
-                "amount": 3
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "Destroyer's Final Road",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": 1204102,
-      "type": 3,
-      "children": [
-        {
-          "id": 1204205,
-          "type": 1,
-          "children": [
-            {
-              "id": 1204206,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "crit_rate_boost",
-                "name": "เสริมอัตราคริติคอล",
-                "levelReq": 0,
-                "promotionReq": 5,
-                "statusList": [
-                  {
-                    "key": "อัตราคริติคอลเพิ่มขึ้น <nobr>#1[f1]%</nobr>",
-                    "value": 0.04
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "เครดิต",
-                    "amount": 45000
-                  },
-                  {
-                    "id": "key_of_wisdom",
-                    "name": "Key of Wisdom",
-                    "amount": 3
-                  },
-                  {
-                    "id": "immortal_lumintwig",
-                    "name": "Immortal Lumintwig",
-                    "amount": 3
-                  }
-                ]
-              }
-            },
-            {
-              "id": 1204207,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "atk_boost",
-                "name": "เสริมการโจมตี",
-                "levelReq": 0,
-                "promotionReq": 5,
-                "statusList": [
-                  {
-                    "key": "ATK เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
-                    "value": 0.06
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "เครดิต",
-                    "amount": 45000
-                  },
-                  {
-                    "id": "key_of_wisdom",
-                    "name": "Key of Wisdom",
-                    "amount": 3
-                  },
-                  {
-                    "id": "immortal_lumintwig",
-                    "name": "Immortal Lumintwig",
-                    "amount": 3
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "atk_boost",
-            "name": "เสริมการโจมตี",
-            "levelReq": 0,
-            "promotionReq": 4,
-            "statusList": [
-              {
-                "key": "ATK เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
-                "value": 0.06
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "เครดิต",
-                "amount": 20000
-              },
-              {
-                "id": "key_of_knowledge",
-                "name": "Key of Knowledge",
-                "amount": 5
-              },
-              {
-                "id": "immortal_aeroblossom",
-                "name": "Immortal Aeroblossom",
-                "amount": 4
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "savant_providence",
-        "name": "Savant Providence",
-        "desc": "เมื่อเริ่มต้นการต่อสู้ จะฟื้นฟูพลังงาน <nobr>15</nobr> หน่วยทันที",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              15
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "เครดิต",
-                "amount": 20000
-              },
-              {
-                "id": "key_of_knowledge",
-                "name": "Key of Knowledge",
-                "amount": 5
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Tracks of Destiny",
-                "amount": 1
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "Destroyer's Final Road",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": 1204103,
-      "type": 3,
-      "children": [
-        {
-          "id": 1204208,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "def_boost",
-            "name": "เสริมการป้องกัน",
-            "levelReq": 0,
-            "promotionReq": 6,
-            "statusList": [
-              {
-                "key": "DEF เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
-                "value": 0.075
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "เครดิต",
-                "amount": 160000
-              },
-              {
-                "id": "key_of_wisdom",
-                "name": "Key of Wisdom",
-                "amount": 8
-              },
-              {
-                "id": "immortal_lumintwig",
-                "name": "Immortal Lumintwig",
-                "amount": 8
-              }
-            ]
-          }
-        },
-        {
-          "id": 1204209,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "crit_rate_boost",
-            "name": "เสริมอัตราคริติคอล",
-            "levelReq": 75,
-            "promotionReq": 0,
-            "statusList": [
-              {
-                "key": "อัตราคริติคอลเพิ่มขึ้น <nobr>#1[f1]%</nobr>",
-                "value": 0.053
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "เครดิต",
-                "amount": 160000
-              },
-              {
-                "id": "key_of_wisdom",
-                "name": "Key of Wisdom",
-                "amount": 8
-              },
-              {
-                "id": "immortal_lumintwig",
-                "name": "Immortal Lumintwig",
-                "amount": 8
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "war_marshal",
-        "name": "War Marshal",
-        "desc": "หลังจากปล่อยสกิลต่อสู้ อัตราคริติคอลจะเพิ่มขึ้น <nobr>10%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.1,
-              2
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "เครดิต",
-                "amount": 160000
-              },
-              {
-                "id": "key_of_wisdom",
-                "name": "Key of Wisdom",
-                "amount": 8
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Tracks of Destiny",
-                "amount": 1
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "Destroyer's Final Road",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
     {
       "id": 1204201,
       "type": 1,
@@ -1910,6 +1510,129 @@
             "id": "immortal_lumintwig",
             "name": "Immortal Lumintwig",
             "amount": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 1204101,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "battalia_crush",
+        "name": "Battalia Crush",
+        "desc": "หากจำนวนการโจมตีในเทิร์นถัดไปของ \"Lightning-Lord\" มากกว่าหรือเท่ากับ <nobr>6</nobr> ครั้ง DMG คริติคอลในเทิร์นถัดไปของ \"Lightning-Lord\" จะเพิ่มขึ้น <nobr>25%</nobr>",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              6,
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "เครดิต",
+                "amount": 5000
+              },
+              {
+                "id": "key_of_inspiration",
+                "name": "Key of Inspiration",
+                "amount": 3
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 1204102,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "savant_providence",
+        "name": "Savant Providence",
+        "desc": "เมื่อเริ่มต้นการต่อสู้ จะฟื้นฟูพลังงาน <nobr>15</nobr> หน่วยทันที",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              15
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "เครดิต",
+                "amount": 20000
+              },
+              {
+                "id": "key_of_knowledge",
+                "name": "Key of Knowledge",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 1204103,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "war_marshal",
+        "name": "War Marshal",
+        "desc": "หลังจากปล่อยสกิลต่อสู้ อัตราคริติคอลจะเพิ่มขึ้น <nobr>10%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "เครดิต",
+                "amount": 160000
+              },
+              {
+                "id": "key_of_wisdom",
+                "name": "Key of Wisdom",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
           }
         ]
       }

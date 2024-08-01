@@ -1058,8 +1058,8 @@
       "_id": 120304,
       "id": "cycle_of_life",
       "name": "{RUBY_B#いのち}生命{RUBY_E#}の{RUBY_B#りんね}輪廻{RUBY_E#}",
-      "desc": "「白花の刻」が#1[i]層に達した時、羅刹が「白花の刻」をすべて消費し、結界を張る。\n結界内の任意の敵が攻撃を受けた後、攻撃を行った味方は羅刹の攻撃力#2[f1]%+#4[i]のHPを回復する。\n結界は#3[i]ターン継続する。羅刹が戦闘不能状態になった時、結界は解除される。",
-      "simpleDesc": "「白花の刻」が2層になると結界を展開。結界存在時、味方は攻撃後にHPを回復する。",
+      "desc": "「白花の刻」が#1[i]層に達した時、羅刹が「白花の刻」をすべて消費し、結界を展開する。\n結界内の任意の敵が攻撃を受けた後、攻撃を行った味方は羅刹の攻撃力#2[f1]%+#4[i]のHPを回復する。\n結界は#3[i]ターン継続する。羅刹が戦闘不能状態になった時、結界は解除される。",
+      "simpleDesc": "「白花の刻」が2層になると結界を展開する。結界が展開されている間、味方は攻撃後にHPを回復する。",
       "type": "天賦",
       "tag": "回復",
       "levels": [
@@ -1415,7 +1415,7 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "{RUBY_B#しょうじゃ}生者{RUBY_E#}の{RUBY_B#じょうか}浄化{RUBY_E#}",
-      "desc": "結界が発動している間、味方全体の攻撃力+<nobr>20%</nobr>。"
+      "desc": "結界が展開されている間、味方全体の攻撃力+<nobr>20%</nobr>。"
     },
     {
       "_id": 120302,
@@ -1433,7 +1433,7 @@
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "{RUBY_B#いばら}荊{RUBY_E#}の{RUBY_B#しんぱん}審判{RUBY_E#}",
-      "desc": "結界が存在する間、敵を虚弱状態にし、敵の与ダメージ-<nobr>12%</nobr>。"
+      "desc": "結界が展開されている間、敵を虚弱状態にし、敵の与ダメージ-<nobr>12%</nobr>。"
     },
     {
       "_id": 120305,
@@ -1557,230 +1557,6 @@
       }
     },
     {
-      "id": 1203102,
-      "type": 3,
-      "children": [
-        {
-          "id": 1203205,
-          "type": 1,
-          "children": [
-            {
-              "id": 1203206,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "hp_boost",
-                "name": "HP強化",
-                "levelReq": 0,
-                "promotionReq": 5,
-                "statusList": [
-                  {
-                    "key": "最大HP+<nobr>#1[f1]%</nobr>",
-                    "value": 0.06
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "信用ポイント",
-                    "amount": 45000
-                  },
-                  {
-                    "id": "flower_of_eternity",
-                    "name": "永久の花",
-                    "amount": 3
-                  },
-                  {
-                    "id": "artifexs_gyreheart",
-                    "name": "工造渾心",
-                    "amount": 3
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "atk_boost",
-            "name": "攻撃強化",
-            "levelReq": 0,
-            "promotionReq": 4,
-            "statusList": [
-              {
-                "key": "攻撃力+<nobr>#1[f1]%</nobr>",
-                "value": 0.06
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "信用ポイント",
-                "amount": 20000
-              },
-              {
-                "id": "sprout_of_life",
-                "name": "生命の芽",
-                "amount": 5
-              },
-              {
-                "id": "artifexs_cogwheel",
-                "name": "工造迴輪",
-                "amount": 4
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "sanctified",
-        "name": "{RUBY_B#きよ}清{RUBY_E#}めし{RUBY_B#ちり}塵{RUBY_E#}の{RUBY_B#み}身{RUBY_E#}",
-        "desc": "結界内の任意の敵が味方の攻撃を受けた後、攻撃者以外の味方も羅刹の攻撃力<nobr>#1[f1]%</nobr>+<nobr>93</nobr>のHPを回復する。",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.07,
-              93
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "信用ポイント",
-                "amount": 20000
-              },
-              {
-                "id": "sprout_of_life",
-                "name": "生命の芽",
-                "amount": 5
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "運命の足跡",
-                "amount": 1
-              },
-              {
-                "id": "guardians_lament",
-                "name": "守護者の悲願",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": 1203103,
-      "type": 3,
-      "children": [
-        {
-          "id": 1203208,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "def_boost",
-            "name": "防御強化",
-            "levelReq": 0,
-            "promotionReq": 6,
-            "statusList": [
-              {
-                "key": "防御力+<nobr>#1[f1]%</nobr>",
-                "value": 0.075
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "信用ポイント",
-                "amount": 160000
-              },
-              {
-                "id": "flower_of_eternity",
-                "name": "永久の花",
-                "amount": 8
-              },
-              {
-                "id": "artifexs_gyreheart",
-                "name": "工造渾心",
-                "amount": 8
-              }
-            ]
-          }
-        },
-        {
-          "id": 1203209,
-          "type": 1,
-          "children": [],
-          "embedBuff": {
-            "id": "hp_boost",
-            "name": "HP強化",
-            "levelReq": 75,
-            "promotionReq": 0,
-            "statusList": [
-              {
-                "key": "最大HP+<nobr>#1[f1]%</nobr>",
-                "value": 0.08
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "信用ポイント",
-                "amount": 160000
-              },
-              {
-                "id": "flower_of_eternity",
-                "name": "永久の花",
-                "amount": 8
-              },
-              {
-                "id": "artifexs_gyreheart",
-                "name": "工造渾心",
-                "amount": 8
-              }
-            ]
-          }
-        }
-      ],
-      "embedBonusSkill": {
-        "id": "through_the_valley",
-        "name": "{RUBY_B#ゆうこく}幽谷{RUBY_E#}を{RUBY_B#こ}越{RUBY_E#}え",
-        "desc": "行動制限系デバフに抵抗する確率+<nobr>70%</nobr>。",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.7
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "信用ポイント",
-                "amount": 160000
-              },
-              {
-                "id": "flower_of_eternity",
-                "name": "永久の花",
-                "amount": 8
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "運命の足跡",
-                "amount": 1
-              },
-              {
-                "id": "guardians_lament",
-                "name": "守護者の悲願",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
       "id": 1203201,
       "type": 1,
       "children": [],
@@ -1839,6 +1615,91 @@
             "id": "artifexs_gyreheart",
             "name": "工造渾心",
             "amount": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 1203102,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "sanctified",
+        "name": "{RUBY_B#きよ}清{RUBY_E#}めし{RUBY_B#ちり}塵{RUBY_E#}の{RUBY_B#み}身{RUBY_E#}",
+        "desc": "結界内の任意の敵が味方の攻撃を受けた後、攻撃者以外の味方も羅刹の攻撃力<nobr>#1[f1]%</nobr>+<nobr>93</nobr>のHPを回復する。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.07,
+              93
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用ポイント",
+                "amount": 20000
+              },
+              {
+                "id": "sprout_of_life",
+                "name": "生命の芽",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "運命の足跡",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "守護者の悲願",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 1203103,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "through_the_valley",
+        "name": "{RUBY_B#ゆうこく}幽谷{RUBY_E#}を{RUBY_B#こ}越{RUBY_E#}え",
+        "desc": "行動制限系デバフに抵抗する確率+<nobr>70%</nobr>。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.7
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用ポイント",
+                "amount": 160000
+              },
+              {
+                "id": "flower_of_eternity",
+                "name": "永久の花",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "運命の足跡",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "守護者の悲願",
+                "amount": 1
+              }
+            ]
           }
         ]
       }
