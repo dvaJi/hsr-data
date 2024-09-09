@@ -1450,155 +1450,87 @@
   ],
   "skillTreePoints": [
     {
-      "id": 1001103,
-      "type": 3,
+      "id": 1001201,
+      "type": 1,
       "children": [
         {
-          "id": 1001208,
-          "type": 1,
-          "children": [
-            {
-              "id": 1001209,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "dmg_boost_ice",
-                "name": "Bonificación de daño: Hielo",
-                "levelReq": 75,
-                "promotionReq": 0,
-                "statusList": [
+          "id": 1001101,
+          "type": 3,
+          "children": [],
+          "embedBonusSkill": {
+            "id": "purify",
+            "name": "Purificación",
+            "desc": "Al usar la habilidad básica, se elimina 1 estado negativo del objetivo aliado.",
+            "type": "",
+            "tag": "",
+            "levels": [
+              {
+                "level": 1,
+                "params": [],
+                "materials": [
                   {
-                    "key": "Daño de Hielo +<nobr>#1[f1]%</nobr>",
-                    "value": 0.064
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 4000
+                  },
+                  {
+                    "id": "endurance_of_bronze",
+                    "name": "Persistencia del bronce",
+                    "amount": 2
+                  },
+                  {
+                    "id": "destroyers_final_road",
+                    "name": "Senda final del destructor",
+                    "amount": 1
                   }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": 1001102,
+          "type": 3,
+          "children": [],
+          "embedBonusSkill": {
+            "id": "reinforce",
+            "name": "Refuerzo",
+            "desc": "La duración del escudo que proporciona la habilidad básica aumenta en <nobr>1</nobr> turno.",
+            "type": "",
+            "tag": "",
+            "levels": [
+              {
+                "level": 1,
+                "params": [
+                  1
                 ],
                 "materials": [
                   {
                     "id": "credit",
                     "name": "Crédito",
-                    "amount": 128000
+                    "amount": 16000
                   },
                   {
-                    "id": "safeguard_of_amber",
-                    "name": "Custodia de ámbar",
-                    "amount": 6
+                    "id": "oath_of_steel",
+                    "name": "Juramento de acero",
+                    "amount": 4
                   },
                   {
-                    "id": "conquerors_will",
-                    "name": "Voluntad de conquista",
-                    "amount": 6
+                    "id": "tracks_of_destiny",
+                    "name": "Huellas del destino",
+                    "amount": 1
+                  },
+                  {
+                    "id": "destroyers_final_road",
+                    "name": "Senda final del destructor",
+                    "amount": 1
                   }
                 ]
-              }
-            },
-            {
-              "id": 1001210,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "def_boost",
-                "name": "Bonificación de DEF",
-                "levelReq": 80,
-                "promotionReq": 0,
-                "statusList": [
-                  {
-                    "key": "DEF +<nobr>#1[f1]%</nobr>",
-                    "value": 0.1
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "Crédito",
-                    "amount": 128000
-                  },
-                  {
-                    "id": "safeguard_of_amber",
-                    "name": "Custodia de ámbar",
-                    "amount": 6
-                  },
-                  {
-                    "id": "conquerors_will",
-                    "name": "Voluntad de conquista",
-                    "amount": 6
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "dmg_boost_ice",
-            "name": "Bonificación de daño: Hielo",
-            "levelReq": 0,
-            "promotionReq": 6,
-            "statusList": [
-              {
-                "key": "Daño de Hielo +<nobr>#1[f1]%</nobr>",
-                "value": 0.048
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Crédito",
-                "amount": 128000
-              },
-              {
-                "id": "safeguard_of_amber",
-                "name": "Custodia de ámbar",
-                "amount": 6
-              },
-              {
-                "id": "conquerors_will",
-                "name": "Voluntad de conquista",
-                "amount": 6
               }
             ]
           }
         }
       ],
-      "embedBonusSkill": {
-        "id": "ice_spell",
-        "name": "Conjuro helado",
-        "desc": "Al usar la habilidad definitiva, la probabilidad base de congelar al objetivo aumenta en un <nobr>15%</nobr>.",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.15
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Crédito",
-                "amount": 128000
-              },
-              {
-                "id": "safeguard_of_amber",
-                "name": "Custodia de ámbar",
-                "amount": 6
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Huellas del destino",
-                "amount": 1
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "Senda final del destructor",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": 1001201,
-      "type": 1,
-      "children": [],
       "embedBuff": {
         "id": "dmg_boost_ice",
         "name": "Bonificación de daño: Hielo",
@@ -1688,6 +1620,48 @@
             "id": "conquerors_will",
             "name": "Voluntad de conquista",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 1001103,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "ice_spell",
+        "name": "Conjuro helado",
+        "desc": "Al usar la habilidad definitiva, la probabilidad base de congelar al objetivo aumenta en un <nobr>15%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.15
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 128000
+              },
+              {
+                "id": "safeguard_of_amber",
+                "name": "Custodia de ámbar",
+                "amount": 6
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Huellas del destino",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Senda final del destructor",
+                "amount": 1
+              }
+            ]
           }
         ]
       }

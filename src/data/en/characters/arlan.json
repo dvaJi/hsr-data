@@ -1016,8 +1016,8 @@
       "_id": 100804,
       "id": "pain_and_anger",
       "name": "Pain and Anger",
-      "desc": "Increases Arlan's DMG for every percent of HP below his Max HP, up to a max of #1[i]% more DMG.",
-      "simpleDesc": "Gain DMG bonus based on percent of HP lost.",
+      "desc": "Based on Arlan's current missing HP percentage, gains DMG bonus, up to a maximum increase of #1[i]% DMG dealt by Arlan.",
+      "simpleDesc": "Gain DMG bonus based on currently missing HP percentage.",
       "type": "Talent",
       "tag": "Enhance",
       "levels": [
@@ -1323,7 +1323,7 @@
       "_id": 100801,
       "id": "to_the_bitter_end",
       "name": "To the Bitter End",
-      "desc": "When HP is lower than or equal to <nobr>50%</nobr> of Max HP, increases DMG dealt by Skill by <nobr>10%</nobr>."
+      "desc": "When HP percentage is lower than or equal to <nobr>50%</nobr> of Max HP, increases DMG dealt by Skill by <nobr>10%</nobr>."
     },
     {
       "_id": 100802,
@@ -1353,7 +1353,7 @@
       "_id": 100806,
       "id": "selfsacrifice",
       "name": "Self-Sacrifice",
-      "desc": "When HP drops to <nobr>50%</nobr> or below, Ultimate deals <nobr>20%</nobr> more DMG. And the DMG multiplier for adjacent targets is raised to the same level as that for the primary target."
+      "desc": "When the current HP percentage drops to <nobr>50%</nobr> or below, Ultimate deals <nobr>20%</nobr> more DMG, and the DMG multiplier for adjacent targets is raised to the same level as that for the primary target."
     }
   ],
   "skillTreePoints": [
@@ -1688,7 +1688,7 @@
       "embedBonusSkill": {
         "id": "repel",
         "name": "Repel",
-        "desc": "Upon entering battle, if Arlan's HP is less than or equal to <nobr>50%</nobr>, he can nullify all DMG received except for DoTs until he is attacked.",
+        "desc": "Upon entering battle, if Arlan's HP percentage is less than or equal to <nobr>50%</nobr>, he can nullify all DMG received except for DoTs until he is attacked.",
         "type": "",
         "tag": "",
         "levels": [

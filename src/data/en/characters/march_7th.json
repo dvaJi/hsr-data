@@ -759,7 +759,7 @@
       "id": "glacial_cascade",
       "name": "Glacial Cascade",
       "desc": "Deals Ice DMG equal to #1[i]% of March 7th's ATK to all enemies. Hit enemies have a #2[i]% base chance to be Frozen for #3[i] turn(s).\nWhile Frozen, enemies cannot take action and will receive Additional Ice DMG equal to #4[i]% of March 7th's ATK at the beginning of each turn.",
-      "simpleDesc": "Deals Ice DMG to all enemies, with a chance to apply the Freeze effect",
+      "simpleDesc": "Deals Ice DMG to all enemies, with a chance of Freezing them.",
       "type": "Ultimate",
       "tag": "AoE",
       "levels": [
@@ -1450,155 +1450,87 @@
   ],
   "skillTreePoints": [
     {
-      "id": 1001103,
-      "type": 3,
+      "id": 1001201,
+      "type": 1,
       "children": [
         {
-          "id": 1001208,
-          "type": 1,
-          "children": [
-            {
-              "id": 1001209,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "dmg_boost_ice",
-                "name": "DMG Boost: Ice",
-                "levelReq": 75,
-                "promotionReq": 0,
-                "statusList": [
+          "id": 1001101,
+          "type": 3,
+          "children": [],
+          "embedBonusSkill": {
+            "id": "purify",
+            "name": "Purify",
+            "desc": "When using the Skill, removes 1 debuff from a target ally.",
+            "type": "",
+            "tag": "",
+            "levels": [
+              {
+                "level": 1,
+                "params": [],
+                "materials": [
                   {
-                    "key": "Ice DMG increases by <nobr>#1[f1]%</nobr>",
-                    "value": 0.064
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 4000
+                  },
+                  {
+                    "id": "endurance_of_bronze",
+                    "name": "Endurance of Bronze",
+                    "amount": 2
+                  },
+                  {
+                    "id": "destroyers_final_road",
+                    "name": "Destroyer's Final Road",
+                    "amount": 1
                   }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": 1001102,
+          "type": 3,
+          "children": [],
+          "embedBonusSkill": {
+            "id": "reinforce",
+            "name": "Reinforce",
+            "desc": "The duration of the Shield generated from Skill is extended for <nobr>1</nobr> turn(s).",
+            "type": "",
+            "tag": "",
+            "levels": [
+              {
+                "level": 1,
+                "params": [
+                  1
                 ],
                 "materials": [
                   {
                     "id": "credit",
                     "name": "Credit",
-                    "amount": 128000
+                    "amount": 16000
                   },
                   {
-                    "id": "safeguard_of_amber",
-                    "name": "Safeguard of Amber",
-                    "amount": 6
+                    "id": "oath_of_steel",
+                    "name": "Oath of Steel",
+                    "amount": 4
                   },
                   {
-                    "id": "conquerors_will",
-                    "name": "Conqueror's Will",
-                    "amount": 6
+                    "id": "tracks_of_destiny",
+                    "name": "Tracks of Destiny",
+                    "amount": 1
+                  },
+                  {
+                    "id": "destroyers_final_road",
+                    "name": "Destroyer's Final Road",
+                    "amount": 1
                   }
                 ]
-              }
-            },
-            {
-              "id": 1001210,
-              "type": 1,
-              "children": [],
-              "embedBuff": {
-                "id": "def_boost",
-                "name": "DEF Boost",
-                "levelReq": 80,
-                "promotionReq": 0,
-                "statusList": [
-                  {
-                    "key": "DEF increases by <nobr>#1[f1]%</nobr>",
-                    "value": 0.1
-                  }
-                ],
-                "materials": [
-                  {
-                    "id": "credit",
-                    "name": "Credit",
-                    "amount": 128000
-                  },
-                  {
-                    "id": "safeguard_of_amber",
-                    "name": "Safeguard of Amber",
-                    "amount": 6
-                  },
-                  {
-                    "id": "conquerors_will",
-                    "name": "Conqueror's Will",
-                    "amount": 6
-                  }
-                ]
-              }
-            }
-          ],
-          "embedBuff": {
-            "id": "dmg_boost_ice",
-            "name": "DMG Boost: Ice",
-            "levelReq": 0,
-            "promotionReq": 6,
-            "statusList": [
-              {
-                "key": "Ice DMG increases by <nobr>#1[f1]%</nobr>",
-                "value": 0.048
-              }
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 128000
-              },
-              {
-                "id": "safeguard_of_amber",
-                "name": "Safeguard of Amber",
-                "amount": 6
-              },
-              {
-                "id": "conquerors_will",
-                "name": "Conqueror's Will",
-                "amount": 6
               }
             ]
           }
         }
       ],
-      "embedBonusSkill": {
-        "id": "ice_spell",
-        "name": "Ice Spell",
-        "desc": "Increases the Ultimate's base chance to Freeze enemies by <nobr>15%</nobr>.",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.15
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Credit",
-                "amount": 128000
-              },
-              {
-                "id": "safeguard_of_amber",
-                "name": "Safeguard of Amber",
-                "amount": 6
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Tracks of Destiny",
-                "amount": 1
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "Destroyer's Final Road",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": 1001201,
-      "type": 1,
-      "children": [],
       "embedBuff": {
         "id": "dmg_boost_ice",
         "name": "DMG Boost: Ice",
@@ -1688,6 +1620,48 @@
             "id": "conquerors_will",
             "name": "Conqueror's Will",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 1001103,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "ice_spell",
+        "name": "Ice Spell",
+        "desc": "Increases the Ultimate's base chance to Freeze enemies by <nobr>15%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.15
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 128000
+              },
+              {
+                "id": "safeguard_of_amber",
+                "name": "Safeguard of Amber",
+                "amount": 6
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
           }
         ]
       }
