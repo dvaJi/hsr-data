@@ -6,8 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         with:
@@ -16,13 +16,13 @@ jobs:
       - run: npm install
         env:
           NODE_OPTIONS: --max_old_space_size=8192
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v4
         name: Install pnpm
         id: pnpm-install
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         with:
-          version: 8
+          version: 9
           run_install: false
 
       - name: Get pnpm store directory
@@ -31,7 +31,7 @@ jobs:
         run: |
           echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
-      - uses: actions/cache@v3
+      - uses: actions/cache@v4
         name: Setup pnpm cache
         env:
           NODE_OPTIONS: --max_old_space_size=8192
