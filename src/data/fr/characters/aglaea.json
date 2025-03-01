@@ -244,7 +244,7 @@
       "id": "thorned_nectar",
       "name": "Déluge d'épée",
       "desc": "Inflige des DGT de foudre équivalents à #1[i]% de l'ATQ d'Aglaé à un ennemi désigné.",
-      "simpleDesc": "Inflige des DGT de foudre mineurs à un ennemi unique.",
+      "simpleDesc": "Inflige des DGT de foudre mineurs à un ennemi.",
       "type": "ATQ normale",
       "tag": "Cible unique",
       "levels": [
@@ -418,7 +418,7 @@
       "_id": 140202,
       "id": "rise_exalted_renown",
       "name": "Élève-toi, renommée exaltée",
-      "desc": "Restaure des PV équivalents à  de ses PV max à la Costumière. Si la Costumière est absente, invoque le mnémesprit de la Costumière et lui permet d'agir immédiatement.",
+      "desc": "Restaure des PV équivalents à #1[i]% de ses PV max à la Costumière. Si la Costumière est absente, invoque le mnémesprit de la Costumière et lui permet d'agir immédiatement.",
       "simpleDesc": "Restaure des PV à la Costumière. Si la Costumière est absente, invoque le mnémesprit de la Costumière et lui permet d'agir immédiatement.",
       "type": "Compétence",
       "tag": "Invocation",
@@ -742,8 +742,8 @@
       "_id": 140203,
       "id": "dance_destined_weaveress",
       "name": "Danse, tisseuse de la destinée",
-      "desc": "Invoque le mnémesprit de la Costumière. Si la Costumière est déjà sur le champ de bataille, restaure ses PV au max. Aglaé entre dans l'état Posture de suprémacie et agit immédiatement.\nDans l'état Posture de suprémacie, Aglaé bénéficie des cumuls d'augmentation de VIT du talent du mnémesprit de la Costumière, chaque cumul augmentant sa VIT de #1[f1]%. Renforce l'ATQ normale en « Entaille de mille baisers » et ne peut pas utiliser la compétence. La Costumière est immunisée contre les malus de contrôle.\nUn compte à rebours apparaît dans l'ordre d'action, avec une VIT de #4[i]. Utiliser l'ultime à nouveau lorsque le compte à rebours se trouve dans l'ordre d'action réinitialise le compte à rebours. La Costumière s'autodétruit au début du tour du compte à rebours. L'état Posture de suprémacie d'Aglaé est dissipé lorsque la Costumière disparaît.",
-      "simpleDesc": "Invoque le mnémesprit de la Costumière, ce qui permet à Aglaé d'entrer dans l'état Posture de suprémacie, d'agir immédiatement et de bénéficier de l'ATQ normale renforcée.",
+      "desc": "Invoque le mnémesprit de la Costumière. Si la Costumière est déjà sur le champ de bataille, restaure ses PV au max. Aglaé entre dans l'état Posture de suprématie et agit immédiatement.\nDans l'état Posture de suprématie, Aglaé bénéficie des cumuls d'augmentation de VIT du talent du mnémesprit de la Costumière, chaque cumul augmentant la VIT de cette unité de #1[f1]%. Renforce l'ATQ normale en Entaille de mille baisers et ne peut pas utiliser la compétence. La Costumière est immunisée contre les malus de contrôle.\nUn compte à rebours apparaît dans l'ordre d'action, avec une VIT de #4[i]. Tant que le compte à rebours est actif, utiliser l'ultime à nouveau réinitialise le compte à rebours. La Costumière disparaît au début du tour du compte à rebours. L'état Posture de suprématie d'Aglaé est dissipé lorsque la Costumière disparaît.",
+      "simpleDesc": "Invoque le mnémesprit de la Costumière, ce qui permet à Aglaé d'entrer dans l'état Posture de suprématie, d'agir immédiatement et de bénéficier de l'ATQ normale renforcée.",
       "type": "Ultime",
       "tag": "Renforcement",
       "levels": [
@@ -1111,8 +1111,8 @@
       "_id": 140204,
       "id": "rosyfingered",
       "name": "Doigts de la rose dorée",
-      "desc": "La Costumière possède initialement une VIT équivalente à #4[i]% de la VIT d'Aglaé et des PV max équivalents à #5[i]% des PV max d'Aglaé + #6[i]. Lorsque la Costumière est sur le champ de bataille, les attaques d'Aglaé appliquent Point de couture à la cible. L'ennemi dans l'état Point de couture subit des DGT additionnels de foudre équivalents à #1[i]% de l'ATQ d'Aglaé lorsqu'il est attaqué. Point de couture ne s'applique qu'à la cible la plus récente.",
-      "simpleDesc": "Lorsque la Costumière est sur le champ de bataille, les attaques d'Aglaé appliquent Point de couture à la cible. L'ennemi dans l'état Point de couture subit des DGT additionnels mineurs de foudre lorsqu'il est attaqué.",
+      "desc": "La Costumière possède une VIT initiale équivalente à #4[i]% de la VIT d'Aglaé et ses PV max sont équivalents à #5[i]% des PV max d'Aglaé + #6[i]. Lorsque la Costumière est sur le champ de bataille, les attaques d'Aglaé appliquent Point de couture à la cible. Après avoir attaqué l'ennemi dans l'état Point de couture, inflige des DGT additionnels de foudre équivalents à #1[i]% de l'ATQ d'Aglaé. Point de couture ne s'applique qu'à la cible la plus récente.",
+      "simpleDesc": "Lorsque la Costumière est sur le champ de bataille, les attaques d'Aglaé appliquent Point de couture à sa cible. Après avoir attaqué l'ennemi dans l'état Point de couture, inflige des DGT additionnels mineurs de foudre.",
       "type": "Talent",
       "tag": "Renforcement",
       "levels": [
@@ -1480,8 +1480,8 @@
       "_id": 140207,
       "id": "meteoric_sunder",
       "name": "Déchirure étoilée",
-      "desc": "Invoque le mnémesprit de la Costumière et lance une ATQ conjointe vers l'avant. Régénère #2[i] points d'énergie, inflige des DGT de foudre équivalents à #1[i]% de l'ATQ d'Aglaé à toutes les cibles ennemies, puis applique Point de couture à une cible ennemie aléatoire après être entré en combat.",
-      "simpleDesc": "Invoque le mnémesprit de la Costumière et lance une ATQ conjointe vers l'avant. Régénère de l'énergie, inflige des DGT de foudre mineurs à tous les ennemis, puis applique Point de couture à une cible ennemie aléatoire après être entré en combat.",
+      "desc": "Invoque le mnémesprit de la Costumière et lance une ATQ conjointe vers l'avant. Après être entré en combat, régénère #2[i] points d'énergie, inflige des DGT de foudre équivalents à #1[i]% de l'ATQ d'Aglaé à toutes les cibles ennemies, puis applique Point de couture à une cible ennemie aléatoire.",
+      "simpleDesc": "Invoque le mnémesprit de la Costumière et lance une ATQ conjointe vers l'avant. Après être entré en combat, régénère de l'énergie, inflige des DGT de foudre mineurs à tous les ennemis, puis applique Point de couture à une cible ennemie aléatoire.",
       "type": "Technique",
       "levels": [
         {
@@ -1500,19 +1500,19 @@
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "Aléas de la trajectoire de Vénus",
-      "desc": "Les ennemis affectés par Point de couture subissent <nobr>15%</nobr> de DGT supplémentaires. Lorsqu'Aglaé ou la Costumière attaque ces cibles, Aglaé régénère <nobr>20</nobr> points d'énergie supplémentaires."
+      "desc": "Augmente les DGT subis par l'ennemi affecté par Point de couture de <nobr>15%</nobr>. Lorsqu'Aglaé ou la Costumière attaque cette cible, Aglaé régénère <nobr>20</nobr> points d'énergie supplémentaires."
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "Naviguer sur le radeau des yeux",
-      "desc": "Lorsqu'Aglaé ou la Costumière agit, les DGT qu'elles infligent ignorent <nobr>14%</nobr> de la DÉF de la cible. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois. Dure jusqu'à ce qu'une autre unité qu'Aglaé ou la Costumière utilise activement une capacité."
+      "desc": "Lorsqu'Aglaé ou la Costumière agit, les DGT qu'elles infligent ignorent <nobr>14%</nobr> de la DÉF des cibles. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois. Dure jusqu'à ce qu'une autre unité qu'Aglaé ou la Costumière utilise activement une capacité."
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "Offrande de la perle figée",
-      "desc": "Niv. de la compétence +2, jusqu'au niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au niv. <nobr>10</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
     },
     {
       "_id": 140204,
@@ -1524,13 +1524,13 @@
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "Tissage sous le linceul du malheur",
-      "desc": "Niv. de l'ultime +2, jusqu'au niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au niv. <nobr>15</nobr> maximum.\nNiv. de compétence de mnémesprit +1, jusqu'au niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "Fluctuations de la tapisserie du destin",
-      "desc": "Augmente la <u>PÉN de RÉS</u> à la foudre d'Aglaé et de la Costumière de <nobr>20%</nobr> lorsqu'Aglaé est dans l'état Posture de suprémacie. Lorsque la VIT d'Aglaé ou de la Costumière est supérieure à <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, les DGT infligés par l'<u>ATQ conjointe</u> augmentent de <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>."
+      "desc": "Augmente la <u>PÉN de RÉS</u> à la foudre d'Aglaé et de la Costumière de <nobr>20%</nobr> lorsqu'Aglaé est dans l'état Posture de suprématie. Lorsque la VIT d'Aglaé ou de la Costumière est supérieure à <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, les DGT infligés par leur <u>ATQ conjointe</u> augmentent de <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>."
     }
   ],
   "skillTreePoints": [
@@ -1610,7 +1610,7 @@
       "embedBonusSkill": {
         "id": "the_myopics_doom",
         "name": "Rétribution des aveugles du destin",
-        "desc": "Lorsqu'Aglaé est dans l'état Posture de suprémacie, l'ATQ d'Aglaé et de la Costumière augmente d'un montant équivalent à <nobr>720%</nobr> de la VIT d'Aglaé + <nobr>360%</nobr> de la VIT de la Costumière.",
+        "desc": "Lorsqu'Aglaé est dans l'état Posture de suprématie, l'ATQ d'Aglaé et de la Costumière augmente d'un montant équivalent à <nobr>720%</nobr> de la VIT d'Aglaé + <nobr>360%</nobr> de la VIT de la Costumière.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1717,7 +1717,7 @@
       "embedBonusSkill": {
         "id": "last_thread_of_fate",
         "name": "Dernier fil du destin",
-        "desc": "Lorsque la Costumière disparaît, il est possible de conserver <nobr>1</nobr> cumuls de l'effet d'augmentation de VIT conféré par le talent du mnémesprit. Lorsque la Costumière est invoquée à nouveau, elle bénéficie de ce nombre de cumuls de l'augmentation de VIT.",
+        "desc": "Lorsque la Costumière disparaît, il est possible de conserver <nobr>1</nobr> cumul de l'effet d'augmentation de VIT conféré par le talent du mnémesprit. Lorsque la Costumière est invoquée à nouveau, elle obtient immédiatement le nombre de cumuls d'amélioration de VIT correspondant.",
         "type": "",
         "tag": "",
         "levels": [

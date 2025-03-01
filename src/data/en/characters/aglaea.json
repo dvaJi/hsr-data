@@ -244,7 +244,7 @@
       "id": "thorned_nectar",
       "name": "Thorned Nectar",
       "desc": "Deals Lightning DMG equal to #1[i]% of Aglaea's ATK to one designated enemy.",
-      "simpleDesc": "Deals minor Lightning DMG to a single enemy.",
+      "simpleDesc": "Deals minor Lightning DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
       "levels": [
@@ -418,8 +418,8 @@
       "_id": 140202,
       "id": "rise_exalted_renown",
       "name": "Rise, Exalted Renown",
-      "desc": "Restores HP to Garmentmaker by #1[i]% of its Max HP. If Garmentmaker is absent, summons the memosprite Garmentmaker and this unit immediately takes action.",
-      "simpleDesc": "Restores HP for Garmentmaker. If Garmentmaker is absent, summons the memosprite Garmentmaker and this unit immediately takes action.",
+      "desc": "Restores HP to Garmentmaker by #1[i]% of its Max HP. If Garmentmaker is absent, then summons the memosprite Garmentmaker and makes this unit immediately take action.",
+      "simpleDesc": "Restores HP for Garmentmaker. If Garmentmaker is absent, summons the memosprite Garmentmaker and makes this unit immediately take action.",
       "type": "Skill",
       "tag": "Summon",
       "levels": [
@@ -742,7 +742,7 @@
       "_id": 140203,
       "id": "dance_destined_weaveress",
       "name": "Dance, Destined Weaveress",
-      "desc": "Summons the memosprite Garmentmaker. If Garmentmaker is already on the field, then restores its HP to max. Aglaea enters the \"Supreme Stance\" state and immediately takes action.\nWhile in the \"Supreme Stance\" state, Aglaea gains the SPD Boost stacks from Garmentmaker's Memosprite Talent, with each stack increasing her SPD by #1[f1]%. Enhances Basic ATK to \"Slash by a Thousandfold Kiss,\" and cannot use Skill. Garmentmaker is immune to Crowd Control debuffs.\nA countdown appears on the Action Order, with its own SPD set at #4[i]. Using Ultimate again when the countdown is on the Action Order will reset the countdown. When the countdown's turn starts, Garmentmaker self-destructs. When Garmentmaker disappears, Aglaea's \"Supreme Stance\" state is dispelled.",
+      "desc": "Summons the memosprite Garmentmaker. If Garmentmaker is already on the field, then restores its HP to max. Aglaea enters the \"Supreme Stance\" state and immediately takes action.\nWhile in \"Supreme Stance,\" Aglaea gains the SPD Boost stacks from Garmentmaker's Memosprite Talent, with each stack increasing this unit's SPD by #1[f1]%. Enhances Basic ATK to \"Slash by a Thousandfold Kiss,\" and cannot use Skill. Garmentmaker is immune to Crowd Control debuffs.\nA countdown appears on the Action Order, with its own SPD set at #4[i]. While the countdown exists, using Ultimate again will reset the countdown. When the countdown's turn starts, Garmentmaker self-destructs. When Garmentmaker disappears, Aglaea dispels the \"Supreme Stance\" state.",
       "simpleDesc": "Summons the memosprite Garmentmaker, enabling Aglaea to enter the \"Supreme Stance\" state, immediately take action, and gain Enhanced Basic ATK.",
       "type": "Ultimate",
       "tag": "Enhance",
@@ -1112,7 +1112,7 @@
       "id": "rosyfingered",
       "name": "Rosy-Fingered",
       "desc": "The memosprite Garmentmaker has an initial SPD equal to #4[i]% of Aglaea's SPD and a Max HP equal to #5[i]% of Aglaea's Max HP plus #6[i]. While Garmentmaker is on the field, Aglaea's attacks inflict the target with the \"Seam Stitch\" state. After attacking enemies in the \"Seam Stitch\" state, further deals Lightning Additional DMG equal to #1[i]% of Aglaea's ATK. \"Seam Stitch\" only takes effect on the most recently inflicted target.",
-      "simpleDesc": "While Garmentmaker is on the field, Aglaea's attacks inflict the target with the \"Seam Stitch\" state. After attacking enemies in the \"Seam Stitch\" state, further deals a minor Lightning Additional DMG.",
+      "simpleDesc": "While Garmentmaker is on the field, Aglaea's attacks inflict the target with the \"Seam Stitch\" state. After attacking enemies in the \"Seam Stitch\" state, deals minor Lightning Additional DMG.",
       "type": "Talent",
       "tag": "Enhance",
       "levels": [
@@ -1480,8 +1480,8 @@
       "_id": 140207,
       "id": "meteoric_sunder",
       "name": "Meteoric Sunder",
-      "desc": "Summons the memosprite Garmentmaker and launches a forward joint attack. After entering battle, regenerates #2[i] Energy and deals Lightning DMG equal to #1[i]% of Aglaea's ATK to all enemy targets. Then, randomly inflicts the \"Seam Stitch\" state to a random enemy target.",
-      "simpleDesc": "Summons the memosprite Garmentmaker and launches a forward joint attack. After entering battle, regenerates Energy and deals minor Lightning DMG to all enemies. Then, randomly inflicts the \"Seam Stitch\" state to a random enemy target.",
+      "desc": "Summons the memosprite Garmentmaker and launches a forward joint attack. After entering battle, regenerates #2[i] Energy and deals Lightning DMG equal to #1[i]% of Aglaea's ATK to all enemy targets. Then, randomly inflicts the \"Seam Stitch\" state on a random enemy target.",
+      "simpleDesc": "Summons the memosprite Garmentmaker and launches a forward joint attack. After entering battle, regenerates Energy and deals minor Lightning DMG to all enemies. Then, randomly inflicts the \"Seam Stitch\" state on a random enemy target.",
       "type": "Technique",
       "levels": [
         {
@@ -1500,37 +1500,37 @@
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "Drift at the Whim of Venus",
-      "desc": "Enemies afflicted with \"Seam Stitch\" take <nobr>15%</nobr> increased DMG. After Aglaea or Garmentmaker attacks this target, Aglaea additionally regenerates <nobr>20</nobr> Energy."
+      "desc": "The enemy afflicted with \"Seam Stitch\" takes <nobr>15%</nobr> increased DMG. After Aglaea or Garmentmaker attacks this target, additionally regenerates <nobr>20</nobr> Energy."
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "Sail on the Raft of Eyelids",
-      "desc": "When Aglaea or Garmentmaker takes action, the DMG dealt by Aglaea and Garmentmaker ignores <nobr>14%</nobr> of the target's DEF. This effect stacks up to <nobr>3</nobr> time(s) and lasts until any unit, other than Aglaea or Garmentmaker, actively uses an ability."
+      "desc": "When Aglaea or Garmentmaker takes action, enables the DMG dealt by Aglaea and Garmentmaker to ignore <nobr>14%</nobr> of the target's DEF. This effect stacks up to <nobr>3</nobr> time(s) and lasts until any unit, other than Aglaea or Garmentmaker, actively uses an ability."
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "Bequeath in the Coalescence of Dew",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>. Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>. Memosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nMemosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "Flicker Below the Surface of Marble",
-      "desc": "The SPD Boost effect from the Memosprite Talent has its max stack limit increased by <nobr>1</nobr>. After Aglaea uses an attack, Garmentmaker can also gain the SPD Boost effect from the Memosprite Talent."
+      "desc": "The SPD Boost effect from the Memosprite Talent has its max stack limit increased by <nobr>1</nobr>. After Aglaea uses an attack, can also make Garmentmaker gain the SPD Boost effect from the Memosprite Talent."
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "Weave Under the Shroud of Woe",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>. Talent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>. Memosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nMemosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "Fluctuate in the Tapestry of Fates",
-      "desc": "While Aglaea is in \"Supreme Stance,\" increases her and Garmentmaker's Lightning <u>RES PEN</u> by <nobr>20%</nobr>. When Aglaea or Garmentmaker's SPD is greater than <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, the DMG dealt by <u>Joint ATK</u> increases by <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>."
+      "desc": "While Aglaea is in \"Supreme Stance,\" increases her and Garmentmaker's Lightning <u>RES PEN</u> by <nobr>20%</nobr>. When Aglaea's or Garmentmaker's SPD is greater than <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, the <u>Joint ATK</u> DMG dealt by them increases by <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>."
     }
   ],
   "skillTreePoints": [
@@ -1610,7 +1610,7 @@
       "embedBonusSkill": {
         "id": "the_myopics_doom",
         "name": "The Myopic's Doom",
-        "desc": "While in \"Supreme Stance,\" increases Aglaea and Garmentmaker's ATK by an amount equal to <nobr>720%</nobr> of Aglaea's SPD plus <nobr>360%</nobr> of Garmentmaker's SPD.",
+        "desc": "While in \"Supreme Stance,\" increases Aglaea's and Garmentmaker's ATK by an amount equal to <nobr>720%</nobr> of Aglaea's SPD plus <nobr>360%</nobr> of Garmentmaker's SPD.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1829,7 +1829,7 @@
       "embedBonusSkill": {
         "id": "the_speeding_sol",
         "name": "The Speeding Sol",
-        "desc": "At the start of battle, if this unit's Energy is lower than <nobr>50%</nobr>, regenerates this unit's Energy until <nobr>50%</nobr>.",
+        "desc": "At the start of battle, if this unit's Energy is lower than <nobr>50%</nobr>, regenerates this unit's Energy to <nobr>50%</nobr>.",
         "type": "",
         "tag": "",
         "levels": [
