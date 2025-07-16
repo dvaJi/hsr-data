@@ -243,7 +243,7 @@
       "_id": 120501,
       "id": "shard_sword",
       "name": "Shard Sword",
-      "desc": "Mengakibatkan Wind DMG sebesar #1[i]% ATK Blade pada 1 target musuh.",
+      "desc": "Mengakibatkan Wind DMG sebesar #1[i]% ATK Blade pada 1 musuh yang ditargetkan.",
       "simpleDesc": "Mengakibatkan Wind DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
@@ -415,8 +415,8 @@
       "_id": 120502,
       "id": "hellscape",
       "name": "Hellscape",
-      "desc": "Mengonsumsi HP sebesar #1[i]% Max HP Blade dan memasuki status \"Hellscape\".\nSaat berstatus \"Hellscape\", Blade tidak dapat melancarkan Skill dan DMG yang diakibatkannya akan meningkat #4[i]%. Basic Attack \"Shard Sword\" akan meningkat menjadi \"Forest of Swords\" selama #2[i] giliran.\nJika HP-nya tidak mencukupi, saat melancarkan Skill, HP Blade akan berkurang hingga 1.\nSkill ini tidak dapat memulihkan Energy. Setelah melancarkan Skill ini, giliran saat ini tidak akan berakhir.",
-      "simpleDesc": "Mengonsumsi HP diri, memperoleh penguatan Basic Attack, dan giliran kali ini tidak akan berakhir.",
+      "desc": "Mengonsumsi HP sebesar #1[i]% Max HP Blade dan memasuki status \"Hellscape\".\nSaat berstatus \"Hellscape\", Blade tidak dapat melancarkan Skill, DMG yang diakibatkannya meningkat #4[i]%, dan Basic Attack \"Shard Sword\" diperkuat menjadi \"Forest of Swords\" selama #2[i] giliran.\nJika HP saat ini tidak mencukupi, maka saat melancarkan Skill, HP Blade saat ini akan berkurang hingga 1.\nSkill ini tidak dapat memulihkan Energy. Setelah melancarkan Skill ini, giliran saat ini tidak akan berakhir.",
+      "simpleDesc": "Mengonsumsi HP diri sendiri, memperoleh Enhanced Basic Attack, dan giliran saat ini tidak akan berakhir.",
       "type": "Skill",
       "tag": "Enhance",
       "levels": [
@@ -754,8 +754,8 @@
       "_id": 120503,
       "id": "death_sentence",
       "name": "Death Sentence",
-      "desc": "Mengubah HP Blade saat ini menjadi 50% dari Max HP-nya, serta mengakibatkan Wind DMG pada 1 musuh sebesar #1[i]% ATK + #2[i]% Max HP + #5[i]% perhitungan akumulasi jumlah HP Blade yang berkurang dalam pertempuran ini. Di saat yang bersamaan juga akan mengakibatkan Wind DMG pada target di sekitarnya sebesar #3[f1]% ATK + #4[i]% Max HP + #6[i]% perhitungan akumulasi jumlah HP Blade yang berkurang dalam pertempuran ini.\nPerhitungan jumlah akumulasi HP Blade yang berkurang di pertempuran saat ini maksimal tidak dapat melebihi #7[i]% Max HP Blade. Setelah melancarkan Ultimate, perhitungan jumlah akumulasi akan direset ulang dan diakumulasi kembali.",
-      "simpleDesc": "Mengonversi HP saat ini menjadi 50% Max HP, dan mengakibatkan Wind DMG dalam jumlah besar pada 1 musuh, serta Wind DMG pada target di sekitarnya.",
+      "desc": "Mengonversi HP Blade saat ini menjadi 50% dari Max HP, mengakibatkan Wind DMG pada 1 musuh sebesar #1[i]% ATK + #2[i]% Max HP + #5[i]% dari akumulasi HP Blade yang berkurang dalam pertempuran ini, serta mengakibatkan Wind DMG pada target di sekitarnya sebesar #3[f1]% ATK + #4[i]% Max HP + #6[i]% dari akumulasi HP Blade yang berkurang dalam pertempuran ini.\nAkumulasi HP Blade yang berkurang dalam pertempuran ini maksimal tidak melebihi #7[i]% dari Max HP Blade. Setelah melancarkan Ultimate, perhitungan tersebut akan dihapus dan diakumulasi kembali.",
+      "simpleDesc": "Mengonversi HP saat ini menjadi 50% dari Max HP, serta mengakibatkan Wind DMG dalam jumlah besar pada 1 musuh dan Wind DMG pada target di sekitarnya.",
       "type": "Ultimate",
       "tag": "Blast",
       "levels": [
@@ -1138,8 +1138,8 @@
       "_id": 120504,
       "id": "shuhus_gift",
       "name": "Shuhu's Gift",
-      "desc": "Saat Blade terkena serangan atau mengonsumsi HP-nya, dia akan mendapatkan 1 lapis Charge, maksimal 5 lapis. Setiap kali Blade terkena serangan, Blade hanya bisa mendapatkan 1 lapis Charge efek ini.\nSetelah jumlah Charge mencapai batas maksimal, Blade akan segera melancarkan 1 kali Serangan Lanjutan yang mengakibatkan Wind DMG sebesar #2[i]% ATK Blade + #4[i]% Max HP Blade pada seluruh musuh. Di saat yang bersamaan, akan memulihkan HP Blade sebesar #3[i]% Max HP-nya. Setelah Serangan Lanjutan ini dilancarkan, semua lapisan Charge akan dihapus.",
-      "simpleDesc": "Saat HP Blade berkurang, akan memperoleh 1 lapis Charge. Saat Charge mencapai batas maksimal, akan melancarkan Serangan Lanjutan yang mengakibatkan Wind DMG pada seluruh musuh, memulihkan HP, dan mengonsumsi semua Charge.",
+      "desc": "Saat Blade menerima DMG atau mengonsumsi HP, dia akan memperoleh 1 lapis Charge, maksimal dapat ditumpuk hingga 5 lapis. Setiap kali Blade terkena serangan, efek ini maksimal dapat ditumpuk 1 lapis.\nSaat Charge mencapai batas maksimum, Blade akan segera melancarkan 1 kali Serangan Lanjutan yang mengakibatkan Wind DMG sebesar #2[i]% ATK Blade + #4[i]% Max HP Blade pada seluruh musuh. Di saat yang sama, akan memulihkan HP Blade sebesar #3[i]% Max HP-nya. Setelah melancarkan Serangan Lanjutan, akan mengonsumsi semua Charge.",
+      "simpleDesc": "Saat HP Blade berkurang, dia akan memperoleh 1 lapis Charge. Saat Charge mencapai batas maksimum, Blade akan melancarkan Serangan Lanjutan yang mengakibatkan Wind DMG pada seluruh musuh dan memulihkan HP dirinya, lalu mengonsumsi semua Charge.",
       "type": "Talent",
       "tag": "AoE",
       "levels": [
@@ -1477,7 +1477,7 @@
       "_id": 120507,
       "id": "karma_wind",
       "name": "Karma Wind",
-      "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, mengonsumsi HP sebesar #2[i]% Max HP Blade dan di saat bersamaan, mengakibatkan Wind DMG sebesar #1[i]% Max HP Blade pada seluruh musuh.\nJika HP saat ini tidak cukup, saat melancarkan Technique, HP Blade saat ini akan berkurang hingga 1.",
+      "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, akan mengonsumsi HP sebesar #2[i]% Max HP Blade dan mengakibatkan Wind DMG sebesar #1[i]% Max HP Blade pada seluruh musuh.\nJika HP saat ini tidak mencukupi, maka saat melancarkan Technique, HP Blade saat ini akan berkurang hingga 1.",
       "simpleDesc": "Menyerang musuh. Setelah memasuki pertempuran, mengonsumsi HP diri sendiri dan mengakibatkan Wind DMG pada seluruh musuh.",
       "type": "Technique",
       "levels": [
@@ -1497,13 +1497,13 @@
       "_id": 120501,
       "id": "blade_cuts_the_deepest_in_hell",
       "name": "Blade Cuts the Deepest in Hell",
-      "desc": "Ultimate DMG yang diakibatkan pada musuh yang ditarget akan meningkat lagi sebanyak <nobr>150%</nobr> perhitungan akumulasi jumlah HP Blade yang berkurang dalam pertempuran ini.\nPerhitungan jumlah akumulasi HP Blade yang berkurang di pertempuran saat ini maksimal tidak dapat melebihi <nobr>90%</nobr> Max HP Blade. Setelah melancarkan Ultimate, perhitungan jumlah akumulasi akan direset ulang dan diakumulasi kembali."
+      "desc": "DMG yang diakibatkan Ultimate pada 1 musuh yang ditargetkan meningkat ekstra sebesar <nobr>150%</nobr> dari akumulasi HP Blade yang berkurang dalam pertempuran ini.\nAkumulasi HP Blade yang berkurang dalam pertempuran ini maksimal tidak melebihi <nobr>90%</nobr> dari Max HP Blade. Setelah melancarkan Ultimate, perhitungan tersebut akan dihapus dan diakumulasi kembali."
     },
     {
       "_id": 120502,
       "id": "ten_thousand_sorrows_from_one_broken_dream",
       "name": "Ten Thousand Sorrows From One Broken Dream",
-      "desc": "Saat Blade memasuki status \"Hellscape\", CRIT Rate dia meningkat <nobr>15%</nobr>."
+      "desc": "Saat Blade berstatus \"Hellscape\", CRIT Rate akan meningkat <nobr>15%</nobr>."
     },
     {
       "_id": 120503,
@@ -1515,7 +1515,7 @@
       "_id": 120504,
       "id": "rejected_by_death_infected_with_life",
       "name": "Rejected by Death, Infected With Life",
-      "desc": "Saat persentase HP Blade saat ini turun dari <nobr>50%</nobr> ke atas menjadi kurang dari atau sama dengan <nobr>50%</nobr> Max HP dirinya, Max HP Blade akan meningkat <nobr>20%</nobr>. Efek ini dapat ditumpuk hingga <nobr>2</nobr> lapis."
+      "desc": "Saat persentase HP saat ini berkurang dari <nobr>50%</nobr> ke atas menjadi kurang dari atau sama dengan <nobr>50%</nobr>, Max HP akan meningkat <nobr>20%</nobr>. Efek ini dapat ditumpuk hingga <nobr>2</nobr> lapis."
     },
     {
       "_id": 120505,
@@ -1527,7 +1527,7 @@
       "_id": 120506,
       "id": "reborn_into_an_empty_husk",
       "name": "Reborn Into an Empty Husk",
-      "desc": "Jumlah maksimum lapisan Charge berkurang menjadi 4 lapis. DMG yang diakibatkan <u>Serangan Lanjutan</u> yang dipicu Talent meningkat sebesar <nobr>50%</nobr> Max HP Blade."
+      "desc": "Batas maksimum lapisan Charge berkurang menjadi 4 lapis. DMG yang diakibatkan <u>Serangan Lanjutan</u> yang dipicu Talent meningkat ekstra sebesar <nobr>50%</nobr> Max HP Blade."
     }
   ],
   "skillTreePoints": [
@@ -1715,7 +1715,7 @@
       "embedBonusSkill": {
         "id": "neverending_deaths",
         "name": "Neverending Deaths",
-        "desc": "Setelah melancarkan \"Forest of Swords\", jika serangan mengenai target musuh yang <u>berstatus Weakness Break</u>, maka Blade akan memulihkan HP-nya sebesar <nobr>5%</nobr> Max HP dirinya + <nobr>100</nobr>.",
+        "desc": "Setelah melancarkan \"Forest of Swords\", jika serangan mengenai target musuh yang <u>berstatus Weakness Break</u>, maka Blade akan memulihkan HP sebesar <nobr>5%</nobr> Max HP-nya + <nobr>100</nobr>.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1899,6 +1899,402 @@
     },
     {
       "id": 1205201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "hp_boost",
+        "name": "Peningkatan HP",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Max HP +<nobr>#1[f1]%</nobr>",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 2500
+          },
+          {
+            "id": "immortal_scionette",
+            "name": "Immortal Scionette",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11205202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11205203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "Peningkatan HP",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Max HP +<nobr>#1[f1]%</nobr>",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "lifeless_blade",
+                    "name": "Lifeless Blade",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_aeroblossom",
+                    "name": "Immortal Aeroblossom",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_rate_boost",
+            "name": "Peningkatan CRIT Rate",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "CRIT Rate +<nobr>#1[f1]%</nobr>",
+                "value": 0.027
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "Shattered Blade",
+                "amount": 3
+              },
+              {
+                "id": "immortal_scionette",
+                "name": "Immortal Scionette",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "vita_infinita",
+        "name": "Vita Infinita",
+        "desc": "Penghapusan akumulasi HP Blade yang berkurang saat Blade melancarkan Ultimate berubah menjadi <nobr>50%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "Shattered Blade",
+                "amount": 3
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Regret of Infinite Ochema",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11205205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11205206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_rate_boost",
+                "name": "Peningkatan CRIT Rate",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "CRIT Rate +<nobr>#1[f1]%</nobr>",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Worldbreaker Blade",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Immortal Lumintwig",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "Peningkatan HP",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Max HP +<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "Lifeless Blade",
+                "amount": 5
+              },
+              {
+                "id": "immortal_aeroblossom",
+                "name": "Immortal Aeroblossom",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "neverending_deaths",
+        "name": "Neverending Deaths",
+        "desc": "Pemulihan HP yang diterima meningkat <nobr>20%</nobr>. Setelah menerima pemulihan, <nobr>25%</nobr> dari nilai pemulihan tersebut akan dikonversi menjadi akumulasi HP Blade yang berkurang (yang dihitung Ultimate).",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "Lifeless Blade",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Regret of Infinite Ochema",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11205208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11205209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_rate_boost",
+                "name": "Peningkatan CRIT Rate",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "CRIT Rate +<nobr>#1[f1]%</nobr>",
+                    "value": 0.053
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Worldbreaker Blade",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Immortal Lumintwig",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11205210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "Peningkatan HP",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Max HP +<nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Worldbreaker Blade",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Immortal Lumintwig",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "Peningkatan Effect RES",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "Effect RES +<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "Worldbreaker Blade",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "Immortal Lumintwig",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "cyclone_of_destruction",
+        "name": "Cyclone of Destruction",
+        "desc": "DMG <u>Serangan Lanjutan</u> yang dilancarkan Talent meningkat <nobr>20%</nobr>, dan <u>Serangan Lanjutan</u> tersebut akan memulihkan ekstra <nobr>15</nobr> Energy.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              15
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "Worldbreaker Blade",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Regret of Infinite Ochema",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205201,
       "type": 1,
       "children": [],
       "embedBuff": {

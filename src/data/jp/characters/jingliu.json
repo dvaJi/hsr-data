@@ -1448,7 +1448,7 @@
       "id": "shine_of_truth",
       "name": "{RUBY_B#しんしきて}神識照{RUBY_E#}らす{RUBY_B#げつえい}月影{RUBY_E#}",
       "desc": "秘技を使用した後、自身の周囲に#3[i]秒間継続する特殊領域を作り出す。特殊領域内の敵は凍結状態になる。特殊領域内の敵と戦闘に入った後、自身のEPを#6[i]回復し、「朔望」を#1[i]層獲得して#2[i]%の基礎確率で敵を凍結状態にする、#4[i]ターン継続。凍結状態の敵は行動できず、ターンが回ってくるたびに鏡流の攻撃力#5[i]%分の氷属性付加ダメージを受ける。味方が作り出した領域は1つまで存在できる。",
-      "simpleDesc": "自身の周囲に特殊領域を作り出す。領域内の敵は凍結状態になる。領域内の敵と戦闘に入った後、EPを回復し、朔望を1層獲得して高確率で敵を凍結状態にする。",
+      "simpleDesc": "自身の周囲に特殊領域を作り出す。領域内の敵は凍結状態になる。領域内の敵と戦闘に入った後、EPを回復し、「朔望」を1層獲得して高確率で敵を凍結状態にする。",
       "type": "秘技",
       "tag": "妨害",
       "levels": [
@@ -1873,6 +1873,402 @@
     },
     {
       "id": 1212201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "crit_dmg_boost",
+        "name": "会心ダメージ強化",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "会心ダメージ+<nobr>#1[f1]%</nobr>",
+            "value": 0.053
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用ポイント",
+            "amount": 2500
+          },
+          {
+            "id": "immortal_scionette",
+            "name": "永寿の萌芽",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11212202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11212203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "会心ダメージ強化",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "会心ダメージ+<nobr>#1[f1]%</nobr>",
+                    "value": 0.053
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "信用ポイント",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "lifeless_blade",
+                    "name": "無生の刃切",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_aeroblossom",
+                    "name": "永寿の天華",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "spd_boost",
+            "name": "速度強化",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "速度+<nobr>#1[i]</nobr>",
+                "value": 2
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用ポイント",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "破砕の刃切",
+                "amount": 3
+              },
+              {
+                "id": "immortal_scionette",
+                "name": "永寿の萌芽",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "deathrealm",
+        "name": "{RUBY_B#しきょう}死境{RUBY_E#}",
+        "desc": "「転魄」状態の時、効果抵抗+<nobr>35%</nobr>、必殺技ダメージ+<nobr>20%</nobr>。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.35,
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用ポイント",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "破砕の刃切",
+                "amount": 3
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "無窮なる仮身の遺恨",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11212205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11212206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "spd_boost",
+                "name": "速度強化",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "速度+<nobr>#1[i]</nobr>",
+                    "value": 3
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "信用ポイント",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "浄世の刃切",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "永寿の栄枝",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_dmg_boost",
+            "name": "会心ダメージ強化",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "会心ダメージ+<nobr>#1[f1]%</nobr>",
+                "value": 0.08
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用ポイント",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "無生の刃切",
+                "amount": 5
+              },
+              {
+                "id": "immortal_aeroblossom",
+                "name": "永寿の天華",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "sword_champion",
+        "name": "{RUBY_B#けんしゅ}剣首{RUBY_E#}",
+        "desc": "「無罅の飛光」を発動した後、さらにEPが<nobr>15</nobr>回復する。「寒川映月」を発動した後、さらにEPが<nobr>8</nobr>回復する。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              8
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用ポイント",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "無生の刃切",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "運命の足跡",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "無窮なる仮身の遺恨",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11212208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11212209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "spd_boost",
+                "name": "速度強化",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "速度+<nobr>#1[i]</nobr>",
+                    "value": 4
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "信用ポイント",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "浄世の刃切",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "永寿の栄枝",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11212210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "会心ダメージ強化",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "会心ダメージ+<nobr>#1[f1]%</nobr>",
+                    "value": 0.107
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "信用ポイント",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "浄世の刃切",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "永寿の栄枝",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "HP強化",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "最大HP+<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用ポイント",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "浄世の刃切",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "永寿の栄枝",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "frost_wraith",
+        "name": "{RUBY_B#そうはく}霜魄{RUBY_E#}",
+        "desc": "「朔望」を獲得する時、「朔望」がすでに上限に達している場合、鏡流の次の攻撃はターゲットの防御力を<nobr>25%</nobr>無視する。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用ポイント",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "浄世の刃切",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "運命の足跡",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "無窮なる仮身の遺恨",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212201,
       "type": 1,
       "children": [],
       "embedBuff": {

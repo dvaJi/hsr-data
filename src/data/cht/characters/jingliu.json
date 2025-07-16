@@ -1448,7 +1448,7 @@
       "id": "shine_of_truth",
       "name": "古鏡照神",
       "desc": "使用秘技後，在自身周圍製造1片持續#3[i]秒的特殊領域，處於特殊領域內的敵人陷入凍結狀態。與處於特殊領域內的敵人進入戰鬥後，立即為自身恢復#6[i]點能量、獲得#1[i]層【朔望】並有#2[i]%的基礎機率使敵方目標陷入凍結狀態，持續#4[i]回合。凍結狀態下，敵方目標無法行動，且每回合開始時受到等同於鏡流#5[i]%攻擊力的冰屬性附加傷害。我方製造的領域效果最多存在1個。",
-      "simpleDesc": "在自身周圍製造特殊領域。領域內敵人陷入凍結狀態。與領域內敵人進入戰鬥後，恢復能量、獲得1層朔望並有高機率使敵方目標陷入凍結狀態。",
+      "simpleDesc": "在自身周圍製造特殊領域。領域內敵人陷入凍結狀態。與領域內敵人進入戰鬥後，恢復能量、獲得1層【朔望】並高機率使敵方目標陷入凍結狀態。",
       "type": "秘技",
       "tag": "妨害",
       "levels": [
@@ -1873,6 +1873,402 @@
     },
     {
       "id": 1212201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "crit_dmg_boost",
+        "name": "暴擊傷害強化",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "暴擊傷害提高<nobr>#1[f1]%</nobr>",
+            "value": 0.053
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用點",
+            "amount": 2500
+          },
+          {
+            "id": "immortal_scionette",
+            "name": "永壽幼芽",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11212202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11212203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "暴擊傷害強化",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "暴擊傷害提高<nobr>#1[f1]%</nobr>",
+                    "value": 0.053
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "信用點",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "lifeless_blade",
+                    "name": "無生殘刃",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_aeroblossom",
+                    "name": "永壽天華",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "spd_boost",
+            "name": "速度強化",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "速度提高<nobr>#1[i]</nobr>",
+                "value": 2
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用點",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "破碎殘刃",
+                "amount": 3
+              },
+              {
+                "id": "immortal_scionette",
+                "name": "永壽幼芽",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "deathrealm",
+        "name": "死境",
+        "desc": "【轉魄】狀態下，效果抗性提高<nobr>35%</nobr>，造成的終結技傷害提高<nobr>20%</nobr>。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.35,
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用點",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "破碎殘刃",
+                "amount": 3
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "無窮假身的遺恨",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11212205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11212206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "spd_boost",
+                "name": "速度強化",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "速度提高<nobr>#1[i]</nobr>",
+                    "value": 3
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "信用點",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "淨世殘刃",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "永壽榮枝",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_dmg_boost",
+            "name": "暴擊傷害強化",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "暴擊傷害提高<nobr>#1[f1]%</nobr>",
+                "value": 0.08
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用點",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "無生殘刃",
+                "amount": 5
+              },
+              {
+                "id": "immortal_aeroblossom",
+                "name": "永壽天華",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "sword_champion",
+        "name": "劍首",
+        "desc": "施放【無罅飛光】後，額外恢復<nobr>15</nobr>點能量，施放【寒川映月】後，額外恢復<nobr>8</nobr>點能量。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              8
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用點",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "無生殘刃",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "命運的足跡",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "無窮假身的遺恨",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11212208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11212209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "spd_boost",
+                "name": "速度強化",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "速度提高<nobr>#1[i]</nobr>",
+                    "value": 4
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "信用點",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "淨世殘刃",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "永壽榮枝",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11212210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "暴擊傷害強化",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "暴擊傷害提高<nobr>#1[f1]%</nobr>",
+                    "value": 0.107
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "信用點",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "淨世殘刃",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "永壽榮枝",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "生命強化",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "生命上限提高<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用點",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "淨世殘刃",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "永壽榮枝",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "frost_wraith",
+        "name": "霜魄",
+        "desc": "獲得【朔望】時若已達到上限，鏡流下一次攻擊無視目標<nobr>25%</nobr>的防禦力。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "信用點",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "淨世殘刃",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "命運的足跡",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "無窮假身的遺恨",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212201,
       "type": 1,
       "children": [],
       "embedBuff": {

@@ -415,7 +415,7 @@
       "_id": 100602,
       "id": "allow_changes",
       "name": "Allow Changes?",
-      "desc": "Memiliki #2[i]% peluang dasar untuk memberikan 1 Weakness tambahan dengan Tipe yang sama dengan salah satu rekan tim secara acak pada 1 target musuh dan mengurangi #4[i]% DMG RES target musuh terhadap Tipe tersebut selama #3[i] giliran. Jika Weakness yang ditambahkan adalah Weakness yang sudah dimiliki oleh target musuh, maka tidak akan memicu pengurangan DMG RES terhadap Tipe tersebut.\nSatu target musuh hanya dapat menerima 1 Weakness dari Silver Wolf. Saat Silver Wolf menambah Weakness lagi pada target musuh yang sama, maka hanya Weakness terbaru yang akan dipertahankan.\nMemiliki #5[i]% peluang dasar untuk memberi tambahan pengurangan DMG RES seluruh tipe pada target sebesar #6[f1]% selama #7[i] giliran.\nMengakibatkan Quantum DMG pada target tersebut sebesar #1[i]% ATK Silver Wolf.",
+      "desc": "Memiliki #2[i]% peluang dasar untuk menambahkan 1 Weakness yang sama dengan Tipe salah satu rekan tim di medan pertempuran pada 1 musuh yang ditargetkan, serta mengurangi #4[i]% RES target terhadap Tipe Weakness tersebut selama #3[i] giliran. Jika menambahkan Weakness dengan Tipe yang sudah dimiliki target musuh, maka tidak akan memicu efek pengurangan RES terhadap Tipe tersebut.\nSetiap target musuh hanya dapat ditambahkan 1 Weakness oleh Silver Wolf. Saat Silver Wolf menambahkan Weakness secara berulang pada target musuh yang sama, maka hanya Weakness terbaru yang akan dipertahankan.\nMemiliki #5[i]% peluang dasar untuk mengurangi ekstra #6[f1]% RES Seluruh Tipe target tersebut selama #7[i] giliran.\nMengakibatkan Quantum DMG sebesar #1[i]% ATK Silver Wolf pada target tersebut.",
       "simpleDesc": "Berpeluang besar untuk memberikan Weakness tambahan pada 1 musuh dan mengakibatkan Quantum DMG pada musuh tersebut.",
       "type": "Skill",
       "tag": "Single Target",
@@ -799,8 +799,8 @@
       "_id": 100603,
       "id": "user_banned",
       "name": "User Banned",
-      "desc": "Memiliki #2[i]% peluang dasar untuk mengurangi #3[f1]% DEF target musuh selama #4[i] giliran. Di saat yang bersamaan, mengakibatkan Quantum DMG sebesar #1[i]% ATK Silver Wolf pada target tersebut.",
-      "simpleDesc": "Berpeluang besar untuk mengurangi DEF dan mengakibatkan Quantum DMG dalam jumlah besar pada 1 musuh.",
+      "desc": "Memiliki #2[i]% peluang dasar untuk mengurangi #3[f1]% DEF 1 musuh yang ditargetkan selama #4[i] giliran. Di saat yang sama, mengakibatkan Quantum DMG sebesar #1[i]% ATK Silver Wolf pada target tersebut.",
+      "simpleDesc": "Berpeluang besar untuk mengurangi DEF, serta mengakibatkan Quantum DMG dalam jumlah besar pada 1 musuh.",
       "type": "Ultimate",
       "tag": "Single Target",
       "levels": [
@@ -1138,8 +1138,8 @@
       "_id": 100604,
       "id": "awaiting_system_response",
       "name": "Awaiting System Response ...",
-      "desc": "Silver Wolf dapat membuat 3 jenis Bug: Mengurangi #1[f1]% ATK, mengurangi #2[f1]% DEF, mengurangi #3[f1]% SPD.\nSetiap kali Silver Wolf melancarkan serangan, ada #4[i]% peluang dasar untuk menanamkan 1 jenis bug secara acak pada target musuh selama #5[i] putaran.",
-      "simpleDesc": "Setelah menyerang, memiliki peluang untuk memberikan 1 \"Bug\" secara acak pada target.",
+      "desc": "Silver Wolf dapat membuat 3 jenis \"Bug\": ATK -#1[f1]%, DEF -#2[f1]%, SPD -#3[f1]%.\nSetiap setelah Silver Wolf melancarkan serangan, ada #4[i]% peluang dasar untuk menanamkan 1 \"Bug\" acak pada target musuh yang terkena serangan selama #5[i] giliran.",
+      "simpleDesc": "Setelah menyerang, berpeluang untuk menanamkan 1 \"Bug\" acak pada target.",
       "type": "Talent",
       "tag": "Impair",
       "levels": [
@@ -1492,8 +1492,8 @@
       "_id": 100607,
       "id": "force_quit_program",
       "name": "Force Quit Program",
-      "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, mengakibatkan Quantum DMG sebesar #1[i]% ATK Silver Wolf pada seluruh musuh, serta mengabaikan Tipe Weakness dan mengurangi Toughness seluruh musuh. Jika mengakibatkan Weakness Break dengan cara ini, maka akan memicu Quantum Weakness Break.",
-      "simpleDesc": "Setelah menyerang musuh dan memasuki pertempuran, mengakibatkan DMG dalam jumlah kecil, mengabaikan Tipe Weakness dan mengurangi Toughness seluruh musuh.",
+      "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, akan mengakibatkan Quantum DMG sebesar #1[i]% ATK Silver Wolf pada seluruh musuh dan mengurangi Toughness seluruh musuh tanpa memedulikan Tipe Weakness. Saat mengakibatkan Weakness Break dengan cara ini, akan memicu efek Quantum Weakness Break.",
+      "simpleDesc": "Menyerang musuh. Setelah memasuki pertempuran, akan mengakibatkan DMG dalam jumlah kecil pada seluruh musuh dan mengurangi Toughness seluruh musuh tanpa memedulikan Tipe Weakness.",
       "type": "Technique",
       "levels": [
         {
@@ -1511,13 +1511,13 @@
       "_id": 100601,
       "id": "social_engineering",
       "name": "Social Engineering",
-      "desc": "Setelah Silver Wolf melancarkan Ultimate untuk menyerang target musuh, setiap 1 <u>efek Debuff</u> yang dimiliki target musuh akan memulihkan <nobr>7</nobr> Energy Silver Wolf. Efek ini dapat dipicu maksimal <nobr>5</nobr> kali setiap kali melancarkan Ultimate."
+      "desc": "Setelah Silver Wolf melancarkan Ultimate untuk menyerang target musuh, setiap 1 <u>Debuff</u> yang dimiliki target musuh akan memulihkan <nobr>7</nobr> Energy Silver Wolf. Efek ini dapat dipicu maksimal <nobr>5</nobr> kali setiap kali melancarkan Ultimate."
     },
     {
       "_id": 100602,
       "id": "zombie_network",
       "name": "Zombie Network",
-      "desc": "Saat target musuh memasuki pertempuran, Effect RES target berkurang <nobr>20%</nobr>."
+      "desc": "Saat target musuh memasuki pertempuran, mengurangi <nobr>20%</nobr> Effect RES target."
     },
     {
       "_id": 100603,
@@ -1529,7 +1529,7 @@
       "_id": 100604,
       "id": "bounce_attack",
       "name": "Bounce Attack",
-      "desc": "Setelah Silver Wolf melancarkan Ultimate untuk menyerang target musuh, setiap 1 <u>efek Debuff</u> yang dimiliki target musuh akan mengakibatkan Quantum <u>DMG Tambahan</u> sebesar <nobr>20%</nobr> ATK Silver Wolf. Efek ini dapat dipicu maksimal <nobr>5</nobr> kali setiap kali melancarkan Ultimate."
+      "desc": "Setelah melancarkan Ultimate untuk menyerang target musuh, setiap 1 <u>Debuff</u> yang dimiliki target akan mengakibatkan Quantum <u>DMG Tambahan</u> sebesar <nobr>20%</nobr> ATK Silver Wolf. Efek ini maksimal dapat dipicu <nobr>5</nobr> kali dalam setiap serangan Ultimate."
     },
     {
       "_id": 100605,
@@ -1541,7 +1541,7 @@
       "_id": 100606,
       "id": "overlay_network",
       "name": "Overlay Network",
-      "desc": "Setiap 1 <u>status Debuff</u> yang dimiliki target musuh akan meningkatkan <nobr>20%</nobr> DMG Silver Wolf pada target tersebut, maksimal hingga <nobr>100%</nobr>."
+      "desc": "Setiap 1 <u>Debuff</u> yang dimiliki target musuh akan meningkatkan <nobr>20%</nobr> DMG yang diakibatkan Silver Wolf pada target tersebut, maksimal meningkat hingga <nobr>100%</nobr>."
     }
   ],
   "skillTreePoints": [
@@ -1616,7 +1616,7 @@
       "embedBonusSkill": {
         "id": "generate",
         "name": "Generate",
-        "desc": "Durasi \"Bug\" bertambah <nobr>1</nobr> giliran. Setiap ada target musuh yang mengalami Weakness Break, Silver Wolf memiliki <nobr>65%</nobr> <u>peluang dasar</u> untuk menanamkan 1 jenis \"Bug\" acak pada target tersebut.",
+        "desc": "Durasi \"Bug\" bertambah <nobr>1</nobr> giliran. Setiap ada target musuh yang terkena Weakness Break, Silver Wolf memiliki <nobr>65%</nobr> <u>peluang dasar</u> untuk menanamkan 1 \"Bug\" acak pada target tersebut.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1654,7 +1654,7 @@
       "embedBonusSkill": {
         "id": "inject",
         "name": "Inject",
-        "desc": "Saat melancarkan Skill, durasi Weakness yang diberikan pada target musuh akan bertambah <nobr>1</nobr> giliran.",
+        "desc": "Saat melancarkan Skill, durasi Weakness yang ditambahkan pada target musuh bertambah <nobr>1</nobr> giliran.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1696,7 +1696,7 @@
       "embedBonusSkill": {
         "id": "side_note",
         "name": "Side Note",
-        "desc": "Saat melancarkan Skill, jika jumlah <u>Debuff</u> target musuh lebih dari atau sama dengan <nobr>3</nobr>, maka efek dari Skill yang mengurangi RES Seluruh Tipe target akan berkurang ekstra <nobr>3%</nobr> lagi.",
+        "desc": "Saat melancarkan Skill, jika jumlah <u>Debuff</u> target musuh lebih dari atau sama dengan <nobr>3</nobr>, maka efek dari Skill yang mengurangi RES Seluruh Tipe target akan berkurang ekstra <nobr>3%</nobr>.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1705,6 +1705,195 @@
             "params": [
               3,
               0.03
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidian of Obsession",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11006201,
+      "type": 1,
+      "children": [
+        {
+          "id": 11006210,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "atk_boost",
+            "name": "Peningkatan ATK",
+            "levelReq": 80,
+            "promotionReq": 0,
+            "statusList": [
+              {
+                "key": "ATK +<nobr>#1[f1]%</nobr>",
+                "value": 0.08
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidian of Obsession",
+                "amount": 8
+              },
+              {
+                "id": "ancient_engine",
+                "name": "Ancient Engine",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "Peningkatan ATK",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "ATK +<nobr>#1[f1]%</nobr>",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 2500
+          },
+          {
+            "id": "ancient_part",
+            "name": "Ancient Part",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11006101,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "generate",
+        "name": "Generate",
+        "desc": "Durasi \"Bug\" bertambah <nobr>1</nobr> giliran. Setiap ada target musuh yang terkena Weakness Break, Silver Wolf memiliki <nobr>100%</nobr> <u>peluang dasar</u> untuk menanamkan 1 \"Bug\" acak pada target tersebut.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              1,
+              1
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "obsidian_of_dread",
+                "name": "Obsidian of Dread",
+                "amount": 3
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11006102,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "inject",
+        "name": "Inject",
+        "desc": "Segera memulihkan <nobr>20</nobr> Energy saat pertempuran dimulai. Saat giliran Silver Wolf dimulai, dirinya akan memulihkan <nobr>5</nobr> Energy.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              20,
+              5
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "obsidian_of_desolation",
+                "name": "Obsidian of Desolation",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Destroyer's Final Road",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11006103,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "side_note",
+        "name": "Side Note",
+        "desc": "Setiap <nobr>10%</nobr> Effect Hit Rate yang dimiliki Silver Wolf akan meningkatkan ekstra <nobr>10%</nobr> ATK, maksimal tidak melebihi <nobr>50%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.1,
+              0.5
             ],
             "materials": [
               {

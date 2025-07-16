@@ -1448,7 +1448,7 @@
       "id": "shine_of_truth",
       "name": "Resplandor de la verdad",
       "desc": "Tras usar la técnica, crea una zona especial a su alrededor que dura #3[i] segundos. Los enemigos que estén en la zona especial son afectados con Congelación. Al entrar en combate con los enemigos dentro de la zona, recupera #6[i] pts. de energía, obtiene #1[i] acumulación de Sizigia y tiene una probabilidad base del #2[i]% de congelar a los enemigos durante #4[i] turno. Los enemigos congelados no pueden actuar y al principio de cada turno reciben un Daño de Hielo adicional equivalente al #5[i]% del ATQ de Jingliu. Solo puede haber una zona especial creada por los aliados a la vez.",
-      "simpleDesc": "Crea una zona especial a su alrededor. Los enemigos que estén en la zona se congelan. Al entrar en combate con los enemigos dentro de la zona, recupera energía, obtiene 1 acumulación de Sizigia y tiene una gran probabilidad de congelar a los enemigos.",
+      "simpleDesc": "Crea una zona especial a su alrededor. Los enemigos que estén en la zona se congelan. Tras entrar en combate con los enemigos dentro de la zona, recupera energía, obtiene 1 acumulación de Sizigia y tiene una gran probabilidad de congelar a los enemigos.",
       "type": "Técnica",
       "tag": "Alteración",
       "levels": [
@@ -1873,6 +1873,402 @@
     },
     {
       "id": 1212201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "crit_dmg_boost",
+        "name": "Bonificación de Daño CRIT",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Daño CRIT +<nobr>#1[f1]%</nobr>",
+            "value": 0.053
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 2500
+          },
+          {
+            "id": "immortal_scionette",
+            "name": "Brote verde inmortal",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11212202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11212203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "Bonificación de Daño CRIT",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Daño CRIT +<nobr>#1[f1]%</nobr>",
+                    "value": 0.053
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "lifeless_blade",
+                    "name": "Espada inerte",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_aeroblossom",
+                    "name": "Flor etérea inmortal",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "spd_boost",
+            "name": "Bonificación de VEL",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "VEL +<nobr>#1[i]</nobr>",
+                "value": 2
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "Espada rota",
+                "amount": 3
+              },
+              {
+                "id": "immortal_scionette",
+                "name": "Brote verde inmortal",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "deathrealm",
+        "name": "Paisaje infernal",
+        "desc": "En el estado de Transmigración espectral, la RES a efecto aumenta en un <nobr>35%</nobr> y el daño de habilidad definitiva infligido aumenta en un <nobr>20%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.35,
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "Espada rota",
+                "amount": 3
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Arrepentimiento del eterno vehículo del alma",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11212205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11212206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "spd_boost",
+                "name": "Bonificación de VEL",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "VEL +<nobr>#1[i]</nobr>",
+                    "value": 3
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Espada rompemundos",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Rama gloriosa inmortal",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_dmg_boost",
+            "name": "Bonificación de Daño CRIT",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Daño CRIT +<nobr>#1[f1]%</nobr>",
+                "value": 0.08
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "Espada inerte",
+                "amount": 5
+              },
+              {
+                "id": "immortal_aeroblossom",
+                "name": "Flor etérea inmortal",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "sword_champion",
+        "name": "Maestra de espadas",
+        "desc": "Tras lanzar Destello Trascendental, recupera <nobr>15</nobr> pts. de energía adicionales. Tras lanzar Reflejo helado de la luna, recupera <nobr>8</nobr> pts. de energía adicionales.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              8
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "Espada inerte",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Huellas del destino",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Arrepentimiento del eterno vehículo del alma",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11212208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11212209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "spd_boost",
+                "name": "Bonificación de VEL",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "VEL +<nobr>#1[i]</nobr>",
+                    "value": 4
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Espada rompemundos",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Rama gloriosa inmortal",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11212210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "Bonificación de Daño CRIT",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Daño CRIT +<nobr>#1[f1]%</nobr>",
+                    "value": 0.107
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Espada rompemundos",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Rama gloriosa inmortal",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "Bonificación de PV",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "PV máx. +<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "Espada rompemundos",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "Rama gloriosa inmortal",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "frost_wraith",
+        "name": "Espectro gélido",
+        "desc": "Si Sizigia ya está al máximo al obtenerla, el siguiente ataque de Jingliu ignora un <nobr>25%</nobr> de la DEF de los objetivos.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "Espada rompemundos",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Huellas del destino",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Arrepentimiento del eterno vehículo del alma",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11212201,
       "type": 1,
       "children": [],
       "embedBuff": {

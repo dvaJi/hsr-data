@@ -415,7 +415,7 @@
       "_id": 100602,
       "id": "allow_changes",
       "name": "수정하시겠습니까?",
-      "desc": "지정된 단일 적에게 필드에 있는 아군이 보유한 속성의 약점을 #2[i]%의 기본 확률로 1개 부여하고, 해당 약점에 대응하는 속성의 저항이 #4[i]% 감소한다. 지속 시간: #3[i]턴. 적이 보유한 속성과 동일한 약점이 부여되면 대응하는 속성 저항 감소 효과가 발동되지 않는다.\n은랑은 단일 적에게 1개의 약점만 부여할 수 있고, 약점 재부여 시 새로 부여된 약점만 존재한다.\n#5[i]%의 기본 확률로 해당 목표의 모든 속성 저항이 추가로 #6[f1]% 감소한다. 지속 시간: #7[i]턴\n해당 목표에게 은랑 공격력의 #1[i]%만큼 양자 속성 피해를 준다",
+      "desc": "지정된 단일 적에게 필드 위 아군이 보유한 속성의 약점을 #2[i]%의 기본 확률로 1개 부여하고, 해당 약점에 대응하는 속성의 저항이 #4[i]% 감소한다, 지속 시간: #3[i]턴. 적이 보유한 속성과 동일한 약점이 부여되면 대응하는 속성 저항 감소 효과가 발동되지 않는다.\n은랑은 단일 적에게 1개의 약점만 부여할 수 있고, 약점 재부여 시 새로 부여된 약점만 존재한다.\n#5[i]%의 기본 확률로 해당 목표의 모든 속성 저항이 추가로 #6[f1]% 감소한다. 지속 시간: #7[i]턴\n해당 목표에게 은랑 공격력의 #1[i]%만큼 양자 속성 피해를 가한다",
       "simpleDesc": "높은 확률로 단일 적에게 약점을 추가로 부여하며 양자 속성 피해를 준다",
       "type": "전투 스킬",
       "tag": "단일 공격",
@@ -1138,7 +1138,7 @@
       "_id": 100604,
       "id": "awaiting_system_response",
       "name": "프로그램 응답 대기 중…",
-      "desc": "은랑은 다음 3가지의 결함을 생성할 수 있다: 공격력 #1[f1]% 감소, 방어력 #2[f1]% 감소, 속도 #3[f1]% 감소.\n은랑은 매번 공격 발동 후 피격된 적에게 #4[i]%의 기본 확률로 임의의 [결함]을 1개 이식한다. 지속 시간: #5[i]턴",
+      "desc": "은랑은 다음 3가지의 [결함]을 생성할 수 있다: 공격력 #1[f1]% 감소, 방어력 #2[f1]% 감소, 속도 #3[f1]% 감소.\n은랑은 매번 공격 발동 후 피격된 적에게 #4[i]%의 기본 확률로 랜덤 [결함]을 1개 이식한다, 지속 시간: #5[i]턴",
       "simpleDesc": "공격 후 일정 확률로 적에게 임의의 [결함]을 1개 이식한다",
       "type": "특성",
       "tag": "방해",
@@ -1493,7 +1493,7 @@
       "id": "force_quit_program",
       "name": "|프로세스 강제 종료|",
       "desc": "적을 바로 공격하며, 전투 진입 후 모든 적에게 은랑 공격력의 #1[i]%만큼 양자 속성 피해를 주고, 모든 적의 강인성을 소모하는데 이때 약점 속성을 무시한다. 약점 격파 시 발동되는 약점 격파 효과는 양자 속성이다",
-      "simpleDesc": "적을 공격하며, 전투 진입 후 모든 적에게 소량의 피해를 준다. 또한 약점 속성을 무시하고 강인성을 소모시킨다",
+      "simpleDesc": "적을 공격하며, 전투 진입 후 모든 적에게 소량의 피해를 가한다. 또한 약점 속성을 무시하고 강인성을 감소시킨다",
       "type": "비술",
       "levels": [
         {
@@ -1616,7 +1616,7 @@
       "embedBonusSkill": {
         "id": "generate",
         "name": "생성",
-        "desc": "[결함]의 지속 시간이 <nobr>1</nobr>턴 증가하며 적의 약점이 격파될 때마다 은랑은 <nobr>65%</nobr>의 <u>기본 확률</u>로 임의의 [결함]을 1개 이식한다",
+        "desc": "[결함]의 지속 시간이 <nobr>1</nobr>턴 증가하며, 적의 약점이 격파될 때마다 은랑은 <nobr>65%</nobr>의 <u>기본 확률</u>로 해당 목표에게 랜덤 [결함]을 1개 이식한다",
         "type": "",
         "tag": "",
         "levels": [
@@ -1705,6 +1705,195 @@
             "params": [
               3,
               0.03
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "신용 포인트",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "타락의 흑요",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "운명의 발자취",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "파멸자의 말로",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11006201,
+      "type": 1,
+      "children": [
+        {
+          "id": 11006210,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "atk_boost",
+            "name": "공격 강화",
+            "levelReq": 80,
+            "promotionReq": 0,
+            "statusList": [
+              {
+                "key": "공격력 <nobr>#1[f1]%</nobr> 증가",
+                "value": 0.08
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "신용 포인트",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "타락의 흑요",
+                "amount": 8
+              },
+              {
+                "id": "ancient_engine",
+                "name": "고대 엔진",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "공격 강화",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "공격력 <nobr>#1[f1]%</nobr> 증가",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "신용 포인트",
+            "amount": 2500
+          },
+          {
+            "id": "ancient_part",
+            "name": "고대 부속품",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11006101,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "generate",
+        "name": "생성",
+        "desc": "[결함]의 지속 시간이 <nobr>1</nobr>턴 증가하며, 적의 약점이 격파될 때마다 은랑은 <nobr>100%</nobr>의 <u>기본 확률</u>로 해당 목표에게 랜덤 [결함]을 1개 이식한다",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              1,
+              1
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "신용 포인트",
+                "amount": 5000
+              },
+              {
+                "id": "obsidian_of_dread",
+                "name": "어두운 흑요",
+                "amount": 3
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "파멸자의 말로",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11006102,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "inject",
+        "name": "주입",
+        "desc": "전투 시작 시 즉시 에너지를 <nobr>20</nobr>pt 회복한다. 은랑의 턴 시작 시 자신의 에너지를 <nobr>5</nobr>pt 회복한다",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              20,
+              5
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "신용 포인트",
+                "amount": 20000
+              },
+              {
+                "id": "obsidian_of_desolation",
+                "name": "허공의 흑요",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "운명의 발자취",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "파멸자의 말로",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11006103,
+      "type": 3,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "side_note",
+        "name": "주석",
+        "desc": "은랑이 보유한 효과 명중 <nobr>10%</nobr>당 추가로 공격력이 <nobr>10%</nobr> 증가한다. (최대 <nobr>50%</nobr> 증가)",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.1,
+              0.5
             ],
             "materials": [
               {

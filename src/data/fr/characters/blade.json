@@ -1138,8 +1138,8 @@
       "_id": 120504,
       "id": "shuhus_gift",
       "name": "Don de Shuhu",
-      "desc": "Chaque fois que Blade subit des DGT ou consomme ses PV, il gagne 1 cumul de Charge, jusqu'à un maximum de 5 cumuls. Blade ne peut gagner qu'1 cumul de Charge au maximum pour chaque attaque qu'il subit.\nLorsque le nombre de cumuls de Charge atteint son maximum, il lance immédiatement une ATQ de suivi sur tous les ennemis, infligeant des DGT de vent équivalents à #2[i]% de son ATQ + #4[i]% de ses PV max. Blade restaure également #3[i]% de ses PV max. Toutes les Charges sont consommées après avoir déclenché l'ATQ de suivi.",
-      "simpleDesc": "Lorsque les PV de Blade diminuent, il gagne 1 cumul de Charge. Lorsque la Charge est au maximum, il lance une ATQ de suivi, ce qui inflige des DGT de vent à tous les ennemis, restaure des PV et consomme toutes les Charges.",
+      "desc": "Chaque fois que Blade subit des DGT ou consomme ses PV, il gagne 1 cumul de charge, jusqu'à un maximum de 5 cumuls. Blade ne peut gagner qu'1 cumul de charge au maximum pour chaque attaque qu'il subit.\nLorsque le nombre de cumuls de charge atteint son maximum, il lance immédiatement une ATQ de suivi sur tous les ennemis, infligeant des DGT de vent équivalents à #2[i]% de son ATQ + #4[i]% de ses PV max. Blade restaure également #3[i]% de ses PV max. Toutes les charges sont consommées après avoir déclenché l'ATQ de suivi.",
+      "simpleDesc": "Lorsque les PV de Blade diminuent, il gagne 1 cumul de charge. Lorsque la charge est au maximum, il lance une ATQ de suivi, ce qui inflige des DGT de vent à tous les ennemis, restaure des PV et consomme toutes les charges.",
       "type": "Talent",
       "tag": "ZdE",
       "levels": [
@@ -1527,7 +1527,7 @@
       "_id": 120506,
       "id": "reborn_into_an_empty_husk",
       "name": "Revenu dans une coquille vide",
-      "desc": "Le nombre de cumuls maximum de Charge est réduit à 4. Les DGT infligés par les <u>ATQ de suivi</u> déclenchées par le talent de Blade augmentent d'un montant équivalent à <nobr>50%</nobr> de ses PV max."
+      "desc": "Le nombre de cumuls maximum de charge est réduit à 4. Les DGT infligés par les <u>ATQ de suivi</u> déclenchées par le talent de Blade augmentent d'un montant équivalent à <nobr>50%</nobr> de ses PV max."
     }
   ],
   "skillTreePoints": [
@@ -1904,6 +1904,402 @@
       "embedBuff": {
         "id": "hp_boost",
         "name": "Augmentation de PV",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédits",
+            "amount": 2500
+          },
+          {
+            "id": "immortal_scionette",
+            "name": "Jeune pousse immortelle",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11205202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11205203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "PV ↑",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédits",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "lifeless_blade",
+                    "name": "Lame sans vie",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_aeroblossom",
+                    "name": "Aérofleur immortelle",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_rate_boost",
+            "name": "Augmentation des chances de coup critique",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "Les chances de coup critique augmentent de <nobr>#1[f1]%</nobr>.",
+                "value": 0.027
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "Lame brisée",
+                "amount": 3
+              },
+              {
+                "id": "immortal_scionette",
+                "name": "Jeune pousse immortelle",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "vita_infinita",
+        "name": "Ad vitam æternam",
+        "desc": "Lorsque Blade utilise son ultime, le total réinitialisé de PV perdus passe à <nobr>50%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "Lame brisée",
+                "amount": 3
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Regret de l'ochéma infini",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11205205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11205206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_rate_boost",
+                "name": "Augmentation des chances de coup critique",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "Les chances de coup critique augmentent de <nobr>#1[f1]%</nobr>.",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédits",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Lame briseuse de monde",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Branche-lumière immortelle",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "PV ↑",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "Lame sans vie",
+                "amount": 5
+              },
+              {
+                "id": "immortal_aeroblossom",
+                "name": "Aérofleur immortelle",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "neverending_deaths",
+        "name": "Morts sans fin",
+        "desc": "Régénère <nobr>20%</nobr> de PV supplémentaires en recevant des soins. Lorsque Blade reçoit des soins, convertit <nobr>25%</nobr> des soins reçus en PV perdus du compteur de l'ultime.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "Lame sans vie",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Voies de la destinée",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Regret de l'ochéma infini",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11205208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11205209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_rate_boost",
+                "name": "Augmentation des chances de coup critique",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Les chances de coup critique augmentent de <nobr>#1[f1]%</nobr>.",
+                    "value": 0.053
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédits",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Lame briseuse de monde",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Branche-lumière immortelle",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11205210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "PV ↑",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédits",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Lame briseuse de monde",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Branche-lumière immortelle",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "Augmentation de la RÉS aux effets",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "La RÉS aux effets augmente de <nobr>#1[f1]%</nobr>.",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "Lame briseuse de monde",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "Branche-lumière immortelle",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "cyclone_of_destruction",
+        "name": "Cyclone de destruction",
+        "desc": "Augmente les DGT infligés par l'<u>ATQ de suivi</u> du talent de <nobr>20%</nobr>. Régénère <nobr>15</nobr> points d'énergie supplémentaires.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              15
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "Lame briseuse de monde",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Voies de la destinée",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Regret de l'ochéma infini",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "hp_boost",
+        "name": "PV ↑",
         "levelReq": 1,
         "promotionReq": 0,
         "statusList": [

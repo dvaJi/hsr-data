@@ -754,7 +754,7 @@
       "_id": 120503,
       "id": "death_sentence",
       "name": "Sentença de Morte",
-      "desc": "Define os PV atuais de Blade em 50% de seus PV máximos e causa Dano de Vento a um único inimigo igual à somatória de #1[i]% de seu ATQ, #2[i]% de seus PV máximos, e #5[i]% do total de PV que ele perdeu na batalha atual. Ao mesmo tempo, causa Dano de Vento aos alvos adjacentes igual à somatória de #3[f1]% de seu ATQ, #4[i]% de seus PV máximos, e #6[i]% do total de PV que ele perdeu na batalha atual.\nO total de PV que Blade perdeu na batalha atual tem um limite de #7[i]% de seus PV máximos. Este valor será redefinido e reacumulado após usar sua Perícia Suprema.",
+      "desc": "Define os PV atuais de Blade em 50% de seus PV máximos e causa Dano de Vento a um único inimigo igual à somatória de #1[i]% de seu ATQ, #2[i]% de seus PV máximos e #5[i]% do total de PV que ele perdeu na batalha atual. Ao mesmo tempo, causa Dano de Vento aos alvos adjacentes igual à somatória de #3[f1]% de seu ATQ, #4[i]% de seus PV máximos e #6[i]% do total de PV que ele perdeu na batalha atual.\nO total de PV que Blade perdeu na batalha atual tem um limite de #7[i]% de seus PV máximos. Este valor será redefinido e reacumulado após usar sua Perícia Suprema.",
       "simpleDesc": "Faz com que os PV atuais fiquem em 50% dos PV máximos, causa Dano de Vento massivo a um único inimigo e Dano de Vento aos alvos adjacentes.",
       "type": "Perícia Suprema",
       "tag": "Explosão",
@@ -1715,7 +1715,7 @@
       "embedBonusSkill": {
         "id": "neverending_deaths",
         "name": "Mortes Sem Fim",
-        "desc": "Se Blade atingir um inimigo com <u>Quebra de Fraqueza</u> após usar \"Floresta de Espadas\", ele restaura PV igual a <nobr>5%</nobr> dos seus PV máximos + <nobr>100</nobr>.",
+        "desc": "Se Blade atingir um inimigo afligido com Quebra de Fraqueza após usar \"Floresta de Espadas\", ele restaura PV em um valor igual a <nobr>5%</nobr> dos seus PV máximos + <nobr>100</nobr>.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1899,6 +1899,402 @@
     },
     {
       "id": 1205201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "hp_boost",
+        "name": "Bônus de PV",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Aumenta os PV máximos em <nobr>#1[f1]%</nobr>",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 2500
+          },
+          {
+            "id": "immortal_scionette",
+            "name": "Scionette Imortal",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11205202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11205203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "Bônus de PV",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Aumenta os PV máximos em <nobr>#1[f1]%</nobr>",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "lifeless_blade",
+                    "name": "Lâmina Inerte",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_aeroblossom",
+                    "name": "Floresciaéreo Imortal",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_rate_boost",
+            "name": "Bônus de Chance de CRIT",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "Aumenta a Chance de CRIT em <nobr>#1[f1]%</nobr>",
+                "value": 0.027
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "Lâmina Despedaçada",
+                "amount": 3
+              },
+              {
+                "id": "immortal_scionette",
+                "name": "Scionette Imortal",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "vita_infinita",
+        "name": "Vita Infinita",
+        "desc": "Quando Blade utiliza sua Perícia Suprema, a quantidade liberada do total de PV perdidos é alterada para <nobr>50%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 5000
+              },
+              {
+                "id": "shattered_blade",
+                "name": "Lâmina Despedaçada",
+                "amount": 3
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Arrependimento do Ochema Infinito",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11205205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11205206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_rate_boost",
+                "name": "Bônus de Chance de CRIT",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "Aumenta a Chance de CRIT em <nobr>#1[f1]%</nobr>",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Lâmina Destruidora de Mundos",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Luminivinha Imortal",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "Bônus de PV",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Aumenta os PV máximos em <nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "Lâmina Inerte",
+                "amount": 5
+              },
+              {
+                "id": "immortal_aeroblossom",
+                "name": "Floresciaéreo Imortal",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "neverending_deaths",
+        "name": "Mortes Sem Fim",
+        "desc": "Os PV restaurados por cura aumentam em <nobr>20%</nobr>. Após receber cura, converte <nobr>25%</nobr> do valor curado para a contagem de PV perdidos da Perícia Suprema.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 20000
+              },
+              {
+                "id": "lifeless_blade",
+                "name": "Lâmina Inerte",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Rastros de Destino",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Arrependimento do Ochema Infinito",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11205208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11205209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_rate_boost",
+                "name": "Bônus de Chance de CRIT",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Aumenta a Chance de CRIT em <nobr>#1[f1]%</nobr>",
+                    "value": 0.053
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Lâmina Destruidora de Mundos",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Luminivinha Imortal",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11205210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "Bônus de PV",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Aumenta os PV máximos em <nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "worldbreaker_blade",
+                    "name": "Lâmina Destruidora de Mundos",
+                    "amount": 8
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Luminivinha Imortal",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "Bônus de RES a Efeito",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "Aumenta a RES a Efeito em <nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "Lâmina Destruidora de Mundos",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "Luminivinha Imortal",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "cyclone_of_destruction",
+        "name": "Ciclone de Destruição",
+        "desc": "Aumenta o Dano de <u>Ataque Extra</u> causado pelo Talento em <nobr>20%</nobr> e regenera adicionalmente <nobr>15</nobr> de energia.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              15
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "worldbreaker_blade",
+                "name": "Lâmina Destruidora de Mundos",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Rastros de Destino",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Arrependimento do Ochema Infinito",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11205201,
       "type": 1,
       "children": [],
       "embedBuff": {

@@ -243,7 +243,7 @@
       "_id": 140901,
       "id": "when_breeze_kisses_cirrus",
       "name": "When Breeze Kisses Cirrus",
-      "desc": "Deals Wind DMG equal to #1[i]% of Hyacine's Max HP to a designated enemy target.",
+      "desc": "Deals Wind DMG equal to #1[i]% of Hyacine's Max HP to one designated enemy.",
       "simpleDesc": "Deals minor Wind DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
@@ -415,7 +415,7 @@
       "_id": 140902,
       "id": "love_over_the_rainbow",
       "name": "Love Over the Rainbow",
-      "desc": "Summons memosprite Little Ica, restores HP equal to #1[f1]% of Hyacine's Max HP plus #2[i] for all allies aside from Little Ica, and restores HP equal to #3[f1]% of Hyacine's Max HP plus #4[i] for Little Ica.",
+      "desc": "Summons memosprite Little Ica. Restores HP equal to #1[f1]% of Hyacine's Max HP plus #2[i] for all allies (except Little Ica), and restores HP equal to #3[f1]% of Hyacine's Max HP plus #4[i] for Little Ica.",
       "simpleDesc": "Summons memosprite Little Ica, and restores HP for all allies.",
       "type": "Skill",
       "tag": "Restore",
@@ -754,8 +754,8 @@
       "_id": 140903,
       "id": "we_who_fly_into_twilight",
       "name": "We Who Fly Into Twilight",
-      "desc": "Summons memosprite Little Ica, restores HP equal to #1[f1]% of Hyacine's Max HP plus #2[i] for all allies aside from Little Ica, and restores HP equal to #6[f1]% of Hyacine's Max HP plus #7[i] for Little Ica. Hyacine enters the \"After Rain\" state for #5[i] turn(s) afterward. Reduces the state's duration by 1 turn each time Hyacine's turn begins. When in \"After Rain\" state, increases Max HP for all allies by #3[f1]% plus #4[i].",
-      "simpleDesc": "Summons memosprite Little Ica, and restores HP for all allies. Enters the \"After Rain\" state afterward. When Hyacine is in this state, increases all allies' Max HP.",
+      "desc": "Summons memosprite Little Ica. Restores HP equal to #1[f1]% of Hyacine's Max HP plus #2[i] for all allies (except Little Ica), and restores HP equal to #6[f1]% of Hyacine's Max HP plus #7[i] for Little Ica. Hyacine enters the \"After Rain\" state, lasting for #5[i] turn(s). This duration decreases by 1 at the start of Hyacine's every turn. While \"After Rain\" is active, all ally targets increase their Max HP by #3[f1]% plus #4[i].",
+      "simpleDesc": "Summons memosprite Little Ica, and restores HP for all allies. Enters the \"After Rain\" state. While Hyacine is in this state, increases all allies' Max HP.",
       "type": "Ultimate",
       "tag": "Support",
       "levels": [
@@ -1492,8 +1492,8 @@
       "_id": 140907,
       "id": "day_so_right_life_so_fine",
       "name": "Day So Right, Life So Fine!",
-      "desc": "At the start of the next battle, restores HP equal to #1[i]% of Hyacine's Max HP plus #2[i] for all allies and increases their Max HP by #3[i]% for #4[i] turn(s).",
-      "simpleDesc": "At the start of the next battle, restores all allies' HP and increases their Max HP.",
+      "desc": "When the next battle starts, restores HP by an amount equal to #1[i]% of Hyacine's Max HP plus #2[i] for all allies and increases Max HP by #3[i]%, lasting for #4[i] turn(s).",
+      "simpleDesc": "When the next battle starts, restores HP for all allies and increases Max HP.",
       "type": "Technique",
       "tag": "Restore",
       "levels": [
@@ -1515,13 +1515,13 @@
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "Cradle the Candle of Night",
-      "desc": "When Hyacine is in the \"After Rain\" state, additionally increases the Max HP of all ally targets by <nobr>50%</nobr>, and immediately restores HP equal to <nobr>8%</nobr> of Hyacine's Max HP after using an attack."
+      "desc": "While Hyacine is in the \"After Rain\" state, all ally targets additionally increase their Max HP by <nobr>50%</nobr>, and after using an attack, immediately restore their HP by an amount equal to <nobr>8%</nobr> of Hyacine's Max HP."
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "Come Sit in My Courtyard",
-      "desc": "When any ally target's HP decreases, this unit's SPD increases by <nobr>30%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "When an ally target's HP decreases, SPD increases by <nobr>30%</nobr>, lasting for <nobr>2</nobr> turn(s)."
     },
     {
       "_id": 140903,
@@ -1533,7 +1533,7 @@
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "Sunlit Amber, Yours to Keep",
-      "desc": "The \"Tempestuous Halt\" Trace is enhanced. For every <nobr>1</nobr> of SPD exceeded, additionally increases Hyacine and Little Ica's CRIT DMG by <nobr>2%</nobr>."
+      "desc": "The \"Tempestuous Halt\" Trace gets enhanced: For every <nobr>1</nobr> excess SPD, additionally increases Hyacine's and Little Ica's CRIT DMG by <nobr>2%</nobr>."
     },
     {
       "_id": 140905,
@@ -1545,7 +1545,7 @@
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "O Sky, Heed My Plea",
-      "desc": "Little Ica uses Memosprite Skill and changes the amount of Healing tally cleared to <nobr>12%</nobr>. When Little Ica is on the field, increases all ally targets' All-Type <u>RES PEN</u> by <nobr>20%</nobr>."
+      "desc": "When Little Ica uses Memosprite Skill, the amount cleared from the tally of healing is changed to <nobr>12%</nobr>. While Little Ica is on the field, all ally targets' All-Type <u>RES PEN</u> increases by <nobr>20%</nobr>."
     }
   ],
   "skillTreePoints": [
@@ -1941,7 +1941,7 @@
       "embedBonusSkill": {
         "id": "gloomy_grin",
         "name": "Gloomy Grin",
-        "desc": "Increases Hyacine and Little Ica's CRIT Rate by <nobr>100%</nobr>. When providing healing to an ally target with less than or equal to <nobr>50%</nobr> this unit's Max HP, increases Hyacine and Little Ica's Outgoing Healing by <nobr>25%</nobr>.",
+        "desc": "Increases Hyacine's and Little Ica's CRIT Rate by <nobr>100%</nobr>. When providing healing to an ally target whose current HP is equal to or less than <nobr>50%</nobr> of their Max HP, increases Hyacine's and Little Ica's Outgoing Healing by <nobr>25%</nobr>.",
         "type": "",
         "tag": "",
         "levels": [
