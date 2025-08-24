@@ -416,7 +416,7 @@
       "id": "hellscape",
       "name": "Höllenqual",
       "desc": "Verbraucht #1[i]% von Blades max. LP, um „Höllenqual“ zu aktivieren.\nWenn „Höllenqual“ aktiv ist, kann seine Fertigkeit nicht eingesetzt werden. Erhöht Blades verursachten SCH um #4[i]% und verstärkt seinen Standardangriff „Scherbenschwert“ für #2[i] Rd. zu „Schwerterwald“\nWenn Blades aktuelle LP nicht ausreichen, fallen seine aktuellen LP bei Einsatz seiner Fertigkeit auf 1.\nDiese Fertigkeit stellt keine Energie wieder her. Der Einsatz dieser Fertigkeit beendet nicht die aktuelle Runde.",
-      "simpleDesc": "Verbraucht LP, um den Standardangriff zu verstärken. Nach dem Einsatz der Fertigkeit wird die aktuelle Runde nicht beendet.",
+      "simpleDesc": "Verbraucht eigene LP, um den Standardangriff zu verstärken. Die aktuelle Runde wird nicht beendet.",
       "type": "Fertigkeit",
       "tag": "Verstärkung",
       "levels": [
@@ -754,7 +754,7 @@
       "_id": 120503,
       "id": "death_sentence",
       "name": "Todesurteil",
-      "desc": "Setzt Blades aktuelle LP auf 50 % seiner max. LP und verursacht Wind-SCH. Dieser entspricht der Summe von #1[i]% seines ANG, #2[i]% seiner max. LP und #5[i]% der LP, die er im Laufe des aktuellen Kampfs insgesamt verloren hat. Fügt außerdem angrenzenden Einheiten Wind-SCH zu. Dieser entspricht der Summe von #3[f1]% seines ANG, #4[i]% seiner max. LP und #6[i]% der LP, die er im Laufe des aktuellen Kampfs insgesamt verloren hat.\nDie berechneten LP, die Blade im aktuellen Kampf insgesamt verloren hat, sind begrenzt auf #7[i]% seiner max. LP. Nachdem er seinen Ultimate eingesetzt hat, wird dieser Wert zurückgesetzt und neu berechnet.",
+      "desc": "Setzt Blades aktuelle LP auf 50 % seiner max. LP und fügt einem Gegner Wind-SCH zu. Dieser entspricht der Summe von #1[i]% seines ANG, #2[i]% seiner max. LP sowie #5[i]% seines im aktuellen Kampf angesammelten LP-Verlusts. Fügt außerdem angrenzenden Einheiten Wind-SCH zu. Dieser entspricht der Summe von #3[f1]% seines ANG, #4[i]% seiner max. LP sowie #6[i]% seines im aktuellen Kampf angesammelten LP-Verlusts.\nDer im aktuellen Kampf angesammelte LP-Verlust wird auf #7[i]% seiner max. LP begrenzt. Nachdem er seinen Ultimate eingesetzt hat, wird dieser Wert zurückgesetzt und neu berechnet.",
       "simpleDesc": "Setzt die aktuellen LP auf 50 % der max. LP. Fügt einem Gegner massiven Wind-SCH und angrenzenden Einheiten Wind-SCH zu.",
       "type": "Ultimate",
       "tag": "Ausdehnung",
@@ -1138,8 +1138,8 @@
       "_id": 120504,
       "id": "shuhus_gift",
       "name": "Shuhus Geschenk",
-      "desc": "Wenn Blade SCH erleidet oder LP verbraucht, erhält er 1 Aufladung, bis zu 5-fach stapelbar. Pro erlittenem Angriff erhält Blade max. 1 Aufladung.\nWenn die max. Aufladungsanzahl erreicht wird, führt er sofort einen Folgeangriff gegen alle Gegner aus. Dieser verursacht Wind-SCH in Höhe von #2[i]% von Blades ANG plus #4[i]% seiner max. LP und stellt gleichzeitig LP in Höhe von #3[i]% von Blades max. LP wieder her. Alle Aufladungen werden beim Auslösen des Folgeangriffs verbraucht.",
-      "simpleDesc": "Wenn Blades LP sinken, erhält er 1-fach Aufladung. Wenn die maximale Aufladung erreicht wird, startet er einen Folgeangriff, wobei er allen Gegnern Wind-SCH zufügt und seine LP wiederherstellt. Dadurch werden alle Aufladungen verbraucht.",
+      "desc": "Wenn Blade SCH erleidet oder LP verbraucht, erhält er 1 Stapelung Aufladung, bis zu 5-fach stapelbar. Dieser Effekt ist für jeden erlittenen Angriff bis zu 1-fach stapelbar.\nWenn die maximale Aufladung erreicht wird, führt er sofort einen Folgeangriff gegen alle Gegner aus, wobei Wind-SCH in Höhe von #2[i]% seines ANG plus #4[i]% seiner max. LP verursacht und gleichzeitig LP in Höhe von #3[i]% von Blades max. LP wiederherstellt. Alle Aufladungen werden nach dem Auslösen des Folgeangriffs verbraucht.",
+      "simpleDesc": "Wenn Blades LP sinken, erhält er 1 Stapelung Aufladung. Wenn die maximale Aufladung erreicht wird, führt er sofort einen Folgeangriff aus, wobei er allen Gegnern Wind-SCH zufügt und seine LP wiederherstellt. Dadurch werden alle Aufladungen verbraucht.",
       "type": "Talent",
       "tag": "Flächenangriff",
       "levels": [
@@ -1497,7 +1497,7 @@
       "_id": 120501,
       "id": "blade_cuts_the_deepest_in_hell",
       "name": "Eine Schwertlänge, tausend Höllentiefen",
-      "desc": "Blades Ultimate verursacht bei einem anvisierten Gegner zusätzlich erhöhten SCH, wobei der erhöhte Betrag <nobr>150%</nobr> seiner gesamten im aktuellen Kampf verlorenen LP beträgt.\nDie berechneten LP, die Blade im aktuellen Kampf insgesamt verloren hat, werden auf <nobr>90%</nobr> seiner max. LP begrenzt. Nachdem er seinen Ultimate eingesetzt hat, wird dieser Wert zurückgesetzt und neu berechnet."
+      "desc": "Blades Ultimate verursacht bei einem anvisierten Gegner zusätzlich erhöhten SCH, wobei der erhöhte Betrag <nobr>150%</nobr> seiner gesamten im aktuellen Kampf verlorenen LP beträgt.\nDer im aktuellen Kampf angesammelte LP-Verlust wird auf <nobr>90%</nobr> seiner max. LP begrenzt. Nachdem er seinen Ultimate eingesetzt hat, wird dieser Wert zurückgesetzt und neu berechnet."
     },
     {
       "_id": 120502,
@@ -1608,7 +1608,7 @@
       "embedBonusSkill": {
         "id": "vita_infinita",
         "name": "Endloses Leben",
-        "desc": "Wenn der aktuelle LP-Prozentsatz von Blade gleich oder niedriger als <nobr>50</nobr> % seiner max. LP ist, wird erhaltene Heilung um <nobr>20%</nobr> erhöht.",
+        "desc": "Liegt Blades aktueller LP-Prozentsatz bei <nobr>50</nobr> % oder weniger seiner max. LP, wird die durch Heilung erhaltene LP-Wiederherstellung um <nobr>20%</nobr> erhöht.",
         "type": "",
         "tag": "",
         "levels": [

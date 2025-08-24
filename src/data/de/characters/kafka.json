@@ -415,8 +415,8 @@
       "_id": 100502,
       "id": "caressing_moonlight",
       "name": "Streichelndes Mondlicht",
-      "desc": "Fügt einem anvisierten Gegner Blitz-SCH in Höhe von #1[i]% von Kafkas ANG zu und fügt angrenzenden Einheiten Blitz-SCH in Höhe von #3[i]% von Kafkas ANG zu.\nBefindet der anvisierte Gegner sich momentan unter Einfluss von DoT, so erleidet er sofort zusätzlich SCH in Höhe von #2[i]% des aktuell insgesamt erlittenen DoT.",
-      "simpleDesc": "Verursacht Blitz-SCH bei einem Gegner und geringen Blitz-SCH bei angrenzenden Einheiten.\nBefindet das Hauptziel sich momentan unter Einfluss von DoT, so erleidet es sofort 1-mal zusätzlichen SCH.",
+      "desc": "Fügt einem anvisierten Gegner Blitz-SCH in Höhe von #1[i]% von Kafkas ANG zu und fügt angrenzenden Einheiten Blitz-SCH in Höhe von #3[i]% von Kafkas ANG zu.\nBefindet sich der anvisierte Gegner momentan unter Einfluss von DoT, verursacht der aktuell insgesamt erlittene DoT sofort SCH in Höhe von #2[i]% des ursprünglichen SCH.",
+      "simpleDesc": "Fügt einem Gegner Blitz-SCH und angrenzenden Einheiten geringen Blitz-SCH zu.\nBefindet sich das Hauptziel unter Einfluss von DoT, verursacht der DoT zusätzlich 1-mal SCH.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
       "levels": [
@@ -739,8 +739,8 @@
       "_id": 100503,
       "id": "twilight_trill",
       "name": "Dämmerungstriller",
-      "desc": "Fügt allen Gegnern Blitz-SCH in Höhe von #1[i]% von Kafkas ANG zu und hat eine Grundchance von #2[i]%, bei betroffenen Gegnern Schock zu verursachen und ihnen unmittelbar SCH in Höhe von #5[i]% des ursprünglichen SCH durch den Status Schock zuzufügen. Der Schock hält #3[i] Rd. an.\nGeschockte Gegner erleiden zu Beginn jeder Runde Blitz-DoT in Höhe von #4[i]% von Kafkas ANG.",
-      "simpleDesc": "Fügt allen Gegnern geringen Blitz-SCH zu mit einer hohen Chance, bei ihnen Schock zu verursachen.\nWenn die Gegner gerade geschockt sind, fügt der Schock 1-mal zusätzlichen SCH zu.",
+      "desc": "Fügt allen Gegnern Blitz-SCH in Höhe von #1[i]% von Kafkas ANG zu und hat eine Grundchance von #2[i]%, bei betroffenen Gegnern Schock zu verursachen und ihnen sofort SCH in Höhe von #5[i]% des ursprünglichen SCH durch den Status Schock zuzufügen. Der Schock hält #3[i] Rd. an.\nGeschockte Gegner erleiden zu Beginn jeder Runde Blitz-DoT in Höhe von #4[i]% von Kafkas ANG.",
+      "simpleDesc": "Fügt allen Gegnern geringen Blitz-SCH zu und hat eine hohe Chance, ihnen Schock zuzufügen.\nGeschockte Gegner erleiden zusätzlich 1-mal SCH durch Schock.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
       "levels": [
@@ -1093,8 +1093,8 @@
       "_id": 100504,
       "id": "gentle_but_cruel",
       "name": "Sanft, aber grausam",
-      "desc": "Nach dem Einsatz des Standardangriffs von einem Verbündeten führt Kafka sofort einen Folgeangriff aus und fügt dem Ziel Blitz-SCH in Höhe von #1[i]% von Kafkas ANG zu. Es besteht eine Grundchance von #2[i]%, dem angegriffenen Gegner für #3[i] Rd. Schock zuzufügen, der dem Status Schock des Ultimates entspricht. Dieser Effekt kann nur 1-mal pro Runde ausgelöst werden.",
-      "simpleDesc": "Nach dem Einsatz des Standardangriffs von einem Verbündeten führt Kafka sofort einen Folgeangriff aus und fügt diesem Ziel Blitz-SCH zu. Es besteht eine hohe Chance, den Status Schock zuzufügen. Dieser Effekt kann nur 1-mal pro Runde ausgelöst werden.",
+      "desc": "Nach dem Einsatz des Standardangriffs von einem Teammitglied führt Kafka sofort einen Folgeangriff aus und fügt dem Ziel Blitz-SCH in Höhe von #1[i]% von Kafkas ANG zu. Es besteht eine Grundchance von #2[i]%, dem angegriffenen Gegner für #3[i] Rd. Schock zuzufügen, der dem Status Schock des Ultimates entspricht. Dieser Effekt kann nur 1-mal pro Runde ausgelöst werden.",
+      "simpleDesc": "Nach dem Einsatz des Standardangriffs von einem Teammitglied führt Kafka sofort einen Folgeangriff aus und fügt diesem Ziel Blitz-SCH zu. Es besteht eine hohe Chance, den Status Schock zuzufügen. Dieser Effekt kann nur 1-mal pro Runde ausgelöst werden.",
       "type": "Talent",
       "tag": "Einzelangriff",
       "levels": [
@@ -1549,7 +1549,7 @@
       "embedBonusSkill": {
         "id": "torture",
         "name": "Folter",
-        "desc": "Beim Einsatz des Ultimates erleiden Gegner sofort SCH basierend auf allen aktuellen DoT-Debuffs zusätzlich zum SCH durch den Status Schock.",
+        "desc": "Beim Einsatz des Ultimates erleiden Gegner sofort SCH, der nicht durch den Status Schock, sondern durch den aktuell insgesamt erlittenen DoT verursacht wird.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1765,7 +1765,7 @@
       "embedBonusSkill": {
         "id": "thorns",
         "name": "Dornen",
-        "desc": "Erhöht die <u>Grundchance</u> des Status Schock durch Ultimate, Technik und <u>Folgeangriffe</u> des Talents um <nobr>30%</nobr>.",
+        "desc": "Erhöht die <u>Grundchance</u>, den Status Schock durch Ultimate, Technik und <u>Folgeangriff</u> des Talents zu verursachen, um <nobr>30%</nobr>.",
         "type": "",
         "tag": "",
         "levels": [
