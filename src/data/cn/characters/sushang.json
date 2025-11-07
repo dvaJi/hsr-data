@@ -2,6 +2,7 @@
   "_id": 1206,
   "id": "sushang",
   "name": "素裳",
+  "description": "出生于仙舟「曜青」，前往「罗浮」云骑军接受历练的新兵。\n身佩母亲赠予的家传剑器，憧憬着自己即将书写的未来。",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量物理属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "对敌方单体造成物理属性伤害，有小概率发动【剑势】。若目标处于弱点击破状态则【剑势】必定发动。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000006,
+          "name": "弱点击破状态",
+          "desc": "当敌方目标的韧性被削减至0时进入的特殊状态，进入该状态的目标行动会被延后。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +779,18 @@
       "simpleDesc": "对敌方单体造成大量物理属性伤害，强化【剑势】效果并立即行动。",
       "type": "终结技",
       "tag": "单攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1124,15 @@
       "simpleDesc": "当场上有敌人的弱点被击破时，自身速度提高。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1435,15 @@
       "desc": "立即攻击敌人，进入战斗后对敌方全体造成等同于素裳#1[i]%攻击力的物理属性伤害。",
       "simpleDesc": "攻击敌人，进战后对敌方全体造成少量物理属性伤害。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,37 +1460,88 @@
       "_id": 120601,
       "id": "cut_with_ease",
       "name": "游刃有余",
-      "desc": "对陷入<u>弱点击破状态</u>的敌方目标施放战技后，恢复1个战技点。"
+      "desc": "对陷入<u>弱点击破状态</u>的敌方目标施放战技后，恢复1个战技点。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点击破状态",
+          "desc": "当敌方目标的韧性被削减至0时进入的特殊状态，进入该状态的目标行动会被延后。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120602,
       "id": "refine_in_toil",
       "name": "其身百炼",
-      "desc": "触发【剑势】后，素裳受到的伤害降低<nobr>20%</nobr>，持续1回合。"
+      "desc": "触发【剑势】后，素裳受到的伤害降低<nobr>20%</nobr>，持续1回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120603,
       "id": "rise_from_fame",
       "name": "传古剑流",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120604,
       "id": "cleave_with_heart",
       "name": "其心百辟",
-      "desc": "素裳的击破特攻提高<nobr>40%</nobr>。"
+      "desc": "素裳的击破特攻提高<nobr>40%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120605,
       "id": "prevail_via_taixu",
       "name": "太虚神意",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120606,
       "id": "dwell_like_water",
       "name": "上善若水",
-      "desc": "天赋的加速效果可以叠加，最多叠加2层，且进入战斗后素裳立即获得1层天赋的加速效果。"
+      "desc": "天赋的加速效果可以叠加，最多叠加2层，且进入战斗后素裳立即获得1层天赋的加速效果。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

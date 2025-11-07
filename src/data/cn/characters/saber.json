@@ -2,6 +2,7 @@
   "_id": 1014,
   "id": "saber",
   "name": "Saber",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "对指定敌方单体造成少量风属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "对指定敌方单体造成风属性伤害，对相邻目标造成少量风属性伤害。若攻击后消耗【炉心共鸣】可恢复满能量，则根据【炉心共鸣】提高本次战技伤害倍率并在攻击后消耗所有【炉心共鸣】，否则获得#3[i]点【炉心共鸣】。",
       "type": "战技",
       "tag": "扩散",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "对敌方全体造成大量风属性伤害。额外对敌方随机单体造成少量风属性伤害，共弹射#3[i]次，并强化下次普攻。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        120,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1110,15 @@
       "simpleDesc": "进入战斗时，获得#8[i]点【炉心共鸣】。我方任意目标施放终结技时，Saber造成的伤害提高，并获得#1[i]点【炉心共鸣】。消耗【炉心共鸣】可为Saber恢复能量。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1518,15 @@
       "simpleDesc": "使用秘技后，下一次战斗开始时获得#3[i]点【炉心共鸣】并提高攻击力。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1499,37 +1545,97 @@
       "_id": 101401,
       "id": "the_lost_white_walls",
       "name": "失落的白垩坚城",
-      "desc": "<nobr>Saber</nobr>造成的终结技伤害提高<nobr>60%</nobr>。<nobr>Saber</nobr>施放普攻或战技后，获得<nobr>1</nobr>点【炉心共鸣】。"
+      "desc": "<nobr>Saber</nobr>造成的终结技伤害提高<nobr>60%</nobr>。<nobr>Saber</nobr>施放普攻或战技后，获得<nobr>1</nobr>点【炉心共鸣】。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101402,
       "id": "the_lost_oath_of_the_round_table",
       "name": "尘封的圆桌誓言",
-      "desc": "本场战斗中每获得1点【炉心共鸣】，使<nobr>Saber</nobr>造成的伤害无视目标<nobr>#2[f1]%</nobr>的防御力，该效果最多叠加<nobr>15</nobr>层。触发【炉心共鸣】提高战技倍率的效果时，每点【炉心共鸣】额外使本次战技的伤害倍率提高<nobr>7%</nobr>。"
+      "desc": "本场战斗中每获得1点【炉心共鸣】，使<nobr>Saber</nobr>造成的伤害无视目标<nobr>#2[f1]%</nobr>的防御力，该效果最多叠加<nobr>15</nobr>层。触发【炉心共鸣】提高战技倍率的效果时，每点【炉心共鸣】额外使本次战技的伤害倍率提高<nobr>7%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101403,
       "id": "a_wish_across_fifteen_centuries",
       "name": "十五个世纪的追寻",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101404,
       "id": "the_saga_of_sixteen_winter_days",
       "name": "十六个冬日的奇遇",
-      "desc": "<nobr>Saber</nobr>的风属性<u>抗性穿透</u>提高<nobr>8%</nobr>。施放终结技后，<nobr>Saber</nobr>的风属性<u>抗性穿透</u>提高<nobr>4%</nobr>，该效果最多叠加<nobr>3</nobr>层。"
+      "desc": "<nobr>Saber</nobr>的风属性<u>抗性穿透</u>提高<nobr>8%</nobr>。施放终结技后，<nobr>Saber</nobr>的风属性<u>抗性穿透</u>提高<nobr>4%</nobr>，该效果最多叠加<nobr>3</nobr>层。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101405,
       "id": "the_dreamed_utopian_dawn",
       "name": "于抵达理想的黎明",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101406,
       "id": "the_long_fated_night",
       "name": "守护命运长夜",
-      "desc": "<nobr>Saber</nobr>造成的终结技伤害的风属性<u>抗性穿透</u>提高<nobr>20%</nobr>，行迹【湖之祝福】可积攒的溢出能量提高到<nobr>200</nobr>点。进入战斗首次施放终结技后，为<nobr>Saber</nobr>固定恢复<nobr>300</nobr>点能量，该效果每再施放<nobr>3</nobr>次终结技可触发1次。"
+      "desc": "<nobr>Saber</nobr>造成的终结技伤害的风属性<u>抗性穿透</u>提高<nobr>20%</nobr>，行迹【湖之祝福】可积攒的溢出能量提高到<nobr>200</nobr>点。进入战斗首次施放终结技后，为<nobr>Saber</nobr>固定恢复<nobr>300</nobr>点能量，该效果每再施放<nobr>3</nobr>次终结技可触发1次。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

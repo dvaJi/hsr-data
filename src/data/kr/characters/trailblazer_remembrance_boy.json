@@ -2,6 +2,7 @@
   "_id": 8007,
   "id": "trailblazer_remembrance_boy",
   "name": "개척자 기억",
+  "description": "은하열차에 탑승한 {F#소녀}{M#소년}.\n스텔라론이 가져온 위기를 해결하기 위해, 은하열차와의 동행을 선택한다",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "기억 정령 미미를 소환한다. 미미가 필드에 있을 시 미미가 HP를 회복하고 충전을 획득한다",
       "type": "전투 스킬",
       "tag": "소환",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "기억 정령 미미를 소환한다. 미미가 충전을 획득하고 모든 적에게 대량의 얼음 속성 피해를 가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "모든 아군이 일정 에너지를 회복할 때마다 미미가 충전을 획득한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "특수 영역을 만들며, 영역 내의 적은 행동을 정지한다. 영역 내 적과 전투에 진입하면 모든 적의 행동 게이지가 감소하며, 모든 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "행동 게이지 감소",
+          "desc": "목표의 다음 행동 전 대기 간격을 연장한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,42 +1444,599 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "미미",
+    "icon": "SpriteOutput/ServantIconTeam/18007B.png",
+    "hpBase": "#4",
+    "hpInherit": "#2",
+    "hpSkill": 800704,
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1800701,
+        "name": "나쁜 녀석! 성가셔!",
+        "desc": "피해를 <nobr>#2[i]</nobr>회 가하고, 1회마다 랜덤 단일 적에게 미미 공격력의 <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>만큼 얼음 속성 피해를 가한다. 이후 모든 적에게 미미 공격력의 <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>만큼 얼음 속성 피해를 가한다",
+        "simpleDesc": "소량의 얼음 속성 피해를 가하고, 총 <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>회 바운스한다. 이후 모든 적에게 소량의 얼음 속성 피해를 가한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "범위 공격"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              4,
+              0.45
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.216,
+              4,
+              0.54
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.252,
+              4,
+              0.63
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.288,
+              4,
+              0.72
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.324,
+              4,
+              0.81
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.36,
+              4,
+              0.9
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.396,
+              4,
+              0.99
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.432,
+              4,
+              1.08
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.468,
+              4,
+              1.17
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.504,
+              4,
+              1.26
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800703,
+        "name": "파트너! 함께!",
+        "desc": "모든 아군의 치명타 피해가 미미 치명타 피해의 <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>에 <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>를 더한 값만큼 증가한다.\n충전이 <nobr>100%</nobr> 미만일 시 미미가 행동하면 자동으로 [나쁜 녀석! 성가셔!]를 발동한다. 충전 <nobr>100%</nobr> 도달 시 미미가 즉시 행동하고, 다음번 행동 시 단일 아군을 선택해 [내가! 도와줄게!]를 발동할 수 있다",
+        "simpleDesc": "모든 아군의 치명타 피해가 증가한다.\n행동 시 자동으로 공격을 발동한다. 충전이 <nobr>100%</nobr>에 도달하면 즉시 행동하고 새로운 스킬을 발동한다. 새로운 스킬: 단일 아군의 <span style=\"color:#f29e38ff><u>행동 게이지가 증가</u></span>하고, <span style=\"color:#f29e38ff><u>확정 피해</u></span>를 가한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "서포트"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.12
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.144
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.168
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.192
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.216
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.24
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.264
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.288
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.312
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.336
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800705,
+        "name": "미미, 파이팅!",
+        "desc": "미미가 소환될 시 즉시 충전을 <nobr>#1[i]%</nobr> 획득한다",
+        "simpleDesc": "소환될 시 즉시 충전을 획득한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "강화"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800706,
+        "name": "아쉬움… 남기지 마",
+        "desc": "미미가 사라질 시 개척자의 <u>행동 게이지가 <nobr>#1[i]%</nobr> 증가</u>한다",
+        "simpleDesc": "사라질 시 개척자의 <u>행동 게이지가 증가</u>한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "강화"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "행동 게이지 증가",
+            "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800707,
+        "name": "내가! 도와줄게!",
+        "desc": "지정된 단일 아군의 <u>행동 게이지를 <nobr>#3[i]%</nobr> 증가</u>시키고 [미미의 응원]을 부여한다, 지속 시간: <nobr>#2[i]</nobr>턴\n[미미의 응원]을 보유한 목표가 피해를 1회 가할 때마다 추가로 기존 피해의 <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>만큼 <u>확정 피해</u>를 1회 가한다.\n자신에게 해당 스킬 발동 시 <u>행동 게이지 증가</u> 효과를 발동할 수 없다",
+        "simpleDesc": "단일 아군의 <span style=\"color:#f29e38ff><u>행동 게이지를 증가</u></span>시키고 [미미의 응원]을 부여한다. [미미의 응원]: 피해를 가한 후 추가로 <span style=\"color:#f29e38ff><u>확정 피해</u></span>를 가한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "서포트"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "행동 게이지 증가",
+            "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000017,
+            "name": "확정 피해",
+            "desc": "어떤 효과에도 영향을 받지 않는 무속성 피해, 이번 피해는 공격을 1회 가한 것으로 간주하지 않는다",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.2,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.22,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.24,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.26,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.28,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.32,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.34,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.36,
+              3,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 800701,
       "id": "narrator_of_the_present",
       "name": "현재의 서술자",
-      "desc": "[미미의 응원]을 보유한 아군의 치명타 확률이 <nobr>10%</nobr> 증가한다. 아군이 [미미의 응원] 보유 시 해당 목표의 기억 정령/기억 마스터에게도 [미미의 응원] 효과가 적용되며, 해당 효과는 중첩되지 않는다"
+      "desc": "[미미의 응원]을 보유한 아군의 치명타 확률이 <nobr>10%</nobr> 증가한다. 아군이 [미미의 응원] 보유 시 해당 목표의 기억 정령/기억 마스터에게도 [미미의 응원] 효과가 적용되며, 해당 효과는 중첩되지 않는다",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800702,
       "id": "gleaner_of_the_past",
       "name": "과거의 습득자",
-      "desc": "미미를 제외한 아군 기억 정령이 행동 시 개척자가 에너지를 <nobr>8</nobr>pt 회복한다. 해당 효과는 턴마다 최대 <nobr>1</nobr>회 발동하며, 개척자의 턴 시작 시 발동 가능 횟수가 초기화된다"
+      "desc": "미미를 제외한 아군 기억 정령이 행동 시 개척자가 에너지를 <nobr>8</nobr>pt 회복한다. 해당 효과는 턴마다 최대 <nobr>1</nobr>회 발동하며, 개척자의 턴 시작 시 발동 가능 횟수가 초기화된다",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800703,
       "id": "chanter_of_the_future",
       "name": "미래의 영창자",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800704,
       "id": "dancer_of_the_muse",
       "name": "뮤즈의 새 댄스 파트너",
-      "desc": "에너지 최대치가 0인 아군이 직접 스킬을 발동하면 미미도 충전을 <nobr>3%</nobr> 획득하고, 해당 목표가 [미미의 응원]을 통해 가하는 확정 피해 배율이 추가로 <nobr>6%</nobr> 증가한다"
+      "desc": "에너지 최대치가 0인 아군이 직접 스킬을 발동하면 미미도 충전을 <nobr>3%</nobr> 획득하고, 해당 목표가 [미미의 응원]을 통해 가하는 확정 피해 배율이 추가로 <nobr>6%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800705,
       "id": "seamster_of_the_ode",
       "name": "시편의 재봉사",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800706,
       "id": "bearer_of_the_revelation",
       "name": "계시의 전달자",
-      "desc": "필살기의 치명타 확률이 <nobr>100%</nobr>로 고정된다"
+      "desc": "필살기의 치명타 확률이 <nobr>100%</nobr>로 고정된다",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +2485,151 @@
       }
     },
     {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "나쁜 녀석! 성가셔!",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "신용 포인트",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "사량의 씨앗",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "약탈의 본능",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "나쁜 녀석! 성가셔!",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "신용 포인트",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "말나 새싹",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "변조된 야망",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "나쁜 녀석! 성가셔!",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "신용 포인트",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "말나 새싹",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "변조된 야망",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "나쁜 녀석! 성가셔!",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "신용 포인트",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "아뢰야 꽃",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "짓밟힌 의지",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "나쁜 녀석! 성가셔!",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "신용 포인트",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "아뢰야 꽃",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "짓밟힌 의지",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -1868,151 +2643,6 @@
       }
     },
     {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "나쁜 녀석! 성가셔!",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "신용 포인트",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "사량의 씨앗",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "약탈의 본능",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "나쁜 녀석! 성가셔!",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "신용 포인트",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "말나 새싹",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "변조된 야망",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "나쁜 녀석! 성가셔!",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "신용 포인트",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "말나 새싹",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "변조된 야망",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "나쁜 녀석! 성가셔!",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "신용 포인트",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "아뢰야 꽃",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "짓밟힌 의지",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "나쁜 녀석! 성가셔!",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "신용 포인트",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "아뢰야 꽃",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "짓밟힌 의지",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -2153,6 +2783,27 @@
             "id": "conquerors_will",
             "name": "짓밟힌 의지",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "미완의 에필로그",
+        "desc": "필살기 발동 후 [서사시]를 1스택 획득하며, 최대 <nobr>2</nobr>스택 보유할 수 있다. [서사시]를 보유한 상태에서 미미가 필드에 있을 시 일반 공격이 [내일을, 함께 써내려 가자!]로 강화된다",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

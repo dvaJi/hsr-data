@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "遐蝶",
+  "description": "那敬爱死亡的国度，终日飘雪的哀地里亚，今日已沉入甘甜的酣眠。\n冥河的女儿遐蝶，寻索「死亡」火种的黄金裔，启程吧。呵护世间魂灵的恸哭，拥抱命运的孤独\n——生死皆为旅途，当蝴蝶停落枝头，那凋零的又将新生。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量量子属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "消耗我方全体生命值，对敌方单体造成量子属性伤害的同时对相邻目标造成少量量子属性伤害。",
       "type": "战技",
       "tag": "扩散",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "召唤忆灵死龙使其行动提前100%，同时展开境界，使敌方全体全属性抗性降低。",
       "type": "终结技",
       "tag": "召唤",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "行动提前",
+          "desc": "使目标在下次行动前的等待间隔缩短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "境界",
+          "desc": "境界效果全场唯一，持续期间无法施放其他境界效果的技能。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1150,15 @@
       "simpleDesc": "我方损失生命值时遐蝶获得【新蕊】，同时使遐蝶与死龙造成伤害提高，当【新蕊】达到上限可激活终结技。死龙在场时，除死龙以外我方损失生命值会转化为死龙同等的生命值。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "使用秘技后进入持续#3[i]秒的【冥茫】状态。【冥茫】状态下敌人无法主动靠近遐蝶。\n【冥茫】状态下主动攻击会使所有范围内的敌人进入战斗，同时召唤忆灵死龙使其行动提前100%并展开境界【遗世冥域】，死龙拥有等同于【新蕊】上限#2[i]%的当前生命值。进入战斗后，消耗除死龙以外的我方全体#1[i]%当前生命值。\n进入战斗后未召唤死龙则遐蝶获得等同于【新蕊】上限#4[i]%点数的【新蕊】。",
       "simpleDesc": "进入【冥茫】状态，敌人无法主动靠近遐蝶，\n【冥茫】状态下攻击会使所有范围内的敌人进入战斗，同时召唤忆灵死龙使其行动提前100%。进入战斗时，消耗除死龙以外的我方全体生命值。\n进入战斗后未召唤死龙遐蝶回复等同于【新蕊】上限#4[i]%点数的【新蕊】。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "行动提前",
+          "desc": "使目标在下次行动前的等待间隔缩短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "境界",
+          "desc": "境界效果全场唯一，持续期间无法施放其他境界效果的技能。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "死龙•玻吕刻斯",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "擘裂冥茫的爪痕",
+        "desc": "对敌方全体造成等同于遐蝶<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>生命上限的量子属性伤害。",
+        "simpleDesc": "对敌方全体造成少量量子属性伤害。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "群攻"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "燎尽黯泽的焰息",
+        "desc": "发动【燎尽黯泽的焰息】会消耗等同于死龙生命上限<nobr>#1[i]%</nobr>的生命值，对敌方全体造成等同于遐蝶<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>生命上限的量子属性伤害。\n一次攻击中可重复发动【燎尽黯泽的焰息】，重复发动时，伤害倍率依次提高至<span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span>/<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>，达到<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>后不再提高，伤害倍率提高效果在死龙消失前不会降低。\n死龙当前生命值小于等于自身生命上限<nobr>#5[i]%</nobr>时，发动该技能会主动将生命值降至1点后触发等同于天赋【灼掠幽墟的晦翼】的技能效果。",
+        "simpleDesc": "消耗自身生命值，对敌方全体造成量子属性伤害，且本回合不会结束。重复施放技能时，技能最多获得3次强化。生命值小于等于<span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>时，施放该技能会主动触发忆灵天赋【灼掠幽墟的晦翼】的技能效果。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "群攻"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "月茧荫蔽的身躯",
+        "desc": "死龙在场时为我方<u>后援</u>，我方受到伤害或消耗生命值时，当前生命值最多降至1点，此后由死龙承担，但死龙会消耗等同于原数值<nobr>#1[i]%</nobr>的生命值，持续至死龙消失。",
+        "simpleDesc": "死龙在场时为我方<u>后援</u>，我方当前生命值最多降至1点，此后受到伤害或消耗生命值由死龙承担。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "辅助"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "后援",
+            "desc": "敌方无法主动选中后援单位，我方【扩散】类型的技能，无法扩散至后援单位 。",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "震彻寂壤的怒啸",
+        "desc": "死龙被召唤时，我方全体造成的伤害提高<nobr>#1[i]%</nobr>，持续<nobr>#2[i]</nobr>回合。",
+        "simpleDesc": "被召唤时，使我方全体造成的伤害提高。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "辅助"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "灼掠幽墟的晦翼",
+        "desc": "死龙消失时，造成<nobr>#2[i]</nobr>次伤害，每次伤害对敌方随机单体造成等同于遐蝶<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>生命上限的量子属性伤害，同时为我方全体回复等同于遐蝶<span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>生命上限+<span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>点的生命值。",
+        "simpleDesc": "消失时，对敌方单体造成少量量子属性伤害，共弹射<span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>次，同时为我方全体回复生命值。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "弹射"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "燎尽黯泽的焰息",
+        "desc": "",
+        "simpleDesc": "消耗自身生命值，对敌方全体造成量子属性伤害，且本回合不会结束。重复施放技能时，技能最多获得3次强化。生命值小于等于<span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>时，施放该技能会主动触发忆灵天赋【灼掠幽墟的晦翼】的技能效果。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "群攻"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "燎尽黯泽的焰息",
+        "desc": "",
+        "simpleDesc": "消耗自身生命值，对敌方全体造成量子属性伤害，且本回合不会结束。重复施放技能时，技能最多获得3次强化。生命值小于等于<span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>时，施放该技能会主动触发忆灵天赋【灼掠幽墟的晦翼】的技能效果。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "群攻"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "灼掠幽墟的晦翼",
+        "desc": "消耗全部生命，造成<nobr>#2[i]</nobr>次伤害，每次伤害对敌方随机单体造成等同于遐蝶<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>生命上限的量子属性伤害，同时为我方全体回复等同于遐蝶<span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>生命上限+<span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>点的生命值。",
+        "simpleDesc": "消耗全部生命值，对敌方单体造成少量量子属性伤害，共弹射<span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>次，同时为我方全体回复生命值。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "弹射"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "雪地的圣女，付记忆入殓",
-      "desc": "敌方目标当前生命值小于等于自身生命上限<nobr>80%</nobr>/<nobr>50%</nobr>时，【骸爪，冥龙之环拥】、【擘裂冥茫的爪痕】、【燎尽黯泽的焰息】、【灼掠幽墟的晦翼】对其造成的伤害为原伤害的<nobr>120%</nobr>/<nobr>140%</nobr>。"
+      "desc": "敌方目标当前生命值小于等于自身生命上限<nobr>80%</nobr>/<nobr>50%</nobr>时，【骸爪，冥龙之环拥】、【擘裂冥茫的爪痕】、【燎尽黯泽的焰息】、【灼掠幽墟的晦翼】对其造成的伤害为原伤害的<nobr>120%</nobr>/<nobr>140%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "以扑翼繁花加冕",
-      "desc": "召唤忆灵死龙后，遐蝶获得<nobr>2</nobr>层【炽意】，【炽意】最多持有<nobr>2</nobr>层，可用来抵扣死龙忆灵技【燎尽黯泽的焰息】的生命值消耗，并使遐蝶<u>行动提前</u><nobr>100%</nobr>，下一次施放强化战技遐蝶获得等同于【新蕊】上限<nobr>30%</nobr>点数的【新蕊】。"
+      "desc": "召唤忆灵死龙后，遐蝶获得<nobr>2</nobr>层【炽意】，【炽意】最多持有<nobr>2</nobr>层，可用来抵扣死龙忆灵技【燎尽黯泽的焰息】的生命值消耗，并使遐蝶<u>行动提前</u><nobr>100%</nobr>，下一次施放强化战技遐蝶获得等同于【新蕊】上限<nobr>30%</nobr>点数的【新蕊】。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行动提前",
+          "desc": "使目标在下次行动前的等待间隔缩短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "虔敬的旅人，于死境翩跹",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "拥悲怜哀歌安眠",
-      "desc": "遐蝶在场时，我方全体受到治疗时的回复量提高<nobr>20%</nobr>。"
+      "desc": "遐蝶在场时，我方全体受到治疗时的回复量提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "素白的新篇，以预言装点",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "待流年奔涌破茧",
-      "desc": "遐蝶与死龙造成伤害时，量子属性<u>抗性穿透</u>提高<nobr>20%</nobr>。死龙攻击期间可以无视弱点属性削减敌方韧性，击破弱点时，触发量子属性的弱点击破效果，触发天赋【灼掠幽墟的晦翼】的弹射次数额外增加<nobr>3</nobr>次。"
+      "desc": "遐蝶与死龙造成伤害时，量子属性<u>抗性穿透</u>提高<nobr>20%</nobr>。死龙攻击期间可以无视弱点属性削减敌方韧性，击破弱点时，触发量子属性的弱点击破效果，触发天赋【灼掠幽墟的晦翼】的弹射次数额外增加<nobr>3</nobr>次。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

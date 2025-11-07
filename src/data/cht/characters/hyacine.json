@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "風堇",
+  "description": "雲間城邦隨歲月離析，昏光庭院再度敞開門扉，為永夜捎來微光。\n醫師雅辛忒絲，守望「天空」火種的黃金裔。繼承先祖的意志，縫補破裂的晨昏\n——願虹光灑落，仇怨消融，黎明重回大地。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量風屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "召喚憶靈小伊卡，並為我方全體回復生命值。",
       "type": "戰技",
       "tag": "回復",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召喚憶靈",
+          "desc": "將憶靈召喚到場上。若憶靈已在場，解除憶靈陷入的所有控制類負面狀態。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "召喚憶靈小伊卡，並為我方全體回復生命值。進入【雨過天晴】狀態，風堇處於該狀態時使我方全體生命上限提高。",
       "type": "終結技",
       "tag": "輔助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召喚憶靈",
+          "desc": "將憶靈召喚到場上。若憶靈已在場，解除憶靈陷入的所有控制類負面狀態。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "風堇或小伊卡提供治療時，小伊卡造成的傷害提高。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "下一次戰鬥開始時，為我方全體回復生命值並使生命上限提高。",
       "type": "秘技",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "小伊卡",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "烏雲烏雲快走開！",
+        "desc": "對敵方全體造成等同於本場戰鬥風堇與小伊卡累積治療數值<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>的風屬性傷害並清空累積治療數值的<nobr>#2[i]%</nobr>。",
+        "simpleDesc": "對敵方全體造成風屬性傷害。",
+        "type": {
+          "id": "Servant",
+          "name": "憶靈技"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "群體攻擊"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "牽起晴空的手",
+        "desc": "小伊卡的速度保持為0，免疫<u>負面效果</u>，並且不會出現在行動序列上。\n若除小伊卡外的我方目標生命值降低，小伊卡會在任意目標回合開始時或行動後，消耗自身<nobr>#1[i]%</nobr>生命上限的生命值，並為我方生命值降低的目標回復等同於風堇<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>生命上限+<span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span>的生命值。\n風堇處於【雨過天晴】狀態時，小伊卡會在風堇施放技能後立即獲得1個<u>額外回合</u>並自動施放【烏雲烏雲快走開！】，並且小伊卡觸發天賦的治療效果時，額外為我方全體目標回復等同於風堇<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>生命上限+<span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>的生命值，小伊卡施放技能後使自身所有<u>持續效果</u>持續回合數減1。",
+        "simpleDesc": "若除小伊卡外的我方目標<span style=\"color:#f29e38ff>生命值降低</span>，小伊卡會消耗自身生命值，為該目標<span style=\"color:#f29e38ff>回復生命值</span>。風堇持有【雨過天晴】時，小伊卡會在風堇施放技能後立即獲得1個<u>額外回合</u>並自動施放憶靈技，小伊卡施放技能後使自身<u>持續效果</u>持續回合數減1。",
+        "type": {
+          "name": "憶靈天賦"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "回復"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "額外回合",
+            "desc": "獲得1個不消耗回合數的額外回合，在此回合中無法插入施放終結技。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "負面效果",
+            "desc": "對戰鬥有負面效果的所有持續狀態，若無特殊說明則可加以解除。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "持續效果",
+            "desc": "包含增益效果、負面效果和其他效果。",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "展翼，奔向日輝",
+        "desc": "被召喚時，為風堇恢復<nobr>#1[i]</nobr>點能量，首次被召喚時，額外恢復<nobr>#2[i]</nobr>點能量。",
+        "simpleDesc": "被召喚時，為風堇恢復能量。",
+        "type": {
+          "name": "憶靈天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "墜落，然後飛翔",
+        "desc": "消失時，使風堇<u>行動提前</u><nobr>#1[i]%</nobr>。",
+        "simpleDesc": "消失時，使風堇<u>行動提前</u>。",
+        "type": {
+          "name": "憶靈天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "行動提前",
+            "desc": "使目標在下次行動前的等待間隔縮短。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "呵護黑夜中的燭火",
-      "desc": "風堇處於【雨過天晴】狀態時，我方全體目標生命上限額外提高<nobr>50%</nobr>，並且發動攻擊後立即回復等同於風堇<nobr>8%</nobr>生命上限的生命值。"
+      "desc": "風堇處於【雨過天晴】狀態時，我方全體目標生命上限額外提高<nobr>50%</nobr>，並且發動攻擊後立即回復等同於風堇<nobr>8%</nobr>生命上限的生命值。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "請來我的庭院坐坐",
-      "desc": "我方目標生命值降低時，速度提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "我方目標生命值降低時，速度提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "出發！向陽的歷險",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。憶靈技等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。憶靈技等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "送你一顆橙暉琥珀",
-      "desc": "行跡【暴風停歇】獲得強化，每超過<nobr>1</nobr>點速度，風堇和小伊卡的暴擊傷害額外提高<nobr>2%</nobr>。"
+      "desc": "行跡【暴風停歇】獲得強化，每超過<nobr>1</nobr>點速度，風堇和小伊卡的暴擊傷害額外提高<nobr>2%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "紅霞映入海的背面",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級；憶靈天賦等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級；憶靈天賦等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "天空……應我的祈願",
-      "desc": "小伊卡施放憶靈技清空累積治療數值改為<nobr>12%</nobr>，小伊卡在場時，我方全體目標的全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。"
+      "desc": "小伊卡施放憶靈技清空累積治療數值改為<nobr>12%</nobr>，小伊卡在場時，我方全體目標的全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

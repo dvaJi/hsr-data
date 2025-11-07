@@ -2,6 +2,7 @@
   "_id": 8002,
   "id": "trailblazer_destruction_girl",
   "name": "Nhà Khai Phá Hủy Diệt",
+  "description": "{F#Thiếu nữ}{M#Thiếu niên} lên Đội Tàu Astral.\nĐể diệt trừ hiểm họa mà Stellaron mang đến, đã quyết định đồng hành cùng đoàn tàu.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Gây Sát Thương Vật Lý cho 1 kẻ địch và mục tiêu lân cận.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "Chọn cách tấn công đơn lẻ hoặc đánh lan để ra đòn toàn lực.",
       "type": "Tuyệt Kỹ",
       "tag": "Cường Hóa",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Sau mỗi lần Phá Vỡ Điểm Yếu của mục tiêu phe địch, Tấn Công sẽ tăng.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1374,15 @@
       "simpleDesc": "Sau khi dùng Bí Kỹ sẽ lập tức hồi HP cho toàn bộ phe ta.",
       "type": "Bí Kỹ",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1344,37 +1399,88 @@
       "_id": 800201,
       "id": "a_falling_star",
       "name": "Ánh Sao Soi Chiếu Vạn Giới",
-      "desc": "Khi thi triển Tuyệt Kỹ để tiêu diệt mục tiêu phe địch, Nhà Khai Phá hồi thêm <nobr>10</nobr> điểm Năng Lượng, hiệu ứng này mỗi lần tấn công chỉ có thể kích hoạt 1 lần."
+      "desc": "Khi thi triển Tuyệt Kỹ để tiêu diệt mục tiêu phe địch, Nhà Khai Phá hồi thêm <nobr>10</nobr> điểm Năng Lượng, hiệu ứng này mỗi lần tấn công chỉ có thể kích hoạt 1 lần.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800202,
       "id": "an_unwilling_host",
       "name": "Nhân Duyên Hợp Tan",
-      "desc": "Sau khi tấn công, nếu kẻ địch bị đánh trúng có Điểm Yếu là thuộc tính vật lý, sẽ hồi HP bằng <nobr>5%</nobr> Tấn Công của Nhà Khai Phá."
+      "desc": "Sau khi tấn công, nếu kẻ địch bị đánh trúng có Điểm Yếu là thuộc tính vật lý, sẽ hồi HP bằng <nobr>5%</nobr> Tấn Công của Nhà Khai Phá.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800203,
       "id": "a_leading_whisper",
       "name": "Lời Thì Thầm Dẫn Dắt",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800204,
       "id": "a_destructing_glance",
       "name": "Khoảnh Khắc Chứng Kiến Huỷ Diệt",
-      "desc": "Khi đánh trúng mục tiêu phe địch trong <u>trạng thái Phá Vỡ Điểm Yếu</u>, Tỷ Lệ Bạo Kích tăng <nobr>25%</nobr>."
+      "desc": "Khi đánh trúng mục tiêu phe địch trong <u>trạng thái Phá Vỡ Điểm Yếu</u>, Tỷ Lệ Bạo Kích tăng <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 800205,
       "id": "a_surviving_hope",
       "name": "Hy Vọng Tái Sinh",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800206,
       "id": "a_trailblazing_will",
       "name": "Ý Chí Khai Phá Vũ Trụ",
-      "desc": "Khi Nhà Khai Phá tiêu diệt mục tiêu phe địch cũng sẽ kích hoạt Thiên Phú."
+      "desc": "Khi Nhà Khai Phá tiêu diệt mục tiêu phe địch cũng sẽ kích hoạt Thiên Phú.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

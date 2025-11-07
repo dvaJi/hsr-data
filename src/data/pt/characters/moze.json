@@ -2,6 +2,7 @@
   "_id": 1223,
   "id": "moze",
   "name": "Moze",
+  "description": "Um Guarda das Sombras do Yaoqing, Moze é taciturno e solitário, sempre agindo por conta própria.\nComo especialista em serviços de inteligência e outras operações que devem permanecer secretas, Moze raramente se mostra diante dos outros. O momento em que revela sua lâmina geralmente marca a condenação de seus inimigos.\nEle domina uma vasta gama de técnicas de assassinato, combinadas com uma extraordinária obsessão por ordem e limpeza.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Raio leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Marca um único inimigo como \"Presa\" e causa Dano de Raio a ele. Ganha #2[i] ponto(s) de Carga.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,24 @@
       "simpleDesc": "Causa Dano de Raio a um único inimigo e utiliza o Ataque Extra do Talento.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,40 @@
       "simpleDesc": "Enquanto houver uma \"Presa\" no campo, Moze entrará no estado de Partida.\nDepois que aliados atacam a \"Presa\", Moze causa Dano Adicional de Raio e consome 1 ponto de Carga. Para cada #2[i] ponto(s) de Carga consumido(s), Moze utiliza Ataque Extra conta a \"Presa\", causando Dano de Raio. Quando a Carga está em 0, remove o estado de \"Presa\" do alvo.",
       "type": "Talento",
       "tag": "Alvo Único",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000016,
+          "name": "Partida",
+          "desc": "Nenhum alvo no estado de \"Partida\" pode ser escolhida como alvo de habilidades e não aparecerá na Ordem de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1399,15 @@
       "simpleDesc": "Entra no estado de Furtividade. Atacar inimigos para iniciar o combate enquanto no modo de Furtividade aumenta o Dano.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,37 +1426,97 @@
       "_id": 122301,
       "id": "oathkeeper",
       "name": "Mantenedor de Promessas",
-      "desc": "Após entrar em batalha, Moze restaura <nobr>20</nobr> de Energia. Cada vez que o <u>Dano Adicional</u> de seu Talento for ativado, Moze restaura <nobr>2</nobr> de Energia."
+      "desc": "Após entrar em batalha, Moze restaura <nobr>20</nobr> de Energia. Cada vez que o <u>Dano Adicional</u> de seu Talento for ativado, Moze restaura <nobr>2</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122302,
       "id": "wrathbearer",
       "name": "Sustento da Ira",
-      "desc": "Quando aliados causam Dano ao inimigo-alvo marcado como \"Presa\", aumenta o Dano CRIT em <nobr>40%</nobr>."
+      "desc": "Quando aliados causam Dano ao inimigo-alvo marcado como \"Presa\", aumenta o Dano CRIT em <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122303,
       "id": "deathchaser",
       "name": "Perseguidor da Morte",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122304,
       "id": "heathprowler",
       "name": "Predador Selvagem",
-      "desc": "Ao usar a Perícia Suprema, aumenta o Dano causado por Moze em <nobr>#1[f1]%</nobr>, durando por <nobr>2</nobr> rodada(s)."
+      "desc": "Ao usar a Perícia Suprema, aumenta o Dano causado por Moze em <nobr>#1[f1]%</nobr>, durando por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122305,
       "id": "truthbender",
       "name": "Dobrador de Verdades",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122306,
       "id": "faithbinder",
       "name": "Vinculador de Fé",
-      "desc": "Aumenta em <nobr>25%</nobr> o multiplicador de Dano causado pelo <u>Ataque Extra</u> do Talento."
+      "desc": "Aumenta em <nobr>25%</nobr> o multiplicador de Dano causado pelo <u>Ataque Extra</u> do Talento.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

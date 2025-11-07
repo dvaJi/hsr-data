@@ -2,6 +2,7 @@
   "_id": 1015,
   "id": "archer",
   "name": "Archer",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh yang ditargetkan.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -413,6 +423,15 @@
       "simpleDesc": "Memasuki status \"Circuit Connection\". Mengakibatkan Quantum DMG dalam jumlah besar pada 1 musuh yang ditargetkan. Setelah melancarkan Skill saat berstatus \"Circuit Connection\", giliran kali ini tidak akan berakhir dan akan meningkatkan DMG yang diakibatkan Skill Archer. Saat Poin Skill sudah tidak cukup untuk melancarkan Skill lagi, akan keluar dari status \"Circuit Connection\".",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 2,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,15 @@
       "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah besar pada 1 musuh yang ditargetkan dan memperoleh Charge.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1091,6 +1119,24 @@
       "simpleDesc": "Setelah rekan Archer melancarkan serangan, Archer akan mengonsumsi 1 Charge, melancarkan Serangan Lanjutan pada target utama dan mengakibatkan Quantum DMG, serta memulihkan 1 Poin Skill.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1384,6 +1430,15 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, akan mengakibatkan Quantum DMG sebesar #1[i]% ATK Archer pada seluruh musuh dan memperoleh #2[i] Charge.",
       "simpleDesc": "Segera menyerang musuh. Setelah memasuki pertempuran, akan mengakibatkan Quantum DMG pada seluruh musuh dan memperoleh Charge.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1401,37 +1456,79 @@
       "_id": 101501,
       "id": "the_unreached_dream",
       "name": "The Unreached Dream",
-      "desc": "Setelah melancarkan <nobr>3</nobr> kali Skill dalam satu giliran, akan memulihkan <nobr>2</nobr> Poin Skill rekan tim."
+      "desc": "Setelah melancarkan <nobr>3</nobr> kali Skill dalam satu giliran, akan memulihkan <nobr>2</nobr> Poin Skill rekan tim.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101502,
       "id": "the_unfulfilled_happiness",
       "name": "The Unfulfilled Happiness",
-      "desc": "Saat melancarkan Ultimate, akan mengurangi <nobr>20%</nobr> Quantum RES target musuh dan menambahkan Quantum Weakness padanya selama <nobr>2</nobr> giliran."
+      "desc": "Saat melancarkan Ultimate, akan mengurangi <nobr>20%</nobr> Quantum RES target musuh dan menambahkan Quantum Weakness padanya selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101503,
       "id": "the_untamed_will",
       "name": "The Untamed Will",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101504,
       "id": "the_unsung_life",
       "name": "The Unsung Life",
-      "desc": "Ultimate DMG yang diakibatkan meningkat <nobr>150%</nobr>."
+      "desc": "Ultimate DMG yang diakibatkan meningkat <nobr>150%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101505,
       "id": "the_nameless_watch",
       "name": "The Nameless Watch",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101506,
       "id": "the_endless_pilgrimage",
       "name": "The Endless Pilgrimage",
-      "desc": "Memulihkan 1 Poin Skill untuk rekan tim saat giliran dimulai. Batas maksimum lapisan efek peningkatan DMG dari Skill Archer yang dapat ditumpuk meningkat <nobr>1</nobr> lapis. Skill DMG yang diakibatkan mengabaikan <nobr>20%</nobr> DEF."
+      "desc": "Memulihkan 1 Poin Skill untuk rekan tim saat giliran dimulai. Batas maksimum lapisan efek peningkatan DMG dari Skill Archer yang dapat ditumpuk meningkat <nobr>1</nobr> lapis. Skill DMG yang diakibatkan mengabaikan <nobr>20%</nobr> DEF.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

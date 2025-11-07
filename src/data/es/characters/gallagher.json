@@ -2,6 +2,7 @@
   "_id": 1301,
   "id": "gallagher",
   "name": "Gallagher",
+  "description": "El actual oficial de seguridad de la familia Sabueso de Colonipenal. Trata con mucha cortesía a los huéspedes, a la vez que se mantiene alerta. Parece ser un personaje con un pasado complicado, pero nunca menciona ningún detalle sobre sí mismo.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Regenera inmediatamente los PV de un aliado.",
       "type": "Habilidad básica",
       "tag": "Regeneración",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "Afecta con Melopea a todos los enemigos y al mismo tiempo les inflige Daño de Fuego. El siguiente ATQ básico se potencia y se convierte en Espuma desbordante.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1038,24 @@
       "simpleDesc": "Melopea aumenta el Daño de Ruptura que reciben los objetivos. Cada vez que un objetivo con Melopea recibe el ataque de un personaje aliado, el atacante regenera PV.",
       "type": "Talento",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Daño de Ruptura",
+          "desc": "Cuanto más altos sean la Firmeza máxima del objetivo, el nivel del personaje y el efecto de Ruptura, más Daño de Ruptura inflige.\nEl Daño de Ruptura no puede causar Golpes CRIT y no se ve afectado por los efectos de aumento de daño.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Ataca inmediatamente al enemigo y entra en combate. Afecta con Melopea a todos los enemigos durante #1[i] turnos y les inflige un #2[i]% del ATQ de Gallagher como Daño de Fuego.",
       "simpleDesc": "Ataca al enemigo y entra en combate. Afecta con Melopea a todos los enemigos y les inflige una pequeña cantidad de Daño de Fuego.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,88 @@
       "_id": 130101,
       "id": "salty_dog",
       "name": "Perro salado",
-      "desc": "Cuando Gallagher entra en combate, recupera <nobr>20</nobr> pts. de energía y su RES a efecto aumenta en un <nobr>50%</nobr>."
+      "desc": "Cuando Gallagher entra en combate, recupera <nobr>20</nobr> pts. de energía y su RES a efecto aumenta en un <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130102,
       "id": "lions_tail",
       "name": "Cola de león",
-      "desc": "Al usar la habilidad básica, se disipa <nobr>1</nobr> <u>estado negativo</u> del objetivo aliado y aumenta su RES a efecto en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Al usar la habilidad básica, se disipa <nobr>1</nobr> <u>estado negativo</u> del objetivo aliado y aumenta su RES a efecto en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Estado negativo",
+          "desc": "Reduce la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos estados se pueden eliminar.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130103,
       "id": "corpse_reviver",
       "name": "Resucitador",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130104,
       "id": "last_word",
       "name": "Última palabra",
-      "desc": "La duración del estado de Melopea aplicado por la habilidad definitiva de Gallagher aumenta en <nobr>1</nobr> turno."
+      "desc": "La duración del estado de Melopea aplicado por la habilidad definitiva de Gallagher aumenta en <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130105,
       "id": "death_in_the_afternoon",
       "name": "Muerte en la tarde",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130106,
       "id": "blood_and_sand",
       "name": "Sangre y arena",
-      "desc": "El efecto de Ruptura de Gallagher aumenta en un <nobr>20%</nobr> y su eficiencia de la Ruptura de Debilidad aumenta en un <nobr>20%</nobr>."
+      "desc": "El efecto de Ruptura de Gallagher aumenta en un <nobr>20%</nobr> y su eficiencia de la Ruptura de Debilidad aumenta en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

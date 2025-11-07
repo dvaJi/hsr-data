@@ -2,6 +2,7 @@
   "_id": 1223,
   "id": "moze",
   "name": "Moze",
+  "description": "A Shadow Guard of the Yaoqing, Moze is taciturn and solitary, always acting on his own.\nAs an expert in intelligence services and other operations that must remain covert, Moze rarely shows himself before others. The moment he reveals his blade usually spells doom for his enemies.\nHe commands a vast wealth of assassination techniques, coupled with an extraordinary obsession for orderliness and cleanliness.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -244,9 +245,18 @@
       "id": "hurlthorn",
       "name": "Hurlthorn",
       "desc": "Deals Lightning DMG equal to #1[i]% of Moze's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Lightning DMG to a single enemy.",
+      "simpleDesc": "Deals minor Lightning DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Marks one enemy as \"Prey\" and deals Lightning DMG to it. Gains #2[i] points of Charge.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -719,9 +738,27 @@
       "id": "dash_in_gash_out",
       "name": "Dash In, Gash Out",
       "desc": "Deals Lightning DMG equal to #1[i]% of Moze's ATK to one designated enemy target, and launches the Talent's Follow-up ATK against this target. If the target is defeated before this Follow-up ATK is used, then launches the Follow-up ATK against a random single enemy instead.",
-      "simpleDesc": "Deals Lightning DMG to a single enemy, and launches Talent's Follow-up ATK.",
+      "simpleDesc": "Deals Lightning DMG to one enemy, and launches Talent's Follow-up ATK.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,40 @@
       "simpleDesc": "When \"Prey\" exists on the field, Moze will enter the Departed state.\nAfter allies attack \"Prey,\" Moze deals Lightning Additional DMG and consumes 1 Charge point. For every #2[i] point(s) of Charge consumed, Moze launches Follow-up ATK on \"Prey,\" dealing Lightning DMG. When Charge is 0, dispels the target's \"Prey\" state.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000016,
+          "name": "Departed",
+          "desc": "Targets in the Departed state cannot be designated as ability targets and will not appear in the Action Order.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1399,15 @@
       "simpleDesc": "Enters the Stealth state. Attacking enemies to enter combat while in Stealth increases DMG.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,37 +1426,97 @@
       "_id": 122301,
       "id": "oathkeeper",
       "name": "Oathkeeper",
-      "desc": "After entering battle, Moze regenerates <nobr>20</nobr> Energy. Each time the <u>Additional DMG</u> from his Talent is triggered, Moze regenerates <nobr>2</nobr> Energy."
+      "desc": "After entering battle, Moze regenerates <nobr>20</nobr> Energy. Each time the <u>Additional DMG</u> from his Talent is triggered, Moze regenerates <nobr>2</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122302,
       "id": "wrathbearer",
       "name": "Wrathbearer",
-      "desc": "When all allies deal DMG to the enemy target marked as \"Prey,\" increases CRIT DMG by <nobr>40%</nobr>."
+      "desc": "When all allies deal DMG to the enemy target marked as \"Prey,\" increases CRIT DMG by <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122303,
       "id": "deathchaser",
       "name": "Deathchaser",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122304,
       "id": "heathprowler",
       "name": "Heathprowler",
-      "desc": "When using Ultimate, increases the DMG dealt by Moze by <nobr>#1[f1]%</nobr>, lasting for <nobr>2</nobr> turn(s)."
+      "desc": "When using Ultimate, increases the DMG dealt by Moze by <nobr>#1[f1]%</nobr>, lasting for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122305,
       "id": "truthbender",
       "name": "Truthbender",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122306,
       "id": "faithbinder",
       "name": "Faithbinder",
-      "desc": "Increases the DMG multiplier of the Talent's <u>Follow-up ATK</u> by <nobr>25%</nobr>."
+      "desc": "Increases the DMG multiplier of the Talent's <u>Follow-up ATK</u> by <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

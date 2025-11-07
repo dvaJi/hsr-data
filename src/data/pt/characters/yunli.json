@@ -2,6 +2,7 @@
   "_id": 1221,
   "id": "yunli",
   "name": "Yunli",
+  "description": "Uma caçadora de espadas do Zhuming do Xianzhou e a querida neta do \"Coração Flamejante\", o general Huaiyan. Franca e direta.\nEla aprendeu a arte da espada e da forja com Huaiyan desde pequena, e então se tornou a segunda mestra espadachim mais jovem do Octeto da Roda Flamejante.\nImpulsionada por um desprezo intenso por espadas amaldiçoadas que surgiram do Zhuming, ela jurou \"caçar e destruir todas as espadas amaldiçoadas\".",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Restaura os PV desta unidade. Causa Dano Físico a uma unidade inimiga e Dano Físico leve aos alvos adjacentes.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,24 @@
       "simpleDesc": "Entra em \"Apara\" e provoca todos os inimigos. Ao atacar durante este período, ativa um Contra-Ataque poderoso e causa Dano Físico ao atacante e alvos adjacentes. Então, causa Dano Físico leve a um único inimigo-alvo que ricocheteia 6 vezes. Se nenhum Contra-Ataque for acionado durante o estado de Apara, causa Dano Físico a um inimigo-alvo aleatório e alvos adjacentes quando Apara acaba.",
       "type": "Perícia Suprema",
       "tag": "Aprimoramento",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contra-Ataque",
+          "desc": "Um efeito que é acionado automaticamente quando o alvo é atacado, liberando um ataque adicional no atacante.\nContra-Ataques também são considerados <u>Ataques Extras</u>.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1194,24 @@
       "simpleDesc": "Quando Yunli é atacada por qualquer inimigo-alvo, ela adicionalmente regenera Energia e realiza imediatamente um Contra-Ataque, causando Dano Físico ao atacante e Dano Físico leve aos alvos adjacentes.",
       "type": "Talento",
       "tag": "Explosão",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contra-Ataque",
+          "desc": "Um efeito que é acionado automaticamente quando o alvo é atacado, liberando um ataque adicional no atacante.\nContra-Ataques também são considerados <u>Ataques Extras</u>.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1536,15 @@
       "simpleDesc": "Esta unidade ganha o efeito de Sentinela, durando por 20 segundos. Durante este tempo, ao entrar em combate atacando inimigos ou recebendo um ataque, utiliza imediatamente \"Intuito: Abatedora\" em um inimigo aleatório.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1498,37 +1562,97 @@
       "_id": 122101,
       "id": "weathered_blade_does_not_sully",
       "name": "Lâmina Experiente Livre de Mácula",
-      "desc": "Aumenta o Dano causado por \"Intuito: Corte\" e \"Intuito: Abatedora\" em <nobr>20%</nobr>. Aumenta o número de ocorrências adicionais de Dano para \"Intuito: Abatedora\" em <nobr>3</nobr>."
+      "desc": "Aumenta o Dano causado por \"Intuito: Corte\" e \"Intuito: Abatedora\" em <nobr>20%</nobr>. Aumenta o número de ocorrências adicionais de Dano para \"Intuito: Abatedora\" em <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122102,
       "id": "first_luster_breaks_dawn",
       "name": "Primeira Luz do Alvorecer",
-      "desc": "Ao causar Dano ao utilizar um <u>Contra-Ataque</u>, ignora <nobr>20%</nobr> da DEF do alvo."
+      "desc": "Ao causar Dano ao utilizar um <u>Contra-Ataque</u>, ignora <nobr>20%</nobr> da DEF do alvo.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contra-Ataque",
+          "desc": "Um efeito que é acionado automaticamente quando o alvo é atacado, liberando um ataque adicional no atacante.\nContra-Ataques também são considerados <u>Ataques Extras</u>.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122103,
       "id": "mastlength_twirls_mountweight",
       "name": "Domínio do Ferro",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122104,
       "id": "artisans_ironsong",
       "name": "Canção de Ferro do Artesão",
-      "desc": "Após utilizar \"Intuito: Corte\" ou \"Intuito: Abatedora\", aumenta a RES a Efeito dessa unidade em <nobr>50%</nobr>, durando por <nobr>1</nobr> rodada(s)."
+      "desc": "Após utilizar \"Intuito: Corte\" ou \"Intuito: Abatedora\", aumenta a RES a Efeito dessa unidade em <nobr>50%</nobr>, durando por <nobr>1</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122105,
       "id": "blade_of_old_outlasts_all",
       "name": "A Lâmina Ancestral Sobrevive a Tudo",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122106,
       "id": "walk_in_blade_talk_in_zither",
       "name": "Caminho da Lâmina, Vozes da Cítara",
-      "desc": "Enquanto \"Apara\" está ativa, se um inimigo usar ativamente suas habilidades, independentemente se ele atacar Yunli ou não, \"Intuito: Abatedora\" será ativado e o efeito de \"Apara\" será removido. Ao causar Dano através do \"Intuito: Corte\" ou \"Intuito: Abatedora\", aumenta a Chance de CRIT em <nobr>15%</nobr> e a <u>PEN de RES a Físico</u> em <nobr>20%</nobr>."
+      "desc": "Enquanto \"Apara\" está ativa, se um inimigo usar ativamente suas habilidades, independentemente se ele atacar Yunli ou não, \"Intuito: Abatedora\" será ativado e o efeito de \"Apara\" será removido. Ao causar Dano através do \"Intuito: Corte\" ou \"Intuito: Abatedora\", aumenta a Chance de CRIT em <nobr>15%</nobr> e a <u>PEN de RES a Físico</u> em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

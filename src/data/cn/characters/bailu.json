@@ -2,6 +2,7 @@
   "_id": 1211,
   "id": "bailu",
   "name": "白露",
+  "description": "仙舟「罗浮」持明族的尊长，有「衔药龙女」之称的医士。\n以独门医理和唯有龙脉方可施行的「医疗手段」救死扶伤。",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量雷属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "为我方单体回复生命值，然后随机治疗我方单体。",
       "type": "战技",
       "tag": "回复",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "为我方全体回复生命值，并附上【生息】，或延长【生息】持续时间。",
       "type": "终结技",
       "tag": "回复",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,24 @@
       "simpleDesc": "拥有【生息】的我方目标受到攻击后会回复生命值。\n当队友受到致命攻击时，白露立即为其回复生命值。该效果单场战斗中可以触发1次。",
       "type": "天赋",
       "tag": "回复",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "无法战斗状态",
+          "desc": "当我方目标的当前生命值被削减至0时进入的特殊状态，处于该状态的目标无法继续战斗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1491,15 @@
       "simpleDesc": "使用秘技，下一次战斗开始时为我方全体附上【生息】。",
       "type": "秘技",
       "tag": "回复",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1516,79 @@
       "_id": 121101,
       "id": "ambrosial_aqua",
       "name": "百脉甘津宁神久",
-      "desc": "【生息】结束时若我方目标当前生命值等于其生命上限，则额外恢复目标<nobr>8</nobr>点能量。"
+      "desc": "【生息】结束时若我方目标当前生命值等于其生命上限，则额外恢复目标<nobr>8</nobr>点能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121102,
       "id": "sylphic_slumber",
       "name": "壶中洞天云螭眠",
-      "desc": "施放终结技后，白露的治疗量提高<nobr>15%</nobr>，持续<nobr>2</nobr>回合。"
+      "desc": "施放终结技后，白露的治疗量提高<nobr>15%</nobr>，持续<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121103,
       "id": "omniscient_opulence",
       "name": "掌间乾坤便通玄",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121104,
       "id": "evil_excision",
       "name": "肘后备急除外障",
-      "desc": "战技提供的每1次治疗会额外使受治疗者造成的伤害提高<nobr>10%</nobr>，最多叠加<nobr>3</nobr>层，持续<nobr>2</nobr>回合。"
+      "desc": "战技提供的每1次治疗会额外使受治疗者造成的伤害提高<nobr>10%</nobr>，最多叠加<nobr>3</nobr>层，持续<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121105,
       "id": "waning_worries",
       "name": "方定一倾浣俗尘",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121106,
       "id": "drooling_drop_of_draconic_divinity",
       "name": "龙漦吐哺胜金丹",
-      "desc": "白露在单场战斗中累计可以对受到致命攻击的我方目标提供治疗的效果触发次数增加<nobr>1</nobr>次。"
+      "desc": "白露在单场战斗中累计可以对受到致命攻击的我方目标提供治疗的效果触发次数增加<nobr>1</nobr>次。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

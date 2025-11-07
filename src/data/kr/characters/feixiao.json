@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "비소",
+  "description": "선주 「요청」의 천격 장군. 천궁의 7대 장군 중 하나로, 격식에 얽매이지 않으며 솔직하고 소탈하다.\n각종 무예에 정통하고 신체를 극한으로 단련하여 「대첩 장군」이라는 명성을 얻었으며, 선주 군인과 백성의 사랑을 받고 있다.\n그러나 「달의 광기」 증상을 겪고 있으며, 제한된 시간 내에 흉물을 모두 사냥하기 위해선——비소의 유일한 적은 바로 자신뿐이다",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 바람 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "단일 적에게 바람 속성 피해를 가하고, 그 후 특성의 추가 공격을 1회 추가로 발동한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "필살기 발동 중엔 약점 속성을 무시하고 적의 강인성을 감소시킬 수 있으며, 목표가 격파되지 않았을 시 비소의 약점 격파 효율이 증가한다.\n단일 적에게 [섬렬의 검무] 또는 [하늘을 꿰뚫는 도끼]를 #3[i]회 발동하며, 마지막으로 바람 속성 피해를 가한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "약점 격파 상태",
+          "desc": "적의 강인성이 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 진입한 목표는 행동 게이지가 감소한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "[비황] #3[i]pt 도달 시 필살기를 활성화할 수 있으며, 최대 #4[i]pt 누적된다. 아군이 공격을 #2[i]회 발동할 때마다 비소가 [비황]을 획득한다.\n동료가 공격 발동 후 비소가 주목표에게 추가 공격을 발동하고 바람 속성 피해를 가한다. 해당 효과는 턴마다 최대 1회 발동하고, 해당 공격 발동 시 자신이 가하는 피해가 증가한다",
       "type": "특성",
       "tag": "단일 공격",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "[적진 돌격] 상태에 진입한다. 지속적으로 적을 끌어당기고 이동 속도가 증가하며, 전투 진입 후 [비황]을 획득한다.\n[적진 돌격] 상태에서는 끌어당긴 모든 적을 선공할 수 있고, 웨이브가 시작될 때마다 모든 적에게 바람 속성 피해를 가하며, 해당 피해는 반드시 치명타이다. 끌어당긴 적이 많을수록 피해 배율이 증가한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "극지 평정",
-      "desc": "[섬렬의 검무] 또는 [하늘을 꿰뚫는 도끼] 발동 후 비소가 가하는 필살기 피해가 기존 피해의 <nobr>10%</nobr>만큼 추가로 증가한다. 최대 <nobr>5</nobr>스택 중첩되며, 필살기 행동이 종료될 때까지 지속된다"
+      "desc": "[섬렬의 검무] 또는 [하늘을 꿰뚫는 도끼] 발동 후 비소가 가하는 필살기 피해가 기존 피해의 <nobr>10%</nobr>만큼 추가로 증가한다. 최대 <nobr>5</nobr>스택 중첩되며, 필살기 행동이 종료될 때까지 지속된다",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "별과 달에 올리는 예",
-      "desc": "특성 효과에서 아군이 <u>추가 공격</u>을 1회 발동할 때마다 비소가 [비황]을 1pt 획득한다. 해당 효과는 턴마다 최대 <nobr>6</nobr>회 발동한다"
+      "desc": "특성 효과에서 아군이 <u>추가 공격</u>을 1회 발동할 때마다 비소가 [비황]을 1pt 획득한다. 해당 효과는 턴마다 최대 <nobr>6</nobr>회 발동한다",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "서성 출현",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "대담하고 신중하게",
-      "desc": "특성 <u>추가 공격</u>의 강인성 감소 수치가 <nobr>100%</nobr> 증가하고, 발동 시 자신의 속도가 <nobr>8%</nobr> 증가한다, 지속 시간: <nobr>2</nobr>턴"
+      "desc": "특성 <u>추가 공격</u>의 강인성 감소 수치가 <nobr>100%</nobr> 증가하고, 발동 시 자신의 속도가 <nobr>8%</nobr> 증가한다, 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "드높은 하늘에 올라",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "수구초심",
-      "desc": "비소가 가하는 필살기 피해의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 특성의 <u>추가 공격</u> 피해는 동시에 필살기 피해로 간주되며, 피해 배율이 <nobr>140%</nobr> 증가한다"
+      "desc": "비소가 가하는 필살기 피해의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 특성의 <u>추가 공격</u> 피해는 동시에 필살기 피해로 간주되며, 피해 배율이 <nobr>140%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

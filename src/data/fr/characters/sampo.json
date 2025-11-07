@@ -2,6 +2,7 @@
   "_id": 1108,
   "id": "sampo",
   "name": "Sampo",
+  "description": "Un marchand qui voyage librement entre le Surmonde et le Souterrain.\nToujours de bonne humeur, il se montre familier avec tout le monde et adore les plaisanteries.",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -243,10 +244,22 @@
       "_id": 110801,
       "id": "dazzling_blades",
       "name": "Lames éblouissantes",
-      "desc": "Inflige des DGT de vent équivalents à #1[i]% de l'ATQ de Sampo à un ennemi unique.",
+      "desc": "Inflige des DGT de vent équivalents à #1[i]% de l'ATQ de Sampo à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 110802,
       "id": "ricochet_love",
       "name": "Amour rebondissant",
-      "desc": "Inflige des DGT de vent équivalents à #2[i]% de l'ATQ de Sampo à un ennemi unique et inflige des DGT #1[i] fois supplémentaires, infligeant à chaque fois des DGT de vent équivalents à #2[i]% de l'ATQ de Sampo à un ennemi aléatoire.",
+      "desc": "Inflige des DGT de vent équivalents à #2[i]% de l'ATQ de Sampo à un ennemi désigné et inflige des DGT #1[i] fois supplémentaires, infligeant à chaque fois des DGT de vent équivalents à #2[i]% de l'ATQ de Sampo à un ennemi aléatoire.",
       "simpleDesc": "Inflige des DGT de vent mineurs à des cibles ennemies uniques pour un total de 5 rebonds.",
       "type": "Compétence",
       "tag": "Rebond",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,27 @@
       "simpleDesc": "Inflige des DGT de vent à tous les ennemis, avec de fortes chances de leur infliger des dégâts sur la durée accrus.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "Il y a une chance d'infliger Faille du vent à la cible après avoir touché un ennemi.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1452,32 @@
       "simpleDesc": "Les ennemis dans une zone définie sont Aveuglés. En engageant le combat contre des ennemis Aveuglés, il y a de fortes chances de retarder leurs actions.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chances fixes",
+          "desc": "Probabilité fixe qui n'est affectée par aucun facteur.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Action retardée",
+          "desc": "Augmente le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,37 +1496,88 @@
       "_id": 110801,
       "id": "rising_love",
       "name": "Amour grandissant",
-      "desc": "Lors de l'utilisation de la compétence, inflige des DGT <nobr>1</nobr> fois supplémentaire à un ennemi aléatoire."
+      "desc": "Lors de l'utilisation de la compétence, inflige des DGT <nobr>1</nobr> fois supplémentaire à un ennemi aléatoire.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110802,
       "id": "infectious_enthusiasm",
       "name": "Enthousiasme contagieux",
-      "desc": "Vaincre un ennemi affecté par Faille du vent a <nobr>100%</nobr> de <u>chances de base</u> d'infliger à tous les ennemis <nobr>1</nobr> cumul du même effet Faille du vent que celui de la compétence."
+      "desc": "Vaincre un ennemi affecté par Faille du vent a <nobr>100%</nobr> de <u>chances de base</u> d'infliger à tous les ennemis <nobr>1</nobr> cumul du même effet Faille du vent que celui de la compétence.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110803,
       "id": "big_money",
       "name": "Joli cachet !",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110804,
       "id": "the_deeper_the_love_the_stronger_the_hate",
       "name": "Amour, gloire et... haine",
-      "desc": "Lorsque la compétence touche un ennemi qui a au moins <nobr>5</nobr> cumuls de Faille du vent, l'ennemi subit immédiatement <nobr>8%</nobr> des DGT de la Faille du vent actuelle."
+      "desc": "Lorsque la compétence touche un ennemi qui a au moins <nobr>5</nobr> cumuls de Faille du vent, l'ennemi subit immédiatement <nobr>8%</nobr> des DGT de la Faille du vent actuelle.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110805,
       "id": "huuuuge_money",
       "name": "TRÈS gros cachet !",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110806,
       "id": "increased_spending",
       "name": "Envol des dépenses",
-      "desc": "Le multiplicateur des DGT infligés par l'effet Faille du vent du talent augmente de <nobr>15%</nobr>."
+      "desc": "Le multiplicateur des DGT infligés par l'effet Faille du vent du talent augmente de <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

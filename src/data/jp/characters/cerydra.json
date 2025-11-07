@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "ケリュドラ",
+  "description": "北境の帝国、失われた王朝——その凍てつく大地で征服の野心が燃え上がる。\n君主ケリュドラ、「法」の火種を掌握する黄金裔。盤上に駒を配して神々に相対し、異心を抱く咎人を裁き、火を追う旅の礎を築く者である。\n——「これは終点ではない。オンパロスから始まる征途は、必ずや銀河の群星へと至るだろう！」",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "味方キャラに「軍功」を付与し、ケリュドラはチャージを獲得する。チャージが#4[i]に達した時、「軍功」が自動で「爵位」へと昇格する。「爵位」を所持しているキャラの戦闘スキルの会心ダメージ、全属性耐性貫通がアップし、奇襲が発動可能になる。",
       "type": "戦闘スキル",
       "tag": "サポート",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "行動制限系デバフ",
+          "desc": "凍結、もつれ、禁錮、支配、怒噪、強烈震とう、異夢、縛り、恐怖、行動ロック。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "奇襲",
+          "desc": "これから発動するスキルをコピーし、そのスキルが発動する前に、先行して1回発動させる。その後、本来のスキルが発動する。\nなお、奇襲で奇襲が触発することはない。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "チャージを獲得し、敵全体に風属性ダメージを与える。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "「軍功」を所持しているキャラの攻撃力がアップし、かつ通常攻撃または戦闘スキルを発動した時、ケリュドラはチャージを獲得する。「軍功」を所持しているキャラが攻撃を行った後、ケリュドラは追加で少量の風属性付加ダメージを与える。",
       "type": "天賦",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "奇襲",
+          "desc": "これから発動するスキルをコピーし、そのスキルが発動する前に、先行して1回発動させる。その後、本来のスキルが発動する。\nなお、奇襲で奇襲が触発することはない。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "現在行動中のキャラに「軍功」を付与する。次の戦闘開始時、「軍功」を所持しているキャラに自動で戦闘スキルを発動する。",
       "type": "秘技",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "{RUBY_B#すべ}全{RUBY_E#}ての{RUBY_B#おうかん}王冠{RUBY_E#}を{RUBY_B#うば}奪{RUBY_E#}え",
-      "desc": "「軍功」を所持しているキャラが敵にダメージを与える時、ターゲットの防御力を<nobr>16%</nobr>無視する。「軍功」が「爵位」に昇格している間、そのキャラが敵に戦闘スキルダメージを与える時、さらにターゲットの防御力を<nobr>20%</nobr>無視する。\nケリュドラが戦闘スキルを発動する時、指定した味方のEPを<nobr>2</nobr>回復する。"
+      "desc": "「軍功」を所持しているキャラが敵にダメージを与える時、ターゲットの防御力を<nobr>16%</nobr>無視する。「軍功」が「爵位」に昇格している間、そのキャラが敵に戦闘スキルダメージを与える時、さらにターゲットの防御力を<nobr>20%</nobr>無視する。\nケリュドラが戦闘スキルを発動する時、指定した味方のEPを<nobr>2</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "{RUBY_B#ばんみん}万民{RUBY_E#}の{RUBY_B#ねが}願{RUBY_E#}いをここに",
-      "desc": "「軍功」を所持しているキャラの与ダメージ+<nobr>40%</nobr>。フィールド上に、ケリュドラ以外に「軍功」を所持している味方がいる場合、ケリュドラの与ダメージ+<nobr>160%</nobr>。"
+      "desc": "「軍功」を所持しているキャラの与ダメージ+<nobr>40%</nobr>。フィールド上に、ケリュドラ以外に「軍功」を所持している味方がいる場合、ケリュドラの与ダメージ+<nobr>160%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "{RUBY_B#ふる}旧{RUBY_E#}き{RUBY_B#りっぽう}律法{RUBY_E#}を{RUBY_B#や}焼{RUBY_E#}き{RUBY_B#はら}払{RUBY_E#}え",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "{RUBY_B#てんち}天地{RUBY_E#}も{RUBY_B#じんかい}人界{RUBY_E#}も{RUBY_B#あらた}改{RUBY_E#}めよう",
-      "desc": "必殺技のダメージ倍率+<nobr>240%</nobr>。"
+      "desc": "必殺技のダメージ倍率+<nobr>240%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "{RUBY_B#おん}恩{RUBY_E#}も{RUBY_B#あだ}仇{RUBY_E#}も{RUBY_B#ひと}等{RUBY_E#}しく{RUBY_B#かえ}返{RUBY_E#}そう",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "{RUBY_B#われ}我{RUBY_E#}は{RUBY_B#ゆ}征{RUBY_E#}く、{RUBY_B#ほし}星{RUBY_E#}の{RUBY_B#たいかい}大海{RUBY_E#}へ",
-      "desc": "「軍功」を所持しているキャラの全属性<u>耐性貫通</u>+<nobr>20%</nobr>、「軍功」による<u>付加ダメージ</u>の倍率+<nobr>300%</nobr>。フィールド上に、ケリュドラ以外に「軍功」を所持している味方がいる場合、ケリュドラの全属性<u>耐性貫通</u>+<nobr>20%</nobr>。"
+      "desc": "「軍功」を所持しているキャラの全属性<u>耐性貫通</u>+<nobr>20%</nobr>、「軍功」による<u>付加ダメージ</u>の倍率+<nobr>300%</nobr>。フィールド上に、ケリュドラ以外に「軍功」を所持している味方がいる場合、ケリュドラの全属性<u>耐性貫通</u>+<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

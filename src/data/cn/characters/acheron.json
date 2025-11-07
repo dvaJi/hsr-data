@@ -2,6 +2,7 @@
   "_id": 1308,
   "id": "acheron",
   "name": "黄泉",
+  "description": "自称「巡海游侠」的旅人，本名不详。\n身佩一柄长刀，独行银河。",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量雷属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "获得#3[i]点【残梦】，为敌方单体附上#3[i]层【集真赤】，对其造成雷属性伤害，对相邻目标造成少量雷属性伤害。",
       "type": "战技",
       "tag": "扩散",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "对敌方单体造成3段少量雷属性伤害，若消去目标【集真赤】则对敌方全体造成少量雷属性伤害。最后对敌方全体造成1段雷属性伤害并移除所有【集真赤】。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "【残梦】达到上限时可激活终结技。终结技期间可无视弱点属性削减敌方韧性，并使敌方全体全属性抗性降低。\n任意单位施放技能期间使敌方目标陷入负面效果，黄泉获得【残梦】并为敌方目标附上【集真赤】。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1472,15 @@
       "desc": "立即攻击敌人，每个波次开始时获得【四相断我】，对敌方全体造成等同于黄泉#1[i]%攻击力的雷属性伤害，且无视弱点属性削减敌方全体的韧性，击破弱点时，触发雷属性的弱点击破效果。\n【四相断我】：施放终结技后黄泉获得#2[i]点【残梦】，并为敌方随机单体附上#2[i]层【集真赤】。\n若攻击普通敌人则立即将其消灭，不会进入战斗。未击中敌人时不消耗秘技点。",
       "simpleDesc": "攻击敌人，每个波次开始时获得【四相断我】，对敌方全体造成雷属性伤害，并无视弱点属性削减韧性。\n若攻击普通敌人则立即将其消灭，不会进入战斗。未击中敌人时不消耗秘技点。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1498,97 @@
       "_id": 130801,
       "id": "silenced_sky_spake_sooth",
       "name": "高天寥落真言始",
-      "desc": "对处于<u>负面效果</u>的敌方目标造成伤害时暴击率提高<nobr>18%</nobr>。"
+      "desc": "对处于<u>负面效果</u>的敌方目标造成伤害时暴击率提高<nobr>18%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "负面效果",
+          "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130802,
       "id": "mute_thunder_in_still_tempest",
       "name": "霆鼓俱寂，瑟风亦止",
-      "desc": "行迹【奈落】最高数值所需求「虚无」命途角色的数量减少1名，自身回合开始时获得1点【残梦】，同时为【集真赤】最多的敌方附上1层【集真赤】。"
+      "desc": "行迹【奈落】最高数值所需求「虚无」命途角色的数量减少1名，自身回合开始时获得1点【残梦】，同时为【集真赤】最多的敌方附上1层【集真赤】。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130803,
       "id": "frost_bites_in_death",
       "name": "寒肃惊永蛰",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130804,
       "id": "shrined_fire_for_mirrored_soul",
       "name": "亘焰燎照镜中人",
-      "desc": "在敌方目标进入战斗时，使其陷入终结技伤害易伤状态，受到的终结技伤害提高<nobr>8%</nobr>。"
+      "desc": "在敌方目标进入战斗时，使其陷入终结技伤害易伤状态，受到的终结技伤害提高<nobr>8%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130805,
       "id": "strewn_souls_on_erased_earths",
       "name": "崇岩支离，千身飘零",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130806,
       "id": "apocalypse_the_emancipator",
       "name": "灾咎解桎梏",
-      "desc": "黄泉造成的终结技伤害全属性<u>抗性穿透</u>提高<nobr>20%</nobr>，施放普攻、战技造成的伤害同时视为终结技伤害，并无视弱点属性削减敌方韧性。击破弱点时，触发雷属性的弱点击破效果。"
+      "desc": "黄泉造成的终结技伤害全属性<u>抗性穿透</u>提高<nobr>20%</nobr>，施放普攻、战技造成的伤害同时视为终结技伤害，并无视弱点属性削减敌方韧性。击破弱点时，触发雷属性的弱点击破效果。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

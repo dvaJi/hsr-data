@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "Castorice",
+  "description": "Aidonia, the snowy land that respects and worships death, has already sunken into sweet slumber.\nO Castorice, daughter of the River of Souls, the Chrysos Heir in search of the Coreflame of \"Death,\" set forth! Guard the lament of the souls in this world, and embrace the solitude of destiny.\n— Life and death is a journey. When a butterfly rests on that dead branch, the withered will be reborn again.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Quantum DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Consumes all allies' HP. Deals Quantum DMG to one enemy and minor Quantum DMG to adjacent targets.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Summons the memosprite Netherwing and advances its action by 100%. At the same time, deploys a Territory that decreases All-Type RES for all enemies.",
       "type": "Ultimate",
       "tag": "Summon",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Territory",
+          "desc": "Territory effects are unique in the battle. While it exists, other abilities with Territory effects cannot be used.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1094,9 +1147,18 @@
       "id": "desolation_across_palms",
       "name": "Desolation Across Palms",
       "desc": "The maximum limit of \"Newbud\" is related to the levels of all characters on the battlefield. For every 1 point of HP lost by all allies, Castorice gains 1 point of \"Newbud.\" When \"Newbud\" reaches its maximum limit, can activate the Ultimate. When allies lose HP, Castorice's and Netherwing's DMG dealt increases by #2[i]%. This effect can stack up to #3[i] time(s), lasting for #4[i] turn(s).\nWhen Netherwing is on the field, \"Newbud\" cannot be gained through Talent, and every 1 point of HP lost by all allies (except Netherwing) will be converted to an equal amount of HP for Netherwing.",
-      "simpleDesc": "When any ally loses HP, Castorice gains \"Newbud\". Increases Castorice's and Netherwing's DMG dealt. When \"Newbud\" reaches the maximum, Castorice's Ultimate can be used. While Netherwing is on the battlefield, HP lost by any ally unit (except Netherwing) will be converted to an equal amount of HP for Netherwing.",
+      "simpleDesc": "When allies lose HP, Castorice gains \"Newbud\". Increases Castorice's and Netherwing's DMG dealt. When \"Newbud\" reaches its maximum limit, can activate the Ultimate. While Netherwing is on the field, HP lost by allies (except Netherwing) will be converted to an equal amount of HP for Netherwing.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "After using Technique, enters the \"Netherveil\" state that lasts for #3[i] seconds. While \"Netherveil\" is active, enemies are unable to actively approach Castorice.\nDuring \"Netherveil,\" active attacks will cause all enemies within range to enter combat. At the same time, summons the memosprite Netherwing, advances its action by 100%, and deploys the Territory \"Lost Netherland.\" Netherwing has its current HP equal to #2[i]% of max \"Newbud.\" After entering battle, consumes #1[i]% of the current HP of all allies (except Netherwing).\nIf Netherwing is not summoned after entering battle, Castorice gains \"Newbud\" by an amount equal to #4[i]% of max \"Newbud.\"",
       "simpleDesc": "Enters the \"Netherveil\" state. Enemies are unable to actively approach Castorice.\nDuring \"Netherveil,\" attacks will cause all enemies within range to enter combat. At the same time, summons the memosprite Netherwing, advances its action by 100%. Upon entering battle, consumes HP of all allies (except Netherwing).\nIf Netherwing is not summoned after entering battle, Castorice gains \"Newbud\" by an amount equal to #4[i]% of max \"Newbud.\"",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Territory",
+          "desc": "Territory effects are unique in the battle. While it exists, other abilities with Territory effects cannot be used.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Netherwing: Pollux",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "Claw Splits the Veil",
+        "desc": "Deals Quantum DMG equal to <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> of Castorice's Max HP to all enemies.",
+        "simpleDesc": "Deals minor Quantum DMG to all enemies.",
+        "type": {
+          "id": "Servant",
+          "name": "Memosprite Skill"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "Breath Scorches the Shadow",
+        "desc": "Launching \"Breath Scorches the Shadow\" will consume <nobr>#1[i]%</nobr> of Netherwing's Max HP to deal Quantum DMG equal to <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> of Castorice's Max HP to all enemies.\nIn one attack, \"Breath Scorches the Shadow\" can be launched repeatedly, with the DMG multiplier increased progressively to <span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span> / <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>. After reaching <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>, it will not increase further. The DMG Multiplier Boost effect will not decrease before Netherwing disappears.\nWhen Netherwing's current HP is equal to or less than <nobr>#5[i]%</nobr> of its Max HP, launching this ability will actively reduce HP down to 1, and then trigger the ability effect equal to that of the Talent \"Wings Sweep the Ruins.\"",
+        "simpleDesc": "Consumes this unit's HP to deal Quantum DMG to all enemies, and this turn will not conclude. When using this ability repeatedly, the ability can be enhanced up to 3 times. When HP is <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> or lower, using this ability will actively trigger the ability effect of Memosprite Talent \"Wings Sweep the Ruins.\"",
+        "type": {
+          "id": "Servant",
+          "name": "Memosprite Skill"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "Mooncocoon Shrouds the Form",
+        "desc": "When Netherwing is on the field, it acts as <u>backup</u> for allies. When allies take DMG or consume HP, their current HP can be reduced down to a minimum of 1, after which Netherwing will bear the HP loss. But Netherwing consumes HP equal to <nobr>#1[i]%</nobr> of the original value. This lasts until Netherwing disappears.",
+        "simpleDesc": "When Netherwing is on the field, it acts as <u>backup</u> for allies. Allies' current HP can be reduced down to a minimum of 1, after which Netherwing will bear the DMG received or the HP consumed.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Support"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "Backup",
+            "desc": "Enemies cannot actively target backup units. Allies' Blast-type abilities cannot Blast to backup units.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "Roar Rumbles the Realm",
+        "desc": "When Netherwing is summoned, increases DMG dealt by all allies by <nobr>#1[i]%</nobr>, lasting for <nobr>#2[i]</nobr> turn(s).",
+        "simpleDesc": "When summoned, increases the DMG dealt by all allies.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Support"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "Wings Sweep the Ruins",
+        "desc": "When Netherwing disappears, deals <nobr>#2[i]</nobr> instance(s) of DMG, with each instance dealing Quantum DMG equal to <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> of Castorice's Max HP plus <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span> for all allies.",
+        "simpleDesc": "Upon disappearing, deals minor Quantum DMG to one enemy that Bounces a total of <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> time(s). At the same time, restores HP for all allies.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Bounce"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "Breath Scorches the Shadow",
+        "desc": "",
+        "simpleDesc": "Consumes this unit's HP to deal Quantum DMG to all enemies, and this turn will not conclude. When using this ability repeatedly, the ability can be enhanced up to 3 times. When HP is <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> or lower, using this ability will actively trigger the ability effect of Memosprite Talent \"Wings Sweep the Ruins.\"",
+        "type": {
+          "id": "Servant",
+          "name": "Memosprite Skill"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "Breath Scorches the Shadow",
+        "desc": "",
+        "simpleDesc": "Consumes this unit's HP to deal Quantum DMG to all enemies, and this turn will not conclude. When using this ability repeatedly, the ability can be enhanced up to 3 times. When HP is <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> or lower, using this ability will actively trigger the ability effect of Memosprite Talent \"Wings Sweep the Ruins.\"",
+        "type": {
+          "id": "Servant",
+          "name": "Memosprite Skill"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "Wings Sweep the Ruins",
+        "desc": "Consumes all HP and deals <nobr>#2[i]</nobr> instance(s) of DMG, with each instance dealing Quantum DMG equal to <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> of Castorice's Max HP to one random enemy. At the same time, restores HP by an amount equal to <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> of Castorice's Max HP plus <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span> for all allies.",
+        "simpleDesc": "Consumes all HP and deals minor Quantum DMG to one enemy that Bounces a total of <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> time(s). At the same time, restores HP for all allies.",
+        "type": {
+          "id": "Servant",
+          "name": "Memosprite Skill"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Bounce"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "Snowbound Maiden, Memory to Tomb",
-      "desc": "When the enemy target's current HP is <nobr>80%</nobr>/<nobr>50%</nobr> of Max HP or lower, the DMG dealt to it by \"Boneclaw, Doomdrake's Embrace,\" \"Claw Splits the Veil,\" \"Breath Scorches the Shadow,\" and \"Wings Sweep the Ruins\" is <nobr>120%</nobr>/<nobr>140%</nobr> of the original DMG respectively."
+      "desc": "When the enemy target's current HP is <nobr>80%</nobr>/<nobr>50%</nobr> of Max HP or lower, the DMG dealt to it by \"Boneclaw, Doomdrake's Embrace,\" \"Claw Splits the Veil,\" \"Breath Scorches the Shadow,\" and \"Wings Sweep the Ruins\" is <nobr>120%</nobr>/<nobr>140%</nobr> of the original DMG respectively.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "Crown on Wings of Bloom",
-      "desc": "After summoning the memosprite Netherwing, Castorice gains <nobr>2</nobr> stack(s) of \"Ardent Will.\" \"Ardent Will\" can stack up to <nobr>2</nobr> time(s) and can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow\" and <u>advance Castorice's action</u> by <nobr>100%</nobr>. When using the next Enhanced Skill, Castorice gains \"Newbud\" by an amount equal to <nobr>30%</nobr> of max \"Newbud.\""
+      "desc": "After summoning the memosprite Netherwing, Castorice gains <nobr>2</nobr> stack(s) of \"Ardent Will.\" \"Ardent Will\" can stack up to <nobr>2</nobr> time(s) and can be used to offset the HP cost of Netherwing's Memosprite Skill, \"Breath Scorches the Shadow\" and <u>advance Castorice's action</u> by <nobr>100%</nobr>. When using the next Enhanced Skill, Castorice gains \"Newbud\" by an amount equal to <nobr>30%</nobr> of max \"Newbud.\"",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "Pious Pilgrim, Dance in Doom",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nMemosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nMemosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "Rest in Songs of Gloom",
-      "desc": "While Castorice is on the field, all allies' HP restored when receiving healing increases by <nobr>20%</nobr>."
+      "desc": "While Castorice is on the field, all allies' HP restored when receiving healing increases by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "Pristine Pages, Prophecy as Plume",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nMemosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nMemosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "Await for Years to Loom",
-      "desc": "When Castorice or Netherwing deals DMG, increases Quantum <u>RES PEN</u> by <nobr>20%</nobr>. During Netherwing's attacks, can reduce enemy Toughness regardless of Weakness Types. When breaking Weaknesses, triggers the Quantum Weakness Break effect. And the number of Bounces for Netherwing's Talent \"Wings Sweep the Ruins\" additionally increases by <nobr>3</nobr>."
+      "desc": "When Castorice or Netherwing deals DMG, increases Quantum <u>RES PEN</u> by <nobr>20%</nobr>. During Netherwing's attacks, can reduce enemy Toughness regardless of Weakness Types. When breaking Weaknesses, triggers the Quantum Weakness Break effect. And the number of Bounces for Netherwing's Talent \"Wings Sweep the Ruins\" additionally increases by <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

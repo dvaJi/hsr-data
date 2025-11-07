@@ -2,6 +2,7 @@
   "_id": 1212,
   "id": "jingliu",
   "name": "镜流",
+  "description": "曾经的罗浮剑首，云骑军不败盛名的缔造者。\n而今其名字已被抹去，成为行走于魔阴身边缘的仙舟叛徒。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "对指定敌方单体造成少量冰属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "对指定敌方单体造成冰属性伤害，并获得1层【朔望】。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "对指定敌方单体造成大量冰属性伤害，对相邻目标造成冰属性伤害，并获得1层【朔望】。",
       "type": "终结技",
       "tag": "扩散",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,15 @@
       "simpleDesc": "当拥有#5[i]层【朔望】时，进入【转魄】状态，使行动提前100%、提高自身暴击率，并获得强化战技。施放攻击时，消耗队友的生命值并根据消耗总量提升镜流的攻击力。当【朔望】层数为0时，退出【转魄】状态。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1497,32 @@
       "simpleDesc": "在自身周围制造特殊领域。领域内敌人陷入冻结状态。与领域内敌人进入战斗后，恢复能量、获得1层【朔望】并大概率使敌方目标陷入冻结状态。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1472,37 +1544,79 @@
       "_id": 121201,
       "id": "moon_crashes_tianguan_gate",
       "name": "月犯天关",
-      "desc": "施放终结技或强化战技时，镜流的暴击伤害提高<nobr>24%</nobr>，持续<nobr>1</nobr>回合。若只攻击了1个敌方目标，则额外对该目标造成1次等同于镜流<nobr>100%</nobr>攻击力的冰属性伤害。"
+      "desc": "施放终结技或强化战技时，镜流的暴击伤害提高<nobr>24%</nobr>，持续<nobr>1</nobr>回合。若只攻击了1个敌方目标，则额外对该目标造成1次等同于镜流<nobr>100%</nobr>攻击力的冰属性伤害。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121202,
       "id": "crescent_shadows_qixing_dipper",
       "name": "朔晕七星",
-      "desc": "施放终结技后，下一次强化战技的伤害提高<nobr>80%</nobr>。"
+      "desc": "施放终结技后，下一次强化战技的伤害提高<nobr>80%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121203,
       "id": "halfmoon_gapes_mercurial_haze",
       "name": "半璧迫望",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121204,
       "id": "lunarlance_shines_skyward_dome",
       "name": "持秉玄烛",
-      "desc": "【转魄】状态下消耗队友生命值获得的攻击力额外提高，提高数值等同于我方全体生命值消耗总量的<nobr>90%</nobr>，获得的攻击力上限提高<nobr>30%</nobr>。"
+      "desc": "【转魄】状态下消耗队友生命值获得的攻击力额外提高，提高数值等同于我方全体生命值消耗总量的<nobr>90%</nobr>，获得的攻击力上限提高<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121205,
       "id": "night_shades_astral_radiance",
       "name": "晦入三台",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121206,
       "id": "eclipse_hollows_corporeal_husk",
       "name": "蚀变于娄",
-      "desc": "镜流进入【转魄】状态时，【朔望】的上限层数提高1层并额外获得<nobr>1</nobr>层【朔望】。【转魄】状态下，暴击伤害提高<nobr>50%</nobr>。"
+      "desc": "镜流进入【转魄】状态时，【朔望】的上限层数提高1层并额外获得<nobr>1</nobr>层【朔望】。【转魄】状态下，暴击伤害提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1108,
   "id": "sampo",
   "name": "桑博",
+  "description": "地表和地底之間來去自如的行商。\n容易和人打成一片，熱情幽默，習慣插科打諢。",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量風屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "對敵方單體造成少量風屬性傷害，共彈射5次。",
       "type": "戰技",
       "tag": "彈射",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,27 @@
       "simpleDesc": "對敵方全體造成風屬性傷害，有高機率使其受到的持續傷害提高。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "自身命中敵方目標後，有機率使目標陷入風化狀態。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1452,32 @@
       "simpleDesc": "使一定區域內敵人陷入目盲狀態。攻擊陷入目盲狀態敵人，進入戰鬥後有高機率使敵方每個單體目標行動延後。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定機率",
+          "desc": "不會被任何因素影響的固定機率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "行動延後",
+          "desc": "使目標在下次行動前的等待間隔延長。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,37 +1496,88 @@
       "_id": 110801,
       "id": "rising_love",
       "name": "加碼的愛",
-      "desc": "施放戰技時，對敵方隨機單體額外造成<nobr>1</nobr>次傷害。"
+      "desc": "施放戰技時，對敵方隨機單體額外造成<nobr>1</nobr>次傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110802,
       "id": "infectious_enthusiasm",
       "name": "熱情會傳染",
-      "desc": "風化狀態下的敵方目標被消滅時，使敵方全體有<nobr>100%</nobr>的<u>基礎機率</u>疊加<nobr>1</nobr>層等同於天賦的風化狀態。"
+      "desc": "風化狀態下的敵方目標被消滅時，使敵方全體有<nobr>100%</nobr>的<u>基礎機率</u>疊加<nobr>1</nobr>層等同於天賦的風化狀態。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110803,
       "id": "big_money",
       "name": "大數字！",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110804,
       "id": "the_deeper_the_love_the_stronger_the_hate",
       "name": "愛之深，恨之切",
-      "desc": "當戰技命中風化狀態大於等於<nobr>5</nobr>層的敵方目標時，使其目前承受的風化狀態立即產生相當於原傷害<nobr>8%</nobr>的傷害。"
+      "desc": "當戰技命中風化狀態大於等於<nobr>5</nobr>層的敵方目標時，使其目前承受的風化狀態立即產生相當於原傷害<nobr>8%</nobr>的傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110805,
       "id": "huuuuge_money",
       "name": "超大數字！",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110806,
       "id": "increased_spending",
       "name": "消費升級",
-      "desc": "天賦施加的風化狀態的傷害倍率提高<nobr>15%</nobr>。"
+      "desc": "天賦施加的風化狀態的傷害倍率提高<nobr>15%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

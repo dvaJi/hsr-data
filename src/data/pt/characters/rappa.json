@@ -2,6 +2,7 @@
   "_id": 1317,
   "id": "rappa",
   "name": "Rappa",
+  "description": "Uma garota peculiar, que aparece em Penacony como uma granada de luz na hora mais escura da noite, identificando-se como uma ninja e atribuindo tudo no mundo ao \"ninjutsu\".\nMantendo a recitação do mantra ninja, criando Selos Ninja Deslumbrantes e dominando pergaminhos ninja... Ou seja, o Caminho do Ninja envolve rap, grafite e mangás. Por meio de rigorosa autodisciplina, ela percorre as estrelas, defendendo a justiça.\nComo membro dos Vigias da Galáxia, ela vai atrás do vilão conhecido como Ninja do Mal Osaru de maneira implacável, perseguindo-o até os confins do cosmos.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Imaginário leve a uma unidade inimiga designada.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Causa Dano Imaginário a todas as unidades inimigas.",
       "type": "Perícia",
       "tag": "Área",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Entra no estado \"Selaforma\", ganha uma rodada extra, obtém 3 pontos de \"Tinta Cromática\" e aumenta a Eficiência de Quebra de Fraqueza e o Efeito de Quebra.\nEnquanto estiver no estado de \"Selaforma\", ganha ATQ Básico Aprimorado. Após usar o ATQ Básico Aprimorado, consome 1 ponto de \"Tinta Cromática\". Quando a \"Tinta Cromática\" for exaurida, o estado \"Selaforma\" termina.",
       "type": "Perícia Suprema",
       "tag": "Aprimoramento",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Rodada Extra",
+          "desc": "Ganha 1 rodada extra que não gastará suas rodadas restantes ao tomar uma ação. Nessa rodada extra, não é possível usar nenhuma Perícia Suprema.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,15 @@
       "simpleDesc": "Quando o inimigo-alvo sofre uma Quebra de Fraqueza, Rappa ganha 1 ponto de Carga. Ao lançar o terceiro golpe de \"Ningu: Florilâmina Exorcista\", causa adicionalmente Dano de Quebra ImaginárioO em todos os inimigos. Esse Dano pode ignorar o Tipo de Fraqueza para reduzir a Tenacidade e consumir todas as Cargas, aumentando o multiplicador de Dano de Quebra e a Redução de Tenacidade do ataque.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        6,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1452,15 @@
       "simpleDesc": "Entra no estado de \"Grafite\". Avança rapidamente por uma distância determinada e ataca quaisquer inimigos tocados. Ao entrar em combate atacando inimigos, causa Redução de Tenacidade independentemente do Tipo de Fraqueza e Dano de Quebra Imaginário a cada inimigo-alvo e causa Dano de Quebra Imaginário aos alvos adjacentes. Ao mesmo tempo, esta unidade regenera Energia.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1426,37 +1481,79 @@
       "_id": 131701,
       "id": "returned_is_the_revenant_with_no_ferry_toll",
       "name": "O Fantasma Está de Volta Sem o Tíquete",
-      "desc": "Durante o estado de \"Selaforma\" ativado ao usar a Perícia Suprema, o Dano causado por Rappa ignora <nobr>15%</nobr> da DEF dos alvos. Após sair do estado de \"Selaforma\", regenera <nobr>20</nobr> de Energia."
+      "desc": "Durante o estado de \"Selaforma\" ativado ao usar a Perícia Suprema, o Dano causado por Rappa ignora <nobr>15%</nobr> da DEF dos alvos. Após sair do estado de \"Selaforma\", regenera <nobr>20</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131702,
       "id": "free_is_the_mind_enlightened_by_haikus",
       "name": "Livre É a Mente Iluminada por Haikus",
-      "desc": "Os 2 primeiros golpes do ATQ Básico Aprimorado têm sua Redução de Tenacidade contra o inimigo designado aumentada em <nobr>50%</nobr>."
+      "desc": "Os 2 primeiros golpes do ATQ Básico Aprimorado têm sua Redução de Tenacidade contra o inimigo designado aumentada em <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131703,
       "id": "many_are_the_shrines_that_repel_no_hell",
       "name": "Muitos São os Templos Que Não Protegem",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131704,
       "id": "lost_is_the_nind_devoured_by_time",
       "name": "Perdida no Nindô Devorado pelo Tempo",
-      "desc": "Enquanto está no estado de \"Selaforma\", aumenta a VEL de todas as unidades aliadas em <nobr>12%</nobr>."
+      "desc": "Enquanto está no estado de \"Selaforma\", aumenta a VEL de todas as unidades aliadas em <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131705,
       "id": "steady_is_the_ranger_with_unerring_arrows",
       "name": "Firme É a Vigia Com Flechas Sem Fim",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131706,
       "id": "righteous_is_the_wrath_that_spares_no_evil",
       "name": "Justa É a Ira Que Não Poupa Nenhum Mal",
-      "desc": "Quando a batalha começa, Rappa ganha <nobr>5</nobr> ponto(s) de Carga de seu Talento, e seu limite máximo aumenta em <nobr>5</nobr> ponto(s). Após lançar o terceiro golpe de \"Ningu: Florilâmina Exorcista\", ganha <nobr>5</nobr> ponto(s) de Carga."
+      "desc": "Quando a batalha começa, Rappa ganha <nobr>5</nobr> ponto(s) de Carga de seu Talento, e seu limite máximo aumenta em <nobr>5</nobr> ponto(s). Após lançar o terceiro golpe de \"Ningu: Florilâmina Exorcista\", ganha <nobr>5</nobr> ponto(s) de Carga.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1105,
   "id": "natasha",
   "name": "Natasha",
+  "description": "Doctora del Bajomundo y cuidadora de niños.\nTiene un carácter dulce y amable, pero oculta un lado peligroso.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Físico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Regenera PV a un aliado y lo sana continuamente.",
       "type": "Habilidad básica",
       "tag": "Regeneración",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +789,15 @@
       "simpleDesc": "Regenera los PV de todos los aliados.",
       "type": "Habilidad definitiva",
       "tag": "Regeneración",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1101,15 @@
       "simpleDesc": "La curación realizada aumenta para los objetivos aliados que tengan un porcentaje de PV bajo. También aplica a la curación continua.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1412,24 @@
       "desc": "Ataca inmediatamente al enemigo y entra en combate. Inflige un #4[i]% del ATQ de Natasha como Daño Físico a un enemigo al azar. Además, cada enemigo tiene una probabilidad base del #1[i]% de ser afectado por Debilitación.\nEl daño que infligen los enemigos debilitados se reduce en un #2[i]% durante #3[i] turno.",
       "simpleDesc": "Ataca al enemigo y entra en combate. Inflige una pequeña cantidad de Daño Físico a un enemigo al azar. Además, cada enemigo tiene una gran probabilidad de ser afectado por Debilitación.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1449,79 @@
       "_id": 110501,
       "id": "pharmacology_expertise",
       "name": "Experta en farmacología",
-      "desc": "Después de recibir un ataque, si su porcentaje de PV es igual o inferior al <nobr>30%</nobr>, Natasha se cura a sí misma una vez por el <nobr>15%</nobr> de sus PV máx. + <nobr>400</nobr>. Este efecto solo se puede activar una vez en cada batalla."
+      "desc": "Después de recibir un ataque, si su porcentaje de PV es igual o inferior al <nobr>30%</nobr>, Natasha se cura a sí misma una vez por el <nobr>15%</nobr> de sus PV máx. + <nobr>400</nobr>. Este efecto solo se puede activar una vez en cada batalla.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110502,
       "id": "clinical_research",
       "name": "Estudio clínico",
-      "desc": "Al usar la habilidad definitiva, proporciona durante <nobr>1</nobr> turno curación continua a los aliados que tengan un porcentaje de PV igual o inferior al <nobr>30%</nobr>. Al comenzar su turno, estos aliados regeneran una cantidad de PV equivalente al <nobr>6%</nobr> de los PV máx. de Natasha + <nobr>160</nobr>."
+      "desc": "Al usar la habilidad definitiva, proporciona durante <nobr>1</nobr> turno curación continua a los aliados que tengan un porcentaje de PV igual o inferior al <nobr>30%</nobr>. Al comenzar su turno, estos aliados regeneran una cantidad de PV equivalente al <nobr>6%</nobr> de los PV máx. de Natasha + <nobr>160</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110503,
       "id": "the_right_cure",
       "name": "El tratamiento correcto",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110504,
       "id": "miracle_cure",
       "name": "Cura milagrosa",
-      "desc": "Al recibir un ataque enemigo, Natasha recupera <nobr>5</nobr> pts. de energía adicionales."
+      "desc": "Al recibir un ataque enemigo, Natasha recupera <nobr>5</nobr> pts. de energía adicionales.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110505,
       "id": "preventive_treatment",
       "name": "Tratamiento preventivo",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110506,
       "id": "doctors_grace",
       "name": "La compasión de la doctora",
-      "desc": "Al usar el ATQ básico, Natasha inflige un Daño Físico extra equivalente al <nobr>40%</nobr> de sus PV máx."
+      "desc": "Al usar el ATQ básico, Natasha inflige un Daño Físico extra equivalente al <nobr>40%</nobr> de sus PV máx.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

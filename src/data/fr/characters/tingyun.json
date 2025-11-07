@@ -2,6 +2,7 @@
   "_id": 1202,
   "id": "tingyun",
   "name": "Tingyun",
+  "description": "Amicassadrice de la Commission du ciel du Luofu de Xianzhou.\nElle voyage accompagnée de délégués commerciaux dans le but d'établir des relations et des alliances commerciales avec de nombreux mondes.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -243,10 +244,22 @@
       "_id": 120201,
       "id": "dislodged",
       "name": "Expulsion",
-      "desc": "Tingyun inflige des DGT de foudre équivalents à #1[i]% de son ATQ à un ennemi unique.",
+      "desc": "Tingyun inflige des DGT de foudre équivalents à #1[i]% de son ATQ à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de foudre mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Augmente l'ATQ d'un allié et lui accorde une bénédiction. L'allié avec la bénédiction inflige également des DGT de foudre additionnels mineurs lorsqu'elle attaque.",
       "type": "Compétence",
       "tag": "Soutien",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Régénère de l'énergie pour une cible alliée et augmente les DGT qu'elle inflige.",
       "type": "Ultime",
       "tag": "Soutien",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "Lorsque Tingyun attaque un ennemi, l'allié béni inflige immédiatement des DGT de foudre additionnels mineurs à ce même ennemi.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "Le personnage régénère immédiatement son énergie après avoir utilisé cette technique.",
       "type": "Technique",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1374,37 +1447,79 @@
       "_id": 120201,
       "id": "windfall_of_lucky_springs",
       "name": "Bénédiction de vivacité",
-      "desc": "La VIT de l'allié béni augmente de <nobr>20%</nobr> pendant 1 tour après utilisation de son ultime."
+      "desc": "La VIT de l'allié béni augmente de <nobr>20%</nobr> pendant 1 tour après utilisation de son ultime.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120202,
       "id": "gainfully_gives_givingly_gains",
       "name": "Généreuse donatrice",
-      "desc": "L'allié béni régénère <nobr>5</nobr> points d'énergie après avoir éliminé un ennemi. Cet effet ne peut être déclenché qu'1 fois par tour."
+      "desc": "L'allié béni régénère <nobr>5</nobr> points d'énergie après avoir éliminé un ennemi. Cet effet ne peut être déclenché qu'1 fois par tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120203,
       "id": "halcyon_bequest",
       "name": "Héritage des jours bénis",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120204,
       "id": "jovial_versatility",
       "name": "Versatilité joviale",
-      "desc": "Le multiplicateur de DGT de la bénédiction augmente de <nobr>20%</nobr>."
+      "desc": "Le multiplicateur de DGT de la bénédiction augmente de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120205,
       "id": "sauntering_coquette",
       "name": "Passante coquette",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120206,
       "id": "peace_brings_wealth_to_all",
       "name": "Paix et richesse pour tous",
-      "desc": "L'ultime régénère <nobr>10</nobr> points d'énergie supplémentaires à la cible alliée."
+      "desc": "L'ultime régénère <nobr>10</nobr> points d'énergie supplémentaires à la cible alliée.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

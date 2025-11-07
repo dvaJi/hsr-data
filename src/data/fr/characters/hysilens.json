@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "Hysilens",
+  "description": "Styxie, cité côtière d'ivresse et de rêves, où les chants d'antan résonnent encore parmi les flots.\nÉlectra, fille de la mer et Héritière chryséenne, purifie la flamme divine des Océans et dissipe les courants troubles pour orchestrer un banquet de réjouissances aux héros venus d'au-delà du ciel.\nL'heure du baisser de rideau n'a pas sonné. Même si l'espoir est aussi fragile que des bulles, les vagues ne cesseront jamais de déferler.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "A de fortes chances d'augmenter les DGT subis par tous les ennemis, et leur inflige des DGT physiques.",
       "type": "Compétence",
       "tag": "ZdE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "Déploie une zone qui réduit l'ATQ et la DÉF de tous les ennemis et leur inflige des DGT physiques. Pendant que la zone est active, chaque fois qu'une cible ennemie subit des dégâts sur la durée, lui inflige 1 instance de dégâts physiques sur la durée.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "Lorsqu'une cible alliée attaque, Hysilens a de fortes chances d'appliquer aux cibles ennemies touchées l'un des états suivants : Faille du vent, Saignement, Brûlure ou Stupéfaction.",
       "type": "Talent",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "Crée une dimension spéciale. Les ennemis dans la dimension ne peuvent pas attaquer les cibles alliées. Au début d'un combat engagé contre des ennemis dans la dimension, il y a de fortes chances d'appliquer #3[i] états parmi Faille du vent, Saignement, Brûlure et Stupéfaction à chaque cible ennemie.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "Vous demandez pourquoi mon cœur souffre",
-      "desc": "Lorsque Hysilens est sur le champ de bataille, les dégâts sur la durée infligés par les cibles alliées passent à <nobr>116%</nobr> de la valeur initiale. Lorsque Hysilens applique Faille du vent, Saignement, Brûlure ou Stupéfaction à un ennemi via son talent, il y a <nobr>100%</nobr> de <u>chances de base</u> de lui appliquer un état supplémentaire parmi Faille du vent, Saignement, Brûlure et Stupéfaction dont l'effet est équivalent, et coexistant avec l'état d'origine du talent."
+      "desc": "Lorsque Hysilens est sur le champ de bataille, les dégâts sur la durée infligés par les cibles alliées passent à <nobr>116%</nobr> de la valeur initiale. Lorsque Hysilens applique Faille du vent, Saignement, Brûlure ou Stupéfaction à un ennemi via son talent, il y a <nobr>100%</nobr> de <u>chances de base</u> de lui appliquer un état supplémentaire parmi Faille du vent, Saignement, Brûlure et Stupéfaction dont l'effet est équivalent, et coexistant avec l'état d'origine du talent.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "Dites-moi pourquoi les vagues grondent",
-      "desc": "Lorsque la zone est active, applique le bonus de DGT de la Trace Violon des perles à tous les alliés."
+      "desc": "Lorsque la zone est active, applique le bonus de DGT de la Trace Violon des perles à tous les alliés.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "Pourquoi les lumières disparaissent",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "Observez pourquoi le temps s'écoule",
-      "desc": "Lorsque la zone est active, réduit toutes les RÉS de type de tous les ennemis de <nobr>20%</nobr>."
+      "desc": "Lorsque la zone est active, réduit toutes les RÉS de type de tous les ennemis de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "Je murmure pendant les ablutions",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "Quand reviendras-tu de ton lit abyssal",
-      "desc": "Lorsque la zone est active, le nombre maximum de déclenchements de l'effet de dégâts physiques sur la durée de Hysilens augmente et passe à <nobr>12</nobr> au début de chaque tour ou après une attaque d'une cible alliée, et le multiplicateur de DGT infligés augmente de <nobr>20%</nobr>."
+      "desc": "Lorsque la zone est active, le nombre maximum de déclenchements de l'effet de dégâts physiques sur la durée de Hysilens augmente et passe à <nobr>12</nobr> au début de chaque tour ou après une attaque d'une cible alliée, et le multiplicateur de DGT infligés augmente de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1001,
   "id": "march_7th",
   "name": "{RUBY_B#みつき}三月{RUBY_E#}なのか",
+  "description": "かつて恒氷の中で眠っていた少女。すべての記憶を失っている。\n本当の自分を見つけるために、列車に乗って旅をすることを決めた。\n約67種の「身の上話」を用意しているらしい。",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の氷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "味方単体にバリアを付与。",
       "type": "戦闘スキル",
       "tag": "防御",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,32 @@
       "simpleDesc": "敵全体に氷属性ダメージを与え、確率で凍結状態にする。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1145,24 @@
       "simpleDesc": "バリアを持つ味方が敵に攻撃された後、三月なのかは即座に攻撃者にカウンターを発動し、少量の氷属性ダメージを与える。",
       "type": "天賦",
       "tag": "単体攻撃",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "カウンター",
+          "desc": "対象が攻撃を受けた後に自動で効果を発動する。攻撃者に対し、さらに攻撃を1回行う。\nカウンターも追加攻撃と見なされる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1402,6 +1465,32 @@
       "desc": "敵を攻撃。戦闘に入った後、#1[i]%の基礎確率でランダムな敵単体を凍結状態にする、#2[i]ターン継続。\n凍結状態の敵は行動できなくなり、ターンが回ってくるたびに三月なのかの攻撃力#3[i]%分の氷属性付加ダメージを受ける。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、高確率でランダムな敵単体を凍結状態にする。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1509,88 @@
       "_id": 100101,
       "id": "memory_of_you",
       "name": "{RUBY_B#きおく}記憶{RUBY_E#}の{RUBY_B#なか}中{RUBY_E#}の{RUBY_B#きみ}君{RUBY_E#}",
-      "desc": "必殺技が敵1体を凍結状態にするたび、三月なのかはEPを<nobr>6</nobr>回復する。"
+      "desc": "必殺技が敵1体を凍結状態にするたび、三月なのかはEPを<nobr>6</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100102,
       "id": "memory_of_it",
       "name": "{RUBY_B#きおく}記憶{RUBY_E#}の{RUBY_B#なか}中{RUBY_E#}のあの{RUBY_B#こ}子{RUBY_E#}",
-      "desc": "戦闘に入る時、残りHP割合が最も低い味方に、三月なのかの防御力<nobr>24%</nobr>+<nobr>320</nobr>の耐久値を持つバリアを付与する、<nobr>3</nobr>ターン継続。"
+      "desc": "戦闘に入る時、残りHP割合が最も低い味方に、三月なのかの防御力<nobr>24%</nobr>+<nobr>320</nobr>の耐久値を持つバリアを付与する、<nobr>3</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100103,
       "id": "memory_of_everything",
       "name": "{RUBY_B#きおく}記憶{RUBY_E#}の{RUBY_B#なか}中{RUBY_E#}の{RUBY_B#すべ}全{RUBY_E#}て",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100104,
       "id": "never_forfeit_again",
       "name": "もう{RUBY_B#うしな}失{RUBY_E#}いたくない",
-      "desc": "ターンが回ってくるたび、天賦の<u>カウンター</u>効果を発動できる回数+1。<u>カウンター</u>のダメージ基礎値が、三月なのかの防御力<nobr>30%</nobr>分アップする。"
+      "desc": "ターンが回ってくるたび、天賦の<u>カウンター</u>効果を発動できる回数+1。<u>カウンター</u>のダメージ基礎値が、三月なのかの防御力<nobr>30%</nobr>分アップする。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "カウンター",
+          "desc": "対象が攻撃を受けた後に自動で効果を発動する。攻撃者に対し、さらに攻撃を1回行う。\nカウンターも追加攻撃と見なされる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100105,
       "id": "never_forget_again",
       "name": "もう{RUBY_B#わす}忘{RUBY_E#}れたくない",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100106,
       "id": "just_like_this_always",
       "name": "このまま、ずっと…",
-      "desc": "戦闘スキルによるバリアで守られている味方は、ターンが回ってくるたびにHPをそれぞれの最大HP<nobr>4%</nobr>+<nobr>106</nobr>回復する。"
+      "desc": "戦闘スキルによるバリアで守られている味方は、ターンが回ってくるたびにHPをそれぞれの最大HP<nobr>4%</nobr>+<nobr>106</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

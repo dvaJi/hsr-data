@@ -2,6 +2,7 @@
   "_id": 1313,
   "id": "sunday",
   "name": "선데이",
+  "description": "「질서」의 좋은꿈은 이미 사라졌지만 여전히 초심을 버리지 않는 사람도 있다.\n——날개가 꺾여 추락한 여행자, 그의 발걸음은 어디로 향할 것인가?",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "지정된 단일 적에게 소량의 허수 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "지정된 단일 아군 캐릭터 및 해당 캐릭터의 소환물을 즉시 행동하게 하고, 대상이 가하는 피해를 증가시키며, 목표가 소환물을 보유하면 가하는 피해 증가 효과가 추가로 증가한다.\n[은혜 입은 자]에게 전투 스킬 발동 후 전투 스킬 포인트를 1pt 회복한다.\n선데이가 「화합」 운명의 길 캐릭터에게 해당 스킬을 발동하면 즉시 행동 효과는 발동되지 않는다",
       "type": "전투 스킬",
       "tag": "서포트",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "지정된 단일 아군 캐릭터의 에너지를 회복하고, 목표 및 목표의 소환물을 [은혜 입은 자]로 만들며, [은혜 입은 자]의 치명타 피해를 증가시킨다",
       "type": "필살기",
       "tag": "서포트",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "전투 스킬 발동 시 목표의 치명타 확률이 증가한다",
       "type": "특성",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1443,15 @@
       "simpleDesc": "비술 사용 후 다음 전투에서 선데이가 처음으로 아군에게 스킬을 발동하면 목표가 가하는 피해가 증가한다",
       "type": "비술",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1469,79 @@
       "_id": 131301,
       "id": "millenniums_quietus",
       "name": "천년의 고요한 끝",
-      "desc": "선데이가 전투 스킬 발동 시 목표 캐릭터가 피해를 가하면 목표의 방어력을 <nobr>16%</nobr> 무시하고, 소환물이 피해를 가하면 목표의 방어력을 <nobr>40%</nobr> 무시한다, 지속 시간: <nobr>2</nobr>턴"
+      "desc": "선데이가 전투 스킬 발동 시 목표 캐릭터가 피해를 가하면 목표의 방어력을 <nobr>16%</nobr> 무시하고, 소환물이 피해를 가하면 목표의 방어력을 <nobr>40%</nobr> 무시한다, 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131302,
       "id": "faith_outstrips_frailty",
       "name": "부족함을 메우는 믿음",
-      "desc": "처음 필살기 발동 후 전투 스킬 포인트를 <nobr>2</nobr>pt 회복한다. [은혜 입은 자]가 가하는 피해가 <nobr>30%</nobr> 증가한다"
+      "desc": "처음 필살기 발동 후 전투 스킬 포인트를 <nobr>2</nobr>pt 회복한다. [은혜 입은 자]가 가하는 피해가 <nobr>30%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131303,
       "id": "hermitage_of_thorns",
       "name": "가시의 은둔처",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131304,
       "id": "sculptures_preamble",
       "name": "조각의 머리말",
-      "desc": "턴 시작 시 에너지를 <nobr>8</nobr>pt 회복한다"
+      "desc": "턴 시작 시 에너지를 <nobr>8</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131305,
       "id": "paper_raft_in_silver_bay",
       "name": "은하를 표류하는 종이배",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131306,
       "id": "dawn_of_sidereal_cacophony",
       "name": "뭇별의 떠들썩한 첫걸음",
-      "desc": "특성의 치명타 확률 증가 효과가 최대 <nobr>3</nobr>스택 중첩되며, 특성의 지속 시간이 <nobr>1</nobr>턴 증가한다. 선데이가 필살기 발동 시 목표에게 특성의 치명타 확률 증가 효과를 부여할 수 있다. 특성의 치명타 확률 증가 효과 발동 시 목표의 치명타 확률이 <nobr>100%</nobr>를 초과하면, 1%를 초과할 때마다 치명타 피해가 <nobr>2%</nobr> 증가한다"
+      "desc": "특성의 치명타 확률 증가 효과가 최대 <nobr>3</nobr>스택 중첩되며, 특성의 지속 시간이 <nobr>1</nobr>턴 증가한다. 선데이가 필살기 발동 시 목표에게 특성의 치명타 확률 증가 효과를 부여할 수 있다. 특성의 치명타 확률 증가 효과 발동 시 목표의 치명타 확률이 <nobr>100%</nobr>를 초과하면, 1%를 초과할 때마다 치명타 피해가 <nobr>2%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

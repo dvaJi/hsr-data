@@ -2,6 +2,7 @@
   "_id": 1112,
   "id": "topaz_and_numby",
   "name": "托帕&帳帳",
+  "description": "星際和平公司旗下「策略投資部」高級幹部托帕，帶領特殊債務糾察小組。\n年紀輕輕便已成為「石心十人」之一，基石為「催討黃玉」。\n搭檔次元撲滿「帳帳」則能敏銳感知「財富」所在，即便是保全、催債、精算等工作也不在話下。\n如今他們正一同巡行銀河，追究各類影響公司業務展開的債務糾紛。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "使敵方單體陷入【負債證明】狀態，受到的追加攻擊傷害提高。帳帳對目標造成火屬性傷害。",
       "type": "戰技",
       "tag": "單體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -728,6 +762,18 @@
       "simpleDesc": "使帳帳進入【漲幅驚人！】狀態，傷害倍率與暴擊傷害提高。",
       "type": "終結技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1113,32 @@
       "simpleDesc": "戰鬥開始召喚帳帳，帳帳行動時對陷入【負債證明】的目標發動追加攻擊，造成火屬性傷害。\n陷入【負債證明】的敵人受到追加攻擊時帳帳行動提前。",
       "type": "天賦",
       "tag": "單體攻擊",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1463,15 @@
       "simpleDesc": "迷宮內召喚帳帳跟隨移動，帳帳會自動搜尋附近的普通戰利品和撲滿。施放秘技使下一場戰鬥中帳帳首次攻擊後，托帕恢復能量。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1489,106 @@
       "_id": 111201,
       "id": "future_market",
       "name": "未來市場",
-      "desc": "陷入【負債證明】狀態下的敵方目標受到<u>追加攻擊</u>時，將會陷入【強制執行】狀態，單次攻擊內最多生效1次。\n【強制執行】使敵方目標受到的<u>追加攻擊</u>的暴擊傷害提高<nobr>25%</nobr>，最多疊加<nobr>2</nobr>層。【負債證明】被移除時，【強制執行】也會被移除。"
+      "desc": "陷入【負債證明】狀態下的敵方目標受到<u>追加攻擊</u>時，將會陷入【強制執行】狀態，單次攻擊內最多生效1次。\n【強制執行】使敵方目標受到的<u>追加攻擊</u>的暴擊傷害提高<nobr>25%</nobr>，最多疊加<nobr>2</nobr>層。【負債證明】被移除時，【強制執行】也會被移除。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111202,
       "id": "bona_fide_acquisition",
       "name": "善意收購",
-      "desc": "帳帳自身行動並發動攻擊後，托帕恢復<nobr>5</nobr>點能量。"
+      "desc": "帳帳自身行動並發動攻擊後，托帕恢復<nobr>5</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111203,
       "id": "seize_the_big_and_free_the_small",
       "name": "抓大放小",
-      "desc": "戰技等級+2，最高不超過<nobr>15</nobr>級；普通攻擊等級+1，最高不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最高不超過<nobr>15</nobr>級；普通攻擊等級+1，最高不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111204,
       "id": "agile_operation",
       "name": "彈性處理",
-      "desc": "帳帳自身回合開始時，托帕的<u>行動提前</u><nobr>20%</nobr>。"
+      "desc": "帳帳自身回合開始時，托帕的<u>行動提前</u><nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動提前",
+          "desc": "使目標在下次行動前的等待間隔縮短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111205,
       "id": "inflationary_demand",
       "name": "需求膨脹",
-      "desc": "終結技等級+2，最高不超過<nobr>15</nobr>級；天賦等級+2，最高不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最高不超過<nobr>15</nobr>級；天賦等級+2，最高不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111206,
       "id": "incentive_mechanism",
       "name": "激勵機制",
-      "desc": "帳帳處於【漲幅驚人！】狀態的攻擊次數增加<nobr>1</nobr>次，且攻擊時火屬性<u>抗性穿透</u>提高<nobr>10%</nobr>。"
+      "desc": "帳帳處於【漲幅驚人！】狀態的攻擊次數增加<nobr>1</nobr>次，且攻擊時火屬性<u>抗性穿透</u>提高<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

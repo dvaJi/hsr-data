@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "Seele",
+  "description": "Residente do Mundo de Baixo e espinha dorsal da Fogo Vivo, ela atende pelo apelido de \"Babochka\".\nEla tem uma personalidade sincera, mas com um lado delicado e sensível que esconde no fundo do coração.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Quântico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Causa Dano Quântico a um único inimigo e aumenta a VEL.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,18 @@
       "simpleDesc": "Entra no modo Amplificação e causa Dano Quântico massivo a um único inimigo.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "Ao derrotar inimigos-alvo com um ATQ Básico, Perícia ou Perícia Suprema, ganha uma rodada extra e entra no estado de Amplificação. Enquanto estiver em Amplificação, o Dano causado por esta unidade é aumentado.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Rodada Extra",
+          "desc": "Ganha 1 rodada extra que não gastará suas rodadas restantes ao tomar uma ação. Nessa rodada extra, não é possível usar nenhuma Perícia Suprema.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "Entra no modo de Furtividade. Após atacar um inimigo e entrar em batalha, entra no modo Amplificação.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Golpe Extirpador",
-      "desc": "Ao causar Dano a um inimigo com <nobr>80%</nobr> ou menos de PV, a Chance de CRIT aumenta em <nobr>15%</nobr>."
+      "desc": "Ao causar Dano a um inimigo com <nobr>80%</nobr> ou menos de PV, a Chance de CRIT aumenta em <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "Borboleta Dançarina",
-      "desc": "O Bônus de VEL da Perícia de Seele pode acumular até <nobr>2</nobr> vez(es)."
+      "desc": "O Bônus de VEL da Perícia de Seele pode acumular até <nobr>2</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "Tumulto Deslumbrante",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Fantasma Esvoaçante",
-      "desc": "Seele regenera <nobr>15</nobr> de Energia quando derrota um inimigo."
+      "desc": "Seele regenera <nobr>15</nobr> de Energia quando derrota um inimigo.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "Estilhaços Perfurantes",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Confusão Devastadora",
-      "desc": "Após Seele usar sua Perícia Suprema, inflige \"Enxurrada de Borboletas\" ao inimigo atacado por <nobr>1</nobr> rodada(s). Inimigos no estado de \"Enxurrada de Borboletas\" recebem adicionalmente 1 instância de <u>Dano Quântico Adicional</u> igual a <nobr>15%</nobr> do Dano da Perícia Suprema de Seele cada vez que forem atacados. Se o inimigo-alvo for derrotado pelo <u>Dano Adicional</u> de \"Enxurrada de Borboletas\" ativado pelo ataque de outros aliados, o Talento de Seele não poderá ser ativado.\nQuando Seele é <u>derrubada</u>, a \"Enxurrada de Borboletas\" infligida aos inimigos é removida."
+      "desc": "Após Seele usar sua Perícia Suprema, inflige \"Enxurrada de Borboletas\" ao inimigo atacado por <nobr>1</nobr> rodada(s). Inimigos no estado de \"Enxurrada de Borboletas\" recebem adicionalmente 1 instância de <u>Dano Quântico Adicional</u> igual a <nobr>15%</nobr> do Dano da Perícia Suprema de Seele cada vez que forem atacados. Se o inimigo-alvo for derrotado pelo <u>Dano Adicional</u> de \"Enxurrada de Borboletas\" ativado pelo ataque de outros aliados, o Talento de Seele não poderá ser ativado.\nQuando Seele é <u>derrubada</u>, a \"Enxurrada de Borboletas\" infligida aos inimigos é removida.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

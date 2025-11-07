@@ -2,6 +2,7 @@
   "_id": 1105,
   "id": "natasha",
   "name": "ナターシャ",
+  "description": "べロブルグ下層部の医者、子供たちの面倒を見ている。\n穏やかで親しみやすい性格だが、怖い一面もある。",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "味方単体のHPを回復し、その味方にHP継続回復効果を付与する。",
       "type": "戦闘スキル",
       "tag": "回復",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +789,15 @@
       "simpleDesc": "味方全体のHPを回復する。",
       "type": "必殺技",
       "tag": "回復",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1101,15 @@
       "simpleDesc": "残りHPが低い味方に治癒を行う時、治癒量がアップする。この効果は持続治癒効果にも有効。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1412,24 @@
       "desc": "敵を攻撃。戦闘に入った後、ランダムな敵単体にナターシャの攻撃力#4[i]%分の物理属性ダメージを与え、#1[i]%の基礎確率で敵単体それぞれを虚弱状態にする。\n虚弱状態の敵の、味方への与ダメージ-#2[i]%、#3[i]ターン継続。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、ランダムな敵単体に少量の物理属性ダメージを与え、高確率で敵それぞれを虚弱状態にする。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1449,79 @@
       "_id": 110501,
       "id": "pharmacology_expertise",
       "name": "{RUBY_B#やくりへんしき}薬理遍識{RUBY_E#}",
-      "desc": "攻撃を受けた後、残りHPが<nobr>30%</nobr>以下の場合、自身に治癒を1回行い、自身の最大HP<nobr>15%</nobr>+<nobr>400</nobr>のHPを回復する。この効果は一度の戦闘で1回まで発動できる。"
+      "desc": "攻撃を受けた後、残りHPが<nobr>30%</nobr>以下の場合、自身に治癒を1回行い、自身の最大HP<nobr>15%</nobr>+<nobr>400</nobr>のHPを回復する。この効果は一度の戦闘で1回まで発動できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110502,
       "id": "clinical_research",
       "name": "{RUBY_B#りんしょうけんがく}臨床研学{RUBY_E#}",
-      "desc": "必殺技を発動した時、残りHPが<nobr>30%</nobr>以下の味方に<nobr>1</nobr>ターン継続する持続治癒効果を付与する。その味方のターンが回ってきた時、ナターシャの最大HP<nobr>6%</nobr>+<nobr>160</nobr>のHPを回復する。"
+      "desc": "必殺技を発動した時、残りHPが<nobr>30%</nobr>以下の味方に<nobr>1</nobr>ターン継続する持続治癒効果を付与する。その味方のターンが回ってきた時、ナターシャの最大HP<nobr>6%</nobr>+<nobr>160</nobr>のHPを回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110503,
       "id": "the_right_cure",
       "name": "{RUBY_B#いんびょうとうやく}因病投薬{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110504,
       "id": "miracle_cure",
       "name": "{RUBY_B#みょうしゅかいしゅん}妙手回春{RUBY_E#}",
-      "desc": "攻撃を受けた後、さらにEPを<nobr>5</nobr>回復する。"
+      "desc": "攻撃を受けた後、さらにEPを<nobr>5</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110505,
       "id": "preventive_treatment",
       "name": "{RUBY_B#みびょうりょうじ}未病療治{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110506,
       "id": "doctors_grace",
       "name": "{RUBY_B#いしゃじんしん}医者仁心{RUBY_E#}",
-      "desc": "通常攻撃を行った時、さらにナターシャの最大HP<nobr>40%</nobr>分の物理属性ダメージを与える。"
+      "desc": "通常攻撃を行った時、さらにナターシャの最大HP<nobr>40%</nobr>分の物理属性ダメージを与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1009,
   "id": "asta",
   "name": "아스타",
+  "description": "우주정거장 「헤르타」의 책임자, 명문가 출신의 아가씨\n호기심 넘치는 천문학 연구자로 자기주장이 강한 연구원을 다루는데 능하다",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 화염 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "단일 적에게 소량의 화염 속성 피해를 주고, 총 5회 바운스한다",
       "type": "전투 스킬",
       "tag": "바운스",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "모든 아군의 속도가 증가한다",
       "type": "필살기",
       "tag": "서포트",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,15 @@
       "simpleDesc": "매번 다른 적 1기를 명중할 때마다 에너지 충전 1스택을 획득한다. 최대 중첩수: 5스택. 에너지 충전 효과 스택마다 모든 아군의 공격력이 증가하고, 자신의 턴이 시작할 때 에너지 충전 스택이 감소한다",
       "type": "특성",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1327,6 +1373,15 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 모든 적에게 아스타 공격력 #1[i]%만큼의 화염 속성 피해를 가한다",
       "simpleDesc": "적을 공격하며, 전투 진입 후 모든 적에게 소량의 피해를 가한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1343,37 +1398,79 @@
       "_id": 100901,
       "id": "star_sings_sans_verses_or_vocals",
       "name": "별의 가사 없는 노래",
-      "desc": "전투 스킬 발동 시 임의의 단일 적에게 추가로 1회 피해를 가한다"
+      "desc": "전투 스킬 발동 시 임의의 단일 적에게 추가로 1회 피해를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100902,
       "id": "moon_speaks_in_wax_and_wane",
       "name": "차고 기운 달의 뜻",
-      "desc": "필살기 발동 시 다음 턴에서 아스타의 에너지 충전 스택이 감소하지 않는다"
+      "desc": "필살기 발동 시 다음 턴에서 아스타의 에너지 충전 스택이 감소하지 않는다",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100903,
       "id": "meteor_showers_for_wish_and_want",
       "name": "황도 운석의 변화",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100904,
       "id": "aurora_basks_in_beauty_and_bliss",
       "name": "오로라가 나타날 때",
-      "desc": "특성 에너지 충전 스택이 <nobr>2</nobr> 이상일 경우 아스타의 에너지 회복효율이 <nobr>15%</nobr> 증가한다"
+      "desc": "특성 에너지 충전 스택이 <nobr>2</nobr> 이상일 경우 아스타의 에너지 회복효율이 <nobr>15%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100905,
       "id": "nebula_secludes_in_runes_and_riddles",
       "name": "천체의 수수께끼",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100906,
       "id": "cosmos_dreams_in_calm_and_comfort",
       "name": "은하 아래에서의 단잠",
-      "desc": "특성의 턴마다 감소하는 에너지 충전 스택 수가 <nobr>1</nobr> 감소한다"
+      "desc": "특성의 턴마다 감소하는 에너지 충전 스택 수가 <nobr>1</nobr> 감소한다",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

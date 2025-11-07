@@ -2,6 +2,7 @@
   "_id": 1217,
   "id": "huohuo",
   "name": "Huohuo",
+  "description": "ผู้พิพากษาฝึกหัดของ Ten-Lords Commission แห่ง Xianzhou Luofu สาวน้อยมนุษย์จิ้งจอกที่ถูก Heliobi เข้าสิง\nเธอเป็นเด็กสาวที่มีนิสัยขี้ขลาดและอ่อนแอ มักจะกลัวเหตุการณ์ประหลาดทุกประเภท แต่กลับได้รับหน้าที่ในการล่อลวงวิญญาณร้าย",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG ลมเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "ลบล้างเอฟเฟกต์ Debuff 1 เอฟเฟกต์ของฝ่ายเราหนึ่งตัว และฟื้นฟู HP ให้แก่ฝ่ายเราหนึ่งตัว รวมถึงตัวที่อยู่ใกล้เคียงด้วย",
       "type": "สกิลต่อสู้",
       "tag": "ฟื้นฟู",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "เอฟเฟกต์ Debuff",
+          "desc": "สถานะต่อเนื่องทั้งหมดที่มีเอฟเฟกต์ Debuff ในการต่อสู้ หากไม่มีคำอธิบายพิเศษ จะสามารถลบล้างได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +807,18 @@
       "simpleDesc": "ฟื้นฟูพลังงานให้กับเพื่อนในทีม ที่นอกเหนือไปจากตัวเอง และทำให้ ATK ของเป้าหมายดังกล่าวเพิ่มขึ้น",
       "type": "ท่าไม้ตาย",
       "tag": "สนับสนุน",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "หลังจากปล่อยสกิลต่อสู้ Huohuo จะได้รับ \"Divine Provision\" ในขณะที่ Huohuo มี \"Divine Provision\" เมื่อเป้าหมายฝ่ายเราเริ่มต้นเทิร์น หรือปล่อยท่าไม้ตาย จะฟื้นฟู HP ของเป้าหมายนั้นๆ พร้อมทั้งสร้างเอฟเฟกต์ฟื้นฟู 1 ครั้ง แก่เป้าหมายฝ่ายเราทุกตัวที่มี HP ค่อนข้างต่ำ เมื่อปล่อย \"Divine Provision\" เพื่อให้การรักษาแก่เป้าหมายฝ่ายเรา จะลบล้างเอฟเฟกต์ Debuff ของเป้าหมายดังกล่าว 1 เอฟเฟกต์",
       "type": "พรสวรรค์",
       "tag": "ฟื้นฟู",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "เอฟเฟกต์ Debuff",
+          "desc": "สถานะต่อเนื่องทั้งหมดที่มีเอฟเฟกต์ Debuff ในการต่อสู้ หากไม่มีคำอธิบายพิเศษ จะสามารถลบล้างได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1545,24 @@
       "simpleDesc": "ทำให้ศัตรูรอบๆ ติดสถานะ \"Horror-Struck\" เมื่อเข้าสู่การต่อสู้ พร้อมศัตรูที่ติดสถานะ \"Horror-Struck\" จะมีโอกาสอย่างมาก ที่จะทำให้ ATK ของศัตรูเป้าหมายลดลง",
       "type": "เทคนิค",
       "tag": "สกัดกั้น",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "โอกาสพื้นฐาน",
+          "desc": "โอกาสพื้นฐานที่จะเกิดเอฟเฟกต์ Debuff ให้กับผู้ที่ถูกโจมตี\nโดยอัตราสร้างสถานะของผู้โจมตี และการต้านทานสถานะของศัตรูเป้าหมาย จะส่งผลต่อโอกาสในขั้นสุดท้าย",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1500,37 +1582,88 @@
       "_id": 121701,
       "id": "anchored_to_vessel_specters_nestled",
       "name": "Anchored to Vessel, Specters Nestled",
-      "desc": "ขยายระยะเวลาของ \"Divine Provision\" ที่เกิดจากพรสวรรค์ <nobr>1</nobr> เทิร์น และเมื่อ Huohuo มี \"Divine Provision\" ความเร็วของฝ่ายเราทั้งหมดจะเพิ่มขึ้น <nobr>12%</nobr>"
+      "desc": "ขยายระยะเวลาของ \"Divine Provision\" ที่เกิดจากพรสวรรค์ <nobr>1</nobr> เทิร์น และเมื่อ Huohuo มี \"Divine Provision\" ความเร็วของฝ่ายเราทั้งหมดจะเพิ่มขึ้น <nobr>12%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121702,
       "id": "sealed_in_tail_wraith_subdued",
       "name": "Sealed in Tail, Wraith Subdued",
-      "desc": "เมื่อ Huohuo มี \"Divine Provision\" หากเป้าหมายฝ่ายเราถูกโจมตีถึงตาย จะไม่ <u>หมดสติ</u> และจะฟื้นฟู HP <nobr>50%</nobr> ของ HP สูงสุดของตัวดังกล่าวทันที อีกทั้งทำให้ระยะเวลาของ \"Divine Provision\" ลดลง 1 เทิร์น โดยเอฟเฟกต์นี้สามารถเกิดได้ <nobr>2</nobr> ครั้งต่อหนึ่งการต่อสู้"
+      "desc": "เมื่อ Huohuo มี \"Divine Provision\" หากเป้าหมายฝ่ายเราถูกโจมตีถึงตาย จะไม่ <u>หมดสติ</u> และจะฟื้นฟู HP <nobr>50%</nobr> ของ HP สูงสุดของตัวดังกล่าวทันที อีกทั้งทำให้ระยะเวลาของ \"Divine Provision\" ลดลง 1 เทิร์น โดยเอฟเฟกต์นี้สามารถเกิดได้ <nobr>2</nobr> ครั้งต่อหนึ่งการต่อสู้",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "สถานะหมดสติ",
+          "desc": "เมื่อ HP ปัจจุบัน ของเป้าหมายฝ่ายเราเหลือ 0 จะติดสถานะพิเศษ และเป้าหมายที่ติดสถานะนี้ จะไม่สามารถต่อสู้ได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121703,
       "id": "cursed_by_fate_moths_to_flame",
       "name": "Cursed by Fate, Moths to Flame",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน\nLv.<nobr>15</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน\nLv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121704,
       "id": "tied_in_life_bound_to_strife",
       "name": "Tied in Life, Bound to Strife",
-      "desc": "เมื่อใช้สกิลต่อสู้หรือพรสวรรค์ เพื่อรักษาเป้าหมายฝ่ายเรา ยิ่งค่า HP ปัจจุบันของเป้าหมายต่ำเท่าไหร่ ปริมาณการรักษาก็จะสูงขึ้นเท่านั้น ซึ่ง Huohuo สามารถมอบปริมาณการรักษา เพิ่มขึ้นสูงสุดที่ <nobr>80%</nobr>"
+      "desc": "เมื่อใช้สกิลต่อสู้หรือพรสวรรค์ เพื่อรักษาเป้าหมายฝ่ายเรา ยิ่งค่า HP ปัจจุบันของเป้าหมายต่ำเท่าไหร่ ปริมาณการรักษาก็จะสูงขึ้นเท่านั้น ซึ่ง Huohuo สามารถมอบปริมาณการรักษา เพิ่มขึ้นสูงสุดที่ <nobr>80%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121705,
       "id": "mandated_by_edict_evils_evicted",
       "name": "Mandated by Edict, Evils Evicted",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121706,
       "id": "woven_together_cohere_forever",
       "name": "Woven Together, Cohere Forever",
-      "desc": "เมื่อทำการรักษาเป้าหมายฝ่ายเรา จะทำให้เป้าหมายสร้าง DMG เพิ่มขึ้น <nobr>50%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น"
+      "desc": "เมื่อทำการรักษาเป้าหมายฝ่ายเรา จะทำให้เป้าหมายสร้าง DMG เพิ่มขึ้น <nobr>50%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1008,
   "id": "arlan",
   "name": "阿兰",
+  "description": "空间站「黑塔」的防卫科负责人。\n不善言辞，希望保护珍视研究的人们顺利完成他们的研究。",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量雷属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "消耗自身部分生命值，对敌方单体造成雷属性伤害。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "对敌方单体造成大量雷属性伤害，对相邻目标造成雷属性伤害。",
       "type": "终结技",
       "tag": "扩散",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "根据自身当前已损失的生命值百分比提高伤害。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "立即攻击敌人，进入战斗后对敌方全体造成等同于阿兰#1[i]%攻击力的雷属性伤害。",
       "simpleDesc": "攻击敌人，进战后对敌方全体造成少量雷属性伤害。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,37 +1383,97 @@
       "_id": 100801,
       "id": "to_the_bitter_end",
       "name": "万死不辞",
-      "desc": "当前生命值百分比小于等于<nobr>50%</nobr>时，战技造成的伤害提高<nobr>10%</nobr>。"
+      "desc": "当前生命值百分比小于等于<nobr>50%</nobr>时，战技造成的伤害提高<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100802,
       "id": "breaking_free",
       "name": "除制去缚",
-      "desc": "施放战技、终结技时，解除自身的1个<u>负面效果</u>。"
+      "desc": "施放战技、终结技时，解除自身的1个<u>负面效果</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "负面效果",
+          "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100803,
       "id": "power_through",
       "name": "重剑强攻",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100804,
       "id": "turn_the_tables",
       "name": "绝处反击",
-      "desc": "进入战斗后，受到致命攻击时阿兰不会陷入<u>无法战斗状态</u>，并立即回复至自身生命上限的<nobr>25%</nobr>。该效果在触发1次后或持续<nobr>2</nobr>回合后自动解除。"
+      "desc": "进入战斗后，受到致命攻击时阿兰不会陷入<u>无法战斗状态</u>，并立即回复至自身生命上限的<nobr>25%</nobr>。该效果在触发1次后或持续<nobr>2</nobr>回合后自动解除。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "无法战斗状态",
+          "desc": "当我方目标的当前生命值被削减至0时进入的特殊状态，处于该状态的目标无法继续战斗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100805,
       "id": "hammer_and_tongs",
       "name": "全力倾注",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100806,
       "id": "selfsacrifice",
       "name": "以身作引",
-      "desc": "当前生命值百分比小于等于<nobr>50%</nobr>时，终结技造成的伤害提高<nobr>20%</nobr>，且对相邻目标的伤害倍率提高到与主目标相同的伤害倍率。"
+      "desc": "当前生命值百分比小于等于<nobr>50%</nobr>时，终结技造成的伤害提高<nobr>20%</nobr>，且对相邻目标的伤害倍率提高到与主目标相同的伤害倍率。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

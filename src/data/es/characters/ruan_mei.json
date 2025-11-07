@@ -2,6 +2,7 @@
   "_id": 1303,
   "id": "ruan_mei",
   "name": "Ruan Mei",
+  "description": "Miembro del Círculo de Genios y experta en las ciencias de la vida. Colaboró con Herta y el resto de genios para desarrollar el Universo Simulado.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Ruan Mei obtiene Sobretono tras usar su habilidad básica. Cuando Ruan Mei tiene Sobretono, aumenta el daño y la eficiencia de la Ruptura de Debilidad de todos los aliados.",
       "type": "Habilidad básica",
       "tag": "Apoyo",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,43 @@
       "simpleDesc": "Aumenta la PEN de la RES a todos los tipos de todos los aliados y sus ataques infligen Flores de ciruelo rotas a los enemigos.",
       "type": "Habilidad definitiva",
       "tag": "Apoyo",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Ruptura de Debilidad",
+          "desc": "Cuando la Firmeza del objetivo se reduce a 0, entrará en un estado especial en el que sus acciones se retrasarán.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Acción retrasada",
+          "desc": "Incrementa el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Daño de Ruptura",
+          "desc": "Cuanto más altos sean la Firmeza máxima del objetivo, el nivel del personaje y el efecto de Ruptura, más Daño de Ruptura inflige.\nEl Daño de Ruptura no puede causar Golpes CRIT y no se ve afectado por los efectos de aumento de daño.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1159,24 @@
       "simpleDesc": "Aumenta la VEL de todos los demás aliados. Al romper la Debilidad de un enemigo, le inflige adicionalmente Daño de Ruptura de Hielo.",
       "type": "Talento",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Daño de Ruptura",
+          "desc": "Cuanto más altos sean la Firmeza máxima del objetivo, el nivel del personaje y el efecto de Ruptura, más Daño de Ruptura inflige.\nEl Daño de Ruptura no puede causar Golpes CRIT y no se ve afectado por los efectos de aumento de daño.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1486,15 @@
       "simpleDesc": "En la siguiente batalla, activa automáticamente la habilidad básica #1[i] vez. Después de usar la técnica, se considera que los aliados que atacan a enemigos en el Universo Simulado o el Universo Diferenciado atacan su Debilidad para entrar en combate, y la Firmeza de los enemigos se reducirá independientemente de su tipo de Debilidad. Por cada bendición que tengas, la reducción de Firmeza aumenta y, al romper la Debilidad, inflige Daño de Ruptura adicional.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1425,37 +1514,97 @@
       "_id": 130301,
       "id": "neuronic_embroidery",
       "name": "Bordado neuronal",
-      "desc": "Mientras el campo de la habilidad definitiva está activo, el daño que infligen todos los aliados ignora un <nobr>20%</nobr> de la DEF del objetivo."
+      "desc": "Mientras el campo de la habilidad definitiva está activo, el daño que infligen todos los aliados ignora un <nobr>20%</nobr> de la DEF del objetivo.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130302,
       "id": "reedside_promenade",
       "name": "Paseo por los juncos",
-      "desc": "Cuando Ruan Mei está en la batalla, el ATQ de todos los aliados aumenta en un <nobr>40%</nobr> cuando infligen daño a enemigos con <u>Ruptura de Debilidad</u>."
+      "desc": "Cuando Ruan Mei está en la batalla, el ATQ de todos los aliados aumenta en un <nobr>40%</nobr> cuando infligen daño a enemigos con <u>Ruptura de Debilidad</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Ruptura de Debilidad",
+          "desc": "Cuando la Firmeza del objetivo se reduce a 0, entrará en un estado especial en el que sus acciones se retrasarán.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130303,
       "id": "viridescent_pirouette",
       "name": "Vestida de brocado esmeralda",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130304,
       "id": "chatoyant_clat",
       "name": "Luminosidad reluciente",
-      "desc": "Cuando un enemigo es afectado por Ruptura de Debilidad, el efecto de Ruptura de Ruan Mei aumenta en un <nobr>100%</nobr> durante <nobr>3</nobr> turnos."
+      "desc": "Cuando un enemigo es afectado por Ruptura de Debilidad, el efecto de Ruptura de Ruan Mei aumenta en un <nobr>100%</nobr> durante <nobr>3</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130305,
       "id": "languid_barrette",
       "name": "Horquilla de fabricación exquisita",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130306,
       "id": "sash_cascade",
       "name": "Oculta tras el abanico",
-      "desc": "La duración del campo creado por la habilidad definitiva de Ruan Mei aumenta en <nobr>1</nobr> turno. El multiplicador de <u>Daño de Ruptura</u> del talento aumenta en un <nobr>200%</nobr> adicional."
+      "desc": "La duración del campo creado por la habilidad definitiva de Ruan Mei aumenta en <nobr>1</nobr> turno. El multiplicador de <u>Daño de Ruptura</u> del talento aumenta en un <nobr>200%</nobr> adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Daño de Ruptura",
+          "desc": "Cuanto más altos sean la Firmeza máxima del objetivo, el nivel del personaje y el efecto de Ruptura, más Daño de Ruptura inflige.\nEl Daño de Ruptura no puede causar Golpes CRIT y no se ve afectado por los efectos de aumento de daño.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

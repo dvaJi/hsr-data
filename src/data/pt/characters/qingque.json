@@ -2,6 +2,7 @@
   "_id": 1201,
   "id": "qingque",
   "name": "Qingque",
+  "description": "Profetisa da Comissão de Divinação do Luofu do Xianzhou, e uma bibliotecária.\nCada vez mais desestimulada e prestes a ser rebaixada a \"guardiã da porta\".",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Lança uma peça que causa Dano Quântico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Pega peças e aumenta o Dano causado. Esta rodada não termina após esta ação.",
       "type": "Perícia",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Causa Dano Quântico a todos os inimigos, depois obtêm 4 peças do mesmo naipe.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Pega uma peça no início da rodada de qualquer aliado. No início da rodada deste personagem, se este personagem possuir 4 peças de um mesmo naipe, remove todas as peças em posse e Aprimora o ATQ Básico enquanto aumenta o ATQ deste personagem.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1313,6 +1359,15 @@
       "simpleDesc": "Após usar sua Técnica, pega peça(s) no início da próxima batalha.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,96 @@
       "_id": 120101,
       "id": "rise_through_the_tiles",
       "name": "Surgir Pelas Peças",
-      "desc": "A Perícia Suprema causa <nobr>10%</nobr> a mais de Dano."
+      "desc": "A Perícia Suprema causa <nobr>10%</nobr> a mais de Dano.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120102,
       "id": "sleep_on_the_tiles",
       "name": "Dormir nas Peças",
-      "desc": "Sempre que Pegar Peça é ativado, Qingque imediatamente regenera <nobr>1</nobr> de Energia."
+      "desc": "Sempre que Pegar Peça é ativado, Qingque imediatamente regenera <nobr>1</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120103,
       "id": "read_between_the_tiles",
       "name": "Ler Entre as Peças",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120104,
       "id": "right_on_the_tiles",
       "name": "Bem nas Peças",
-      "desc": "Depois que a Perícia deste personagem é usada, tem <nobr>24%</nobr> de <u>chance fixa</u> de ganhar \"Autarquia\", que dura até o fim da rodada.\nEnquanto a \"Autarquia\" está ativa, usar o ATQ Básico ou o ATQ Básico Aprimorado ativa imediatamente 1 <u>Ataque Extra</u> no mesmo alvo, causando Dano Quântico igual a <nobr>100%</nobr> do Dano do ATQ Básico ou do ATQ Básico Aprimorado."
+      "desc": "Depois que a Perícia deste personagem é usada, tem <nobr>24%</nobr> de <u>chance fixa</u> de ganhar \"Autarquia\", que dura até o fim da rodada.\nEnquanto a \"Autarquia\" está ativa, usar o ATQ Básico ou o ATQ Básico Aprimorado ativa imediatamente 1 <u>Ataque Extra</u> no mesmo alvo, causando Dano Quântico igual a <nobr>100%</nobr> do Dano do ATQ Básico ou do ATQ Básico Aprimorado.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chance fixa",
+          "desc": "Chance fixa não será afetada por nenhum fator.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120105,
       "id": "gambit_for_the_tiles",
       "name": "Estratégia para as Peças",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120106,
       "id": "prevail_beyond_the_tiles",
       "name": "Prevalecer Além das Peças",
-      "desc": "Recupera 1 Ponto de Perícia após usar um ATQ Básico Aprimorado."
+      "desc": "Recupera 1 Ponto de Perícia após usar um ATQ Básico Aprimorado.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

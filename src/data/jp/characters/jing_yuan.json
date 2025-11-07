@@ -2,6 +2,7 @@
   "_id": 1204,
   "id": "jing_yuan",
   "name": "{RUBY_B#ケイゲン}景元{RUBY_E#}",
+  "description": "仙舟同盟帝弓七天将の1人。仙舟「羅浮」の雲騎軍を率いる「神策将軍」。\n先代の「羅浮」剣首に師事していたが、武力で名をはせてはいない。",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の雷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "敵全体に少量の雷属性ダメージを与え、「神君」の攻撃段数をアップさせる。",
       "type": "戦闘スキル",
       "tag": "全体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +750,15 @@
       "simpleDesc": "敵全体に雷属性ダメージを与え、「神君」の攻撃段数をアップさせる。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1068,40 @@
       "simpleDesc": "戦闘開始時に「神君」を召喚する。「神君」が行動する時、追加攻撃を行い、自動でランダムな敵単体および隣接する敵に少量の雷属性ダメージを与える。",
       "type": "天賦",
       "tag": "バウンド",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "行動制限系デバフ",
+          "desc": "凍結、もつれ、禁錮、支配、怒噪、強烈震とう、異夢、縛り、恐怖、行動ロック。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1471,15 @@
       "simpleDesc": "秘技を使用すると、次の戦闘開始時に「神君」の攻撃段数がアップする。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1496,79 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "{RUBY_B#りゅうせいらいてい}流星雷霆{RUBY_E#}\n{RUBY_B#やま}山{RUBY_E#}をも{RUBY_B#くだ}砕{RUBY_E#}く",
-      "desc": "「神君」が攻撃を行う時、指定した敵単体に隣接する敵に対するダメージ倍率が、メインターゲットに対するダメージ倍率<nobr>25%</nobr>分アップする。"
+      "desc": "「神君」が攻撃を行う時、指定した敵単体に隣接する敵に対するダメージ倍率が、メインターゲットに対するダメージ倍率<nobr>25%</nobr>分アップする。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "{RUBY_B#ふ}振{RUBY_E#}るいし{RUBY_B#ほこ}矛{RUBY_E#}\n{RUBY_B#ちうご}地動{RUBY_E#}かし{RUBY_B#てんひら}天開{RUBY_E#}く",
-      "desc": "「神君」が行動した後、景元の通常攻撃、戦闘スキル、および必殺技によるダメージ+<nobr>20%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "「神君」が行動した後、景元の通常攻撃、戦闘スキル、および必殺技によるダメージ+<nobr>20%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120403,
       "id": "strike_suns_subdued",
       "name": "{RUBY_B#みね}峰{RUBY_E#}を{RUBY_B#うつ}移{RUBY_E#}りし{RUBY_B#げきらい}激雷{RUBY_E#}\n{RUBY_B#てんうが}天穿{RUBY_E#}つ",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120404,
       "id": "spin_stars_sieged",
       "name": "{RUBY_B#やいば}刃{RUBY_E#}、{RUBY_B#くも}雲{RUBY_E#}を{RUBY_B#ま}巻{RUBY_E#}き\n{RUBY_B#ぎょくさ}玉沙{RUBY_E#}に{RUBY_B#お}落{RUBY_E#}ちる",
-      "desc": "「神君」が1段の攻撃を行うたび、景元はEPを<nobr>2</nobr>回復する。"
+      "desc": "「神君」が1段の攻撃を行うたび、景元はEPを<nobr>2</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120405,
       "id": "stride_spoils_seized",
       "name": "{RUBY_B#ひゃくせんへ}百戦経{RUBY_E#}て{RUBY_B#す}捨{RUBY_E#}てし{RUBY_B#み}躯{RUBY_E#}\n{RUBY_B#せいしかろ}生死軽{RUBY_E#}んず",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120406,
       "id": "sweep_souls_slain",
       "name": "{RUBY_B#いこうまと}威光纏{RUBY_E#}う{RUBY_B#しんれい}神霊{RUBY_E#}\n{RUBY_B#てきほふ}敵屠{RUBY_E#}る",
-      "desc": "「神君」が1段の攻撃を行うたびに、メインターゲットを被ダメージアップ状態にする。\n被ダメージアップ状態の敵の受けるダメージ+<nobr>12%</nobr>、「神君」のその回の攻撃が終了するまで継続、最大で<nobr>3</nobr>回累積できる。"
+      "desc": "「神君」が1段の攻撃を行うたびに、メインターゲットを被ダメージアップ状態にする。\n被ダメージアップ状態の敵の受けるダメージ+<nobr>12%</nobr>、「神君」のその回の攻撃が終了するまで継続、最大で<nobr>3</nobr>回累積できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

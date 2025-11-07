@@ -2,6 +2,7 @@
   "_id": 1211,
   "id": "bailu",
   "name": "{RUBY_B#ビャクロ}白露{RUBY_E#}",
+  "description": "仙舟「羅浮」の持明族の尊長、「啣薬の龍女」と称される医士。\n彼女は独自の医療知識と、龍脈を持つ者にしか行えない「医療手段」で人々の傷や病を治している。",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の雷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "味方単体のHPを回復し、さらにランダムに味方単体を治癒。",
       "type": "戦闘スキル",
       "tag": "回復",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "味方全体を回復し、「生生」を付与、または「生生」の効果ターンを延長。",
       "type": "必殺技",
       "tag": "回復",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,24 @@
       "simpleDesc": "「生生」を持つ味方は攻撃を受けた後にHPを回復する。\n白露以外の味方が、HPが0になる攻撃を受けた時、白露はその味方のHPを回復する。この効果は一度の戦闘で1回まで発動できる。",
       "type": "天賦",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1491,15 @@
       "simpleDesc": "秘技を使用、次の戦闘開始時、味方全体に「生生」を付与する。",
       "type": "秘技",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1516,79 @@
       "_id": 121101,
       "id": "ambrosial_aqua",
       "name": "{RUBY_B#ひゃくみゃくしず}百脈静{RUBY_E#}める{RUBY_B#かんろ}甘露{RUBY_E#}",
-      "desc": "「生生」効果が終了する時、味方のHPが満タンの場合、さらにEPを<nobr>8</nobr>回復させる。"
+      "desc": "「生生」効果が終了する時、味方のHPが満タンの場合、さらにEPを<nobr>8</nobr>回復させる。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121102,
       "id": "sylphic_slumber",
       "name": "{RUBY_B#こちゅう}壺中{RUBY_E#}の{RUBY_B#てん}天{RUBY_E#}には{RUBY_B#うんりゅうねむ}雲龍眠{RUBY_E#}る",
-      "desc": "必殺技を発動した後、白露の治癒量+<nobr>15%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "必殺技を発動した後、白露の治癒量+<nobr>15%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121103,
       "id": "omniscient_opulence",
       "name": "{RUBY_B#ここちやす}心地安{RUBY_E#}らぐ{RUBY_B#かいしゅん}回春{RUBY_E#}の{RUBY_B#みょうしゅ}妙手{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121104,
       "id": "evil_excision",
       "name": "{RUBY_B#がいしょういや}外傷癒{RUBY_E#}す{RUBY_B#ちゅうご}肘後{RUBY_E#}の{RUBY_B#びきゅう}備急{RUBY_E#}",
-      "desc": "戦闘スキルによる治癒を受けるたび、その味方の与ダメージ+<nobr>10%</nobr>、最大で<nobr>3</nobr>層累積できる、<nobr>2</nobr>ターン継続。"
+      "desc": "戦闘スキルによる治癒を受けるたび、その味方の与ダメージ+<nobr>10%</nobr>、最大で<nobr>3</nobr>層累積できる、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121105,
       "id": "waning_worries",
       "name": "{RUBY_B#ぞくじんすす}俗塵濯{RUBY_E#}ぐ{RUBY_B#じう}慈雨{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121106,
       "id": "drooling_drop_of_draconic_divinity",
       "name": "{RUBY_B#りゅうぜんせんやく}龍涎仙薬{RUBY_E#}、{RUBY_B#きんたん}金丹{RUBY_E#}に{RUBY_B#まさ}勝{RUBY_E#}る",
-      "desc": "一度の戦闘で、白露がHPが0になる攻撃を受けた味方を治癒する効果の発動可能回数+<nobr>1</nobr>。"
+      "desc": "一度の戦闘で、白露がHPが0になる攻撃を受けた味方を治癒する効果の発動可能回数+<nobr>1</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

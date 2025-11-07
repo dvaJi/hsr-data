@@ -2,6 +2,7 @@
   "_id": 1314,
   "id": "jade",
   "name": "翡翠",
+  "description": "星際和平公司「策略投資部」的高級幹部，「石心十人」之一，基石為「典貸翡翠」。\n冷豔優雅的放貸人，善於洞悉人心，有著名為「慈玉典押」的個人愛好。\n願意為獲得高價值的事物耐心等待，也擅長從看似一無所有的客戶身上榨取價值。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量量子屬性傷害，對相鄰目標造成少量量子屬性傷害。",
       "type": "普通攻擊",
       "tag": "擴散",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "使我方單體成為【收債人】，使其速度提高。【收債人】發動攻擊後，對每個命中的敵方目標造成少量量子屬性附加傷害並消耗自身生命值。翡翠成為【收債人】時，無法獲得速度提高效果且攻擊後不消耗生命值。",
       "type": "戰技",
       "tag": "輔助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -768,6 +796,24 @@
       "simpleDesc": "對敵方全體造成量子屬性傷害，使自身天賦的追加攻擊傷害倍率提高。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1092,6 +1138,24 @@
       "simpleDesc": "翡翠或成為【收債人】的目標發動攻擊後，每命中1個敵方目標均可獲得1點充能。當充能到達#3[i]點後，消耗#3[i]點充能，發動1次追加攻擊，對敵方全體造成量子屬性傷害。\n翡翠發動追加攻擊時獲得【當品】，使暴擊傷害提高，最多疊加#2[i]層。",
       "type": "天賦",
       "tag": "群體攻擊",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1446,6 +1510,15 @@
       "simpleDesc": "使一定區域內敵人陷入【盲從】狀態。攻擊陷入【盲從】狀態敵人，使所有處於【盲從】狀態的敵人同時進入戰鬥，進入戰鬥後對敵方全體造成少量量子屬性傷害，立即獲得#3[i]層【當品】。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1537,97 @@
       "_id": 131401,
       "id": "altruism_nevertheless_tradable",
       "name": "無私？亦可交割",
-      "desc": "翡翠天賦的<u>追加攻擊</u>傷害提高<nobr>32%</nobr>，持有【收債人】狀態的角色發動攻擊後命中敵方目標數量等於2/1名時，翡翠額外獲得<nobr>1</nobr>/<nobr>2</nobr>點充能。"
+      "desc": "翡翠天賦的<u>追加攻擊</u>傷害提高<nobr>32%</nobr>，持有【收債人】狀態的角色發動攻擊後命中敵方目標數量等於2/1名時，翡翠額外獲得<nobr>1</nobr>/<nobr>2</nobr>點充能。",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131402,
       "id": "morality_herein_authenticated",
       "name": "道德？謹此核押",
-      "desc": "【當品】疊加至<nobr>15</nobr>層時，翡翠暴擊率提高<nobr>18%</nobr>。"
+      "desc": "【當品】疊加至<nobr>15</nobr>層時，翡翠暴擊率提高<nobr>18%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131403,
       "id": "honesty_soon_mortgaged",
       "name": "坦率？只待典當",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131404,
       "id": "sincerity_put_option_only",
       "name": "真誠？唯憑認沽",
-      "desc": "施放終結技時，使翡翠造成的傷害無視敵方目標<nobr>12%</nobr>的防禦力，持續<nobr>3</nobr>回合。"
+      "desc": "施放終結技時，使翡翠造成的傷害無視敵方目標<nobr>12%</nobr>的防禦力，持續<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131405,
       "id": "hope_hitherto_forfeited",
       "name": "希冀？已然絕賣",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131406,
       "id": "equity_pending_sponsorship",
       "name": "公平？仍須保薦",
-      "desc": "場上有【收債人】狀態的角色時，翡翠量子屬性<u>抗性穿透</u>提高<nobr>20%</nobr>，同時翡翠獲得【收債人】狀態。"
+      "desc": "場上有【收債人】狀態的角色時，翡翠量子屬性<u>抗性穿透</u>提高<nobr>20%</nobr>，同時翡翠獲得【收債人】狀態。",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1014,
   "id": "saber",
   "name": "Saber",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Vento leve a um inimigo designado.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Causa Dano de Vento a um inimigo designado e Dano de Vento leve aos alvos adjacentes. Se a Energia desta unidade puder ser completamente regenerada ao consumir \"Ressonância do Núcleo\" após o ataque, então aumenta o multiplicador de Dano desta instância da Perícia com base nos acúmulos de pontos de \"Ressonância do Núcleo\" e consome toda a \"Ressonância do Núcleo\" após usar este ataque. Caso contrário, obtém #3[i] ponto(s) de \"Ressonância do Núcleo\".",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Causa Dano de Vento massivo a todos os inimigos. Além disso, causa Dano de Vento leve a inimigos aleatórios, com Rebote por #3[i] vezes, e aprimora o próximo ATQ Básico.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        120,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1110,15 @@
       "simpleDesc": "Ao entrar em batalha, obtém #8[i] ponto(s) de \"Ressonância do Núcleo\". Quando qualquer aliado-alvo usa uma Perícia Suprema, aumenta o Dano causado por Saber e obtém #1[i] ponto(s) de \"Ressonância do Núcleo\". Consumir \"Ressonância do Núcleo\" regenerará Energia para Saber.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1518,15 @@
       "simpleDesc": "Depois de usar a Técnica, ganha #3[i] ponto(s) de \"Ressonância do Núcleo\" e aumenta o ATQ no início da próxima batalha.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1499,37 +1545,97 @@
       "_id": 101401,
       "id": "the_lost_white_walls",
       "name": "As Muralhas Brancas Perdidas",
-      "desc": "Aumenta o Dano causado pela Perícia Suprema de <nobr>Saber</nobr> em <nobr>60%</nobr>. Após <nobr>Saber</nobr> usar um ATQ Básico ou Perícia, ganha <nobr>1</nobr> ponto(s) de \"Ressonância do Núcleo\"."
+      "desc": "Aumenta o Dano causado pela Perícia Suprema de <nobr>Saber</nobr> em <nobr>60%</nobr>. Após <nobr>Saber</nobr> usar um ATQ Básico ou Perícia, ganha <nobr>1</nobr> ponto(s) de \"Ressonância do Núcleo\".",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101402,
       "id": "the_lost_oath_of_the_round_table",
       "name": "O Juramento Perdido da Távola Redonda",
-      "desc": "Para cada ponto de \"Ressonância do Núcleo\" obtido nesta batalha, o Dano causado por <nobr>Saber</nobr> ignora <nobr>#2[f1]%</nobr> da DEF do alvo. Esse efeito pode acumular até um máximo de <nobr>15</nobr> vez(es). Ao ativar o efeito de multiplicador de Perícia da \"Ressonância do Núcleo\", cada ponto de \"Ressonância do Núcleo\" aumenta adicionalmente o multiplicador de Dano desta instância da Perícia em <nobr>7%</nobr>."
+      "desc": "Para cada ponto de \"Ressonância do Núcleo\" obtido nesta batalha, o Dano causado por <nobr>Saber</nobr> ignora <nobr>#2[f1]%</nobr> da DEF do alvo. Esse efeito pode acumular até um máximo de <nobr>15</nobr> vez(es). Ao ativar o efeito de multiplicador de Perícia da \"Ressonância do Núcleo\", cada ponto de \"Ressonância do Núcleo\" aumenta adicionalmente o multiplicador de Dano desta instância da Perícia em <nobr>7%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101403,
       "id": "a_wish_across_fifteen_centuries",
       "name": "Um Desejo Através de Quinze Séculos",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101404,
       "id": "the_saga_of_sixteen_winter_days",
       "name": "A Saga dos Dezesseis Dias de Inverno",
-      "desc": "Aumenta a PEN de RES a Vento de <nobr>Saber</nobr> em <nobr>8%</nobr>. Após usar a Perícia Suprema, aumenta a PEN de RES a Vento de <nobr>Saber</nobr> em <nobr>4%</nobr>. Este efeito pode acumular até <nobr>3</nobr> vez(es)."
+      "desc": "Aumenta a PEN de RES a Vento de <nobr>Saber</nobr> em <nobr>8%</nobr>. Após usar a Perícia Suprema, aumenta a PEN de RES a Vento de <nobr>Saber</nobr> em <nobr>4%</nobr>. Este efeito pode acumular até <nobr>3</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101405,
       "id": "the_dreamed_utopian_dawn",
       "name": "A Sonhada Aurora Utópica",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101406,
       "id": "the_long_fated_night",
       "name": "A Longa Noite do Destino",
-      "desc": "A PEN de RES a Vento do Dano da Perícia Suprema causada por Saber aumenta em <nobr>20%</nobr>. A quantidade de Energia excedente que pode ser acumulada com o Rastro \"Bênção do Lago\" aumenta para <nobr>200</nobr>. Após usar a Perícia Suprema pela primeira vez ao entrar em combate, regenera uma quantidade fixa de <nobr>300</nobr> de Energia para Saber. Este efeito pode ser ativado 1 vez a cada <nobr>3</nobr> uso(s) da Perícia Suprema."
+      "desc": "A PEN de RES a Vento do Dano da Perícia Suprema causada por Saber aumenta em <nobr>20%</nobr>. A quantidade de Energia excedente que pode ser acumulada com o Rastro \"Bênção do Lago\" aumenta para <nobr>200</nobr>. Após usar a Perícia Suprema pela primeira vez ao entrar em combate, regenera uma quantidade fixa de <nobr>300</nobr> de Energia para Saber. Este efeito pode ser ativado 1 vez a cada <nobr>3</nobr> uso(s) da Perícia Suprema.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

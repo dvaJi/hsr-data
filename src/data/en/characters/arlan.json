@@ -2,6 +2,7 @@
   "_id": 1008,
   "id": "arlan",
   "name": "Arlan",
+  "description": "The head of Herta Space Station's Security Department.\nThis quiet boy hopes to protect the researchers who value their pursuit of knowledge, and to help them to complete their work.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -243,10 +244,22 @@
       "_id": 100801,
       "id": "lightning_rush",
       "name": "Lightning Rush",
-      "desc": "Deals Lightning DMG equal to #1[i]% of Arlan's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Lightning DMG to a single enemy.",
+      "desc": "Deals Lightning DMG equal to #1[i]% of Arlan's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Lightning DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 100802,
       "id": "shackle_breaker",
       "name": "Shackle Breaker",
-      "desc": "Consumes Arlan's HP equal to #1[i]% of his Max HP to deal Lightning DMG equal to #2[i]% of Arlan's ATK to a single enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
-      "simpleDesc": "Consumes a portion of HP to deal Lightning DMG to a single enemy.",
+      "desc": "Consumes Arlan's HP equal to #1[i]% of his Max HP to deal Lightning DMG equal to #2[i]% of Arlan's ATK to one designated enemy. If Arlan does not have sufficient HP, his HP will be reduced to 1 after using his Skill.",
+      "simpleDesc": "Consumes a portion of HP to deal Lightning DMG to one enemy.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -718,10 +743,22 @@
       "_id": 100803,
       "id": "frenzied_punishment",
       "name": "Frenzied Punishment",
-      "desc": "Deals Lightning DMG equal to #1[i]% of Arlan's ATK to a single enemy and Lightning DMG equal to #2[i]% of Arlan's ATK to enemies adjacent to it.",
-      "simpleDesc": "Deals massive Lightning DMG to a single enemy and Lightning DMG to enemies adjacent to it.",
+      "desc": "Deals Lightning DMG equal to #1[i]% of Arlan's ATK to one designated enemy and Lightning DMG equal to #2[i]% of Arlan's ATK to enemies adjacent to it.",
+      "simpleDesc": "Deals massive Lightning DMG to one enemy and Lightning DMG to enemies adjacent to it.",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Gain DMG bonus based on currently missing HP percentage.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Immediately attacks the enemy. After entering battle, deals Lightning DMG equal to #1[i]% of Arlan's ATK to all enemies.",
       "simpleDesc": "Attacks the enemy. After entering battle, deals minor Lightning DMG to all enemies.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,37 +1383,97 @@
       "_id": 100801,
       "id": "to_the_bitter_end",
       "name": "To the Bitter End",
-      "desc": "When HP percentage is lower than or equal to <nobr>50%</nobr> of Max HP, increases DMG dealt by Skill by <nobr>10%</nobr>."
+      "desc": "When HP percentage is lower than or equal to <nobr>50%</nobr> of Max HP, increases DMG dealt by Skill by <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100802,
       "id": "breaking_free",
       "name": "Breaking Free",
-      "desc": "Using Skill or Ultimate removes 1 <u>debuff</u> from this unit."
+      "desc": "Using Skill or Ultimate removes 1 <u>debuff</u> from this unit.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100803,
       "id": "power_through",
       "name": "Power Through",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100804,
       "id": "turn_the_tables",
       "name": "Turn the Tables",
-      "desc": "When struck by a killing blow after entering battle, instead of becoming <u>knocked down</u>, Arlan immediately restores his HP to <nobr>25%</nobr> of his Max HP. This effect is automatically removed after it is triggered once or after <nobr>2</nobr> turn(s) have elapsed."
+      "desc": "When struck by a killing blow after entering battle, instead of becoming <u>knocked down</u>, Arlan immediately restores his HP to <nobr>25%</nobr> of his Max HP. This effect is automatically removed after it is triggered once or after <nobr>2</nobr> turn(s) have elapsed.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100805,
       "id": "hammer_and_tongs",
       "name": "Hammer and Tongs",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100806,
       "id": "selfsacrifice",
       "name": "Self-Sacrifice",
-      "desc": "When the current HP percentage drops to <nobr>50%</nobr> or below, Ultimate deals <nobr>20%</nobr> more DMG, and the DMG multiplier for adjacent targets is raised to the same level as that for the primary target."
+      "desc": "When the current HP percentage drops to <nobr>50%</nobr> or below, Ultimate deals <nobr>20%</nobr> more DMG, and the DMG multiplier for adjacent targets is raised to the same level as that for the primary target.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

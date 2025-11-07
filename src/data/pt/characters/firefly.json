@@ -2,6 +2,7 @@
   "_id": 1310,
   "id": "firefly",
   "name": "Vaga-lume",
+  "description": "Membro dos Caçadores de Stellaron, que utiliza uma armadura mecanizada conhecida como \"SAM\". A personalidade dela é marcada por uma lealdade e determinação inabaláveis.\nProjetada como uma arma contra o Enxame, seu crescimento é acelerado, mas tem uma expectativa de vida tragicamente encurtada.\nEla se juntou aos Caçadores de Stellaron em busca de um caminho para desafiar seu destino final.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Fogo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Consome uma parte dos PV desta unidade para regenerar Energia. Causa Dano de Fogo a um único inimigo. Faz com que a próxima ação do personagem seja Avançada Adiante.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,15 @@
       "simpleDesc": "Entra no estado de \"Combustão Completa\". A Ação de SAM é Avançada Adiante em 100%, ganha ATQ Básico Aprimorado e Perícia Aprimorada. Aumenta a VEL e a Eficiência de Quebra de Fraqueza desta unidade, e aumenta o Dano de Quebra recebido pelos inimigos-alvo, durando até o fim da contagem regressiva.",
       "type": "Perícia Suprema",
       "tag": "Aprimoramento",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,24 @@
       "simpleDesc": "Quanto menores os PV, menor o Dano recebido. Durante o estado de \"Combustão Completa\", o efeito de redução de Dano permanece em sua duração máxima, e a RES a Efeitos aumenta. Se a Energia estiver abaixo de #2[i]% quando a batalha começar, a Energia será regenerada até #2[i]%. Quando a energia for regenerada ao máximo, todas as penalidades desta unidade serão dissipadas.",
       "type": "Talento",
       "tag": "Defesa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1490,15 @@
       "desc": "Salta no ar e se move livremente por #1[i] segundos, podendo finalizar esse movimento mais cedo com um ataque de mergulho. Quando esta duração termina, SAM mergulha e ataca imediatamente todos os inimigos dentro de uma área definida. No início de cada onda, aplica Fraqueza contra Fogo a todos os inimigos, durando por #3[i] rodada(s). Em seguida, causa Dano de Fogo igual a #2[i]% do ATQ de SAM a todos os inimigos.",
       "simpleDesc": "Salta no ar e se move livremente. Após alguns segundos de movimento, mergulha e ataca todos os inimigos dentro do alcance. No início de cada onda, aplica Fraqueza contra Fogo a todos os inimigos e causa Dano de Fogo a eles.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1517,105 @@
       "_id": 131001,
       "id": "in_reddened_chrysalis_i_once_rest",
       "name": "Em Crisálidas Avermelhadas, Já Tive Meu Descanso",
-      "desc": "Ao usar a Perícia Aprimorada, ignora <nobr>15%</nobr> da DEF do alvo. A Perícia Aprimorada não consome Pontos de Perícia."
+      "desc": "Ao usar a Perícia Aprimorada, ignora <nobr>15%</nobr> da DEF do alvo. A Perícia Aprimorada não consome Pontos de Perícia.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131002,
       "id": "from_shattered_sky_i_free_fall",
       "name": "Em Queda Livre no Céu Estilhaçado",
-      "desc": "Enquanto está em \"Combustão Completa\", usar o ATQ Básico Aprimorado ou a Perícia Aprimorada para derrotar um inimigo-alvo ou aplicar Quebra de Fraqueza a ele faz com que SAM ganhe imediatamente 1 rodada extra. Esse efeito pode ser ativado novamente após <nobr>1</nobr> rodada(s)."
+      "desc": "Enquanto está em \"Combustão Completa\", usar o ATQ Básico Aprimorado ou a Perícia Aprimorada para derrotar um inimigo-alvo ou aplicar Quebra de Fraqueza a ele faz com que SAM ganhe imediatamente 1 rodada extra. Esse efeito pode ser ativado novamente após <nobr>1</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Rodada Extra",
+          "desc": "Ganha 1 rodada extra que não gastará suas rodadas restantes ao tomar uma ação. Nessa rodada extra, não é possível usar nenhuma Perícia Suprema.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131003,
       "id": "amidst_silenced_stars_i_deep_sleep",
       "name": "Sono Profundo Entre os Astros",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131004,
       "id": "upon_lighted_fyrefly_i_soon_gaze",
       "name": "Sobre os Vaga-lumes Iluminados, Eu Logo Olho",
-      "desc": "Enquanto está no estado de \"Combustão Completa\", aumenta a RES de Efeito de SAM em <nobr>50%</nobr>."
+      "desc": "Enquanto está no estado de \"Combustão Completa\", aumenta a RES de Efeito de SAM em <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131005,
       "id": "from_undreamt_night_i_thence_shine",
       "name": "Das Noites Sem Sonhos, Eu Então Brilho",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131006,
       "id": "in_finalized_morrow_i_full_bloom",
       "name": "No Amanhã Findado, Eu Floresço",
-      "desc": "Enquanto estiver em \"Combustão Completa\", aumenta a <u>PEN de RES a Fogo</u> em <nobr>20%</nobr>. Ao usar o ATQ Básico Aprimorado ou a Perícia Aprimorada, aumenta a eficiência da Quebra de Fraqueza em <nobr>50%</nobr>."
+      "desc": "Enquanto estiver em \"Combustão Completa\", aumenta a <u>PEN de RES a Fogo</u> em <nobr>20%</nobr>. Ao usar o ATQ Básico Aprimorado ou a Perícia Aprimorada, aumenta a eficiência da Quebra de Fraqueza em <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

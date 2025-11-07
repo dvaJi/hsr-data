@@ -2,6 +2,7 @@
   "_id": 1313,
   "id": "sunday",
   "name": "星期日",
+  "description": "「秩序」的美夢已然消散，但仍有人不會放下初願。\n——折翼墜地的旅人，他的腳步將邁向何方？",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "對指定敵方單體造成少量虛數屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "使指定我方單體角色及其召喚物立即行動，並使其造成的傷害提高，若目標擁有召喚物，則造成的傷害提高效果額外提高。\n對【蒙福者】施放戰技後恢復1個戰技點。\n當星期日對「同諧」命途的角色施放該技能時，無法觸發立即行動效果。",
       "type": "戰技",
       "tag": "輔助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "為指定我方單體角色恢復能量，並使目標及其召喚物成為【蒙福者】，【蒙福者】的暴擊傷害提高。",
       "type": "終結技",
       "tag": "輔助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "施放戰技時，使目標暴擊率提高。",
       "type": "天賦",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1443,15 @@
       "simpleDesc": "使用秘技後，下一次戰鬥星期日首次對我方目標施放技能時，使目標造成的傷害提高。",
       "type": "秘技",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1469,79 @@
       "_id": 131301,
       "id": "millenniums_quietus",
       "name": "千紀沉寂之末",
-      "desc": "星期日施放戰技時，使目標角色造成傷害時無視目標<nobr>16%</nobr>的防禦力，召喚物造成傷害時無視目標<nobr>40%</nobr>的防禦力，持續<nobr>2</nobr>回合。"
+      "desc": "星期日施放戰技時，使目標角色造成傷害時無視目標<nobr>16%</nobr>的防禦力，召喚物造成傷害時無視目標<nobr>40%</nobr>的防禦力，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131302,
       "id": "faith_outstrips_frailty",
       "name": "篤信補完微缺",
-      "desc": "首次施放終結技後恢復<nobr>2</nobr>個戰技點。【蒙福者】造成的傷害提高<nobr>30%</nobr>。"
+      "desc": "首次施放終結技後恢復<nobr>2</nobr>個戰技點。【蒙福者】造成的傷害提高<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131303,
       "id": "hermitage_of_thorns",
       "name": "荊棘的靜修所",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131304,
       "id": "sculptures_preamble",
       "name": "雕塑的卷首語",
-      "desc": "回合開始時，恢復<nobr>8</nobr>點能量。"
+      "desc": "回合開始時，恢復<nobr>8</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131305,
       "id": "paper_raft_in_silver_bay",
       "name": "紙筏漂流銀灣",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131306,
       "id": "dawn_of_sidereal_cacophony",
       "name": "群星喧譁之始",
-      "desc": "天賦的暴擊率提高效果可以疊加，最多疊加<nobr>3</nobr>層，並使天賦的持續時間增加<nobr>1</nobr>回合。星期日施放終結技時，也可以為目標新增天賦的暴擊率提高效果。天賦的暴擊率提高效果生效時，當目標的暴擊率超過<nobr>100%</nobr>，每溢出1%暴擊率提高<nobr>2%</nobr>暴擊傷害。"
+      "desc": "天賦的暴擊率提高效果可以疊加，最多疊加<nobr>3</nobr>層，並使天賦的持續時間增加<nobr>1</nobr>回合。星期日施放終結技時，也可以為目標新增天賦的暴擊率提高效果。天賦的暴擊率提高效果生效時，當目標的暴擊率超過<nobr>100%</nobr>，每溢出1%暴擊率提高<nobr>2%</nobr>暴擊傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

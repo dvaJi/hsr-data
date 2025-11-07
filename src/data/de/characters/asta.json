@@ -2,6 +2,7 @@
   "_id": 1009,
   "id": "asta",
   "name": "Asta",
+  "description": "Die Forschungsleiterin der Herta-Raumstation und eine Dame aus einer angesehenen Familie.\nDie wissbegierige Astronomin hält mit viel Geschick die grundverschiedenen Mitarbeiter der Raumstation auf Kurs.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Feuer-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 100902,
       "id": "meteor_storm",
       "name": "Meteoritensturm",
-      "desc": "Fügt einem anvisierten Gegner Feuer-SCH in Höhe von #1[i]% von Astas ANG zu. Löst zusätzlich 4 Angriffe gegen zufällige Gegner aus, die jeweils Feuer-SCH in Höhe von #1[i]% von Astas ANG verursachen.",
+      "desc": "Fügt einem anvisierten Gegner Feuer-SCH in Höhe von #1[i]% von Astas ANG zu und verursacht zusätzlich 4-mal SCH, wobei jeder Treffer einem zufälligen Gegner Feuer-SCH in Höhe von #1[i]% von Astas ANG zufügt.",
       "simpleDesc": "Fügt einem Gegner mit insgesamt 5-mal Abpraller geringen Feuer-SCH zu.",
       "type": "Fertigkeit",
       "tag": "Abpraller",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "Erhöht die GES aller Verbündeten.",
       "type": "Ultimate",
       "tag": "Unterstützung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,15 @@
       "simpleDesc": "Erhält 1 Aufladestapelung für jeden verschiedenen angegriffenen Gegner, bis max. 5 Stapelungen. Für jede Aufladestapelung wird der ANG aller Verbündeten erhöht. Zu Beginn ihrer Runde wird die Aufladestapelung reduziert.",
       "type": "Talent",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1327,6 +1373,15 @@
       "desc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt allen Gegnern Feuer-SCH in Höhe von #1[i]% von Astas ANG zu.",
       "simpleDesc": "Greift Gegner an. Fügt nach Kampfeintritt allen Gegnern geringen SCH zu.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1343,37 +1398,79 @@
       "_id": 100901,
       "id": "star_sings_sans_verses_or_vocals",
       "name": "Das wortlose Lied eines Sterns",
-      "desc": "Fügt beim Einsatz der Fertigkeit einem zufälligen Gegner 1-mal zusätzlichen SCH zu."
+      "desc": "Fügt beim Einsatz der Fertigkeit einem zufälligen Gegner 1-mal zusätzlichen SCH zu.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100902,
       "id": "moon_speaks_in_wax_and_wane",
       "name": "Der Mond versteht seinen Zyklus",
-      "desc": "Beim Einsatz des Ultimates werden Astas Aufladestapelungen für die nächste Runde nicht verringert."
+      "desc": "Beim Einsatz des Ultimates werden Astas Aufladestapelungen für die nächste Runde nicht verringert.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100903,
       "id": "meteor_showers_for_wish_and_want",
       "name": "Der Wandel des ekliptischen Meteoriten",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100904,
       "id": "aurora_basks_in_beauty_and_bliss",
       "name": "Wenn die Morgenröte sich manifestiert",
-      "desc": "Erhöht Astas Energie- Wiederherstellungsrate um <nobr>15%</nobr>, wenn sie <nobr>2</nobr> oder mehr Aufladestapelungen hat."
+      "desc": "Erhöht Astas Energie- Wiederherstellungsrate um <nobr>15%</nobr>, wenn sie <nobr>2</nobr> oder mehr Aufladestapelungen hat.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100905,
       "id": "nebula_secludes_in_runes_and_riddles",
       "name": "Geheimnis ferner Objekte im All",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100906,
       "id": "cosmos_dreams_in_calm_and_comfort",
       "name": "Schlafen unter der Milchstraße",
-      "desc": "Die Aufladestapelungen des Talents werden pro Runde um <nobr>1</nobr> weniger verringert."
+      "desc": "Die Aufladestapelungen des Talents werden pro Runde um <nobr>1</nobr> weniger verringert.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

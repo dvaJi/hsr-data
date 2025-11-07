@@ -2,6 +2,7 @@
   "_id": 1015,
   "id": "archer",
   "name": "アーチャー",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "指定した敵単体に少量の量子属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -413,6 +423,15 @@
       "simpleDesc": "「回路接続」状態に入る。指定した敵単体に大量の量子属性ダメージを与える。「回路接続」状態の時、戦闘スキルを発動してもターンは終了しない。また、アーチャーの戦闘スキルによるダメージがアップする。SPがなくなり、再度戦闘スキルを発動できなくなった時、「回路接続」状態が解除される。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": 2,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,15 @@
       "simpleDesc": "指定した敵単体に大量の量子属性ダメージを与え、チャージを獲得する。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1091,6 +1119,24 @@
       "simpleDesc": "自身以外の味方が攻撃を行った後、アーチャーはチャージを1消費してメインターゲットに追加攻撃を行い、量子属性ダメージを与える。さらにSPを1回復する。",
       "type": "天賦",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1384,6 +1430,15 @@
       "desc": "敵を攻撃。戦闘に入った後、敵全体にアーチャーの攻撃力#1[i]%分の量子属性ダメージを与える、チャージを#2[i]獲得する。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、敵全体に量子属性ダメージを与え、チャージを獲得する。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1401,37 +1456,79 @@
       "_id": 101501,
       "id": "the_unreached_dream",
       "name": "{RUBY_B#ふ}触{RUBY_E#}れられなかった{RUBY_B#りそう}理想{RUBY_E#}",
-      "desc": "戦闘スキルを1ターンに<nobr>3</nobr>回発動した後、SPを<nobr>2</nobr>回復する。"
+      "desc": "戦闘スキルを1ターンに<nobr>3</nobr>回発動した後、SPを<nobr>2</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101502,
       "id": "the_unfulfilled_happiness",
       "name": "{RUBY_B#かな}叶{RUBY_E#}えられなかった{RUBY_B#こうふく}幸福{RUBY_E#}",
-      "desc": "必殺技を発動する時、ターゲットの量子属性耐性-<nobr>20%</nobr>、さらに量子属性弱点を付与する、<nobr>2</nobr>ターン継続。"
+      "desc": "必殺技を発動する時、ターゲットの量子属性耐性-<nobr>20%</nobr>、さらに量子属性弱点を付与する、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101503,
       "id": "the_untamed_will",
       "name": "{RUBY_B#ぼんよう}凡庸{RUBY_E#}に{RUBY_B#あま}甘{RUBY_E#}んじない{RUBY_B#きがい}気概{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101504,
       "id": "the_unsung_life",
       "name": "{RUBY_B#えいゆう}英雄{RUBY_E#}とは{RUBY_B#ほどとお}程遠{RUBY_E#}い{RUBY_B#しょうがい}生涯{RUBY_E#}",
-      "desc": "必殺技ダメージ+<nobr>150%</nobr>。"
+      "desc": "必殺技ダメージ+<nobr>150%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101505,
       "id": "the_nameless_watch",
       "name": "{RUBY_B#むめい}無銘{RUBY_E#}なる{RUBY_B#こえい}孤影{RUBY_E#}の{RUBY_B#しゅご}守護{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101506,
       "id": "the_endless_pilgrimage",
       "name": "{RUBY_B#は}果{RUBY_E#}てなきを{RUBY_B#さまよ}彷徨{RUBY_E#}う{RUBY_B#じゅんれい}巡礼{RUBY_E#}",
-      "desc": "ターンが回ってきた時、SPを1回復する。自身の戦闘スキルで累積できるダメージアップ効果+<nobr>1</nobr>層。戦闘スキルダメージは防御力を<nobr>20%</nobr>無視する。"
+      "desc": "ターンが回ってきた時、SPを1回復する。自身の戦闘スキルで累積できるダメージアップ効果+<nobr>1</nobr>層。戦闘スキルダメージは防御力を<nobr>20%</nobr>無視する。",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "Mydei",
+  "description": "Acrokopis engloutie par la brume, cité du chaos et de la guerre ! Sa lignée royale est marquée par le sang du régicide, et sa divinité porte le nom de la calamité.\nMydeimos l'immortel, lion solitaire, Héritier chryséen en quête de la flamme divine du Conflit. Tu devras endurer mille morts et être couvert de sang avant de retourner dans ta terre natale, seul à porter le fardeau de ta folle destinée.\n— Roi régicide, Dieu déicide. Les sabots d'acier de la guerre parcourent les terres désolées, mais finissent toujours tachés du sang de leur foyer.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Consomme des PV et inflige des DGT imaginaires à une unité ennemie désignée, et des DGT imaginaires mineurs aux cibles adjacentes.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Restaure des PV et accumule de la charge pour le talent. Inflige des DGT imaginaires massifs à un ennemi désigné et des DGT imaginaires aux cibles adjacentes. Provoque la cible et les cibles adjacentes.",
       "type": "Ultime",
       "tag": "Propagation",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "Mydei accumule de la charge lorsqu'il perd des PV. Lorsque la charge atteint 100, il entre dans l'état Vendetta, restaure des PV et avance son action. Lorsque Mydei est dans l'état Vendetta, ses PV max augmentent, mais sa DÉF se maintient à 0. Mydei utilise automatiquement Roi régicide au début de son tour.\nLorsque la charge atteint 150 points dans l'état Vendetta, Mydei gagne immédiatement 1 tour supplémentaire et utilise automatiquement Dieu déicide.\nMydei quitte l'état Vendetta lorsqu'il subit un coup fatal.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Tour supplémentaire",
+          "desc": "Gagne 1 tour supplémentaire qui n'augmente pas le nombre de tours avant la prochaine action. Durant ce tour supplémentaire, vous ne pouvez pas utiliser d'ultime.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "Attire les ennemis dans une zone définie et leur inflige l'état Hébété. Lorsque vous engagez le combat en attaquant des ennemis hébétés, vous infligez des DGT imaginaires mineurs à tous les ennemis, et appliquez Provocation aux cibles. D'autre part, cette unité accumule de la charge pour son talent.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "Droiture née de l'adversité",
-      "desc": "Augmente le multiplicateur de DGT de Dieu déicide sur la cible principale de <nobr>30%</nobr>. Cette capacité inflige désormais à tous les ennemis des DGT imaginaires équivalents au multiplicateur de DGT appliqué à la cible principale."
+      "desc": "Augmente le multiplicateur de DGT de Dieu déicide sur la cible principale de <nobr>30%</nobr>. Cette capacité inflige désormais à tous les ennemis des DGT imaginaires équivalents au multiplicateur de DGT appliqué à la cible principale.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "Témoin du râle des morts",
-      "desc": "Dans l'état Vendetta, les DGT que Mydei inflige ignorent <nobr>15%</nobr> de la DÉF des cibles ennemies. Après avoir reçu des soins, <nobr>40%</nobr> des soins prodigués sont convertis en charge jusqu'à un maximum cumulé de <nobr>40</nobr> points de charge. Le nombre de points de charge pouvant être convertis est réinitialisé après chaque action d'une unité."
+      "desc": "Dans l'état Vendetta, les DGT que Mydei inflige ignorent <nobr>15%</nobr> de la DÉF des cibles ennemies. Après avoir reçu des soins, <nobr>40%</nobr> des soins prodigués sont convertis en charge jusqu'à un maximum cumulé de <nobr>40</nobr> points de charge. Le nombre de points de charge pouvant être convertis est réinitialisé après chaque action d'une unité.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "Festin de gloire immuable",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "Éveil du lion silencieux",
-      "desc": "Lorsque Mydei est dans l'état Vendetta, ses DGT critiques augmentent de <nobr>30%</nobr>, et il restaure des PV équivalents à <nobr>10%</nobr> de ses PV max après avoir subi une attaque de la part d'une cible ennemie."
+      "desc": "Lorsque Mydei est dans l'état Vendetta, ses DGT critiques augmentent de <nobr>30%</nobr>, et il restaure des PV équivalents à <nobr>10%</nobr> de ses PV max après avoir subi une attaque de la part d'une cible ennemie.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "Corps forgé par le combat",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "Héritage de la montagne de sang",
-      "desc": "Entre immédiatement dans l'état Vendetta en début de combat, la charge nécessaire à Dieu déicide passe à <nobr>100</nobr> points."
+      "desc": "Entre immédiatement dans l'état Vendetta en début de combat, la charge nécessaire à Dieu déicide passe à <nobr>100</nobr> points.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

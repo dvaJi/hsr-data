@@ -2,6 +2,7 @@
   "_id": 1004,
   "id": "welt",
   "name": "Welt",
+  "description": "A seasoned member of the Express Crew.\nThe passion buried in his heart burns anew as he enjoys this fresh adventure.\nOccasionally, he would sketch the experiences in a notebook.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -243,10 +244,22 @@
       "_id": 100401,
       "id": "gravity_suppression",
       "name": "Gravity Suppression",
-      "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Imaginary DMG to a single enemy.",
+      "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Imaginary DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 100402,
       "id": "edge_of_the_void",
       "name": "Edge of the Void",
-      "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to a single enemy and further deals DMG 2 extra times, with each time dealing Imaginary DMG equal to #1[i]% of Welt's ATK to a random enemy. On hit, there is a #2[i]% base chance to reduce the enemy's SPD by #3[i]% for #4[i] turn(s).",
-      "simpleDesc": "Deals minor Imaginary DMG to a single enemy. This attack can Bounce 3 times, with a chance of Slowing the hit enemies.",
+      "desc": "Deals Imaginary DMG equal to #1[i]% of Welt's ATK to one designated enemy and further deals DMG 2 extra times, with each time dealing Imaginary DMG equal to #1[i]% of Welt's ATK to a random enemy. On hit, there is a #2[i]% base chance to reduce the enemy's SPD by #3[i]% for #4[i] turn(s).",
+      "simpleDesc": "Deals minor Imaginary DMG to one enemy. This attack can Bounce 3 times, with a chance of Slowing the hit enemies.",
       "type": "Skill",
       "tag": "Bounce",
+      "spBase": 10,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,32 @@
       "simpleDesc": "Deals Imaginary DMG to all enemies, with a high chance of Imprisoning them.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Action Delayed",
+          "desc": "Increases the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1157,27 @@
       "simpleDesc": "When hitting a Slowed enemy, additionally deals minor Imaginary Additional DMG.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1472,32 @@
       "simpleDesc": "Creates a Special Dimension. Enemies in this dimension have their movement speed reduced. After entering combat with enemies in the dimension, there is a high chance for the enemies to become Imprisoned.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Action Delayed",
+          "desc": "Increases the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1411,37 +1518,97 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "Legacy of Honor",
-      "desc": "After using Ultimate, Welt gets enhanced. Then, the next <nobr>2</nobr> time(s) he uses Basic ATK or Skill, deals 1 extra instance of <u>Additional DMG</u> to the enemy target. The <u>Additional DMG</u> dealt when using Basic ATK is equal to <nobr>50%</nobr> of Basic ATK DMG multiplier. The <u>Additional DMG</u> dealt when using Skill is equal to <nobr>80%</nobr> of Skill DMG multiplier."
+      "desc": "After using Ultimate, Welt gets enhanced. Then, the next <nobr>2</nobr> time(s) he uses Basic ATK or Skill, deals 1 extra instance of <u>Additional DMG</u> to the enemy target. The <u>Additional DMG</u> dealt when using Basic ATK is equal to <nobr>50%</nobr> of Basic ATK DMG multiplier. The <u>Additional DMG</u> dealt when using Skill is equal to <nobr>80%</nobr> of Skill DMG multiplier.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100402,
       "id": "conflux_of_stars",
       "name": "Conflux of Stars",
-      "desc": "When his Talent is triggered, Welt regenerates <nobr>3</nobr> Energy."
+      "desc": "When his Talent is triggered, Welt regenerates <nobr>3</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100403,
       "id": "prayer_of_peace",
       "name": "Prayer of Peace",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100404,
       "id": "appellation_of_justice",
       "name": "Appellation of Justice",
-      "desc": "When using Skill, increases the <u>base chance</u> of reducing the attacked enemy target's SPD by <nobr>35%</nobr>."
+      "desc": "When using Skill, increases the <u>base chance</u> of reducing the attacked enemy target's SPD by <nobr>35%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100405,
       "id": "power_of_kindness",
       "name": "Power of Kindness",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "Prospect of Glory",
-      "desc": "When using Skill, deals DMG for 1 extra time to a random enemy."
+      "desc": "When using Skill, deals DMG for 1 extra time to a random enemy.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

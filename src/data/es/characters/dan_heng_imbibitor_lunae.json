@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "Dan Heng - Imbibitor Lunae",
+  "description": "La forma original vidyadhara de Dan Heng contiene el poder que queda de su vida anterior como Imbibitor Lunae.\nAl aceptar la majestuosa corona de astas, también tiene que adoptar todos los méritos y las faltas atribuidos a ese pecador.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Imaginario a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "El ATQ básico Loto benéfico se potencia y se transforma en Trascendencia, Lanza divina o Salto fulgurante.",
       "type": "Habilidad básica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Inflige una gran cantidad de Daño Imaginario a un enemigo y Daño Imaginario a los enemigos adyacentes. Obtiene 2 acumulaciones de Escama sacrosanta. Dan Heng - Imbibitor Lunae puede consumir Escamas sacrosantas en lugar de pts. de habilidad básica.",
       "type": "Habilidad definitiva",
       "tag": "Ráfaga",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "Aumenta el daño que inflige después de cada golpe. Este efecto se puede acumular y dura hasta el final de su turno.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "Entra en el estado Salto en espiral. Al lanzar un ataque, avanza rápidamente una cierta distancia y ataca a los enemigos con los que entra en contacto. Tras atacar al enemigo y entrar en combate, inflige Daño Imaginario a todos los enemigos y obtiene 1 acumulación de Escama sacrosanta.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "Amarrado al cielo",
-      "desc": "Aumenta las acumulaciones posibles de Corazón justo en <nobr>4</nobr>. Además, cada golpe durante un ataque obtiene una acumulación adicional de Corazón justo."
+      "desc": "Aumenta las acumulaciones posibles de Corazón justo en <nobr>4</nobr>. Además, cada golpe durante un ataque obtiene una acumulación adicional de Corazón justo.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "Estandartes de dominación",
-      "desc": "Tras usar su habilidad definitiva, la acción de Dan Heng - Imbibitor Lunae se <u>adelanta</u> un <nobr>100%</nobr> y consigue 1 Escama sacrosanta adicional."
+      "desc": "Tras usar su habilidad definitiva, la acción de Dan Heng - Imbibitor Lunae se <u>adelanta</u> un <nobr>100%</nobr> y consigue 1 Escama sacrosanta adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "Enseña de cúmulos",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "Regocijo del céfiro",
-      "desc": "El <u>efecto positivo</u> de Rugido dominante dura hasta el final de su siguiente turno."
+      "desc": "El <u>efecto positivo</u> de Rugido dominante dura hasta el final de su siguiente turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Efecto positivo",
+          "desc": "Refuerza la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos efectos se pueden eliminar.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "Fin del infortunio",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "Retorno del reino",
-      "desc": "Cuando otro personaje aliado usa su habilidad definitiva, la <u>PEN de la RES</u> a Imaginario del siguiente Salto fulgurante de Dan Heng - Imbibitor Lunae aumenta en un <nobr>20%</nobr>. Este efecto se puede acumular hasta <nobr>3</nobr> veces."
+      "desc": "Cuando otro personaje aliado usa su habilidad definitiva, la <u>PEN de la RES</u> a Imaginario del siguiente Salto fulgurante de Dan Heng - Imbibitor Lunae aumenta en un <nobr>20%</nobr>. Este efecto se puede acumular hasta <nobr>3</nobr> veces.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

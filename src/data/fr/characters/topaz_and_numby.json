@@ -2,6 +2,7 @@
   "_id": 1112,
   "id": "topaz_and_numby",
   "name": "Topaz et Compti",
+  "description": "Cadre du Département des investissements stratégiques de la Corporation pour la Paix Interastrale à la tête de l'Équipe spéciale de surveillance des dettes.\nMalgré son jeune âge, elle fait déjà partie des Dix cœurs de pierre, sa pierre angulaire est la « Topaze du Recouvrement ».\nSon partenaire, Compti, a la faculté de pouvoir détecter avec précision où se trouvent les richesses. Il peut même effectuer des tâches en rapport avec la sécurité, le recouvrement de dettes ou l'analyse financière.\nIls parcourent actuellement la galaxie ensemble à la recherche de tout litige de dette qui pourrait nuire aux affaires de la CPI.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,22 @@
       "_id": 111201,
       "id": "deficit",
       "name": "Déficit",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Topaz à un ennemi unique.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Topaz à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Applique Reconnaissance de dette à un ennemi, ce qui augmente les DGT d'ATQ de suivi qu'il subit. Compti inflige des DGT de feu à la cible.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -728,6 +762,18 @@
       "simpleDesc": "Compti entre dans l'état Inflation exponentielle et son multiplicateur de DGT ainsi que ses DGT critiques augmentent.",
       "type": "Ultime",
       "tag": "Renforcement",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1113,32 @@
       "simpleDesc": "Invoque Compti en début de combat. Lorsque Compti agit, il lance une ATQ de suivi à la cible de Reconnaissance de dette, ce qui lui inflige des DGT de feu.\nL'action de Compti est avancée lorsqu'un ennemi avec Reconnaissance de dette subit une ATQ de suivi.",
       "type": "Talent",
       "tag": "Cible unique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1463,15 @@
       "simpleDesc": "Invoque Compti à vos côtés sur la carte. Compti cherche automatiquement les coffres de base et Magorets à proximité. L'utilisation de la technique permet à Topaz de régénérer des points d'énergie lors de la première attaque de Compti au prochain combat.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1489,106 @@
       "_id": 111201,
       "id": "future_market",
       "name": "Marché à terme",
-      "desc": "Lorsque des ennemis affectés par Reconnaissance de dette subissent des <u>ATQ de suivi</u>, ils entrent dans l'état Débiteur. Cet effet ne peut s'activer qu'une fois par attaque.\nDébiteur augmente les DGT critiques des <u>ATQ de suivi</u> infligées aux cibles ennemies de <nobr>25%</nobr>, cumulables jusqu'à <nobr>2</nobr> fois. Débiteur se dissipe en même temps que Reconnaissance de dette."
+      "desc": "Lorsque des ennemis affectés par Reconnaissance de dette subissent des <u>ATQ de suivi</u>, ils entrent dans l'état Débiteur. Cet effet ne peut s'activer qu'une fois par attaque.\nDébiteur augmente les DGT critiques des <u>ATQ de suivi</u> infligées aux cibles ennemies de <nobr>25%</nobr>, cumulables jusqu'à <nobr>2</nobr> fois. Débiteur se dissipe en même temps que Reconnaissance de dette.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111202,
       "id": "bona_fide_acquisition",
       "name": "Acquisition de bonne foi",
-      "desc": "Topaz régénère <nobr>5</nobr> points d'énergie après que Compti a effectué une action et lancé une attaque."
+      "desc": "Topaz régénère <nobr>5</nobr> points d'énergie après que Compti a effectué une action et lancé une attaque.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111203,
       "id": "seize_the_big_and_free_the_small",
       "name": "Affaire à saisir",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111204,
       "id": "agile_operation",
       "name": "Transaction rapide",
-      "desc": "L'action de Topaz est <u>avancée</u> de <nobr>20%</nobr> après le début du tour de Compti."
+      "desc": "L'action de Topaz est <u>avancée</u> de <nobr>20%</nobr> après le début du tour de Compti.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111205,
       "id": "inflationary_demand",
       "name": "Loi de l'offre et de la demande",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111206,
       "id": "incentive_mechanism",
       "name": "Prime d'intéressement",
-      "desc": "Le nombre d'attaques de Compti augmente de <nobr>1</nobr> lorsqu'il est dans l'état Inflation exponentielle, et sa <u>PÉN de RÉS</u> au feu augmente de <nobr>10%</nobr> lorsqu'il attaque."
+      "desc": "Le nombre d'attaques de Compti augmente de <nobr>1</nobr> lorsqu'il est dans l'état Inflation exponentielle, et sa <u>PÉN de RÉS</u> au feu augmente de <nobr>10%</nobr> lorsqu'il attaque.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

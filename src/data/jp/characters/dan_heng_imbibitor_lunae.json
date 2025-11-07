@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "{RUBY_B#タンコウ}丹恒{RUBY_E#}・{RUBY_B#インゲツ}飲月{RUBY_E#}",
+  "description": "持明族としての丹恒の本相、その前世である「飲月君」が残した力。\n崢嶸たる角冠を受け継いだ以上、咎人の功罪をすべて受け継がなければならない。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の虚数属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "通常攻撃「水華」をそれぞれ「瞬華」、「天矢陰」または「躍動せし耀鱗」に強化する。",
       "type": "戦闘スキル",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "敵単体に大量の虚数属性ダメージを与え、隣接する敵に虚数属性ダメージを与える。「逆鱗」を2獲得する。「逆鱗」は丹恒・飲月のSP消費の代わりとして消費できる。「逆鱗」消費はSP消費と見なされる。",
       "type": "必殺技",
       "tag": "拡散攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "1段の攻撃を行うたびに、自身の与ダメージアップ。この効果は累積でき、自身のターンが終了するまで継続。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "「遊龍」状態に入り、攻撃すると素早く前方に一定距離移動し、触れた敵を攻撃する。敵を先制攻撃して戦闘に入った後、敵全体に虚数属性ダメージを与え、「逆鱗」を1獲得する。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "{RUBY_B#きゅうてん}九天{RUBY_E#}",
-      "desc": "「亢心」の累積可能層数+<nobr>4</nobr>。1段の攻撃を行うたび、さらに「亢心」を1層獲得する。"
+      "desc": "「亢心」の累積可能層数+<nobr>4</nobr>。1段の攻撃を行うたび、さらに「亢心」を1層獲得する。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "{RUBY_B#きゅうりゅう}九旒{RUBY_E#}",
-      "desc": "必殺技を発動した後、丹恒・飲月の<u>行動順</u>が<nobr>100%</nobr>早まり、さらに「逆鱗」を1獲得する。"
+      "desc": "必殺技を発動した後、丹恒・飲月の<u>行動順</u>が<nobr>100%</nobr>早まり、さらに「逆鱗」を1獲得する。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動前倒し",
+          "desc": "対象の次の行動までの間隔が短くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "{RUBY_B#うんき}雲旗{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "{RUBY_B#ちょうふう}嘲風{RUBY_E#}",
-      "desc": "「叱咤」の<u>バフ効果</u>が、自身の次のターンが終了するまで継続するようになる。"
+      "desc": "「叱咤」の<u>バフ効果</u>が、自身の次のターンが終了するまで継続するようになる。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "バフ",
+          "desc": "戦闘に有益な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "{RUBY_B#りょううん}凌雲{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "{RUBY_B#こうりゅう}黄龍{RUBY_E#}",
-      "desc": "丹恒・飲月以外の味方が必殺技を発動した後、丹恒・飲月が発動する次の「躍動せし耀鱗」の虚数属性<u>耐性貫通</u>+<nobr>20%</nobr>。この効果は最大で<nobr>3</nobr>層累積できる。"
+      "desc": "丹恒・飲月以外の味方が必殺技を発動した後、丹恒・飲月が発動する次の「躍動せし耀鱗」の虚数属性<u>耐性貫通</u>+<nobr>20%</nobr>。この効果は最大で<nobr>3</nobr>層累積できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

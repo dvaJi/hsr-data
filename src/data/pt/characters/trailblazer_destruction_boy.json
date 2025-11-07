@@ -2,6 +2,7 @@
   "_id": 8001,
   "id": "trailblazer_destruction_boy",
   "name": "Desbravador A Destruição",
+  "description": "{F#Uma garota}{M#Um garoto} que embarcou no Expresso Astral.\n{M#Ele}{F#Ela} escolheu viajar com o Expresso Astral para eliminar os perigos apresentados pelo Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Causa Dano Físico a um único inimigo e aos inimigos adjacentes a ele.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "Usa ATQ de alvo único ou uma Explosão para realizar um golpe com força máxima.",
       "type": "Perícia Suprema",
       "tag": "Aprimoramento",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1053,15 @@
       "simpleDesc": "Toda vez que essa unidade causa Quebra de Fraqueza a um inimigo-alvo, o ATQ aumenta.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1365,15 @@
       "simpleDesc": "Após usar a Técnica, imediatamente restaura PV para a equipe.",
       "type": "Técnica",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1344,37 +1390,88 @@
       "_id": 800101,
       "id": "a_falling_star",
       "name": "Uma Estrela Cadente",
-      "desc": "Quando inimigos são derrotados pela Perícia Suprema do Desbravador, o Desbravador regenera <nobr>10</nobr> de Energia extra. Esse efeito só pode ser ativado uma vez por ataque."
+      "desc": "Quando inimigos são derrotados pela Perícia Suprema do Desbravador, o Desbravador regenera <nobr>10</nobr> de Energia extra. Esse efeito só pode ser ativado uma vez por ataque.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800102,
       "id": "an_unwilling_host",
       "name": "Um Anfitrião Indisposto",
-      "desc": "Atacar inimigos com Fraqueza contra Físico restaura uma quantidade de PV igual a <nobr>5%</nobr> do ATQ do Desbravador."
+      "desc": "Atacar inimigos com Fraqueza contra Físico restaura uma quantidade de PV igual a <nobr>5%</nobr> do ATQ do Desbravador.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800103,
       "id": "a_leading_whisper",
       "name": "Um Sussurro Condutor",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800104,
       "id": "a_destructing_glance",
       "name": "Um Olhar Destruidor",
-      "desc": "Ao atacar um inimigo com Quebra de Fraqueza, a Chance de CRIT aumenta em <nobr>25%</nobr>."
+      "desc": "Ao atacar um inimigo com Quebra de Fraqueza, a Chance de CRIT aumenta em <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 800105,
       "id": "a_surviving_hope",
       "name": "Uma Esperança Sobrevivente",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800106,
       "id": "a_trailblazing_will",
       "name": "Um Desejo de Exploração",
-      "desc": "O Talento do Desbravador também é ativado quando ele derrota um inimigo."
+      "desc": "O Talento do Desbravador também é ativado quando ele derrota um inimigo.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

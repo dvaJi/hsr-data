@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "Dan Heng - Embebidor Lunae",
+  "description": "A forma verdadeira de Dan Heng de sua linhagem Vidyadhara carrega o poder residual deixado pela sua encarnação passada, o Embebidor Lunae.\nAo aceitar os majestosos chifres sobre sua coroa, ele deve aceitar todos os méritos e falhas atribuídos a esse pecador.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Imaginário leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Aprimora o ATQ Básico Lótus Beneficente para Transcendência, Lança Divina ou Salto Fulgurante.",
       "type": "Perícia",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Causa Dano Imaginário massivo a um único inimigo, causa Dano Imaginário a alvos adjacentes, e ganha 2 Squama Sacrosancta, que podem anular o consumo de Pontos de Perícia de Dan Heng - Embebidor Lunae. Consumir Squama Sacrosancta é considerado o equivalente a consumir pontos de Perícia.",
       "type": "Perícia Suprema",
       "tag": "Explosão",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "Aumenta o Dano para cada golpe realizado. Este efeito é acumulável e dura até o fim da rodada deste personagem.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "Entra no estado de Dragão Saltitante. Atacar fará com que esse personagem se mova para frente rapidamente uma certa distância e ataque todos os inimigos tocados. Após entrar em combate ao atacar inimigos, causa Dano Imaginário a todos os inimigos, e ganha 1 Squama Sacrosancta.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "Conectado ao Céu",
-      "desc": "Aumenta a contagem acumulável de Coração Íntegro em <nobr>4</nobr>, e ganha 1 acúmulo extra de Coração Íntegro por cada golpe durante o ataque."
+      "desc": "Aumenta a contagem acumulável de Coração Íntegro em <nobr>4</nobr>, e ganha 1 acúmulo extra de Coração Íntegro por cada golpe durante o ataque.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "Império nas Nuvens",
-      "desc": "Depois de usar sua Perícia Suprema, a ação de Dan Heng - Embebidor Lunae é Avançada Adiante em <nobr>100%</nobr> e ganha 1 \"Squama Sacrosancta\" extra."
+      "desc": "Depois de usar sua Perícia Suprema, a ação de Dan Heng - Embebidor Lunae é Avançada Adiante em <nobr>100%</nobr> e ganha 1 \"Squama Sacrosancta\" extra.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "Trajado com Nuvens",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "Bênção Zefirina",
-      "desc": "O efeito de <u>melhoria</u> concedido por \"Rugido Soberano\" dura até o final da próxima rodada desta unidade."
+      "desc": "O efeito de <u>melhoria</u> concedido por \"Rugido Soberano\" dura até o final da próxima rodada desta unidade.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Melhoria",
+          "desc": "Pode fornecer melhorias à habilidade de combate por um período de tempo, que podem ser removidas, a menos que esteja especificado de outra forma.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "A Queda é o Orgulho",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "Reinado, Retornado",
-      "desc": "Depois que qualquer outro personagem aliado usa sua Perícia Suprema, a <u>PEN de RES a Imaginário</u> do próximo \"Salto Fulgurante\" de Dan Heng - Embebidor Lunae aumenta em <nobr>20%</nobr>. Este efeito pode acumular até <nobr>3</nobr> vez(es)."
+      "desc": "Depois que qualquer outro personagem aliado usa sua Perícia Suprema, a <u>PEN de RES a Imaginário</u> do próximo \"Salto Fulgurante\" de Dan Heng - Embebidor Lunae aumenta em <nobr>20%</nobr>. Este efeito pode acumular até <nobr>3</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

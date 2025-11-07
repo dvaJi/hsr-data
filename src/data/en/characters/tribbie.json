@@ -2,6 +2,7 @@
   "_id": 1403,
   "id": "tribbie",
   "name": "Tribbie",
+  "description": "From that holy land blessed by the tripartite prophecy, the messenger split into a thousand forms, embarking on a long journey.\nTribios, Holy Maiden of Janusopolis, the Chrysos Heir who stole Passage's Coreflame, toiled for the masses and brought the news of deliverance to all domains.\n—Seek the children of humanity with golden blood in their veins, shatter the dimmest dark in this world, and walk toward the tomorrow where the stars gleam.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Quantum DMG to one enemy and adjacent targets.",
       "type": "Basic ATK",
       "tag": "Blast",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Gains \"Numinosity,\" during which all ally targets have their All-Type RES PEN increased.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -738,6 +766,24 @@
       "simpleDesc": "Activates a Zone and deals minor Quantum DMG to all enemies. While the Zone lasts, increases the DMG taken by enemies and deals minor Quantum Additional DMG to the target that has the highest HP among the hit targets based on the number of enemies attacked.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1077,6 +1123,24 @@
       "simpleDesc": "After other ally characters use Ultimate, Tribbie launches Follow-up ATK, dealing minor Quantum DMG to all enemies. This effect triggers up to 1 time per character. When Tribbie uses Ultimate, resets the trigger count for other ally characters.",
       "type": "Talent",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,6 +1435,15 @@
       "simpleDesc": "When entering battle, obtains \"Numinosity.\"",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1387,37 +1460,114 @@
       "_id": 140301,
       "id": "rite_of_sugar_scoop",
       "name": "Rite of Sugar Scoop",
-      "desc": "While the Zone lasts and after ally targets attack enemies, additionally deals <u>True DMG</u> equal to <nobr>24%</nobr> of the total DMG of this attack to targets that have been dealt <u>Additional DMG</u> by the Zone."
+      "desc": "While the Zone lasts and after ally targets attack enemies, additionally deals <u>True DMG</u> equal to <nobr>24%</nobr> of the total DMG of this attack to targets that have been dealt <u>Additional DMG</u> by the Zone.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "True DMG",
+          "desc": "Non-Type DMG that is not affected by any effects. This DMG is not considered as using 1 attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140302,
       "id": "guide_of_dream_tour",
       "name": "Guide of Dream Tour",
-      "desc": "The <u>Additional DMG</u> dealt by the Zone increases to <nobr>120%</nobr> of the original DMG. When the Zone deals <u>Additional DMG</u>, further deals <nobr>1</nobr> instance(s) of Additional DMG."
+      "desc": "The <u>Additional DMG</u> dealt by the Zone increases to <nobr>120%</nobr> of the original DMG. When the Zone deals <u>Additional DMG</u>, further deals <nobr>1</nobr> instance(s) of Additional DMG.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140303,
       "id": "trove_of_morning_glow",
       "name": "Trove of Morning Glow",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140304,
       "id": "peace_of_empathy_bond",
       "name": "Peace of Empathy Bond",
-      "desc": "While \"Numinosity\" lasts, the DMG dealt by all allies ignores <nobr>18%</nobr> of the target's DEF."
+      "desc": "While \"Numinosity\" lasts, the DMG dealt by all allies ignores <nobr>18%</nobr> of the target's DEF.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140305,
       "id": "clock_of_wonder_origin",
       "name": "Clock of Wonder Origin",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140306,
       "id": "morrow_of_star_shine",
       "name": "Morrow of Star Shine",
-      "desc": "After Tribbie uses Ultimate, launches her Talent's <u>Follow-up ATK</u> against all enemies. The DMG dealt by Talent's <u>Follow-up ATK</u> increases by <nobr>729%</nobr>."
+      "desc": "After Tribbie uses Ultimate, launches her Talent's <u>Follow-up ATK</u> against all enemies. The DMG dealt by Talent's <u>Follow-up ATK</u> increases by <nobr>729%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

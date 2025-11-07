@@ -2,6 +2,7 @@
   "_id": 1211,
   "id": "bailu",
   "name": "Bailu",
+  "description": "La Grande ancienne des Vidyadhariens également connue sous le nom de « Dame guérisseuse » à bord du Luofu.\nElle utilise sa science médicale et ses traitements uniques issus du peuple des dragons vidyadhariens pour sauver des vies.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -243,10 +244,22 @@
       "_id": 121101,
       "id": "diagnostic_kick",
       "name": "Diagnostic musclé",
-      "desc": "Inflige des DGT de foudre équivalents à #1[i]% de l'ATQ de Bailu à un ennemi unique.",
+      "desc": "Inflige des DGT de foudre équivalents à #1[i]% de l'ATQ de Bailu à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de foudre mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Restaure les PV d'un allié unique, puis soigne des alliés de manière aléatoire.",
       "type": "Compétence",
       "tag": "Restauration",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "Restaure des PV à tous les alliés et leur accorde Revigoration ou prolonge sa durée.",
       "type": "Ultime",
       "tag": "Restauration",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,24 @@
       "simpleDesc": "Les cibles alliées qui bénéficient de Revigoration regagnent des PV après avoir été attaquées.\nLorsqu'un coéquipier subit un coup fatal, Bailu lui restaure immédiatement des PV. Cet effet ne peut être déclenché qu'1 seule fois par combat.",
       "type": "Talent",
       "tag": "Restauration",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1491,15 @@
       "simpleDesc": "Après utilisation de la technique, octroie Revigoration à tous les alliés au début du combat suivant.",
       "type": "Technique",
       "tag": "Restauration",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1516,79 @@
       "_id": 121101,
       "id": "ambrosial_aqua",
       "name": "Eau d'ambroisie",
-      "desc": "Si les PV de la cible alliée sont au maximum lorsque Revigoration prend fin, elle régénère en plus <nobr>8</nobr> points d'énergie."
+      "desc": "Si les PV de la cible alliée sont au maximum lorsque Revigoration prend fin, elle régénère en plus <nobr>8</nobr> points d'énergie.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121102,
       "id": "sylphic_slumber",
       "name": "Repos sylphique",
-      "desc": "Après utilisation de son ultime, les soins prodigués par Bailu augmentent de <nobr>15%</nobr> supplémentaires pendant <nobr>2</nobr> tours."
+      "desc": "Après utilisation de son ultime, les soins prodigués par Bailu augmentent de <nobr>15%</nobr> supplémentaires pendant <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121103,
       "id": "omniscient_opulence",
       "name": "Opulence omnisciente",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121104,
       "id": "evil_excision",
       "name": "Suppression du mal",
-      "desc": "Les soins prodigués par la compétence augmentent les DGT infligés par le bénéficiaire de <nobr>10%</nobr> pendant <nobr>2</nobr> tours. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois."
+      "desc": "Les soins prodigués par la compétence augmentent les DGT infligés par le bénéficiaire de <nobr>10%</nobr> pendant <nobr>2</nobr> tours. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121105,
       "id": "waning_worries",
       "name": "Inquiétudes oubliées",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121106,
       "id": "drooling_drop_of_draconic_divinity",
       "name": "Mucus de divinité draconique",
-      "desc": "Bailu peut soigner des alliés ayant reçu un coup fatal <nobr>1</nobr> fois de plus par combat."
+      "desc": "Bailu peut soigner des alliés ayant reçu un coup fatal <nobr>1</nobr> fois de plus par combat.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

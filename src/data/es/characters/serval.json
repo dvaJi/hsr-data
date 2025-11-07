@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "Serval",
+  "description": "Mecánica de Belobog. Antes era investigadora de la División de Tecnología de los Arquitectos.\nEs la hermana mayor de Gepard Landau y sus personalidades no pueden ser más distintas.\nLe encanta un antiguo género de música, de antes del Hielo Eterno, conocido como \"rock\".",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,24 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a un enemigo y a los objetivos adyacentes. Gran probabilidad de afectar con Electrocución a los enemigos golpeados.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "Inflige Daño de Rayo a todos los enemigos y alarga la duración de Electrocución.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "Tras atacar, inflige una pequeña cantidad de daño adicional a todos los enemigos afectados por Electrocución.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "Ataca inmediatamente al enemigo y entra en combate. Inflige un #4[i]% del ATQ de Serval como Daño de Rayo a un enemigo al azar. Además, cada enemigo tiene una probabilidad base del #1[i]% de ser afectado por Electrocución durante #3[i] turnos.\nLos enemigos electrocutados reciben un Daño de Rayo con el tiempo equivalente al #2[i]% del ATQ de Serval al comienzo de cada turno.",
       "simpleDesc": "Ataca al enemigo y entra en combate. Inflige una pequeña cantidad de Daño de Rayo a un enemigo al azar. Además, cada enemigo tiene una gran probabilidad de ser afectado por Electrocución.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "Cámara de eco",
-      "desc": "El ATQ básico inflige un Daño de Rayo equivalente al <nobr>60%</nobr> del daño de ATQ básico a un enemigo aleatorio adyacente al objetivo."
+      "desc": "El ATQ básico inflige un Daño de Rayo equivalente al <nobr>60%</nobr> del daño de ATQ básico a un enemigo aleatorio adyacente al objetivo.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "¡Otra, otra!",
-      "desc": "Cada vez que el talento inflige <u>daño adicional</u>, Serval recupera <nobr>4</nobr> pts. de energía."
+      "desc": "Cada vez que el talento inflige <u>daño adicional</u>, Serval recupera <nobr>4</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "Escucha el latido de los engranajes",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "¡Hagamos algo de ruido!",
-      "desc": "Al usar la habilidad definitiva, tiene una <u>probabilidad base</u> del <nobr>100%</nobr> de afectar a los enemigos que no estén ya electrocutados con un estado de Electrocución equivalente al de la habilidad básica."
+      "desc": "Al usar la habilidad definitiva, tiene una <u>probabilidad base</u> del <nobr>100%</nobr> de afectar a los enemigos que no estén ya electrocutados con un estado de Electrocución equivalente al de la habilidad básica.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "¡El grito más fuerte de Belobog!",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "¡Esta canción resuena en el cielo!",
-      "desc": "El daño que Serval inflige a los enemigos afectados por Electrocución aumenta en un <nobr>30%</nobr>."
+      "desc": "El daño que Serval inflige a los enemigos afectados por Electrocución aumenta en un <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1307,
   "id": "black_swan",
   "name": "Black Swan",
+  "description": "A Memokeeper of the Garden of Recollection. An indolent and mysterious soothsayer.\n\"Remembrance\" of men are hers to heed, threads of fate are hers to tug.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -244,9 +245,35 @@
       "id": "percipience_silent_dawn",
       "name": "Percipience, Silent Dawn",
       "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy target, with a #2[i]% base chance of inflicting 1 stack of \"Arcana\" on the target. Additionally, when attacking a target that suffers Wind Shear, Bleed, Burn, or Shock, there is respectively a #3[i]% base chance of inflicting 1 extra stack of \"Arcana\" on the target.",
-      "simpleDesc": "Deals minor Wind DMG to a single enemy and has a chance of applying Arcana to the target. After attacking a target that suffers Wind Shear, Bleed, Burn, or Shock, there is respectively a chance of additionally applying Arcana.",
+      "simpleDesc": "Deals minor Wind DMG to one enemy and has a chance of applying \"Arcana\" to the target. After attacking a target that suffers Wind Shear, Bleed, Burn, or Shock, there is respectively a chance of additionally applying \"Arcana\".",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -436,9 +463,35 @@
       "id": "decadence_false_twilight",
       "name": "Decadence, False Twilight",
       "desc": "Deals Wind DMG equal to #1[i]% of Black Swan's ATK to one designated enemy target and any adjacent targets. At the same time, there is a #2[i]% base chance of inflicting 1 stack of \"Arcana\" on the target enemy and the adjacent targets. Additionally, there is a #3[i]% base chance of reducing the DEF of the target enemy and the adjacent targets by #4[f1]%, lasting for #5[i] turn(s).",
-      "simpleDesc": "Deals minor Wind DMG to a single enemy target and any adjacent targets, with a high chance of inflicting Arcana on the targets and lowering their DEF.",
+      "simpleDesc": "Deals minor Wind DMG to one enemy target and any adjacent targets, with a high chance of inflicting \"Arcana\" on the targets and lowering their DEF.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -793,6 +846,24 @@
       "simpleDesc": "Inflicts Epiphany on all enemies, increasing the DMG the targets take in their turn. Additionally, having Arcana is regarded as having Wind Shear, Bleed, Burn, and Shock. Furthermore, Arcana will not reset its stacks after causing DMG at the start of the next turn. Deals Wind DMG to all enemies.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1132,6 +1203,32 @@
       "simpleDesc": "When an enemy target receives DoT at the start of each turn, there is a chance for it to be inflicted with Arcana. They receive Wind DoT at the start of the turn, and Black Swan triggers additional effects based on the number of Arcana stacks.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1531,6 +1628,32 @@
       "simpleDesc": "After this Technique is used, at the start of the next battle, there is a high chance for each enemy to be inflicted with Arcana repeatedly until Arcana fails to be inflicted.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1548,37 +1671,121 @@
       "_id": 130701,
       "id": "seven_pillars_of_wisdom",
       "name": "Seven Pillars of Wisdom",
-      "desc": "While Black Swan is active in battle, enemies afflicted with Wind Shear, Bleed, Burn, or Shock will have their corresponding Wind, Physical, Fire, or Lightning RES respectively reduced by <nobr>25%</nobr>."
+      "desc": "While Black Swan is active in battle, enemies afflicted with Wind Shear, Bleed, Burn, or Shock will have their corresponding Wind, Physical, Fire, or Lightning RES respectively reduced by <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130702,
       "id": "weep_not_for_me_my_lamb",
       "name": "Weep Not For Me, My Lamb",
-      "desc": "When an enemy target afflicted with \"<u>Arcana</u>\" is defeated, there is a <nobr>100%</nobr> <u>base chance</u> of inflicting <nobr>6</nobr> stack(s) of \"<u>Arcana</u>\" on adjacent targets."
+      "desc": "When an enemy target afflicted with \"<u>Arcana</u>\" is defeated, there is a <nobr>100%</nobr> <u>base chance</u> of inflicting <nobr>6</nobr> stack(s) of \"<u>Arcana</u>\" on adjacent targets.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130703,
       "id": "as_above_so_below",
       "name": "As Above, So Below",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130704,
       "id": "in_tears_we_gift",
       "name": "In Tears We Gift",
-      "desc": "While in the Epiphany state, enemy targets have their Effect RES reduced by <nobr>10%</nobr> and Black Swan regenerates <nobr>8</nobr> Energy at the start of these targets' turns or when they are defeated. This Energy Regeneration effect can only trigger up to 1 time while Epiphany lasts. The trigger count is reset when Epiphany is applied again."
+      "desc": "While in the Epiphany state, enemy targets have their Effect RES reduced by <nobr>10%</nobr> and Black Swan regenerates <nobr>8</nobr> Energy at the start of these targets' turns or when they are defeated. This Energy Regeneration effect can only trigger up to 1 time while Epiphany lasts. The trigger count is reset when Epiphany is applied again.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130705,
       "id": "linnutee_flyway",
       "name": "Linnutee Flyway",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130706,
       "id": "pantheon_merciful_masses_pitiful",
       "name": "Pantheon Merciful, Masses Pitiful",
-      "desc": "When an enemy target is attacked by Black Swan's teammates, Black Swan has a <nobr>65%</nobr> <u>base chance</u> of inflicting 1 stack of \"<u>Arcana</u>\" on the target.\nEvery time Black Swan inflicts \"<u>Arcana</u>\" on an enemy target, there is a <nobr>50%</nobr> <u>fixed chance</u> to additionally increase the number of \"<u>Arcana</u>\" stacked this time by <nobr>1</nobr>."
+      "desc": "When an enemy target is attacked by Black Swan's teammates, Black Swan has a <nobr>65%</nobr> <u>base chance</u> of inflicting 1 stack of \"<u>Arcana</u>\" on the target.\nEvery time Black Swan inflicts \"<u>Arcana</u>\" on an enemy target, there is a <nobr>50%</nobr> <u>fixed chance</u> to additionally increase the number of \"<u>Arcana</u>\" stacked this time by <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana is a debuff that deals DMG over time. This debuff cannot be dispelled.\nWhile in the Arcana state, the unit is also considered to be in the Wind Shear state and takes Wind DoT at the start of each turn.\nThe infliction of Arcana ignores the target's Wind Shear RES, Bleed RES, Burn RES, and Shock RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000002,
+          "name": "Fixed Chance",
+          "desc": "Fixed chance will not be affected by any factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

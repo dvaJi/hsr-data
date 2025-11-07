@@ -2,6 +2,7 @@
   "_id": 1223,
   "id": "moze",
   "name": "モゼ",
+  "description": "仙舟「曜青」の影護衛、寡黙な一匹狼。\n情報工作など公にはできない仕事を担っているため、人前には滅多に姿を現さない。モゼが武器を抜く時は、敵が死ぬ時でもある。\nあらゆる暗殺術に精通している彼は、清潔であること、規則的であることに並々ならぬこだわりを持っているようだ。",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の雷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "敵単体を「獲物」状態にし、雷属性ダメージを与え、チャージを#2[i]獲得する。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,24 @@
       "simpleDesc": "敵単体に雷属性ダメージを与え、天賦による追加攻撃を発動する。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,40 @@
       "simpleDesc": "フィールド上に「獲物」状態の敵がいる時、モゼは一時離脱状態に入る。\n味方が「獲物」状態の敵を攻撃した後、モゼはその敵に雷属性付加ダメージを与え、チャージを1消費する。チャージを#2[i]消費するたびに、モゼは「獲物」状態の敵に追加攻撃を行い、雷属性ダメージを与える。チャージが0になると、敵の「獲物」状態が解除される。",
       "type": "天賦",
       "tag": "単体攻撃",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000016,
+          "name": "一時離脱",
+          "desc": "一時離脱状態のターゲットはスキルのターゲットにはならず、アクションバーにも表示されない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1399,15 @@
       "simpleDesc": "ステルス状態に入る。ステルス状態で敵を先制攻撃して戦闘に入った時、与ダメージがアップする。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,37 +1426,97 @@
       "_id": 122301,
       "id": "oathkeeper",
       "name": "{RUBY_B#りっし}立志{RUBY_E#}",
-      "desc": "戦闘に入った後、モゼはEPを<nobr>20</nobr>回復する。天賦による<u>付加ダメージ</u>を1回発動するたびに、EPを<nobr>2</nobr>回復する。"
+      "desc": "戦闘に入った後、モゼはEPを<nobr>20</nobr>回復する。天賦による<u>付加ダメージ</u>を1回発動するたびに、EPを<nobr>2</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122302,
       "id": "wrathbearer",
       "name": "{RUBY_B#ちょうばつ}懲罰{RUBY_E#}",
-      "desc": "味方が「獲物」状態の敵にダメージを与える時、会心ダメージ+<nobr>40%</nobr>。"
+      "desc": "味方が「獲物」状態の敵にダメージを与える時、会心ダメージ+<nobr>40%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122303,
       "id": "deathchaser",
       "name": "{RUBY_B#ついげき}追撃{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122304,
       "id": "heathprowler",
       "name": "{RUBY_B#おんみつ}隠密{RUBY_E#}",
-      "desc": "必殺技を発動する時、モゼの与ダメージ+<nobr>#1[f1]%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "必殺技を発動する時、モゼの与ダメージ+<nobr>#1[f1]%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122305,
       "id": "truthbender",
       "name": "{RUBY_B#ぎまん}欺瞞{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122306,
       "id": "faithbinder",
       "name": "{RUBY_B#ちゅうせい}忠誠{RUBY_E#}",
-      "desc": "天賦による<u>追加攻撃</u>のダメージ倍率+<nobr>25%</nobr>。"
+      "desc": "天賦による<u>追加攻撃</u>のダメージ倍率+<nobr>25%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

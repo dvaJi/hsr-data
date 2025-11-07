@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "キャストリス",
+  "description": "死を崇める都市国家、絶えず雪が舞うエイジリアは、すでに甘美で安らかな眠りに就いた。\nステュクスの娘キャストリス、「死」の火種を探し求める黄金裔。世の魂の慟哭を慰め、運命の孤独に抱擁を与える者である。\n——旅立つといい。生も死も等しき旅路。蝶が枝にとまる時、凋落したものは新生するのだ。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の量子属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "味方それぞれの残りHPを消費し、敵単体に量子属性ダメージを与え、隣接する敵に少量の量子属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "拡散攻撃",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "記憶の精霊「死竜」を召喚し、その行動順を100%早める。同時に境界を展開し、敵全体の全属性耐性をダウンさせる。",
       "type": "必殺技",
       "tag": "召喚",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "記憶の精霊を召喚",
+          "desc": "記憶の精霊をフィールドに召喚する。記憶の精霊がフィールド上にいる場合、記憶の精霊に付与されているすべての行動制限系デバフを解除する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "行動前倒し",
+          "desc": "対象の次の行動までの間隔が短くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "境界",
+          "desc": "フィールドに境界は1つしか展開できない。また、境界が持続している間、他の境界を展開するスキルは発動できない。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1150,15 @@
       "simpleDesc": "味方がHPを失った時、キャストリスは「新蕾」を獲得し、同時にキャストリスと死竜の与ダメージがアップする。「新蕾」が上限に達すると必殺技を発動できる。死竜がフィールドにいる時、死竜以外の味方が失ったHPは、死竜のHPに変換される。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "秘技を使用した後、#3[i]秒間継続する「冥茫」状態に入る。「冥茫」状態の敵はキャストリスに近づくことができない。\n「冥茫」状態で攻撃を行うと、範囲内のすべての敵が戦闘に入る。同時に記憶の精霊「死竜」を召喚し、その行動順を100%早め、境界「遺世の冥域」を展開する。「死竜」の残りHPは「新蕾」の上限#2[i]%分となる。戦闘に入った後、死竜以外の味方全体の残りHPを#1[i]%消費する。\nなお、戦闘に入った後、死竜を召喚しなかった場合、キャストリスは「新蕾」の上限#4[i]%分の「新蕾」を獲得する。",
       "simpleDesc": "「冥茫」状態に入ると、敵はキャストリスに近づくことができなくなる。\n「冥茫」状態で攻撃を行うと、範囲内のすべての敵が戦闘に入り、同時に記憶の精霊「死竜」を召喚し、その行動順を100%早める。戦闘に入った時、死竜以外の味方全体のHPを消費する。\n戦闘に入った後、死竜を召喚しなかった場合、キャストリスは「新蕾」の上限#4[i]%分の「新蕾」を回復する。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "記憶の精霊を召喚",
+          "desc": "記憶の精霊をフィールドに召喚する。記憶の精霊がフィールド上にいる場合、記憶の精霊に付与されているすべての行動制限系デバフを解除する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "行動前倒し",
+          "desc": "対象の次の行動までの間隔が短くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "境界",
+          "desc": "フィールドに境界は1つしか展開できない。また、境界が持続している間、他の境界を展開するスキルは発動できない。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "死竜・ボリュクス",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "{RUBY_B#めいぼうさ}冥茫裂{RUBY_E#}く{RUBY_B#そうこん}爪痕{RUBY_E#}",
+        "desc": "敵全体にキャストリスの最大HP<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>分の量子属性ダメージを与える。",
+        "simpleDesc": "敵全体に少量の量子属性ダメージを与える。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "全体攻撃"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "{RUBY_B#かいめいや}晦冥焼{RUBY_E#}き{RUBY_B#はら}払{RUBY_E#}う{RUBY_B#いぶき}息吹{RUBY_E#}",
+        "desc": "「晦冥焼き払う息吹」を発動すると、死竜の最大HP<nobr>#1[i]%</nobr>分のHPを消費し、敵全体にキャストリスの最大HP<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>分の量子属性ダメージを与える。\n1回の攻撃で「晦冥焼き払う息吹」を重複して発動することができ、その際、ダメージ倍率はそれぞれ<span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span>/<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>までアップする。すでに<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>までアップした場合、それ以上は上がらない。また、この効果により上昇したダメージ倍率は死竜が消えるまで下がらない。\n死竜の残りHPが自身の最大HPの<nobr>#5[i]%</nobr>以下の時にこのスキルを発動すると、HPが1になり、同時に精霊天賦「幽墟奪略の晦翼」と同じスキル効果が発動する。",
+        "simpleDesc": "自身のHPを消費し、敵全体に量子属性ダメージを与える。ターンは終了しない。スキルを重複して発動した時、最大3回まで強化される。残りHPが<span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>以下の時にこのスキルを発動すると、記憶の精霊の天賦「幽墟奪略の晦翼」の効果が発動する。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "全体攻撃"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "{RUBY_B#つき}月{RUBY_E#}の{RUBY_B#まゆ}繭{RUBY_E#}が{RUBY_B#おお}覆{RUBY_E#}う{RUBY_B#しんく}身躯{RUBY_E#}",
+        "desc": "死竜がフィールドにいる時、味方の<u>後陣</u>となる。味方がダメージを受けるまたはHPを消費する時、残りHPが1を下回ることはない。以降のダメージは死竜が負担するが、死竜が消えるまで、本来の数値の<nobr>#1[i]%</nobr>に相当するHPを消費する。",
+        "simpleDesc": "死竜がフィールドにいる時、味方の<u>後陣</u>となる。味方の残りHPが1になった後、以降の受けたダメージと消費したHPは死竜が負担する。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "サポート"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "後陣",
+            "desc": "敵は後陣の味方を選択できず、また、味方の「拡散」タイプのスキルは後陣に拡散できない。",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "{RUBY_B#しじま}静寂{RUBY_E#}を{RUBY_B#ゆ}揺{RUBY_E#}るがす{RUBY_B#どこう}怒哮{RUBY_E#}",
+        "desc": "死竜が召喚された時、味方全体の与ダメージ+<nobr>#1[i]%</nobr>、<nobr>#2[i]</nobr>ターン継続。",
+        "simpleDesc": "召喚された時、味方全体の与ダメージをアップする。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "サポート"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "{RUBY_B#ゆうきょだつりゃく}幽墟奪略{RUBY_E#}の{RUBY_B#かいよく}晦翼{RUBY_E#}",
+        "desc": "死竜が消える時、敵に<nobr>#2[i]</nobr>回ダメージを与える。1ヒットごとにランダムな敵単体にキャストリスの最大HP<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>分の量子属性ダメージを与える。同時に味方全体のHPをキャストリスの最大HP<span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>+<span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>回復する。",
+        "simpleDesc": "消える時、敵単体に少量の量子属性ダメージを与え、<span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>回バウンドする。同時に味方全体のHPを回復する。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "バウンド"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "{RUBY_B#かいめいや}晦冥焼{RUBY_E#}き{RUBY_B#はら}払{RUBY_E#}う{RUBY_B#いぶき}息吹{RUBY_E#}",
+        "desc": "",
+        "simpleDesc": "自身のHPを消費し、敵全体に量子属性ダメージを与える。ターンは終了しない。スキルを重複して発動した時、最大3回まで強化される。残りHPが<span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>以下の時にこのスキルを発動すると、記憶の精霊の天賦「幽墟奪略の晦翼」の効果が発動する。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "全体攻撃"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "{RUBY_B#かいめいや}晦冥焼{RUBY_E#}き{RUBY_B#はら}払{RUBY_E#}う{RUBY_B#いぶき}息吹{RUBY_E#}",
+        "desc": "",
+        "simpleDesc": "自身のHPを消費し、敵全体に量子属性ダメージを与える。ターンは終了しない。スキルを重複して発動した時、最大3回まで強化される。残りHPが<span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>以下の時にこのスキルを発動すると、記憶の精霊の天賦「幽墟奪略の晦翼」の効果が発動する。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "全体攻撃"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "{RUBY_B#ゆうきょだつりゃく}幽墟奪略{RUBY_E#}の{RUBY_B#かいよく}晦翼{RUBY_E#}",
+        "desc": "HPをすべて消費し、敵に<nobr>#2[i]</nobr>回ダメージを与える。1ヒットごとにランダムな敵単体にキャストリスの最大HPの<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>分の量子属性ダメージを与える。同時に味方全体のHPをキャストリスの最大HP<span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>+<span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>回復する。",
+        "simpleDesc": "HPをすべて消費し、敵単体に少量の量子属性ダメージを与え、<span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>回バウンドする。同時に味方全体のHPを回復する。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "バウンド"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "{RUBY_B#ゆきじ}雪地{RUBY_E#}の{RUBY_B#せいじょ}聖女{RUBY_E#}、\n{RUBY_B#きおく}記憶{RUBY_E#}を{RUBY_B#ひつぎ}棺{RUBY_E#}に{RUBY_B#と}閉{RUBY_E#}じ{RUBY_B#こ}込{RUBY_E#}めて",
-      "desc": "敵の残りHPが最大HP<nobr>80%</nobr>/<nobr>50%</nobr>以下の時、その敵に対する「骸爪、冥竜の抱擁」、「冥茫裂く爪痕」、「晦冥焼き払う息吹」、「幽墟奪略の晦翼」の与ダメージは本来の<nobr>120%</nobr>/<nobr>140%</nobr>になる。"
+      "desc": "敵の残りHPが最大HP<nobr>80%</nobr>/<nobr>50%</nobr>以下の時、その敵に対する「骸爪、冥竜の抱擁」、「冥茫裂く爪痕」、「晦冥焼き払う息吹」、「幽墟奪略の晦翼」の与ダメージは本来の<nobr>120%</nobr>/<nobr>140%</nobr>になる。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "{RUBY_B#よくし}翼翅{RUBY_E#}と{RUBY_B#はな}花{RUBY_E#}の{RUBY_B#かんむり}冠{RUBY_E#}を{RUBY_B#いただ}戴{RUBY_E#}く",
-      "desc": "記憶の精霊「死竜」を召喚した後、キャストリスは「熾意」を<nobr>2</nobr>層獲得する。「熾意」は最大で<nobr>2</nobr>層累積でき、死竜の精霊スキル「晦冥焼き払う息吹」が消費するHPの代わりとして消費できる。さらにキャストリスの<u>行動順が<nobr>100%</nobr>早まり</u>、次の強化戦闘スキル発動後、キャストリスは「新蕾」の上限<nobr>30%</nobr>分の「新蕾」を獲得する。"
+      "desc": "記憶の精霊「死竜」を召喚した後、キャストリスは「熾意」を<nobr>2</nobr>層獲得する。「熾意」は最大で<nobr>2</nobr>層累積でき、死竜の精霊スキル「晦冥焼き払う息吹」が消費するHPの代わりとして消費できる。さらにキャストリスの<u>行動順が<nobr>100%</nobr>早まり</u>、次の強化戦闘スキル発動後、キャストリスは「新蕾」の上限<nobr>30%</nobr>分の「新蕾」を獲得する。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動前倒し",
+          "desc": "対象の次の行動までの間隔が短くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "{RUBY_B#けいけん}敬虔{RUBY_E#}な{RUBY_B#たびびと}旅人{RUBY_E#}、\n{RUBY_B#しきょう}死境{RUBY_E#}で{RUBY_B#かろ}軽{RUBY_E#}やかに{RUBY_B#ま}舞{RUBY_E#}って",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "{RUBY_B#あいか}哀歌{RUBY_E#}を{RUBY_B#いだ}抱{RUBY_E#}く\n{RUBY_B#やす}安{RUBY_E#}らかな{RUBY_B#ねむ}眠{RUBY_E#}り",
-      "desc": "キャストリスがフィールドにいる時、味方全体が治癒を受けた場合、回復量+<nobr>20%</nobr>。"
+      "desc": "キャストリスがフィールドにいる時、味方全体が治癒を受けた場合、回復量+<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "{RUBY_B#じゅんぱく}純白{RUBY_E#}の{RUBY_B#しんぺん}新編{RUBY_E#}、\n{RUBY_B#よげん}預言{RUBY_E#}で{RUBY_B#いろど}彩{RUBY_E#}られて",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "{RUBY_B#りゅうねん}流年{RUBY_E#}を{RUBY_B#ま}待{RUBY_E#}ち{RUBY_B#まゆ}繭{RUBY_E#}を{RUBY_B#やぶ}破{RUBY_E#}る",
-      "desc": "キャストリスと死竜がダメージを与える時、量子属性<u>耐性貫通</u>+<nobr>20%</nobr>。死竜は攻撃時、弱点属性を無視して敵の靭性を削ることができる。敵を弱点撃破した時、量子属性の弱点撃破効果を発動する。また、精霊天賦「幽墟奪略の晦翼」のバウンド回数+<nobr>3</nobr>。"
+      "desc": "キャストリスと死竜がダメージを与える時、量子属性<u>耐性貫通</u>+<nobr>20%</nobr>。死竜は攻撃時、弱点属性を無視して敵の靭性を削ることができる。敵を弱点撃破した時、量子属性の弱点撃破効果を発動する。また、精霊天賦「幽墟奪略の晦翼」のバウンド回数+<nobr>3</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

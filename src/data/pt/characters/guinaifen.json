@@ -2,6 +2,7 @@
   "_id": 1210,
   "id": "guinaifen",
   "name": "Guinaifen",
+  "description": "Uma artista visitando o Luofu do Xianzhou. Em outras palavras, uma artista de rua.\nQuando não está preocupada com comida e abrigo, procura uma vida nova no Luofu.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Fogo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Causa Dano de Fogo a um único inimigo e Dano de Fogo leve a inimigos adjacentes, com altas chances de causar Queimadura a eles.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,18 @@
       "simpleDesc": "Causa Dano de Fogo a todos os inimigos. Se os inimigos já estiverem com Queimadura, o estado de Queimadura causa Dano 1 vez extra.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "Após o estado de Queimadura causar Dano no inimigo, há altas chances de aplicar Beijo de Fogo no inimigo.",
       "type": "Talento",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1432,6 +1496,24 @@
       "desc": "Ataca o inimigo imediatamente. Depois de entrar na batalha, causa Dano #2[i] vez(es), causando #1[i]% do ATQ de Guinaifen como Dano de Fogo a um único inimigo-alvo aleatório a cada vez, com uma chance-base de #3[i]% de infligir Beijo de Fogo a ele.",
       "simpleDesc": "Ataca o inimigo. Depois de entrar em batalha, causa Dano de Fogo leve a um inimigo-alvo com altas chances de aplicar \"Beijo de Fogo\", com um total de 4 Rebotes.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1450,37 +1532,88 @@
       "_id": 121001,
       "id": "slurping_noodles_during_handstand",
       "name": "Comendo Macarrão Plantando Bananeira",
-      "desc": "Ao usar a Perícia, há <nobr>100%</nobr> de <u>chance-base</u> de reduzir a RES a Efeito do inimigo-alvo atacado em <nobr>10%</nobr> por <nobr>2</nobr> rodada(s)."
+      "desc": "Ao usar a Perícia, há <nobr>100%</nobr> de <u>chance-base</u> de reduzir a RES a Efeito do inimigo-alvo atacado em <nobr>10%</nobr> por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121002,
       "id": "brushing_teeth_while_whistling",
       "name": "Escovando os Dentes Enquanto Assovia",
-      "desc": "Quando um inimigo-alvo estiver com Queimadura, o multiplicador de Dano do estado de Queimadura aplicado pelo ATQ Básico ou Perícia de Guinaifen aumenta em <nobr>40%</nobr>."
+      "desc": "Quando um inimigo-alvo estiver com Queimadura, o multiplicador de Dano do estado de Queimadura aplicado pelo ATQ Básico ou Perícia de Guinaifen aumenta em <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121003,
       "id": "smashing_boulder_on_chest",
       "name": "Destruindo Pedras com o Peito",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121004,
       "id": "blocking_pike_with_neck",
       "name": "Bloqueando Lanças com o Pescoço",
-      "desc": "Toda vez que o estado de Queimadura infligido por Guinaifen causar Dano, Guinaifen regenera <nobr>2</nobr> de Energia."
+      "desc": "Toda vez que o estado de Queimadura infligido por Guinaifen causar Dano, Guinaifen regenera <nobr>2</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121005,
       "id": "swallowing_sword_to_stomach",
       "name": "Engolindo Espadas",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121006,
       "id": "catching_bullet_with_hands",
       "name": "Pegando Projéteis com as Mãos",
-      "desc": "Aumenta o acúmulo máximo de Beijo de Fogo em <nobr>1</nobr>."
+      "desc": "Aumenta o acúmulo máximo de Beijo de Fogo em <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

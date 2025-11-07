@@ -2,6 +2,7 @@
   "_id": 8006,
   "id": "trailblazer_harmony_girl",
   "name": "開拓者 同諧",
+  "description": "登上星穹列車的{F#少女}{M#少年}。\n為了消除星核帶來的危機，選擇與星穹列車同行。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量虛數屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "對敵方單體造成少量虛數屬性傷害，共彈射5次。",
       "type": "戰技",
       "tag": "彈射",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "為我方全體施加【伴舞】效果。持有【伴舞】的我方目標擊破特攻提高，並且攻擊處於弱點擊破狀態下的敵方目標後，額外造成1次超擊破傷害。",
       "type": "終結技",
       "tag": "輔助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱點擊破狀態",
+          "desc": "敵方目標的韌性被削減至0時進入的特殊狀態，進入該狀態的目標行動會延後。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "超擊破傷害",
+          "desc": "擊破特攻、本次攻擊削韌值和角色等級越高，造成的超擊破傷害越高。\n超擊破傷害無法暴擊，且不受傷害提高類效果影響。\n超擊破傷害也屬於擊破傷害。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "當有敵方目標的弱點被擊破時，開拓者恢復能量。",
       "type": "天賦",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "下一次戰鬥開始時使我方全體的擊破特攻提高。",
       "type": "秘技",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800601,
       "id": "best_seat_in_the_house",
       "name": "您的最佳觀眾席",
-      "desc": "施放首次戰技後立即回復<nobr>1</nobr>點戰技點。"
+      "desc": "施放首次戰技後立即回復<nobr>1</nobr>點戰技點。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800602,
       "id": "jailbreaking_rainbowwalk",
       "name": "越獄的跨洋彩虹",
-      "desc": "戰鬥開始時，開拓者的能量恢復效率提高<nobr>25%</nobr>，持續<nobr>3</nobr>回合。"
+      "desc": "戰鬥開始時，開拓者的能量恢復效率提高<nobr>25%</nobr>，持續<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800603,
       "id": "sanatorium_for_rest_notes",
       "name": "休止符的療養院",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800604,
       "id": "dove_in_tophat",
       "name": "袒護白鴿的冠冕",
-      "desc": "開拓者在場時，使除自身以外的隊友擊破特攻提高，提高數值等同於開拓者<nobr>15%</nobr>的擊破特攻。"
+      "desc": "開拓者在場時，使除自身以外的隊友擊破特攻提高，提高數值等同於開拓者<nobr>15%</nobr>的擊破特攻。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800605,
       "id": "poem_favors_rhythms_of_old",
       "name": "包庇舊節拍的詩",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800606,
       "id": "tomorrow_rest_in_spotlight",
       "name": "明天，棲息聚光之下",
-      "desc": "戰技的額外傷害次數增加<nobr>2</nobr>次。"
+      "desc": "戰技的額外傷害次數增加<nobr>2</nobr>次。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

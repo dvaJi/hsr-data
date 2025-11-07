@@ -2,6 +2,7 @@
   "_id": 1003,
   "id": "himeko",
   "name": "姬子",
+  "description": "星穹列車的修復者。\n為了見證廣闊的星空，選擇與星穹列車同行。\n愛好是製作手沖咖啡。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "對敵方單體造成火屬性傷害，對相鄰目標造成少量火屬性傷害。",
       "type": "戰技",
       "tag": "擴散",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 13
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "對敵方全體造成火屬性傷害，消滅敵人時回復能量。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 27
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "戰鬥開始及敵人弱點被擊破時，獲得充能。\n我方目標攻擊後，若充能達到上限則發動追加攻擊，對敵方全體造成火屬性傷害，消耗全部充能。",
       "type": "天賦",
       "tag": "群體攻擊",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,24 @@
       "simpleDesc": "製造特殊領域。與領域內敵人進入戰鬥後，有高機率使敵方目標受到的火屬性傷害提高。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1441,79 @@
       "_id": 100301,
       "id": "childhood",
       "name": "童年",
-      "desc": "【乘勝追擊】觸發後，姬子的速度提高<nobr>20%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "【乘勝追擊】觸發後，姬子的速度提高<nobr>20%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100302,
       "id": "convergence",
       "name": "邂逅",
-      "desc": "對現有生命值百分比小於等於<nobr>50%</nobr>的敵方目標造成的傷害提高<nobr>15%</nobr>。"
+      "desc": "對現有生命值百分比小於等於<nobr>50%</nobr>的敵方目標造成的傷害提高<nobr>15%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100303,
       "id": "poised",
       "name": "自我",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100304,
       "id": "dedication",
       "name": "投入",
-      "desc": "施放戰技對敵方目標造成弱點擊破時，姬子額外獲得<nobr>1</nobr>點充能。"
+      "desc": "施放戰技對敵方目標造成弱點擊破時，姬子額外獲得<nobr>1</nobr>點充能。",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100305,
       "id": "aspiration",
       "name": "夢想",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100306,
       "id": "trailblaze",
       "name": "開拓！",
-      "desc": "終結技額外造成2次傷害，對隨機敵方單體各造成等同於原傷害<nobr>40%</nobr>的火屬性傷害。"
+      "desc": "終結技額外造成2次傷害，對隨機敵方單體各造成等同於原傷害<nobr>40%</nobr>的火屬性傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

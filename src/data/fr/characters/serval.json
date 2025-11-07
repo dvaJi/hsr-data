@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "Serval",
+  "description": "Mécanicienne de Belobog et ancienne chercheuse au sein de la Division technologique des Architectes.\nSœur aînée de Gepard Landau, sa personnalité contraste fortement avec celle de son frère.\nElle aime un genre de musique ancien qui était populaire avant le Gel éternel, connu sous le nom de « rock 'n' roll ».",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -243,10 +244,22 @@
       "_id": 110301,
       "id": "roaring_thunderclap",
       "name": "Coup de tonnerre rugissant",
-      "desc": "Inflige des DGT de foudre équivalents à #1[i]% de l'ATQ de Serval à un ennemi unique.",
+      "desc": "Inflige des DGT de foudre équivalents à #1[i]% de l'ATQ de Serval à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de foudre mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,28 @@
       "_id": 110302,
       "id": "lightning_flash",
       "name": "Éclair rapide",
-      "desc": "Inflige des DGT de foudre équivalents à #1[i]% de l'ATQ de Serval à un ennemi unique et des DGT de foudre équivalents à #2[i]% de l'ATQ de Serval aux ennemis adjacents, avec #3[i]% de chances de base de stupéfier les ennemis touchés pendant #4[i] tours.\nLes ennemis stupéfiés subissent des dégâts de foudre sur la durée équivalents à #5[i]% de l'ATQ de Serval au début de chaque tour.",
+      "desc": "Inflige des DGT de foudre équivalents à #1[i]% de l'ATQ de Serval à un ennemi désigné et des DGT de foudre équivalents à #2[i]% de l'ATQ de Serval aux ennemis adjacents, avec #3[i]% de chances de base de stupéfier les ennemis touchés pendant #4[i] tours.\nLes ennemis stupéfiés subissent des dégâts de foudre sur la durée équivalents à #5[i]% de l'ATQ de Serval au début de chaque tour.",
       "simpleDesc": "Inflige des DGT de foudre à un ennemi et des DGT de foudre mineurs aux cibles adjacentes, avec de fortes chances d'appliquer Stupéfaction à la cible.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "Inflige des DGT de foudre à tous les ennemis et augmente la durée de Stupéfaction.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "Inflige des DGT additionnels mineurs à tous les ennemis stupéfiés après avoir attaqué.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Inflige des DGT de foudre équivalents à #4[i]% de l'ATQ de Serval à un ennemi aléatoire après être entré en combat, avec #1[i]% de chances de base que tous les ennemis soient stupéfiés pendant #3[i] tours.\nLes ennemis stupéfiés subissent des dégâts de foudre sur la durée équivalents à #2[i]% de l'ATQ de Serval au début de chaque tour.",
       "simpleDesc": "Engage le combat contre les ennemis. Inflige des DGT mineurs de foudre à un ennemi unique aléatoire, avec de fortes chances d'appliquer Stupéfaction à toutes les cibles ennemies après être entré en combat.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "Écho",
-      "desc": "L'ATQ normale inflige des DGT de foudre équivalents à <nobr>60%</nobr> des DGT d'ATQ normale à un ennemi aléatoire adjacent à la cible."
+      "desc": "L'ATQ normale inflige des DGT de foudre équivalents à <nobr>60%</nobr> des DGT d'ATQ normale à un ennemi aléatoire adjacent à la cible.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "Encore !",
-      "desc": "Chaque fois que le talent de Serval se déclenche pour infliger des <u>DGT additionnels</u>, elle régénère <nobr>4</nobr> points d'énergie."
+      "desc": "Chaque fois que le talent de Serval se déclenche pour infliger des <u>DGT additionnels</u>, elle régénère <nobr>4</nobr> points d'énergie.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "Battements mécaniques",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "Faites du bruit !",
-      "desc": "L'ultime a <nobr>100%</nobr> de <u>chances de base</u> d'appliquer l'effet Stupéfaction à un ennemi qui n'est pas déjà stupéfié. L'effet est le même que celui infligé par la compétence."
+      "desc": "L'ultime a <nobr>100%</nobr> de <u>chances de base</u> d'appliquer l'effet Stupéfaction à un ennemi qui n'est pas déjà stupéfié. L'effet est le même que celui infligé par la compétence.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "Le plus gros son de Belobog !",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "Une chanson qui envoie du lourd !",
-      "desc": "Les DGT de Serval augmentent de <nobr>30%</nobr> sur les ennemis stupéfiés."
+      "desc": "Les DGT de Serval augmentent de <nobr>30%</nobr> sur les ennemis stupéfiés.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

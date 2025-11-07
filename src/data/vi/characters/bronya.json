@@ -2,6 +2,7 @@
   "_id": 1101,
   "id": "bronya",
   "name": "Bronya",
+  "description": "Người kế thừa của Đấng Bảo Vệ Tối Cao Belobog.\nVừa có khí chất kiêu ngạo của công chúa vừa có tính kiên trung của một quân nhân.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Giải trừ 1 Hiệu Ứng Xấu cho 1 đồng đội, tăng sát thương của đồng đội đó gây ra và hành động ngay.",
       "type": "Chiến Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,18 @@
       "simpleDesc": "Tăng tấn công, tăng sát thương bạo kích của toàn bộ phe ta.",
       "type": "Tuyệt Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "Sau khi thi triển tấn công thường, sẽ ưu tiên hành động cho bản thân vào lần hành động tiếp theo.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1455,15 @@
       "simpleDesc": "Dùng Bí Kỹ, khi bắt đầu lần chiến đấu tiếp theo, sẽ tăng tấn công của toàn bộ phe ta.",
       "type": "Bí Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1481,97 @@
       "_id": 110101,
       "id": "hone_your_strength",
       "name": "Gom Góp Sức Mạnh",
-      "desc": "Khi thi triển Chiến Kỹ, có <nobr>50%</nobr> <u>xác suất cố định</u> hồi 1 điểm Chiến Kỹ, hiệu ứng này có thời gian chờ kích hoạt là 1 hiệp."
+      "desc": "Khi thi triển Chiến Kỹ, có <nobr>50%</nobr> <u>xác suất cố định</u> hồi 1 điểm Chiến Kỹ, hiệu ứng này có thời gian chờ kích hoạt là 1 hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Xác Suất Cố Định",
+          "desc": "Xác suất cố định không bị ảnh hưởng bởi bất cứ nhân tố nào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110102,
       "id": "quick_march",
       "name": "Hành Quân Thần Tốc",
-      "desc": "Khi thi triển Chiến Kỹ, mục tiêu được chỉ định của phe ta sẽ tăng <nobr>30%</nobr> tốc độ sau khi hành động, duy trì 1 hiệp."
+      "desc": "Khi thi triển Chiến Kỹ, mục tiêu được chỉ định của phe ta sẽ tăng <nobr>30%</nobr> tốc độ sau khi hành động, duy trì 1 hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110103,
       "id": "bombardment",
       "name": "Trống Rền Pháo Nổ",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110104,
       "id": "take_by_surprise",
       "name": "Tấn Công Bất Ngờ",
-      "desc": "Sau khi nhân vật khác trong phe ta tấn công thường vào mục tiêu phe địch có Điểm Yếu Phong, Bronya sẽ thực hiện ngay 1 lần <u>Đòn Đánh Theo Sau</u>, gây cho mục tiêu này Sát Thương Phong bằng <nobr>80%</nobr> sát thương Tấn Công Thường. Hiệu ứng này mỗi hiệp chỉ kích hoạt 1 lần."
+      "desc": "Sau khi nhân vật khác trong phe ta tấn công thường vào mục tiêu phe địch có Điểm Yếu Phong, Bronya sẽ thực hiện ngay 1 lần <u>Đòn Đánh Theo Sau</u>, gây cho mục tiêu này Sát Thương Phong bằng <nobr>80%</nobr> sát thương Tấn Công Thường. Hiệu ứng này mỗi hiệp chỉ kích hoạt 1 lần.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110105,
       "id": "unstoppable",
       "name": "Đánh Đâu Thắng Đó",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110106,
       "id": "piercing_rainbow",
       "name": "Khí Thế Hùng Mạnh",
-      "desc": "Thời gian duy trì hiệu ứng Tăng Sát Thương mà Chiến Kỹ gây cho mục tiêu chỉ định của phe ta tăng <nobr>1</nobr> hiệp."
+      "desc": "Thời gian duy trì hiệu ứng Tăng Sát Thương mà Chiến Kỹ gây cho mục tiêu chỉ định của phe ta tăng <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

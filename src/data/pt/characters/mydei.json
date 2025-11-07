@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "Mydei",
+  "description": "Kremnos, a pólis do caos e da guerra envolta de névoa! Sua linhagem real está contaminada pelo patricídio, e sua divindade leva o nome da calamidade.\nO imortal Mydeimos, o leão independente dos demais. O Herdeiro de Chrysos que busca a Chama Primordial do Conflito deve sofrer mil mortes, ser banhado em sangue no caminho para casa e suportar sozinho a loucura do destino.\n- Regicida, torne-se rei, deicida, torne-se uma divindade. Cascos de ferro atravessam a natureza selvagem para a campanha e, eventualmente, devem absorver o sangue de sua terra natal.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Imaginário leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Consome PV e causa Dano Imaginário a uma unidade inimiga designada e Dano Imaginário leve aos alvos adjacentes.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Restaura PV e acumula Carga do Talento. Causa Dano Imaginário massivo a um inimigo designado e Dano Imaginário a alvos adjacentes, então, aplica \"Provocação\" ao alvo e seus alvos adjacentes.",
       "type": "Perícia Suprema",
       "tag": "Explosão",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "Ao perder PV, acumula Carga. Quando a Carga está em 100, entra no estado de \"Vingança\", restaura PV e Avança Adiante a ação. Durante \"Vingança\", os PV máximos aumentam e a DEF permanece em 0. No início da rodada desta unidade, usa automaticamente \"Regicida, Torne-se Rei\".\nQuando a Carga atinge 150 durante \"Vingança\", Mydei ganha imediatamente 1 rodada extra e usa automaticamente \"Deicida, Torne-se Uma Divindade\".\nQuando Mydei recebe um golpe fatal, sai do estado de \"Vingança\".",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Rodada Extra",
+          "desc": "Ganha 1 rodada extra que não gastará suas rodadas restantes ao tomar uma ação. Nessa rodada extra, não é possível usar nenhuma Perícia Suprema.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "Puxa inimigos dentro de uma certa área e inflige \"Confusão\" neles. Após atacar inimigos em estado de \"Confusão\" e entrar em batalha, causa Dano Imaginário leve a todos os inimigos e aplica \"Provocação\" aos alvos. Esta unidade acumula a Carga de Talento.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "O Frio Afia a Espinha de Aço",
-      "desc": "Aumenta o multiplicador de Dano causado por \"Deicida, Torne-se Uma Divindade\" ao alvo principal em <nobr>30%</nobr>. Esta habilidade agora causa a todos os inimigos Dano Imaginário igual ao multiplicador de Dano causado ao alvo principal."
+      "desc": "Aumenta o multiplicador de Dano causado por \"Deicida, Torne-se Uma Divindade\" ao alvo principal em <nobr>30%</nobr>. Esta habilidade agora causa a todos os inimigos Dano Imaginário igual ao multiplicador de Dano causado ao alvo principal.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "O Conflito Observa o Lamurio dos Mortos",
-      "desc": "Durante \"Vingança\", o Dano causado por Mydei ignora <nobr>15%</nobr> da DEF dos inimigos-alvo. Depois de receber cura, converte <nobr>40%</nobr> do valor curado em Carga. O total de Carga convertida não pode exceder <nobr>40</nobr> ponto(s). A contagem total de Carga do efeito é reiniciada após qualquer unidade agir."
+      "desc": "Durante \"Vingança\", o Dano causado por Mydei ignora <nobr>15%</nobr> da DEF dos inimigos-alvo. Depois de receber cura, converte <nobr>40%</nobr> do valor curado em Carga. O total de Carga convertida não pode exceder <nobr>40</nobr> ponto(s). A contagem total de Carga do efeito é reiniciada após qualquer unidade agir.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "A Honra Exalta o Festejo da Fé",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "O Alarme Desperta o Leão Lacônico",
-      "desc": "Enquanto estiver em \"Vingança\", aumenta o Dano CRIT em <nobr>30%</nobr> e restaura PV em <nobr>10%</nobr> dos PV máximos desta unidade após receber ataques de inimigos-alvo."
+      "desc": "Enquanto estiver em \"Vingança\", aumenta o Dano CRIT em <nobr>30%</nobr> e restaura PV em <nobr>10%</nobr> dos PV máximos desta unidade após receber ataques de inimigos-alvo.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "Os Cinzéis da Guerra Moldam a Carne Ardente",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "O Legado Escala a Montanha de Sangue",
-      "desc": "Ao entrar na batalha, entra imediatamente no estado de \"Vingança\" e reduz a Carga necessária de \"Deicida, Torne-se Uma Divindade\" para <nobr>100</nobr> ponto(s)."
+      "desc": "Ao entrar na batalha, entra imediatamente no estado de \"Vingança\" e reduz a Carga necessária de \"Deicida, Torne-se Uma Divindade\" para <nobr>100</nobr> ponto(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

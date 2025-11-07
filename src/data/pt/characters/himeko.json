@@ -2,6 +2,7 @@
   "_id": 1003,
   "id": "himeko",
   "name": "Himeko",
+  "description": "Foi quem reparou o Expresso Astral.\nPara admirar o vasto céu estrelado, decidiu viajar a bordo do Expresso Astral.\nSeu passatempo é passar café.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Fogo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Causa Dano de Fogo a um único inimigo e Dano de Fogo leve a inimigos adjacentes a ele.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 13
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Causa Dano de Fogo a todos os inimigos. Se inimigos forem derrotados, regenera Energia.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 27
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "No início da batalha ou quando uma unidade inimiga sofre a Quebra de Fraqueza, ganha Carga.\nApós qualquer aliado realizar um ataque, se estiver completamente Carregado, realiza um Ataque Extra e causa Dano de Fogo a todas as unidades inimigas, consumindo todos os pontos de Carga.",
       "type": "Talento",
       "tag": "Área",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,24 @@
       "simpleDesc": "Cria uma dimensão especial. Depois de entrar em combate com inimigos na dimensão, existe uma alta chance de aumentar o Dano de Fogo recebido pelos inimigos.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1441,79 @@
       "_id": 100301,
       "id": "childhood",
       "name": "Infância",
-      "desc": "Após a \"Corrida da Vitória\" ser ativada, a VEL de Himeko tem um aumento de <nobr>20%</nobr> por <nobr>2</nobr> rodada(s)."
+      "desc": "Após a \"Corrida da Vitória\" ser ativada, a VEL de Himeko tem um aumento de <nobr>20%</nobr> por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100302,
       "id": "convergence",
       "name": "Convergência",
-      "desc": "Causa <nobr>15%</nobr> de Dano extra a inimigos cuja porcentagem de PV for igual ou menor que <nobr>50%</nobr>."
+      "desc": "Causa <nobr>15%</nobr> de Dano extra a inimigos cuja porcentagem de PV for igual ou menor que <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100303,
       "id": "poised",
       "name": "Equilíbrio",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100304,
       "id": "dedication",
       "name": "Dedicação",
-      "desc": "Quando a Perícia de Himeko infligir Quebra de Fraqueza em um inimigo, ela ganha <nobr>1</nobr> ponto(s) extras de Carga."
+      "desc": "Quando a Perícia de Himeko infligir Quebra de Fraqueza em um inimigo, ela ganha <nobr>1</nobr> ponto(s) extras de Carga.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100305,
       "id": "aspiration",
       "name": "Aspiração",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100306,
       "id": "trailblaze",
       "name": "Desbravamento!",
-      "desc": "A Perícia Suprema causa 2 instâncias extras de Dano de Fogo equivalentes a <nobr>40%</nobr> do Dano original a um inimigo aleatório."
+      "desc": "A Perícia Suprema causa 2 instâncias extras de Dano de Fogo equivalentes a <nobr>40%</nobr> do Dano original a um inimigo aleatório.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

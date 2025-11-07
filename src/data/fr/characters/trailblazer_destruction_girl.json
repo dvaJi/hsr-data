@@ -2,6 +2,7 @@
   "_id": 8002,
   "id": "trailblazer_destruction_girl",
   "name": "Pionnière La Destruction",
+  "description": "{F#Une jeune fille}{M#Un jeune homme} qui a embarqué à bord de l'Astral Express.\n{F#Elle}{M#Il} a choisi de voyager à bord du train pour éliminer la menace que pose le Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -243,10 +244,22 @@
       "_id": 800201,
       "id": "farewell_hit",
       "name": "Coup d'adieu",
-      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de la pionnière à un ennemi unique.",
+      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de la pionnière à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 800202,
       "id": "rip_home_run",
       "name": "Home run final",
-      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de la pionnière à un ennemi unique et aux ennemis adjacents.",
+      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de la pionnière à un ennemi désigné et aux ennemis adjacents.",
       "simpleDesc": "Inflige des DGT physiques à un ennemi unique et aux ennemis adjacents.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -703,10 +728,22 @@
       "_id": 800203,
       "id": "stardust_ace",
       "name": "Lançeuse de poussière d'étoile",
-      "desc": "Vous choisissez entre deux modes d'attaque pour infliger un coup dévastateur.\nFrappe écrasante : Coup d'adieu inflige des DGT physiques équivalents à #1[i]% de l'ATQ de la pionnière à un ennemi unique.\nFrappe écrasante : Home run final inflige des DGT physiques équivalents à #2[i]% de l'ATQ de la pionnière à un ennemi unique, ainsi que des DGT physiques équivalents à #3[i]% de l'ATQ de la pionnière aux ennemis adjacents.",
+      "desc": "Vous choisissez entre deux modes d'attaque pour infliger un coup dévastateur.\nFrappe écrasante : Coup d'adieu inflige des DGT physiques équivalents à #1[i]% de l'ATQ de la pionnière à un ennemi désigné.\nFrappe écrasante : Home run final inflige des DGT physiques équivalents à #2[i]% de l'ATQ de la pionnière à un ennemi désigné, ainsi que des DGT physiques équivalents à #3[i]% de l'ATQ de la pionnière aux ennemis adjacents.",
       "simpleDesc": "Utilise une ATQ sur cible unique ou par propagation pour infliger un coup dévastateur.",
       "type": "Ultime",
       "tag": "Renforcement",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Chaque fois que cette unité fait subir une Rupture de faiblesse à un ennemi, l'ATQ augmente.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1374,15 @@
       "simpleDesc": "Restaure immédiatement des PV pour l'équipe après avoir utilisé la technique.",
       "type": "Technique",
       "tag": "Restauration",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1344,37 +1399,88 @@
       "_id": 800201,
       "id": "a_falling_star",
       "name": "Étoile tombée du ciel",
-      "desc": "Lorsque des ennemis sont vaincus par l'ultime de la pionnière, cette dernière régénère <nobr>10</nobr> points d'énergie supplémentaires. Cet effet ne peut être déclenché qu'une fois par attaque."
+      "desc": "Lorsque des ennemis sont vaincus par l'ultime de la pionnière, cette dernière régénère <nobr>10</nobr> points d'énergie supplémentaires. Cet effet ne peut être déclenché qu'une fois par attaque.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800202,
       "id": "an_unwilling_host",
       "name": "À son corps défendant",
-      "desc": "Attaquer des ennemis ayant une Faiblesse physique restaure une quantité de PV équivalente à <nobr>5%</nobr> de l'ATQ de la pionnière à cette dernière."
+      "desc": "Attaquer des ennemis ayant une Faiblesse physique restaure une quantité de PV équivalente à <nobr>5%</nobr> de l'ATQ de la pionnière à cette dernière.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800203,
       "id": "a_leading_whisper",
       "name": "Un chuchotement pour seul guide",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800204,
       "id": "a_destructing_glance",
       "name": "Regard destructeur",
-      "desc": "Les chances de coup critique du personnage augmentent de <nobr>25%</nobr> contre les ennemis <u>en état de Rupture de faiblesse</u>."
+      "desc": "Les chances de coup critique du personnage augmentent de <nobr>25%</nobr> contre les ennemis <u>en état de Rupture de faiblesse</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 800205,
       "id": "a_surviving_hope",
       "name": "Un espoir de survie",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800206,
       "id": "a_trailblazing_will",
       "name": "Une volonté de pionnier",
-      "desc": "Le talent de la pionnière se déclenche également lorsqu'elle élimine un ennemi."
+      "desc": "Le talent de la pionnière se déclenche également lorsqu'elle élimine un ennemi.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

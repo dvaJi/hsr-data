@@ -2,6 +2,7 @@
   "_id": 1309,
   "id": "robin",
   "name": "Robin",
+  "description": "Eine in Penacony geborene halovianische Sängerin, die zu kosmischem Ruhm gelangt ist. Eine elegante, zurückhaltende junge Dame.\nDiesmal wurde sie von der Familie nach Hause eingeladen, um während des Harmoniefests alle mit ihrem Gesang zu beehren.\nSie kann die Kraft der „Harmonie“ einsetzen, um ihre Musik auszusenden, wobei sie nicht nur bei ihren Fans, sondern bei allen möglichen Lebensformen „Resonanz“ erzeugt.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen physischen SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Erhöht den verursachten SCH aller Verbündeten.",
       "type": "Fertigkeit",
       "tag": "Unterstützung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +747,32 @@
       "simpleDesc": "Tritt in den Status „Konzert“ ein. Der ANG aller Verbündeten wird erhöht und Robins Teammitglieder können sofort eine Aktion ausführen. Robin fügt nach einem Angriff eines Verbündeten zusätzlich physischen SCH zu. Der Status Konzert verleiht Robin Immunität gegen Mengenkontrolle-Debuffs. Solange der Status aktiv ist, wird Robin bis zum Ende des Countdowns keine Runde haben und keine Aktion ausführen.",
       "type": "Ultimate",
       "tag": "Unterstützung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Mengenkontrolle-Debuff",
+          "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1142,15 @@
       "simpleDesc": "Erhöht den KRIT-SCH aller Verbündeten. Nach einem Angriff eines Verbündeten stellt Robin zusätzlich Energie wieder her.",
       "type": "Talent",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1460,15 @@
       "simpleDesc": "Erzeugt eine spezielle Dimension um Robin herum. Gegner innerhalb dieser Dimension werden Robin nicht angreifen. Nach Kampfeintritt mit dieser Dimension stellt Robin zu Beginn jeder Kampfwelle zusätzlich #2[i] Pkt. Energie wieder her.",
       "type": "Technik",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1486,106 @@
       "_id": 130901,
       "id": "land_of_smiles",
       "name": "Land des Lächelns",
-      "desc": "Im Status „Konzert“ wird die <u>WDS-DUR</u> aller Typen für alle Verbündeten um <nobr>24%</nobr> erhöht."
+      "desc": "Im Status „Konzert“ wird die <u>WDS-DUR</u> aller Typen für alle Verbündeten um <nobr>24%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130902,
       "id": "afternoon_tea_for_two",
       "name": "Mittagstee für zwei",
-      "desc": "Im Status „Konzert“ wird die GES aller Verbündeten um <nobr>16%</nobr> erhöht. Die Energie-Wiederherstellung des Talents wird zusätzlich um <nobr>1</nobr> Pkt. erhöht."
+      "desc": "Im Status „Konzert“ wird die GES aller Verbündeten um <nobr>16%</nobr> erhöht. Die Energie-Wiederherstellung des Talents wird zusätzlich um <nobr>1</nobr> Pkt. erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130903,
       "id": "inverted_tuning",
       "name": "Verdrehte Saiten",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130904,
       "id": "raindrop_key",
       "name": "Schlüssel des Regentropfens",
-      "desc": "Beim Einsatz des Ultimates werden <u>Mengenkontrolle-Debuffs</u> von allen Verbündeten entfernt. Während Robin sich im Status „Konzert“ befindet, wird der Effekt-WDS aller Verbündeten um <nobr>50%</nobr> erhöht."
+      "desc": "Beim Einsatz des Ultimates werden <u>Mengenkontrolle-Debuffs</u> von allen Verbündeten entfernt. Während Robin sich im Status „Konzert“ befindet, wird der Effekt-WDS aller Verbündeten um <nobr>50%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Mengenkontrolle-Debuff",
+          "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130905,
       "id": "lonestars_lament",
       "name": "Tränen des einsamen Sterns",
-      "desc": "Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130906,
       "id": "moonless_midnight",
       "name": "Mondlose Mitternacht",
-      "desc": "Im Status „Konzert“ wird der KRIT-SCH des vom Ultimate verursachten <u>zusätzlichen physischen SCH</u> zusätzlich um <nobr>450%</nobr> erhöht. „Mondlose Mitternacht“ kann bis zu <nobr>8</nobr>-mal ausgelöst werden. Beim Einsatz des Ultimates wird die Auslösungszahl zurückgesetzt."
+      "desc": "Im Status „Konzert“ wird der KRIT-SCH des vom Ultimate verursachten <u>zusätzlichen physischen SCH</u> zusätzlich um <nobr>450%</nobr> erhöht. „Mondlose Mitternacht“ kann bis zu <nobr>8</nobr>-mal ausgelöst werden. Beim Einsatz des Ultimates wird die Auslösungszahl zurückgesetzt.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

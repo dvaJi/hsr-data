@@ -2,6 +2,7 @@
   "_id": 1004,
   "id": "welt",
   "name": "瓦尔特",
+  "description": "老成持重的列车组前辈。\n享受着久违的冒险奇遇，心底埋藏的热血再度燃烧。\n偶尔还会将经历的冒险旅程画在本子里。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量虚数属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "对敌方单体造成少量虚数属性伤害，共弹射3次，有概率对目标施加减速状态。",
       "type": "战技",
       "tag": "弹射",
+      "spBase": 10,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,32 @@
       "simpleDesc": "对敌方全体造成虚数属性伤害，大概率施加禁锢效果。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "行动延后",
+          "desc": "使目标在下次行动前的等待间隔延长。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1157,27 @@
       "simpleDesc": "击中处于减速状态的敌方目标时，额外造成少量虚数属性附加伤害。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1472,32 @@
       "simpleDesc": "制造特殊领域。领域内敌人移动速度降低。与领域内敌人进入战斗后，大概率使敌方目标陷入禁锢状态。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "行动延后",
+          "desc": "使目标在下次行动前的等待间隔延长。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1411,37 +1518,97 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "名的传承",
-      "desc": "施放终结技后，瓦尔特获得强化，在随后<nobr>2</nobr>次施放普攻或战技时额外对敌方目标造成1次<u>附加伤害</u>。施放普攻造成的<u>附加伤害</u>等同于普攻伤害倍率的<nobr>50%</nobr>，施放战技造成的<u>附加伤害</u>等同于战技伤害倍率的<nobr>80%</nobr>。"
+      "desc": "施放终结技后，瓦尔特获得强化，在随后<nobr>2</nobr>次施放普攻或战技时额外对敌方目标造成1次<u>附加伤害</u>。施放普攻造成的<u>附加伤害</u>等同于普攻伤害倍率的<nobr>50%</nobr>，施放战技造成的<u>附加伤害</u>等同于战技伤害倍率的<nobr>80%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100402,
       "id": "conflux_of_stars",
       "name": "星的凝聚",
-      "desc": "触发天赋时，瓦尔特恢复<nobr>3</nobr>点能量。"
+      "desc": "触发天赋时，瓦尔特恢复<nobr>3</nobr>点能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100403,
       "id": "prayer_of_peace",
       "name": "和平的祈愿",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100404,
       "id": "appellation_of_justice",
       "name": "义的名号",
-      "desc": "施放战技时，使受到攻击的敌方目标速度降低的<u>基础概率</u>提高<nobr>35%</nobr>。"
+      "desc": "施放战技时，使受到攻击的敌方目标速度降低的<u>基础概率</u>提高<nobr>35%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100405,
       "id": "power_of_kindness",
       "name": "善的力量",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "光明的未来",
-      "desc": "施放战技时，对随机敌方单体额外造成1次伤害。"
+      "desc": "施放战技时，对随机敌方单体额外造成1次伤害。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

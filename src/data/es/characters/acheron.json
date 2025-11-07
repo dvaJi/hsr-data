@@ -2,6 +2,7 @@
   "_id": 1308,
   "id": "acheron",
   "name": "Acheron",
+  "description": "Una viajera que dice ser una Vigilante de la Galaxia. Nadie sabe su verdadero nombre.\nDeambula sola por el cosmos, llevando consigo una larga espada.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Obtiene #3[i] pt. de Sueños rotos. Aplica #3[i] acumulación de Rojo sacrificial a un enemigo, le inflige Daño de Rayo e inflige una pequeña cantidad de Daño de Rayo a los enemigos adyacentes.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo 3 veces a un enemigo. Si elimina Rojo sacrificial del objetivo, inflige una pequeña cantidad de Daño de Rayo a todos los enemigos. Después, inflige Daño de Rayo a todos los enemigos 1 vez y elimina todas las acumulaciones de Rojo sacrificial.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "La habilidad definitiva se puede activar cuando Sueños rotos llega al máximo. Mientras dura la habilidad definitiva, se ignora el tipo de Debilidad y se consume la Firmeza de los enemigos, y además se reduce la RES a todos los tipos de todos los enemigos.\nSi cualquier unidad lanza una habilidad y afecta con un estado negativo a un enemigo, Acheron obtiene Sueños rotos y aplica Rojo sacrificial a un objetivo.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1472,15 @@
       "desc": "Ataca al enemigo inmediatamente. Al comienzo de cada oleada, obtiene Influjo tetravalente, inflige un #1[i]% del ATQ de Acheron como Daño de Rayo a todos los enemigos y reduce su Firmeza ignorando sus tipos de Debilidad. Al infligir Ruptura de Debilidad, activa el efecto de Ruptura de Rayo.\nInflujo tetravalente: tras lanzar la habilidad definitiva, Acheron obtiene #2[i] pt. de Sueños rotos y aplica #2[i] acumulación de Rojo sacrificial a un enemigo al azar.\nSi ataca a un enemigo normal, lo derrota directamente y no entra en combate. Si el ataque no acierta a un enemigo, no se consume el punto de técnica.",
       "simpleDesc": "Ataca al enemigo y obtiene Influjo tetravalente al principio de cada oleada. Inflige Daño de Rayo a todos los enemigos y reduce su Firmeza ignorando el tipo de Debilidad.\nSi ataca a enemigos normales, los derrota inmediatamente sin entrar en combate. Si el ataque no acierta a un enemigo, no se consume el punto de técnica.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1498,97 @@
       "_id": 130801,
       "id": "silenced_sky_spake_sooth",
       "name": "Caída del cielo y comienzo de la verdad",
-      "desc": "Al infligir daño a enemigos con <u>estados negativos</u>, la Prob. CRIT aumenta en un <nobr>18%</nobr>."
+      "desc": "Al infligir daño a enemigos con <u>estados negativos</u>, la Prob. CRIT aumenta en un <nobr>18%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Estado negativo",
+          "desc": "Reduce la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos estados se pueden eliminar.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130802,
       "id": "mute_thunder_in_still_tempest",
       "name": "Trueno silenciado y tempestad calmada",
-      "desc": "La cantidad de personajes de la Vía de la Nihilidad que se requieren para el valor más alto del Rastro \"El abismo\" se reduce en 1. Al comenzar su propio turno, obtiene 1 pt. de Sueños rotos y aplica 1 acumulación de Rojo sacrificial al enemigo que más acumulaciones tenga."
+      "desc": "La cantidad de personajes de la Vía de la Nihilidad que se requieren para el valor más alto del Rastro \"El abismo\" se reduce en 1. Al comenzar su propio turno, obtiene 1 pt. de Sueños rotos y aplica 1 acumulación de Rojo sacrificial al enemigo que más acumulaciones tenga.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130803,
       "id": "frost_bites_in_death",
       "name": "Frío invernal y sueño eterno",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130804,
       "id": "shrined_fire_for_mirrored_soul",
       "name": "Llamas del alma reflejada",
-      "desc": "Cuando el enemigo entra en combate, le aplica Vulnerabilidad a daño de habilidad definitiva, lo que aumenta el daño de habilidad definitiva recibido en un <nobr>8%</nobr>."
+      "desc": "Cuando el enemigo entra en combate, le aplica Vulnerabilidad a daño de habilidad definitiva, lo que aumenta el daño de habilidad definitiva recibido en un <nobr>8%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130805,
       "id": "strewn_souls_on_erased_earths",
       "name": "Rocas fragmentadas, almas desplazadas",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130806,
       "id": "apocalypse_the_emancipator",
       "name": "Calamidad rompecadenas",
-      "desc": "La <u>PEN de la RES</u> a todos los tipos del daño de habilidad definitiva infligido por Acheron aumenta en un <nobr>20%</nobr>. El daño infligido por su ATQ básico o habilidad básica se considera daño de habilidad definitiva, y consume la Firmeza del enemigo ignorando sus tipos de Debilidad. Al romper la Debilidad de un enemigo, activa el efecto de Ruptura de Rayo."
+      "desc": "La <u>PEN de la RES</u> a todos los tipos del daño de habilidad definitiva infligido por Acheron aumenta en un <nobr>20%</nobr>. El daño infligido por su ATQ básico o habilidad básica se considera daño de habilidad definitiva, y consume la Firmeza del enemigo ignorando sus tipos de Debilidad. Al romper la Debilidad de un enemigo, activa el efecto de Ruptura de Rayo.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

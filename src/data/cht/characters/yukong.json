@@ -2,6 +2,7 @@
   "_id": 1207,
   "id": "yukong",
   "name": "馭空",
+  "description": "仙舟「羅浮」天舶司的首領，久曆戰陣的飛行士與射手。\n而今卻陷於繁冗公務，難以抽身。",
   "rarity": 4,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量虛數屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "獲得2層【鳴弦號令】，自身持有【鳴弦號令】時我方全體攻擊力提高。",
       "type": "戰技",
       "tag": "輔助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,15 @@
       "simpleDesc": "自身持有【鳴弦號令】時我方全體暴擊率和暴擊傷害提高，並對敵方單體造成大量虛數屬性傷害。",
       "type": "終結技",
       "tag": "單體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1074,18 @@
       "simpleDesc": "使普通攻擊額外造成少量傷害並提高本次普通攻擊削韌值。該效果1回合後可再次觸發。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1404,15 @@
       "simpleDesc": "使自身移動速度提高。攻擊敵人進入戰鬥後獲得2層【鳴弦號令】。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1431,79 @@
       "_id": 120701,
       "id": "aerial_marshal",
       "name": "天舶飛將，枕弧待戰",
-      "desc": "進入戰鬥時，我方全體速度提高<nobr>10%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "進入戰鬥時，我方全體速度提高<nobr>10%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120702,
       "id": "skyward_command",
       "name": "青霄馳騁，驅馭蒼穹",
-      "desc": "當我方任意單體目前能量值等於其能量上限時，馭空額外恢復<nobr>5</nobr>點能量。該效果我方每個單體僅可觸發1次，當馭空施放終結技後，重置該效果觸發次數。"
+      "desc": "當我方任意單體目前能量值等於其能量上限時，馭空額外恢復<nobr>5</nobr>點能量。該效果我方每個單體僅可觸發1次，當馭空施放終結技後，重置該效果觸發次數。",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120703,
       "id": "torrential_fusillade",
       "name": "危弓未輟，執射不寧",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120704,
       "id": "zephyrean_echoes",
       "name": "百里聞風，九曲響鏑",
-      "desc": "持有【鳴弦號令】時，馭空造成的傷害提高<nobr>30%</nobr>。"
+      "desc": "持有【鳴弦號令】時，馭空造成的傷害提高<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120705,
       "id": "august_deadshot",
       "name": "井儀貫侯，疾羽參連",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120706,
       "id": "bowstring_thunderclap",
       "name": "弦栝如雷，銑珧激蕩",
-      "desc": "馭空施放終結技時，立即先獲得<nobr>1</nobr>層【鳴弦號令】。"
+      "desc": "馭空施放終結技時，立即先獲得<nobr>1</nobr>層【鳴弦號令】。",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

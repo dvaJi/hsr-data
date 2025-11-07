@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "Hysilens",
+  "description": "Estisia, la polis costera de la embriaguez y los sueños, donde los ecos de antiguas canciones aún danzan entre las olas.\nHysirenia, hija del mar, Heredera de Crisos que purifica la Yesca del Océano, disipa las corrientes turbias y orquesta un festín espléndido para los héroes de más allá del cielo.\nAunque la esperanza sea frágil como la espuma, las olas seguirán avanzando sin cesar mientras el festín no termine.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Físico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "Gran probabilidad de aumentar el daño que reciben todos los enemigos. Les inflige Daño Físico.",
       "type": "Habilidad básica",
       "tag": "ATQ AdE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "Despliega un campo que reduce el ATQ y la DEF de todos los enemigos y les inflige Daño Físico. Mientras el campo está activo, cada vez que un enemigo recibe Daño con el tiempo, le inflige Daño Físico con el tiempo una vez.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "Cuando un aliado ataca, Hysilens tiene una gran probabilidad de afectar a los enemigos atacados con uno de estos estados: Intemperie, Sangrado, Quemadura o Electrocución.",
       "type": "Talento",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "Crea una zona especial. Los enemigos que estén en la zona no pueden atacar a los aliados. Tras entrar en combate con los enemigos dentro de la zona, hay una gran probabilidad de afectar a cada enemigo con #3[i] de los siguientes estados: Intemperie, Sangrado, Quemadura o Electrocución.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "Pregunta por qué mi corazón se aflige",
-      "desc": "Cuando Hysilens está en el campo de batalla, el Daño con el tiempo que infligen los aliados es un <nobr>116%</nobr> del original. Cuando Hysilens afecta a un enemigo con Intemperie, Sangrado, Quemadura o Electrocución mediante su talento, tiene una <u>probabilidad base</u> del <nobr>100%</nobr> de afectarlo adicionalmente con un estado de Intemperie, Sangrado, Quemadura o Electrocución equivalente al del talento y que puede coexistir con él."
+      "desc": "Cuando Hysilens está en el campo de batalla, el Daño con el tiempo que infligen los aliados es un <nobr>116%</nobr> del original. Cuando Hysilens afecta a un enemigo con Intemperie, Sangrado, Quemadura o Electrocución mediante su talento, tiene una <u>probabilidad base</u> del <nobr>100%</nobr> de afectarlo adicionalmente con un estado de Intemperie, Sangrado, Quemadura o Electrocución equivalente al del talento y que puede coexistir con él.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "Dime por qué las olas rugen",
-      "desc": "Mientras el campo está activo, el efecto de aumento de daño infligido del Rastro Cuerdas perladas se aplica a todos los aliados."
+      "desc": "Mientras el campo está activo, el efecto de aumento de daño infligido del Rastro Cuerdas perladas se aplica a todos los aliados.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "Averigua por qué olvida la llama",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "Observa por qué fluye el tiempo",
-      "desc": "Mientras dure el campo, la RES a todos los tipos de todos los enemigos se reduce en un <nobr>20%</nobr>."
+      "desc": "Mientras dure el campo, la RES a todos los tipos de todos los enemigos se reduce en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "Tarareo mientras me arreglo",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "Cuándo volverás de tu profundo lecho",
-      "desc": "Mientras el campo está activo, el número máximo de veces que se puede activar el efecto de Daño Físico con el tiempo de Hysilens al principio de cada turno o tras cada ataque de un aliado aumenta a <nobr>12</nobr>, y el multiplicador del daño infligido aumenta en un <nobr>20%</nobr>."
+      "desc": "Mientras el campo está activo, el número máximo de veces que se puede activar el efecto de Daño Físico con el tiempo de Hysilens al principio de cada turno o tras cada ataque de un aliado aumenta a <nobr>12</nobr>, y el multiplicador del daño infligido aumenta en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

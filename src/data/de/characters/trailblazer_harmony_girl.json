@@ -2,6 +2,7 @@
   "_id": 8006,
   "id": "trailblazer_harmony_girl",
   "name": "Trailblazer Die Harmonie",
+  "description": "Ein {F#Mädchen}{M#Junge} an Bord des Astralexpresses.\nHat beschlossen, mit dem Astralexpress zu reisen, um der Bedrohung durch das Stellaron Einhalt zu gebieten.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu und prallt insgesamt 5-mal ab.",
       "type": "Fertigkeit",
       "tag": "Abpraller",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "Verleiht allen Verbündeten den Effekt „Backup-Tänzer“. Erhöht den Brucheffekt von Verbündeten mit diesem Effekt. Wenn sie einen Gegner im Status Schwächebruch angreifen, wird 1-mal zusätzlich Super-Bruch-SCH verursacht.",
       "type": "Ultimate",
       "tag": "Unterstützung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Schwächebruch",
+          "desc": "Wenn der Widerstand gegnerischer Ziele auf 0 sinkt, treten sie in den Zustand Schwächebruch ein, was ihre Aktionen verzögert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Super-Bruch-SCH",
+          "desc": "Super-Bruch-SCH wird mit höherem Brucheffekt, höherem WDS-Reduzierungswert des Angriffs und höherer Figurenstufe erhöht.\nSuper-Bruch-SCH kann keine Kritischen Treffer zufügen und wird nicht von Effekten mit SCH-Erhöhung beeinflusst.\nSuper-Bruch-SCH gilt ebenfalls als Bruch-SCH.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "Wenn die Schwäche eines Gegners gebrochen wird, stellt die Trailblazerin Energie wieder her.",
       "type": "Talent",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "Erhöht zu Beginn des nächsten Kampfs den Brucheffekt aller Verbündeten.",
       "type": "Technik",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800601,
       "id": "best_seat_in_the_house",
       "name": "Dein bester Sitzplatz",
-      "desc": "Stellt sofort <nobr>1</nobr> Fertigkeitspunkt wieder her, wenn die Fertigkeit zum ersten Mal eingesetzt wird."
+      "desc": "Stellt sofort <nobr>1</nobr> Fertigkeitspunkt wieder her, wenn die Fertigkeit zum ersten Mal eingesetzt wird.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800602,
       "id": "jailbreaking_rainbowwalk",
       "name": "Gefängnisausbruch des Regenbogens",
-      "desc": "Erhöht zu Beginn des Kampfes die Energie-Wiederherstellungsrate der Trailblazerin für <nobr>3</nobr> Rd. um <nobr>25%</nobr>."
+      "desc": "Erhöht zu Beginn des Kampfes die Energie-Wiederherstellungsrate der Trailblazerin für <nobr>3</nobr> Rd. um <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800603,
       "id": "sanatorium_for_rest_notes",
       "name": "Sanatorium des Pausenzeichens",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800604,
       "id": "dove_in_tophat",
       "name": "Die weiße Taube schützende Krone",
-      "desc": "Wenn die Trailblazerin auf dem Kampffeld ist, wird der Brucheffekt aller Verbündeten außer ihr selbst um <nobr>15%</nobr> ihres Brucheffekts erhöht."
+      "desc": "Wenn die Trailblazerin auf dem Kampffeld ist, wird der Brucheffekt aller Verbündeten außer ihr selbst um <nobr>15%</nobr> ihres Brucheffekts erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800605,
       "id": "poem_favors_rhythms_of_old",
       "name": "Gedicht der alten Takte",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800606,
       "id": "tomorrow_rest_in_spotlight",
       "name": "Morgen, Nisten unter dem Rampenlicht",
-      "desc": "Erhöht die Anzahl des zusätzlichen SCH der Fertigkeit um <nobr>2</nobr>."
+      "desc": "Erhöht die Anzahl des zusätzlichen SCH der Fertigkeit um <nobr>2</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

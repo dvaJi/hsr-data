@@ -2,6 +2,7 @@
   "_id": 1013,
   "id": "herta",
   "name": "Herta",
+  "description": "สมาชิกลำดับที่ 83 แห่งสมาคมอัจฉริยะ เจ้าของสถานีอวกาศที่แท้จริง\nนักวิทยาศาสตร์ผู้ยิ่งใหญ่ที่ชาญฉลาด แต่ไร้ซึ่งความเห็นอกเห็นใจ",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG น้ำแข็งเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "สร้าง DMG น้ำแข็งเล็กน้อยแก่ฝ่ายศัตรูทั้งหมด และสร้าง DMG แก่เป้าหมายที่มี HP ค่อนข้างสูงเพิ่มขึ้น",
       "type": "สกิลต่อสู้",
       "tag": "โจมตีหมู่",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "สร้าง DMG น้ำแข็งแก่ฝ่ายศัตรูทั้งหมด",
       "type": "ท่าไม้ตาย",
       "tag": "โจมตีหมู่",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,24 @@
       "simpleDesc": "เมื่อเป้าหมายฝ่ายเราตัวใดตัวหนึ่งทำการโจมตี จนทำให้เปอร์เซ็นต์ HP ปัจจุบันของศัตรูเป้าหมาย น้อยกว่าหรือเท่ากับ #1[i]% Herta จะปล่อยการโจมตีต่อเนื่องทันที และสร้าง DMG น้ำแข็งเล็กน้อยแก่ศัตรูทั้งหมด",
       "type": "พรสวรรค์",
       "tag": "โจมตีหมู่",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "โจมตีต่อเนื่อง",
+          "desc": "เมื่อทำตามเงื่อนไขครบถ้วน จะปล่อยเอฟเฟกต์โจมตีพิเศษ 1 ครั้งใส่เป้าหมายโดยอัตโนมัติ",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1383,15 @@
       "simpleDesc": "ใช้เทคนิคและเมื่อเริ่มการต่อสู้ครั้งถัดไป จะทำให้ ATK ของตัวเองเพิ่มขึ้น",
       "type": "เทคนิค",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1409,88 @@
       "_id": 101301,
       "id": "kick_you_when_youre_down",
       "name": "Kick You When You're Down",
-      "desc": "เมื่อปล่อยการโจมตีปกติ หากเปอร์เซ็นต์ HP ของศัตรูที่กำหนดหนึ่งตัว น้อยกว่าหรือเท่ากับ <nobr>50%</nobr> จะสร้าง <u>DMG น้ำแข็งเพิ่มเติม</u> อีก <nobr>40%</nobr> ของ ATK ของ Herta"
+      "desc": "เมื่อปล่อยการโจมตีปกติ หากเปอร์เซ็นต์ HP ของศัตรูที่กำหนดหนึ่งตัว น้อยกว่าหรือเท่ากับ <nobr>50%</nobr> จะสร้าง <u>DMG น้ำแข็งเพิ่มเติม</u> อีก <nobr>40%</nobr> ของ ATK ของ Herta",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG เพิ่มเติม",
+          "desc": "ทำให้ผู้ที่ถูกโจมตีได้รับ DMG เพิ่มเติม 1 ครั้ง โดยการโจมตีครั้งนี้ จะไม่ถือเป็นการโจมตี 1 ครั้ง",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101302,
       "id": "keep_the_ball_rolling",
       "name": "Keep the Ball Rolling",
-      "desc": "ทุกครั้งที่ใช้พรสวรรค์ 1 ครั้ง อัตราคริติคอลของตัวเองจะเพิ่มขึ้น <nobr>3%</nobr> เอฟเฟกต์นี้สามารถซ้อนทับได้สูงสุด <nobr>5</nobr> ชั้น"
+      "desc": "ทุกครั้งที่ใช้พรสวรรค์ 1 ครั้ง อัตราคริติคอลของตัวเองจะเพิ่มขึ้น <nobr>3%</nobr> เอฟเฟกต์นี้สามารถซ้อนทับได้สูงสุด <nobr>5</nobr> ชั้น",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101303,
       "id": "thats_the_kind_of_girl_i_am",
       "name": "That's the Kind of Girl I Am",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101304,
       "id": "hit_where_it_hurts",
       "name": "Hit Where It Hurts",
-      "desc": "เมื่อใช้พรสวรรค์ จะสร้าง DMG เพิ่มขึ้น <nobr>10%</nobr>"
+      "desc": "เมื่อใช้พรสวรรค์ จะสร้าง DMG เพิ่มขึ้น <nobr>10%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101305,
       "id": "cuss_big_or_cuss_nothing",
       "name": "Cuss Big or Cuss Nothing",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101306,
       "id": "no_one_can_betray_me",
       "name": "No One Can Betray Me",
-      "desc": "หลังจากปล่อยท่าไม้ตายแล้ว ATK จะเพิ่มขึ้น <nobr>25%</nobr> เป็นเวลา <nobr>1</nobr> เทิร์น"
+      "desc": "หลังจากปล่อยท่าไม้ตายแล้ว ATK จะเพิ่มขึ้น <nobr>25%</nobr> เป็นเวลา <nobr>1</nobr> เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "萬敵",
+  "description": "那沉入迷霧的懸鋒，紛亂與戰爭之城！它的王室流著弒親的血脈，它的神明以災厄為名。\n不死的邁德漠斯，離群的獅子，逐獵「紛爭」火種的黃金裔。忍受萬死，浴血還鄉，孤身背負瘋狂的宿命\n——弒王成王，弒神登神。征戰的鐵蹄踏遍荒野，終歸要沾上故鄉的血。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量虛數屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "消耗生命值，對指定敵方單體造成虛數屬性傷害，對相鄰目標造成少量虛數屬性傷害。",
       "type": "戰技",
       "tag": "擴散",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "回復生命值並累積天賦充能，對指定敵方單體造成大量虛數屬性傷害，對相鄰目標造成虛數屬性傷害，並使目標與相鄰目標陷入嘲諷狀態。",
       "type": "終結技",
       "tag": "擴散",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "損失生命值時累積充能，充能達到100時進入【血仇】狀態，回復生命值且行動提前。【血仇】狀態下當下生命上限提高，防禦力保持為0。自身回合開始時自動發動【弒王成王】。\n【血仇】狀態期間充能達到150時，萬敵立即獲得1個額外回合並自動發動【弒神登神】。\n萬敵受到致命攻擊時退出【血仇】狀態。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "額外回合",
+          "desc": "獲得1個不消耗回合數的額外回合，在此回合中無法插入施放終結技。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "牽引一定區域內的敵人並使其陷入暈眩狀態。攻擊陷入暈眩狀態的敵人，進入戰鬥後對敵方全體造成少量虛數屬性傷害，並使目標陷入嘲諷狀態。自身累積天賦充能。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "寒風雕琢不屈的脊樑",
-      "desc": "【弒神登神】對主目標造成的傷害倍率提高<nobr>30%</nobr>，且變成對敵方全體造成等同於主目標傷害倍率的虛數屬性傷害。"
+      "desc": "【弒神登神】對主目標造成的傷害倍率提高<nobr>30%</nobr>，且變成對敵方全體造成等同於主目標傷害倍率的虛數屬性傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "紛爭見證屍骸的喉鳴",
-      "desc": "【血仇】狀態期間，萬敵造成的傷害無視敵方目標<nobr>15%</nobr>的防禦力，且接受治療後會將<nobr>40%</nobr>的治療數值轉化為充能，累積轉化的充能不超過<nobr>40</nobr>點。任意單位行動後重置可累積的充能。"
+      "desc": "【血仇】狀態期間，萬敵造成的傷害無視敵方目標<nobr>15%</nobr>的防禦力，且接受治療後會將<nobr>40%</nobr>的治療數值轉化為充能，累積轉化的充能不超過<nobr>40</nobr>點。任意單位行動後重置可累積的充能。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "榮耀輝映不渝的筵宴",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "號角驚覺緘默的狂獅",
-      "desc": "【血仇】狀態期間暴擊傷害提高<nobr>30%</nobr>，且受到來自敵方目標的攻擊後回復等同於自身<nobr>10%</nobr>生命上限的生命值。"
+      "desc": "【血仇】狀態期間暴擊傷害提高<nobr>30%</nobr>，且受到來自敵方目標的攻擊後回復等同於自身<nobr>10%</nobr>生命上限的生命值。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "兵戈雕刻軀身的烈焰",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "往日攀陟沉積的血山",
-      "desc": "進入戰鬥時立刻進入【血仇】狀態且【弒神登神】所需的充能值降低至<nobr>100</nobr>點。"
+      "desc": "進入戰鬥時立刻進入【血仇】狀態且【弒神登神】所需的充能值降低至<nobr>100</nobr>點。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1206,
   "id": "sushang",
   "name": "Sushang",
+  "description": "Người lính trẻ sinh ra ở Xianzhou Yaoqing, đi đến Vân Kỵ Quân Luofu để huấn luyện.\nMang theo thanh kiếm gia truyền được mẹ tặng, hướng về tương lai mà bản thân sẽ viết nên.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Gây sát thương Vật Lý cho 1 kẻ địch, có xác suất nhỏ kích hoạt Kiếm Thế. Nếu mục tiêu ở trạng thái Phá Vỡ Điểm Yếu, chắc chắn sẽ kích hoạt Kiếm Thế.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +779,18 @@
       "simpleDesc": "Gây lượng lớn Sát Thương Vật Lý cho 1 kẻ địch, cường hóa hiệu ứng Kiếm Thế và hành động ngay.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1124,15 @@
       "simpleDesc": "Khi điểm yếu của kẻ địch trong trận bị phá vỡ, sẽ tăng tốc độ của bản thân.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1435,15 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào chiến đấu, sẽ gây Sát Thương Vật Lý cho toàn bộ kẻ địch tương đương #1[i]% Tấn Công của Sushang.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào trận, gây lượng nhỏ Sát Thương Vật Lý cho toàn bộ kẻ địch.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,37 +1460,88 @@
       "_id": 120601,
       "id": "cut_with_ease",
       "name": "Tay Nghề Thành Thạo",
-      "desc": "Sau khi thi triển Chiến Kỹ lên mục tiêu phe địch đang rơi vào <u>trạng thái Phá Vỡ Điểm Yếu</u>, sẽ hồi 1 Điểm Chiến Kỹ."
+      "desc": "Sau khi thi triển Chiến Kỹ lên mục tiêu phe địch đang rơi vào <u>trạng thái Phá Vỡ Điểm Yếu</u>, sẽ hồi 1 Điểm Chiến Kỹ.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120602,
       "id": "refine_in_toil",
       "name": "Thân Thể Tôi Luyện",
-      "desc": "Sau khi kích hoạt Kiếm Thế, sát thương mà Sushang phải chịu sẽ giảm <nobr>20%</nobr>, kéo dài 1 hiệp."
+      "desc": "Sau khi kích hoạt Kiếm Thế, sát thương mà Sushang phải chịu sẽ giảm <nobr>20%</nobr>, kéo dài 1 hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120603,
       "id": "rise_from_fame",
       "name": "Kiếm Thuật Cổ Truyền",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120604,
       "id": "cleave_with_heart",
       "name": "Tâm Tịnh Thông Suốt",
-      "desc": "Tấn Công Kích Phá của Sushang tăng <nobr>40%</nobr>."
+      "desc": "Tấn Công Kích Phá của Sushang tăng <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120605,
       "id": "prevail_via_taixu",
       "name": "Thần Ý Vũ Trụ",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120606,
       "id": "dwell_like_water",
       "name": "Thích Ứng Như Nước",
-      "desc": "Hiệu ứng tăng tốc của Thiên Phú có thể cộng dồn, tối đa cộng dồn 2 tầng, hơn nữa sau khi vào chiến đấu, Sushang sẽ nhận ngay 1 tầng hiệu ứng Tăng Tốc của Thiên Phú."
+      "desc": "Hiệu ứng tăng tốc của Thiên Phú có thể cộng dồn, tối đa cộng dồn 2 tầng, hơn nữa sau khi vào chiến đấu, Sushang sẽ nhận ngay 1 tầng hiệu ứng Tăng Tốc của Thiên Phú.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

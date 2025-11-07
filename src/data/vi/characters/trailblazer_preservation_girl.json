@@ -2,6 +2,7 @@
   "_id": 8004,
   "id": "trailblazer_preservation_girl",
   "name": "Nhà Khai Phá Bảo Hộ",
+  "description": "{F#Thiếu nữ}{M#Thiếu niên} lên Đội Tàu Astral.\nĐể diệt trừ hiểm họa mà Stellaron mang đến, đã quyết định đồng hành cùng đoàn tàu.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch, nhận \"Ý Chí Sục Sôi\".",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Giảm sát thương mà bản thân phải chịu và nhận \"Ý Chí Sục Sôi\", có xác suất lớn khiến toàn phe địch rơi vào trạng thái Khiêu Khích.",
       "type": "Chiến Kỹ",
       "tag": "Phòng Thủ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +771,18 @@
       "simpleDesc": "Gây Sát Thương Hỏa cho toàn phe địch, cường hóa lần Tấn Công Thường tiếp theo.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,15 @@
       "simpleDesc": "Khi bị tấn công sẽ cộng dồn Ý Chí Sục Sôi, khi Ý Chí Sục Sôi không dưới 4 tầng, Tấn Công Thường sẽ được cường hóa. Sau khi thi triển Tấn Công Thường, Chiến Kỹ, Tuyệt Kỹ sẽ cung cấp Khiên cho toàn bộ phe ta.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,6 +1428,15 @@
       "simpleDesc": "Sau khi dùng Bí Kỹ, khi bắt đầu lần chiến đấu tiếp theo sẽ cung cấp Khiên cho bản thân.",
       "type": "Bí Kỹ",
       "tag": "Phòng Thủ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1455,79 @@
       "_id": 800401,
       "id": "earthshaking_resonance",
       "name": "Tiếng Kêu Từ Cốt Tuỷ Thế Giới",
-      "desc": "Khi Tấn Công Thường, gây thêm Sát Thương Hỏa bằng <nobr>25%</nobr> Phòng Thủ của Nhà Khai Phá; Khi thi triển cường hoá Tấn Công Thường, gây thêm Sát Thương Hỏa bằng <nobr>50%</nobr> Phòng Thủ của Nhà Khai Phá."
+      "desc": "Khi Tấn Công Thường, gây thêm Sát Thương Hỏa bằng <nobr>25%</nobr> Phòng Thủ của Nhà Khai Phá; Khi thi triển cường hoá Tấn Công Thường, gây thêm Sát Thương Hỏa bằng <nobr>50%</nobr> Phòng Thủ của Nhà Khai Phá.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800402,
       "id": "timedefying_tenacity",
       "name": "Vững Vàng Như Sắt",
-      "desc": "Khi kích hoạt Thiên Phú sẽ cung cấp Khiên cho toàn phe ta, giúp triệt tiêu thêm một lượng sát thương bằng <nobr>2%</nobr> Phòng Thủ của Nhà Khai Phá +<nobr>27</nobr>."
+      "desc": "Khi kích hoạt Thiên Phú sẽ cung cấp Khiên cho toàn phe ta, giúp triệt tiêu thêm một lượng sát thương bằng <nobr>2%</nobr> Phòng Thủ của Nhà Khai Phá +<nobr>27</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800403,
       "id": "trailblazing_blueprint",
       "name": "Kiến Tạo Bản Vẽ Tương Lai",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800404,
       "id": "nationbuilding_oath",
       "name": "Lưu Lại Lời Thề Văn Minh",
-      "desc": "Khi bắt đầu chiến đấu sẽ nhận ngay <nobr>4</nobr> tầng \"Ý Chí Sục Sôi\"."
+      "desc": "Khi bắt đầu chiến đấu sẽ nhận ngay <nobr>4</nobr> tầng \"Ý Chí Sục Sôi\".",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800405,
       "id": "spiritwarming_flame",
       "name": "Dũng Khí Tựa Hào Quang",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800406,
       "id": "cityforging_bulwarks",
       "name": "Thành Luỹ Trường Tồn",
-      "desc": "Sau khi thi triển cường hóa Tấn Công Thường hoặc Tuyệt Kỹ, Phòng Thủ của Nhà Khai Phá tăng <nobr>10%</nobr>, tối đa cộng dồn <nobr>3</nobr> tầng."
+      "desc": "Sau khi thi triển cường hóa Tấn Công Thường hoặc Tuyệt Kỹ, Phòng Thủ của Nhà Khai Phá tăng <nobr>10%</nobr>, tối đa cộng dồn <nobr>3</nobr> tầng.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

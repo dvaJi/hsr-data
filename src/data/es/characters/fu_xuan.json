@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "Fu Xuan",
+  "description": "Dirigente de la Comisión de Adivinación del Luofu de Xianzhou.\nEs quien utiliza el tercer ojo y la Matriz del Presagio para predecir la ruta de Xianzhou y los resultados de los acontecimientos.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Cuántico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Activa Matriz del Presagio y los aliados traspasan a Fu Xuan parte del daño que reciben. Además, aumentan los PV máx. y la Prob. CRIT de todos los aliados.",
       "type": "Habilidad básica",
       "tag": "Defensa",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "Traspaso",
+          "desc": "Antes de calcular el daño, una parte del daño del atacante se traspasa a otro objetivo (o varios objetivos) y el objetivo atacado absorbe el resto del daño. El daño que ya se ha traspasado a otro objetivo no puede volver a traspasarse.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "Inflige Daño Cuántico a todos los enemigos y aumenta las veces que se puede activar el talento de Fu Xuan.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "Mientras Fu Xuan no haya sido derrotada, el daño que reciben todos los aliados se reduce.\nCuando tiene pocos PV, regenera sus propios PV automáticamente según el porcentaje de PV que le falte en ese momento. Este efecto puede tener un máximo de 2 activaciones.",
       "type": "Talento",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "Activa una barrera y no se entra en combate al recibir ataques de los enemigos. Al entrar en combate, Matriz del Presagio se activa de manera automática.",
       "type": "Técnica",
       "tag": "Defensa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "Ciclo de vida y muerte",
-      "desc": "Conocimiento aumenta el Daño CRIT en un <nobr>30%</nobr>."
+      "desc": "Conocimiento aumenta el Daño CRIT en un <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "Presagio siniestro",
-      "desc": "Cuando Matriz del Presagio está activa, si un aliado recibe daño letal, todo el daño letal que reciban los aliados durante esa acción no provocará que sean <u>derrotados</u> y regenerarán inmediatamente una cantidad de PV equivalente al <nobr>70%</nobr> de sus PV máx. Este efecto solo se puede activar una vez en cada batalla."
+      "desc": "Cuando Matriz del Presagio está activa, si un aliado recibe daño letal, todo el daño letal que reciban los aliados durante esa acción no provocará que sean <u>derrotados</u> y regenerarán inmediatamente una cantidad de PV equivalente al <nobr>70%</nobr> de sus PV máx. Este efecto solo se puede activar una vez en cada batalla.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "Talismán vertical",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "Estrella favorable",
-      "desc": "Cuando otros aliados afectados por Matriz del Presagio reciben un ataque, Fu Xuan recupera <nobr>5</nobr> pts. de energía."
+      "desc": "Cuando otros aliados afectados por Matriz del Presagio reciben un ataque, Fu Xuan recupera <nobr>5</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "Adivinación veraz",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "Salvación",
-      "desc": "Cuando se activa Matriz del Presagio, se hace un recuento de los PV perdidos por todos los aliados en esta batalla. El daño infligido por la habilidad definitiva de Fu Xuan aumenta en un <nobr>200%</nobr> de este recuento de PV perdidos.\nEl recuento de PV perdidos en esta batalla no puede superar el <nobr>120%</nobr> de los PV máx. de Fu Xuan. Al usar su habilidad definitiva, este recuento se reinicia."
+      "desc": "Cuando se activa Matriz del Presagio, se hace un recuento de los PV perdidos por todos los aliados en esta batalla. El daño infligido por la habilidad definitiva de Fu Xuan aumenta en un <nobr>200%</nobr> de este recuento de PV perdidos.\nEl recuento de PV perdidos en esta batalla no puede superar el <nobr>120%</nobr> de los PV máx. de Fu Xuan. Al usar su habilidad definitiva, este recuento se reinicia.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

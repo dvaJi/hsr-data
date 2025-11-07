@@ -2,6 +2,7 @@
   "_id": 1224,
   "id": "march_7th_imaginary",
   "name": "{RUBY_B#みつき}三月{RUBY_E#}なのか • 虚数",
+  "description": "仙舟の服に着替え、剣を扱う武侠少女となった三月なのか。\n雲璃と彦卿に弟子入りして剣術を学び、仙舟でたくさんのいい「思い出」を作ろうと張り切っている。",
   "rarity": 4,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の虚数属性ダメージを与え、チャージを#2[i]獲得する。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "味方単体を「師匠」にする。通常攻撃、または強化通常攻撃を行ってダメージを与える時、「師匠」の運命に応じて以下の効果を発動する：\n「師匠」の運命が「知恵」、「壊滅」、「巡狩」、「記憶」の場合：「師匠」の属性に応じた付加ダメージをさらに与える。\n「師匠」の運命が「調和」、「虚無」、「存護」、「豊穣」の場合：削靭値がアップする。",
       "type": "戦闘スキル",
       "tag": "サポート",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -747,6 +775,24 @@
       "simpleDesc": "敵単体に虚数属性ダメージを与え、次の強化通常攻撃の攻撃段数、および段数が増加する確率がアップする。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定確率",
+          "desc": "どのような要因にも左右されない、固定された確率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1065,6 +1111,15 @@
       "simpleDesc": "「師匠」が攻撃を行う、または必殺技を発動した後、三月なのかはチャージを獲得する。チャージが#1[i]に達すると即座に行動して与ダメージをアップし、通常攻撃を強化する。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1383,6 +1438,15 @@
       "simpleDesc": "自身以外の味方が秘技を使用するたびに、次の戦闘開始時、三月なのかはチャージを獲得する。秘技を使用すると、次の戦闘開始時にEPを回復する。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1400,37 +1464,88 @@
       "_id": 122401,
       "id": "my_sword_stirs_starlight",
       "name": "{RUBY_B#りゅうせい}流星{RUBY_E#}を{RUBY_B#ふ}振{RUBY_E#}るう{RUBY_B#しゅんか}春花{RUBY_E#}",
-      "desc": "フィールド上に「師匠」が存在する時、三月なのかの速度+<nobr>10%</nobr>。"
+      "desc": "フィールド上に「師匠」が存在する時、三月なのかの速度+<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122402,
       "id": "blade_dances_on_waves_fight",
       "name": "{RUBY_B#せっぱく}雪白{RUBY_E#}の{RUBY_B#やいば}刃{RUBY_E#}は{RUBY_B#どとう}怒涛{RUBY_E#}の{RUBY_B#ごと}如{RUBY_E#}く",
-      "desc": "「師匠」が通常攻撃または戦闘スキルを発動して敵に攻撃を行った後、三月なのかは<u>追加攻撃</u>を行い、その回の攻撃のメインターゲットに三月なのかの攻撃力<nobr>60%</nobr>分の虚数属性ダメージを与え、「師匠」の運命に応じた戦闘スキル効果を発動し、チャージを<nobr>1</nobr>獲得する。攻撃できるメインターゲットが存在しない場合、ランダムな敵単体に攻撃を行う。この効果はターンが回ってくるたびに1回まで発動できる。"
+      "desc": "「師匠」が通常攻撃または戦闘スキルを発動して敵に攻撃を行った後、三月なのかは<u>追加攻撃</u>を行い、その回の攻撃のメインターゲットに三月なのかの攻撃力<nobr>60%</nobr>分の虚数属性ダメージを与え、「師匠」の運命に応じた戦闘スキル効果を発動し、チャージを<nobr>1</nobr>獲得する。攻撃できるメインターゲットが存在しない場合、ランダムな敵単体に攻撃を行う。この効果はターンが回ってくるたびに1回まで発動できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122403,
       "id": "sharp_wit_in_martial_might",
       "name": "{RUBY_B#さ}冴{RUBY_E#}えた{RUBY_B#あたま}頭{RUBY_E#}と{RUBY_B#すぐ}優{RUBY_E#}れた{RUBY_B#うでまえ}腕前{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122404,
       "id": "being_fabulous_never_frights",
       "name": "{RUBY_B#りょうしょうほうし}竜章鳳姿{RUBY_E#}",
-      "desc": "ターンが回ってきた時、EPを<nobr>5</nobr>回復する。"
+      "desc": "ターンが回ってきた時、EPを<nobr>5</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122405,
       "id": "sword_delights_sugar_blights",
       "name": "{RUBY_B#けいこ}稽古{RUBY_E#}を{RUBY_B#ふ}増{RUBY_E#}やして\n{RUBY_B#かんみ}甘味{RUBY_E#}は{RUBY_B#ひか}控{RUBY_E#}える",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122406,
       "id": "me_the_best_girl_in_sight",
       "name": "ウチが{RUBY_B#せかいいち}世界一{RUBY_E#}！",
-      "desc": "必殺技を発動した後、次の強化通常攻撃「一に眉間、二に心臓」によるダメージの会心ダメージ+<nobr>50%</nobr>。"
+      "desc": "必殺技を発動した後、次の強化通常攻撃「一に眉間、二に心臓」によるダメージの会心ダメージ+<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

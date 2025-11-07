@@ -2,6 +2,7 @@
   "_id": 1002,
   "id": "dan_heng",
   "name": "Dan Heng",
+  "description": "Un jeune homme froid et distant qui parle peu de son passé.\nIl voyage à bord de l'Astral Express afin d'éviter de croiser quiconque pourrait lui rappeler ses origines.",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 100202,
       "id": "cloudlancer_art_torrent",
       "name": "Lance perce-nuages : Torrent",
-      "desc": "Inflige des DGT de vent équivalents à #1[i]% de l'ATQ de Dan Heng à un ennemi unique.\nSi les DGT infligés par la compétence résultent en un coup critique, il y a #4[i]% de chances de base de réduire la VIT de la cible de #2[i]% pendant #3[i] tours.",
+      "desc": "Inflige des DGT de vent équivalents à #1[i]% de l'ATQ de Dan Heng à un ennemi désigné.\nSi les DGT infligés par la compétence résultent en un coup critique, il y a #4[i]% de chances de base de réduire la VIT de la cible de #2[i]% pendant #3[i] tours.",
       "simpleDesc": "Inflige des DGT de vent à un ennemi unique. En cas de coup critique, il y a de fortes chances de ralentir l'ennemi.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Inflige des DGT de vent massifs à un ennemi unique. Si l'ennemi est ralenti, le multiplicateur des dégâts infligés augmente.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "Lorsque cette unité devient la cible de la capacité d'un allié, la PÉN de RÉS de vent de sa prochaine attaque augmente. Cet effet peut se déclencher à nouveau après 2 tours.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "Après utilisation de la technique, son ATQ augmente au début du combat suivant.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1375,37 +1448,79 @@
       "_id": 100201,
       "id": "the_higher_you_fly_the_harder_you_fall",
       "name": "Plus dure sera la chute",
-      "desc": "Lorsque le pourcentage de PV actuel de la cible ennemie est supérieur ou égal à <nobr>50%</nobr>, les chances de coup critique augmentent de <nobr>12%</nobr>."
+      "desc": "Lorsque le pourcentage de PV actuel de la cible ennemie est supérieur ou égal à <nobr>50%</nobr>, les chances de coup critique augmentent de <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100202,
       "id": "quell_the_venom_octet_quench_the_vice_oflame",
       "name": "Faire taire le poison et étouffer les flammes",
-      "desc": "Réduit le temps de recharge du talent d'1 tour."
+      "desc": "Réduit le temps de recharge du talent d'1 tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100203,
       "id": "seen_and_unseen",
       "name": "Visible et invisible",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100204,
       "id": "roaring_dragon_and_soaring_sun",
       "name": "Dragon rugissant et soleil fulgurant",
-      "desc": "Lorsque Dan Heng élimine un ennemi à l'aide de son ultime, il agit immédiatement à nouveau."
+      "desc": "Lorsque Dan Heng élimine un ennemi à l'aide de son ultime, il agit immédiatement à nouveau.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100205,
       "id": "a_drop_of_rain_feeds_a_torrent",
       "name": "Une goutte de pluie nourrit un torrent",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100206,
       "id": "the_troubled_soul_lies_in_wait",
       "name": "L'âme troublée attend",
-      "desc": "L'état Ralenti provoqué par la compétence de Dan Heng réduit la VIT de l'ennemi de <nobr>8%</nobr> supplémentaires."
+      "desc": "L'état Ralenti provoqué par la compétence de Dan Heng réduit la VIT de l'ennemi de <nobr>8%</nobr> supplémentaires.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

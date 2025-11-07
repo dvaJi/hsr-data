@@ -2,6 +2,7 @@
   "_id": 1312,
   "id": "misha",
   "name": "Misha",
+  "description": "Ein vernünftiger junger Mann, der als Hotelpage in Penacony arbeitet.\nHegt große Sehnsucht für die Namenlosen und träumt davon, eines Tages selbst eine Reise anzutreten.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Eis-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Fügt einem Gegner Eis-SCH zu und angrenzenden Einheiten geringen Eis-SCH zu. Erhöht die Trefferzahl von Mishas nächstem Ultimate.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +756,32 @@
       "simpleDesc": "Fügt einem Gegner geringen Eis-SCH zu. Der Angriff prallt zunächst #1[i]-mal und max. #5[i]-mal ab. Vor jedem Treffer besteht eine geringe Chance, das Ziel einzufrieren.",
       "type": "Ultimate",
       "tag": "Abpraller",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1085,6 +1130,15 @@
       "simpleDesc": "Für jeden verbrauchten Fertigkeitspunkt des Teams wird die Trefferzahl von Mishas nächstem Ultimate erhöht und er stellt Energie wieder her.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1442,15 @@
       "simpleDesc": "Erschafft eine spezielle Dimension, die alle Gegner in ihr anhält. Nach Kampfeintritt mit Gegnern in der Dimension wird die Trefferzahl von Mishas nächstem Ultimate erhöht.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1405,37 +1468,88 @@
       "_id": 131201,
       "id": "whimsicality_of_fancy",
       "name": "Flatterhaftes Trugbild",
-      "desc": "Beim Einsatz des Ultimates wird seine Trefferzahl für jeden Gegner im Kampf zusätzlich um <nobr>1</nobr> erhöht, bis zu max. <nobr>5</nobr> Treffer."
+      "desc": "Beim Einsatz des Ultimates wird seine Trefferzahl für jeden Gegner im Kampf zusätzlich um <nobr>1</nobr> erhöht, bis zu max. <nobr>5</nobr> Treffer.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131202,
       "id": "yearning_of_youth",
       "name": "Jugendliche Sehnsucht",
-      "desc": "Der Ultimate hat vor jedem Treffer eine <u>Grundchance</u> von <nobr>24%</nobr>, die VTD des Ziels für <nobr>3</nobr> Rd. um <nobr>16%</nobr> zu reduzieren."
+      "desc": "Der Ultimate hat vor jedem Treffer eine <u>Grundchance</u> von <nobr>24%</nobr>, die VTD des Ziels für <nobr>3</nobr> Rd. um <nobr>16%</nobr> zu reduzieren.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131203,
       "id": "vestige_of_happiness",
       "name": "Schatten glücklicher Jahre",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131204,
       "id": "visage_of_kinship",
       "name": "Vertraute Erscheinung",
-      "desc": "Erhöht den SCH-Multiplikator von jedem Treffer des Ultimates um <nobr>6%</nobr>."
+      "desc": "Erhöht den SCH-Multiplikator von jedem Treffer des Ultimates um <nobr>6%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131205,
       "id": "genesis_of_first_love",
       "name": "Erste Liebe und Freundschaft",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131206,
       "id": "estrangement_of_dream",
       "name": "Verblasste Sehnsucht",
-      "desc": "Nach dem Einsatz des Ultimates wird sein verursachter SCH um <nobr>30%</nobr> bis zum Ende der eigenen Runde erhöht. Stellt nach dem nächsten Einsatz der Fertigkeit <nobr>1</nobr> Fertigkeitspunkt für das Team wieder her."
+      "desc": "Nach dem Einsatz des Ultimates wird sein verursachter SCH um <nobr>30%</nobr> bis zum Ende der eigenen Runde erhöht. Stellt nach dem nächsten Einsatz der Fertigkeit <nobr>1</nobr> Fertigkeitspunkt für das Team wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

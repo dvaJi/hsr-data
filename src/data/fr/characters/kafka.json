@@ -2,6 +2,7 @@
   "_id": 1005,
   "id": "kafka",
   "name": "Kafka",
+  "description": "Membre des Chasseurs de Stellaron. Une femme d'une grande beauté à la fois calme, réfléchie et professionnelle.\nA envoûté {NICKNAME} pour {M#lui}{F#la} faire absorber le Stellaron à l'aide de Chuchotement de l'esprit.\nPour passer le temps, elle achète des manteaux et les organise selon son humeur.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -243,10 +244,22 @@
       "_id": 100501,
       "id": "midnight_tumult",
       "name": "Tumulte de minuit",
-      "desc": "Inflige des DGT de foudre équivalents à #1[i]% de l'ATQ de Kafka à un ennemi unique.",
+      "desc": "Inflige des DGT de foudre équivalents à #1[i]% de l'ATQ de Kafka à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de foudre mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Inflige des DGT de foudre à un ennemi unique et des DGT de foudre mineurs aux cibles adjacentes.\nSi la cible principale est actuellement affectée par un effet de dégâts sur la durée, les dégâts sur la durée infligent des DGT 1 fois supplémentaire.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +765,24 @@
       "simpleDesc": "Inflige des DGT de foudre mineurs à tous les ennemis, avec de fortes chances de les stupéfier.\nSi les ennemis sont déjà stupéfiés, l'état Stupéfaction inflige des DGT 1 fois supplémentaire.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1137,32 @@
       "simpleDesc": "Lorsqu'un allié utilise son ATQ normale sur un ennemi, Kafka lance immédiatement une ATQ de suivi et inflige des DGT de foudre, avec de fortes chances d'infliger Stupéfaction à cette cible. Cet effet ne peut être déclenché que 1 fois par tour.",
       "type": "Talent",
       "tag": "Cible unique",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1486,24 @@
       "desc": "Attaque immédiatement tous les ennemis dans un rayon déterminé. Inflige des DGT de foudre équivalents à #3[i]% de l'ATQ de Kafka à tous les ennemis après être entrée en combat, avec #1[i]% de chances de base d'infliger l'effet Stupéfaction de l'ultime à chaque ennemi pendant #2[i] tours.",
       "simpleDesc": "Attaque tous les ennemis à portée. Après être entré en combat, inflige des DGT de foudre mineurs à tous les ennemis, avec une forte probabilité de leur infliger Stupéfaction.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1438,37 +1522,105 @@
       "_id": 100501,
       "id": "da_capo",
       "name": "Da capo",
-      "desc": "Lorsque le talent déclenche une <u>ATQ de suivi</u>, il y a <nobr>100%</nobr> de <u>chances de base</u> d'augmenter les dégâts sur la durée subis par la cible de <nobr>30%</nobr> pendant <nobr>2</nobr> tours."
+      "desc": "Lorsque le talent déclenche une <u>ATQ de suivi</u>, il y a <nobr>100%</nobr> de <u>chances de base</u> d'augmenter les dégâts sur la durée subis par la cible de <nobr>30%</nobr> pendant <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100502,
       "id": "fortississimo",
       "name": "Fortississimo",
-      "desc": "Lorsque Kafka est sur le champ de bataille, les dégâts sur la durée infligés par tous les alliés augmentent de <nobr>25%</nobr>."
+      "desc": "Lorsque Kafka est sur le champ de bataille, les dégâts sur la durée infligés par tous les alliés augmentent de <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100503,
       "id": "capriccio",
       "name": "Capriccio",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100504,
       "id": "recitativo",
       "name": "Recitativo",
-      "desc": "Lorsqu'un ennemi subit des dégâts de l'état Stupéfaction infligé par Kafka, cette dernière régénère en plus <nobr>2</nobr> points d'énergie."
+      "desc": "Lorsqu'un ennemi subit des dégâts de l'état Stupéfaction infligé par Kafka, cette dernière régénère en plus <nobr>2</nobr> points d'énergie.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100505,
       "id": "doloroso",
       "name": "Doloroso",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100506,
       "id": "leggiero",
       "name": "Leggiero",
-      "desc": "Le multiplicateur des DGT de Stupéfaction infligés par l'ultime, la technique ou l'<u>ATQ de suivi</u> déclenchée par le talent augmente de <nobr>156%</nobr> et l'effet dure <nobr>1</nobr> tour(s) de plus."
+      "desc": "Le multiplicateur des DGT de Stupéfaction infligés par l'ultime, la technique ou l'<u>ATQ de suivi</u> déclenchée par le talent augmente de <nobr>156%</nobr> et l'effet dure <nobr>1</nobr> tour(s) de plus.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

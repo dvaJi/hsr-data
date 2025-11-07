@@ -2,6 +2,7 @@
   "_id": 1402,
   "id": "aglaea",
   "name": "Aglaea",
+  "description": "In that holy city kissed by the dawn, the weaver caresses the golden threads, entwining fates.\nThe Chrysos Heir that bears the \"Romance\" Coreflame gathered the world's heroes, leading them on a long journey once more\n— to topple the gods, reclaim the divine flame, and grant rebirth to the nearly fallen Amphoreus.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Lightning DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Restores HP for Garmentmaker. If Garmentmaker is absent, summons the memosprite Garmentmaker and makes this unit immediately take action.",
       "type": "Skill",
       "tag": "Summon",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -753,6 +781,32 @@
       "simpleDesc": "Summons the memosprite Garmentmaker, enabling Aglaea to enter the \"Supreme Stance\" state, immediately take action, and gain Enhanced Basic ATK.",
       "type": "Ultimate",
       "tag": "Enhance",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Crowd Control debuff",
+          "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1122,6 +1176,24 @@
       "simpleDesc": "While Garmentmaker is on the field, Aglaea's attacks inflict the target with the \"Seam Stitch\" state. After attacking enemies in the \"Seam Stitch\" state, deals minor Lightning Additional DMG.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1490,6 +1562,24 @@
       "desc": "Summons the memosprite Garmentmaker and launches a forward joint attack. After entering battle, regenerates #2[i] Energy and deals Lightning DMG equal to #1[i]% of Aglaea's ATK to all enemy targets. Then, randomly inflicts the \"Seam Stitch\" state on a random enemy target.",
       "simpleDesc": "Summons the memosprite Garmentmaker and launches a forward joint attack. After entering battle, regenerates Energy and deals minor Lightning DMG to all enemies. Then, randomly inflicts the \"Seam Stitch\" state on a random enemy target.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1502,42 +1592,503 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Garmentmaker",
+    "icon": "SpriteOutput/ServantIconTeam/11402B.png",
+    "hpBase": "#6",
+    "hpInherit": "#5",
+    "hpSkill": 140204,
+    "speedBase": "0",
+    "speedInherit": "#4",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1140201,
+        "name": "Thorned Snare",
+        "desc": "Deals Lightning DMG equal to <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> of ATK to one enemy and Lightning DMG equal to <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span> of ATK to adjacent targets.",
+        "simpleDesc": "Deals minor Lightning DMG to one enemy target and adjacent targets.",
+        "type": {
+          "id": "Servant",
+          "name": "Memosprite Skill"
+        },
+        "tag": {
+          "id": "Blast",
+          "name": "Blast"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          15
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.55,
+              0.33,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.66,
+              0.396,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.77,
+              0.462,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.88,
+              0.528,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.99,
+              0.594,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1.1,
+              0.66,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1.21,
+              0.726,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1.32,
+              0.792,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1.43,
+              0.858,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1.54,
+              0.924,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140203,
+        "name": "A Body Brewed by Tears",
+        "desc": "After attacking an enemy afflicted with \"Seam Stitch,\" increases this unit's SPD by <span style=\"color:#f29e38ff><nobr>#1[i]</nobr></span>, stacking up to <nobr>#3[i]</nobr> time(s). When Garmentmaker takes action, automatically uses \"Thorned Snare,\" prioritizing enemies under the \"Seam Stitch\" state.",
+        "simpleDesc": "After attacking an enemy afflicted with \"Seam Stitch,\" <span style=\"color:#f29e38ff>increases this unit's SPD</span>. When taking action, automatically uses attacks, prioritizing enemies under the \"Seam Stitch\" state.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              44,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              46.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              48.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              50.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              52.8,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              55,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              57.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              59.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              61.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              63.8,
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140205,
+        "name": "The Speeding Summer",
+        "desc": "When Garmentmaker is summoned, this unit's <u>action advances</u> by <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "When summoned, this unit has its <u>action advanced</u>.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Action Advanced",
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140206,
+        "name": "Bloom of Drying Grass",
+        "desc": "When Garmentmaker disappears, regenerates <nobr>#1[i]</nobr> Energy for Aglaea.",
+        "simpleDesc": "Upon disappearing, regenerates Energy for Aglaea.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              20
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "Drift at the Whim of Venus",
-      "desc": "The enemy afflicted with \"Seam Stitch\" takes <nobr>15%</nobr> increased DMG. After Aglaea or Garmentmaker attacks this target, additionally regenerates <nobr>20</nobr> Energy."
+      "desc": "The enemy afflicted with \"Seam Stitch\" takes <nobr>15%</nobr> increased DMG. After Aglaea or Garmentmaker attacks this target, additionally regenerates <nobr>20</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "Sail on the Raft of Eyelids",
-      "desc": "When Aglaea or Garmentmaker takes action, enables the DMG dealt by Aglaea and Garmentmaker to ignore <nobr>14%</nobr> of the target's DEF. This effect stacks up to <nobr>3</nobr> time(s) and lasts until any unit, other than Aglaea or Garmentmaker, actively uses an ability."
+      "desc": "When Aglaea or Garmentmaker takes action, enables the DMG dealt by Aglaea and Garmentmaker to ignore <nobr>14%</nobr> of the target's DEF. This effect stacks up to <nobr>3</nobr> time(s) and lasts until any unit, other than Aglaea or Garmentmaker, actively uses an ability.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "Bequeath in the Coalescence of Dew",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nMemosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nMemosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "Flicker Below the Surface of Marble",
-      "desc": "The SPD Boost effect from the Memosprite Talent has its max stack limit increased by <nobr>1</nobr>. After Aglaea uses an attack, can also make Garmentmaker gain the SPD Boost effect from the Memosprite Talent."
+      "desc": "The SPD Boost effect from the Memosprite Talent has its max stack limit increased by <nobr>1</nobr>. After Aglaea uses an attack, can also make Garmentmaker gain the SPD Boost effect from the Memosprite Talent.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "Weave Under the Shroud of Woe",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nMemosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nMemosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "Fluctuate in the Tapestry of Fates",
-      "desc": "While Aglaea is in \"Supreme Stance,\" increases her and Garmentmaker's Lightning <u>RES PEN</u> by <nobr>20%</nobr>. When Aglaea's or Garmentmaker's SPD is greater than <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, the <u>Joint ATK</u> DMG dealt by them increases by <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>."
+      "desc": "While Aglaea is in \"Supreme Stance,\" increases her and Garmentmaker's Lightning <u>RES PEN</u> by <nobr>20%</nobr>. When Aglaea's or Garmentmaker's SPD is greater than <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, the <u>Joint ATK</u> DMG dealt by them increases by <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000019,
+          "name": "Joint Attack",
+          "desc": "Multiple targets respectively use attacks on enemy targets in one action.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ]
     }
   ],
   "skillTreePoints": [

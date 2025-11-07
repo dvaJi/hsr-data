@@ -2,6 +2,7 @@
   "_id": 8001,
   "id": "trailblazer_destruction_boy",
   "name": "Trailblazer Die Zerstörung",
+  "description": "Ein {F#Mädchen}{M#Junge} an Bord des Astralexpresses.\nHat beschlossen, mit dem Astralexpress zu reisen, um der Bedrohung durch das Stellaron Einhalt zu gebieten.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen physischen SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Fügt einem Gegner und angrenzenden Zielen physischen SCH zu.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "Verwendet Einzelangriff oder Ausdehnung, um einen vollen Schlag auszuführen.",
       "type": "Ultimate",
       "tag": "Verstärkung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1053,15 @@
       "simpleDesc": "Jedes Mal, wenn die Schwäche eines Gegners gebrochen wird, wird der ANG erhöht.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1365,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik wird bei allen Verbündeten LP wiederhergestellt.",
       "type": "Technik",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1344,37 +1390,88 @@
       "_id": 800101,
       "id": "a_falling_star",
       "name": "Verstreute Sterne",
-      "desc": "Wird ein Gegner durch das Ultimate besiegt, stellt der Trailblazer zusätzlich <nobr>10</nobr> Pkt. Energie wieder her. Dieser Effekt kann nur einmal pro Angriff ausgelöst werden."
+      "desc": "Wird ein Gegner durch das Ultimate besiegt, stellt der Trailblazer zusätzlich <nobr>10</nobr> Pkt. Energie wieder her. Dieser Effekt kann nur einmal pro Angriff ausgelöst werden.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800102,
       "id": "an_unwilling_host",
       "name": "Ein perfekter Gastgeber",
-      "desc": "Ein Angriff auf Gegner mit physischer Schwäche stellt LP in Höhe von <nobr>5%</nobr> des ANG des Trailblazers wieder her."
+      "desc": "Ein Angriff auf Gegner mit physischer Schwäche stellt LP in Höhe von <nobr>5%</nobr> des ANG des Trailblazers wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800103,
       "id": "a_leading_whisper",
       "name": "Der Geist, der den Weg führt",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800104,
       "id": "a_destructing_glance",
       "name": "Dem Moment der Zerstörung ins Auge sehen",
-      "desc": "Erhöht beim Angriff auf Gegner mit <u>Schwächebruch</u> die KRIT-Rate um <nobr>25%</nobr>."
+      "desc": "Erhöht beim Angriff auf Gegner mit <u>Schwächebruch</u> die KRIT-Rate um <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Schwächebruch",
+          "desc": "Wenn der Widerstand gegnerischer Ziele auf 0 sinkt, treten sie in den Zustand Schwächebruch ein, was ihre Aktionen verzögert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 800105,
       "id": "a_surviving_hope",
       "name": "Die Hoffnung auf Überleben",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800106,
       "id": "a_trailblazing_will",
       "name": "Trailblaze-Wille",
-      "desc": "Das Talent wird auch ausgelöst, wenn der Trailblazer einen Gegner besiegt."
+      "desc": "Das Talent wird auch ausgelöst, wenn der Trailblazer einen Gegner besiegt.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

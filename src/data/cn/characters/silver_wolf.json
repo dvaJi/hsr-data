@@ -2,6 +2,7 @@
   "_id": 1006,
   "id": "silver_wolf",
   "name": "银狼",
+  "description": "「星核猎手」的成员，骇客高手。\n将宇宙视作大型沉浸式模拟游戏，玩乐其中。\n掌握了能够修改现实数据的「以太编辑」。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量量子属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "大概率为敌方单体添加额外的弱点，并对其造成量子属性伤害。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -803,6 +837,27 @@
       "simpleDesc": "大概率使敌方单体防御力降低，并对其造成大量量子属性伤害。",
       "type": "终结技",
       "tag": "单攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1197,24 @@
       "simpleDesc": "攻击后有概率给目标植入1个随机【缺陷】。",
       "type": "天赋",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1495,6 +1568,15 @@
       "desc": "立即攻击敌人，进入战斗后对敌方全体造成等同于银狼#1[i]%攻击力的量子属性伤害，并无视弱点属性削减敌方全体的韧性，击破弱点时，触发量子属性的弱点击破效果。",
       "simpleDesc": "攻击敌人，进战后对敌方全体造成少量伤害，并无视弱点属性削减韧性。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1511,37 +1593,114 @@
       "_id": 100601,
       "id": "social_engineering",
       "name": "社会工程",
-      "desc": "施放终结技攻击敌方目标后，目标每有1个<u>负面效果</u>，银狼恢复<nobr>7</nobr>点能量。该效果在每次终结技攻击中最多生效<nobr>5</nobr>次。"
+      "desc": "施放终结技攻击敌方目标后，目标每有1个<u>负面效果</u>，银狼恢复<nobr>7</nobr>点能量。该效果在每次终结技攻击中最多生效<nobr>5</nobr>次。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "负面效果",
+          "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100602,
       "id": "zombie_network",
       "name": "僵尸网络",
-      "desc": "在敌方目标进入战斗时，使其效果抵抗降低<nobr>20%</nobr>。"
+      "desc": "在敌方目标进入战斗时，使其效果抵抗降低<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100603,
       "id": "payload",
       "name": "攻击载荷",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100604,
       "id": "bounce_attack",
       "name": "反弹端口",
-      "desc": "施放终结技攻击敌方目标后，目标每有1个<u>负面效果</u>，则额外造成等同于银狼<nobr>20%</nobr>攻击力的量子属性<u>附加伤害</u>。该效果在每次终结技攻击中最多触发<nobr>5</nobr>次。"
+      "desc": "施放终结技攻击敌方目标后，目标每有1个<u>负面效果</u>，则额外造成等同于银狼<nobr>20%</nobr>攻击力的量子属性<u>附加伤害</u>。该效果在每次终结技攻击中最多触发<nobr>5</nobr>次。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "负面效果",
+          "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100605,
       "id": "brute_force_attack",
       "name": "暴力破解",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100606,
       "id": "overlay_network",
       "name": "重叠网络",
-      "desc": "敌方目标每有1个<u>负面效果</u>，银狼对其造成的伤害提高<nobr>20%</nobr>，最多提高<nobr>100%</nobr>。"
+      "desc": "敌方目标每有1个<u>负面效果</u>，银狼对其造成的伤害提高<nobr>20%</nobr>，最多提高<nobr>100%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "负面效果",
+          "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

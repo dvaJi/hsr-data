@@ -2,6 +2,7 @@
   "_id": 8007,
   "id": "trailblazer_remembrance_boy",
   "name": "Trailblazer Remembrance",
+  "description": "Anak muda yang naik ke Astral Express.\nDia memilih untuk bertualang dengan Astral Express demi menghilangkan krisis yang disebabkan Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Memanggil Memosprite Mem. Jika Mem sudah berada di medan pertempuran, maka akan memulihkan HP Mem, dan membuat Mem memperoleh Charge.",
       "type": "Skill",
       "tag": "Panggil",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memanggil Memosprite",
+          "desc": "Memanggil Memosprite ke medan pertempuran. Jika Memosprite sudah berada di medan pertempuran, akan menghapus semua Crowd Control Debuff yang dimiliki oleh Memosprite.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "Memanggil Memosprite Mem. Membuat Mem memperoleh Charge, kemudian membuat Mem mengakibatkan Ice DMG dalam jumlah besar pada seluruh musuh.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memanggil Memosprite",
+          "desc": "Memanggil Memosprite ke medan pertempuran. Jika Memosprite sudah berada di medan pertempuran, akan menghapus semua Crowd Control Debuff yang dimiliki oleh Memosprite.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "Setiap kali seluruh rekan tim memulihkan Energy dalam jumlah tertentu, Mem akan memperoleh Charge.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "Menciptakan sebuah dimensi khusus. Aksi musuh dalam dimensi khusus akan terhenti. Setelah memasuki pertempuran dengan musuh di dalam dimensi khusus, akan membuat aksi seluruh musuh tertunda, dan mengakibatkan Ice DMG dalam jumlah kecil pada seluruh musuh.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Penundaan Aksi",
+          "desc": "Menambah durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,42 +1444,599 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Mem",
+    "icon": "SpriteOutput/ServantIconTeam/18007B.png",
+    "hpBase": "#4",
+    "hpInherit": "#2",
+    "hpSkill": 800704,
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1800701,
+        "name": "Baddies! Trouble!",
+        "desc": "Mengakibatkan <nobr>#2[i]</nobr> kali DMG, setiap kalinya akan mengakibatkan Ice DMG sebesar <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> ATK Mem pada 1 musuh acak. Terakhir, mengakibatkan Ice DMG sebesar <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> ATK Mem pada seluruh musuh.",
+        "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil, total Bounce <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> kali. Terakhir, mengakibatkan Ice DMG dalam jumlah kecil pada seluruh musuh.",
+        "type": {
+          "id": "Servant",
+          "name": "Skill Memosprite"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              4,
+              0.45
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.216,
+              4,
+              0.54
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.252,
+              4,
+              0.63
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.288,
+              4,
+              0.72
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.324,
+              4,
+              0.81
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.36,
+              4,
+              0.9
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.396,
+              4,
+              0.99
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.432,
+              4,
+              1.08
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.468,
+              4,
+              1.17
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.504,
+              4,
+              1.26
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800703,
+        "name": "Friends! Together!",
+        "desc": "Meningkatkan CRIT DMG seluruh rekan tim sebesar <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> CRIT DMG Mem + <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>.\nJika Charge belum mencapai <nobr>100%</nobr>, saat Mem beraksi akan secara otomatis melancarkan \"Baddies! Trouble!\". Saat Charge mencapai <nobr>100%</nobr>, Mem akan segera beraksi, dan di aksi berikutnya, Mem dapat memilih 1 rekan tim dan melancarkan \"Lemme! Help You!\".",
+        "simpleDesc": "Meningkatkan CRIT DMG seluruh rekan tim.\nSaat beraksi, akan melancarkan serangan secara otomatis. Jika Charge mencapai <nobr>100%</nobr>, Mem akan segera beraksi dan melancarkan kemampuan baru: membuat 1 rekan tim mengalami <span style=\"color:#f29e38ff><u>Pendahuluan Aksi</u></span> dan mengakibatkan <span style=\"color:#f29e38ff><u>True DMG</u></span>.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Support"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.12
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.144
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.168
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.192
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.216
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.24
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.264
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.288
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.312
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.336
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800705,
+        "name": "Go, Mem, Go!",
+        "desc": "Saat Mem dipanggil, akan segera memperoleh <nobr>#1[i]%</nobr> Charge.",
+        "simpleDesc": "Saat dipanggil, akan segera memperoleh Charge.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800706,
+        "name": "No... Regrets",
+        "desc": "Saat Mem menghilang, Trailblazer akan mengalami <u>Pendahuluan Aksi</u> sebesar <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Saat menghilang, Trailblazer akan mengalami <u>Pendahuluan Aksi</u>.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Pendahuluan Aksi",
+            "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800707,
+        "name": "Lemme! Help You!",
+        "desc": "Membuat 1 rekan tim yang ditargetkan mengalami <u>Pendahuluan Aksi</u> sebesar <nobr>#3[i]%</nobr> dan menambahkan \"Mem's Support\" selama <nobr>#2[i]</nobr> giliran.\nSetiap kali target yang memiliki \"Mem's Support\" mengakibatkan 1 kali DMG, akan mengakibatkan tambahan 1 kali <u>True DMG</u> sebesar <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> dari DMG aslinya.\nSaat melancarkan kemampuan ini pada diri sendiri, efek <u>Pendahuluan Aksi</u> tidak dapat dipicu.",
+        "simpleDesc": "Membuat 1 rekan tim mengalami <span style=\"color:#f29e38ff><u>Pendahuluan Aksi</u></span> dan menambahkan \"Mem's Support\": Setelah mengakibatkan DMG, akan mengakibatkan tambahan <span style=\"color:#f29e38ff><u>True DMG</u></span>.",
+        "type": {
+          "id": "Servant",
+          "name": "Skill Memosprite"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Support"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Pendahuluan Aksi",
+            "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000017,
+            "name": "True DMG",
+            "desc": "DMG Non-Tipe yang tidak terpengaruh oleh efek apa pun. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.2,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.22,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.24,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.26,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.28,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.32,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.34,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.36,
+              3,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 800701,
       "id": "narrator_of_the_present",
       "name": "Narrator of the Present",
-      "desc": "Meningkatkan <nobr>10%</nobr> CRIT Rate rekan tim yang memiliki \"Mem's Support\". Saat rekan tim memiliki \"Mem's Support\", efek \"Mem's Support\" juga akan efektif pada Memosprite/pemilik Memosprite rekan tersebut. Efek ini tidak dapat ditumpuk."
+      "desc": "Meningkatkan <nobr>10%</nobr> CRIT Rate rekan tim yang memiliki \"Mem's Support\". Saat rekan tim memiliki \"Mem's Support\", efek \"Mem's Support\" juga akan efektif pada Memosprite/pemilik Memosprite rekan tersebut. Efek ini tidak dapat ditumpuk.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800702,
       "id": "gleaner_of_the_past",
       "name": "Gleaner of the Past",
-      "desc": "Saat Memosprite rekan tim (selain Mem) beraksi, Trailblazer akan memulihkan <nobr>8</nobr> Energy. Efek ini maksimal dapat dipicu hingga <nobr>1</nobr> kali di setiap giliran. Jumlah pemicuan akan direset saat giliran Trailblazer dimulai."
+      "desc": "Saat Memosprite rekan tim (selain Mem) beraksi, Trailblazer akan memulihkan <nobr>8</nobr> Energy. Efek ini maksimal dapat dipicu hingga <nobr>1</nobr> kali di setiap giliran. Jumlah pemicuan akan direset saat giliran Trailblazer dimulai.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800703,
       "id": "chanter_of_the_future",
       "name": "Chanter of the Future",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>. Level Talent Memosprite +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>. Level Talent Memosprite +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800704,
       "id": "dancer_of_the_muse",
       "name": "Dancer of the Muse",
-      "desc": "Saat rekan tim (yang Max Energy-nya adalah 0) melancarkan kemampuan secara aktif, Mem akan memperoleh <nobr>3%</nobr> Charge dan True DMG Multiplier yang diakibatkan rekan tersebut melalui \"Mem's Support\" meningkat <nobr>6%</nobr>."
+      "desc": "Saat rekan tim (yang Max Energy-nya adalah 0) melancarkan kemampuan secara aktif, Mem akan memperoleh <nobr>3%</nobr> Charge dan True DMG Multiplier yang diakibatkan rekan tersebut melalui \"Mem's Support\" meningkat <nobr>6%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800705,
       "id": "seamster_of_the_ode",
       "name": "Seamster of the Ode",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Skill Memosprite +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Skill Memosprite +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800706,
       "id": "bearer_of_the_revelation",
       "name": "Bearer of the Revelation",
-      "desc": "CRIT Rate Ultimate menjadi tetap sebesar <nobr>100%</nobr>."
+      "desc": "CRIT Rate Ultimate menjadi tetap sebesar <nobr>100%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +2485,151 @@
       }
     },
     {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "Bīja of Consciousness",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Thief's Instinct",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Seedling of Manas",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Usurper's Scheme",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Seedling of Manas",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Usurper's Scheme",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Flower of Ālaya",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Conqueror's Will",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Flower of Ālaya",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Conqueror's Will",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -1868,151 +2643,6 @@
       }
     },
     {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "Bīja of Consciousness",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "Thief's Instinct",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Seedling of Manas",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Usurper's Scheme",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Seedling of Manas",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Usurper's Scheme",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Flower of Ālaya",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Conqueror's Will",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Flower of Ālaya",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Conqueror's Will",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -2153,6 +2783,27 @@
             "id": "conquerors_will",
             "name": "Conqueror's Will",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "Unfinished Epilogue",
+        "desc": "Memperoleh 1 lapis \"Epic\" setelah melancarkan Ultimate, maksimal memiliki <nobr>2</nobr> lapis. Saat memiliki \"Epic\" dan Mem berada di medan pertempuran, Basic Attack akan diperkuat menjadi \"Together, We Script Tomorrow!\".",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

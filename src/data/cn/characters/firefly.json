@@ -2,6 +2,7 @@
   "_id": 1310,
   "id": "firefly",
   "name": "流萤",
+  "description": "星核猎手成员，身着机械装甲「萨姆」战斗。忠于任务，性格坚强。\n作为战胜虫群的兵器而诞生，其生长速度异于常人，但生命非常短暂。\n为了找寻「生」的机会而加入星核猎手，找寻违抗命运的方式。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量火属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "消耗自身部分生命值恢复能量，对敌方单体造成火属性伤害。使自身下一次行动提前。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行动提前",
+          "desc": "使目标在下次行动前的等待间隔缩短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,15 @@
       "simpleDesc": "进入「完全燃烧」状态，使自身行动提前100%，获得强化普攻和强化战技，并提高自身速度、弱点击破效率和敌方目标受到的击破伤害，直至倒计时结束。",
       "type": "终结技",
       "tag": "强化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,24 @@
       "simpleDesc": "生命值越低受到的伤害越低。「完全燃烧」状态下减伤效果维持最大值，效果抵抗提高。战斗开始时若能量不足#2[i]%则使其恢复至#2[i]%。当能量恢复至上限时解除自身所有负面效果。",
       "type": "天赋",
       "tag": "防御",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "负面效果",
+          "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1490,15 @@
       "desc": "跳跃至空中并进行自由移动，持续#1[i]秒，此时施放下落攻击可以提前结束持续时间。持续时间结束后，下落并立即攻击一定范围内的所有敌人，每个波次开始时为敌方全体添加火属性弱点，持续#3[i]回合，此后对敌方全体造成等同于装甲「萨姆」#2[i]%攻击力的火属性伤害。",
       "simpleDesc": "跳跃至空中并自由移动，移动数秒后下落并攻击范围内的所有敌人，每个波次开始时为敌方全体添加火属性弱点，并对敌方全体造成火属性伤害。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1517,105 @@
       "_id": 131001,
       "id": "in_reddened_chrysalis_i_once_rest",
       "name": "我曾安眠，赤染之茧",
-      "desc": "施放强化战技时无视目标<nobr>15%</nobr>的防御，且强化战技不消耗战技点。"
+      "desc": "施放强化战技时无视目标<nobr>15%</nobr>的防御，且强化战技不消耗战技点。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131002,
       "id": "from_shattered_sky_i_free_fall",
       "name": "自破碎的天空坠落",
-      "desc": "「完全燃烧」状态下施放强化普攻、强化战技消灭敌方目标或使目标陷入<u>弱点击破状态</u>时，装甲「萨姆」立即获得1个<u>额外回合</u>。该效果在<nobr>1</nobr>回合后可再次触发。"
+      "desc": "「完全燃烧」状态下施放强化普攻、强化战技消灭敌方目标或使目标陷入<u>弱点击破状态</u>时，装甲「萨姆」立即获得1个<u>额外回合</u>。该效果在<nobr>1</nobr>回合后可再次触发。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点击破状态",
+          "desc": "当敌方目标的韧性被削减至0时进入的特殊状态，进入该状态的目标行动会被延后。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "额外回合",
+          "desc": "获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131003,
       "id": "amidst_silenced_stars_i_deep_sleep",
       "name": "沉睡在静默的星河",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131004,
       "id": "upon_lighted_fyrefly_i_soon_gaze",
       "name": "我会看见，飞萤之火",
-      "desc": "「完全燃烧」状态下，装甲「萨姆」的效果抵抗提高<nobr>50%</nobr>。"
+      "desc": "「完全燃烧」状态下，装甲「萨姆」的效果抵抗提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131005,
       "id": "from_undreamt_night_i_thence_shine",
       "name": "自无梦的长夜亮起",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131006,
       "id": "in_finalized_morrow_i_full_bloom",
       "name": "绽放在终竟的明天",
-      "desc": "「完全燃烧」状态下装甲「萨姆」的火属性<u>抗性穿透</u>提高<nobr>20%</nobr>。施放强化普攻、强化战技时弱点击破效率提高<nobr>50%</nobr>。"
+      "desc": "「完全燃烧」状态下装甲「萨姆」的火属性<u>抗性穿透</u>提高<nobr>20%</nobr>。施放强化普攻、强化战技时弱点击破效率提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

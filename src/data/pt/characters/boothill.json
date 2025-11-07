@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "Boothill",
+  "description": "Um caubói ciborgue vagando pelas estrelas. Extremamente otimista e desimpedido.\nEle é um membro dos Vigias da Galáxia que jurou punir os malditos a qualquer custo...\nSuas ações extravagantes e audaciosas foram todas para chamar a atenção da Corporação da Paz Interastral, o alvo de sua vingança.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inicia Confronto. Depois que o alvo no Confronto for derrotado ou sofrer Quebra de Fraqueza, Boothill recebe Truque de Bolso e desfaz o Confronto. Boothill ganha ATQs Básicos Aprimorados e esta rodada não termina.",
       "type": "Perícia",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "Aplica Fraqueza contra Físico a um inimigo, causa uma quantidade massiva de Dano Físico e atrasa suas ações.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Ação Atrasada",
+          "desc": "Aumenta o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "O Truque de Bolso aumenta a Redução de Tenacidade do ATQ Básico Aprimorado e causa Dano de Quebra de Físico adicional ao inimigo que sofreu Quebra de Fraqueza. Após vencer a batalha, mantém o Truque de Bolso para a próxima batalha.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Dano de Quebra",
+          "desc": "O Dano de Quebra aumenta com um maior Efeito de Quebra, maior Tenacidade máxima de alvo, e maiores níveis de personagens.\nO Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "Depois que a Técnica é utilizada, aplica Fraqueza contra Físico contra um único inimigo ao usar a Perícia pela primeira vez na próxima batalha.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "Estrela Solitária da Trilha Empoeirada",
-      "desc": "No início da batalha, obtém 1 acúmulo de Truque de Bolso. Quando Boothill causa Dano, ignora <nobr>16%</nobr> da DEF do inimigo-alvo."
+      "desc": "No início da batalha, obtém 1 acúmulo de Truque de Bolso. Quando Boothill causa Dano, ignora <nobr>16%</nobr> da DEF do inimigo-alvo.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "Revendedor de Conquistas",
-      "desc": "Quando em Confronto e obtendo Truque de Bolso, recupera <nobr>1</nobr> Ponto(s) de Perícia e aumenta o Efeito de Quebra em <nobr>30%</nobr>, com duração de <nobr>2</nobr> rodada(s). Este efeito também pode ser ativado ao obter acúmulos de Truque de Bolso que excedam o limite máximo. No entanto, não pode ser ativado repetidamente em uma única rodada."
+      "desc": "Quando em Confronto e obtendo Truque de Bolso, recupera <nobr>1</nobr> Ponto(s) de Perícia e aumenta o Efeito de Quebra em <nobr>30%</nobr>, com duração de <nobr>2</nobr> rodada(s). Este efeito também pode ser ativado ao obter acúmulos de Truque de Bolso que excedam o limite máximo. No entanto, não pode ser ativado repetidamente em uma única rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "Guarda do Jardim de Mármore",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "Chef de Carnes Frias",
-      "desc": "Quando o inimigo-alvo que estiver em Confronto for atacado por Boothill, o Dano recebido por ele aumenta em <nobr>12%</nobr>. Quando Boothill é atacado pelo inimigo-alvo em Confronto, o efeito de receber mais Dano é reduzido em <nobr>12%</nobr> nele."
+      "desc": "Quando o inimigo-alvo que estiver em Confronto for atacado por Boothill, o Dano recebido por ele aumenta em <nobr>12%</nobr>. Quando Boothill é atacado pelo inimigo-alvo em Confronto, o efeito de receber mais Dano é reduzido em <nobr>12%</nobr> nele.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "Discurso do Tronco",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "Guaxinim do Hotel Pé de Cabra",
-      "desc": "Ao ativar o <u>Dano de Quebra</u> do Talento, causa adicionalmente <u>Dano de Quebra</u> ao inimigo-alvo igual a <nobr>40%</nobr> do multiplicador de Dano original e causa <u>Dano de Quebra</u> igual a <nobr>70%</nobr> do multiplicador de Dano original a alvos adjacentes."
+      "desc": "Ao ativar o <u>Dano de Quebra</u> do Talento, causa adicionalmente <u>Dano de Quebra</u> ao inimigo-alvo igual a <nobr>40%</nobr> do multiplicador de Dano original e causa <u>Dano de Quebra</u> igual a <nobr>70%</nobr> do multiplicador de Dano original a alvos adjacentes.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Dano de Quebra",
+          "desc": "O Dano de Quebra aumenta com um maior Efeito de Quebra, maior Tenacidade máxima de alvo, e maiores níveis de personagens.\nO Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

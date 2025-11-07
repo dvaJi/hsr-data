@@ -2,6 +2,7 @@
   "_id": 1006,
   "id": "silver_wolf",
   "name": "Loba Prateada",
+  "description": "Membro dos Caçadores de Stellaron e hacker gênio.\nVê o universo como um enorme jogo imersivo de simulação, e se diverte jogando.\nEla domina a perícia conhecida como \"Edição de Éter\", que pode ser utilizada para modificar a realidade.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Quântico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Existe uma chance alta de aplicar Fraquezas de Tipo adicionais a um único inimigo e causa Dano Quântico a este inimigo.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -803,6 +837,27 @@
       "simpleDesc": "Tem uma chance alta de diminuir a DEF de um único inimigo e causa Dano Quântico massivo a este inimigo.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1197,24 @@
       "simpleDesc": "Após esta unidade atacar, existe a chance de infligir 1 Erro aleatório no inimigo atacado.",
       "type": "Talento",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1495,6 +1568,15 @@
       "desc": "Ataca o inimigo imediatamente. Após entrar na batalha, causa Dano Quântico igual a #1[i]% do ATQ da Loba Prateada a todos os inimigos, ignora os Tipos de Fraqueza e reduz a Tenacidade de todos os inimigos. Inimigos com suas Fraquezas Quebradas desta forma ativarão o efeito de Quebra de Fraqueza contra Quântico.",
       "simpleDesc": "Ataca o inimigo. Após entrar na batalha, causa uma pequena quantidade de Dano a todos os inimigos e reduz a Tenacidade deles independentemente de seus Tipos de Fraquezas.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1511,37 +1593,114 @@
       "_id": 100601,
       "id": "social_engineering",
       "name": "Engenharia Social",
-      "desc": "Após usar sua Perícia Suprema para atacar inimigos, Loba Prateada regenera <nobr>7</nobr> de Energia para cada <u>penalidade</u> que o inimigo-alvo possui no momento. Este efeito pode ser ativado até <nobr>5</nobr> vez(es) cada vez que a Perícia Suprema da Loba Prateada for utilizada."
+      "desc": "Após usar sua Perícia Suprema para atacar inimigos, Loba Prateada regenera <nobr>7</nobr> de Energia para cada <u>penalidade</u> que o inimigo-alvo possui no momento. Este efeito pode ser ativado até <nobr>5</nobr> vez(es) cada vez que a Perícia Suprema da Loba Prateada for utilizada.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100602,
       "id": "zombie_network",
       "name": "Rede de Zumbis",
-      "desc": "Quando um inimigo entra na batalha, reduz a RES a Efeito dele em <nobr>20%</nobr>."
+      "desc": "Quando um inimigo entra na batalha, reduz a RES a Efeito dele em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100603,
       "id": "payload",
       "name": "Carga Explosiva",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100604,
       "id": "bounce_attack",
       "name": "Ataque Rebote",
-      "desc": "Após usar sua Perícia Suprema para atacar inimigos, causa Dano Quântico Adicional igual a <nobr>20%</nobr> do ATQ da Loba Prateada para cada penalidade que o inimigo-alvo possui no momento. Este efeito pode ser ativado até <nobr>5</nobr> vez(es) cada vez que a Perícia Suprema dela for utilizada."
+      "desc": "Após usar sua Perícia Suprema para atacar inimigos, causa Dano Quântico Adicional igual a <nobr>20%</nobr> do ATQ da Loba Prateada para cada penalidade que o inimigo-alvo possui no momento. Este efeito pode ser ativado até <nobr>5</nobr> vez(es) cada vez que a Perícia Suprema dela for utilizada.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100605,
       "id": "brute_force_attack",
       "name": "Ataque de Força Bruta",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100606,
       "id": "overlay_network",
       "name": "Rede Sobreposta",
-      "desc": "Para cada <u>penalidade</u> no inimigo-alvo, o Dano causado pela Loba Prateada aumenta em <nobr>20%</nobr>, até um limite de <nobr>100%</nobr>."
+      "desc": "Para cada <u>penalidade</u> no inimigo-alvo, o Dano causado pela Loba Prateada aumenta em <nobr>20%</nobr>, até um limite de <nobr>100%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

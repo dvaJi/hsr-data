@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "Feixiao",
+  "description": "La Garra Celestial del Yaoqing de Xianzhou y uno de los siete generales celestiales del Señor Arquero. Su personalidad es desenfrenada y franca, atrevida y directa.\nEs experta en todas las formas de artes marciales y se perfeccionó hasta convertirse en un arma suprema. Tanto los soldados como los civiles de Xianzhou la adoran como \"la General Victoriosa\".\nSin embargo, sufre de la aflicción de la Locura lunar. Si tuviera que cazar todas las abominaciones en su limitada vida, entonces el único enemigo que tendría Feixiao sería ella misma.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Inflige Daño de Viento a un enemigo y a continuación lanza adicionalmente 1 vez el ataque adicional del talento.",
       "type": "Habilidad básica",
       "tag": "ATQ individual",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "Durante la habilidad definitiva, reduce la Firmeza del enemigo ignorando sus tipos de Debilidad. Si el objetivo no tiene Ruptura de Debilidad, la eficiencia de la Ruptura de Debilidad de Feixiao aumenta.\nLanza #3[i] veces Danza de cortes relámpago o Aluvión de hachazos hendedores a un enemigo, y por último inflige Daño de Viento.",
       "type": "Habilidad definitiva",
       "tag": "ATQ individual",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Ruptura de Debilidad",
+          "desc": "Cuando la Firmeza del objetivo se reduce a 0, entrará en un estado especial en el que sus acciones se retrasarán.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "Puede activar la habilidad definitiva cuando alcanza #3[i] puntos de Feihuang. Puede acumular hasta #4[i] puntos. Por cada #2[i] ataques que lancen los objetivos aliados, Feixiao obtiene Feihuang.\nDespués de que un compañero de equipo ataque, Feixiao lanza contra el objetivo principal un ataque adicional que inflige Daño de Viento. Este efecto puede activarse 1 vez como máximo en cada turno. Al lanzar este ataque, el daño que inflige aumenta.",
       "type": "Talento",
       "tag": "ATQ individual",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "Entra en el estado de Trampa de remolino. Atrae a los enemigos de manera continua, aumenta su VEL de movimiento y obtiene Feihuang tras entrar en combate.\nEn el estado de Trampa de remolino, puede atacar a todos los enemigos atraídos. Al comienzo de cada oleada, inflige Daño de Viento a todos los enemigos. Este daño resultará en un Golpe CRIT de forma garantizada. Cuantos más enemigos atraiga, más alto es su multiplicador de daño.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "Cielo apaciguado",
-      "desc": "Tras lanzar Danza de cortes relámpago o Aluvión de hachazos hendedores, el daño de habilidad definitiva que inflige Feixiao aumenta adicionalmente en un <nobr>10%</nobr> del daño original. Puede acumularse hasta <nobr>5</nobr> veces y dura hasta que termina la acción de la habilidad definitiva."
+      "desc": "Tras lanzar Danza de cortes relámpago o Aluvión de hachazos hendedores, el daño de habilidad definitiva que inflige Feixiao aumenta adicionalmente en un <nobr>10%</nobr> del daño original. Puede acumularse hasta <nobr>5</nobr> veces y dura hasta que termina la acción de la habilidad definitiva.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "Rito lunar",
-      "desc": "En los efectos del talento, cada vez que un objetivo aliado lanza 1 <u>ataque adicional</u>, Feixiao gana 1 punto de Feihuang. Este efecto solo se puede activar un máximo de <nobr>6</nobr> veces por turno."
+      "desc": "En los efectos del talento, cada vez que un objetivo aliado lanza 1 <u>ataque adicional</u>, Feixiao gana 1 punto de Feihuang. Este efecto solo se puede activar un máximo de <nobr>6</nobr> veces por turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "Estrella del buen augurio",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "Susurro del hielo en la ventisca",
-      "desc": "La Reducción de Firmeza del <u>ataque adicional</u> del talento aumenta en un <nobr>100%</nobr> y, al ser lanzado, su VEL aumenta en un <nobr>8%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "La Reducción de Firmeza del <u>ataque adicional</u> del talento aumenta en un <nobr>100%</nobr> y, al ser lanzado, su VEL aumenta en un <nobr>8%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "Salto celeste",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "Mirada al origen",
-      "desc": "La <u>PEN de la RES</u> a todos los tipos del daño de habilidad definitiva que inflige Feixiao aumenta en un <nobr>20%</nobr>. A su vez, el daño de <u>ataque adicional</u> del talento se considera como daño de habilidad definitiva, y su multiplicador de daño aumenta en un <nobr>140%</nobr>."
+      "desc": "La <u>PEN de la RES</u> a todos los tipos del daño de habilidad definitiva que inflige Feixiao aumenta en un <nobr>20%</nobr>. A su vez, el daño de <u>ataque adicional</u> del talento se considera como daño de habilidad definitiva, y su multiplicador de daño aumenta en un <nobr>140%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1009,
   "id": "asta",
   "name": "艾絲妲",
+  "description": "太空站「黑塔」的站長，出身名門的大小姐。\n好奇心旺盛的天文研究者，擅長管理太空站各抒己見的組員。",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害，共彈射5次。",
       "type": "戰技",
       "tag": "彈射",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "使我方全體速度提高。",
       "type": "終結技",
       "tag": "輔助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,15 @@
       "simpleDesc": "每命中1名不同敵人便獲得1層蓄能，最多疊加5層。每層蓄能提高我方全體攻擊力。自身回合開始時降低蓄能層數。",
       "type": "天賦",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1327,6 +1373,15 @@
       "desc": "立即攻擊敵人，進入戰鬥後對敵方全體目標造成等同於艾絲妲#1[i]%攻擊力的火屬性傷害。",
       "simpleDesc": "攻擊敵人，進入戰鬥後對敵方全體造成少量傷害。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1343,37 +1398,79 @@
       "_id": 100901,
       "id": "star_sings_sans_verses_or_vocals",
       "name": "星有無言之歌",
-      "desc": "施放戰技時，對敵方隨機單體額外造成1次傷害。"
+      "desc": "施放戰技時，對敵方隨機單體額外造成1次傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100902,
       "id": "moon_speaks_in_wax_and_wane",
       "name": "月見圓缺之意",
-      "desc": "施放終結技時，艾絲妲下回合不會減少蓄能層數。"
+      "desc": "施放終結技時，艾絲妲下回合不會減少蓄能層數。",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100903,
       "id": "meteor_showers_for_wish_and_want",
       "name": "黃道隕石之變",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100904,
       "id": "aurora_basks_in_beauty_and_bliss",
       "name": "極光顯現之時",
-      "desc": "天賦的蓄能層數大於等於<nobr>2</nobr>時，艾絲妲的能量恢復效率提高<nobr>15%</nobr>。"
+      "desc": "天賦的蓄能層數大於等於<nobr>2</nobr>時，艾絲妲的能量恢復效率提高<nobr>15%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100905,
       "id": "nebula_secludes_in_runes_and_riddles",
       "name": "深空天體之謎",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100906,
       "id": "cosmos_dreams_in_calm_and_comfort",
       "name": "眠於銀河之下",
-      "desc": "天賦每回合減少的蓄能層數降低<nobr>1</nobr>。"
+      "desc": "天賦每回合減少的蓄能層數降低<nobr>1</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1305,
   "id": "dr_ratio",
   "name": "Dr. Ratio",
+  "description": "Membro da Guilda de Intelectuais.\nTem um temperamento excêntrico, uma língua afiada e uma aparência elegante.\nO rosto por baixo da estranha escultura de alabastro é inesperadamente belo.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Imaginário leve a um único inimigo-alvo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Causa Dano Imaginário a um único inimigo.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Causa Dano Imaginário a um único inimigo-alvo e aplica Tolice do Sábio. Quando os aliados do Dr. Ratio atacam um alvo afligido com Tolice do Sábio, o Dr. Ratio realiza 1 Ataque Extra contra este alvo.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1022,6 +1059,32 @@
       "simpleDesc": "Ao usar a Perícia, há uma chance de realizar 1 instância de Ataque Extra contra o alvo, causando Dano Imaginário.",
       "type": "Talento",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chance fixa",
+          "desc": "Chance fixa não será afetada por nenhum fator.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1409,24 @@
       "simpleDesc": "Cria uma dimensão especial. Inimigos dentro dessa dimensão sofrem Provocação. Após entrar em combate com inimigos nesta dimensão, há uma alta chance de reduzir a VEL dos inimigos-alvo.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1446,113 @@
       "_id": 130501,
       "id": "pride_comes_before_a_fall",
       "name": "Quanto Maior a Subida, Maior a Queda",
-      "desc": "A contagem máxima de acúmulos para o Rastro \"Soma\" aumenta em <nobr>4</nobr>. Quando uma batalha começa, obtém imediatamente <nobr>4</nobr> acúmulos de Soma. É necessário desbloquear Soma antes."
+      "desc": "A contagem máxima de acúmulos para o Rastro \"Soma\" aumenta em <nobr>4</nobr>. Quando uma batalha começa, obtém imediatamente <nobr>4</nobr> acúmulos de Soma. É necessário desbloquear Soma antes.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130502,
       "id": "the_divine_is_in_the_details",
       "name": "O Divino Está nos Detalhes",
-      "desc": "Quando o <u>Ataque Extra</u> do seu Talento atinge um alvo, para cada <u>penalidade</u> no alvo, causa <u>Dano Imaginário Adicional</u> igual a <nobr>20%</nobr> do ATQ do Dr. Ratio. Este efeito pode ser ativado até um máximo de <nobr>4</nobr> vez(es) durante cada <u>Ataque Extra</u>."
+      "desc": "Quando o <u>Ataque Extra</u> do seu Talento atinge um alvo, para cada <u>penalidade</u> no alvo, causa <u>Dano Imaginário Adicional</u> igual a <nobr>20%</nobr> do ATQ do Dr. Ratio. Este efeito pode ser ativado até um máximo de <nobr>4</nobr> vez(es) durante cada <u>Ataque Extra</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130503,
       "id": "know_thyself",
       "name": "Conhece-te a Ti Mesmo",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130504,
       "id": "ignorance_is_blight",
       "name": "Ignorância É Uma Bênção",
-      "desc": "Ao ativar o Talento, adicionalmente regenera <nobr>15</nobr> de Energia do Dr. Ratio."
+      "desc": "Ao ativar o Talento, adicionalmente regenera <nobr>15</nobr> de Energia do Dr. Ratio.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130505,
       "id": "sic_itur_ad_astra",
       "name": "Sic Itur Ad Astra",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130506,
       "id": "vincit_omnia_veritas",
       "name": "Vincit Omnia Veritas",
-      "desc": "Aumenta adicionalmente a contagem de ativação para \"Tolice do Sábio\" em <nobr>1</nobr>. O Dano causado pelo <u>Ataque Extra</u> do Talento aumenta em <nobr>50%</nobr>."
+      "desc": "Aumenta adicionalmente a contagem de ativação para \"Tolice do Sábio\" em <nobr>1</nobr>. O Dano causado pelo <u>Ataque Extra</u> do Talento aumenta em <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

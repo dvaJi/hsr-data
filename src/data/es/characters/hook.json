@@ -2,6 +2,7 @@
   "_id": 1109,
   "id": "hook",
   "name": "Hook",
+  "description": "Jefa autoproclamada del grupo de aventura del Bajomundo llamado Los Topos.\nAma la libertad y cree que la vida es una sucesión de aventuras.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Inflige Daño de Fuego a un enemigo y tiene una gran probabilidad de causarle Quemadura.",
       "type": "Habilidad básica",
       "tag": "ATQ individual",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Inflige una gran cantidad de Daño de Fuego a un enemigo y potencia el siguiente uso de la habilidad básica.",
       "type": "Habilidad definitiva",
       "tag": "ATQ individual",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,27 @@
       "simpleDesc": "Al atacar a un enemigo afectado por Quemadura, inflige una pequeña cantidad de Daño de Fuego adicional y recupera energía.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1409,24 @@
       "desc": "Ataca inmediatamente al enemigo y entra en combate. Inflige un #4[i]% del ATQ de Hook como Daño de Fuego a un enemigo al azar. Además, cada enemigo tiene un #1[i]% de probabilidad base de ser afectado por Quemadura durante #3[i] turnos.\nLos enemigos quemados reciben un Daño de Fuego con el tiempo equivalente al #2[i]% del ATQ de Hook al comienzo de cada turno.",
       "simpleDesc": "Ataca inmediatamente al enemigo y entra en combate. Inflige una pequeña cantidad de Daño de Fuego a un enemigo al azar y tiene una gran probabilidad de afectar con Quemadura a cada enemigo.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1446,88 @@
       "_id": 110901,
       "id": "early_to_bed_early_to_rise",
       "name": "A la cama temprano",
-      "desc": "La habilidad básica potenciada inflige un <nobr>20%</nobr> más de daño."
+      "desc": "La habilidad básica potenciada inflige un <nobr>20%</nobr> más de daño.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110902,
       "id": "happy_tummy_happy_body",
       "name": "Tripita feliz, persona feliz",
-      "desc": "La duración del estado de Quemadura causado por la habilidad básica de Hook se alarga en <nobr>1</nobr> turno."
+      "desc": "La duración del estado de Quemadura causado por la habilidad básica de Hook se alarga en <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110903,
       "id": "dont_be_picky_nothings_icky",
       "name": "Nada de elegir",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110904,
       "id": "its_okay_to_not_know",
       "name": "No pasa nada si no lo sabes",
-      "desc": "Al activar el talento, tiene una <u>probabilidad base</u> del <nobr>100%</nobr> de afectar a los enemigos adyacentes al objetivo con una Quemadura equivalente a la de la habilidad básica."
+      "desc": "Al activar el talento, tiene una <u>probabilidad base</u> del <nobr>100%</nobr> de afectar a los enemigos adyacentes al objetivo con una Quemadura equivalente a la de la habilidad básica.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110905,
       "id": "let_the_moles_deeds_be_known",
       "name": "Que todos sepan de las hazañas de Los Topos",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110906,
       "id": "always_ready_to_punch_and_kick",
       "name": "Siempre lista para patear traseros",
-      "desc": "Hook inflige un <nobr>20%</nobr> más de daño a los enemigos afectados por Quemadura."
+      "desc": "Hook inflige un <nobr>20%</nobr> más de daño a los enemigos afectados por Quemadura.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

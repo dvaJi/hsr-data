@@ -2,6 +2,7 @@
   "_id": 1215,
   "id": "hanya",
   "name": "Hanya",
+  "description": "Salah satu hakim dari Ten-Lords Commission Xianzhou \"Luofu\".\nMenerima perintah dari Ten-Lords, mengendalikan kuas ramalan, membaca jenis-jenis dosa manusia, serta memberikan hukuman penebusan karma.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Physical DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Mengakibatkan Physical DMG pada 1 musuh, serta membuat target tersebut memasuki status \"Burden\". Saat setelah rekan tim melancarkan 2 kali serangan (Basic ATK, Skill, atau Ultimate) pada target musuh yang berstatus \"Burden\", akan segera memulihkan 1 Poin Skill untuk rekan tim.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 17
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Meningkatkan SPD dan ATK 1 rekan tim.",
       "type": "Ultimate",
       "tag": "Enhance",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "Saat rekan tim melancarkan Basic Attack, Skill, atau Ultimate pada target musuh berstatus \"Burden\", DMG yang diakibatkan akan meningkat.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1388,15 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, akan memberikan \"Burden\" yang sama dengan efek Skill pada 1 musuh secara acak.",
       "simpleDesc": "Menyerang musuh. Setelah memasuki pertempuran, akan menambahkan efek \"Burden\" yang sama dengan Skill pada musuh secara acak.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1356,37 +1411,88 @@
       "_id": 121501,
       "id": "one_heart",
       "name": "One Heart",
-      "desc": "Ketika rekan tim dengan efek Ultimate Hanya mengalahkan target musuh, aksi Hanya akan <u>didahulukan</u> sebesar <nobr>15%</nobr>. Efek ini cuma dapat dipicu <nobr>1</nobr> kali per giliran."
+      "desc": "Ketika rekan tim dengan efek Ultimate Hanya mengalahkan target musuh, aksi Hanya akan <u>didahulukan</u> sebesar <nobr>15%</nobr>. Efek ini cuma dapat dipicu <nobr>1</nobr> kali per giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Pendahuluan Aksi",
+          "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121502,
       "id": "two_views",
       "name": "Two Views",
-      "desc": "Setelah melancarkan Skill, meningkatkan <nobr>20%</nobr> SPD selama <nobr>1</nobr> giliran."
+      "desc": "Setelah melancarkan Skill, meningkatkan <nobr>20%</nobr> SPD selama <nobr>1</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121503,
       "id": "three_temptations",
       "name": "Three Temptations",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121504,
       "id": "four_truths",
       "name": "Four Truths",
-      "desc": "Durasi Ultimate bertambah <nobr>1</nobr> giliran."
+      "desc": "Durasi Ultimate bertambah <nobr>1</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121505,
       "id": "five_skandhas",
       "name": "Five Skandhas",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121506,
       "id": "six_reverences",
       "name": "Six Reverences",
-      "desc": "Efek peningkatan DMG dari Talent akan meningkat ekstra <nobr>10%</nobr>."
+      "desc": "Efek peningkatan DMG dari Talent akan meningkat ekstra <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

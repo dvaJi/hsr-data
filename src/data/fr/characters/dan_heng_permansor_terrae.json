@@ -2,6 +2,7 @@
   "_id": 1414,
   "id": "dan_heng_permansor_terrae",
   "name": "Dan Heng • Permansor Terrae",
+  "description": "Le cœur de Géorios. Le corps du Dragon déchu porte sur lui un monde déchiré. Il est destiné à vivre dans la souffrance des millénaires durant.\nDan Heng, Sans Nom, Héritier chryséen chargé de protéger la flamme divine de la Terre, tu dois stabiliser le monde qui s'effondre et guider toute vie à travers les terres vers un nouveau foyer.\nLes rivières coulent vers la mer, les montagnes résonnent en harmonie, la voie éternelle s'étend sur dix mille lieues.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi désigné.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Désigne un personnage allié comme Alter ego et accorde un bouclier avec une valeur de bouclier cumulable à tous les alliés.",
       "type": "Compétence",
       "tag": "Défense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,32 @@
       "simpleDesc": "Inflige des DGT physiques massifs à tous les ennemis et accorde un bouclier avec une valeur de bouclier cumulable à tous les alliés. Renforce le Draco spiritus. Lorsque le Draco spiritus agit, déclenche une ATQ de suivi qui inflige des DGT physiques mineurs et des DGT mineurs du type de l'Alter ego à tous les ennemis. Le renforcement prend fin après #3[i] actions du Draco spiritus.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1202,32 @@
       "simpleDesc": "Lorsqu'un personnage allié devient l'Alter ego, Dan Heng • Permansor Terrae invoque le Draco spiritus.\nLorsque le Draco spiritus agit, dissipe 1 malus de chacun des alliés et accorde un bouclier avec une valeur de bouclier cumulable.",
       "type": "Talent",
       "tag": "Défense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Malus",
+          "desc": "Les malus sont des effets de statut négatifs qui affaiblissent les unités. Sauf indication contraire, les malus peuvent être dissipés.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1597,15 @@
       "simpleDesc": "Applique l'état Hébété aux ennemis situés dans une zone définie et désigne le personnage actif actuel comme Alter ego. Au début du prochain combat, utilise automatiquement la compétence sur le personnage désigné comme Alter ego.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1622,114 @@
       "_id": 141401,
       "id": "shed_scales_of_old",
       "name": "Mue des écailles antiques",
-      "desc": "Lorsque Dan Heng • Permansor Terrae lance un ultime, récupère <nobr>1</nobr> point de compétence et la <u>PÉN de RÉS</u> à tous les types de l'Alter ego augmente de <nobr>18%</nobr> pendant <nobr>3</nobr> tours."
+      "desc": "Lorsque Dan Heng • Permansor Terrae lance un ultime, récupère <nobr>1</nobr> point de compétence et la <u>PÉN de RÉS</u> à tous les types de l'Alter ego augmente de <nobr>18%</nobr> pendant <nobr>3</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141402,
       "id": "watch_trails_to_blaze",
       "name": "Garde des pionniers",
-      "desc": "Le Draco spiritus dans l'état renforcé de l'ultime peut agir <nobr>2</nobr> fois supplémentaires. Après que Dan Heng • Permansor Terrae a utilisé son ultime, <u>avance l'action</u> du Draco spiritus de <nobr>100</nobr> %. Lorsque le Draco spiritus agit dans l'état renforcé, les <u>DGT additionnels</u> infligés par l'Alter ego passent à <nobr>200%</nobr> des DGT initiaux, et la valeur de bouclier accordée lors de cette action passe à <nobr>200%</nobr> de la valeur de bouclier initiale."
+      "desc": "Le Draco spiritus dans l'état renforcé de l'ultime peut agir <nobr>2</nobr> fois supplémentaires. Après que Dan Heng • Permansor Terrae a utilisé son ultime, <u>avance l'action</u> du Draco spiritus de <nobr>100</nobr> %. Lorsque le Draco spiritus agit dans l'état renforcé, les <u>DGT additionnels</u> infligés par l'Alter ego passent à <nobr>200%</nobr> des DGT initiaux, et la valeur de bouclier accordée lors de cette action passe à <nobr>200%</nobr> de la valeur de bouclier initiale.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141403,
       "id": "bear_weight_of_worlds",
       "name": "Berceau des mondes",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141404,
       "id": "by_oath_this_vessel_is_i",
       "name": "Votre refuge, je serai",
-      "desc": "Réduit les DGT subis par l'Alter ego de <nobr>20%</nobr>."
+      "desc": "Réduit les DGT subis par l'Alter ego de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141405,
       "id": "the_path_of_permanence_sweeps_far",
       "name": "Longue est la Voie de la Permanence",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141406,
       "id": "one_dream_to_enfold_all_wilds",
       "name": "Rêve d'une nature absolue",
-      "desc": "Lorsque l'Alter ego est présent sur le champ de bataille, augmente les DGT subis par tous les ennemis de <nobr>20%</nobr>. Les DGT infligés par l'Alter ego ignorent <nobr>12%</nobr> de la DÉF des cibles ennemies. Lorsque Dan Heng • Permansor Terrae utilise son ultime, l'Alter ego inflige des <u>DGT additionnels</u> de son type et équivalents à <nobr>330%</nobr> de son ATQ à tous les ennemis."
+      "desc": "Lorsque l'Alter ego est présent sur le champ de bataille, augmente les DGT subis par tous les ennemis de <nobr>20%</nobr>. Les DGT infligés par l'Alter ego ignorent <nobr>12%</nobr> de la DÉF des cibles ennemies. Lorsque Dan Heng • Permansor Terrae utilise son ultime, l'Alter ego inflige des <u>DGT additionnels</u> de son type et équivalents à <nobr>330%</nobr> de son ATQ à tous les ennemis.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

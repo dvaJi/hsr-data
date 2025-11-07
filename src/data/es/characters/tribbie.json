@@ -2,6 +2,7 @@
   "_id": 1403,
   "id": "tribbie",
   "name": "Tribbie",
+  "description": "De aquella tierra sagrada bendecida por el oráculo tripartito, la mensajera se separó en un millar de formas, que se embarcaron en largos viajes.\nOh, Trispios, Doncella Sagrada de Janópolis, Heredera de Crisos que robó la Yesca de la Senda y recorre el mundo proclamando la salvación a todos los seres.\nEncuentra a los hijos de los hombres con sangre dorada de dioses en sus venas, atraviesa la oscuridad de este mundo y camina hacia un mañana en el que la luna y las estrellas brillen.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Cuántico a un enemigo y a los objetivos adyacentes.",
       "type": "ATQ básico",
       "tag": "Ráfaga",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Obtiene Numinosidad. Mientras dura, la PEN de la RES a todos los tipos de todos los aliados aumenta.",
       "type": "Habilidad básica",
       "tag": "Apoyo",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -738,6 +766,24 @@
       "simpleDesc": "Crea un campo que inflige una pequeña cantidad de Daño Cuántico a todos los enemigos. Mientras el campo está activo, el daño que reciben los enemigos aumenta. Además, según la cantidad de enemigos atacados, inflige una pequeña cantidad de Daño Cuántico adicional al objetivo con más PV de entre los atacados.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1077,6 +1123,24 @@
       "simpleDesc": "Después de que otro personaje aliado lance la habilidad definitiva, Tribbie lanza un ataque adicional que inflige una pequeña cantidad de Daño Cuántico a todos los enemigos. Este efecto solo se puede activar 1 vez por personaje. El contador de activaciones de otros personajes se reinicia cuando Tribbie lanza su habilidad definitiva.",
       "type": "Talento",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,6 +1435,15 @@
       "simpleDesc": "Obtiene Numinosidad al entrar en combate.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1387,37 +1460,114 @@
       "_id": 140301,
       "id": "rite_of_sugar_scoop",
       "name": "Festival de recolecta de azúcar",
-      "desc": "Después de que un aliado ataque al enemigo mientras el campo está activo, inflige adicionalmente al objetivo que recibe el <u>daño adicional</u> del campo un <u>Daño verdadero</u> equivalente al <nobr>24%</nobr> del daño total del ataque."
+      "desc": "Después de que un aliado ataque al enemigo mientras el campo está activo, inflige adicionalmente al objetivo que recibe el <u>daño adicional</u> del campo un <u>Daño verdadero</u> equivalente al <nobr>24%</nobr> del daño total del ataque.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "Daño verdadero",
+          "desc": "Daño sin tipo que no se ve influido por ningún efecto. No se considera como un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140302,
       "id": "guide_of_dream_tour",
       "name": "Guía para visitar sueños",
-      "desc": "El <u>daño adicional</u> que inflige el campo aumenta al <nobr>120%</nobr> del daño original. Cuando el campo inflige <u>daño adicional</u>, inflige daño adicional <nobr>1</nobr> vez más."
+      "desc": "El <u>daño adicional</u> que inflige el campo aumenta al <nobr>120%</nobr> del daño original. Cuando el campo inflige <u>daño adicional</u>, inflige daño adicional <nobr>1</nobr> vez más.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140303,
       "id": "trove_of_morning_glow",
       "name": "Tesoro repleto de auroras",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140304,
       "id": "peace_of_empathy_bond",
       "name": "Paz de corazones afines",
-      "desc": "Mientras dura Numinosidad, el daño que infligen todos los aliados ignora un <nobr>18%</nobr> de la DEF del objetivo."
+      "desc": "Mientras dura Numinosidad, el daño que infligen todos los aliados ignora un <nobr>18%</nobr> de la DEF del objetivo.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140305,
       "id": "clock_of_wonder_origin",
       "name": "Reloj de las maravillas",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140306,
       "id": "morrow_of_star_shine",
       "name": "Un mañana de luna y estrellas",
-      "desc": "Cuando Tribbie usa su habilidad definitiva, lanza el <u>ataque adicional</u> del talento contra todos los enemigos. El daño que inflige el <u>ataque adicional</u> del talento aumenta en un <nobr>729%</nobr>."
+      "desc": "Cuando Tribbie usa su habilidad definitiva, lanza el <u>ataque adicional</u> del talento contra todos los enemigos. El daño que inflige el <u>ataque adicional</u> del talento aumenta en un <nobr>729%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "Boothill",
+  "description": "A cyborg cowboy drifting among the stars. Extremely optimistic and unrestrained.\nHe is a member of the Galaxy Rangers who swore to punish the wretched by any and all means...\nHis flamboyant and brash actions were all to draw the attention of the Interastral Peace Corporation — the target of his revenge.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -244,9 +245,18 @@
       "id": "skullcrush_spurs",
       "name": "Skullcrush Spurs",
       "desc": "Deals Physical DMG equal to #1[i]% of Boothill's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Physical DMG to a single enemy.",
+      "simpleDesc": "Deals minor Physical DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Initiates Standoff. After the target in the Standoff is defeated or Weakness Broken, Boothill receives Pocket Trickshot and dispels the Standoff. Boothill gains Enhanced Basic ATK and this turn does not end.",
       "type": "Skill",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "Applies Physical Weakness to one enemy, deals massive Physical DMG to them, and delays their action.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Action Delayed",
+          "desc": "Increases the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "Pocket Trickshot increases the Enhanced Basic ATK's Toughness Reduction and additionally deals Physical Break DMG if the target is Weakness Broken. After winning the battle, retains Pocket Trickshot for the next battle.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Weakness Break State",
+          "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "After the Technique is used, inflicts Physical Weakness on one enemy when casting the Skill for the first time in the next battle.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "Dusty Trail's Lone Star",
-      "desc": "When the battle starts, obtains 1 stack of Pocket Trickshot. When Boothill deals DMG, ignores <nobr>16%</nobr> of the enemy target's DEF."
+      "desc": "When the battle starts, obtains 1 stack of Pocket Trickshot. When Boothill deals DMG, ignores <nobr>16%</nobr> of the enemy target's DEF.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "Milestonemonger",
-      "desc": "When in Standoff and gaining Pocket Trickshot, recovers <nobr>1</nobr> Skill Point(s) and increases Break Effect by <nobr>30%</nobr>, lasting for <nobr>2</nobr> turn(s). Can also trigger this effect when gaining Pocket Trickshot stacks that exceed the max limit. But cannot trigger repeatedly within one turn."
+      "desc": "When in Standoff and gaining Pocket Trickshot, recovers <nobr>1</nobr> Skill Point(s) and increases Break Effect by <nobr>30%</nobr>, lasting for <nobr>2</nobr> turn(s). Can also trigger this effect when gaining Pocket Trickshot stacks that exceed the max limit. But cannot trigger repeatedly within one turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "Marble Orchard's Guard",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "Cold Cuts Chef",
-      "desc": "When the enemy target in the Standoff is attacked by Boothill, the DMG they receive additionally increases by <nobr>12%</nobr>. When Boothill is attacked by the enemy target in the Standoff, the effect of him receiving increased DMG is offset by <nobr>12%</nobr>."
+      "desc": "When the enemy target in the Standoff is attacked by Boothill, the DMG they receive additionally increases by <nobr>12%</nobr>. When Boothill is attacked by the enemy target in the Standoff, the effect of him receiving increased DMG is offset by <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "Stump Speech",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "Crowbar Hotel's Raccoon",
-      "desc": "When triggering the Talent's <u>Break DMG</u>, additionally deals <u>Break DMG</u> to the target equal to <nobr>40%</nobr> of the original DMG multiplier and additionally deals <u>Break DMG</u> to adjacent targets equal to <nobr>70%</nobr> of the original DMG multiplier."
+      "desc": "When triggering the Talent's <u>Break DMG</u>, additionally deals <u>Break DMG</u> to the target equal to <nobr>40%</nobr> of the original DMG multiplier and additionally deals <u>Break DMG</u> to adjacent targets equal to <nobr>70%</nobr> of the original DMG multiplier.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

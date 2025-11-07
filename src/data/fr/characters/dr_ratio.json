@@ -2,6 +2,7 @@
   "_id": 1305,
   "id": "dr_ratio",
   "name": "Dr Ratio",
+  "description": "Membre de la Guilde de l'intelligentsia.\nD'un tempérament excentrique, incisif, mais toujours élégant.\nLe visage derrière l'étrange masque de plâtre ne manque pourtant pas de charmes.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi désigné.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -416,9 +426,18 @@
       "id": "intellectual_midwifery",
       "name": "Déclic intellectuel",
       "desc": "Inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Dr Ratio à un ennemi désigné.",
-      "simpleDesc": "Inflige des DGT imaginaires à un ennemi unique.",
+      "simpleDesc": "Inflige des DGT imaginaires à un ennemi désigné.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Inflige des DGT imaginaires à un ennemi désigné et applique Folie du sage. Lorsque les alliés de Dr Ratio attaquent une cible affectée par Folie du sage, Dr Ratio lui inflige 1 ATQ de suivi.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1022,6 +1059,32 @@
       "simpleDesc": "Il y a une chance de lancer 1 ATQ de suivi sur la cible, qui inflige des DGT imaginaires lors de l'utilisation de la compétence.",
       "type": "Talent",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chances fixes",
+          "desc": "Probabilité fixe qui n'est affectée par aucun facteur.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1409,24 @@
       "simpleDesc": "Crée une dimension spéciale. Les ennemis dans la dimension subissent l'effet Provocation. Il y a de fortes chances de réduire la VIT des cibles ennemies après être entré en combat avec des ennemis dans cette dimension.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1446,113 @@
       "_id": 130501,
       "id": "pride_comes_before_a_fall",
       "name": "L'arrogance engendre le malheur",
-      "desc": "Le nombre maximum de cumuls pour le bonus de Trace « Synthèse » augmente de <nobr>4</nobr>. Vous gagnez immédiatement <nobr>4</nobr> cumuls de Synthèse en début de combat. Nécessite le déblocage de Synthèse."
+      "desc": "Le nombre maximum de cumuls pour le bonus de Trace « Synthèse » augmente de <nobr>4</nobr>. Vous gagnez immédiatement <nobr>4</nobr> cumuls de Synthèse en début de combat. Nécessite le déblocage de Synthèse.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130502,
       "id": "the_divine_is_in_the_details",
       "name": "Le diable est dans les détails",
-      "desc": "Lorsque l'<u>ATQ de suivi</u> du talent touche une cible, cette dernière subit des <u>DGT additionnels</u> imaginaires équivalents à <nobr>20%</nobr> de l'ATQ de Dr Ratio pour chaque <u>malus</u> qui lui est appliqué. Cet effet peut être déclenché un maximum de <nobr>4</nobr> fois durant chaque <u>ATQ de suivi</u>."
+      "desc": "Lorsque l'<u>ATQ de suivi</u> du talent touche une cible, cette dernière subit des <u>DGT additionnels</u> imaginaires équivalents à <nobr>20%</nobr> de l'ATQ de Dr Ratio pour chaque <u>malus</u> qui lui est appliqué. Cet effet peut être déclenché un maximum de <nobr>4</nobr> fois durant chaque <u>ATQ de suivi</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Malus",
+          "desc": "Les malus sont des effets de statut négatifs qui affaiblissent les unités. Sauf indication contraire, les malus peuvent être dissipés.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130503,
       "id": "know_thyself",
       "name": "Connais-toi toi-même",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130504,
       "id": "ignorance_is_blight",
       "name": "L'ignorance est aveugle",
-      "desc": "Régénère <nobr>15</nobr> points d'énergie supplémentaires pour Dr Ratio lorsque son talent se déclenche."
+      "desc": "Régénère <nobr>15</nobr> points d'énergie supplémentaires pour Dr Ratio lorsque son talent se déclenche.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130505,
       "id": "sic_itur_ad_astra",
       "name": "Sic Itur Ad Astra",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130506,
       "id": "vincit_omnia_veritas",
       "name": "Vincit Omnia Veritas",
-      "desc": "Augmente de <nobr>1</nobr> le nombre possible de déclenchements de Folie du sage. Les DGT infligés par l'<u>ATQ de suivi</u> du talent augmentent de <nobr>50%</nobr>."
+      "desc": "Augmente de <nobr>1</nobr> le nombre possible de déclenchements de Folie du sage. Les DGT infligés par l'<u>ATQ de suivi</u> du talent augmentent de <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

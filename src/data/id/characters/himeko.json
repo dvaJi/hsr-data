@@ -2,6 +2,7 @@
   "_id": 1003,
   "id": "himeko",
   "name": "Himeko",
+  "description": "Orang yang memperbaiki Astral Express.\nDemi menyaksikan langit berbintang yang luas, dia memutuskan untuk bertualang dengan Astral Express.\nHobi dia adalah meracik kopi sendiri.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Fire DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Mengakibatkan Fire DMG pada 1 target musuh dan Fire DMG dalam jumlah kecil pada musuh di sekitar target.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 13
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Mengakibatkan Fire DMG pada seluruh musuh dan memulihkan Energy jika ada musuh yang dikalahkan.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 27
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "Memperoleh Charge saat pertempuran dimulai dan saat ada musuh yang terkena Weakness Break.\nJika Charge penuh setelah rekan tim menyerang, akan melancarkan Serangan Lanjutan yang mengakibatkan Fire DMG pada seluruh musuh dan mengonsumsi semua poin Charge.",
       "type": "Talent",
       "tag": "AoE",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,24 @@
       "simpleDesc": "Menciptakan dimensi khusus. Setelah memasuki pertempuran dengan musuh dalam dimensi khusus, berpeluang besar untuk meningkatkan Fire DMG yang diterima oleh target musuh.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1441,79 @@
       "_id": 100301,
       "id": "childhood",
       "name": "Childhood",
-      "desc": "Setelah \"Victory Rush\" terpicu, meningkatkan <nobr>20%</nobr> SPD Himeko selama <nobr>2</nobr> giliran."
+      "desc": "Setelah \"Victory Rush\" terpicu, meningkatkan <nobr>20%</nobr> SPD Himeko selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100302,
       "id": "convergence",
       "name": "Convergence",
-      "desc": "Meningkatkan <nobr>15%</nobr> DMG pada target musuh yang persentase HP-nya kurang dari atau sama dengan <nobr>50%</nobr>."
+      "desc": "Meningkatkan <nobr>15%</nobr> DMG pada target musuh yang persentase HP-nya kurang dari atau sama dengan <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100303,
       "id": "poised",
       "name": "Poised",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100304,
       "id": "dedication",
       "name": "Dedication",
-      "desc": "Saat Skill mengakibatkan Weakness Break pada target musuh, Himeko akan memperoleh <nobr>1</nobr> Charge tambahan."
+      "desc": "Saat Skill mengakibatkan Weakness Break pada target musuh, Himeko akan memperoleh <nobr>1</nobr> Charge tambahan.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100305,
       "id": "aspiration",
       "name": "Aspiration",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100306,
       "id": "trailblaze",
       "name": "Trailblaze!",
-      "desc": "Ultimate mengakibatkan 2 kali tambahan DMG pada musuh secara acak, masing-masing mengakibatkan Fire DMG sebesar <nobr>40%</nobr> dari DMG aslinya."
+      "desc": "Ultimate mengakibatkan 2 kali tambahan DMG pada musuh secara acak, masing-masing mengakibatkan Fire DMG sebesar <nobr>40%</nobr> dari DMG aslinya.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

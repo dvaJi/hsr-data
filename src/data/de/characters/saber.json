@@ -2,6 +2,7 @@
   "_id": 1014,
   "id": "saber",
   "name": "Saber",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner geringen Wind-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner Wind-SCH und angrenzenden Einheiten geringen Wind-SCH zu. Wenn der Verbrauch von „Kernresonanz“ nach dem Angriff die Energie vollständig wiederherstellen kann, wird der SCH-Multiplikator dieses Einsatzes der Fertigkeit basierend auf der Kernresonanz erhöht und dann Kernresonanz nach dem Angriff komplett verbraucht. Andernfalls werden #3[i] Pkt. Kernresonanz erhalten.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Fügt allen Gegnern massiven Wind-SCH zu. Fügt zusätzlich zufälligen Gegnern geringen Wind-SCH zu, der insgesamt #3[i]-mal abprallt. Verstärkt den nächsten Standardangriff.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        120,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1110,15 @@
       "simpleDesc": "Erhält beim Kampfeintritt #8[i] Pkt. Kernresonanz. Wenn ein belibieger Verbündeter seinen Ultimate einsetzt, wird Sabers verursachter SCH erhöht und #1[i] Pkt. Kernresonanz erhalten. Durch das Verbrauchen von Kernresonanz kann Sabers Energie wiederhergestellt werden.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1518,15 @@
       "simpleDesc": "Erhält nach dem Einsatz der Technik zu Beginn des nächsten Kampfes #3[i] Pkt. „Kernresonanz“ und erhöht den ANG.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1499,37 +1545,97 @@
       "_id": 101401,
       "id": "the_lost_white_walls",
       "name": "Die verlorenen weißen Mauern",
-      "desc": "Erhöht den verursachten Ultimate-SCH von Saber um <nobr>60%</nobr>. Nachdem Saber Standardangriff oder Fertigkeit eingesetzt hat, erhält sie <nobr>1</nobr> Pkt. „Kernresonanz“."
+      "desc": "Erhöht den verursachten Ultimate-SCH von Saber um <nobr>60%</nobr>. Nachdem Saber Standardangriff oder Fertigkeit eingesetzt hat, erhält sie <nobr>1</nobr> Pkt. „Kernresonanz“.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101402,
       "id": "the_lost_oath_of_the_round_table",
       "name": "Der verlorene Schwur der Tafelrunde",
-      "desc": "Für jeden erhaltenen Punkt „Kernresonanz“ im aktuellen Kampf ignoriert der von Saber verursachte SCH <nobr>#2[f1]%</nobr> der VTD des Ziels. Dieser Effekt ist bis zu <nobr>15</nobr>-fach stapelbar. Wenn die Erhöhung des SCH-Multiplikators der Fertigkeit durch Kernresonanz ausgelöst wird, erhöht jeder Punkt Kernresonanz zusätzlich den SCH-Multiplikator dieses Einsatzes der Fertigkeit um <nobr>7%</nobr>."
+      "desc": "Für jeden erhaltenen Punkt „Kernresonanz“ im aktuellen Kampf ignoriert der von Saber verursachte SCH <nobr>#2[f1]%</nobr> der VTD des Ziels. Dieser Effekt ist bis zu <nobr>15</nobr>-fach stapelbar. Wenn die Erhöhung des SCH-Multiplikators der Fertigkeit durch Kernresonanz ausgelöst wird, erhöht jeder Punkt Kernresonanz zusätzlich den SCH-Multiplikator dieses Einsatzes der Fertigkeit um <nobr>7%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101403,
       "id": "a_wish_across_fifteen_centuries",
       "name": "Ein Wunsch durch fünfzehn Jahrhunderte",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101404,
       "id": "the_saga_of_sixteen_winter_days",
       "name": "Die Saga der sechzehn Wintertage",
-      "desc": "Erhöht Sabers <u>Wind-WDS-DUR</u> um <nobr>8%</nobr>. Erhöht nach dem Einsatz des Ultimates ihre <u>Wind-WDS-DUR</u> um <nobr>4%</nobr>. Dieser Effekt ist bis zu <nobr>3</nobr>-fach stapelbar."
+      "desc": "Erhöht Sabers <u>Wind-WDS-DUR</u> um <nobr>8%</nobr>. Erhöht nach dem Einsatz des Ultimates ihre <u>Wind-WDS-DUR</u> um <nobr>4%</nobr>. Dieser Effekt ist bis zu <nobr>3</nobr>-fach stapelbar.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101405,
       "id": "the_dreamed_utopian_dawn",
       "name": "Erträumtes Morgenrot in der Utopie",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101406,
       "id": "the_long_fated_night",
       "name": "Die lange Nacht des Schicksals",
-      "desc": "Erhöht die <u>Wind-WDS-DUR</u> des Ultimate-SCH von Saber um <nobr>20%</nobr>. Erhöht die ansammelbare überschüssige Energie durch die Spur „Segen vom See“ auf <nobr>200</nobr> Pkt. Nach dem Kampfeintritt und dem ersten Einsatz des Ultimates wird Sabers Energie um einen festen Wert von <nobr>300</nobr> Pkt. wiederhergestellt. Nachdem der Ultimate jeweils <nobr>3</nobr>-mal eingesetzt wurde, kann dieser Effekt erneut 1-mal ausgelöst werden."
+      "desc": "Erhöht die <u>Wind-WDS-DUR</u> des Ultimate-SCH von Saber um <nobr>20%</nobr>. Erhöht die ansammelbare überschüssige Energie durch die Spur „Segen vom See“ auf <nobr>200</nobr> Pkt. Nach dem Kampfeintritt und dem ersten Einsatz des Ultimates wird Sabers Energie um einen festen Wert von <nobr>300</nobr> Pkt. wiederhergestellt. Nachdem der Ultimate jeweils <nobr>3</nobr>-mal eingesetzt wurde, kann dieser Effekt erneut 1-mal ausgelöst werden.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

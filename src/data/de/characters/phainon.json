@@ -2,6 +2,7 @@
   "_id": 1408,
   "id": "phainon",
   "name": "Phainon",
+  "description": "Aedes Elysiae, ein von der Welt abgeschiedenes Grenzdorf, das jetzt nur noch in kryptischen Legenden existiert.\nO namenloser Held █████, Erbe von Chrysos, der die Kernflamme namens Welt trägt. Er muss die Ideale aller Welten in Erinnerung behalten, das Schicksal der Unzähligen auf sich nehmen und der neuen Welt das erste Licht des Morgens bringen.\n„Aber wenn es keinen Morgen geben sollte, dann lasse flammende Wut diesen Körper zu Asche verzehren und mich in die brennende Sonne von morgen verwandeln!“",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen physischen SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Erhält #3[i] Pkt. „Kernflamme“. Fügt einem Gegner massiven physischen SCH und angrenzenden Einheiten physischen SCH zu.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Verwandelt sich in Khaslana und erzeugt einen Bereich: Teammitglieder treten in den Status Abgang ein und können keine Aktionen ausführen. Alle Gegner werden mit physischer Schwäche belegt.\nKhaslana hat keine eigene Runde, sondern besitzt #4[i] Khaslanas zusätzliche Runden. In der letzten Runde führt er einen letzten Schlag aus und verursacht massiven physischen SCH, der unter allen Gegnern gleichmäßig aufgeteilt wird.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000020,
+          "name": "Bereich",
+          "desc": "Im Kampf können Bereich-Effekte nur alleine bestehen. Solange einer aktiv ist, können andere Fähigkeiten mit Bereich-Effekten nicht verwendet werden.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000016,
+          "name": "Abgang",
+          "desc": "Einheiten im Status Abgang können weder als Ziel für eine Fähigkeit anvisiert werden, noch erscheinen sie in der Aktionsleiste.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014082,
+          "name": "Khaslanas zusätzliche Runde",
+          "desc": "Wenn Phainon sich in Khaslana verwandelt, erscheint ein Countdown in der Aktionsreihenfolge. Wenn der Countdown beginnt, erhält Khaslana eine zusätzliche Runde. Wenn die letzte Runde des Countdowns beginnt, verwandelt Phainon sich in Khaslana und führt einen Finalen Angriff aus, bevor die Verwandlung abgeschlossen ist.\nDer anfängliche Aktionswert des Countdowns wird auf einen Wert zwischen 0-<nobr>100</nobr> % gesetzt. Der Aktionswert wird zu Beginn jeder Kampfwelle nicht zurückgesetzt.\nWenn Khaslana einen Aktionsvorzug erhält, wird stattdessen die Aktion des ersten Countdowns vorgezogen.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,15 @@
       "simpleDesc": "Phainons Talent. Wenn „Kernflamme“ #4[i] Pkt. erreicht, kann der Ultimate aktiviert werden.\nWenn Phainon zum Ziel der Fähigkeit eines anderen Ziels wird, erhält er Kernflamme. Wenn er zum Ziel der Fähigkeit eines Teammitglieds wird, wird sein KRIT-SCH erhöht.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1482,24 @@
       "desc": "Erhöht die max. Technikpunkte um 3, wenn sich Phainon im Team befindet.\nVerbraucht aktiv 2 Technikpunkte, um sofort alle Gegner in einem bestimmten Bereich anzugreifen. Stellt nach Kampfeintritt #3[i] Pkt. Energie bei Verbündeten wieder her und erhält #2[i] Pkt. Schädigung sowie #4[i] Fertigkeitspunkt. Fügt außerdem zu Beginn jeder Kampfwelle allen Gegnern physischen SCH in Höhe von #1[i]% von Phainons ANG zu.\nGewöhnliche Gegner werden bei einem Angriff sofort besiegt, ohne in den Kampf eintreten zu müssen. Trifft der Angriff keinen Gegner, wird kein Technikpunkt verbraucht.",
       "simpleDesc": "Erhöht die max. Technikpunkte um 3. Verbraucht aktiv 2 Technikpunkte, um alle Gegner in einem bestimmten Bereich anzugreifen. Stellt nach Kampfeintritt bei Verbündeten Energie, Fertigkeitspunkte sowie Schädigung wieder her. Fügt zu Beginn jeder Kampfwelle allen Gegnern physischen SCH zu.\nGewöhnliche Gegner werden bei einem Angriff sofort besiegt, ohne in den Kampf eintreten zu müssen. Trifft der Angriff keinen Gegner, wird kein Technikpunkt verbraucht.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10014081,
+          "name": "Schädigung",
+          "desc": "Khaslanas spezielle Aufladung hat ein Maximum von 7 Pkt. und bleibt auch ohne Verwandlung erhalten.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1439,37 +1519,122 @@
       "_id": 140801,
       "id": "fire_and_light_bind_virtue_and_vice",
       "name": "Feuer und Licht verbinden Tugend und Laster",
-      "desc": "Erhöht den übernommenen Prozentsatz an Basis-GES in <u>Khaslanas zusätzlichen Runden</u> auf <nobr>66%</nobr>. Für jeden besiegten Gegner in einem einzelnen Kampf wird dieser Wert zusätzlich um <nobr>#1[f1]%</nobr> erhöht, bis zu <nobr>84%</nobr>.\nErhöht den KRIT-SCH beim Einsatz des Ultimates für <nobr>3</nobr> Rd. um <nobr>50%</nobr>."
+      "desc": "Erhöht den übernommenen Prozentsatz an Basis-GES in <u>Khaslanas zusätzlichen Runden</u> auf <nobr>66%</nobr>. Für jeden besiegten Gegner in einem einzelnen Kampf wird dieser Wert zusätzlich um <nobr>#1[f1]%</nobr> erhöht, bis zu <nobr>84%</nobr>.\nErhöht den KRIT-SCH beim Einsatz des Ultimates für <nobr>3</nobr> Rd. um <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10014082,
+          "name": "Khaslanas zusätzliche Runde",
+          "desc": "Wenn Phainon sich in Khaslana verwandelt, erscheint ein Countdown in der Aktionsreihenfolge. Wenn der Countdown beginnt, erhält Khaslana eine zusätzliche Runde. Wenn die letzte Runde des Countdowns beginnt, verwandelt Phainon sich in Khaslana und führt einen Finalen Angriff aus, bevor die Verwandlung abgeschlossen ist.\nDer anfängliche Aktionswert des Countdowns wird auf einen Wert zwischen 0-<nobr>100</nobr> % gesetzt. Der Aktionswert wird zu Beginn jeder Kampfwelle nicht zurückgesetzt.\nWenn Khaslana einen Aktionsvorzug erhält, wird stattdessen die Aktion des ersten Countdowns vorgezogen.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140802,
       "id": "sky_and_earth_churn_mortal_froth",
       "name": "Himmel und Erde, Schaum der sterblichen Welt",
-      "desc": "Erhöht Khaslanas physische <u>WDS-DUR</u> um <nobr>20%</nobr>. Wenn bei einem einzelnen Einsatz von „Pfeiler: Urteil des Sterntods“ <nobr>4</nobr> Pkt. <u>Schädigung</u> verbraucht werden, erhält er 1 <u>zusätzliche Runde</u>."
+      "desc": "Erhöht Khaslanas physische <u>WDS-DUR</u> um <nobr>20%</nobr>. Wenn bei einem einzelnen Einsatz von „Pfeiler: Urteil des Sterntods“ <nobr>4</nobr> Pkt. <u>Schädigung</u> verbraucht werden, erhält er 1 <u>zusätzliche Runde</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014081,
+          "name": "Schädigung",
+          "desc": "Khaslanas spezielle Aufladung hat ein Maximum von 7 Pkt. und bleibt auch ohne Verwandlung erhalten.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Zusätzliche Runde",
+          "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140803,
       "id": "depths_of_quiet_entombed_in_ruin",
       "name": "Tief in den Ruinen der Stille begraben",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140804,
       "id": "faces_of_titans_blurred_by_time",
       "name": "Antlitze der Titanen, verwischt von der Zeit",
-      "desc": "Erhält beim Einsatz von „Unheil: Erlass des Seelenmords“ zusätzlich <nobr>4</nobr> Stapelungen „Seelenbrand“."
+      "desc": "Erhält beim Einsatz von „Unheil: Erlass des Seelenmords“ zusätzlich <nobr>4</nobr> Stapelungen „Seelenbrand“.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140805,
       "id": "the_wheel_spins_forevermore",
       "name": "Der Zeiger dreht sich ewig",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140806,
       "id": "embers_of_old_rise_still",
       "name": "Aufstieg alter Glut",
-      "desc": "Die überschüssigen Punkte für „Kernflamme“ hat keine Obergrenze mehr. Erhält zu Beginn des Kampfes <nobr>6</nobr> Pkt. Kernflamme.\nNach dem Einsatz des Angriffs von „Pfeiler: Urteil des Sterntods“ wird dem Gegner mit den höchsten LP zusätzlich <u>Tatsächlicher SCH</u> in Höhe von <nobr>36%</nobr> des gesamten SCH dieses Angriffs zugefügt."
+      "desc": "Die überschüssigen Punkte für „Kernflamme“ hat keine Obergrenze mehr. Erhält zu Beginn des Kampfes <nobr>6</nobr> Pkt. Kernflamme.\nNach dem Einsatz des Angriffs von „Pfeiler: Urteil des Sterntods“ wird dem Gegner mit den höchsten LP zusätzlich <u>Tatsächlicher SCH</u> in Höhe von <nobr>36%</nobr> des gesamten SCH dieses Angriffs zugefügt.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "Tatsächlicher Schaden",
+          "desc": "SCH ohne Typ, der durch Effekte nicht beeinflusst wird. Dieser SCH wird nicht als 1-mal Angriff gewertet.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

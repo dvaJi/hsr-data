@@ -2,6 +2,7 @@
   "_id": 1225,
   "id": "fugue",
   "name": "忘歸人",
+  "description": "八面玲瓏的狐人少女，樣貌、名字、身分皆被人奪去。\n命運為她留下一線生機，而「毀滅」的烙印仍在蠢蠢欲動。\n歷經生死、重獲新生的忘歸人，何時才能返鄉？",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "使我方單體獲得【狐祈】，擊破特攻提高，且攻擊沒有對應屬性弱點的敵人也能削減韌性。\n使自身進入【熾灼】狀態，普通攻擊獲得強化。持有【狐祈】的我方單位攻擊時，忘歸人有高機率使敵方目標防禦力降低。",
       "type": "戰技",
       "tag": "輔助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,15 @@
       "simpleDesc": "對敵方全體造成火屬性傷害，本次攻擊無視弱點屬性削減敵方全體的韌性。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,32 @@
       "simpleDesc": "忘歸人在場時，敵方目標會被額外附上【雲火昭】，【雲火昭】被削減至0時會再次受到弱點擊破傷害。我方攻擊處於弱點擊破狀態下的敵方目標後，額外造成超擊破傷害。",
       "type": "天賦",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱點擊破狀態",
+          "desc": "敵方目標的韌性被削減至0時進入的特殊狀態，進入該狀態的目標行動會延後。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "超擊破傷害",
+          "desc": "擊破特攻、本次攻擊削韌值和角色等級越高，造成的超擊破傷害越高。\n超擊破傷害無法暴擊，且不受傷害提高類效果影響。\n超擊破傷害也屬於擊破傷害。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,32 @@
       "simpleDesc": "使一定區域內敵人陷入暈眩狀態。攻擊陷入暈眩狀態敵人，進入戰鬥後忘歸人行動提前，並高機率使敵方每個單體目標陷入與忘歸人戰技相同的防禦力降低狀態。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動提前",
+          "desc": "使目標在下次行動前的等待間隔縮短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1410,37 +1499,88 @@
       "_id": 122501,
       "id": "earthbound_i_was_cloudward_i_be",
       "name": "狐塵已去，雲駕有期",
-      "desc": "持有【狐祈】的我方目標，弱點擊破效率提高<nobr>50%</nobr>。"
+      "desc": "持有【狐祈】的我方目標，弱點擊破效率提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122502,
       "id": "beatitude_dawns_for_the_worthy",
       "name": "瑞應之來，必昭有德",
-      "desc": "當有敵方目標的弱點被擊破時，為忘歸人恢復<nobr>3</nobr>點能量。施放終結技後，我方全體<u>行動提前</u><nobr>24%</nobr>。"
+      "desc": "當有敵方目標的弱點被擊破時，為忘歸人恢復<nobr>3</nobr>點能量。施放終結技後，我方全體<u>行動提前</u><nobr>24%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動提前",
+          "desc": "使目標在下次行動前的等待間隔縮短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122503,
       "id": "verity_weaves_thoughts_to_blade",
       "name": "正色鴻燾，神思化伐",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122504,
       "id": "bereft_of_form_which_name_to_bear",
       "name": "自我離形，而今幾姓",
-      "desc": "持有【狐祈】的我方目標，造成的擊破傷害提高<nobr>20%</nobr>。"
+      "desc": "持有【狐祈】的我方目標，造成的擊破傷害提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122505,
       "id": "colored_cloud_rains_fortune",
       "name": "五色雲生，穹施後承",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122506,
       "id": "clairvoyance_of_boom_and_doom",
       "name": "肇素未來，晦明興滅",
-      "desc": "忘歸人的弱點擊破效率提高<nobr>50%</nobr>。當忘歸人處於【熾灼】狀態時，【狐祈】效果對我方全體生效。"
+      "desc": "忘歸人的弱點擊破效率提高<nobr>50%</nobr>。當忘歸人處於【熾灼】狀態時，【狐祈】效果對我方全體生效。",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

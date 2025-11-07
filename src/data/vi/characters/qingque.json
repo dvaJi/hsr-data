@@ -2,6 +2,7 @@
   "_id": 1201,
   "id": "qingque",
   "name": "Qingque",
+  "description": "Nhà chiêm tinh của Sở Thiên Tượng Xianzhou Luofu, kiêm quản lý kho sách.\nDo trốn việc lười biếng nên sắp bị giáng chức thành người giữ cửa.",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Dùng 1 quân bài, gây lượng nhỏ Sát Thương Lượng Tử cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Rút bài, tăng sát thương bản thân gây ra và hiệp này sẽ không kết thúc.",
       "type": "Chiến Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Gây Sát Thương Lượng Tử cho toàn phe địch, nhận 4 quân bài hoa văn giống nhau.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Khi mục tiêu phe ta bắt đầu hiệp, rút bài. Khi bắt đầu hiệp của bản thân, nếu cầm 4 quân cùng hoa văn, thì sẽ xóa bài đã có và cường hóa lần tấn công thường này, đồng thời tăng tấn công của bản thân.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1313,6 +1359,15 @@
       "simpleDesc": "Dùng Bí Kỹ, lần sau vào trận sẽ rút bài.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,96 @@
       "_id": 120101,
       "id": "rise_through_the_tiles",
       "name": "Thế Bài Xung Phong Dũng Mãnh",
-      "desc": "Sát thương Tuyệt Kỹ gây ra tăng <nobr>10%</nobr>."
+      "desc": "Sát thương Tuyệt Kỹ gây ra tăng <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120102,
       "id": "sleep_on_the_tiles",
       "name": "Thế Bài Như Gối Ngủ Êm",
-      "desc": "Mỗi lần Qingque bốc bài, lập tức hồi phục <nobr>1</nobr> điểm Năng Lượng."
+      "desc": "Mỗi lần Qingque bốc bài, lập tức hồi phục <nobr>1</nobr> điểm Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120103,
       "id": "read_between_the_tiles",
       "name": "Thế Bài Thuận Thế Tự Ù",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120104,
       "id": "right_on_the_tiles",
       "name": "Thế Bài Thắng Trong Tầm Tay",
-      "desc": "Sau khi thi triển Chiến Kỹ, có <nobr>24%</nobr> <u>xác suất cố định</u> nhận trạng thái Bất Cầu Nhân, duy trì đến khi hiệp này kết thúc.\nTrong trạng thái Bất Cầu Nhân, sau khi thi triển Tấn Công Thường hoặc Tấn Công Thường Cường Hóa, sẽ lập tức tiến hành 1 lần <u>Đòn Đánh Theo Sau</u>, gây cho mục tiêu này một lượng Sát Thương Lượng Tử bằng <nobr>100%</nobr> Sát Thương Tấn Công Thường hoặc Tấn Công Thường Cường Hóa."
+      "desc": "Sau khi thi triển Chiến Kỹ, có <nobr>24%</nobr> <u>xác suất cố định</u> nhận trạng thái Bất Cầu Nhân, duy trì đến khi hiệp này kết thúc.\nTrong trạng thái Bất Cầu Nhân, sau khi thi triển Tấn Công Thường hoặc Tấn Công Thường Cường Hóa, sẽ lập tức tiến hành 1 lần <u>Đòn Đánh Theo Sau</u>, gây cho mục tiêu này một lượng Sát Thương Lượng Tử bằng <nobr>100%</nobr> Sát Thương Tấn Công Thường hoặc Tấn Công Thường Cường Hóa.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Xác Suất Cố Định",
+          "desc": "Xác suất cố định không bị ảnh hưởng bởi bất cứ nhân tố nào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120105,
       "id": "gambit_for_the_tiles",
       "name": "Thế Bài Đánh Cược Vận Mệnh",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120106,
       "id": "prevail_beyond_the_tiles",
       "name": "Thế Bài Chiếm Trọn Ưu Thế",
-      "desc": "Sau khi thi triển Tấn Công Cơ Bản Cường Hóa, sẽ hồi 1 điểm Chiến Kỹ."
+      "desc": "Sau khi thi triển Tấn Công Cơ Bản Cường Hóa, sẽ hồi 1 điểm Chiến Kỹ.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

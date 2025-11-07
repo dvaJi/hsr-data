@@ -2,6 +2,7 @@
   "_id": 1312,
   "id": "misha",
   "name": "米沙",
+  "description": "匹诺康尼酒店的门童侍应，乖巧懂事的小男孩。\n对无名客抱有极大憧憬，梦想有朝一日自己也能踏上旅途。",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量冰属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "对敌方单体造成冰属性伤害，对相邻目标造成少量冰属性伤害，增加米沙下一次终结技的攻击段数。",
       "type": "战技",
       "tag": "扩散",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +756,32 @@
       "simpleDesc": "对敌方单体造成少量冰属性伤害，初始共弹射#1[i]次，最多共弹射#5[i]次。每段攻击前小概率使目标冻结。",
       "type": "终结技",
       "tag": "弹射",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1085,6 +1130,15 @@
       "simpleDesc": "我方全体每消耗1个战技点，增加米沙下一次终结技的攻击段数，同时米沙恢复能量。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1442,15 @@
       "simpleDesc": "制造特殊领域。领域内敌人行动停止。与领域内敌人进入战斗后，增加米沙下一次终结技的攻击段数。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1405,37 +1468,88 @@
       "_id": 131201,
       "id": "whimsicality_of_fancy",
       "name": "飘忽的幻影",
-      "desc": "施放终结技时，场上每有1个敌方目标，本次终结技的攻击段数额外增加<nobr>1</nobr>段，最多额外增加<nobr>5</nobr>段。"
+      "desc": "施放终结技时，场上每有1个敌方目标，本次终结技的攻击段数额外增加<nobr>1</nobr>段，最多额外增加<nobr>5</nobr>段。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131202,
       "id": "yearning_of_youth",
       "name": "青春的怅望",
-      "desc": "终结技每段攻击前，有<nobr>24%</nobr>的<u>基础概率</u>使目标防御力降低<nobr>16%</nobr>，持续<nobr>3</nobr>回合。"
+      "desc": "终结技每段攻击前，有<nobr>24%</nobr>的<u>基础概率</u>使目标防御力降低<nobr>16%</nobr>，持续<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131203,
       "id": "vestige_of_happiness",
       "name": "欢乐年光的影子",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131204,
       "id": "visage_of_kinship",
       "name": "亲挚的音容",
-      "desc": "终结技每段攻击的伤害倍率提高<nobr>6%</nobr>。"
+      "desc": "终结技每段攻击的伤害倍率提高<nobr>6%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131205,
       "id": "genesis_of_first_love",
       "name": "最初的爱与友谊",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131206,
       "id": "estrangement_of_dream",
       "name": "久已生疏的憧憬",
-      "desc": "施放终结技时，使自身造成的伤害提高<nobr>30%</nobr>，持续至自身回合结束，且下一次施放战技后为我方恢复<nobr>1</nobr>个战技点。"
+      "desc": "施放终结技时，使自身造成的伤害提高<nobr>30%</nobr>，持续至自身回合结束，且下一次施放战技后为我方恢复<nobr>1</nobr>个战技点。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

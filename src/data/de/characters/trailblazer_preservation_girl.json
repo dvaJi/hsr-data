@@ -2,6 +2,7 @@
   "_id": 8004,
   "id": "trailblazer_preservation_girl",
   "name": "Trailblazer Die Bewahrung",
+  "description": "Ein {F#Mädchen}{M#Junge} an Bord des Astralexpresses.\nHat beschlossen, mit dem Astralexpress zu reisen, um der Bedrohung durch das Stellaron Einhalt zu gebieten.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Feuer-SCH zu und erhält „Magma-Wille“.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Verringert den erlittenen SCH und erhält „Magma-Wille“. Hat eine hohe Chance, bei allen Gegner Verspotten zu verursachen.",
       "type": "Fertigkeit",
       "tag": "Verteidigung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +771,18 @@
       "simpleDesc": "Fügt allen Gegnern Feuer-SCH zu und verstärkt den nächsten Standardangriff.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,15 @@
       "simpleDesc": "Bei erlittenen Angriffen wird „Magma-Wille“ gestapelt. Bei nicht weniger als 4 Stapelungen Magma-Wille wird der Standardangriff verstärkt. Nach dem Einsatz von Standardangriff, Fertigkeit oder Ultimate wird allen Verbündeten ein Schild gewährt.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,6 +1428,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik wird dieser Einheit zu Beginn des nächsten Kampfes ein Schild verliehen.",
       "type": "Technik",
       "tag": "Verteidigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1455,79 @@
       "_id": 800401,
       "id": "earthshaking_resonance",
       "name": "Resonanz mit dem Erdkern",
-      "desc": "Der Standardangriff verursacht zusätzlich Feuer-SCH in Höhe von <nobr>25%</nobr> von der VTD der Trailblazerin. Der verstärkte Standardangriff verursacht zusätzlich Feuer-SCH in Höhe von <nobr>50%</nobr> von der VTD der Trailblazerin."
+      "desc": "Der Standardangriff verursacht zusätzlich Feuer-SCH in Höhe von <nobr>25%</nobr> von der VTD der Trailblazerin. Der verstärkte Standardangriff verursacht zusätzlich Feuer-SCH in Höhe von <nobr>50%</nobr> von der VTD der Trailblazerin.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800402,
       "id": "timedefying_tenacity",
       "name": "Beharrlichkeit des alten kalten Eisens",
-      "desc": "Der Schild, den alle Verbündeten erhalten, wenn das Talent ausgelöst wird, kann zusätzlich SCH in Höhe von <nobr>2%</nobr> von der VTD der Trailblazerin plus <nobr>27</nobr> blockieren."
+      "desc": "Der Schild, den alle Verbündeten erhalten, wenn das Talent ausgelöst wird, kann zusätzlich SCH in Höhe von <nobr>2%</nobr> von der VTD der Trailblazerin plus <nobr>27</nobr> blockieren.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800403,
       "id": "trailblazing_blueprint",
       "name": "Entwürfe für die Zukunft",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800404,
       "id": "nationbuilding_oath",
       "name": "Schwur der verweilenden Zivilisation",
-      "desc": "Erhält beim Kampfeintritt unmittelbar <nobr>4</nobr>-fach „Magma-Wille“."
+      "desc": "Erhält beim Kampfeintritt unmittelbar <nobr>4</nobr>-fach „Magma-Wille“.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800405,
       "id": "spiritwarming_flame",
       "name": "Mut, die Flamme zu entzünden",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800406,
       "id": "cityforging_bulwarks",
       "name": "Wallanlagen der Emporragenden Zitadelle",
-      "desc": "Erhöht nach dem Einsatz des verstärkten Standardangriffs oder Ultimates die VTD der Trailblazerin um <nobr>10%</nobr>. Dieser Effekt ist bis zu <nobr>3</nobr>-fach stapelbar."
+      "desc": "Erhöht nach dem Einsatz des verstärkten Standardangriffs oder Ultimates die VTD der Trailblazerin um <nobr>10%</nobr>. Dieser Effekt ist bis zu <nobr>3</nobr>-fach stapelbar.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1211,
   "id": "bailu",
   "name": "Bailu",
+  "description": "A Grande Mestra dos Vidyadharas, também conhecida como a \"Curandeira\" do Luofu.\nEla usa sua ciência medicinal única para tratamentos que só podem ser concedidos à raça dracônica Vidyadhara para salvar vidas.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Raio leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Restaura os PV de um único aliado, depois cura aleatoriamente outros aliados.",
       "type": "Perícia",
       "tag": "Restauração",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "Restaura os PV e concede Revigoramento ou prolonga a duração de Revigoramento de todos os aliados.",
       "type": "Perícia Suprema",
       "tag": "Restauração",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,24 @@
       "simpleDesc": "Quando um aliado com Revigoramento é atacado, restaura PV do aliado.\nQuando um aliado sofre um golpe fatal, Bailu restaura imediatamente os PV dele. Este efeito só pode ser ativado 1 vez por batalha.",
       "type": "Talento",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1491,15 @@
       "simpleDesc": "Depois que esta personagem usa sua Técnica, no início da próxima batalha, todos os aliados recebem Revigoramento.",
       "type": "Técnica",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1516,79 @@
       "_id": 121101,
       "id": "ambrosial_aqua",
       "name": "Aqua Ambrosiana",
-      "desc": "Se os PV atuais do aliado-alvo forem igual aos PV máximos dele quando o Revigoramento acabar, regenera <nobr>8</nobr> de Energia extra para esse alvo."
+      "desc": "Se os PV atuais do aliado-alvo forem igual aos PV máximos dele quando o Revigoramento acabar, regenera <nobr>8</nobr> de Energia extra para esse alvo.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121102,
       "id": "sylphic_slumber",
       "name": "Sono Sílfico",
-      "desc": "Após usar sua Perícia Suprema, aumenta em mais <nobr>15%</nobr> a Cura Realizada de Bailu por <nobr>2</nobr> rodada(s)."
+      "desc": "Após usar sua Perícia Suprema, aumenta em mais <nobr>15%</nobr> a Cura Realizada de Bailu por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121103,
       "id": "omniscient_opulence",
       "name": "Opulência Onisciente",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121104,
       "id": "evil_excision",
       "name": "Extração Maléfica",
-      "desc": "Toda a cura fornecida pela Perícia faz com que o recipiente cause <nobr>10%</nobr> a mais de Dano por <nobr>2</nobr> rodada(s). Este efeito pode se acumular até <nobr>3</nobr> vez(es)."
+      "desc": "Toda a cura fornecida pela Perícia faz com que o recipiente cause <nobr>10%</nobr> a mais de Dano por <nobr>2</nobr> rodada(s). Este efeito pode se acumular até <nobr>3</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121105,
       "id": "waning_worries",
       "name": "Preocupações Minguantes",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121106,
       "id": "drooling_drop_of_draconic_divinity",
       "name": "Gota de Divindade Dracônica",
-      "desc": "Bailu pode curar aliados que recebem um golpe fatal mais <nobr>1</nobr> vez(es) em uma única batalha."
+      "desc": "Bailu pode curar aliados que recebem um golpe fatal mais <nobr>1</nobr> vez(es) em uma única batalha.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "ゼーレ",
+  "description": "地下反抗組織「地炎」の中堅、通称「バーブチカ」。\nさっぱりした性格だが、繊細で敏感な一面もある。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の量子属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "敵単体に量子属性ダメージを与え、自身の速度アップ。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,18 @@
       "simpleDesc": "増幅状態になり、敵単体に大量の量子属性ダメージを与える。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "通常攻撃、戦闘スキル、必殺技で敵を倒した時、追加ターンを獲得し、かつ増幅状態になる。増幅状態では、自身の与ダメージがアップする。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "追加ターン",
+          "desc": "ターン数を消費しない追加ターンを1回獲得する。このターンでは、必殺技を発動できない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "ステルス状態になる。敵を攻撃し戦闘に入ると、即座に増幅状態になる。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "{RUBY_B#ざんじん}斬尽{RUBY_E#}",
-      "desc": "残りHPが<nobr>80%</nobr>以下の敵にダメージを与える時、会心率+<nobr>15%</nobr>。"
+      "desc": "残りHPが<nobr>80%</nobr>以下の敵にダメージを与える時、会心率+<nobr>15%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "{RUBY_B#ちょうぶ}蝶舞{RUBY_E#}",
-      "desc": "戦闘スキルの加速効果が累積できるようになる、最大で<nobr>2</nobr>層累積できる。"
+      "desc": "戦闘スキルの加速効果が累積できるようになる、最大で<nobr>2</nobr>層累積できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "{RUBY_B#りょうらん}繚乱{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "{RUBY_B#りゃくえい}掠影{RUBY_E#}",
-      "desc": "ゼーレが敵を倒した時、EPを<nobr>15</nobr>回復する。"
+      "desc": "ゼーレが敵を倒した時、EPを<nobr>15</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "{RUBY_B#ほうえい}鋒鋭{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "{RUBY_B#りせき}離析{RUBY_E#}",
-      "desc": "必殺技を発動した後、攻撃を受けた敵単体を「乱れ蝶」状態にする、<nobr>1</nobr>ターン継続。乱れ蝶状態の敵が攻撃を受けた後、ゼーレの必殺技ダメージ<nobr>15%</nobr>分の量子属性<u>付加ダメージ</u>を1回受ける。その敵が、他の味方に「乱れ蝶」の<u>付加ダメージ</u>を触発され倒された時、ゼーレの天賦は発動しない。\nゼーレが<u>戦闘不能状態</u>になった時、敵の「乱れ蝶」状態が解除される。"
+      "desc": "必殺技を発動した後、攻撃を受けた敵単体を「乱れ蝶」状態にする、<nobr>1</nobr>ターン継続。乱れ蝶状態の敵が攻撃を受けた後、ゼーレの必殺技ダメージ<nobr>15%</nobr>分の量子属性<u>付加ダメージ</u>を1回受ける。その敵が、他の味方に「乱れ蝶」の<u>付加ダメージ</u>を触発され倒された時、ゼーレの天賦は発動しない。\nゼーレが<u>戦闘不能状態</u>になった時、敵の「乱れ蝶」状態が解除される。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

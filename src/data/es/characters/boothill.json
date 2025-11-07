@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "Boothill",
+  "description": "Un vaquero androide, extremadamente optimista y desenfrenado, que va a la deriva por las estrellas.\nEs miembro de los Vigilantes de la Galaxia y juró castigar a los viles y despreciables por todos y cada uno de los medios disponibles...\nSus acciones, extravagantes y descaradas, no tienen otro propósito más que llamar la atención de la Corporación para la Paz Interastral, el objetivo de su venganza.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Físico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inicia Duelo a muerte. Después de que el objetivo de Duelo a muerte sea derrotado o se rompa su Debilidad, Boothill obtiene Ventaja en el bolsillo y disipa Duelo a muerte. Potencia su ATQ básico y el turno no termina.",
       "type": "Habilidad básica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "Implanta Debilidad Física a un enemigo. Además, inflige gran cantidad de Daño Físico y retrasa la acción del enemigo.",
       "type": "Habilidad definitiva",
       "tag": "ATQ individual",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Acción retrasada",
+          "desc": "Incrementa el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "Ventaja en el bolsillo hace que el ATQ básico potenciado tenga más Reducción de Firmeza e inflija Daño de Ruptura Físico extra al enemigo afectado por Ruptura de Debilidad. Tras ganar el combate, Ventaja en el bolsillo se mantiene para el siguiente combate.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Ruptura de Debilidad",
+          "desc": "Cuando la Firmeza del objetivo se reduce a 0, entrará en un estado especial en el que sus acciones se retrasarán.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Daño de Ruptura",
+          "desc": "Cuanto más altos sean la Firmeza máxima del objetivo, el nivel del personaje y el efecto de Ruptura, más Daño de Ruptura inflige.\nEl Daño de Ruptura no puede causar Golpes CRIT y no se ve afectado por los efectos de aumento de daño.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "Tras usar la técnica, aplica Debilidad Física a un enemigo la primera vez que use la habilidad básica en el siguiente combate.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "Estrella solitaria del sendero polvoriento",
-      "desc": "Al inicio de la batalla, obtiene 1 acumulación de Ventaja en el bolsillo. Cuando Boothill inflige daño, ignora un <nobr>16%</nobr> de la DEF del objetivo."
+      "desc": "Al inicio de la batalla, obtiene 1 acumulación de Ventaja en el bolsillo. Cuando Boothill inflige daño, ignora un <nobr>16%</nobr> de la DEF del objetivo.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "Traficante de hitos",
-      "desc": "Cuando está en el estado de Duelo a muerte y obtiene Ventaja en el bolsillo, recupera <nobr>1</nobr> pt. de habilidad básica y aumenta su efecto de Ruptura en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos. Este efecto no se puede activar repetidamente en el mismo turno, y también se puede activar al obtener acumulaciones de Ventaja en el bolsillo por encima del límite."
+      "desc": "Cuando está en el estado de Duelo a muerte y obtiene Ventaja en el bolsillo, recupera <nobr>1</nobr> pt. de habilidad básica y aumenta su efecto de Ruptura en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos. Este efecto no se puede activar repetidamente en el mismo turno, y también se puede activar al obtener acumulaciones de Ventaja en el bolsillo por encima del límite.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "Guardia del jardín de mármol",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "Chef de fiambres",
-      "desc": "Cuando el enemigo con Duelo a muerte es atacado por Boothill, el daño recibido aumenta un <nobr>12%</nobr> adicional. Cuando Boothill es atacado por un enemigo con Duelo a muerte, el efecto de aumento de daño recibido disminuye en un <nobr>12%</nobr>."
+      "desc": "Cuando el enemigo con Duelo a muerte es atacado por Boothill, el daño recibido aumenta un <nobr>12%</nobr> adicional. Cuando Boothill es atacado por un enemigo con Duelo a muerte, el efecto de aumento de daño recibido disminuye en un <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "Discurso en el tocón",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "Mapache del hotel Palanca",
-      "desc": "Cuando inflige <u>Daño de Ruptura</u> activado por el talento, inflige adicionalmente un <nobr>40%</nobr> del multiplicador de <u>Daño de Ruptura</u> al objetivo y un <nobr>70%</nobr> del multiplicador del <u>Daño de Ruptura</u> a los objetivos adyacentes."
+      "desc": "Cuando inflige <u>Daño de Ruptura</u> activado por el talento, inflige adicionalmente un <nobr>40%</nobr> del multiplicador de <u>Daño de Ruptura</u> al objetivo y un <nobr>70%</nobr> del multiplicador del <u>Daño de Ruptura</u> a los objetivos adyacentes.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Daño de Ruptura",
+          "desc": "Cuanto más altos sean la Firmeza máxima del objetivo, el nivel del personaje y el efecto de Ruptura, más Daño de Ruptura inflige.\nEl Daño de Ruptura no puede causar Golpes CRIT y no se ve afectado por los efectos de aumento de daño.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

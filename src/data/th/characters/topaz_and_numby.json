@@ -2,6 +2,7 @@
   "_id": 1112,
   "id": "topaz_and_numby",
   "name": "Topaz & Numby",
+  "description": "Topaz เจ้าหน้าที่ระดับสูงของ \"แผนกกลยุทธ์การลงทุน\" ภายใต้สังกัดของ องค์กรสันติภาพแห่งดวงดาว และเป็นหัวหน้าของ หน่วยตรวจสอบหนี้สินเฉพาะกิจ\nเธอกลายเป็นหนึ่งใน \"สิบคนหัวใจหิน\" ตั้งแต่ยังเยาว์วัย ซึ่งหินศิลาของเธอก็คือ \"บุษราคัมผู้ทวงคืน\"\n\"Numby\" Warp Trotter คู่หูของเธอก็สามารถสัมผัสถึง \"ความมั่งคั่ง\" ได้อย่างว่องไว ไม่ว่าจะเป็นงานรักษาความปลอดภัย การทวงคืนหนี้สิน และการคำนวณความเสี่ยง ต่างก็เป็นเรื่องสบายๆ ทั้งนั้น\nปัจจุบันพวกเขานั้น ได้เดินทางท่องไปในกาแล็กซีร่วมกัน เพื่อตรวจข้อพิพาทด้านหนี้สินแบบต่างๆ ที่ส่งผลต่อการพัฒนาธุรกิจขององค์กร",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG ไฟเล็กน้อย แก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "ทำให้ศัตรูหนึ่งตัวติดสถานะ \"Proof of Debt\" ซึ่งจะได้รับ DMG จากการโจมตีต่อเนื่องเพิ่มขึ้น โดยที่ Numby จะสร้าง DMG ไฟแก่เป้าหมาย",
       "type": "สกิลต่อสู้",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "โจมตีต่อเนื่อง",
+          "desc": "เมื่อทำตามเงื่อนไขครบถ้วน จะปล่อยเอฟเฟกต์โจมตีพิเศษ 1 ครั้งใส่เป้าหมายโดยอัตโนมัติ",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -728,6 +762,18 @@
       "simpleDesc": "ทำให้ Numby ติดสถานะ \"Windfall Bonanza!\" อีกทั้งทำให้ตัวคูณ DMG และ DMG คริติคอลเพิ่มขึ้น",
       "type": "ท่าไม้ตาย",
       "tag": "เสริมพลัง",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1113,32 @@
       "simpleDesc": "จะอัญเชิญ Numby ออกมาในช่วงเริ่มต้นการต่อสู้ และเมื่อ Numby แอ็กชัน จะปล่อยการ โจมตีต่อเนื่อง แก่เป้าหมายที่ติดสถานะ \"Proof of Debt\" ซึ่งจะสร้าง DMG ไฟ\nเมื่อศัตรูที่ติดสถานะ \"Proof of Debt\" ได้รับการ โจมตีต่อเนื่อง Numby จะเร่งแอ็กชัน",
       "type": "พรสวรรค์",
       "tag": "โจมตีเดี่ยว",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "โจมตีต่อเนื่อง",
+          "desc": "เมื่อทำตามเงื่อนไขครบถ้วน จะปล่อยเอฟเฟกต์โจมตีพิเศษ 1 ครั้งใส่เป้าหมายโดยอัตโนมัติ",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "สถานะหมดสติ",
+          "desc": "เมื่อ HP ปัจจุบัน ของเป้าหมายฝ่ายเราเหลือ 0 จะติดสถานะพิเศษ และเป้าหมายที่ติดสถานะนี้ จะไม่สามารถต่อสู้ได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1463,15 @@
       "simpleDesc": "อัญเชิญ Numby ให้ติดตามไปในพื้นที่ ซึ่ง Numby จะค้นหาสมบัติธรรมดาและ Trotter ที่อยู่ใกล้เคียงโดยอัตโนมัติ การใช้เทคนิคจะทำให้ Topaz ฟื้นฟูพลังงานหลังจาก Numby โจมตีครั้งแรกของในการต่อสู้ครั้งถัดไป",
       "type": "เทคนิค",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1489,106 @@
       "_id": 111201,
       "id": "future_market",
       "name": "Future Market",
-      "desc": "เมื่อศัตรูเป้าหมายที่ติดสถานะ \"Proof of Debt\" ถูก <u>โจมตีต่อเนื่อง</u> จะติดสถานะ \"Debtor\" ซึ่งจะมีผลได้สูงสุด 1 ครั้งต่อหนึ่งการโจมตี\nสถานะ \"Debtor\" จะทำให้ศัตรูเป้าหมายได้รับ DMG คริติคอล จากการ <u>โจมตีต่อเนื่อง</u> เพิ่มขึ้น <nobr>25%</nobr> โดยสามารถซ้อนทับได้สูงสุด <nobr>2</nobr> ชั้น เมื่อสถานะ \"Proof of Debt\" ถูกขจัด \"Debtor\" ก็จะถูกขจัดไปด้วย"
+      "desc": "เมื่อศัตรูเป้าหมายที่ติดสถานะ \"Proof of Debt\" ถูก <u>โจมตีต่อเนื่อง</u> จะติดสถานะ \"Debtor\" ซึ่งจะมีผลได้สูงสุด 1 ครั้งต่อหนึ่งการโจมตี\nสถานะ \"Debtor\" จะทำให้ศัตรูเป้าหมายได้รับ DMG คริติคอล จากการ <u>โจมตีต่อเนื่อง</u> เพิ่มขึ้น <nobr>25%</nobr> โดยสามารถซ้อนทับได้สูงสุด <nobr>2</nobr> ชั้น เมื่อสถานะ \"Proof of Debt\" ถูกขจัด \"Debtor\" ก็จะถูกขจัดไปด้วย",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "โจมตีต่อเนื่อง",
+          "desc": "เมื่อทำตามเงื่อนไขครบถ้วน จะปล่อยเอฟเฟกต์โจมตีพิเศษ 1 ครั้งใส่เป้าหมายโดยอัตโนมัติ",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111202,
       "id": "bona_fide_acquisition",
       "name": "Bona Fide Acquisition",
-      "desc": "หลังจากที่ Numby แอ็กชันและทำการโจมตี Topaz จะฟื้นฟูพลังงาน <nobr>5</nobr> หน่วย"
+      "desc": "หลังจากที่ Numby แอ็กชันและทำการโจมตี Topaz จะฟื้นฟูพลังงาน <nobr>5</nobr> หน่วย",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111203,
       "id": "seize_the_big_and_free_the_small",
       "name": "Seize the Big and Free the Small",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111204,
       "id": "agile_operation",
       "name": "Agile Operation",
-      "desc": "เมื่อเริ่มต้นเทิร์นของ Numby เอง Topaz จะ <u>เร่งแอ็กชัน</u> <nobr>20%</nobr>"
+      "desc": "เมื่อเริ่มต้นเทิร์นของ Numby เอง Topaz จะ <u>เร่งแอ็กชัน</u> <nobr>20%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "เร่งแอ็กชัน",
+          "desc": "ลดช่วงเวลารอคอยของเป้าหมาย ก่อนที่จะแอ็กชันครั้งต่อไป",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111205,
       "id": "inflationary_demand",
       "name": "Inflationary Demand",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111206,
       "id": "incentive_mechanism",
       "name": "Incentive Mechanism",
-      "desc": "จำนวนการโจมตีของ Numby ขณะที่ติดสถานะ \"Windfall Bonanza!\" เพิ่มขึ้น <nobr>1</nobr> ครั้ง และเมื่อโจมตี <u>การทะลวงความต้านทาน</u> ไฟ จะเพิ่มขึ้น <nobr>10%</nobr>"
+      "desc": "จำนวนการโจมตีของ Numby ขณะที่ติดสถานะ \"Windfall Bonanza!\" เพิ่มขึ้น <nobr>1</nobr> ครั้ง และเมื่อโจมตี <u>การทะลวงความต้านทาน</u> ไฟ จะเพิ่มขึ้น <nobr>10%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "การทะลวงความต้านทาน",
+          "desc": "เมื่อสร้าง DMG ส่วนหนึ่งของค่าความต้านทาน ต่อประเภท DMG ที่เกี่ยวข้อง ของศัตรูเป้าหมายจะไม่มีผล",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

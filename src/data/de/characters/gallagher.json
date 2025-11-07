@@ -2,6 +2,7 @@
   "_id": 1301,
   "id": "gallagher",
   "name": "Gallagher",
+  "description": "Der Sicherheitsbeamte der Familie Bluthund in Penacony. Er ist Gästen gegenüber immer höflich, aber auch wachsam. Er scheint ein Charakter mit schwieriger Vergangenheit zu sein, über die er allerdings nie etwas erzählt.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Feuer-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Stellt sofort die LP eines Verbündeten wieder her.",
       "type": "Fertigkeit",
       "tag": "Wiederherstellung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "Belegt alle Gegner mit Berauschung und fügt ihnen Feuer-SCH zu. Verstärkt den nächsten Standardangriff zu „Hopfenschwall“.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1038,24 @@
       "simpleDesc": "„Berauschung“ erhöht den von Zielen erlittenen Bruch-SCH. Wenn Verbündete das Ziel angreifen, werden ihre LP wiederhergestellt.",
       "type": "Talent",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Bruch-SCH",
+          "desc": "Bruch-SCH wird mit höherem Brucheffekt, höherem max. Widerstand des Ziels und höherer Figurenstufe erhöht.\nBruch-SCH kann keine Kritischen Treffer zufügen und wird nicht von Effekten mit SCH-Erhöhung beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Greift sofort den Gegner an. Belegt nach Kampfeintritt alle Gegner für #1[i] Rd. mit „Berauschung“ und fügt ihnen Feuer-SCH in Höhe von #2[i]% von Gallaghers ANG zu.",
       "simpleDesc": "Greift den Gegner an. Belegt nach Kampfeintritt alle Gegner mit Berauschung und fügt ihnen geringen Feuer-SCH zu.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,88 @@
       "_id": 130101,
       "id": "salty_dog",
       "name": "Salty Dog",
-      "desc": "Stellt <nobr>20</nobr> Pkt. Energie wieder her, nachdem Gallagher in den Kampf eintritt, und erhöht seinen Effekt-WDS um <nobr>50%</nobr>."
+      "desc": "Stellt <nobr>20</nobr> Pkt. Energie wieder her, nachdem Gallagher in den Kampf eintritt, und erhöht seinen Effekt-WDS um <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130102,
       "id": "lions_tail",
       "name": "Löwenschwanz",
-      "desc": "Entfernt beim Einsatz der Fertigkeit <nobr>1</nobr> <u>Debuff</u> von einem anvisierten Verbündeten. Erhöht gleichzeitig seinen Effekt-WDS für <nobr>2</nobr> Rd. um <nobr>30%</nobr>."
+      "desc": "Entfernt beim Einsatz der Fertigkeit <nobr>1</nobr> <u>Debuff</u> von einem anvisierten Verbündeten. Erhöht gleichzeitig seinen Effekt-WDS für <nobr>2</nobr> Rd. um <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130103,
       "id": "corpse_reviver",
       "name": "Wiederbelebung der Toten",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130104,
       "id": "last_word",
       "name": "Letzte Worte",
-      "desc": "Verlängert die Dauer des durch Gallaghers Ultimate verursachten Status „Berauschung“ um <nobr>1</nobr> Rd."
+      "desc": "Verlängert die Dauer des durch Gallaghers Ultimate verursachten Status „Berauschung“ um <nobr>1</nobr> Rd.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130105,
       "id": "death_in_the_afternoon",
       "name": "Tod nach Mittag",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130106,
       "id": "blood_and_sand",
       "name": "Blut und Sand",
-      "desc": "Erhöht Gallaghers Brucheffekt um <nobr>20%</nobr> und die Schwächebruch-Effizienz um <nobr>20%</nobr>."
+      "desc": "Erhöht Gallaghers Brucheffekt um <nobr>20%</nobr> und die Schwächebruch-Effizienz um <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

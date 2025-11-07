@@ -2,6 +2,7 @@
   "_id": 1204,
   "id": "jing_yuan",
   "name": "Jing Yuan",
+  "description": "Một trong Thất Thiên Tướng Đế Cung Liên Minh Xianzhou, \"Thần Sách Tướng Quân\" phụ trách chỉ huy Vân Kỵ Quân Luofu.\nSư phụ là kiếm thủ hàng đầu tiền nhiệm của \"Luofu\", nhưng lại không được biết đến với tài năng võ thuật.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lôi cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lôi cho toàn bộ địch, tăng số đòn đánh trong một lượt của Thần Quân.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +750,15 @@
       "simpleDesc": "Gây Sát Thương Lôi cho toàn bộ địch, tăng số đòn đánh trong một lượt của Thần Quân.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1068,40 @@
       "simpleDesc": "Khi bắt đầu chiến đấu sẽ triệu hồi Thần Quân, khi Thần Quân hành động sẽ phát động Đòn Đánh Theo Sau, tự động gây lượng nhỏ Sát Thương Lôi lên 1 kẻ địch ngẫu nhiên và mục tiêu ở gần kẻ đó.",
       "type": "Thiên Phú",
       "tag": "Nảy Bật",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Hiệu Ứng Xấu Loại Khống Chế",
+          "desc": "Đóng Băng, Nhiễu Loạn, Giam Cầm, Chi Phối, Bạo Nộ, Chấn Động Mạnh Mẽ, Dị Mộng, Cầm Tù Quấy Nhiễu, Kinh Hãi, Khóa Hành Động.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1471,15 @@
       "simpleDesc": "Sử dụng Bí Kỹ, khi vào chiến đấu lần kế tiếp sẽ tăng số đòn đánh trong một lượt của Thần Quân.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1496,79 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "Lôi Kích Phá Núi",
-      "desc": "Khi Thần Quân thi triển tấn công, tăng Bội Số Sát Thương gây cho mục tiêu lân cận của kẻ địch chỉ định, mức tăng bằng <nobr>25%</nobr> Bội Số Sát Thương của mục tiêu chính."
+      "desc": "Khi Thần Quân thi triển tấn công, tăng Bội Số Sát Thương gây cho mục tiêu lân cận của kẻ địch chỉ định, mức tăng bằng <nobr>25%</nobr> Bội Số Sát Thương của mục tiêu chính.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "Mở Thiên Trận",
-      "desc": "Sau khi Thần Quân hành động, sát thương do tấn công thường, Chiến Kỹ, Tuyệt Kỹ của Jing Yuan gây ra tăng <nobr>20%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Sau khi Thần Quân hành động, sát thương do tấn công thường, Chiến Kỹ, Tuyệt Kỹ của Jing Yuan gây ra tăng <nobr>20%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120403,
       "id": "strike_suns_subdued",
       "name": "Di Phong Kinh Điện",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120404,
       "id": "spin_stars_sieged",
       "name": "Vân Lạc Ngọc Sa",
-      "desc": "Sau mỗi đòn đánh của Thần Quân, Jing Yuan sẽ hồi <nobr>2</nobr> Năng Lượng."
+      "desc": "Sau mỗi đòn đánh của Thần Quân, Jing Yuan sẽ hồi <nobr>2</nobr> Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120405,
       "id": "stride_spoils_seized",
       "name": "Xem Nhẹ Sinh Tử",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120406,
       "id": "sweep_souls_slain",
       "name": "Uy Linh Phá Địch Thù",
-      "desc": "Thần Quân sau mỗi đòn đánh sẽ khiến mục tiêu địch chỉ định rơi vào trạng thái Trọng Thương.\nMục tiêu địch ở trạng thái Trọng Thương sẽ tăng <nobr>12%</nobr> sát thương phải chịu, duy trì đến khi Thần Quân kết thúc lần tấn công này, hiệu ứng này tối đa cộng dồn <nobr>3</nobr> tầng."
+      "desc": "Thần Quân sau mỗi đòn đánh sẽ khiến mục tiêu địch chỉ định rơi vào trạng thái Trọng Thương.\nMục tiêu địch ở trạng thái Trọng Thương sẽ tăng <nobr>12%</nobr> sát thương phải chịu, duy trì đến khi Thần Quân kết thúc lần tấn công này, hiệu ứng này tối đa cộng dồn <nobr>3</nobr> tầng.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

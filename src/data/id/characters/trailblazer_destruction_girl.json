@@ -2,6 +2,7 @@
   "_id": 8002,
   "id": "trailblazer_destruction_girl",
   "name": "Trailblazer Destruction",
+  "description": "Anak muda yang naik ke Astral Express.\nDia memilih untuk bertualang dengan Astral Express demi menghilangkan krisis yang disebabkan Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Physical DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Mengakibatkan Physical DMG pada 1 musuh dan target di sekitarnya.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "Pilih serangan Single Target atau Blast untuk melancarkan satu serangan penuh.",
       "type": "Ultimate",
       "tag": "Enhance",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Setiap kali setelah mengakibatkan Weakness Break pada target musuh, ATK meningkat.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1374,15 @@
       "simpleDesc": "Setelah menggunakan Technique, akan segera memulihkan HP seluruh rekan tim.",
       "type": "Technique",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1344,37 +1399,88 @@
       "_id": 800201,
       "id": "a_falling_star",
       "name": "A Falling Star",
-      "desc": "Memulihkan <nobr>10</nobr> Energy tambahan pada Trailblazer saat mengalahkan musuh dengan cara melancarkan Ultimate. Efek ini hanya dapat terpicu 1 kali dalam setiap serangan."
+      "desc": "Memulihkan <nobr>10</nobr> Energy tambahan pada Trailblazer saat mengalahkan musuh dengan cara melancarkan Ultimate. Efek ini hanya dapat terpicu 1 kali dalam setiap serangan.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800202,
       "id": "an_unwilling_host",
       "name": "An Unwilling Host",
-      "desc": "Menyerang musuh dengan Physical Weakness akan memulihkan HP Trailblazer sebesar <nobr>5%</nobr> ATK Trailblazer."
+      "desc": "Menyerang musuh dengan Physical Weakness akan memulihkan HP Trailblazer sebesar <nobr>5%</nobr> ATK Trailblazer.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800203,
       "id": "a_leading_whisper",
       "name": "A Leading Whisper",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800204,
       "id": "a_destructing_glance",
       "name": "A Destructing Glance",
-      "desc": "Meningkatkan <nobr>25%</nobr> CRIT Rate saat menyerang musuh dengan <u>status Weakness Break</u>."
+      "desc": "Meningkatkan <nobr>25%</nobr> CRIT Rate saat menyerang musuh dengan <u>status Weakness Break</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Status Weakness Break",
+          "desc": "Saat Toughness target musuh berkurang menjadi 0, akan memasuki status Weakness Break, yang dapat menunda aksi musuh.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 800205,
       "id": "a_surviving_hope",
       "name": "A Surviving Hope",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800206,
       "id": "a_trailblazing_will",
       "name": "A Trailblazing Will",
-      "desc": "Talent juga akan terpicu saat Trailblazer mengalahkan target musuh."
+      "desc": "Talent juga akan terpicu saat Trailblazer mengalahkan target musuh.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

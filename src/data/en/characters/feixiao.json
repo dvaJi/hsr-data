@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "Feixiao",
+  "description": "The Xianzhou Yaoqing's Merlin's Claw and one of the Seven Arbiter-Generals. Unconventional and straightforward, she exudes effortless charm.\nShe is skilled in all forms of martial arts and has honed herself into a supreme weapon. She is widely adored by Xianzhou soldiers and civilians alike as \"The Vanquishing General.\"\nHowever, she bears the burden of the Moon Rage affliction. If she were to hunt down all the abominations in her limited lifetime — then the only enemy Feixiao has would be herself.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -244,9 +245,18 @@
       "id": "boltsunder",
       "name": "Boltsunder",
       "desc": "Deals Wind DMG equal to #1[i]% of Feixiao's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Wind DMG to a single enemy.",
+      "simpleDesc": "Deals minor Wind DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Deals Wind DMG to an enemy, and additionally launches Talent's Follow-up ATK 1 time.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -710,9 +738,27 @@
       "id": "terrasplit",
       "name": "Terrasplit",
       "desc": "Deals Wind DMG to one designated enemy target, up to #4[i]% of Feixiao's ATK. During this time, can ignore Weakness Type to reduce the target's Toughness. When the target is not Weakness Broken, Feixiao's Weakness Break Efficiency increases by #2[i]%.\nDuring the attack, Feixiao first launches \"Boltsunder Blitz\" or \"Waraxe Skyward\" on the target, for a total of #3[i] time(s). At the end, deals Wind DMG equal to #1[i]% of Feixiao's ATK to the target.",
-      "simpleDesc": "During the Ultimate, can ignore Weakness Type to reduce enemy Toughness. When the target is not Weakness Broken, Feixiao's Weakness Break Efficiency increases.\nLaunches \"Boltsunder Blitz\" or \"Waraxe Skyward\" on a single enemy #3[i] time(s). Deals Wind DMG at the end.",
+      "simpleDesc": "During the Ultimate, can ignore Weakness Type to reduce enemy Toughness. When the target is not Weakness Broken, Feixiao's Weakness Break Efficiency increases.\nLaunches \"Boltsunder Blitz\" or \"Waraxe Skyward\" on one enemy #3[i] time(s). Deals Wind DMG at the end.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Weakness Break State",
+          "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "Can activate Ultimate when \"Flying Aureus\" reaches #3[i] points, accumulating up to #4[i] points. For every #2[i] attacks by ally targets, Feixiao gains \"Flying Aureus\".\nAfter teammates attack, Feixiao launches Follow-up ATK against the primary target, dealing Wind DMG. This effect can only trigger once per turn. When using this attack, increases DMG dealt by this unit.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "Enters the \"Onrush\" state. Continuously pulls in enemies and increases movement speed. Gains \"Flying Aureus\" after entering battle.\nWhile in \"Onrush,\" can actively attack all pulled enemies. At the start of every wave, deals Wind DMG to all enemies. This DMG is guaranteed to CRIT. The more enemies are pulled in, the higher the DMG multiplier becomes.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "Skyward I Quell",
-      "desc": "After launching \"Boltsunder Blitz\" or \"Waraxe Skyward,\" additionally increases the Ultimate DMG dealt by Feixiao by an amount equal to <nobr>10%</nobr> of the original DMG, stacking up to <nobr>5</nobr> time(s) and lasting until the end of the Ultimate action."
+      "desc": "After launching \"Boltsunder Blitz\" or \"Waraxe Skyward,\" additionally increases the Ultimate DMG dealt by Feixiao by an amount equal to <nobr>10%</nobr> of the original DMG, stacking up to <nobr>5</nobr> time(s) and lasting until the end of the Ultimate action.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "Moonward I Wish",
-      "desc": "In the Talent's effect, for every 1 instance of <u>Follow-up ATK</u> launched by ally targets, Feixiao gains 1 point of \"Flying Aureus.\" This effect can trigger up to <nobr>6</nobr> time(s) per turn."
+      "desc": "In the Talent's effect, for every 1 instance of <u>Follow-up ATK</u> launched by ally targets, Feixiao gains 1 point of \"Flying Aureus.\" This effect can trigger up to <nobr>6</nobr> time(s) per turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "Starward I Bode",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "Stormward I Hear",
-      "desc": "The Toughness Reduction from the Talent's <u>Follow-up ATK</u> increases by <nobr>100%</nobr> and, when launched, increases this unit's SPD by <nobr>8%</nobr>, lasting for <nobr>2</nobr> turn(s)."
+      "desc": "The Toughness Reduction from the Talent's <u>Follow-up ATK</u> increases by <nobr>100%</nobr> and, when launched, increases this unit's SPD by <nobr>8%</nobr>, lasting for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "Heavenward I Leap",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "Homeward I Near",
-      "desc": "Increases the All-Type <u>RES PEN</u> of Ultimate DMG dealt by Feixiao by <nobr>20%</nobr>. Talent's <u>Follow-up ATK</u> DMG is considered as Ultimate DMG at the same time, and its DMG multiplier increases by <nobr>140%</nobr>."
+      "desc": "Increases the All-Type <u>RES PEN</u> of Ultimate DMG dealt by Feixiao by <nobr>20%</nobr>. Talent's <u>Follow-up ATK</u> DMG is considered as Ultimate DMG at the same time, and its DMG multiplier increases by <nobr>140%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

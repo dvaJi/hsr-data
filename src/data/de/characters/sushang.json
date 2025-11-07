@@ -2,6 +2,7 @@
   "_id": 1206,
   "id": "sushang",
   "name": "Sushang",
+  "description": "Kam auf der Xianzhou Yaoqing zur Welt und wurde zur militärischen Ausbildung zu den Wolkenrittern der Luofu geschickt.\nSie führt das Schwert ihrer Familie, das ihre Mutter ihr schenkte, und sehnt sich danach, der Zukunft ihren Stempel aufzudrücken.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen physischen SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Fügt einem Gegner physischen SCH zu und besteht eine geringe Chance, „Schwerthaltung“ auszulösen. Bei Gegner mit Schwächebruch wird die „Schwerthaltung“ garantiert ausgelöst.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000006,
+          "name": "Schwächebruch",
+          "desc": "Wenn der Widerstand gegnerischer Ziele auf 0 sinkt, treten sie in den Zustand Schwächebruch ein, was ihre Aktionen verzögert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +779,18 @@
       "simpleDesc": "Fügt einem Gegner massiven physischen SCH zu, verstärkt den Effekt der „Schwerthaltung“ und gewährt Sushang eine sofortige Aktion.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1124,15 @@
       "simpleDesc": "Erhöht die eigene GES, wenn ein Gegner im Kampf Schwächebruch erleidet.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1435,15 @@
       "desc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt allen Gegnern physischen SCH in Höhe von #1[i]% von Sushangs ANG zu.",
       "simpleDesc": "Greift den Gegner an. Fügt nach Kampfeintritt allen Gegnern geringen physischen SCH zu.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,37 +1460,88 @@
       "_id": 120601,
       "id": "cut_with_ease",
       "name": "Mit Leichtigkeit schneiden",
-      "desc": "Stellt beim Einsatz der Fertigkeit gegen Gegner mit <u>Schwächebruch</u> 1 Fertigkeitspunkt wieder her."
+      "desc": "Stellt beim Einsatz der Fertigkeit gegen Gegner mit <u>Schwächebruch</u> 1 Fertigkeitspunkt wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Schwächebruch",
+          "desc": "Wenn der Widerstand gegnerischer Ziele auf 0 sinkt, treten sie in den Zustand Schwächebruch ein, was ihre Aktionen verzögert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120602,
       "id": "refine_in_toil",
       "name": "Kultivierter Körper",
-      "desc": "Nach Auslösung der „Schwerthaltung“ erleidet Sushang für 1 Rd. <nobr>20%</nobr> weniger SCH."
+      "desc": "Nach Auslösung der „Schwerthaltung“ erleidet Sushang für 1 Rd. <nobr>20%</nobr> weniger SCH.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120603,
       "id": "rise_from_fame",
       "name": "Uralter Schwertstil",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120604,
       "id": "cleave_with_heart",
       "name": "Scharfer Verstand",
-      "desc": "Erhöht Sushangs Brucheffekt um <nobr>40%</nobr>."
+      "desc": "Erhöht Sushangs Brucheffekt um <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120605,
       "id": "prevail_via_taixu",
       "name": "Der Wille von Taixu",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120606,
       "id": "dwell_like_water",
       "name": "Anpassen wie Wasser",
-      "desc": "Die GES-Erhöhung von Sushangs Talent ist bis zu 2-fach stapelbar. Außerdem erhält Sushang unmittelbar nach Kampfeintritt 1-fach GES-Erhöhung ."
+      "desc": "Die GES-Erhöhung von Sushangs Talent ist bis zu 2-fach stapelbar. Außerdem erhält Sushang unmittelbar nach Kampfeintritt 1-fach GES-Erhöhung .",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

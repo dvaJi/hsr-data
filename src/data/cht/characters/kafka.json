@@ -2,6 +2,7 @@
   "_id": 1005,
   "id": "kafka",
   "name": "卡芙卡",
+  "description": "「星核獵手」的成員，瀟灑從容的職業麗人。\n利用言靈術，設計令{NICKNAME}吸收星核。\n愛好是購買及整理大衣。",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量雷屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "對敵方單體造成雷屬性傷害，對相鄰目標造成少量雷屬性傷害。\n若主目標處於持續傷害類負面狀態，則使持續傷害類負面狀態額外產生1次傷害。",
       "type": "戰技",
       "tag": "擴散",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +765,24 @@
       "simpleDesc": "對敵方全體造成少量雷屬性傷害，有高機率施加觸電狀態。\n若敵方目標處於觸電狀態，則使觸電狀態額外產生1次傷害。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1137,32 @@
       "simpleDesc": "當隊友對敵方目標發動普通攻擊後，卡芙卡立即發動追加攻擊，對該目標造成雷屬性傷害，並有高機率施加觸電狀態。該效果每回合只能觸發1次。",
       "type": "天賦",
       "tag": "單體攻擊",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1486,24 @@
       "desc": "立即攻擊一定範圍內的所有敵人，進入戰鬥後對敵方全體造成等同於卡芙卡#3[i]%攻擊力的雷屬性傷害，同時有#1[i]%的基礎機率使敵方每個單體目標陷入與終結技相同的觸電狀態，持續#2[i]回合。",
       "simpleDesc": "攻擊範圍內的所有敵人，進入戰鬥後對敵方全體造成少量雷屬性傷害，有高機率施加觸電狀態。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1438,37 +1522,105 @@
       "_id": 100501,
       "id": "da_capo",
       "name": "無窮動！無窮",
-      "desc": "天賦觸發<u>追加攻擊</u>時，有<nobr>100%</nobr>的<u>基礎機率</u>使目標受到的持續傷害提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "天賦觸發<u>追加攻擊</u>時，有<nobr>100%</nobr>的<u>基礎機率</u>使目標受到的持續傷害提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100502,
       "id": "fortississimo",
       "name": "狂想者，嗚咽",
-      "desc": "卡芙卡在場時，我方全體造成的持續傷害提高<nobr>25%</nobr>。"
+      "desc": "卡芙卡在場時，我方全體造成的持續傷害提高<nobr>25%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100503,
       "id": "capriccio",
       "name": "我讚美，即興",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100504,
       "id": "recitativo",
       "name": "把宣敘呈獻給",
-      "desc": "當卡芙卡對敵方目標施加的觸電狀態對敵方目標造成傷害時，額外為卡芙卡恢復<nobr>2</nobr>點能量。"
+      "desc": "當卡芙卡對敵方目標施加的觸電狀態對敵方目標造成傷害時，額外為卡芙卡恢復<nobr>2</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100505,
       "id": "doloroso",
       "name": "只有今晚奏鳴",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100506,
       "id": "leggiero",
       "name": "迴旋，悄悄地",
-      "desc": "終結技、秘技與天賦觸發的<u>追加攻擊</u>使敵方目標陷入的觸電狀態的傷害倍率提高<nobr>156%</nobr>，並使觸電狀態的持續時間增加<nobr>1</nobr>回合。"
+      "desc": "終結技、秘技與天賦觸發的<u>追加攻擊</u>使敵方目標陷入的觸電狀態的傷害倍率提高<nobr>156%</nobr>，並使觸電狀態的持續時間增加<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

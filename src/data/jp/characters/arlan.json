@@ -2,6 +2,7 @@
   "_id": 1008,
   "id": "arlan",
   "name": "アーラン",
+  "description": "宇宙ステーション「ヘルタ」の防衛課責任者。\n口下手だが、研究を大切にしているスタッフたちがそれぞれの研究を成し遂げられるよう、彼らを命懸けで守ろうとしている。",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の雷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "自身のHPを消費し、敵単体に雷属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "敵単体に大量の雷属性ダメージを与え、隣接する敵に雷属性ダメージを与える。",
       "type": "必殺技",
       "tag": "拡散攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "自身の失ったHPの割合に応じて与ダメージをアップする。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "敵を攻撃。戦闘に入った後、敵全体にアーランの攻撃力#1[i]%分の雷属性ダメージを与える。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、敵全体に少量の雷属性ダメージを与える。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,37 +1383,97 @@
       "_id": 100801,
       "id": "to_the_bitter_end",
       "name": "{RUBY_B#ばんし}万死{RUBY_E#}も{RUBY_B#じ}辞{RUBY_E#}さぬ{RUBY_B#けつい}決意{RUBY_E#}",
-      "desc": "残りHPが<nobr>50%</nobr>以下の時、戦闘スキルによるダメージ+<nobr>10%</nobr>。"
+      "desc": "残りHPが<nobr>50%</nobr>以下の時、戦闘スキルによるダメージ+<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100802,
       "id": "breaking_free",
       "name": "{RUBY_B#しば}縛{RUBY_E#}りより{RUBY_B#はな}放{RUBY_E#}たれし{RUBY_B#こころ}心{RUBY_E#}",
-      "desc": "戦闘スキルまたは必殺技を発動した時、自身の<u>デバフ</u>を1つ解除する。"
+      "desc": "戦闘スキルまたは必殺技を発動した時、自身の<u>デバフ</u>を1つ解除する。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100803,
       "id": "power_through",
       "name": "{RUBY_B#じゅうけんきょうこう}重剣強攻{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100804,
       "id": "turn_the_tables",
       "name": "{RUBY_B#ぜっきょう}絶境{RUBY_E#}の{RUBY_B#はんげき}反撃{RUBY_E#}",
-      "desc": "戦闘に入った後、アーランはHPが0になる攻撃を受けても<u>戦闘不能状態</u>にならず、HPを<nobr>25%</nobr>まで回復する。この効果は1回発動した後、または<nobr>2</nobr>ターン以降に自動解除される。"
+      "desc": "戦闘に入った後、アーランはHPが0になる攻撃を受けても<u>戦闘不能状態</u>にならず、HPを<nobr>25%</nobr>まで回復する。この効果は1回発動した後、または<nobr>2</nobr>ターン以降に自動解除される。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100805,
       "id": "hammer_and_tongs",
       "name": "{RUBY_B#ぜんりょくけいちゅう}全力傾注{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100806,
       "id": "selfsacrifice",
       "name": "{RUBY_B#けんしんてき}献身的{RUBY_E#}な{RUBY_B#せんどう}先導{RUBY_E#}",
-      "desc": "残りHPが<nobr>50%</nobr>以下の時、必殺技によるダメージ+<nobr>20%</nobr>、隣接する敵に対するダメージ倍率がメインターゲットと同じになる。"
+      "desc": "残りHPが<nobr>50%</nobr>以下の時、必殺技によるダメージ+<nobr>20%</nobr>、隣接する敵に対するダメージ倍率がメインターゲットと同じになる。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

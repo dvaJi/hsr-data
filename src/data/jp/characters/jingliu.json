@@ -2,6 +2,7 @@
   "_id": 1212,
   "id": "jingliu",
   "name": "{RUBY_B#ケイリュウ}鏡流{RUBY_E#}",
+  "description": "かつての羅浮の剣首、雲騎常勝の伝説を築いた者。\nしかし今、その名は抹消され、魔陰の境を歩く仙舟の裏切り者となっている。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の氷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "指定した敵単体に氷属性ダメージを与え、「朔望」を1層獲得する。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "指定した敵単体に大量の氷属性ダメージを与え、隣接する敵に氷属性ダメージを与える。「朔望」を1層獲得する。",
       "type": "必殺技",
       "tag": "拡散攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,15 @@
       "simpleDesc": "「朔望」を#5[i]層持つと「転魄」状態に入り、行動順を100%早め、自身の会心率をアップして戦闘スキルを強化する。攻撃を行った時、自身以外の味方のHPを消費し、消費したHPに応じて鏡流の攻撃力をアップする。「朔望」が0層になると「転魄」状態は終了する。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1497,32 @@
       "simpleDesc": "自身の周囲に特殊領域を作り出す。領域内の敵は凍結状態になる。領域内の敵と戦闘に入った後、EPを回復し、「朔望」を1層獲得して高確率で敵を凍結状態にする。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1472,37 +1544,79 @@
       "_id": 121201,
       "id": "moon_crashes_tianguan_gate",
       "name": "{RUBY_B#てんかん}天関{RUBY_E#}を{RUBY_B#おか}犯{RUBY_E#}す{RUBY_B#つき}月{RUBY_E#}",
-      "desc": "必殺技または強化戦闘スキルを発動した時、鏡流の会心ダメージ+<nobr>24%</nobr>、<nobr>1</nobr>ターン継続。敵1体のみを攻撃した場合、さらにその敵に鏡流の攻撃力<nobr>100%</nobr>分の氷属性ダメージを1回与える。"
+      "desc": "必殺技または強化戦闘スキルを発動した時、鏡流の会心ダメージ+<nobr>24%</nobr>、<nobr>1</nobr>ターン継続。敵1体のみを攻撃した場合、さらにその敵に鏡流の攻撃力<nobr>100%</nobr>分の氷属性ダメージを1回与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121202,
       "id": "crescent_shadows_qixing_dipper",
       "name": "{RUBY_B#げつうん}月暈{RUBY_E#}に{RUBY_B#しちせい}七星{RUBY_E#}",
-      "desc": "必殺技を発動した後、次の強化戦闘スキルによるダメージ+<nobr>80%</nobr>。"
+      "desc": "必殺技を発動した後、次の強化戦闘スキルによるダメージ+<nobr>80%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121203,
       "id": "halfmoon_gapes_mercurial_haze",
       "name": "{RUBY_B#もちづき}望月{RUBY_E#}に{RUBY_B#せま}迫{RUBY_E#}る{RUBY_B#はんぺき}半璧{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121204,
       "id": "lunarlance_shines_skyward_dome",
       "name": "{RUBY_B#てのひら}掌{RUBY_E#}の{RUBY_B#げっこう}月光{RUBY_E#}",
-      "desc": "「転魄」状態で味方のHPを消費して獲得する攻撃力が、さらに味方全体が消費したHPの<nobr>90%</nobr>分アップする。獲得できる攻撃力の上限+<nobr>30%</nobr>。"
+      "desc": "「転魄」状態で味方のHPを消費して獲得する攻撃力が、さらに味方全体が消費したHPの<nobr>90%</nobr>分アップする。獲得できる攻撃力の上限+<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121205,
       "id": "night_shades_astral_radiance",
       "name": "{RUBY_B#さんだい}三台{RUBY_E#}を{RUBY_B#むしば}蝕{RUBY_E#}む{RUBY_B#ぎょくきょう}玉鏡{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121206,
       "id": "eclipse_hollows_corporeal_husk",
       "name": "{RUBY_B#ろうしゅく}婁宿{RUBY_E#}を{RUBY_B#むしば}蝕{RUBY_E#}む{RUBY_B#ひょうりん}氷輪{RUBY_E#}",
-      "desc": "鏡流が「転魄」状態に入った時、「朔望」の上限+1層、鏡流がさらに「朔望」を<nobr>1</nobr>層獲得する。「転魄」状態の時、会心ダメージ+<nobr>50%</nobr>。"
+      "desc": "鏡流が「転魄」状態に入った時、「朔望」の上限+1層、鏡流がさらに「朔望」を<nobr>1</nobr>層獲得する。「転魄」状態の時、会心ダメージ+<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

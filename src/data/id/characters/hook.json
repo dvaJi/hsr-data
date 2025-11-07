@@ -2,6 +2,7 @@
   "_id": 1109,
   "id": "hook",
   "name": "Hook",
+  "description": "Bos (mengesahkan diri sendiri) tim petualangan bawah tanah \"The Moles\".\nDia mencintai kebebasan, dan melihat kehidupan sebagai serangkaian petualangan.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Fire DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Mengakibatkan Fire DMG pada 1 musuh dan berpeluang besar memberikan status Burn pada target.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Mengakibatkan Fire DMG dalam jumlah besar pada 1 musuh dan memperkuat Skill Hook yang berikutnya.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,27 @@
       "simpleDesc": "Saat menyerang target musuh berstatus Burn, akan mengakibatkan Fire DMG tambahan dalam jumlah kecil serta memulihkan Energy tambahan.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1409,24 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, mengakibatkan Fire DMG sebesar #4[i]% ATK Hook pada musuh secara acak. Di saat yang bersamaan, setiap target memiliki #1[i]% peluang dasar untuk memasuki status Burn selama #3[i] giliran.\nTarget musuh dengan status Burn akan menerima Fire DoT sebesar #2[i]% ATK Hook setiap kali gilirannya dimulai.",
       "simpleDesc": "Menyerang musuh dan mengakibatkan Fire DMG dalam jumlah kecil pada musuh acak, serta berpeluang besar untuk membuat setiap target musuh memasuki status Burn.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1446,88 @@
       "_id": 110901,
       "id": "early_to_bed_early_to_rise",
       "name": "Early to Bed, Early to Rise",
-      "desc": "Meningkatkan <nobr>20%</nobr> DMG dari Skill yang diperkuat."
+      "desc": "Meningkatkan <nobr>20%</nobr> DMG dari Skill yang diperkuat.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110902,
       "id": "happy_tummy_happy_body",
       "name": "Happy Tummy, Happy Body",
-      "desc": "Durasi status Burn yang disebabkan Skill pada musuh bertambah <nobr>1</nobr> giliran."
+      "desc": "Durasi status Burn yang disebabkan Skill pada musuh bertambah <nobr>1</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110903,
       "id": "dont_be_picky_nothings_icky",
       "name": "Don't Be Picky, Nothing's Icky",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110904,
       "id": "its_okay_to_not_know",
       "name": "It's Okay to Not Know",
-      "desc": "Saat talent terpicu, ada <nobr>100%</nobr> <u>peluang dasar</u> untuk membuat musuh di sekitar target utama juga memasuki status Burn yang sama dari Skill Hook."
+      "desc": "Saat talent terpicu, ada <nobr>100%</nobr> <u>peluang dasar</u> untuk membuat musuh di sekitar target utama juga memasuki status Burn yang sama dari Skill Hook.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110905,
       "id": "let_the_moles_deeds_be_known",
       "name": "Let the Moles' Deeds Be Known",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110906,
       "id": "always_ready_to_punch_and_kick",
       "name": "Always Ready to Punch and Kick",
-      "desc": "Meningkatkan <nobr>20%</nobr> DMG Hook pada musuh berstatus Burn."
+      "desc": "Meningkatkan <nobr>20%</nobr> DMG Hook pada musuh berstatus Burn.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

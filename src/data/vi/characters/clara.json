@@ -2,6 +2,7 @@
   "_id": 1107,
   "id": "clara",
   "name": "Clara",
+  "description": "Thiếu nữ lang thang sống cùng robot.\nHướng nội, dịu dàng, có một trái tim thuần khiết.\nCô có một khát khao là mọi người ở Thành Phố Ngầm đều trở thành \"người nhà\" của nhau.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Gây Sát Thương Vật Lý cho toàn phe địch, gây thêm Sát Thương Vật Lý cho mục tiêu mang Ký Hiệu Phản Kích.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,27 @@
       "simpleDesc": "Giảm sát thương bản thân phải chịu, tăng xác suất bị tấn công, và cường hóa hiệu ứng Phản Kích.",
       "type": "Tuyệt Kỹ",
       "tag": "Cường Hóa",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Phản Kích",
+          "desc": "Hiệu ứng này tự động kích hoạt sau khi mục tiêu bị tấn công, thi triển thêm 1 lần tấn công lên người tấn công.\nPhản kích cũng thuộc Đòn Đánh Theo Sau.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1128,27 @@
       "simpleDesc": "Giảm sát thương bản thân phải chịu khi bị kẻ địch tấn công. Kẻ địch tấn công Clara sẽ bị đánh dấu \"Ký Hiệu Phản Kích\" và chịu đòn Phản Kích của Svarog, gây Sát Thương Vật Lý.",
       "type": "Thiên Phú",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 25
+      },
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Phản Kích",
+          "desc": "Hiệu ứng này tự động kích hoạt sau khi mục tiêu bị tấn công, thi triển thêm 1 lần tấn công lên người tấn công.\nPhản kích cũng thuộc Đòn Đánh Theo Sau.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1405,6 +1472,15 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào chiến đấu sẽ tăng xác suất Clara bị kẻ địch tấn công, duy trì #1[i] hiệp.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào trận, sẽ tăng xác suất bị kẻ địch tấn công.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1498,96 @@
       "_id": 110701,
       "id": "a_tall_figure",
       "name": "Bóng Lưng Cao Lớn",
-      "desc": "Sau khi thi triển Chiến Kỹ, sẽ không xóa \"Ký Hiệu Phản Kích\" của mục tiêu địch."
+      "desc": "Sau khi thi triển Chiến Kỹ, sẽ không xóa \"Ký Hiệu Phản Kích\" của mục tiêu địch.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110702,
       "id": "a_tight_embrace",
       "name": "Cái Ôm Thật Chặt",
-      "desc": "Sau khi thi triển Tuyệt Kỹ, Tấn Công tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Sau khi thi triển Tuyệt Kỹ, Tấn Công tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110703,
       "id": "cold_steel_armor",
       "name": "Giáp Thép Băng Giá",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110704,
       "id": "familys_warmth",
       "name": "Mái Ấm Gia Đình",
-      "desc": "Sau khi bị tấn công, sát thương Clara phải chịu giảm <nobr>30%</nobr>, hiệu ứng kéo dài đến khi bắt đầu hiệp sau của bản thân."
+      "desc": "Sau khi bị tấn công, sát thương Clara phải chịu giảm <nobr>30%</nobr>, hiệu ứng kéo dài đến khi bắt đầu hiệp sau của bản thân.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110705,
       "id": "a_small_promise",
       "name": "Lời Hứa Nho Nhỏ",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110706,
       "id": "long_company",
       "name": "Đồng Hành Dài Lâu",
-      "desc": "Sau khi mục tiêu khác của phe ta bị tấn công, Svarog cũng có <nobr>50%</nobr> <u>xác suất cố định</u> <u>Phản Kích</u> lại người tấn công, đồng thời thêm \"Ký Hiệu Phản Kích\" lên mục tiêu tấn công. Khi thi triển Tuyệt Kỹ sẽ tăng thêm <nobr>1</nobr> lần Phản Kích cường hóa."
+      "desc": "Sau khi mục tiêu khác của phe ta bị tấn công, Svarog cũng có <nobr>50%</nobr> <u>xác suất cố định</u> <u>Phản Kích</u> lại người tấn công, đồng thời thêm \"Ký Hiệu Phản Kích\" lên mục tiêu tấn công. Khi thi triển Tuyệt Kỹ sẽ tăng thêm <nobr>1</nobr> lần Phản Kích cường hóa.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Xác Suất Cố Định",
+          "desc": "Xác suất cố định không bị ảnh hưởng bởi bất cứ nhân tố nào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000003,
+          "name": "Phản Kích",
+          "desc": "Hiệu ứng này tự động kích hoạt sau khi mục tiêu bị tấn công, thi triển thêm 1 lần tấn công lên người tấn công.\nPhản kích cũng thuộc Đòn Đánh Theo Sau.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

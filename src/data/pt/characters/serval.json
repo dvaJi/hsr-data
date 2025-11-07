@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "Serval",
+  "description": "Uma mecânica de Belobog que costumava ser uma pesquisadora na Divisão Tecnológica dos Arquitetos.\nIrmã mais velha de Gepard Landau, sua personalidade é completamente oposta à do irmão.\nEla ama um tipo de música antiga, chamada de \"rock 'n' roll\", que era popular antes do Congelamento Eterno.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Raio leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,24 @@
       "simpleDesc": "Causa Dano de Raio a uma unidade inimiga e Dano de Raio leve aos alvos adjacentes, com alta chance de aplicar Choque no alvo.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "Causa Dano de Raio a todos os inimigos e aumenta a duração de Choque.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "Após atacar, causa uma pequena quantidade de Dano Adicional a todos os inimigos com Choque.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "Ataca o inimigo imediatamente. Após entrar na batalha, causa #4[i]% do ATQ de Serval como Dano de Raio a um inimigo aleatório, com #1[i]% de chance-base de todos os inimigos receberem Choque por #3[i] rodada(s).\nQuando em Choque, inimigos recebem #2[i]% do ATQ de Serval como Dano de Raio Contínuo no início de cada rodada.",
       "simpleDesc": "Ataca o inimigo. Após entrar na batalha, causa Dano de Raio leve a um inimigo aleatório, com altas chances de infligir Choque a todos os inimigos-alvo.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "Câmara do Eco",
-      "desc": "O ATQ Básico causa Dano de Raio igual a <nobr>60%</nobr> do Dano do ATQ Básico a um inimigo-alvo aleatório adjacente ao inimigo-alvo."
+      "desc": "O ATQ Básico causa Dano de Raio igual a <nobr>60%</nobr> do Dano do ATQ Básico a um inimigo-alvo aleatório adjacente ao inimigo-alvo.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "Bis!",
-      "desc": "Sempre que o Talento de Serval ativar <u>Dano Adicional</u>, ela regenera <nobr>4</nobr> de Energia."
+      "desc": "Sempre que o Talento de Serval ativar <u>Dano Adicional</u>, ela regenera <nobr>4</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "Ouça o Batimento das Engrenagens",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "Faça Barulho!",
-      "desc": "A Perícia Suprema tem uma <u>chance-base</u> de <nobr>100%</nobr> de causar \"Choque\" em inimigos que ainda não possuírem esse estado. Esse estado de \"Choque\" tem os mesmos efeitos daquele causado pela Perícia."
+      "desc": "A Perícia Suprema tem uma <u>chance-base</u> de <nobr>100%</nobr> de causar \"Choque\" em inimigos que ainda não possuírem esse estado. Esse estado de \"Choque\" tem os mesmos efeitos daquele causado pela Perícia.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "O Rugido Mais Alto de Belobog!",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "Essa Música Abala os Céus!",
-      "desc": "Serval causa <nobr>30%</nobr> a mais de Dano a inimigos afligidos com Choque."
+      "desc": "Serval causa <nobr>30%</nobr> a mais de Dano a inimigos afligidos com Choque.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1406,
   "id": "cipher",
   "name": "Cífer",
+  "description": "Doros, la ciudad perdida de los bandidos, donde 300 forajidos se entretienen sin restricciones.\nCiferia, cometa demoníaco, ¡corre! Heredera de Crisos de la Yesca del Engaño, que tus mentiras se propaguen por el mundo.\n\"¡Ja! ¿Intentas engañarme? ¡Ni lo sueñes!\".",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Cuántico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Tiene una gran probabilidad de reducir el daño que infligen un enemigo y los objetivos adyacentes. Aumenta el ATQ de Cífer, e inflige Daño Cuántico a un enemigo y una pequeña cantidad de Daño Cuántico a los objetivos adyacentes.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,24 @@
       "simpleDesc": "Inflige a un enemigo Daño Cuántico y un Daño verdadero equivalente a cierto porcentaje del valor registrado por el Talento, e inflige a ese enemigo y a los objetivos adyacentes una pequeña cantidad de Daño Cuántico y un Daño verdadero equivalente a cierto porcentaje del valor registrado por el Talento. Este Daño verdadero se reparte equitativamente entre todos los objetivos de la habilidad.",
       "type": "Habilidad definitiva",
       "tag": "Ráfaga",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        60
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "Daño verdadero",
+          "desc": "Daño sin tipo que no se ve influido por ningún efecto. No se considera como un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1173,32 @@
       "simpleDesc": "Cífer afecta a un enemigo con el estado Cliente habitual. Después de que un compañero de equipo de Cífer ataque al objetivo con ese estado, Cífer lanza un ataque adicional que inflige Daño Cuántico a ese objetivo. Puede activarse #3[i] vez por turno.\nCífer registra el daño que los aliados infligen al objetivo en el estado de Cliente habitual. Este registro se reinicia después de lanzar la habilidad definitiva.",
       "type": "Talento",
       "tag": "ATQ individual",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "Daño verdadero",
+          "desc": "Daño sin tipo que no se ve influido por ningún efecto. No se considera como un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1466,6 +1538,15 @@
       "simpleDesc": "Obtiene Bendición de Zagreus. Mientras dura, los enemigos no pueden detectar a Cífer. Al acercarse a un enemigo, obtiene un consumible al azar. Al entrar en combate, Cífer inflige una pequeña cantidad de Daño Cuántico a todos los enemigos.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1485,37 +1566,115 @@
       "_id": 140601,
       "id": "read_the_room_seek_the_glee",
       "name": "Sonrisa avizora",
-      "desc": "El daño registrado por Cífer pasa a ser un <nobr>150%</nobr> del daño registrado original. Cuando se lanza el <u>ataque adicional</u> del talento, el ATQ de Cífer aumenta en un <nobr>80%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "El daño registrado por Cífer pasa a ser un <nobr>150%</nobr> del daño registrado original. Cuando se lanza el <u>ataque adicional</u> del talento, el ATQ de Cífer aumenta en un <nobr>80%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140602,
       "id": "in_the_fray_nab_on_a_spree",
       "name": "Rapacería bajo presión",
-      "desc": "Cuando Cífer golpea a un enemigo, tiene una <u>probabilidad base</u> del <nobr>120%</nobr> de hacer que el daño que recibe ese objetivo aumente en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Cuando Cífer golpea a un enemigo, tiene una <u>probabilidad base</u> del <nobr>120%</nobr> de hacer que el daño que recibe ese objetivo aumente en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140603,
       "id": "from_thin_air_hard_to_foresee",
       "name": "Prestidigitación indiscernible",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140604,
       "id": "the_jig_is_up_quick_to_flee",
       "name": "Escapada preparada",
-      "desc": "Después de que el Cliente habitual reciba un ataque de un aliado, Cífer le inflige un <nobr>50%</nobr> de su ATQ como Daño Cuántico <u>adicional</u>."
+      "desc": "Después de que el Cliente habitual reciba un ataque de un aliado, Cífer le inflige un <nobr>50%</nobr> de su ATQ como Daño Cuántico <u>adicional</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140605,
       "id": "safe_in_numbers_light_as_a_bee",
       "name": "Como la raposa, rauda y mañosa",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140606,
       "id": "the_thiefs_game_unsung_and_free",
       "name": "A mejor bandida, más desconocida",
-      "desc": "El daño que inflige el <u>ataque adicional</u> del talento de Cífer aumenta en un <nobr>350%</nobr>. Al registrar el daño, registra además el <nobr>16%</nobr> del daño no excedente infligido con este ataque. Tras reiniciar el contador al lanzar la habilidad definitiva, restablece un <nobr>20%</nobr> del valor que había registrado."
+      "desc": "El daño que inflige el <u>ataque adicional</u> del talento de Cífer aumenta en un <nobr>350%</nobr>. Al registrar el daño, registra además el <nobr>16%</nobr> del daño no excedente infligido con este ataque. Tras reiniciar el contador al lanzar la habilidad definitiva, restablece un <nobr>20%</nobr> del valor que había registrado.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

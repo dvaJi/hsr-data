@@ -2,6 +2,7 @@
   "_id": 1201,
   "id": "qingque",
   "name": "{RUBY_B#セイジャク}青雀{RUBY_E#}",
+  "description": "仙舟「羅浮」の太卜司の卜者、兼書庫の管理員。\n普段から仕事をサボっているため、これ以上降格の余地がなく、じきに「門番」になる予定。",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "牌を1枚使用し、敵単体に少量の量子属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "牌を取り、自身の与ダメージをアップする。ターンは終了しない。",
       "type": "戦闘スキル",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "敵全体に量子属性ダメージを与え、同じ絵柄の牌を4枚獲得する。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "味方のターンが回ってきた時、牌を取る。自身のターンが回ってきた時、同じ絵柄の牌が4つある場合、牌を全部消費してその回の通常攻撃を強化し、自身の攻撃力をアップする。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1313,6 +1359,15 @@
       "simpleDesc": "秘技を使用、次の戦闘に入った時に牌を取る。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,96 @@
       "_id": 120101,
       "id": "rise_through_the_tiles",
       "name": "{RUBY_B#ヤオユイ}幺魚{RUBY_E#}と{RUBY_B#たわむ}戯{RUBY_E#}れる{RUBY_B#こへい}孤兵{RUBY_E#}",
-      "desc": "必殺技によるダメージ+<nobr>10%</nobr>。"
+      "desc": "必殺技によるダメージ+<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120102,
       "id": "sleep_on_the_tiles",
       "name": "{RUBY_B#ごばん}碁盤{RUBY_E#}は{RUBY_B#まくら}枕{RUBY_E#}、{RUBY_B#かいみん}快眠{RUBY_E#}の{RUBY_B#たす}助{RUBY_E#}け",
-      "desc": "青雀は牌を取るたびにEPを<nobr>1</nobr>回復する。"
+      "desc": "青雀は牌を取るたびにEPを<nobr>1</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120103,
       "id": "read_between_the_tiles",
       "name": "{RUBY_B#むがむちゅう}無我夢中{RUBY_E#}に{RUBY_B#メンゼンチン}門前清{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120104,
       "id": "right_on_the_tiles",
       "name": "{RUBY_B#じごく}地獄{RUBY_E#}{RUBY_B#ま}待{RUBY_E#}ちも{RUBY_B#おだ}穏{RUBY_E#}やかに",
-      "desc": "戦闘スキルを発動した後、<nobr>24%</nobr>の<u>固定確率</u>で「門前ツモ」状態に入る、このターンが終了するまで継続。\n「門前ツモ」状態では、通常攻撃または強化通常攻撃を行った後に<u>追加攻撃</u>を1回行い、敵にその通常攻撃または強化通常攻撃ダメージ<nobr>100%</nobr>分の量子属性ダメージを与える。"
+      "desc": "戦闘スキルを発動した後、<nobr>24%</nobr>の<u>固定確率</u>で「門前ツモ」状態に入る、このターンが終了するまで継続。\n「門前ツモ」状態では、通常攻撃または強化通常攻撃を行った後に<u>追加攻撃</u>を1回行い、敵にその通常攻撃または強化通常攻撃ダメージ<nobr>100%</nobr>分の量子属性ダメージを与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定確率",
+          "desc": "どのような要因にも左右されない、固定された確率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120105,
       "id": "gambit_for_the_tiles",
       "name": "{RUBY_B#よわた}世渡{RUBY_E#}りは{RUBY_B#ごううん}豪運{RUBY_E#}{RUBY_B#まか}任{RUBY_E#}せ",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120106,
       "id": "prevail_beyond_the_tiles",
       "name": "{RUBY_B#ゆうちょう}悠長{RUBY_E#}に{RUBY_B#かま}構{RUBY_E#}えて{RUBY_B#なが}流{RUBY_E#}れを{RUBY_B#ま}待{RUBY_E#}つ",
-      "desc": "強化通常攻撃を行った後、SPを1回復する。"
+      "desc": "強化通常攻撃を行った後、SPを1回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

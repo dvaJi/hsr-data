@@ -2,6 +2,7 @@
   "_id": 1218,
   "id": "jiaoqiu",
   "name": "Jiaoqiu",
+  "description": "Một thầy thuốc và mưu sĩ Người Hồ Ly ở Xianzhou Yaoqing, thường tươi cười với mọi người, nhưng thực ra lòng đầy mưu mô.\nSinh ra trong một gia đình nổi tiếng thuộc Sở Đan Đỉnh, từng ở ẩn vì chịu tổn thương quá mức và không làm nghề y nữa, sau đó vì để chữa trị cho Tướng Quân Thiên Kích Feixiao nên mới xuống núi lần nữa.\nGiỏi nghiên cứu các phương thuốc nguồn gốc từ thực dưỡng, đặc biệt là những món cay có thể đem đến cảm giác đau cho con người, đã phát minh ra một phương thuốc chữa bệnh đỉnh vạc có tên là \"Cửu Cung Cách\".",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Gây Sát Thương Hỏa cho 1 kẻ địch, gây lượng nhỏ Sát Thương Hỏa cho mục tiêu lân cận. Có xác suất lớn thi triển 1 tầng Nướng Tro cho mục tiêu chính.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -743,6 +771,32 @@
       "simpleDesc": "Lấy số tầng Nướng Tro vốn có của kẻ địch đặt làm số tầng Nướng Tro cao nhất của trận này, sau đó mở Kết Giới và gây cho toàn bộ kẻ địch Sát Thương Hỏa. Khi đang ở trong Kết Giới, kẻ địch sẽ bị tăng Sát Thương Tuyệt Kỹ phải chịu, và khi hành động sẽ có xác suất bị thi triển 1 tầng Nướng Tro.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1151,24 @@
       "simpleDesc": "Khi thi triển Tấn Công Thường, Chiến Kỹ, Tuyệt Kỹ đánh trúng kẻ địch, sẽ có xác suất lớn thi triển 1 tầng Nướng Tro lên mục tiêu, tăng sát thương kẻ địch phải chịu, và sẽ bị xem là đồng thời rơi vào trạng thái Thiêu Đốt.",
       "type": "Thiên Phú",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1466,6 +1538,24 @@
       "simpleDesc": "Tạo vùng đặc biệt. Sau khi vào trận cùng kẻ địch đứng trong khu vực, sẽ gây lượng nhỏ Sát Thương Hỏa cho toàn phe địch, và có xác suất lớn thi triển 1 tầng Nướng Tro.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1484,37 +1574,79 @@
       "_id": 121801,
       "id": "pentapathic_transference",
       "name": "Ngũ Vị Nhập Ngũ Tạng, Chín Sống Đã Định",
-      "desc": "Sát thương mục tiêu phe ta gây ra cho kẻ địch trong trạng thái Nướng Tro tăng <nobr>40%</nobr>. Mỗi khi kích hoạt hiệu ứng Thiên Phú khiến kẻ địch rơi vào trạng thái Nướng Tro, sẽ giúp số tầng Nướng Tro được cộng dồn ở lần này tăng thêm <nobr>1</nobr> tầng."
+      "desc": "Sát thương mục tiêu phe ta gây ra cho kẻ địch trong trạng thái Nướng Tro tăng <nobr>40%</nobr>. Mỗi khi kích hoạt hiệu ứng Thiên Phú khiến kẻ địch rơi vào trạng thái Nướng Tro, sẽ giúp số tầng Nướng Tro được cộng dồn ở lần này tăng thêm <nobr>1</nobr> tầng.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121802,
       "id": "from_savor_comes_suffer",
       "name": "Sướng Miệng Hại Thân, Vị Nồng Trừ Độc",
-      "desc": "Khi kẻ địch ở trạng thái Nướng Tro, Bội Số Sát Thương Hỏa Duy Trì mà Nướng Tro gây ra cho kẻ đó tăng <nobr>300%</nobr>."
+      "desc": "Khi kẻ địch ở trạng thái Nướng Tro, Bội Số Sát Thương Hỏa Duy Trì mà Nướng Tro gây ra cho kẻ đó tăng <nobr>300%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121803,
       "id": "flavored_euphony_reigns_supreme",
       "name": "Hòa Hợp Diệu Kỳ, Địch Bất Khả Kháng",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121804,
       "id": "leisure_in_luster_out",
       "name": "Tạng Phủ Hòa Bình, Khí Huyết Hưng Thịnh",
-      "desc": "Khi Kết Giới tồn tại, Tấn Công của kẻ địch giảm <nobr>15%</nobr>."
+      "desc": "Khi Kết Giới tồn tại, Tấn Công của kẻ địch giảm <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121805,
       "id": "duel_in_dawn_dash_in_dusk",
       "name": "Minh Tranh Ám Đấu",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121806,
       "id": "nonamorphic_pyrobind",
       "name": "Tùy Thuộc Độ Lửa",
-      "desc": "Khi mục tiêu địch bị tiêu diệt, Nướng Tro mà mục tiêu sở hữu sẽ cộng dồn cho kẻ địch có số tầng Nướng Tro thấp nhất hiện đang sống sót trong trận. Giới hạn số tầng Nướng Tro tăng lên <nobr>9</nobr>, mỗi tầng Nướng Tro sẽ làm Kháng Tất Cả Thuộc Tính của mục tiêu giảm <nobr>3%</nobr>."
+      "desc": "Khi mục tiêu địch bị tiêu diệt, Nướng Tro mà mục tiêu sở hữu sẽ cộng dồn cho kẻ địch có số tầng Nướng Tro thấp nhất hiện đang sống sót trong trận. Giới hạn số tầng Nướng Tro tăng lên <nobr>9</nobr>, mỗi tầng Nướng Tro sẽ làm Kháng Tất Cả Thuộc Tính của mục tiêu giảm <nobr>3%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

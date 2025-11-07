@@ -2,6 +2,7 @@
   "_id": 1209,
   "id": "yanqing",
   "name": "Yanqing",
+  "description": "Serviteur du général Jing Yuan. Un épéiste talentueux qui n'a même pas atteint sa majorité.\nLorsque Yanqing a son épée en main, personne ne lui arrive à la cheville.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -243,10 +244,22 @@
       "_id": 120901,
       "id": "frost_thorn",
       "name": "Épine de givre",
-      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Yanqing à un ennemi unique.",
+      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Yanqing à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de glace mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 120902,
       "id": "darting_ironthorn",
       "name": "Salve d'aiguillons",
-      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Yanqing à un ennemi unique et active Osmose avec l'acier pendant 1 tour.",
-      "simpleDesc": "Inflige des DGT de glace à un ennemi unique et active Osmose avec l'acier.",
+      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Yanqing à un ennemi désigné et active Osmose avec l'acier pendant 1 tour.",
+      "simpleDesc": "Inflige des DGT de glace à un ennemi désigné et active Osmose avec l'acier.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -709,10 +734,31 @@
       "_id": 120903,
       "id": "amidst_the_raining_bliss",
       "name": "Béatitude au milieu de l'averse",
-      "desc": "Augmente les chances de coup critique de Yanqing de #1[i]%. Si Osmose avec l'acier est active, augmente les DGT critiques de Yanqing de #2[i]% supplémentaires. Ce bonus dure 1 tour avant d'infliger des DGT de glace équivalents à #3[i]% de l'ATQ de Yanqing à un ennemi unique.",
+      "desc": "Augmente les chances de coup critique de Yanqing de #1[i]%. Si Osmose avec l'acier est active, augmente les DGT critiques de Yanqing de #2[i]% supplémentaires. Ce bonus dure 1 tour avant d'infliger des DGT de glace équivalents à #3[i]% de l'ATQ de Yanqing à un ennemi désigné.",
       "simpleDesc": "Augmente les chances de coup critique de Yanqing. Renforce Osmose avec l'acier et inflige des DGT de glace massifs à un ennemi unique.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Bonus",
+          "desc": "Les bonus permettent d'améliorer la capacité de combat pendant un certain temps. Ils peuvent être dissipés, sauf indication contraire.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1083,48 @@
       "simpleDesc": "Lorsque ce personnage est dans l'état Osmose avec l'acier, ses chances d'être attaqué sont réduites et ses chances de coup critique et ses DGT critiques augmentent. Après avoir attaqué un ennemi, il y a une chance de lancer une ATQ de suivi, infligeant des DGT de glace avec une chance de geler la cible.\nOsmose avec l'acier se dissipe lorsque le personnage subit des dégâts.",
       "type": "Talent",
       "tag": "Cible unique",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chances fixes",
+          "desc": "Probabilité fixe qui n'est affectée par aucun facteur.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1494,15 @@
       "simpleDesc": "Après utilisation de la technique, les DGT infligés aux ennemis dont les PV sont supérieurs ou égaux à 50 % augmentent au début du combat suivant.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1424,37 +1521,106 @@
       "_id": 120901,
       "id": "svelte_saber",
       "name": "Coupe franche",
-      "desc": "Lorsque Yanqing attaque un ennemi gelé, il inflige des <u>DGT additionnels</u> de glace équivalents à <nobr>60%</nobr> de son ATQ."
+      "desc": "Lorsque Yanqing attaque un ennemi gelé, il inflige des <u>DGT additionnels</u> de glace équivalents à <nobr>60%</nobr> de son ATQ.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120902,
       "id": "supine_serenade",
       "name": "Transe du guerrier",
-      "desc": "Lorsque Osmose avec l'acier est active, le taux de régénération d'énergie augmente de <nobr>10%</nobr> supplémentaires."
+      "desc": "Lorsque Osmose avec l'acier est active, le taux de régénération d'énergie augmente de <nobr>10%</nobr> supplémentaires.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120903,
       "id": "sword_savant",
       "name": "Épéiste de génie",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120904,
       "id": "searing_sting",
       "name": "Froid pénétrant",
-      "desc": "Lorsque les PV actuels du personnage sont supérieurs ou égaux à <nobr>80%</nobr>, sa <u>PÉN de RÉS</u> à la glace augmente de <nobr>12%</nobr>."
+      "desc": "Lorsque les PV actuels du personnage sont supérieurs ou égaux à <nobr>80%</nobr>, sa <u>PÉN de RÉS</u> à la glace augmente de <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120905,
       "id": "surging_strife",
       "name": "Lutte sans répit",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120906,
       "id": "swift_swoop",
       "name": "Combattant habile",
-      "desc": "Si les <u>bonus</u> accordés par Osmose avec l'acier ou l'ultime sont actifs au moment où un ennemi est vaincu, la durée de ces <u>bonus</u> est prolongée d'1 tour."
+      "desc": "Si les <u>bonus</u> accordés par Osmose avec l'acier ou l'ultime sont actifs au moment où un ennemi est vaincu, la durée de ces <u>bonus</u> est prolongée d'1 tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Bonus",
+          "desc": "Les bonus permettent d'améliorer la capacité de combat pendant un certain temps. Ils peuvent être dissipés, sauf indication contraire.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

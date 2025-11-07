@@ -2,6 +2,7 @@
   "_id": 1001,
   "id": "march_7th",
   "name": "三月七",
+  "description": "一度沉睡於恆冰，對過去一無所知的少女。\n為了尋找身世的真相，選擇與銀河列車同行。\n目前為自己準備了約六十七種「身世故事」。",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量冰屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "為我方單體施加護盾。",
       "type": "戰技",
       "tag": "防禦",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,32 @@
       "simpleDesc": "對敵方全體造成冰屬性傷害，有機率施加凍結狀態。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1145,24 @@
       "simpleDesc": "持有護盾的我方目標受到敵方攻擊後，三月七立即對其發動反擊，造成少量冰屬性傷害。",
       "type": "天賦",
       "tag": "單體攻擊",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "反擊",
+          "desc": "當目標受到攻擊後自動觸發的效果，對攻擊者發動1次額外的攻擊。\n反擊也屬於追加攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1402,6 +1465,32 @@
       "desc": "立即攻擊敵人，進入戰鬥後有#1[i]%的基礎機率使隨機敵方單體陷入凍結狀態，持續#2[i]回合。\n凍結狀態下，敵方目標不能行動，同時每回合開始時受到等同於三月七#3[i]%攻擊力的冰屬性附加傷害。",
       "simpleDesc": "攻擊敵人，進入戰鬥後有高機率使敵方隨機單體陷入凍結狀態。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1509,88 @@
       "_id": 100101,
       "id": "memory_of_you",
       "name": "記憶中的你",
-      "desc": "終結技每凍結1個目標，為三月七恢復<nobr>6</nobr>點能量。"
+      "desc": "終結技每凍結1個目標，為三月七恢復<nobr>6</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100102,
       "id": "memory_of_it",
       "name": "記憶中的它",
-      "desc": "進入戰鬥時，為目前生命值百分比最低的我方目標提供強度等同於三月七<nobr>24%</nobr>防禦力+<nobr>320</nobr>的護盾，持續<nobr>3</nobr>回合。"
+      "desc": "進入戰鬥時，為目前生命值百分比最低的我方目標提供強度等同於三月七<nobr>24%</nobr>防禦力+<nobr>320</nobr>的護盾，持續<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100103,
       "id": "memory_of_everything",
       "name": "記憶中的一切",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100104,
       "id": "never_forfeit_again",
       "name": "不願再失去",
-      "desc": "天賦的<u>反擊</u>效果每回合可觸發的次數增加1次。使<u>反擊</u>造成的傷害值提高，提高數值等同於三月七防禦力的<nobr>30%</nobr>。"
+      "desc": "天賦的<u>反擊</u>效果每回合可觸發的次數增加1次。使<u>反擊</u>造成的傷害值提高，提高數值等同於三月七防禦力的<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "反擊",
+          "desc": "當目標受到攻擊後自動觸發的效果，對攻擊者發動1次額外的攻擊。\n反擊也屬於追加攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100105,
       "id": "never_forget_again",
       "name": "不想再忘卻",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100106,
       "id": "just_like_this_always",
       "name": "就這樣，一直……",
-      "desc": "在戰技提供的護盾保護下的我方目標，每回合開始時回復等同於各自<nobr>4%</nobr>生命上限+<nobr>106</nobr>的生命值。"
+      "desc": "在戰技提供的護盾保護下的我方目標，每回合開始時回復等同於各自<nobr>4%</nobr>生命上限+<nobr>106</nobr>的生命值。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

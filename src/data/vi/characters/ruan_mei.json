@@ -2,6 +2,7 @@
   "_id": 1303,
   "id": "ruan_mei",
   "name": "Ruan Mei",
+  "description": "Hội viên Câu Lạc Bộ Thiên Tài, chuyên gia trong lĩnh vực khoa học sinh mệnh, cùng hợp tác với nhóm người Herta phát triển Vũ Trụ Mô Phỏng.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Băng cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Sau khi thi triển Chiến Kỹ, Ruan Mei nhận được Bồi Âm. Khi Ruan Mei có Bồi Âm, sẽ tăng sát thương và Hiệu Suất Phá Vỡ Điểm Yếu của toàn phe ta.",
       "type": "Chiến Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,43 @@
       "simpleDesc": "Tăng Xuyên Kháng Toàn Thuộc Tính cho toàn bộ phe ta, đồng thời sau khi tấn công sẽ thi triển Mai Nở Phai Tàn lên kẻ địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Trì Hoãn Hành Động",
+          "desc": "Kéo dài khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Sát Thương Phá Vỡ",
+          "desc": "Tấn Công Kích Phá, Giới Hạn Sức Bền của mục tiêu, cấp nhân vật càng cao, Sát Thương Phá Vỡ gây ra càng cao.\nSát Thương Phá Vỡ không thể bạo kích, không chịu ảnh hưởng bởi hiệu ứng loại Tăng Sát Thương.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1159,24 @@
       "simpleDesc": "Tăng tốc độ cho tất cả đồng đội (ngoại trừ bản thân), khi phá vỡ điểm yếu của kẻ địch sẽ gây thêm sát thương phá vỡ thuộc tính Băng lên kẻ địch đó.",
       "type": "Thiên Phú",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Sát Thương Phá Vỡ",
+          "desc": "Tấn Công Kích Phá, Giới Hạn Sức Bền của mục tiêu, cấp nhân vật càng cao, Sát Thương Phá Vỡ gây ra càng cao.\nSát Thương Phá Vỡ không thể bạo kích, không chịu ảnh hưởng bởi hiệu ứng loại Tăng Sát Thương.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1486,15 @@
       "simpleDesc": "Sau khi vào trận lần kế tiếp sẽ tự động kích hoạt #1[i] lần Chiến Kỹ. Sau khi dùng Bí Kỹ, phe ta tấn công kẻ địch trong Vũ Trụ Mô Phỏng, Vũ Trụ Sai Phân luôn được xem là tấn công vào Điểm Yếu của chúng để vào trận, đồng thời bỏ qua Thuộc Tính Điểm Yếu và làm giảm Sức Bền. Mỗi khi sở hữu 1 Chúc Phúc, sẽ tăng điểm Giảm Sức Bền, hơn nữa khi phá vỡ điểm yếu sẽ gây thêm Sát Thương Phá Vỡ.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1425,37 +1514,97 @@
       "_id": 130301,
       "id": "neuronic_embroidery",
       "name": "Hình Thêu Mô Phỏng Thần Kinh",
-      "desc": "Trong thời gian Tuyệt Kỹ mở kết giới, khi toàn bộ phe ta gây sát thương sẽ bỏ qua <nobr>20%</nobr> phòng thủ của mục tiêu."
+      "desc": "Trong thời gian Tuyệt Kỹ mở kết giới, khi toàn bộ phe ta gây sát thương sẽ bỏ qua <nobr>20%</nobr> phòng thủ của mục tiêu.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130302,
       "id": "reedside_promenade",
       "name": "Dạo Bước Rừng Lau",
-      "desc": "Khi Ruan Mei trong trận, và toàn bộ phe ta gây sát thương lên mục tiêu phe địch ở <u>trạng thái Phá Vỡ Điểm Yếu</u>, Tấn Công sẽ tăng <nobr>40%</nobr>."
+      "desc": "Khi Ruan Mei trong trận, và toàn bộ phe ta gây sát thương lên mục tiêu phe địch ở <u>trạng thái Phá Vỡ Điểm Yếu</u>, Tấn Công sẽ tăng <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130303,
       "id": "viridescent_pirouette",
       "name": "Bóng Nàng Áo Lụa Xanh Màu Khói",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130304,
       "id": "chatoyant_clat",
       "name": "Trước Gương Đồng Tìm Thần",
-      "desc": "Khi Điểm Yếu của kẻ địch bị phá vỡ, Tấn Công Kích Phá của Ruan Mei tăng <nobr>100%</nobr>, duy trì <nobr>3</nobr> hiệp."
+      "desc": "Khi Điểm Yếu của kẻ địch bị phá vỡ, Tấn Công Kích Phá của Ruan Mei tăng <nobr>100%</nobr>, duy trì <nobr>3</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130305,
       "id": "languid_barrette",
       "name": "Trâm Cài Buông Lơi",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130306,
       "id": "sash_cascade",
       "name": "Buông Khăn Phẩy Quạt",
-      "desc": "Thời gian duy trì kết giới triển khai bởi Tuyệt Kỹ kéo dài <nobr>1</nobr> hiệp. Bội Số <u>Sát Thương Phá Vỡ</u> của Thiên Phú tăng thêm <nobr>200%</nobr>."
+      "desc": "Thời gian duy trì kết giới triển khai bởi Tuyệt Kỹ kéo dài <nobr>1</nobr> hiệp. Bội Số <u>Sát Thương Phá Vỡ</u> của Thiên Phú tăng thêm <nobr>200%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Sát Thương Phá Vỡ",
+          "desc": "Tấn Công Kích Phá, Giới Hạn Sức Bền của mục tiêu, cấp nhân vật càng cao, Sát Thương Phá Vỡ gây ra càng cao.\nSát Thương Phá Vỡ không thể bạo kích, không chịu ảnh hưởng bởi hiệu ứng loại Tăng Sát Thương.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

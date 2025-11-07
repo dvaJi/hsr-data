@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "飛霄",
+  "description": "仙舟「曜青」的天擊將軍，帝弓七天將之一，為人不拘一格，率直瀟灑。\n精通百般武藝，煉化軀體至極致，享有「大捷將軍」美名，深受仙舟軍民愛戴。\n但身負「月狂」之症，如要在時限內獵盡孽物——飛霄唯一的敵手，便是自己。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量風屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "對敵方單體造成風屬性傷害，隨後額外發動1次天賦的追加攻擊。",
       "type": "戰技",
       "tag": "單體攻擊",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "終結技期間可無視弱點屬性削減敵方韌性，目標未被擊破時飛霄弱點擊破效率提高。\n對敵方單體發動#3[i]次【閃裂刃舞】或【鉞貫天衝】，最後造成風屬性傷害。",
       "type": "終結技",
       "tag": "單體攻擊",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱點擊破狀態",
+          "desc": "敵方目標的韌性被削減至0時進入的特殊狀態，進入該狀態的目標行動會延後。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "【飛黃】達到#3[i]點時可啟動終結技，最多累積#4[i]點。我方目標每發動#2[i]次攻擊，飛霄便獲得【飛黃】。\n隊友發動攻擊後，飛霄對主目標發動追加攻擊，造成風屬性傷害。該效果每回合最多觸發1次，發動此攻擊時使自身造成的傷害提高。",
       "type": "天賦",
       "tag": "單體攻擊",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "進入【陷鋒】狀態，持續牽引敵人且移動速度提高，進入戰鬥後獲得【飛黃】。\n【陷鋒】狀態下可主動攻擊所有牽引的敵人，每個波次開始時對敵方全體造成風屬性傷害，該傷害必定暴擊。牽引敵人越多，傷害倍率越高。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "鎮綏天鈞",
-      "desc": "施放【閃裂刃舞】或【鉞貫天衝】後，使飛霄造成的終結技傷害額外提高，提高數值等同於原傷害的<nobr>10%</nobr>，最多疊加<nobr>5</nobr>層，持續至終結技行動結束。"
+      "desc": "施放【閃裂刃舞】或【鉞貫天衝】後，使飛霄造成的終結技傷害額外提高，提高數值等同於原傷害的<nobr>10%</nobr>，最多疊加<nobr>5</nobr>層，持續至終結技行動結束。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "禮辰禱月",
-      "desc": "天賦效果中，我方目標每發動1次<u>追加攻擊</u>即可使飛霄獲得1點【飛黃】。該效果每回合最多觸發<nobr>6</nobr>次。"
+      "desc": "天賦效果中，我方目標每發動1次<u>追加攻擊</u>即可使飛霄獲得1點【飛黃】。該效果每回合最多觸發<nobr>6</nobr>次。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "景星出宿",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "驅颶聽冰",
-      "desc": "天賦的<u>追加攻擊</u>的削韌值提高<nobr>100%</nobr>，並且發動時使自身速度提高<nobr>8%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "天賦的<u>追加攻擊</u>的削韌值提高<nobr>100%</nobr>，並且發動時使自身速度提高<nobr>8%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "擢登霄漢",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "惟首正丘",
-      "desc": "飛霄造成的終結技傷害的全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。天賦的<u>追加攻擊</u>傷害同時視為終結技傷害，並且傷害倍率提高<nobr>140%</nobr>。"
+      "desc": "飛霄造成的終結技傷害的全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。天賦的<u>追加攻擊</u>傷害同時視為終結技傷害，並且傷害倍率提高<nobr>140%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

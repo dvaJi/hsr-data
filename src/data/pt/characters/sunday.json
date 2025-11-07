@@ -2,6 +2,7 @@
   "_id": 1313,
   "id": "sunday",
   "name": "Sunday",
+  "description": "O sonho da Ordem se dissipou, mas ainda há aqueles que não desistirão de sua intenção original.\n — Para onde levarão os passos... do viajante cujas asas foram cortadas?",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Imaginário leve a uma unidade inimiga designada.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Faz com que um personagem aliado designado e sua invocação ajam imediatamente, e aumenta seu Dano causado.\nApós utilizar sua Perícia em \"O Beatificado\", recupera 1 Ponto de Perícia.\nQuando Sunday utiliza sua habilidade em personagens do Caminho da Harmonia, o efeito de ação imediata não pode ser ativado.",
       "type": "Perícia",
       "tag": "Suporte",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Regenera Energia para um personagem aliado designado e transforma o alvo e sua invocação em \"O Beatificado\". \"O Beatificado\" aumenta o Dano CRIT.",
       "type": "Perícia Suprema",
       "tag": "Suporte",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "Ao utilizar a Perícia, aumenta a Chance de CRIT do alvo.",
       "type": "Talento",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1443,15 @@
       "simpleDesc": "Após esta Técnica ser usada, da primeira vez que Sunday usar uma habilidade em um aliado-alvo na próxima batalha, o Dano causado pelo alvo aumenta.",
       "type": "Técnica",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1469,79 @@
       "_id": 131301,
       "id": "millenniums_quietus",
       "name": "Quietude Milenar",
-      "desc": "Quando Sunday usa uma Perícia, o personagem-alvo pode ignorar <nobr>16%</nobr> da DEF do inimigo-alvo para causar Dano, e sua invocação pode ignorar <nobr>40%</nobr> da DEF do inimigo-alvo para causar Dano, com duração de <nobr>2</nobr> rodada(s)."
+      "desc": "Quando Sunday usa uma Perícia, o personagem-alvo pode ignorar <nobr>16%</nobr> da DEF do inimigo-alvo para causar Dano, e sua invocação pode ignorar <nobr>40%</nobr> da DEF do inimigo-alvo para causar Dano, com duração de <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131302,
       "id": "faith_outstrips_frailty",
       "name": "A Fé Supera a Fragilidade",
-      "desc": "Após o primeiro uso da Perícia Suprema, recupera <nobr>2</nobr> ponto(s) de Perícia. O Dano causado por \"O Beatificado\" aumenta em <nobr>30%</nobr>."
+      "desc": "Após o primeiro uso da Perícia Suprema, recupera <nobr>2</nobr> ponto(s) de Perícia. O Dano causado por \"O Beatificado\" aumenta em <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131303,
       "id": "hermitage_of_thorns",
       "name": "Eremitério de Espinhos",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131304,
       "id": "sculptures_preamble",
       "name": "Preâmbulo da Escultura",
-      "desc": "No início da rodada, regenera <nobr>8</nobr> de Energia."
+      "desc": "No início da rodada, regenera <nobr>8</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131305,
       "id": "paper_raft_in_silver_bay",
       "name": "Navio de Papel na Baía Prateada",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131306,
       "id": "dawn_of_sidereal_cacophony",
       "name": "Amanhecer da Cacofonia Sideral",
-      "desc": "O efeito de Bônus de Chance de CRIT do Talento se torna acumulável em até <nobr>3</nobr> vez(es) e a duração do Talento aumenta em <nobr>1</nobr> rodada(s). Quando Sunday utiliza sua Perícia Suprema, ele também aplica o efeito de Bônus de Chance de CRIT do Talento ao alvo. Quando o efeito de Bônus de Chance de CRIT do Talento entra em efeito e a Chance de CRIT do alvo exceder os <nobr>100%</nobr>, cada 1% da Chance de CRIT excedente aumenta em <nobr>2%</nobr> o Dano CRIT."
+      "desc": "O efeito de Bônus de Chance de CRIT do Talento se torna acumulável em até <nobr>3</nobr> vez(es) e a duração do Talento aumenta em <nobr>1</nobr> rodada(s). Quando Sunday utiliza sua Perícia Suprema, ele também aplica o efeito de Bônus de Chance de CRIT do Talento ao alvo. Quando o efeito de Bônus de Chance de CRIT do Talento entra em efeito e a Chance de CRIT do alvo exceder os <nobr>100%</nobr>, cada 1% da Chance de CRIT excedente aumenta em <nobr>2%</nobr> o Dano CRIT.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

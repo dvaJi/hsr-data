@@ -2,6 +2,7 @@
   "_id": 1004,
   "id": "welt",
   "name": "Welt",
+  "description": "Membro experiente da Tripulação do Expresso.\nA paixão escondida em seu coração arde novamente ao aproveitar esta nova aventura.\nÀs vezes ele esboça as experiências vividas em um caderno.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Imaginário leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Causa Dano Imaginário leve a um único inimigo. Este ataque pode ser Rebatido 3 vezes, com chance de causar Lentidão aos inimigos atingidos.",
       "type": "Perícia",
       "tag": "Rebote",
+      "spBase": 10,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,32 @@
       "simpleDesc": "Causa Dano Imaginário a todos os inimigos, com altas chances de também causar Aprisionamento.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Ação Atrasada",
+          "desc": "Aumenta o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1157,27 @@
       "simpleDesc": "Ao golpear um inimigo com Lentidão, adicionalmente causa Dano Adicional Imaginário leve.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1472,32 @@
       "simpleDesc": "Cria uma dimensão especial. Inimigos nessa dimensão têm sua VEL de Movimento reduzida. Depois de entrar em combate com inimigos na dimensão, existe uma alta chance dos inimigos sofrerem de Aprisionamento.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Ação Atrasada",
+          "desc": "Aumenta o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1411,37 +1518,97 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "Legado de Honra",
-      "desc": "Depois de usar sua Perícia Suprema, Welt é aprimorado. Então, a(s) próxima(s) <nobr>2</nobr> utilização(ões) de seu ATQ Básico ou Perícia irá(ão) causar 1 instância extra de <u>Dano Adicional</u> ao inimigo-alvo. O <u>Dano Adicional</u> causado ao utilizar o ATQ Básico é igual a <nobr>50%</nobr> do Multiplicador de Dano do ATQ Básico. O <u>Dano Adicional</u> causado ao utilizar a Perícia é igual a <nobr>80%</nobr> do Multiplicador de Dano da Perícia."
+      "desc": "Depois de usar sua Perícia Suprema, Welt é aprimorado. Então, a(s) próxima(s) <nobr>2</nobr> utilização(ões) de seu ATQ Básico ou Perícia irá(ão) causar 1 instância extra de <u>Dano Adicional</u> ao inimigo-alvo. O <u>Dano Adicional</u> causado ao utilizar o ATQ Básico é igual a <nobr>50%</nobr> do Multiplicador de Dano do ATQ Básico. O <u>Dano Adicional</u> causado ao utilizar a Perícia é igual a <nobr>80%</nobr> do Multiplicador de Dano da Perícia.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100402,
       "id": "conflux_of_stars",
       "name": "Confluência Estelar",
-      "desc": "Quando seu Talento é ativado, Welt regenera <nobr>3</nobr> de Energia."
+      "desc": "Quando seu Talento é ativado, Welt regenera <nobr>3</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100403,
       "id": "prayer_of_peace",
       "name": "Prece da Paz",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100404,
       "id": "appellation_of_justice",
       "name": "Apelação da Justiça",
-      "desc": "Ao usar a Perícia, aumenta a <u>chance-base</u> de reduzir a VEL do inimigo-alvo atacado em <nobr>35%</nobr>."
+      "desc": "Ao usar a Perícia, aumenta a <u>chance-base</u> de reduzir a VEL do inimigo-alvo atacado em <nobr>35%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100405,
       "id": "power_of_kindness",
       "name": "Poder da Bondade",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "Perspectiva Brilhante",
-      "desc": "Ao usar a Perícia, causa Dano 1 vez a mais a um inimigo aleatório."
+      "desc": "Ao usar a Perícia, causa Dano 1 vez a mais a um inimigo aleatório.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1104,
   "id": "gepard",
   "name": "Gepard",
+  "description": "Đội trưởng Thiết Vệ Bờm Bạc, chiến sĩ hạng nhất nhì ở Belobog.\nTư tưởng và hành động nhất quán, tỉ mỉ cẩn thận, chưa từng buông thả.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Băng cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Gây Sát Thương Băng cho 1 kẻ địch, có xác suất kèm trạng thái Đóng Băng cho mục tiêu.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +800,18 @@
       "simpleDesc": "Cung cấp Khiên cho toàn bộ phe ta.",
       "type": "Tuyệt Kỹ",
       "tag": "Phòng Thủ",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1136,24 @@
       "simpleDesc": "Khi bị tấn công chí tử sẽ không rơi vào trạng thái không thể chiến đấu, và hồi HP ngay. Chỉ kích hoạt 1 lần trong 1 trận.",
       "type": "Thiên Phú",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1448,15 @@
       "simpleDesc": "Dùng Bí Kỹ, khi bắt đầu lần chiến đấu tiếp theo, toàn bộ phe ta sẽ nhận được khiên.",
       "type": "Bí Kỹ",
       "tag": "Phòng Thủ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1475,88 @@
       "_id": 110401,
       "id": "due_diligence",
       "name": "Tận Chức Tận Trách",
-      "desc": "Khi thi triển Chiến Kỹ sẽ tăng <nobr>35%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu phe địch bị tấn công rơi vào trạng thái Đóng Băng."
+      "desc": "Khi thi triển Chiến Kỹ sẽ tăng <nobr>35%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu phe địch bị tấn công rơi vào trạng thái Đóng Băng.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110402,
       "id": "lingering_cold",
       "name": "Giá Rét Tàn Dư",
-      "desc": "Sau khi giải trừ trạng thái Đóng Băng mà Chiến Kỹ khiến mục tiêu địch rơi vào, Tốc Độ của mục tiêu giảm <nobr>20%</nobr>, duy trì <nobr>1</nobr> hiệp."
+      "desc": "Sau khi giải trừ trạng thái Đóng Băng mà Chiến Kỹ khiến mục tiêu địch rơi vào, Tốc Độ của mục tiêu giảm <nobr>20%</nobr>, duy trì <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110403,
       "id": "never_surrender",
       "name": "Không Bao Giờ Đầu Hàng",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110404,
       "id": "faith_moves_mountains",
       "name": "Luôn Luôn Chân Thành",
-      "desc": "Khi Gepard trong trận, Kháng Hiệu Ứng của toàn phe ta tăng <nobr>20%</nobr>."
+      "desc": "Khi Gepard trong trận, Kháng Hiệu Ứng của toàn phe ta tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110405,
       "id": "cold_iron_fist",
       "name": "Nắm Đấm Sắt Lạnh",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110406,
       "id": "unyielding_resolve",
       "name": "Quyết Ý Bất Khuất",
-      "desc": "Khi kích hoạt Thiên Phú, Gepard sẽ hành động ngay, và lượng hồi HP hiện tại tăng thêm <nobr>50%</nobr> Giới Hạn HP của bản thân."
+      "desc": "Khi kích hoạt Thiên Phú, Gepard sẽ hành động ngay, và lượng hồi HP hiện tại tăng thêm <nobr>50%</nobr> Giới Hạn HP của bản thân.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

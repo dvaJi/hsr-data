@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "Cerydra",
+  "description": "Das nördliche Reich, eine verlorene Dynastie, deren kalte Länder von Eroberungsgelüsten entflammt sind.\nHerrscherin Cerydra, Erbin von Chrysos, die die Kernflamme des Gesetzes trägt. Sie wird ihre Züge planen und die Götter herausfordern, über die Abtrünnigen urteilen und den Weg der Flammenjagd in das Schicksal dieser Welt einmeißeln.\n„Dies ist nicht das Ende. Die Reise von Amphoreus wird durch die Sterne führen!“",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Wind-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "Verleiht einer Figur „Militärverdienst“ und Cerydra erhält Aufladung. Wenn die Aufladung #4[i] Pkt. erreicht, wird Militärverdienst der Figur automatisch zu „Adelstitel“ hochgestuft. Erhöht den KRIT-SCH des verursachten Fertigkeits-SCH von Figuren mit Adelstitel sowie ihre WDS-DUR aller Typen und sie können Coup de Main auslösen.",
       "type": "Fertigkeit",
       "tag": "Unterstützung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Mengenkontrolle-Debuff",
+          "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "Coup de Main",
+          "desc": "Kopiert die Fähigkeit, die als nächstes eingesetzt wird, und setzt sie sofort ein. Danach wird die ursprüngliche Fähigkeit eingesetzt.\nCoup de Main löst Coup de Main nicht erneut aus.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "Erhält Aufladung. Fügt allen Gegnern Wind-SCH zu.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "Erhöht den ANG der Figur mit „Militärverdienst“. Wenn sie einen Standardangriff oder eine Fertigkeit einsetzt, erhält Cerydra Aufladung. Nach einem Angriff der Figur mit Militärverdienst verursacht Cerydra geringen zusätzlichen Wind-SCH.",
       "type": "Talent",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "Coup de Main",
+          "desc": "Kopiert die Fähigkeit, die als nächstes eingesetzt wird, und setzt sie sofort ein. Danach wird die ursprüngliche Fähigkeit eingesetzt.\nCoup de Main löst Coup de Main nicht erneut aus.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "Verleiht der aktuell aktiven Figur „Militärverdienst“. Setzt zu Beginn des nächsten Kampfes automatisch die Fertigkeit auf die Figur mit Militärverdienst ein.",
       "type": "Technik",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "Eroberung der Kronen aller",
-      "desc": "Die Figur mit „Militärverdienst“ ignoriert beim Verursachen von SCH <nobr>16%</nobr> der VTD des Gegners. Wenn Militärverdienst zu „Adelstitel“ hochgestuft wird, ignoriert diese Figur beim Verursachen von Fertigkeits-SCH zusätzlich <nobr>20%</nobr> der VTD des Gegners. Beim Einsatz von Cerydras Fertigkeit stellt sie bei einem anvisierten Verbündeten <nobr>2</nobr> Pkt. Energie wieder her."
+      "desc": "Die Figur mit „Militärverdienst“ ignoriert beim Verursachen von SCH <nobr>16%</nobr> der VTD des Gegners. Wenn Militärverdienst zu „Adelstitel“ hochgestuft wird, ignoriert diese Figur beim Verursachen von Fertigkeits-SCH zusätzlich <nobr>20%</nobr> der VTD des Ziels. Beim Einsatz von Cerydras Fertigkeit stellt sie bei einem anvisierten Verbündeten <nobr>2</nobr> Pkt. Energie wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "Die vereinte Hoffnung vieler",
-      "desc": "Erhöht den verursachten SCH von Figuren mit „Militärverdienst“ um <nobr>40%</nobr>. Wenn sich ein Teammitglied mit Militärverdienst auf dem Kampffeld befindet, wird Cerydras verursachter SCH um <nobr>160%</nobr> erhöht."
+      "desc": "Erhöht den verursachten SCH von Figuren mit „Militärverdienst“ um <nobr>40%</nobr>. Wenn sich ein Teammitglied mit Militärverdienst auf dem Kampffeld befindet, wird Cerydras verursachter SCH um <nobr>160%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "Verbrennen der alten Gesetze",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "Rekonstruktion der Menschenreiche",
-      "desc": "Erhöht den SCH-Multiplikator des Ultimates um <nobr>240%</nobr>."
+      "desc": "Erhöht den SCH-Multiplikator des Ultimates um <nobr>240%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "Abrechnung von Gut und Böse",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "Reise ins Sternenmeer",
-      "desc": "Erhöht die <u>WDS-DUR</u> aller Typen von der Figur mit „Militärverdienst“ um <nobr>20%</nobr> und den Multiplikator des <u>zusätzlichen SCH</u>, der durch Militärverdienst ausgelöst wird, um <nobr>300%</nobr>. Wenn sich ein Teammitglied mit Militärverdienst auf dem Kampffeld befindet, wird Cerydras <u>WDS-DUR</u> aller Typen um <nobr>20%</nobr> erhöht."
+      "desc": "Erhöht die <u>WDS-DUR</u> aller Typen der Figur mit „Militärverdienst“ um <nobr>20%</nobr> und den Multiplikator des <u>zusätzlichen SCH</u>, der durch Militärverdienst ausgelöst wird, um <nobr>300%</nobr>. Wenn sich ein Teammitglied mit Militärverdienst auf dem Kampffeld befindet, wird Cerydras <u>WDS-DUR</u> aller Typen um <nobr>20%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

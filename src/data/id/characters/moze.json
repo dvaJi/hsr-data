@@ -2,6 +2,7 @@
   "_id": 1223,
   "id": "moze",
   "name": "Moze",
+  "description": "Seorang pengawal bayangan dari Xianzhou \"Yaoqing\" yang pendiam dan penyendiri.\nAhli dalam menangani urusan intelijen dan hal-hal yang bersifat rahasia. Dia jarang muncul di hadapan orang lain. Saat Moze menunjukkan kehebatannya, itulah saat musuh-musuhnya menyambut kematian.\nDia menguasai metode pembunuhan yang beragam, dan sangat terobsesi dengan kerapian dan keteraturan.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Menjadikan 1 musuh sebagai \"Prey\" dan mengakibatkan Lightning DMG padanya, serta memperoleh #2[i] poin Charge.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,24 @@
       "simpleDesc": "Mengakibatkan Lightning DMG pada 1 musuh, serta melancarkan Serangan Lanjutan dari Talent.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,40 @@
       "simpleDesc": "Saat terdapat \"Prey\" di medan pertempuran, Moze akan memasuki status Departed.\nSetelah rekan tim menyerang \"Prey\", Moze akan mengakibatkan Lightning DMG Tambahan dan mengonsumsi 1 poin Charge. Setiap mengonsumsi #2[i] poin Charge, Moze akan melancarkan Serangan Lanjutan pada \"Prey\", mengakibatkan Lightning DMG. Saat poin Charge berjumlah 0, akan menghapus status \"Prey\" dari target.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000016,
+          "name": "Departed",
+          "desc": "Target yang berstatus Departed tidak dapat menjadi target kemampuan, dan tidak akan muncul di Susunan Aksi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1399,15 @@
       "simpleDesc": "Memasuki status Stealth. Saat menyerang musuh ketika berstatus Stealth untuk memasuki pertempuran, DMG yang diakibatkan Moze akan meningkat.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,37 +1426,97 @@
       "_id": 122301,
       "id": "oathkeeper",
       "name": "Oathkeeper",
-      "desc": "Setelah memasuki pertempuran, Moze akan memulihkan <nobr>20</nobr> poin Energy. Setiap memicu 1 kali <u>DMG Tambahan</u> dari Talent miliknya, Moze akan memulihkan <nobr>2</nobr> poin Energy."
+      "desc": "Setelah memasuki pertempuran, Moze akan memulihkan <nobr>20</nobr> poin Energy. Setiap memicu 1 kali <u>DMG Tambahan</u> dari Talent miliknya, Moze akan memulihkan <nobr>2</nobr> poin Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122302,
       "id": "wrathbearer",
       "name": "Wrathbearer",
-      "desc": "Saat rekan tim mengakibatkan DMG pada target musuh yang menjadi \"Prey\", CRIT DMG akan meningkat <nobr>40%</nobr>."
+      "desc": "Saat rekan tim mengakibatkan DMG pada target musuh yang menjadi \"Prey\", CRIT DMG akan meningkat <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122303,
       "id": "deathchaser",
       "name": "Deathchaser",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122304,
       "id": "heathprowler",
       "name": "Heathprowler",
-      "desc": "Saat melancarkan Ultimate, DMG yang diakibatkan Moze meningkat <nobr>#1[f1]%</nobr>, berlangsung selama <nobr>2</nobr> giliran."
+      "desc": "Saat melancarkan Ultimate, DMG yang diakibatkan Moze meningkat <nobr>#1[f1]%</nobr>, berlangsung selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122305,
       "id": "truthbender",
       "name": "Truthbender",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122306,
       "id": "faithbinder",
       "name": "Faithbinder",
-      "desc": "DMG Multiplier <u>Serangan Lanjutan</u> dari Talent meningkat <nobr>25%</nobr>."
+      "desc": "DMG Multiplier <u>Serangan Lanjutan</u> dari Talent meningkat <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

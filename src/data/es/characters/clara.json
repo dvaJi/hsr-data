@@ -2,6 +2,7 @@
   "_id": 1107,
   "id": "clara",
   "name": "Clara",
+  "description": "Niña vagabunda que vive con robots.\nEs introvertida y gentil y tiene un corazón puro.\nDesea que todos los habitantes del Bajomundo sean una gran familia.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Físico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Inflige Daño Físico a todos los enemigos y además inflige Daño Físico extra a los que tengan Marca de represalia.",
       "type": "Habilidad básica",
       "tag": "ATQ AdE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,27 @@
       "simpleDesc": "Reduce el daño recibido, aumenta la probabilidad ser atacada y potencia el efecto de contraataque.",
       "type": "Habilidad definitiva",
       "tag": "Potenciación",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contraataque",
+          "desc": "Cuando un objetivo recibe un ataque, lanza automáticamente un ataque contra el atacante.\nEl contraataque también se considera un ataque adicional.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1128,27 @@
       "simpleDesc": "Reduce el daño que recibe de los ataques enemigos. Los enemigos que atacan quedan marcados con la Marca de represalia y reciben un contraataque de Svarog que inflige Daño Físico.",
       "type": "Talento",
       "tag": "ATQ individual",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 25
+      },
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contraataque",
+          "desc": "Cuando un objetivo recibe un ataque, lanza automáticamente un ataque contra el atacante.\nEl contraataque también se considera un ataque adicional.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1405,6 +1472,15 @@
       "desc": "Ataca inmediatamente al enemigo y entra en combate. La probabilidad de que Clara reciba un ataque enemigo aumenta durante #1[i] turnos.",
       "simpleDesc": "Ataca al enemigo y entra en combate. Aumenta la probabilidad de recibir ataques enemigos.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1498,96 @@
       "_id": 110701,
       "id": "a_tall_figure",
       "name": "Alta figura",
-      "desc": "Al usar la habilidad básica, las Marcas de represalia de los enemigos no se eliminarán."
+      "desc": "Al usar la habilidad básica, las Marcas de represalia de los enemigos no se eliminarán.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110702,
       "id": "a_tight_embrace",
       "name": "Abrazo de oso",
-      "desc": "Tras usar su habilidad definitiva, su ATQ aumenta en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Tras usar su habilidad definitiva, su ATQ aumenta en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110703,
       "id": "cold_steel_armor",
       "name": "Armadura de frío acero",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110704,
       "id": "familys_warmth",
       "name": "Calidez familiar",
-      "desc": "Tras ser atacada, Clara recibe un <nobr>30%</nobr> menos de daño. Este efecto dura hasta que comience su siguiente turno."
+      "desc": "Tras ser atacada, Clara recibe un <nobr>30%</nobr> menos de daño. Este efecto dura hasta que comience su siguiente turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110705,
       "id": "a_small_promise",
       "name": "Una pequeña promesa",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110706,
       "id": "long_company",
       "name": "Compañía duradera",
-      "desc": "Cuando otro aliado recibe un ataque, Svarog tiene una <u>probabilidad fija</u> del <nobr>50%</nobr> de activar un <u>contraataque</u> contra el atacante y marcarlo con Marca de represalia. Al usar la habilidad definitiva, la cantidad de contraataques potenciados aumenta en <nobr>1</nobr>."
+      "desc": "Cuando otro aliado recibe un ataque, Svarog tiene una <u>probabilidad fija</u> del <nobr>50%</nobr> de activar un <u>contraataque</u> contra el atacante y marcarlo con Marca de represalia. Al usar la habilidad definitiva, la cantidad de contraataques potenciados aumenta en <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Probabilidad fija",
+          "desc": "La probabilidad fija no se ve afectada por ningún factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000003,
+          "name": "Contraataque",
+          "desc": "Cuando un objetivo recibe un ataque, lanza automáticamente un ataque contra el atacante.\nEl contraataque también se considera un ataque adicional.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

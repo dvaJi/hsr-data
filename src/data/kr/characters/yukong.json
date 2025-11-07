@@ -2,6 +2,7 @@
   "_id": 1207,
   "id": "yukong",
   "name": "어공",
+  "description": "선주「나부」 천박사(天舶司)의 수장이다. 수많은 전장을 거쳐온 노련한 비행사이자 궁수다.\n지금은 쏟아져 내리는 공무 때문에 몸을 빼기 어려운 상태다.",
   "rarity": 4,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 허수 속성 피해를 준다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "[활시위 호령] 2스택을 획득한다. 자신이 [활시위 호령] 효과를 보유 중일 경우 모든 아군의 공격력이 증가한다",
       "type": "전투 스킬",
       "tag": "서포트",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,15 @@
       "simpleDesc": "자신이 [활시위 호령] 효과를 보유 중일 경우 모든 아군의 치명타 확률과 치명타 피해가 증가하고, 단일 적에게 대량의 허수 속성 피해를 가한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1074,18 @@
       "simpleDesc": "일반 공격으로 소량의 추가 피해를 가하고 이번 일반 공격의 강인성 감소 수치가 증가한다. 해당 효과는 1턴 후에 다시 발동할 수 있다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1404,15 @@
       "simpleDesc": "자신의 이동 속도가 증가하며 적과의 전투 진입 후 [활시위 호령]을 2스택 획득한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1431,79 @@
       "_id": 120701,
       "id": "aerial_marshal",
       "name": "침과대단(枕戈待旦)의 각오",
-      "desc": "전투 진입 시 모든 아군의 속도가 <nobr>10%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "전투 진입 시 모든 아군의 속도가 <nobr>10%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120702,
       "id": "skyward_command",
       "name": "창공을 휘모는 질주",
-      "desc": "임의의 단일 아군의 현재 에너지가 에너지 최대치일 시 어공은 추가로 에너지를 <nobr>5</nobr>pt 회복한다. 해당 효과는 단일 아군마다 1회만 발동되며, 어공이 필살기를 발동한 후 해당 효과의 발동 횟수는 초기화된다"
+      "desc": "임의의 단일 아군의 현재 에너지가 에너지 최대치일 시 어공은 추가로 에너지를 <nobr>5</nobr>pt 회복한다. 해당 효과는 단일 아군마다 1회만 발동되며, 어공이 필살기를 발동한 후 해당 효과의 발동 횟수는 초기화된다",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120703,
       "id": "torrential_fusillade",
       "name": "맹렬한 집중 사격",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120704,
       "id": "zephyrean_echoes",
       "name": "효시의 울림",
-      "desc": "[활시위 호령] 효과 보유 시 어공이 가하는 피해가 <nobr>30%</nobr> 증가한다"
+      "desc": "[활시위 호령] 효과 보유 시 어공이 가하는 피해가 <nobr>30%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120705,
       "id": "august_deadshot",
       "name": "관록의 명사수",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120706,
       "id": "bowstring_thunderclap",
       "name": "뇌성벽력의 활시위",
-      "desc": "어공이 필살기를 발동할 경우 먼저 즉시 [활시위 호령] <nobr>1</nobr>스택을 획득한다"
+      "desc": "어공이 필살기를 발동할 경우 먼저 즉시 [활시위 호령] <nobr>1</nobr>스택을 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

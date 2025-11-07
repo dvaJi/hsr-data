@@ -2,6 +2,7 @@
   "_id": 1109,
   "id": "hook",
   "name": "虎克",
+  "description": "地底冒險團隊「鼴鼠黨」的老大（自封）。\n熱愛自由，將生活視為一場又一場冒險。",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "對敵方單體造成火屬性傷害，高機率對目標施加灼燒狀態。",
       "type": "戰技",
       "tag": "單體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "對敵方單體造成大量火屬性傷害，並強化自身下一次的戰技。",
       "type": "終結技",
       "tag": "單體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,27 @@
       "simpleDesc": "攻擊處於灼燒狀態的敵方目標時，造成少量火屬性附加傷害並額外恢復能量。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1409,24 @@
       "desc": "立即攻擊敵人，進入戰鬥後對敵方隨機單體造成等同於虎克#4[i]%攻擊力的火屬性傷害，同時有#1[i]%的基礎機率使敵方每個單體目標陷入灼燒狀態，持續#3[i]回合。\n灼燒狀態下，敵方目標每回合開始時受到等同於虎克#2[i]%攻擊力的火屬性持續傷害。",
       "simpleDesc": "攻擊敵人，進入戰鬥後對敵方隨機單體造成少量火屬性傷害，並有高機率使敵方每個單體陷入灼燒狀態。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1446,88 @@
       "_id": 110901,
       "id": "early_to_bed_early_to_rise",
       "name": "早睡早起很健康",
-      "desc": "戰技強化後造成的傷害提高<nobr>20%</nobr>。"
+      "desc": "戰技強化後造成的傷害提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110902,
       "id": "happy_tummy_happy_body",
       "name": "吃好喝好長身體",
-      "desc": "戰技使敵方目標陷入的灼燒狀態持續時間增加<nobr>1</nobr>回合。"
+      "desc": "戰技使敵方目標陷入的灼燒狀態持續時間增加<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110903,
       "id": "dont_be_picky_nothings_icky",
       "name": "不挑不選全都要",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110904,
       "id": "its_okay_to_not_know",
       "name": "糊里糊塗沒關係",
-      "desc": "觸發天賦時，有<nobr>100%</nobr><u>基礎機率</u>使指定敵方目標的相鄰目標也陷入等同於戰技的灼燒狀態。"
+      "desc": "觸發天賦時，有<nobr>100%</nobr><u>基礎機率</u>使指定敵方目標的相鄰目標也陷入等同於戰技的灼燒狀態。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110905,
       "id": "let_the_moles_deeds_be_known",
       "name": "好事留名鼴鼠黨",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110906,
       "id": "always_ready_to_punch_and_kick",
       "name": "隨時準備打壞人",
-      "desc": "虎克對灼燒狀態下的敵方目標造成的傷害提高<nobr>20%</nobr>。"
+      "desc": "虎克對灼燒狀態下的敵方目標造成的傷害提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

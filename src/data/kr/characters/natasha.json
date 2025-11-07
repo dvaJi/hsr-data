@@ -2,6 +2,7 @@
   "_id": 1105,
   "id": "natasha",
   "name": "나타샤",
+  "description": "벨로보그 하층 구역의 의사이자 아이들의 보호자\n상냥하고 친근한 성격 이면에 위험한 모습도 숨겨져 있다",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 물리 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "단일 아군의 HP를 회복하고 목표가 지속적으로 HP를 회복하게 한다",
       "type": "전투 스킬",
       "tag": "회복",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +789,15 @@
       "simpleDesc": "모든 아군의 HP를 회복한다",
       "type": "필살기",
       "tag": "회복",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1101,15 @@
       "simpleDesc": "현재 HP 백분율이 낮은 아군에게 치유 제공 시 치유량이 증가한다. 해당 효과는 지속 치유 효과에도 적용된다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1412,24 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 임의의 단일 적에게 나타샤 공격력 #4[i]%만큼의 물리 속성 피해를 준다. 동시에 #1[i]%의 기본 확률로 각 단일 적을 허약 상태에 빠트린다.\n허약 상태의 적은 아군에게 가하는 피해가 #2[i]% 감소한다. 지속 시간: #3[i]턴",
       "simpleDesc": "적을 공격하며, 전투 진입 후 임의의 단일 적에게 소량의 물리 속성 피해를 가하고, 높은 확률로 각 단일 적을 허약 상태에 빠트린다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1449,79 @@
       "_id": 110501,
       "id": "pharmacology_expertise",
       "name": "약리학적 식견",
-      "desc": "피격 후 현재 HP 백분율이 <nobr>30%</nobr> 이하일 경우 자신에게 치유를 1회 발동하며 자신 HP 최대치 <nobr>15%</nobr>+<nobr>400</nobr>만큼의 HP를 회복한다. 해당 효과는 단일 전투마다 1회만 발동한다"
+      "desc": "피격 후 현재 HP 백분율이 <nobr>30%</nobr> 이하일 경우 자신에게 치유를 1회 발동하며 자신 HP 최대치 <nobr>15%</nobr>+<nobr>400</nobr>만큼의 HP를 회복한다. 해당 효과는 단일 전투마다 1회만 발동한다",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110502,
       "id": "clinical_research",
       "name": "임상시험",
-      "desc": "필살기 발동 시 현재 HP 백분율이 <nobr>30%</nobr> 이하인 아군에게 <nobr>1</nobr>턴의 지속 치유 효과를 부여하며 목표의 턴이 시작될 때 대상에게 나타샤 HP 최대치 <nobr>6%</nobr>+<nobr>160</nobr>만큼의 HP를 회복한다"
+      "desc": "필살기 발동 시 현재 HP 백분율이 <nobr>30%</nobr> 이하인 아군에게 <nobr>1</nobr>턴의 지속 치유 효과를 부여하며 목표의 턴이 시작될 때 대상에게 나타샤 HP 최대치 <nobr>6%</nobr>+<nobr>160</nobr>만큼의 HP를 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110503,
       "id": "the_right_cure",
       "name": "올바른 처방",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110504,
       "id": "miracle_cure",
       "name": "뛰어난 의술",
-      "desc": "피격 후 추가로 에너지를 <nobr>5</nobr>pt 회복한다"
+      "desc": "피격 후 추가로 에너지를 <nobr>5</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110505,
       "id": "preventive_treatment",
       "name": "예방 치료",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110506,
       "id": "doctors_grace",
       "name": "의사의 인자함",
-      "desc": "일반 공격 발동 시 추가로 나타샤 HP 최대치 <nobr>40%</nobr>만큼의 물리 속성 피해를 준다"
+      "desc": "일반 공격 발동 시 추가로 나타샤 HP 최대치 <nobr>40%</nobr>만큼의 물리 속성 피해를 준다",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

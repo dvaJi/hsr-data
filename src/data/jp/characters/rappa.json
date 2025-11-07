@@ -2,6 +2,7 @@
   "_id": 1317,
   "id": "rappa",
   "name": "{RUBY_B#らんは}乱破{RUBY_E#}",
+  "description": "ウシミツ・アワーの閃光弾のようにピノコニーに現れ、この世のすべてを「忍法」に結びつける、自称忍者の不思議な少女。\n乱破の「忍道」には、シノビ・マントラ（＝ラップ）を吟じ、繚乱・忍符（＝落書き）を描き、シノビ・マキモノ（＝マンガ）を修めることが含まれている。彼女は自らの意志を磨き上げながら銀河を駆け巡る義侠なのだ。\n「巡海レンジャー」の一員として、「御猿・忍邪」という名の悪党を銀河の果てまで追い続けている。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "指定した敵単体に少量の虚数属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "敵全体に虚数属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "全体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "「結印」状態に入り、追加ターンと「彩墨」を3層獲得し、弱点撃破効率および撃破特効がアップする。\n「結印」状態では、通常攻撃が強化される。強化通常攻撃を行うと「彩墨」が1層消費され、層数が0になると「結印」状態が終了する。",
       "type": "必殺技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "追加ターン",
+          "desc": "ターン数を消費しない追加ターンを1回獲得する。このターンでは、必殺技を発動できない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,15 @@
       "simpleDesc": "敵が弱点撃破される時、乱破はチャージを1獲得する。\n「忍具・降魔の花弁」の3段目の攻撃を行う時、すべてのチャージを消費し、敵全体に虚数属性弱点撃破ダメージを与え、弱点属性を無視して靭性を削る。消費したチャージに応じて、この3段目の攻撃の弱点撃破ダメージの倍率と削靭値がアップする。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        6,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1452,15 @@
       "simpleDesc": "「スプラッシュ」状態に入り、素早く前方に一定距離移動し、触れた敵を攻撃する。敵を先制攻撃して戦闘に入った後、弱点属性を無視して敵それぞれの靭性を削る。さらに、すべての敵および隣接する敵に虚数属性弱点撃破ダメージを与え、自身のEPを回復する。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1426,37 +1481,79 @@
       "_id": 131701,
       "id": "returned_is_the_revenant_with_no_ferry_toll",
       "name": "{RUBY_B#トコヨ}常世{RUBY_E#}ノ{RUBY_B#ミチ}道{RUBY_E#}、\n{RUBY_B#サンズ}三途{RUBY_E#}ニ{RUBY_B#ロクモンセンナ}六文銭無{RUBY_E#}シ",
-      "desc": "必殺技を発動し「結印」状態となっている間、乱破が与えるダメージは敵の防御力を<nobr>15%</nobr>無視する。また、「結印」状態が終了した後、EPを<nobr>20</nobr>回復する。"
+      "desc": "必殺技を発動し「結印」状態となっている間、乱破が与えるダメージは敵の防御力を<nobr>15%</nobr>無視する。また、「結印」状態が終了した後、EPを<nobr>20</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131702,
       "id": "free_is_the_mind_enlightened_by_haikus",
       "name": "{RUBY_B#ハイク}俳句{RUBY_E#}ノ{RUBY_B#アンキ}暗記{RUBY_E#}、\n{RUBY_B#ユウシキ}有識{RUBY_E#}ニ{RUBY_B#ケイゲナ}罣礙無{RUBY_E#}シ",
-      "desc": "指定した敵単体に対する、強化通常攻撃の1、2段目の削靭値+<nobr>50%</nobr>。"
+      "desc": "指定した敵単体に対する、強化通常攻撃の1、2段目の削靭値+<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131703,
       "id": "many_are_the_shrines_that_repel_no_hell",
       "name": "{RUBY_B#ガラン}伽藍{RUBY_E#}ノ{RUBY_B#ドウ}堂{RUBY_E#}、\n{RUBY_B#ムゲンゴク}無間獄{RUBY_E#}ニ{RUBY_B#ショウホウナ}正法無{RUBY_E#}シ",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131704,
       "id": "lost_is_the_nind_devoured_by_time",
       "name": "{RUBY_B#ケイネンレッカ}経年劣化{RUBY_E#}、\n{RUBY_B#ニンキョウ}任侠{RUBY_E#}ニ{RUBY_B#ニンギナ}忍義無{RUBY_E#}シ",
-      "desc": "「結印」状態の間、味方全体の速度+<nobr>12%</nobr>。"
+      "desc": "「結印」状態の間、味方全体の速度+<nobr>12%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131705,
       "id": "steady_is_the_ranger_with_unerring_arrows",
       "name": "{RUBY_B#イッシンフラン}一心不乱{RUBY_E#}、\n{RUBY_B#メイゲン}鳴弦{RUBY_E#}ニ{RUBY_B#アダヤナ}徒矢無{RUBY_E#}シ",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131706,
       "id": "righteous_is_the_wrath_that_spares_no_evil",
       "name": "{RUBY_B#ハジャケンショウ}破邪顕正{RUBY_E#}、\n{RUBY_B#アクト}悪徒{RUBY_E#}ニ{RUBY_B#ジヒナ}慈悲無{RUBY_E#}シ",
-      "desc": "天賦の効果で獲得できるチャージを戦闘開始時に<nobr>5</nobr>獲得し、さらに上限を+<nobr>5</nobr>する。また、「忍具・降魔の花弁」の3段目の攻撃を行った後、チャージ+<nobr>5</nobr>。"
+      "desc": "天賦の効果で獲得できるチャージを戦闘開始時に<nobr>5</nobr>獲得し、さらに上限を+<nobr>5</nobr>する。また、「忍具・降魔の花弁」の3段目の攻撃を行った後、チャージ+<nobr>5</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

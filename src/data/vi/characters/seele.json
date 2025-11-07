@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "Seele",
+  "description": "Trụ cột của tổ chức kháng chiến dưới lòng đất \"Lửa Ngầm\", biệt hiệu là \"Bươm Bướm\".\nTính tình thẳng thắn bộc trực, nhưng sâu trong tim lại là một người vô cùng tinh tế nhạy cảm.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lượng Tử cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Gây sát thương Lượng Tử cho 1 kẻ địch, và giúp bản thân tăng tốc độ.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,18 @@
       "simpleDesc": "Vào trạng thái Buff, gây lượng lớn Sát Thương Lượng Tử cho 1 kẻ địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "Khi thi triển Tấn Công Thường, Chiến Kỹ, Tuyệt Kỹ để tiêu diệt kẻ địch, sẽ nhận thêm hiệp và vào trạng thái Buff, ở trạng thái Buff, sẽ tăng Sát Thương do bản thân gây ra.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Hiệp Tăng Thêm",
+          "desc": "Nhận 1 hiệp thêm không tiêu hao số hiệp. Trong hiệp này, không thể chen ngang thi triển Tuyệt Kỹ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "Vào trạng thái Tàng Hình. Sau khi tấn công kẻ địch và vào chiến đấu, sẽ nhận Buff ngay.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Trảm Tận",
-      "desc": "Khi gây sát thương cho kẻ địch có phần trăm HP hiện tại nhỏ hơn hoặc bằng <nobr>80%</nobr>, Tỷ Lệ Bạo Kích tăng <nobr>15%</nobr>."
+      "desc": "Khi gây sát thương cho kẻ địch có phần trăm HP hiện tại nhỏ hơn hoặc bằng <nobr>80%</nobr>, Tỷ Lệ Bạo Kích tăng <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "Điệp Vũ",
-      "desc": "Hiệu ứng Tăng Tốc của Chiến Kỹ có thể cộng dồn, tối đa cộng dồn <nobr>2</nobr> tầng."
+      "desc": "Hiệu ứng Tăng Tốc của Chiến Kỹ có thể cộng dồn, tối đa cộng dồn <nobr>2</nobr> tầng.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "Hỗn Loạn",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Dư Ảnh",
-      "desc": "Khi Seele tiêu diệt mục tiêu phe địch, bản thân hồi <nobr>15</nobr> điểm Năng Lượng."
+      "desc": "Khi Seele tiêu diệt mục tiêu phe địch, bản thân hồi <nobr>15</nobr> điểm Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "Sắc Bén",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Phân Ly",
-      "desc": "Sau khi thi triển Tuyệt Kỹ sẽ khiến 1 kẻ địch bị tấn công rơi vào trạng thái Loạn Điệp, duy trì <nobr>1</nobr> hiệp. Sau khi mục tiêu phe địch ở trạng thái Loạn Điệp bị tấn công, sẽ chịu thêm 1 lần <u>Sát Thương Kèm Theo</u> thuộc tính Lượng Tử bằng <nobr>15%</nobr> Sát Thương Tuyệt Kỹ của Seele. Nếu mục tiêu này bị tiêu diệt bởi <u>Sát Thương Kèm Theo</u> của trạng thái Loạn Điệp do mục tiêu khác của phe ta kích hoạt, sẽ không kích hoạt Thiên Phú của Seele.\nKhi Seele rơi vào <u>trạng thái không thể chiến đấu</u>, thì trạng thái Loạn Điệp của mục tiêu phe địch sẽ bị giải trừ."
+      "desc": "Sau khi thi triển Tuyệt Kỹ sẽ khiến 1 kẻ địch bị tấn công rơi vào trạng thái Loạn Điệp, duy trì <nobr>1</nobr> hiệp. Sau khi mục tiêu phe địch ở trạng thái Loạn Điệp bị tấn công, sẽ chịu thêm 1 lần <u>Sát Thương Kèm Theo</u> thuộc tính Lượng Tử bằng <nobr>15%</nobr> Sát Thương Tuyệt Kỹ của Seele. Nếu mục tiêu này bị tiêu diệt bởi <u>Sát Thương Kèm Theo</u> của trạng thái Loạn Điệp do mục tiêu khác của phe ta kích hoạt, sẽ không kích hoạt Thiên Phú của Seele.\nKhi Seele rơi vào <u>trạng thái không thể chiến đấu</u>, thì trạng thái Loạn Điệp của mục tiêu phe địch sẽ bị giải trừ.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

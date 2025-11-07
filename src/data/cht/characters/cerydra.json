@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "刻律德菈",
+  "description": "北境帝國，失落的王朝，寒冷的疆土燃燒著征伐的野心。\n君主刻律德菈，執握「律法」火種的黃金裔，佈局設子，與神相弈，審判異心的罪囚，為此世奠定逐火的基業\n——「這絕非終點，翁法羅斯的征途，當是銀河群星！」",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量風屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "使我方角色獲得【軍功】並使刻律德菈獲得充能。當充能達到#4[i]點時，自動使角色的【軍功】升級為【爵位】。持有【爵位】的角色造成的戰技傷害的暴擊傷害、全屬性抗性穿透提高並可以觸發奇襲。",
       "type": "戰技",
       "tag": "輔助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "控制類負面狀態",
+          "desc": "凍結，糾纏，禁錮，支配，怒噪，強烈震盪，異夢，纏禁，恐懼，行動鎖定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "奇襲",
+          "desc": "複製一次即將發動的技能並提前發動，隨後發動原技能。\n奇襲不會再次觸發奇襲。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "獲得充能。對敵方全體造成風屬性傷害。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "持有【軍功】的角色攻擊力提高，且發動普通攻擊或戰技時使刻律德菈獲得充能。持有【軍功】的角色發動攻擊後，刻律德菈額外造成少量風屬性附加傷害。",
       "type": "天賦",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "奇襲",
+          "desc": "複製一次即將發動的技能並提前發動，隨後發動原技能。\n奇襲不會再次觸發奇襲。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "使當下行動角色獲得【軍功】，下一次戰鬥開始時自動對持有【軍功】的角色施放戰技。",
       "type": "秘技",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "奪走一切王冠",
-      "desc": "持有【軍功】的角色造成傷害時無視目標<nobr>16%</nobr>的防禦力。若當下【軍功】已升級為【爵位】，則該角色造成戰技傷害時額外無視目標<nobr>20%</nobr>的防禦力。刻律德菈施放戰技時，為指定我方目標恢復<nobr>2</nobr>點能量。"
+      "desc": "持有【軍功】的角色造成傷害時無視目標<nobr>16%</nobr>的防禦力。若當下【軍功】已升級為【爵位】，則該角色造成戰技傷害時額外無視目標<nobr>20%</nobr>的防禦力。刻律德菈施放戰技時，為指定我方目標恢復<nobr>2</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "凝聚萬眾宏願",
-      "desc": "持有【軍功】的角色造成的傷害提高<nobr>40%</nobr>。場上存在持有【軍功】的隊友時，刻律德菈造成的傷害提高<nobr>160%</nobr>。"
+      "desc": "持有【軍功】的角色造成的傷害提高<nobr>40%</nobr>。場上存在持有【軍功】的隊友時，刻律德菈造成的傷害提高<nobr>160%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "燃盡舊日律法",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "重塑天地人間",
-      "desc": "終結技的傷害倍率提高<nobr>240%</nobr>。"
+      "desc": "終結技的傷害倍率提高<nobr>240%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "幫助與加害，全數奉還",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "征途只在，星辰大海",
-      "desc": "持有【軍功】的角色全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>，且【軍功】觸發的<u>附加傷害</u>倍率提高<nobr>300%</nobr>。場上存在持有【軍功】的隊友時，刻律德菈全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。"
+      "desc": "持有【軍功】的角色全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>，且【軍功】觸發的<u>附加傷害</u>倍率提高<nobr>300%</nobr>。場上存在持有【軍功】的隊友時，刻律德菈全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

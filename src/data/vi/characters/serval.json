@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "Serval",
+  "description": "Thợ cơ khí Belobog, đã từng là chuyên viên nghiên cứu ở bộ phận kỹ thuật Đấng Kiến Tạo.\nLà chị của Gepard Landau nhưng tính cách lại khác hoàn toàn với em mình.\nYêu thích nghệ thuật âm nhạc cổ xưa có tên là rock 'n' roll từ trước khi băng giá vĩnh cửu ập đến.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lôi cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,24 @@
       "simpleDesc": "Gây Sát Thương Lôi lên 1 kẻ địch, gây lượng nhỏ Sát Thương Lôi lên mục tiêu lân cận. Có xác suất lớn thi triển trạng thái Sốc Điện lên mục tiêu.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "Gây Sát Thương Lôi cho tất cả địch, và kéo dài thời gian duy trì trạng thái Sốc Điện của mục tiêu.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "Sau khi tấn công, gây lượng nhỏ sát thương kèm theo lên tất cả kẻ địch có trạng thái Sốc Điện.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào chiến đấu, sẽ gây Sát Thương Lôi cho 1 kẻ địch ngẫu nhiên bằng #4[i]% Tấn Công của Serval, đồng thời có #1[i]% xác suất cơ bản khiến mỗi kẻ địch bị Sốc Điện, duy trì #3[i] hiệp.\nTrong trạng thái Sốc Điện, kẻ địch mỗi khi bắt đầu hiệp sẽ chịu Sát Thương Lôi duy trì tương đương #2[i]% Tấn Công của Serval.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào trận sẽ gây lượng nhỏ Sát Thương Lôi lên 1 kẻ địch ngẫu nhiên, đồng thời có xác suất lớn khiến mỗi kẻ địch rơi vào trạng thái Sốc Điện.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "Dư Âm Vang Vọng",
-      "desc": "Tấn công thường gây Sát Thương Lôi cho 1 mục tiêu liền kề ngẫu nhiên với kẻ địch chỉ định bằng <nobr>60%</nobr> sát thương Tấn Công Thường."
+      "desc": "Tấn công thường gây Sát Thương Lôi cho 1 mục tiêu liền kề ngẫu nhiên với kẻ địch chỉ định bằng <nobr>60%</nobr> sát thương Tấn Công Thường.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "Hát Lại!",
-      "desc": "Mỗi khi kích hoạt 1 lần <u>Sát Thương Kèm Theo</u> của Thiên Phú, Serval sẽ hồi <nobr>4</nobr> Năng Lượng."
+      "desc": "Mỗi khi kích hoạt 1 lần <u>Sát Thương Kèm Theo</u> của Thiên Phú, Serval sẽ hồi <nobr>4</nobr> Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "Nhịp Tim Của Bánh Răng",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "Tạo Tạp Âm Nào!",
-      "desc": "Khi thi triển Tuyệt Kỹ, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu phe địch không ở trạng thái Sốc Điện rơi vào trạng thái Sốc Điện giống với Chiến Kỹ."
+      "desc": "Khi thi triển Tuyệt Kỹ, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu phe địch không ở trạng thái Sốc Điện rơi vào trạng thái Sốc Điện giống với Chiến Kỹ.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "Âm Thanh Lớn Nhất Belobog!",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "Bản Nhạc Này, Xuyên Qua Bầu Trời!",
-      "desc": "Sát thương Serval gây cho mục tiêu địch ở trạng thái Sốc Điện tăng <nobr>30%</nobr>."
+      "desc": "Sát thương Serval gây cho mục tiêu địch ở trạng thái Sốc Điện tăng <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

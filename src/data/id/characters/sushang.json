@@ -2,6 +2,7 @@
   "_id": 1206,
   "id": "sushang",
   "name": "Sushang",
+  "description": "Lahir di Xianzhou \"Yaoqing\" dan dikirim ke Cloud Knight \"Luofu\" untuk menerima pelatihan militer.\nDia mengenakan pedang keluarga yang diberikan ibu dan menantikan masa depan yang sudah ditulisnya.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Physical DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Mengakibatkan Physical DMG pada 1 musuh dan memiliki peluang kecil untuk melancarkan \"Sword Stance\". Jika target dalam status Weakness Break, maka dijamin akan melancarkan \"Sword Stance\".",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000006,
+          "name": "Status Weakness Break",
+          "desc": "Saat Toughness target musuh berkurang menjadi 0, akan memasuki status Weakness Break, yang dapat menunda aksi musuh.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +779,18 @@
       "simpleDesc": "Mengakibatkan Physical DMG dalam jumlah besar pada 1 musuh, meningkatkan efek \"Sword Stance\", dan segera beraksi.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1124,15 @@
       "simpleDesc": "Saat ada musuh yang berstatus Weakness Break, SPD dirinya akan meningkat.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1435,15 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, mengakibatkan Physical DMG sebesar #1[i]% ATK Sushang pada seluruh musuh.",
       "simpleDesc": "Menyerang musuh dan mengakibatkan Physical DMG dalam jumlah kecil pada seluruh musuh setelah memasuki pertempuran.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,37 +1460,88 @@
       "_id": 120601,
       "id": "cut_with_ease",
       "name": "Cut With Ease",
-      "desc": "Memulihkan 1 Poin Skill setelah melancarkan Skill pada musuh dengan <u>status Weakness Break</u>."
+      "desc": "Memulihkan 1 Poin Skill setelah melancarkan Skill pada musuh dengan <u>status Weakness Break</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Status Weakness Break",
+          "desc": "Saat Toughness target musuh berkurang menjadi 0, akan memasuki status Weakness Break, yang dapat menunda aksi musuh.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120602,
       "id": "refine_in_toil",
       "name": "Refine in Toil",
-      "desc": "Setelah memicu \"Sword Stance\", DMG yang diterima Sushang berkurang <nobr>20%</nobr> selama 1 giliran."
+      "desc": "Setelah memicu \"Sword Stance\", DMG yang diterima Sushang berkurang <nobr>20%</nobr> selama 1 giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120603,
       "id": "rise_from_fame",
       "name": "Rise From Fame",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120604,
       "id": "cleave_with_heart",
       "name": "Cleave With Heart",
-      "desc": "Meningkatkan <nobr>40%</nobr> Break Effect milik Sushang."
+      "desc": "Meningkatkan <nobr>40%</nobr> Break Effect milik Sushang.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120605,
       "id": "prevail_via_taixu",
       "name": "Prevail via Taixu",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120606,
       "id": "dwell_like_water",
       "name": "Dwell Like Water",
-      "desc": "Efek peningkatan SPD dari Talent dapat ditumpuk hingga 2 lapis. Selain itu, Sushang akan segera mendapatkan 1 lapis efek peningkatan SPD dari Talent saat memasuki pertempuran."
+      "desc": "Efek peningkatan SPD dari Talent dapat ditumpuk hingga 2 lapis. Selain itu, Sushang akan segera mendapatkan 1 lapis efek peningkatan SPD dari Talent saat memasuki pertempuran.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

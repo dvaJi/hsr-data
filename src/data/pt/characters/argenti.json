@@ -2,6 +2,7 @@
   "_id": 1302,
   "id": "argenti",
   "name": "Argenti",
+  "description": "Um protótipo de cavaleiro dos Cavaleiros da Beleza que busca piamente por seu Aeon perdido, Idrila, a Beleza.\nDireto e franco, ele vaga pelo cosmos defendendo as virtudes do bom nome de Idrila.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Causa Dano Físico leve a todos os inimigos.",
       "type": "Perícia",
       "tag": "Área",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +738,18 @@
       "simpleDesc": "Consome #2[i] de Energia e causa Dano Físico a todos os inimigos.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1022,6 +1059,15 @@
       "simpleDesc": "Quando Argenti usa seu ATQ Básico, Perícia ou Perícia Suprema, ele regenera Energia e aumenta sua Chance de CRIT para cada inimigo-alvo atingido.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1392,15 @@
       "simpleDesc": "Inflige Confusão em todos os inimigos em uma área definida. Ao atacar um inimigo com Confusão para entrar em combate, causa Dano Físico leve a todos os inimigos e regenera energia de Argenti.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1364,37 +1419,79 @@
       "_id": 130201,
       "id": "a_lacuna_in_kingdom_of_aesthetics",
       "name": "Uma Lacuna no Reino da Estética",
-      "desc": "Cada acúmulo de Apoteose aumenta o Dano CRIT adicionalmente em <nobr>4%</nobr>."
+      "desc": "Cada acúmulo de Apoteose aumenta o Dano CRIT adicionalmente em <nobr>4%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130202,
       "id": "agates_humility",
       "name": "Humildade de Ágata",
-      "desc": "Se o número de inimigos no campo é igual a <nobr>3</nobr> ou mais quando utilizar a Perícia Suprema, o ATQ aumenta em <nobr>40%</nobr> por <nobr>1</nobr> rodada(s)."
+      "desc": "Se o número de inimigos no campo é igual a <nobr>3</nobr> ou mais quando utilizar a Perícia Suprema, o ATQ aumenta em <nobr>40%</nobr> por <nobr>1</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130203,
       "id": "thorny_roads_glory",
       "name": "Glória do Caminho de Espinhos",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130204,
       "id": "trumpets_dedication",
       "name": "Devoção do Clarim",
-      "desc": "No início da batalha, ganha <nobr>2</nobr> acúmulo(s) de Apoteose e aumenta o limite máximo de acúmulos do efeito do Talento em <nobr>2</nobr>."
+      "desc": "No início da batalha, ganha <nobr>2</nobr> acúmulo(s) de Apoteose e aumenta o limite máximo de acúmulos do efeito do Talento em <nobr>2</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130205,
       "id": "snow_from_somewhere_in_cosmos",
       "name": "Neve, de Algum Lugar no Cosmos",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130206,
       "id": "your_resplendence",
       "name": "\"Vossa\" Resplandecência",
-      "desc": "Ao usar a Perícia Suprema, ignora <nobr>30%</nobr> da DEF do inimigo-alvo."
+      "desc": "Ao usar a Perícia Suprema, ignora <nobr>30%</nobr> da DEF do inimigo-alvo.",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1205,
   "id": "blade",
   "name": "Blade",
+  "description": "Membro dos Caçadores de Stellaron e espadachim que abandonou seu corpo para se tornar uma lâmina.\nJura lealdade ao \"Servo do Destino\" e possui uma habilidade de autocura aterrorizante.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Vento leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Consome PV para aprimorar o ATQ Básico, e a rodada atual não termina ao usar essa Perícia.",
       "type": "Perícia",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +780,15 @@
       "simpleDesc": "Faz com que os PV atuais fiquem em 50% dos PV máximos, causa Dano de Vento massivo a um único inimigo e Dano de Vento aos alvos adjacentes.",
       "type": "Perícia Suprema",
       "tag": "Explosão",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1173,24 @@
       "simpleDesc": "Quando os PV de Blade diminuem, ele ganha 1 acúmulo de Carga. Ao atingir a Carga máxima, realiza um Ataque Extra, causando Dano de Vento a todas as unidades inimigas, restaurando PV e consumindo todas as Cargas.",
       "type": "Talento",
       "tag": "Área",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1480,6 +1529,15 @@
       "desc": "Imediatamente ataca o inimigo. Após entrar em combate, consome #2[i]% dos PV máximos de Blade enquanto causa Dano de Vento igual a #1[i]% dos seus PV máximos a todos os inimigos.\nSe os PV atuais de Blade forem insuficientes, seus PV serão reduzidos a 1 quando a Técnica é usada.",
       "simpleDesc": "Ataca o inimigo. Após entrar em combate, consome seus próprios PV para causar Dano de Vento a todos os inimigos.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1497,37 +1555,88 @@
       "_id": 120501,
       "id": "blade_cuts_the_deepest_in_hell",
       "name": "A Lâmina Corta Mais Fundo no Inferno",
-      "desc": "A Perícia Suprema de Blade causa Dano aumentado adicional a um único inimigo-alvo, com um aumento igual a <nobr>150%</nobr> do total de PV que Blade perdeu na batalha atual. O total de PV que Blade perdeu na batalha atual tem um limite de <nobr>90%</nobr> de seus PV máximos. Este valor será redefinido e reacumulado após usar sua Perícia Suprema."
+      "desc": "A Perícia Suprema de Blade causa Dano aumentado adicional a um único inimigo-alvo, com um aumento igual a <nobr>150%</nobr> do total de PV que Blade perdeu na batalha atual. O total de PV que Blade perdeu na batalha atual tem um limite de <nobr>90%</nobr> de seus PV máximos. Este valor será redefinido e reacumulado após usar sua Perícia Suprema.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120502,
       "id": "ten_thousand_sorrows_from_one_broken_dream",
       "name": "Dez Mil Mágoas de Um Sonho Destruído",
-      "desc": "Quando Blade está no estado de Paisagem Infernal, sua Chance de CRIT aumenta em <nobr>15%</nobr>."
+      "desc": "Quando Blade está no estado de Paisagem Infernal, sua Chance de CRIT aumenta em <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120503,
       "id": "hardened_blade_bleeds_coldest_shade",
       "name": "A Lâmina Temperada Sangra da Tonalidade Mais Gelada",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120504,
       "id": "rejected_by_death_infected_with_life",
       "name": "Rejeitado pela Morte, Infectado com Vida",
-      "desc": "Quando a porcentagem dos PV atuais de Blade chegam a <nobr>50%</nobr> ou menos de seus PV máximos, aumenta os PV máximos dele em <nobr>20%</nobr>. Acumula até <nobr>2</nobr> vez(es)."
+      "desc": "Quando a porcentagem dos PV atuais de Blade chegam a <nobr>50%</nobr> ou menos de seus PV máximos, aumenta os PV máximos dele em <nobr>20%</nobr>. Acumula até <nobr>2</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120505,
       "id": "death_by_ten_lords_gaze",
       "name": "Morte Pelo Olhar dos Dez Senhores",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120506,
       "id": "reborn_into_an_empty_husk",
       "name": "Renascido em uma Casca Vazia",
-      "desc": "O número máximo de acúmulos de Carga é reduzido para 4. O Dano de um <u>Ataque Extra</u> ativado pelo Talento é aumentado adicionalmente em <nobr>50%</nobr> dos PV máximos de Blade."
+      "desc": "O número máximo de acúmulos de Carga é reduzido para 4. O Dano de um <u>Ataque Extra</u> ativado pelo Talento é aumentado adicionalmente em <nobr>50%</nobr> dos PV máximos de Blade.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

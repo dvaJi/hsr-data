@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "Fu Xuan",
+  "description": "Head of the Divination Commission on the Luofu.\nThe person who uses the third eye and Matrix of Prescience to foretell the route of Xianzhou and the outcomes of events.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -243,10 +244,22 @@
       "_id": 120801,
       "id": "novaburst",
       "name": "Novaburst",
-      "desc": "Deals Quantum DMG equal to #1[i]% of Fu Xuan's Max HP to a single enemy.",
-      "simpleDesc": "Deals minor Quantum DMG to a single enemy.",
+      "desc": "Deals Quantum DMG equal to #1[i]% of Fu Xuan's Max HP to one designated enemy.",
+      "simpleDesc": "Deals minor Quantum DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Activates Matrix of Prescience. DMG received by Fu Xuan's teammates is Distributed to her. Also increases CRIT Rate and Max HP of all allies.",
       "type": "Skill",
       "tag": "Defense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "Distribute",
+          "desc": "Before DMG is calculated, distribute a part of the attacking unit's DMG to another target (or multiple other targets), with the target hit by the attack taking the rest of the DMG. DMG distributed to other targets cannot be distributed again.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "Deals Quantum DMG to all enemies and increases Fu Xuan's Talent trigger count.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "While Fu Xuan is still active in battle, the DMG taken by all team members is reduced.\nWhen her HP is low, automatically restores her own HP based on the HP percentage already lost. This effect can have up to 2 trigger counts at any given time.",
       "type": "Talent",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "Activates a Barrier. Allies will not enter battle when attacked by enemies. Entering battle will automatically activate Matrix of Prescience.",
       "type": "Technique",
       "tag": "Defense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "Dominus Pacis",
-      "desc": "The Knowledge effect increases CRIT DMG by <nobr>30%</nobr>."
+      "desc": "The Knowledge effect increases CRIT DMG by <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "Optimus Felix",
-      "desc": "If any ally target is struck by a killing blow while \"Matrix of Prescience\" is active, then all ally targets who were struck by a killing blow during this action will not be <u>knocked down</u>, and <nobr>70%</nobr> of their Max HP is immediately restored. This effect can trigger 1 time per battle."
+      "desc": "If any ally target is struck by a killing blow while \"Matrix of Prescience\" is active, then all ally targets who were struck by a killing blow during this action will not be <u>knocked down</u>, and <nobr>70%</nobr> of their Max HP is immediately restored. This effect can trigger 1 time per battle.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "Apex Nexus",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "Fortuna Stellaris",
-      "desc": "When other allies under Matrix of Prescience are attacked, Fu Xuan regenerates <nobr>5</nobr> Energy."
+      "desc": "When other allies under Matrix of Prescience are attacked, Fu Xuan regenerates <nobr>5</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "Arbiter Primus",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "Omnia Vita",
-      "desc": "Once Matrix of Prescience is activated, it will keep a tally of the total HP lost by all team members in the current battle. The DMG dealt by Fu Xuan's Ultimate will increase by <nobr>200%</nobr> of this tally of HP loss.\nThis tally is also capped at <nobr>120%</nobr> of Fu Xuan's Max HP and the tally value will reset and re-accumulate after Fu Xuan's Ultimate is used."
+      "desc": "Once Matrix of Prescience is activated, it will keep a tally of the total HP lost by all team members in the current battle. The DMG dealt by Fu Xuan's Ultimate will increase by <nobr>200%</nobr> of this tally of HP loss.\nThis tally is also capped at <nobr>120%</nobr> of Fu Xuan's Max HP and the tally value will reset and re-accumulate after Fu Xuan's Ultimate is used.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

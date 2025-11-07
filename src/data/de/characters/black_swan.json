@@ -2,6 +2,7 @@
   "_id": 1307,
   "id": "black_swan",
   "name": "Schwarzer Schwan",
+  "description": "Eine Wahrerin der Erinnerungen vom Garten des Gedächtnisses. Eine geheimnisvolle und elegante Wahrsagerin.\nSie hört den Erinnerungen anderer geduldig zu, so erlangt sie die Macht über die Stränge des Schicksals.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,32 @@
       "simpleDesc": "Fügt einem Gegner geringen Wind-SCH zu und hat die Chance, das Ziel mit Arkana zu belegen. Nachdem das Ziel in den Status Windscherung, Bluten, Brennen oder Schock eingetreten ist, besteht jeweils die Chance, es zusätzlich mit Arkana zu belegen.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arkana",
+          "desc": "„Arkana“ ist ein DoT-Debuff, der nicht entfernt werden kann.\nEinheiten im Status Arkana gelten als mit Windscherung belegt. Ziele im Status Arkana erleiden zu Beginn jeder Runde Wind-DoT.\nArkana ignoriert den WDS gegen Windscherung, Bluten, Brennen und Schock des Ziels.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -439,6 +466,32 @@
       "simpleDesc": "Fügt einem Gegner und angrenzenden Einheiten geringen Wind-SCH zu. Es besteht eine hohe Chance, dass die Ziele mit Arkana belegt werden und ihre VTD reduziert wird.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arkana",
+          "desc": "„Arkana“ ist ein DoT-Debuff, der nicht entfernt werden kann.\nEinheiten im Status Arkana gelten als mit Windscherung belegt. Ziele im Status Arkana erleiden zu Beginn jeder Runde Wind-DoT.\nArkana ignoriert den WDS gegen Windscherung, Bluten, Brennen und Schock des Ziels.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -793,6 +846,24 @@
       "simpleDesc": "Belegt alle Gegner mit dem Status „Enthüllung“, wodurch der erlittene SCH während ihrer Runde erhöht wird. Zudem wird Arkana als gleichwertig mit den Status Windscherung, Bluten, Brennen und Schock betrachtet. Wenn Arkana zu Beginn der nächsten Runde SCH verursacht, wird außerdem die Stapelzahl nicht zurückgesetzt. Fügt allen Gegnern Wind-SCH zu.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10013071,
+          "name": "Arkana",
+          "desc": "„Arkana“ ist ein DoT-Debuff, der nicht entfernt werden kann.\nEinheiten im Status Arkana gelten als mit Windscherung belegt. Ziele im Status Arkana erleiden zu Beginn jeder Runde Wind-DoT.\nArkana ignoriert den WDS gegen Windscherung, Bluten, Brennen und Schock des Ziels.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1128,10 +1199,36 @@
       "_id": 130704,
       "id": "loom_of_fates_caprice",
       "name": "Die Launen des sinnlosen Schicksals",
-      "desc": "Jedes Mal, wenn ein Gegner zu Beginn der Runde DoT erleidet, besteht eine Grundchance von #2[i]%, dass er mit 1 Stapelung Arkana belegt wird.\nMit Arkana belegte Gegner erleiden Wind-DoT in Höhe von #1[i]% des ANG von Schwarzer Schwan. Jede Stapelung von Arkana erhöht den SCH-Multiplikator um #3[f1]%. Arkana wird danach auf 1 Stapelung zurückgesetzt. Arkana kann bis zu #8[i]-fach gestapelt werden.\nNur wenn Arkana zu Beginn einer gegnerischen Runde SCH verursacht, löst Schwarzer Schwan zusätzliche Effekte basierend auf der Stapelzahl von Arkana beim entsprechenden Ziel aus:\nBei #4[i] oder mehr Stapelungen wird bei angrenzenden Einheiten Wind-DoT in Höhe von #5[i]% des ANG von Schwarzer Schwan verursacht und es besteht eine Grundchance von #2[i]%, diese mit 1 Stapelung Arkana zu belegen.\nBei #6[i] oder mehr Stapelungen ignoriert der aktuell verursachte DoT #7[i]% der VTD des Ziels und der angrenzenden Einheiten.",
+      "desc": "Jedes Mal, wenn ein Gegner zu Beginn der Runde DoT erleidet, besteht eine Grundchance von #2[i]%, dass er mit 1 Stapelung Arkana belegt wird.\nMit Arkana belegte Gegner erleiden Wind-DoT in Höhe von #1[i]% des ANG von Schwarzer Schwan. Jede Stapelung Arkana erhöht den SCH-Multiplikator um #3[f1]%. Arkana wird danach auf 1 Stapelung zurückgesetzt. Arkana ist bis zu #8[i]-fach stapelbar.\nNur wenn Arkana zu Beginn einer gegnerischen Runde SCH verursacht, löst Schwarzer Schwan zusätzliche Effekte basierend auf der Stapelzahl von Arkana beim entsprechenden Ziel aus:\nBei #4[i] oder mehr Stapelungen wird bei angrenzenden Einheiten Wind-DoT in Höhe von #5[i]% des ANG von Schwarzer Schwan verursacht und es besteht eine Grundchance von #2[i]%, diese mit 1 Stapelung Arkana zu belegen.\nBei #6[i] oder mehr Stapelungen ignoriert der aktuell verursachte DoT #7[i]% der VTD des Ziels und der angrenzenden Einheiten.",
       "simpleDesc": "Wenn ein Gegner zu Beginn der Runde DoT erleidet, besteht eine Chance, dass er mit Arkana belegt wird, sodass er zu Beginn der Runde Wind-DoT erleidet. Basierend auf der Stapelzahl von Arkana löst Schwarzer Schwan zusätzliche Effekte aus.",
       "type": "Talent",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arkana",
+          "desc": "„Arkana“ ist ein DoT-Debuff, der nicht entfernt werden kann.\nEinheiten im Status Arkana gelten als mit Windscherung belegt. Ziele im Status Arkana erleiden zu Beginn jeder Runde Wind-DoT.\nArkana ignoriert den WDS gegen Windscherung, Bluten, Brennen und Schock des Ziels.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1531,6 +1628,32 @@
       "simpleDesc": "Nach dem Einsatz der Technik besteht zu Beginn des nächsten Kampfes eine hohe Chance, jeden Gegner mit Arkana zu belegen und dies zu wiederholen, bis die Anwendung fehlschlägt.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arkana",
+          "desc": "„Arkana“ ist ein DoT-Debuff, der nicht entfernt werden kann.\nEinheiten im Status Arkana gelten als mit Windscherung belegt. Ziele im Status Arkana erleiden zu Beginn jeder Runde Wind-DoT.\nArkana ignoriert den WDS gegen Windscherung, Bluten, Brennen und Schock des Ziels.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1548,37 +1671,121 @@
       "_id": 130701,
       "id": "seven_pillars_of_wisdom",
       "name": "Drei Steine, sieben Säulen",
-      "desc": "Wenn Schwarzer Schwan kampffähig ist, wird jeweils der WDS des Typs Wind, Physisch, Feuer und Blitz von Gegnern mit Windscherung, Bluten, Brennen und Schock um <nobr>25%</nobr> reduziert."
+      "desc": "Wenn Schwarzer Schwan kampffähig ist, wird jeweils der WDS des Typs Wind, Physisch, Feuer und Blitz von Gegnern mit Windscherung, Bluten, Brennen und Schock um <nobr>25%</nobr> reduziert.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130702,
       "id": "weep_not_for_me_my_lamb",
       "name": "Lämmchen, weine nicht um mich",
-      "desc": "Wird ein von <u>Arkana</u> betroffener Gegner besiegt, besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, angrenzende Einheiten mit <nobr>6</nobr> Stapelungen <u>Arkana</u> zu belegen."
+      "desc": "Wird ein von <u>Arkana</u> betroffener Gegner besiegt, besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, angrenzende Einheiten mit <nobr>6</nobr> Stapelungen <u>Arkana</u> zu belegen.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arkana",
+          "desc": "„Arkana“ ist ein DoT-Debuff, der nicht entfernt werden kann.\nEinheiten im Status Arkana gelten als mit Windscherung belegt. Ziele im Status Arkana erleiden zu Beginn jeder Runde Wind-DoT.\nArkana ignoriert den WDS gegen Windscherung, Bluten, Brennen und Schock des Ziels.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130703,
       "id": "as_above_so_below",
       "name": "Wie im Himmel, so auf Erden",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130704,
       "id": "in_tears_we_gift",
       "name": "Tränen, ein Geschenk",
-      "desc": "Der Effekt-WDS von Gegnern mit dem Status Enthüllung wird um <nobr>10%</nobr> reduziert. Schwarzer Schwan stellt zu Beginn jeder Runde des betroffenen Ziels oder wenn es besiegt wird <nobr>8</nobr> Pkt. Energie wieder her. Dieser Effekt der Energiewiederherstellung kann während der Dauer von Enthüllung nur 1-mal ausgelöst werden. Die Auslösungsanzahl wird aktualisiert, wenn der Gegner erneut mit Enthüllung belegt wird."
+      "desc": "Der Effekt-WDS von Gegnern mit dem Status Enthüllung wird um <nobr>10%</nobr> reduziert. Schwarzer Schwan stellt zu Beginn jeder Runde des betroffenen Ziels oder wenn es besiegt wird <nobr>8</nobr> Pkt. Energie wieder her. Dieser Effekt der Energiewiederherstellung kann während der Dauer von Enthüllung bis zu 1-mal ausgelöst werden. Die Auslösungsanzahl wird aktualisiert, wenn der Gegner erneut mit Enthüllung belegt wird.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130705,
       "id": "linnutee_flyway",
       "name": "Weg des Zugvogels",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130706,
       "id": "pantheon_merciful_masses_pitiful",
       "name": "Gnädiges Pantheon, unbekannte Diener",
-      "desc": "Wenn Teammitglieder von Schwarzer Schwan Gegner angreifen, hat Schwarzer Schwan eine <u>Grundchance</u> von <nobr>65%</nobr>, das Ziel mit 1 Stapelung <u>Arkana</u> zu belegen.\nJedes Mal, wenn Schwarzer Schwan einen Gegner mit <u>Arkana</u> belegt, besteht eine <u>feste Chance</u> von <nobr>50%</nobr>, die bei diesem Mal zugefügte Stapelzahl von <u>Arkana</u> zusätzlich um <nobr>1</nobr> zu erhöhen."
+      "desc": "Wenn Teammitglieder von Schwarzer Schwan Gegner angreifen, hat Schwarzer Schwan eine <u>Grundchance</u> von <nobr>65%</nobr>, das Ziel mit 1 Stapelung <u>Arkana</u> zu belegen.\nJedes Mal, wenn Schwarzer Schwan einen Gegner mit <u>Arkana</u> belegt, besteht eine <u>feste Chance</u> von <nobr>50%</nobr>, die bei diesem Mal zugefügte Stapelzahl von <u>Arkana</u> zusätzlich um <nobr>1</nobr> zu erhöhen.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arkana",
+          "desc": "„Arkana“ ist ein DoT-Debuff, der nicht entfernt werden kann.\nEinheiten im Status Arkana gelten als mit Windscherung belegt. Ziele im Status Arkana erleiden zu Beginn jeder Runde Wind-DoT.\nArkana ignoriert den WDS gegen Windscherung, Bluten, Brennen und Schock des Ziels.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000002,
+          "name": "Feste Chance",
+          "desc": "Die feste Chance wird von keinem Faktor beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

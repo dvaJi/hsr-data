@@ -2,6 +2,7 @@
   "_id": 1403,
   "id": "tribbie",
   "name": "トリビー",
+  "description": "使者は三相の神託の憐れみを受けた聖地を後にし、無数の破片となって、長い旅路についた。\nヤヌサポリスの聖女トリスビアス、「門と道」の火種を奪った黄金裔。人々に仕えるために奔走し、救世の便りを大地の隅々まで届ける者である\n——黄金の血を宿す人の子らを見つけ、この世界で最も暗い闇を打ち砕き、星が煌めく明日に向かって進むのだ。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体および隣接する敵に少量の量子属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "拡散攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "「神の啓示」を獲得し、効果継続中、味方全体の全属性耐性貫通をアップする。",
       "type": "戦闘スキル",
       "tag": "サポート",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -738,6 +766,24 @@
       "simpleDesc": "結界を展開し、敵全体に少量の量子属性ダメージを与える。結界が継続している間、敵の被ダメージがアップし、攻撃した敵の数に応じて、その中の残りHPが最も高い敵に少量の量子属性付加ダメージを与える。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1077,6 +1123,24 @@
       "simpleDesc": "自身以外の味方キャラが必殺技を発動した後、トリビーが追加攻撃を行い、敵全体に少量の量子属性ダメージを与える。この効果はトリビーを除いた味方1人につき1回のみ発動でき、トリビーが必殺技を発動するとこの回数がリセットされる。",
       "type": "天賦",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,6 +1435,15 @@
       "simpleDesc": "戦闘に入る時、「神の啓示」を獲得する。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1387,37 +1460,114 @@
       "_id": 140301,
       "id": "rite_of_sugar_scoop",
       "name": "{RUBY_B#さとう}砂糖{RUBY_E#}を{RUBY_B#ひろ}拾{RUBY_E#}い{RUBY_B#あ}上{RUBY_E#}げる{RUBY_B#さいてん}祭典{RUBY_E#}",
-      "desc": "結界が展開されている間、味方が敵を攻撃した後、結界により<u>付加ダメージ</u>を与えられた敵に、その回の攻撃の総ダメージ<nobr>24%</nobr>分の<u>確定ダメージ</u>を追加で与える。"
+      "desc": "結界が展開されている間、味方が敵を攻撃した後、結界により<u>付加ダメージ</u>を与えられた敵に、その回の攻撃の総ダメージ<nobr>24%</nobr>分の<u>確定ダメージ</u>を追加で与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "確定ダメージ",
+          "desc": "いかなる効果にも影響されない無属性ダメージ。このダメージは攻撃を1回行ったと見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140302,
       "id": "guide_of_dream_tour",
       "name": "{RUBY_B#すてき}素敵{RUBY_E#}な{RUBY_B#ゆめ}夢{RUBY_E#}への{RUBY_B#あんないにん}案内人{RUBY_E#}",
-      "desc": "結界による<u>付加ダメージ</u>が本来のダメージの<nobr>120%</nobr>分にアップする。結界による<u>付加ダメージ</u>を与える時、さらに<nobr>1</nobr>回付加ダメージを与える。"
+      "desc": "結界による<u>付加ダメージ</u>が本来のダメージの<nobr>120%</nobr>分にアップする。結界による<u>付加ダメージ</u>を与える時、さらに<nobr>1</nobr>回付加ダメージを与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140303,
       "id": "trove_of_morning_glow",
       "name": "{RUBY_B#あさや}朝焼{RUBY_E#}けの{RUBY_B#たからもの}宝物{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140304,
       "id": "peace_of_empathy_bond",
       "name": "{RUBY_B#こころかよ}心通{RUBY_E#}い{RUBY_B#あ}合{RUBY_E#}う{RUBY_B#やす}安{RUBY_E#}らぎ",
-      "desc": "「神の啓示」が継続している間、味方全体がダメージを与える時、敵の防御力を<nobr>18%</nobr>無視する。"
+      "desc": "「神の啓示」が継続している間、味方全体がダメージを与える時、敵の防御力を<nobr>18%</nobr>無視する。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140305,
       "id": "clock_of_wonder_origin",
       "name": "{RUBY_B#きせき}奇跡{RUBY_E#}を{RUBY_B#お}起{RUBY_E#}こす{RUBY_B#とけい}時計{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140306,
       "id": "morrow_of_star_shine",
       "name": "{RUBY_B#ほし}星{RUBY_E#}が{RUBY_B#きら}煌{RUBY_E#}めく{RUBY_B#あした}明日{RUBY_E#}",
-      "desc": "トリビーが必殺技を発動した後、敵全体に天賦による<u>追加攻撃</u>を行う。天賦による<u>追加攻撃</u>ダメージ+<nobr>729%</nobr>。"
+      "desc": "トリビーが必殺技を発動した後、敵全体に天賦による<u>追加攻撃</u>を行う。天賦による<u>追加攻撃</u>ダメージ+<nobr>729%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

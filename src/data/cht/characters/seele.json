@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "希兒",
+  "description": "地底反抗組織「地火」的骨幹，別號「蝴蝶」。\n性格率真直爽，內心隱藏著細膩敏銳的一面。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量量子屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "對敵方單體造成量子屬性傷害，並使自身速度提高。",
       "type": "戰技",
       "tag": "單體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,18 @@
       "simpleDesc": "進入增幅狀態，對敵方單體造成大量量子屬性傷害。",
       "type": "終結技",
       "tag": "單體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "使用普通攻擊、戰技、終結技消滅敵方目標時獲得額外回合並進入增幅狀態，增幅狀態下自身造成的傷害提高。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "額外回合",
+          "desc": "獲得1個不消耗回合數的額外回合，在此回合中無法插入施放終結技。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "進入隱身狀態。攻擊敵人進入戰鬥後立即進入增幅狀態。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "斬盡",
-      "desc": "對現有生命值百分比小於等於<nobr>80%</nobr>的敵方目標造成傷害時，暴擊率提高<nobr>15%</nobr>。"
+      "desc": "對現有生命值百分比小於等於<nobr>80%</nobr>的敵方目標造成傷害時，暴擊率提高<nobr>15%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "蝶舞",
-      "desc": "戰技的加速效果可以疊加，最多<nobr>2</nobr>層。"
+      "desc": "戰技的加速效果可以疊加，最多<nobr>2</nobr>層。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "繚亂",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "掠影",
-      "desc": "希兒消滅敵方目標時，自身恢復<nobr>15</nobr>點能量。"
+      "desc": "希兒消滅敵方目標時，自身恢復<nobr>15</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "鋒銳",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "離析",
-      "desc": "施放終結技後使受到攻擊的敵方單體陷入【亂蝶】狀態，持續<nobr>1</nobr>回合。【亂蝶】狀態下的敵方目標受到攻擊後，額外受到1次等同於希兒終結技傷害<nobr>15%</nobr>的量子屬性<u>附加傷害</u>。若該目標被我方其他目標觸發【亂蝶】狀態的<u>附加傷害</u>消滅，將不會觸發希兒的天賦。\n當希兒陷入<u>無法戰鬥狀態</u>時，敵方目標的【亂蝶】狀態被解除。"
+      "desc": "施放終結技後使受到攻擊的敵方單體陷入【亂蝶】狀態，持續<nobr>1</nobr>回合。【亂蝶】狀態下的敵方目標受到攻擊後，額外受到1次等同於希兒終結技傷害<nobr>15%</nobr>的量子屬性<u>附加傷害</u>。若該目標被我方其他目標觸發【亂蝶】狀態的<u>附加傷害</u>消滅，將不會觸發希兒的天賦。\n當希兒陷入<u>無法戰鬥狀態</u>時，敵方目標的【亂蝶】狀態被解除。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

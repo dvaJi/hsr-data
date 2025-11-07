@@ -2,6 +2,7 @@
   "_id": 1304,
   "id": "aventurine",
   "name": "Aventurine",
+  "description": "Um executivo do alto escalão do Departamento de Investimento Estratégico da CPI.\nUma pessoa que gosta de correr riscos, seu sorriso constante dificulta que as pessoas compreendam seus verdadeiros sentimentos.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Imaginário leve a um único inimigo-alvo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Fornece um escudo de Aposta Fortificada para todos os aliados, cujo efeito de Escudo é acumulável.",
       "type": "Perícia",
       "tag": "Defesa",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "Ganha um número aleatório de pontos na Aposta Cega e inflige Perturbação em um único inimigo, causando Dano Imaginário. Quando um aliado golpeia um inimigo com Perturbação, aumenta o Dano CRIT causado.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,32 @@
       "simpleDesc": "Para qualquer único aliado com Aposta Fortificada, sua RES a Efeito aumenta e, quando ele é atacado, Aventurine acumula Aposta Cega. Quando Aventurine possui Aposta Fortificada, ele pode resistir a penalidades de Controle Negativo. Ao alcançar 7 pontos de Aposta Cega, Aventurine consome os 7 pontos para realizar um Ataque Extra que causa Dano Imaginário leve a inimigos aleatórios, ricocheteando um total de 7 vezes.",
       "type": "Talento",
       "tag": "Rebote",
+      "spBase": 1,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        10,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Penal. de Controle Negativo",
+          "desc": "Congelamento, Embaraço, Aprisionamento, Dominação, Injúria, Reverberação Forte, Sonho Alienígena, Arapuca, Em Pânico, Bloqueio de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1514,15 @@
       "simpleDesc": "Usar a Técnica concederá 1 de 3 tipos de efeitos de Bônus de DEF de diferentes valores de melhoria aleatoriamente. Depois de entrar na próxima batalha, a DEF de todos os aliados aumenta pelo valor correspondente.",
       "type": "Técnica",
       "tag": "Defesa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1470,37 +1542,88 @@
       "_id": 130401,
       "id": "prisoners_dilemma",
       "name": "Dilema do Prisioneiro",
-      "desc": "Aumenta o Dano CRIT dos aliados com Aposta Fortificada em <nobr>20%</nobr>. Após utilizar a Perícia Suprema, fornece um Escudo de Aposta Fortificada para a equipe inteira, cujo efeito de Escudo é igual a <nobr>100%</nobr> ao daquele fornecido pela Perícia, durando por <nobr>3</nobr> rodada(s)."
+      "desc": "Aumenta o Dano CRIT dos aliados com Aposta Fortificada em <nobr>20%</nobr>. Após utilizar a Perícia Suprema, fornece um Escudo de Aposta Fortificada para a equipe inteira, cujo efeito de Escudo é igual a <nobr>100%</nobr> ao daquele fornecido pela Perícia, durando por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130402,
       "id": "bounded_rationality",
       "name": "Racionalidade Limitada",
-      "desc": "Ao usar o ATQ Básico, reduz a RES a Todos os Tipos do alvo em <nobr>12%</nobr> por <nobr>3</nobr> rodada(s)."
+      "desc": "Ao usar o ATQ Básico, reduz a RES a Todos os Tipos do alvo em <nobr>12%</nobr> por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130403,
       "id": "droprate_maxing",
       "name": "Taxa Máxima",
-      "desc": "Nv. de Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. de Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130404,
       "id": "unexpected_hanging_paradox",
       "name": "Paradoxo Suspenso Inesperado",
-      "desc": "Ao ativar os <u>Ataques Extras</u> do Talento dele, primeiro, a DEF de Aventurine aumenta em <nobr>40%</nobr> por <nobr>2</nobr> rodada(s), e aumenta adicionalmente os Golpes por Ação do <u>Ataque Extra</u> ativados pelo seu Talento em <nobr>3</nobr>."
+      "desc": "Ao ativar os <u>Ataques Extras</u> do Talento dele, primeiro, a DEF de Aventurine aumenta em <nobr>40%</nobr> por <nobr>2</nobr> rodada(s), e aumenta adicionalmente os Golpes por Ação do <u>Ataque Extra</u> ativados pelo seu Talento em <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130405,
       "id": "ambiguity_aversion",
       "name": "Aversão Ambígua",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130406,
       "id": "stag_hunt_game",
       "name": "Caça ao Cervo",
-      "desc": "Para cada aliado com um Escudo, o Dano causado por Aventurine aumenta em <nobr>50%</nobr>, até um máximo de <nobr>150%</nobr>."
+      "desc": "Para cada aliado com um Escudo, o Dano causado por Aventurine aumenta em <nobr>50%</nobr>, até um máximo de <nobr>150%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

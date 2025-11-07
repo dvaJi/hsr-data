@@ -2,6 +2,7 @@
   "_id": 1301,
   "id": "gallagher",
   "name": "Gallagher",
+  "description": "Um oficial de segurança da Família Cão de Caça. Ele é sempre cortês com os hóspedes de visita, mas nunca deixa de estar de guarda. Ele parece ser um personagem com um passado complicado, mas ele nunca menciona detalhe nenhum voluntariamente.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Fogo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Imediatamente recupera os PV de um aliado.",
       "type": "Perícia",
       "tag": "Restauração",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "Inflige Inebriação a todos os inimigos e causa Dano de Fogo a eles ao mesmo tempo. Aprimora o próximo ATQ Básico para Blitz de Néctar.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1038,24 @@
       "simpleDesc": "O estado de \"Inebriação\" faz com que alvos recebam mais Dano de Quebra. Sempre que o alvo é atacado por um personagem aliado, os PV do atacante são restaurados.",
       "type": "Talento",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Dano de Quebra",
+          "desc": "O Dano de Quebra aumenta com um maior Efeito de Quebra, maior Tenacidade máxima de alvo, e maiores níveis de personagens.\nO Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Ataca o inimigo imediatamente. Ao entrar na batalha, inflige Inebriação a todos os inimigos, durando por #1[i] rodada(s). Causa Dano de Fogo igual a #2[i]% do ATQ de Gallagher a todos os inimigos.",
       "simpleDesc": "Ataca o inimigo. Depois de entrar em batalha, inflige Inebriação a todos os inimigos e causa Dano de Fogo leve a todos os inimigos.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,88 @@
       "_id": 130101,
       "id": "salty_dog",
       "name": "Cão Salgado",
-      "desc": "Regenera <nobr>20</nobr> de Energia quando Gallagher entra em batalha e aumenta a RES a Efeito dele em <nobr>50%</nobr>."
+      "desc": "Regenera <nobr>20</nobr> de Energia quando Gallagher entra em batalha e aumenta a RES a Efeito dele em <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130102,
       "id": "lions_tail",
       "name": "Cauda de Leão",
-      "desc": "Ao usar a Perícia, remove <nobr>1</nobr> <u>penalidade(s)</u> de um aliado-alvo. Ao mesmo tempo, aumenta a sua RES a Efeito em <nobr>30%</nobr>, durando por <nobr>2</nobr> rodada(s)."
+      "desc": "Ao usar a Perícia, remove <nobr>1</nobr> <u>penalidade(s)</u> de um aliado-alvo. Ao mesmo tempo, aumenta a sua RES a Efeito em <nobr>30%</nobr>, durando por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130103,
       "id": "corpse_reviver",
       "name": "Reanimador de Cadáveres",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130104,
       "id": "last_word",
       "name": "Última Palavra",
-      "desc": "Estende em <nobr>1</nobr> rodada(s) a duração do estado de Inebriação infligido pela Perícia Suprema de Gallagher."
+      "desc": "Estende em <nobr>1</nobr> rodada(s) a duração do estado de Inebriação infligido pela Perícia Suprema de Gallagher.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130105,
       "id": "death_in_the_afternoon",
       "name": "Morte ao Meio-Dia",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130106,
       "id": "blood_and_sand",
       "name": "Sangue e Areia",
-      "desc": "Aumenta o Efeito de Quebra de Gallagher em <nobr>20%</nobr> e a Eficiência de Quebra de Fraqueza em <nobr>20%</nobr>."
+      "desc": "Aumenta o Efeito de Quebra de Gallagher em <nobr>20%</nobr> e a Eficiência de Quebra de Fraqueza em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

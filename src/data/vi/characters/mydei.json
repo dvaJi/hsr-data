@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "Mydei",
+  "description": "Kremnos, thành bang chìm trong sương mù, thành bang của hỗn loạn và chiến tranh! Hoàng tộc của nó mang dòng máu sát hại thân thích, thần linh của nó mang tên gọi Tai Ương.\nMydeimos bất tử, con sư tử xa bầy, Hậu Duệ Chrysos săn lùng Ngọn Lửa \"Phân Tranh\". Chịu đựng cái chết hàng vạn lần, tắm máu để trở về quê hương, một mình gánh vác số mệnh điên rồ\n— Giết vua để trở thành vua, diệt thần để trở thành thần. Vó sắt của chiến tranh đạp qua hoang mạc, cuối cùng cũng phải nhuốm máu quê hương.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Số Ảo cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Tiêu hao HP, gây sát thương Số Ảo cho 1 kẻ địch chỉ định và gây lượng nhỏ sát thương Số Ảo cho mục tiêu lân cận.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Hồi HP và tích lũy Nạp Năng Lượng Thiên Phú, gây lượng lớn Sát Thương Số Ảo cho 1 kẻ địch chỉ định, gây Sát Thương Số Ảo cho mục tiêu lân cận, đồng thời khiến mục tiêu và mục tiêu lân cận rơi vào trạng thái Khiêu Khích.",
       "type": "Tuyệt Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "Khi mất HP sẽ tích lũy Nạp Năng Lượng, Nạp Năng Lượng đạt 100 sẽ vào trạng thái \"Huyết Thù\", hồi HP và Ưu Tiên Hành Động. Trong trạng thái \"Huyết Thù\", Giới Hạn HP hiện tại tăng, Phòng Thủ duy trì bằng 0. Khi bắt đầu hiệp của bản thân sẽ tự động thi triển \"Sát Vương Thành Vương\".\nTrong trạng thái \"Huyết Thù\" khi Nạp Năng Lượng đạt 150, Mydei sẽ lập tức nhận được 1 hiệp thêm và tự động thi triển \"Sát Thần Đăng Thần\".\nKhi Mydei chịu tấn công chí tử sẽ thoát khỏi trạng thái \"Huyết Thù\".",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Hiệp Tăng Thêm",
+          "desc": "Nhận 1 hiệp thêm không tiêu hao số hiệp. Trong hiệp này, không thể chen ngang thi triển Tuyệt Kỹ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "Lôi kéo kẻ địch trong khu vực nhất định và khiến chúng rơi vào trạng thái Choáng. Tấn công kẻ địch trong trạng thái Choáng, sau khi vào chiến đấu sẽ gây lượng nhỏ Sát Thương Số Ảo cho toàn bộ phe địch, đồng thời khiến mục tiêu rơi vào trạng thái Khiêu Khích. Bản thân tích lũy Nạp Năng Lượng của Thiên Phú.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "Gió Lạnh Khắc Nên Xương Sống Bất Khuất",
-      "desc": "Tăng <nobr>30%</nobr> Bội Số Sát Thương mà Sát Thần Đăng Thần gây ra cho mục tiêu chính, đồng thời biến thành Sát Thương Số Ảo gây ra cho toàn bộ phe địch bằng với Bội Số Sát Thương của mục tiêu chính."
+      "desc": "Tăng <nobr>30%</nobr> Bội Số Sát Thương mà Sát Thần Đăng Thần gây ra cho mục tiêu chính, đồng thời biến thành Sát Thương Số Ảo gây ra cho toàn bộ phe địch bằng với Bội Số Sát Thương của mục tiêu chính.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "Phân Tranh Chứng Kiến Tiếng Gào Của Thi Thể",
-      "desc": "Trong trạng thái \"Huyết Thù\", sát thương Mydei gây ra sẽ bỏ qua <nobr>15%</nobr> Phòng Thủ của mục tiêu phe địch, đồng thời sau khi nhận trị liệu, sẽ khiến <nobr>40%</nobr> giá trị trị liệu chuyển hóa thành Nạp Năng Lượng, Nạp Năng Lượng được tích lũy chuyển hóa này không vượt quá <nobr>40</nobr> điểm. Sau khi bất kỳ đơn vị nào hành động, sẽ tái lập Nạp Năng Lượng có thể tích lũy."
+      "desc": "Trong trạng thái \"Huyết Thù\", sát thương Mydei gây ra sẽ bỏ qua <nobr>15%</nobr> Phòng Thủ của mục tiêu phe địch, đồng thời sau khi nhận trị liệu, sẽ khiến <nobr>40%</nobr> giá trị trị liệu chuyển hóa thành Nạp Năng Lượng, Nạp Năng Lượng được tích lũy chuyển hóa này không vượt quá <nobr>40</nobr> điểm. Sau khi bất kỳ đơn vị nào hành động, sẽ tái lập Nạp Năng Lượng có thể tích lũy.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "Vinh Quang Soi Chiếu Bữa Tiệc Không Tàn",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "Kèn Lệnh Đánh Thức Con Sư Tử Trầm Mặc",
-      "desc": "Trong thời gian trạng thái \"Huyết Thù\", sát thương Bạo Kích tăng <nobr>30%</nobr>, sau khi bị mục tiêu phe địch tấn công, sẽ hồi HP bằng <nobr>10%</nobr> Giới Hạn HP của bản thân."
+      "desc": "Trong thời gian trạng thái \"Huyết Thù\", sát thương Bạo Kích tăng <nobr>30%</nobr>, sau khi bị mục tiêu phe địch tấn công, sẽ hồi HP bằng <nobr>10%</nobr> Giới Hạn HP của bản thân.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "Binh Đao Chạm Trổ Ngọn Lửa Của Thân Xác",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "Quá Khứ Đạp Lên Ngọn Núi Máu",
-      "desc": "Khi vào chiến đấu lập tức vào trạng thái \"Huyết Thù\", đồng thời điểm Nạp Năng Lượng cần cho \"Sát Thần Đăng Thần\" sẽ giảm còn <nobr>100</nobr>."
+      "desc": "Khi vào chiến đấu lập tức vào trạng thái \"Huyết Thù\", đồng thời điểm Nạp Năng Lượng cần cho \"Sát Thần Đăng Thần\" sẽ giảm còn <nobr>100</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

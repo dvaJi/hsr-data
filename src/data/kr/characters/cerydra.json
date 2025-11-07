@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "케리드라",
+  "description": "북부의 제국, 소실된 왕조, 차가운 땅에 정벌의 야망이 불타오르고 있다.\n군주 케리드라, 「율법」의 불씨를 거머쥔 황금의 후예여, 수를 두어 신과 대국하고 다른 마음을 품은 죄수를 심판하여 이 세계를 위해 불을 쫓는 여정의 기반을 다져라.\n——「이는 결코 끝이 아니며, 앰포리어스의 여정은 은하의 뭇별로 향하리!」",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 바람 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "아군 캐릭터가 [군공]을 획득하고 케리드라가 충전을 획득한다. 충전이 #4[i]pt 도달 시 캐릭터의 [군공]이 [작위]로 자동 업그레이드된다. [작위]를 보유한 캐릭터가 가하는 전투 스킬 피해의 치명타 피해, 모든 속성 저항 관통이 증가하고 기습을 발동할 수 있다",
       "type": "전투 스킬",
       "tag": "서포트",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "제어류 디버프 상태",
+          "desc": "빙결, 얽힘, 속박, 지배, 노발대발, 강렬한 진탕, 이몽, 감금, 공포, 행동 고정",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "기습",
+          "desc": "곧 발동하는 스킬을 1회 복제하고 미리 발동하며, 이후 기존 스킬을 발동한다.\n기습은 기습을 다시 발동하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "충전을 획득한다. 모든 적에게 바람 속성 피해를 가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "[군공]을 보유한 캐릭터의 공격력이 증가하고, 일반 공격 또는 전투 스킬을 발동하면 케리드라가 충전을 획득한다. [군공]을 보유한 캐릭터가 공격 발동 후 케리드라가 추가로 소량의 바람 속성 추가 피해를 가한다",
       "type": "특성",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "기습",
+          "desc": "곧 발동하는 스킬을 1회 복제하고 미리 발동하며, 이후 기존 스킬을 발동한다.\n기습은 기습을 다시 발동하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "현재 행동 캐릭터가 [군공]을 획득하며, 다음 전투 시작 시 [군공]을 보유한 캐릭터에게 자동으로 전투 스킬을 발동한다",
       "type": "비술",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "모든 왕관을 빼앗고",
-      "desc": "[군공]을 보유한 캐릭터가 피해를 가할 시 목표의 방어력을 <nobr>16%</nobr> 무시한다. 현재 [군공]이 [작위]로 업그레이드되었을 경우, 해당 캐릭터가 전투 스킬 피해를 가할 시 추가로 목표의 방어력을 <nobr>20%</nobr> 무시한다. 케리드라가 전투 스킬 발동 시 지정된 아군의 에너지를 <nobr>2</nobr>pt 회복한다"
+      "desc": "[군공]을 보유한 캐릭터가 피해를 가할 시 목표의 방어력을 <nobr>16%</nobr> 무시한다. 현재 [군공]이 [작위]로 업그레이드되었을 경우, 해당 캐릭터가 전투 스킬 피해를 가할 시 추가로 목표의 방어력을 <nobr>20%</nobr> 무시한다. 케리드라가 전투 스킬 발동 시 지정된 아군의 에너지를 <nobr>2</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "만민의 염원을 모아",
-      "desc": "[군공]을 보유한 캐릭터가 가하는 피해가 <nobr>40%</nobr> 증가한다. 필드에 [군공]을 보유한 동료가 있을 시 케리드라가 가하는 피해가 <nobr>160%</nobr> 증가한다"
+      "desc": "[군공]을 보유한 캐릭터가 가하는 피해가 <nobr>40%</nobr> 증가한다. 필드에 [군공]을 보유한 동료가 있을 시 케리드라가 가하는 피해가 <nobr>160%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "낡은 율법을 불태워",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "세상을 재구성하리",
-      "desc": "필살기의 피해 배율이 <nobr>240%</nobr> 증가한다"
+      "desc": "필살기의 피해 배율이 <nobr>240%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "도움과 가해, 모두 갚으리",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "여정은 오직 별바다에",
-      "desc": "[군공]을 보유한 캐릭터의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가하고, [군공]이 발동하는 <u>추가 피해</u> 배율이 <nobr>300%</nobr> 증가한다. 필드에 [군공]을 보유한 동료가 있을 시 케리드라의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다"
+      "desc": "[군공]을 보유한 캐릭터의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가하고, [군공]이 발동하는 <u>추가 피해</u> 배율이 <nobr>300%</nobr> 증가한다. 필드에 [군공]을 보유한 동료가 있을 시 케리드라의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

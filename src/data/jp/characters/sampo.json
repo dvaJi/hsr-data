@@ -2,6 +2,7 @@
   "_id": 1108,
   "id": "sampo",
   "name": "サンポ",
+  "description": "地上と地下を行き来する商人。\n馴れ馴れしく、情熱的でユーモアがあり、いつも道化を演じている。",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与える、5回バウンドする。",
       "type": "戦闘スキル",
       "tag": "バウンド",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,27 @@
       "simpleDesc": "敵全体に風属性ダメージを与え、高確率で敵の受ける持続ダメージをアップする。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "自身の攻撃が敵に命中した後、確率で敵を風化状態にする。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1452,32 @@
       "simpleDesc": "一定範囲内の敵をブラインド状態にする。ブラインド状態の敵を攻撃して戦闘に入った後、高確率で敵それぞれの行動順を遅らせる。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定確率",
+          "desc": "どのような要因にも左右されない、固定された確率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "行動遅延",
+          "desc": "対象の次の行動までの間隔が長くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,37 +1496,88 @@
       "_id": 110801,
       "id": "rising_love",
       "name": "{RUBY_B#ねあ}値上{RUBY_E#}げする{RUBY_B#あい}愛{RUBY_E#}",
-      "desc": "戦闘スキルを発動した時、さらにランダムな敵単体にダメージを<nobr>1</nobr>回与える。"
+      "desc": "戦闘スキルを発動した時、さらにランダムな敵単体にダメージを<nobr>1</nobr>回与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110802,
       "id": "infectious_enthusiasm",
       "name": "{RUBY_B#ねつじょう}熱情{RUBY_E#}はうつる",
-      "desc": "風化状態の敵が倒された時、<nobr>100%</nobr>の<u>基礎確率</u>で敵全体に、天賦と同じ風化状態を<nobr>1</nobr>層付与する。"
+      "desc": "風化状態の敵が倒された時、<nobr>100%</nobr>の<u>基礎確率</u>で敵全体に、天賦と同じ風化状態を<nobr>1</nobr>層付与する。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110803,
       "id": "big_money",
       "name": "{RUBY_B#おおもう}大儲{RUBY_E#}け！",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110804,
       "id": "the_deeper_the_love_the_stronger_the_hate",
       "name": "{RUBY_B#あい}愛{RUBY_E#}する{RUBY_B#ほど}程{RUBY_E#}{RUBY_B#うら}恨{RUBY_E#}む",
-      "desc": "戦闘スキルが風化状態<nobr>5</nobr>層以上の敵に命中した時、その敵が受けている風化状態が本来のダメージ<nobr>8%</nobr>分のダメージを発生する。"
+      "desc": "戦闘スキルが風化状態<nobr>5</nobr>層以上の敵に命中した時、その敵が受けている風化状態が本来のダメージ<nobr>8%</nobr>分のダメージを発生する。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110805,
       "id": "huuuuge_money",
       "name": "{RUBY_B#ちょうおおもう}超大儲{RUBY_E#}け！",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110806,
       "id": "increased_spending",
       "name": "{RUBY_B#しょうひ}消費{RUBY_E#}のアップグレード",
-      "desc": "天賦が付与した風化状態のダメージ倍率+<nobr>15%</nobr>。"
+      "desc": "天賦が付与した風化状態のダメージ倍率+<nobr>15%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 8001,
   "id": "trailblazer_destruction_boy",
   "name": "ผู้บุกเบิก ทำลายล้าง",
+  "description": "{F#เด็กสาว}{M#เด็กหนุ่ม}ที่ขึ้นรถไฟ Astral Express มา\nเลือกเดินทางด้วย Astral Express เพื่อกำจัดวิกฤตที่เกิดจาก Stellaron",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "สร้าง DMG กายภาพเล็กน้อย แก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "สร้าง DMG กายภาพแก่ฝ่ายศัตรูหนึ่งตัว รวมถึงตัวที่อยู่ใกล้เคียง กับเป้าหมายด้วย",
       "type": "สกิลต่อสู้",
       "tag": "กระจาย",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "เลือกการโจมตีเดี่ยว หรือการโจมตีแบบกระจาย เพื่อโจมตีอย่างเต็มที่",
       "type": "ท่าไม้ตาย",
       "tag": "เสริมพลัง",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1053,15 @@
       "simpleDesc": "ทุกครั้งที่ทำลายจุดอ่อนของศัตรูเป้าหมายได้ ATK จะเพิ่มขึ้น",
       "type": "พรสวรรค์",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1365,15 @@
       "simpleDesc": "หลังจากใช้เทคนิคแล้ว จะฟื้นฟู HP ให้กับฝ่ายเราทั้งหมดทันที",
       "type": "เทคนิค",
       "tag": "ฟื้นฟู",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1344,37 +1390,88 @@
       "_id": 800101,
       "id": "a_falling_star",
       "name": "A Falling Star",
-      "desc": "เมื่อปล่อยท่าไม้ตาย เพื่อจัดการศัตรูเป้าหมาย ผู้บุกเบิกจะได้รับการฟื้นฟูพลังงานเพิ่มเติม <nobr>10</nobr> หน่วย เอฟเฟกต์นี้ใช้ได้เพียง 1 ครั้ง ต่อการโจมตี"
+      "desc": "เมื่อปล่อยท่าไม้ตาย เพื่อจัดการศัตรูเป้าหมาย ผู้บุกเบิกจะได้รับการฟื้นฟูพลังงานเพิ่มเติม <nobr>10</nobr> หน่วย เอฟเฟกต์นี้ใช้ได้เพียง 1 ครั้ง ต่อการโจมตี",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800102,
       "id": "an_unwilling_host",
       "name": "An Unwilling Host",
-      "desc": "หลังจากโจมตีแล้ว หากโจมตีโดนศัตรูเป้าหมาย ที่มีจุดอ่อนกายภาพ จะฟื้นฟู HP <nobr>5%</nobr>\nของ ATK ของผู้บุกเบิก"
+      "desc": "หลังจากโจมตีแล้ว หากโจมตีโดนศัตรูเป้าหมาย ที่มีจุดอ่อนกายภาพ จะฟื้นฟู HP <nobr>5%</nobr>\nของ ATK ของผู้บุกเบิก",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800103,
       "id": "a_leading_whisper",
       "name": "A Leading Whisper",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800104,
       "id": "a_destructing_glance",
       "name": "A Destructing Glance",
-      "desc": "เมื่อโจมตีโดนศัตรูเป้าหมาย ที่ติด <u>สถานะทำลายจุดอ่อน</u> อัตราคริติคอลจะเพิ่มขึ้น <nobr>25%</nobr>"
+      "desc": "เมื่อโจมตีโดนศัตรูเป้าหมาย ที่ติด <u>สถานะทำลายจุดอ่อน</u> อัตราคริติคอลจะเพิ่มขึ้น <nobr>25%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "สถานะทำลายจุดอ่อน",
+          "desc": "เมื่อความทนทานของศัตรูเป้าหมาย ถูกลดทอนจนเหลือ 0 จะติดสถานะพิเศษ และเป้าหมายที่ติดสถานะนี้จะถูกหน่วงแอ็กชัน",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 800105,
       "id": "a_surviving_hope",
       "name": "A Surviving Hope",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800106,
       "id": "a_trailblazing_will",
       "name": "A Trailblazing Will",
-      "desc": "เมื่อผู้บุกเบิกกำจัดศัตรูเป้าหมายได้ จะปล่อยพรสวรรค์ออกมา"
+      "desc": "เมื่อผู้บุกเบิกกำจัดศัตรูเป้าหมายได้ จะปล่อยพรสวรรค์ออกมา",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

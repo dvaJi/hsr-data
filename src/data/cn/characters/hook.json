@@ -2,6 +2,7 @@
   "_id": 1109,
   "id": "hook",
   "name": "虎克",
+  "description": "地底冒险团队「鼹鼠党」的老大（自封）。\n热爱自由，将生活视为一场又一场冒险。",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量火属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "对敌方单体造成火属性伤害，大概率对目标施加灼烧状态。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "对敌方单体造成大量火属性伤害，并强化自身下一次的战技。",
       "type": "终结技",
       "tag": "单攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,27 @@
       "simpleDesc": "攻击处于灼烧状态的敌方目标时，造成少量火属性附加伤害并额外恢复能量。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1409,24 @@
       "desc": "立即攻击敌人，进入战斗后对敌方随机单体造成等同于虎克#4[i]%攻击力的火属性伤害，同时有#1[i]%的基础概率使敌方每个单体目标陷入灼烧状态，持续#3[i]回合。\n灼烧状态下，敌方目标每回合开始时受到等同于虎克#2[i]%攻击力的火属性持续伤害。",
       "simpleDesc": "攻击敌人，进战后对敌方随机单体造成少量火属性伤害，大概率使敌方每个单体陷入灼烧状态。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1446,88 @@
       "_id": 110901,
       "id": "early_to_bed_early_to_rise",
       "name": "早睡早起很健康",
-      "desc": "战技强化后造成的伤害提高<nobr>20%</nobr>。"
+      "desc": "战技强化后造成的伤害提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110902,
       "id": "happy_tummy_happy_body",
       "name": "吃好喝好长身体",
-      "desc": "战技使敌方目标陷入的灼烧状态持续时间增加<nobr>1</nobr>回合。"
+      "desc": "战技使敌方目标陷入的灼烧状态持续时间增加<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110903,
       "id": "dont_be_picky_nothings_icky",
       "name": "不挑不选全都要",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110904,
       "id": "its_okay_to_not_know",
       "name": "稀里糊涂没关系",
-      "desc": "触发天赋时，有<nobr>100%</nobr><u>基础概率</u>使指定敌方目标的相邻目标也陷入等同于战技的灼烧状态。"
+      "desc": "触发天赋时，有<nobr>100%</nobr><u>基础概率</u>使指定敌方目标的相邻目标也陷入等同于战技的灼烧状态。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110905,
       "id": "let_the_moles_deeds_be_known",
       "name": "好事留名鼹鼠党",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110906,
       "id": "always_ready_to_punch_and_kick",
       "name": "随时准备打坏人",
-      "desc": "虎克对灼烧状态下的敌方目标造成的伤害提高<nobr>20%</nobr>。"
+      "desc": "虎克对灼烧状态下的敌方目标造成的伤害提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

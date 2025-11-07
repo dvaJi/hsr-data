@@ -2,6 +2,7 @@
   "_id": 1110,
   "id": "lynx",
   "name": "Lynx",
+  "description": "Nhà thám hiểm Cánh Đồng Tuyết của Belobog, cô em út của nhà Landau. \nLà người điềm tĩnh, kiên định trong hành động. Thường đến Cánh Đồng Tuyết thám hiểm một mình.",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lượng Tử cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Khiến 1 đồng đội nhận \"Phản Ứng Sinh Tồn\", tăng Giới Hạn HP và hồi HP cho đồng đội đó.",
       "type": "Chiến Kỹ",
       "tag": "Hồi Phục",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -782,6 +807,27 @@
       "simpleDesc": "Giải trừ 1 Hiệu Ứng Xấu cho toàn bộ phe ta, hồi HP cho toàn bộ phe ta.",
       "type": "Tuyệt Kỹ",
       "tag": "Hồi Phục",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1146,18 @@
       "simpleDesc": "Khi thi triển Chiến Kỹ hoặc Tuyệt Kỹ, khiến mục tiêu phe ta nhận hiệu ứng hồi HP liên tục, nếu mục tiêu có \"Phản Ứng Sinh Tồn\" đang hiệu lực, sẽ tăng thêm hiệu ứng hồi HP liên tục.",
       "type": "Thiên Phú",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1448,6 +1506,15 @@
       "simpleDesc": "Dùng Bí Kỹ, khi bắt đầu trận tiếp theo sẽ kèm thêm hiệu ứng trị liệu liên tục cho toàn bộ phe ta.",
       "type": "Bí Kỹ",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1531,88 @@
       "_id": 111001,
       "id": "morning_of_snow_hike",
       "name": "Tinh Mơ Lang Thang Trên Tuyết",
-      "desc": "Khi trị liệu cho mục tiêu phe ta có Phần Trăm HP hiện tại nhỏ hơn hoặc bằng <nobr>50%</nobr>, lượng trị liệu của Lynx tăng <nobr>20%</nobr>, hiệu ứng này cũng có hiệu lực với hiệu ứng trị liệu liên tục."
+      "desc": "Khi trị liệu cho mục tiêu phe ta có Phần Trăm HP hiện tại nhỏ hơn hoặc bằng <nobr>50%</nobr>, lượng trị liệu của Lynx tăng <nobr>20%</nobr>, hiệu ứng này cũng có hiệu lực với hiệu ứng trị liệu liên tục.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111002,
       "id": "noon_of_portable_furnace",
       "name": "Buổi Trưa Lò Sưởi Di Động",
-      "desc": "Khi mục tiêu có Phản Ứng Sinh Tồn bị thi triển <u>Hiệu Ứng Xấu</u>, có thể kháng <nobr>1</nobr> lần <u>Hiệu Ứng Xấu</u>."
+      "desc": "Khi mục tiêu có Phản Ứng Sinh Tồn bị thi triển <u>Hiệu Ứng Xấu</u>, có thể kháng <nobr>1</nobr> lần <u>Hiệu Ứng Xấu</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111003,
       "id": "afternoon_of_avalanche_beacon",
       "name": "Buổi Chiều Tín Hiệu Tuyết Lở",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111004,
       "id": "dusk_of_warm_campfire",
       "name": "Hoàng Hôn Lửa Trại Ấm Áp",
-      "desc": "Khi nhận \"Phản Ứng Sinh Tồn\", sẽ tăng tấn công của mục tiêu này, mức tăng bằng <nobr>#1[f1]%</nobr> Giới Hạn HP của Lynx, duy trì <nobr>1</nobr> hiệp."
+      "desc": "Khi nhận \"Phản Ứng Sinh Tồn\", sẽ tăng tấn công của mục tiêu này, mức tăng bằng <nobr>#1[f1]%</nobr> Giới Hạn HP của Lynx, duy trì <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111005,
       "id": "night_of_aurora_tea",
       "name": "Buổi Đêm Hồng Trà Cực Quang",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá <nobr>15</nobr> cấp; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá <nobr>15</nobr> cấp; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111006,
       "id": "dawn_of_explorers_chart",
       "name": "Bình Minh Của Bản Khảo Sát",
-      "desc": "Hiệu ứng tăng Giới Hạn HP của Phản Ứng Sinh Tồn sẽ tăng thêm, mức tăng bằng <nobr>#1[f1]%</nobr> Giới Hạn HP của Lynx và tăng Kháng Hiệu Ứng <nobr>30%</nobr>."
+      "desc": "Hiệu ứng tăng Giới Hạn HP của Phản Ứng Sinh Tồn sẽ tăng thêm, mức tăng bằng <nobr>#1[f1]%</nobr> Giới Hạn HP của Lynx và tăng Kháng Hiệu Ứng <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

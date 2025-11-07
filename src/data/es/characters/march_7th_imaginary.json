@@ -2,6 +2,7 @@
   "_id": 1224,
   "id": "march_7th_imaginary",
   "name": "Siete de Marzo • Imaginario",
+  "description": "Siete de Marzo con un atuendo de Xianzhou. Una joven artista marcial que empuña dos espadas.\nEstá aprendiendo el manejo de la espada de Yunli y Yanqing, y está ansiosa por crear más recuerdos hermosos en Xianzhou.",
   "rarity": 4,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Imaginario a un enemigo y obtiene #2[i] pt. de carga.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Designa a un aliado como Maestro. Al infligir daño el ATQ básico o ATQ básico potenciado, activa uno de los siguientes efectos según sea la Vía del Maestro:\nErudición, Destrucción, Cacería o Reminiscencia: inflige daño adicional extra del mismo tipo que el Maestro.\nArmonía, Nihilidad, Conservación o Abundancia: aumenta la Reducción de Firmeza.",
       "type": "Habilidad básica",
       "tag": "Apoyo",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -747,6 +775,24 @@
       "simpleDesc": "Inflige Daño Imaginario a un enemigo y aumenta la probabilidad de infligir daño y el número de veces que inflige daño su próximo ATQ básico potenciado.",
       "type": "Habilidad definitiva",
       "tag": "ATQ individual",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Probabilidad fija",
+          "desc": "La probabilidad fija no se ve afectada por ningún factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1065,6 +1111,15 @@
       "simpleDesc": "Siete de Marzo gana carga después de que el Maestro lance un ataque o use la habilidad definitiva. Cuando alcanza #1[i] pts. de carga, Siete de Marzo actúa inmediatamente, el daño que inflige aumenta y su ATQ básico se potencia.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1383,6 +1438,15 @@
       "simpleDesc": "Cada vez que un aliado usa la técnica, Siete de Marzo obtiene carga al entrar en el siguiente combate. Al usar la técnica, recupera pts. de energía tras entrar en el siguiente combate.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1400,37 +1464,88 @@
       "_id": 122401,
       "id": "my_sword_stirs_starlight",
       "name": "Espada de lustre astral",
-      "desc": "Cuando el Maestro está en el campo de batalla, la VEL de Siete de Marzo aumenta en un <nobr>10%</nobr>."
+      "desc": "Cuando el Maestro está en el campo de batalla, la VEL de Siete de Marzo aumenta en un <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122402,
       "id": "blade_dances_on_waves_fight",
       "name": "Ágil hoja del agitado oleaje",
-      "desc": "Después de que el Maestro use el ATQ básico o la habilidad básica para atacar al enemigo, Siete de Marzo lanza inmediatamente un <u>ataque adicional</u> e inflige un Daño Imaginario equivalente al <nobr>60%</nobr> de su ATQ al objetivo principal. Además, activa el efecto correspondiente según la Vía del Maestro, y obtiene <nobr>1</nobr> pt. de carga. Si no existe ningún objetivo principal que pueda ser atacado, el ataque adicional se dirige contra un enemigo al azar. Este efecto solo se puede activar una vez en cada turno."
+      "desc": "Después de que el Maestro use el ATQ básico o la habilidad básica para atacar al enemigo, Siete de Marzo lanza inmediatamente un <u>ataque adicional</u> e inflige un Daño Imaginario equivalente al <nobr>60%</nobr> de su ATQ al objetivo principal. Además, activa el efecto correspondiente según la Vía del Maestro, y obtiene <nobr>1</nobr> pt. de carga. Si no existe ningún objetivo principal que pueda ser atacado, el ataque adicional se dirige contra un enemigo al azar. Este efecto solo se puede activar una vez en cada turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122403,
       "id": "sharp_wit_in_martial_might",
       "name": "Agudeza y habilidad a la par",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122404,
       "id": "being_fabulous_never_frights",
       "name": "Quien es divina no desatina",
-      "desc": "Recupera <nobr>5</nobr> pts. de energía al comienzo del turno."
+      "desc": "Recupera <nobr>5</nobr> pts. de energía al comienzo del turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122405,
       "id": "sword_delights_sugar_blights",
       "name": "Más entreno y menos caramelos",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122406,
       "id": "me_the_best_girl_in_sight",
       "name": "Una chica sin igual",
-      "desc": "Tras usar la habilidad definitiva, el Daño CRIT que inflige el siguiente ATQ básico potenciado aumenta en un <nobr>50%</nobr>."
+      "desc": "Tras usar la habilidad definitiva, el Daño CRIT que inflige el siguiente ATQ básico potenciado aumenta en un <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

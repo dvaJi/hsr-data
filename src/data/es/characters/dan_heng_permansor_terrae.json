@@ -2,6 +2,7 @@
   "_id": 1414,
   "id": "dan_heng_permansor_terrae",
   "name": "Dan Heng - Permansor Terrae",
+  "description": "El pecho de Georios, el cuerpo del dragón caído, sostiene la tierra fragmentada y soporta mil años de dolor.\nDan Heng, el Anónimo y Heredero de Crisos que protege la Yesca de la Tierra. Sostiene el mundo que está cayendo y guía a los seres vivos de este mundo hacia un nuevo hogar más allá.\nLos ríos fluyen hacia el mar, las montañas resuenan al unísono, y el camino eterno se extiende hacia el infinito.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Físico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Designa a un personaje aliado como Camarada y otorga un escudo con efecto de escudo acumulable a todos los aliados.",
       "type": "Habilidad básica",
       "tag": "Defensa",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,32 @@
       "simpleDesc": "Inflige una gran cantidad de Daño Físico a todos los enemigos y otorga un escudo con efecto de escudo acumulable a todos los aliados. Además, potencia a Espiridraco. Cuando Espiridraco actúa, lanza un ataque adicional que inflige una pequeña cantidad de Daño Físico y una pequeña cantidad de daño del mismo tipo que el Camarada a todos los enemigos. La potenciación dura #3[i] acciones de Espiridraco.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1202,32 @@
       "simpleDesc": "Cuando un personaje aliado se convierte en Camarada, Dan Heng - Permansor Terrae invoca Espiridraco para ese personaje.\nCuando Espiridraco actúa, disipa 1 estado negativo de todos los aliados y otorga un escudo con efecto de escudo acumulable.",
       "type": "Talento",
       "tag": "Defensa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Estado negativo",
+          "desc": "Reduce la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos estados se pueden eliminar.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1597,15 @@
       "simpleDesc": "Afecta con Mareo a los enemigos en un área determinada y otorga Camarada al personaje activo en ese momento. Al comenzar la siguiente batalla, lanza automáticamente la habilidad básica sobre el personaje que sea el Camarada.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1622,114 @@
       "_id": 141401,
       "id": "shed_scales_of_old",
       "name": "Muda de escamas antiguas",
-      "desc": "Cuando Dan Heng - Permansor Terrae lanza la habilidad definitiva, recupera <nobr>1</nobr> pt. de habilidad básica y la <u>PEN de la RES</u> a todos los tipos del Camarada aumenta en un <nobr>18%</nobr> durante <nobr>3</nobr> turnos."
+      "desc": "Cuando Dan Heng - Permansor Terrae lanza la habilidad definitiva, recupera <nobr>1</nobr> pt. de habilidad básica y la <u>PEN de la RES</u> a todos los tipos del Camarada aumenta en un <nobr>18%</nobr> durante <nobr>3</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141402,
       "id": "watch_trails_to_blaze",
       "name": "Guardián trazacaminos",
-      "desc": "El Espiridraco en estado potenciado de la habilidad definitiva puede actuar <nobr>2</nobr> veces más. Después de que Dan Heng - Permansor Terrae lance la habilidad definitiva, la acción de Espiridraco <u>se adelanta</u> un <nobr>100%</nobr>. Cuando Espiridraco actúa estando potenciado, el <u>daño adicional</u> que inflige el Camarada es un <nobr>200%</nobr> del daño original, y el efecto de escudo otorgado esta vez pasa a ser un <nobr>200%</nobr> del efecto de escudo original."
+      "desc": "El Espiridraco en estado potenciado de la habilidad definitiva puede actuar <nobr>2</nobr> veces más. Después de que Dan Heng - Permansor Terrae lance la habilidad definitiva, la acción de Espiridraco <u>se adelanta</u> un <nobr>100%</nobr>. Cuando Espiridraco actúa estando potenciado, el <u>daño adicional</u> que inflige el Camarada es un <nobr>200%</nobr> del daño original, y el efecto de escudo otorgado esta vez pasa a ser un <nobr>200%</nobr> del efecto de escudo original.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141403,
       "id": "bear_weight_of_worlds",
       "name": "Legado de la creación",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141404,
       "id": "by_oath_this_vessel_is_i",
       "name": "Voto de recipiente corpóreo",
-      "desc": "El daño que recibe el Camarada se reduce en un <nobr>20%</nobr>."
+      "desc": "El daño que recibe el Camarada se reduce en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141405,
       "id": "the_path_of_permanence_sweeps_far",
       "name": "El largo camino de la Permanencia",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141406,
       "id": "one_dream_to_enfold_all_wilds",
       "name": "Sueño de naturaleza ubicua",
-      "desc": "Cuando hay un Camarada en la batalla, el daño que reciben todos los enemigos aumenta en un <nobr>20%</nobr>, y cuando el Camarada inflige daño, ignora un <nobr>12%</nobr> de la DEF del enemigo. Cuando Dan Heng - Permansor Terrae lanza la habilidad definitiva, el Camarada inflige un <nobr>330%</nobr> de su ATQ como <u>daño adicional</u> de su mismo tipo a todos los enemigos."
+      "desc": "Cuando hay un Camarada en la batalla, el daño que reciben todos los enemigos aumenta en un <nobr>20%</nobr>, y cuando el Camarada inflige daño, ignora un <nobr>12%</nobr> de la DEF del enemigo. Cuando Dan Heng - Permansor Terrae lanza la habilidad definitiva, el Camarada inflige un <nobr>330%</nobr> de su ATQ como <u>daño adicional</u> de su mismo tipo a todos los enemigos.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

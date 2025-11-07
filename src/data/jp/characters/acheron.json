@@ -2,6 +2,7 @@
   "_id": 1308,
   "id": "acheron",
   "name": "{RUBY_B#よみ}黄泉{RUBY_E#}",
+  "description": "「巡海レンジャー」を自称する旅人、本名は不明。\n長い刀を携え、1人で銀河を旅している。",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の雷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "「残夢」を#3[i]層獲得する。敵単体に「集真赤」を#3[i]層付与し、雷属性ダメージを与え、隣接する敵に少量の雷属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "拡散攻撃",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "敵単体に3段の攻撃を行い、それぞれ少量の雷属性ダメージを与える。敵にある「集真赤」を消去した場合、敵全体に少量の雷属性ダメージを与える。最後に敵全体に1段の攻撃を行い、雷属性ダメージを与え、すべての「集真赤」をクリアする。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "「残夢」が上限に達すると必殺技を発動できる。必殺技の発動中は弱点属性を無視して敵の靭性を削ることができ、敵全体の全属性耐性をダウンさせる。\n任意のユニットがスキル発動期間中に敵にデバフを付与すると、黄泉は「残夢」を獲得し、敵に「集真赤」を付与する。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1472,15 @@
       "desc": "敵を攻撃。各ウェーブ開始時、「四相断我」を獲得し、敵全体に黄泉の攻撃力#1[i]%分の雷属性ダメージを与え、弱点属性を無視して靭性を削る。敵を弱点撃破した時、雷属性の弱点撃破効果を触発する。\n「四相断我」：黄泉が必殺技を発動した後、「残夢」を#2[i]層獲得し、同時にランダムな敵単体に「集真赤」を#2[i]層付与する。\n通常エネミーを攻撃した場合、戦闘には入らず即座にターゲットを撃破する。敵に命中しなかった場合、秘技ポイントは消費されない。",
       "simpleDesc": "敵を攻撃。各ウェーブ開始時、「四相断我」を獲得する。敵全体に雷属性ダメージを与え、弱点属性を無視して靭性を削る。\n通常エネミーを攻撃する時ターゲットはその場で倒され、戦闘に入らない。敵に命中しなかった場合、秘技PTは消費されない。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1498,97 @@
       "_id": 130801,
       "id": "silenced_sky_spake_sooth",
       "name": "{RUBY_B#こうてんりょうらく}高天寥落{RUBY_E#}、\n{RUBY_B#しんごん}真言{RUBY_E#}{RUBY_B#はじ}始{RUBY_E#}まる",
-      "desc": "<u>デバフ状態</u>の敵にダメージを与える時、会心率+<nobr>18%</nobr>。"
+      "desc": "<u>デバフ状態</u>の敵にダメージを与える時、会心率+<nobr>18%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130802,
       "id": "mute_thunder_in_still_tempest",
       "name": "{RUBY_B#らいてい}雷霆{RUBY_E#}{RUBY_B#しず}静{RUBY_E#}まり、{RUBY_B#あきかぜ}秋風{RUBY_E#}{RUBY_B#や}止む{RUBY_E#}",
-      "desc": "軌跡「奈落」の効果の最大値に達するために必要な「虚無」の運命を歩むキャラクターの数-1名。自身のターンが回ってきた時、「残夢」を1層獲得し、「集真赤」が最も多い敵に「集真赤」を1層付与する。"
+      "desc": "軌跡「奈落」の効果の最大値に達するために必要な「虚無」の運命を歩むキャラクターの数-1名。自身のターンが回ってきた時、「残夢」を1層獲得し、「集真赤」が最も多い敵に「集真赤」を1層付与する。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130803,
       "id": "frost_bites_in_death",
       "name": "{RUBY_B#えいちつ}永蟄{RUBY_E#}を{RUBY_B#おびや}脅{RUBY_E#}かす{RUBY_B#かんぷう}寒風{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130804,
       "id": "shrined_fire_for_mirrored_soul",
       "name": "{RUBY_B#きょうちゅう}鏡中{RUBY_E#}を{RUBY_B#て}照{RUBY_E#}らす{RUBY_B#えいえん}永焔{RUBY_E#}",
-      "desc": "戦闘に入った敵は、必殺技被ダメージアップ状態になり、受ける必殺技ダメージ+<nobr>8%</nobr>。"
+      "desc": "戦闘に入った敵は、必殺技被ダメージアップ状態になり、受ける必殺技ダメージ+<nobr>8%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130805,
       "id": "strewn_souls_on_erased_earths",
       "name": "{RUBY_B#ばんじゃくほうらく}盤石崩落{RUBY_E#}、{RUBY_B#せんしんひょうらく}千身漂落{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130806,
       "id": "apocalypse_the_emancipator",
       "name": "{RUBY_B#そくばく}束縛{RUBY_E#}を{RUBY_B#と}解{RUBY_E#}く{RUBY_B#わざわ}災{RUBY_E#}い",
-      "desc": "黄泉が与える必殺技ダメージの全属性<u>耐性貫通</u>+<nobr>20%</nobr>。通常攻撃ダメージ、戦闘スキルダメージが同時に必殺技ダメージと見なされ、弱点属性を無視して敵の靭性を削る。敵を弱点撃破した時、雷属性の弱点撃破効果を触発する。"
+      "desc": "黄泉が与える必殺技ダメージの全属性<u>耐性貫通</u>+<nobr>20%</nobr>。通常攻撃ダメージ、戦闘スキルダメージが同時に必殺技ダメージと見なされ、弱点属性を無視して敵の靭性を削る。敵を弱点撃破した時、雷属性の弱点撃破効果を触発する。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

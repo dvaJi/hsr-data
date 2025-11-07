@@ -2,6 +2,7 @@
   "_id": 1301,
   "id": "gallagher",
   "name": "Gallagher",
+  "description": "Agent de la Maison Fin-Limier de Penacony. Il est toujours courtois avec les visiteurs, mais reste vigilant. Il semble porter le poids d'un lourd passé, mais il s'applique à ne pas jamais l'évoquer.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Restaure immédiatement les PV d'un allié.",
       "type": "Compétence",
       "tag": "Restauration",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "Applique l'effet Ivresse à tous les ennemis tout en leur infligeant des DGT de feu. Renforce la prochaine ATQ normale en Coup de fouet.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1038,24 @@
       "simpleDesc": "L'effet Ivresse augmente les DGT de rupture que subissent les cibles et chaque fois qu'une cible se fait attaquer par un personnage allié, l'assaillant récupère des PV.",
       "type": "Talent",
       "tag": "Restauration",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "DGT de rupture",
+          "desc": "Les DGT de rupture augmentent avec l'effet de Rupture, la robustesse max de la cible et le niveau du personnage.\nLes DGT de rupture ne peuvent pas infliger de coup critique et ne sont pas affectés par les effets d'augmentation de DGT.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Inflige Ivresse à tous les ennemis pour une durée de #1[i] tours en entrant en combat et inflige des DGT de feu équivalents à #2[i]% de l'ATQ de Gallagher à tous les ennemis.",
       "simpleDesc": "Engage le combat contre les ennemis. Inflige Ivresse ainsi que des DGT de feu mineurs à tous les ennemis après être entré en combat.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,88 @@
       "_id": 130101,
       "id": "salty_dog",
       "name": "B-52",
-      "desc": "Lorsque Gallagher entre en combat, il régénère <nobr>20</nobr> points d'énergie et augmente sa RÉS aux effets de <nobr>50%</nobr>."
+      "desc": "Lorsque Gallagher entre en combat, il régénère <nobr>20</nobr> points d'énergie et augmente sa RÉS aux effets de <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130102,
       "id": "lions_tail",
       "name": "Souffle du dragon",
-      "desc": "Supprime <nobr>1</nobr> <u>malus</u> de l'allié désigné lors de l'utilisation de la compétence. D'autre part, augmente de <nobr>30%</nobr> sa RÉS aux effets pendant <nobr>2</nobr> tours."
+      "desc": "Supprime <nobr>1</nobr> <u>malus</u> de l'allié désigné lors de l'utilisation de la compétence. D'autre part, augmente de <nobr>30%</nobr> sa RÉS aux effets pendant <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Malus",
+          "desc": "Les malus sont des effets de statut négatifs qui affaiblissent les unités. Sauf indication contraire, les malus peuvent être dissipés.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130103,
       "id": "corpse_reviver",
       "name": "Remontant",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130104,
       "id": "last_word",
       "name": "Derniers mots",
-      "desc": "Augmente d'<nobr>1</nobr> tour la durée de l'effet Ivresse infligé par l'ultime de Gallagher."
+      "desc": "Augmente d'<nobr>1</nobr> tour la durée de l'effet Ivresse infligé par l'ultime de Gallagher.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130105,
       "id": "death_in_the_afternoon",
       "name": "Mort dans l'après-midi",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130106,
       "id": "blood_and_sand",
       "name": "Sang et sable",
-      "desc": "Augmente l'effet de Rupture de Gallagher de <nobr>20%</nobr> et son efficacité de Rupture de faiblesse de <nobr>20%</nobr>."
+      "desc": "Augmente l'effet de Rupture de Gallagher de <nobr>20%</nobr> et son efficacité de Rupture de faiblesse de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

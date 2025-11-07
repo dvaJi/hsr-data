@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "Hyacine",
+  "description": "Kota di antara awan terpecah belah seiring waktu, tapi Pelataran Cahaya Senja sekali lagi membuka pintunya, membawa secercah cahaya ke dalam malam abadi.\nWahai Penyembuh Hyacinthia, Keturunan Chrysos yang melindungi Benih Api \"Langit\" ... Warisilah tekad para leluhur dan rajut kembali celah di antara fajar dan senja.\n— Semoga cahaya pelangi menyinari, meleburkan segala dendam, dan membawa fajar kembali ke negeri ini.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Wind DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Memanggil Memosprite Little Ica dan memulihkan HP seluruh rekan tim.",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memanggil Memosprite",
+          "desc": "Memanggil Memosprite ke medan pertempuran. Jika Memosprite sudah berada di medan pertempuran, akan menghapus semua Crowd Control Debuff yang dimiliki oleh Memosprite.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "Memanggil Memosprite Little Ica dan memulihkan HP seluruh rekan tim. Memasuki status \"After Rain\". Saat Hyacine berstatus \"After Rain\", Max HP seluruh rekan tim akan meningkat.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memanggil Memosprite",
+          "desc": "Memanggil Memosprite ke medan pertempuran. Jika Memosprite sudah berada di medan pertempuran, akan menghapus semua Crowd Control Debuff yang dimiliki oleh Memosprite.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "Saat Hyacine atau Little Ica memberikan pemulihan, DMG yang diakibatkan Little Ica akan meningkat.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "Saat pertempuran berikutnya dimulai, akan memulihkan HP seluruh rekan tim dan meningkatkan Max HP mereka.",
       "type": "Technique",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Little Ica",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "Rainclouds, Time to Go!",
+        "desc": "Mengakibatkan Wind DMG pada seluruh musuh sebesar <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> dari akumulasi Outgoing Healing Hyacine dan Little Ica dalam pertempuran ini, serta menghapus <nobr>#2[i]%</nobr> dari akumulasi Outgoing Healing.",
+        "simpleDesc": "Mengakibatkan Wind DMG pada seluruh musuh.",
+        "type": {
+          "id": "Servant",
+          "name": "Skill Memosprite"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "Take Sky in Hand",
+        "desc": "SPD Little Ica menjadi 0 secara tetap, Little Ica akan kebal terhadap <u>Debuff</u>, dan tidak akan muncul di Susunan Aksi.\nJika HP rekan tim selain Little Ica berkurang, maka saat giliran rekan tim mana pun dimulai atau setelah rekan tim mana pun beraksi, Little Ica akan mengonsumsi HP dirinya sendiri sebesar <nobr>#1[i]%</nobr> Max HP untuk memulihkan HP rekan tim yang mengalami pengurangan HP sebesar <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> Max HP Hyacine + <span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span>.\nSaat Hyacine berstatus \"After Rain\", Little Ica akan segera memperoleh 1 <u>giliran tambahan</u> dan otomatis melancarkan \"Rainclouds, Time to Go!\" setelah Hyacine melancarkan kemampuan. Selain itu, saat Little Ica memicu efek pemulihan dari Talent, akan memulihkan ekstra HP seluruh rekan tim sebesar <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> Max HP Hyacine + <span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>. Setelah Little Ica melancarkan kemampuan, durasi giliran seluruh <u>Efek Berkelanjutan</u> yang dimiliki Little Ica akan berkurang 1.",
+        "simpleDesc": "Jika rekan tim selain Little Ica mengalami <span style=\"color:#f29e38ff>pengurangan HP</span>, maka Little Ica akan mengonsumsi HP dirinya sendiri untuk <span style=\"color:#f29e38ff>memulihkan HP</span> rekan tersebut. Saat Hyacine memiliki \"After Rain\", Little Ica akan segera memperoleh 1 <u>giliran tambahan</u> dan otomatis melancarkan Skill Memosprite setelah Hyacine melancarkan kemampuan. Setelah Little Ica melancarkan kemampuan, durasi giliran <u>Efek Berkelanjutan</u> yang dimiliki Little Ica akan berkurang 1.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "Restore"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "Giliran Tambahan",
+            "desc": "Memperoleh 1 giliran tambahan yang tidak akan menghabiskan sisa giliran yang dimiliki. Selama giliran tambahan ini, tidak dapat menggunakan Ultimate apa pun.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "Debuff",
+            "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "Efek Berkelanjutan",
+            "desc": "Termasuk Buff, Debuff, dan efek lainnya.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "Soar, Unto the Sunlight",
+        "desc": "Saat dipanggil, akan memulihkan <nobr>#1[i]</nobr> Energy untuk Hyacine. Saat pertama kali dipanggil, akan memulihkan ekstra <nobr>#2[i]</nobr> Energy.",
+        "simpleDesc": "Saat dipanggil, akan memulihkan Energy untuk Hyacine.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "Fall, Then Take Wing",
+        "desc": "Saat menghilang, akan <u>mendahulukan aksi</u> Hyacine sebesar <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Saat menghilang, akan <u>mendahulukan aksi</u> Hyacine.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Pendahuluan Aksi",
+            "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "Cradle the Candle of Night",
-      "desc": "Saat Hyacine berstatus \"After Rain\", Max HP seluruh rekan tim meningkat ekstra <nobr>50%</nobr>, dan setelah melancarkan serangan akan segera memulihkan HP sebesar <nobr>8%</nobr> Max HP Hyacine."
+      "desc": "Saat Hyacine berstatus \"After Rain\", Max HP seluruh rekan tim meningkat ekstra <nobr>50%</nobr>, dan setelah melancarkan serangan akan segera memulihkan HP sebesar <nobr>8%</nobr> Max HP Hyacine.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "Come Sit in My Courtyard",
-      "desc": "Saat HP rekan tim berkurang, SPD akan meningkat <nobr>30%</nobr> selama <nobr>2</nobr> giliran."
+      "desc": "Saat HP rekan tim berkurang, SPD akan meningkat <nobr>30%</nobr> selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "Depart, Unto the Sun!",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Skill Memosprite +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Skill Memosprite +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "Sunlit Amber, Yours to Keep",
-      "desc": "Trace \"Tempestuous Halt\" memperoleh penguatan. Untuk setiap <nobr>1</nobr> SPD yang berlebih, CRIT DMG Hyacine dan Little Ica akan meningkat ekstra <nobr>2%</nobr>."
+      "desc": "Trace \"Tempestuous Halt\" memperoleh penguatan. Untuk setiap <nobr>1</nobr> SPD yang berlebih, CRIT DMG Hyacine dan Little Ica akan meningkat ekstra <nobr>2%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "Twilight Drapes the Tide",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>. Level Talent Memosprite +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>. Level Talent Memosprite +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "O Sky, Heed My Plea",
-      "desc": "Akumulasi Outgoing Healing yang dihapus saat Little Ica melancarkan Skill Memosprite menjadi <nobr>12%</nobr>. Saat Little Ica berada di medan pertempuran, <u>RES PEN</u> Seluruh Tipe dari seluruh rekan tim akan meningkat <nobr>20%</nobr>."
+      "desc": "Akumulasi Outgoing Healing yang dihapus saat Little Ica melancarkan Skill Memosprite menjadi <nobr>12%</nobr>. Saat Little Ica berada di medan pertempuran, <u>RES PEN</u> Seluruh Tipe dari seluruh rekan tim akan meningkat <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

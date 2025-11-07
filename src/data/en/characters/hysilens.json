@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "Hysilens",
+  "description": "Styxia, the coastal city of intoxication and dreams, where echoes of old songs still drift among the waves.\nHelektra, Daughter of the Sea, Chrysos Heir who cleanses the Ocean's Coreflame, dispels the murky undercurrents and orchestrates a banquet of revelry for the heroes beyond the sky.\nThe show must go on. Even if hope is as fragile as bubbles, the waves will keep surging forward.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Physical DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "There is a high chance to increase the DMG taken by all enemies, and deals Physical DMG to them.",
       "type": "Skill",
       "tag": "AoE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "Deploys a Zone that reduces all enemies' ATK and DEF, and deals Physical DMG to them. While the Zone exists, for every 1 instance of DoT received by enemy targets, deals 1 instance of Physical DoT to them.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "When an ally target attacks, Hysilens has a high chance to inflict the hit enemy target with one of the following states: Wind Shear/Bleed/Burn/Shock.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "Creates a Special Dimension. Enemies within the dimension will not attack ally targets. After entering combat with enemies within the dimension, there's a high chance to inflict #3[i] state(s) from Wind Shear/Bleed/Burn/Shock on each enemy target.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "You Ask Why Hearts Cry",
-      "desc": "While Hysilens is on the field, the DoT dealt by ally targets is equal to <nobr>116%</nobr> of their original value. When Hysilens inflicts Wind Shear/Bleed/Burn/Shock on enemies via her Talent, there is a <nobr>100%</nobr> <u>base chance</u> to additionally inflict the target with 1 instance of Wind Shear/Bleed/Burn/Shock state that is equivalent to those from the original Talent effect and can coexist with such pre-existing states."
+      "desc": "While Hysilens is on the field, the DoT dealt by ally targets is equal to <nobr>116%</nobr> of their original value. When Hysilens inflicts Wind Shear/Bleed/Burn/Shock on enemies via her Talent, there is a <nobr>100%</nobr> <u>base chance</u> to additionally inflict the target with 1 instance of Wind Shear/Bleed/Burn/Shock state that is equivalent to those from the original Talent effect and can coexist with such pre-existing states.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "Tell Me Why Waves Roar High",
-      "desc": "While the Zone is active, the DMG Boost effect from Trace \"The Fiddle of Pearls\" applies to all allies."
+      "desc": "While the Zone is active, the DMG Boost effect from Trace \"The Fiddle of Pearls\" applies to all allies.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "Why Do Lights Bid Goodbye",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "Lo, How Time Flows By",
-      "desc": "While the Zone is active, reduces All-Type RES of all enemies by <nobr>20%</nobr>."
+      "desc": "While the Zone is active, reduces All-Type RES of all enemies by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "In Ablution, I Hum and Sigh",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "When to Return From Where You Lie",
-      "desc": "While the Zone is active, at the start of each turn or after one attack by an ally target, increases the maximum trigger count for Hysilens's Physical DoT effect to <nobr>12</nobr>, and increases the multiplier of the DMG dealt by <nobr>20%</nobr>."
+      "desc": "While the Zone is active, at the start of each turn or after one attack by an ally target, increases the maximum trigger count for Hysilens's Physical DoT effect to <nobr>12</nobr>, and increases the multiplier of the DMG dealt by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

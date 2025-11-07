@@ -2,6 +2,7 @@
   "_id": 1003,
   "id": "himeko",
   "name": "Himeko",
+  "description": "The one who repaired the Astral Express.\nTo witness the vast starry sky, she decided to travel with the Astral Express.\nHer hobby is brewing hand-made coffee.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,22 @@
       "_id": 100301,
       "id": "sawblade_tuning",
       "name": "Sawblade Tuning",
-      "desc": "Deals Fire DMG equal to #1[i]% of Himeko's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Fire DMG to a single enemy.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Himeko's ATK to one enemy.",
+      "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 100302,
       "id": "molten_detonation",
       "name": "Molten Detonation",
-      "desc": "Deals Fire DMG equal to #1[i]% of Himeko's ATK to a single enemy and Fire DMG equal to #2[i]% of Himeko's ATK to enemies adjacent to it.",
-      "simpleDesc": "Deals Fire DMG to a single enemy and minor Fire DMG to enemies adjacent to it.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Himeko's ATK to one designated enemy and Fire DMG equal to #2[i]% of Himeko's ATK to enemies adjacent to it.",
+      "simpleDesc": "Deals Fire DMG to one enemy and minor Fire DMG to enemies adjacent to it.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 13
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Deals Fire DMG to all enemies and regenerates Energy if enemies are defeated.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 27
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "At the start of battle or when an enemy's Weakness is Broken, gains Charge.\nAfter any ally target performs an attack, if fully Charged, launches Follow-up ATK and deals Fire DMG to all enemies, consuming all Charge points.",
       "type": "Talent",
       "tag": "AoE",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,24 @@
       "simpleDesc": "Creates a Special Dimension. After entering combat with enemies in the dimension, there is a high chance to increase Fire DMG taken by enemies.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1441,79 @@
       "_id": 100301,
       "id": "childhood",
       "name": "Childhood",
-      "desc": "After \"Victory Rush\" is triggered, Himeko's SPD increases by <nobr>20%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "After \"Victory Rush\" is triggered, Himeko's SPD increases by <nobr>20%</nobr> for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100302,
       "id": "convergence",
       "name": "Convergence",
-      "desc": "Deals <nobr>15%</nobr> more DMG to enemies whose HP percentage is <nobr>50%</nobr> or less."
+      "desc": "Deals <nobr>15%</nobr> more DMG to enemies whose HP percentage is <nobr>50%</nobr> or less.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100303,
       "id": "poised",
       "name": "Poised",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100304,
       "id": "dedication",
       "name": "Dedication",
-      "desc": "When Himeko's Skill inflicts Weakness Break on an enemy, she gains <nobr>1</nobr> extra point(s) of Charge."
+      "desc": "When Himeko's Skill inflicts Weakness Break on an enemy, she gains <nobr>1</nobr> extra point(s) of Charge.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100305,
       "id": "aspiration",
       "name": "Aspiration",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100306,
       "id": "trailblaze",
       "name": "Trailblaze!",
-      "desc": "Ultimate deals 2 extra instances of Fire DMG equal to <nobr>40%</nobr> of the original DMG to one random enemy."
+      "desc": "Ultimate deals 2 extra instances of Fire DMG equal to <nobr>40%</nobr> of the original DMG to one random enemy.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1405,
   "id": "anaxa",
   "name": "Anaxa",
+  "description": "Le Bosquet de l'épiphanie, sanctuaire du savoir et berceau des esprits éclairés.\nPourtant, voici qu'Anaxagoras, blasphémateur et Héritier chryséen, défie la flamme divine de la Raison et répond à la question suivante : es-tu prêt à défier la prophétie même si cela implique le déshonneur, et iras-tu enfoncer les épines du doute dans l'Arbre sacré de la sagesse ?\n« C'est ridicule. Ce monde n'est qu'un tissu de mensonges, je suis la seule vérité. »",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique. Ces DGT rebondissent 5 fois au total, en ciblant en priorité les cibles qui n'ont pas encore été touchées. Plus il y a de cibles ennemies sur le champ de bataille, plus les DGT sont importants.",
       "type": "Compétence",
       "tag": "Rebond",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Applique Sublimation à tous les ennemis et inflige des DGT de vent. Les cibles dans l'état Sublimation subissent simultanément 7 types de faiblesses et ne peuvent pas agir si elles n'ont pas de RÉS au contrôle.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1065,15 @@
       "simpleDesc": "Après qu'une attaque d'Anaxa touche une cible ennemie, il lui applique 1 Faiblesse aléatoire. Les ennemis qui ont au moins #3[i] Faiblesses entrent dans l'état Révélation intrinsèque. Les DGT d'Anaxa augmentent sur les cibles en état de Révélation intrinsèque et après qu'Anaxa a utilisé son ATQ normale ou sa compétence sur ces cibles, il lance 1 instance supplémentaire de sa compétence sans consommer de point de compétence.",
       "type": "Talent",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1361,6 +1398,15 @@
       "simpleDesc": "Applique l'état Terrifié à tous les ennemis à proximité. Attaquer un ennemi terrifié sera toujours considéré comme une entrée en combat via une Faiblesse, et 1 Faiblesse du type de l'assaillant est appliquée à toutes les cibles après être entré en combat.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1378,37 +1424,79 @@
       "_id": 140501,
       "id": "magician_isolated_by_stars",
       "name": "Magicien isolé par les étoiles",
-      "desc": "Récupère <nobr>1</nobr> point de compétence après avoir utilisé sa compétence pour la première fois. Lorsque la compétence touche une cible ennemie, réduit la DÉF de la cible de <nobr>16%</nobr> pendant <nobr>2</nobr> tours."
+      "desc": "Récupère <nobr>1</nobr> point de compétence après avoir utilisé sa compétence pour la première fois. Lorsque la compétence touche une cible ennemie, réduit la DÉF de la cible de <nobr>16%</nobr> pendant <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140502,
       "id": "soul_true_to_history",
       "name": "Personnage historique authentique",
-      "desc": "Lorsqu'une cible ennemie entre sur le champ de bataille, déclenche l'effet du talent Implant de Faiblesse 1 fois, et réduit toutes les RÉS de type de cette cible de <nobr>20%</nobr>."
+      "desc": "Lorsqu'une cible ennemie entre sur le champ de bataille, déclenche l'effet du talent Implant de Faiblesse 1 fois, et réduit toutes les RÉS de type de cette cible de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140503,
       "id": "pupil_etched_into_cosmos",
       "name": "Iris incrusté du vide",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140504,
       "id": "blaze_plunged_to_canyon",
       "name": "Feu éteint de la vallée",
-      "desc": "Augmente l'ATQ de <nobr>30%</nobr> pendant <nobr>2</nobr> tours lors de l'utilisation de la compétence. Cet effet peut être cumulé jusqu'à <nobr>2</nobr> fois."
+      "desc": "Augmente l'ATQ de <nobr>30%</nobr> pendant <nobr>2</nobr> tours lors de l'utilisation de la compétence. Cet effet peut être cumulé jusqu'à <nobr>2</nobr> fois.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140505,
       "id": "embryo_set_beyond_vortex",
       "name": "Embryon au-delà du vortex centrifuge",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140506,
       "id": "everything_is_in_everything",
       "name": "Tout est dans le tout",
-      "desc": "Les DGT infligés par Anaxa sont équivalents à <nobr>130%</nobr> des DGT initiaux. Les 2 effets de la Trace Vide nécessaire se déclenchent immédiatement et ne dépendent plus du nombre de personnages de l'Érudition présents dans l'équipe."
+      "desc": "Les DGT infligés par Anaxa sont équivalents à <nobr>130%</nobr> des DGT initiaux. Les 2 effets de la Trace Vide nécessaire se déclenchent immédiatement et ne dépendent plus du nombre de personnages de l'Érudition présents dans l'équipe.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

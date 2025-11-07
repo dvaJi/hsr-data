@@ -2,6 +2,7 @@
   "_id": 1313,
   "id": "sunday",
   "name": "Sonntag",
+  "description": "Der Traum der Ordnung ist nicht mehr, doch manche hegen immer noch dieselben Absichten.\n – Ein Reisender, dem die Flügel gestutzt wurden ... Wohin werden ihn seine Schritte führen?",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner geringen imaginären SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Lässt einen anvisierten Verbündeten und sein beschworenes Objekt sofort eine Aktion ausführen und erhöht ihren verursachten SCH. Wenn das Ziel ein beschworenes Objekt besitzt, wird diese SCH-Erhöhung zusätzlich erhöht.\nStellt nach der Anwendung der Fertigkeit gegen den „Geheiligten“ 1 Fertigkeitspunkt wieder her.\nWenn Sonntag diese Fähigkeit auf Figuren anwendet, die dem Pfad der Harmonie folgen, kann der Effekt des sofortigen Aktionsvorzugs nicht ausgelöst werden.",
       "type": "Fertigkeit",
       "tag": "Unterstützung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Stellt bei einem anvisierten Verbündeten Energie wieder her und lässt ihn sowie sein beschworenes Objekt zu „Geheiligten“ werden. Erhöht den KRIT-SCH von den Geheiligten.",
       "type": "Ultimate",
       "tag": "Unterstützung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "Erhöht beim Einsatz der Fertigkeit die KRIT-Rate des Ziels.",
       "type": "Talent",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1443,15 @@
       "simpleDesc": "Wenn Sonntag nach dem Einsatz der Technik im nächsten Kampf zum ersten Mal auf einen Verbündeten eine Fähigkeit anwendet, wird der verursachte SCH des Ziels erhöht.",
       "type": "Technik",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1469,79 @@
       "_id": 131301,
       "id": "millenniums_quietus",
       "name": "Ende der Jahrtausendstille",
-      "desc": "Wenn Sonntag seine Fertigkeit einsetzt, kann das Ziel beim Verursachen von SCH <nobr>16%</nobr> der VTD der Gegner ignorieren und beschworenes Objekt <nobr>40%</nobr> der VTD der Gegner ignorieren. Dieser Effekt hält <nobr>2</nobr> Rd. an."
+      "desc": "Wenn Sonntag seine Fertigkeit einsetzt, kann das Ziel beim Verursachen von SCH <nobr>16%</nobr> der VTD der Gegner ignorieren und beschworenes Objekt <nobr>40%</nobr> der VTD der Gegner ignorieren. Dieser Effekt hält <nobr>2</nobr> Rd. an.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131302,
       "id": "faith_outstrips_frailty",
       "name": "Glaube ersetzt Unvollkommenheit",
-      "desc": "Stellt nach dem ersten Einsatz des Ultimates <nobr>2</nobr> Fertigkeitspunkte wieder her. Erhöht den verursachten SCH von „Geheiligten“ um <nobr>30%</nobr>."
+      "desc": "Stellt nach dem ersten Einsatz des Ultimates <nobr>2</nobr> Fertigkeitspunkte wieder her. Erhöht den verursachten SCH von „Geheiligten“ um <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131303,
       "id": "hermitage_of_thorns",
       "name": "Dornige Einsiedelei",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131304,
       "id": "sculptures_preamble",
       "name": "Präambel der Skulptur",
-      "desc": "Stellt zu Beginn der Runde <nobr>8</nobr> Pkt. Energie wieder her."
+      "desc": "Stellt zu Beginn der Runde <nobr>8</nobr> Pkt. Energie wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131305,
       "id": "paper_raft_in_silver_bay",
       "name": "Papierfloß in der silbernen Bucht",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131306,
       "id": "dawn_of_sidereal_cacophony",
       "name": "Beginn der astralen Kakophonie",
-      "desc": "Der Effekt der KRIT-Rate-Erhöhung des Talents wird bis zu <nobr>3</nobr>-fach stapelbar und die Dauer des Talents wird um <nobr>1</nobr> Rd. verlängert. Wenn Sonntag seinen Ultimate einsetzt, verleiht er dem Ziel auch die KRIT-Rate-Erhöhung des Talents. Wenn diese wirksam wird und die KRIT-Rate des Ziels <nobr>100</nobr> % überschreitet, wird der KRIT-SCH für je 1 % überschüssiger KRIT-Rate um <nobr>2%</nobr> erhöht."
+      "desc": "Der Effekt der KRIT-Rate-Erhöhung des Talents wird bis zu <nobr>3</nobr>-fach stapelbar und die Dauer des Talents wird um <nobr>1</nobr> Rd. verlängert. Wenn Sonntag seinen Ultimate einsetzt, verleiht er dem Ziel auch die KRIT-Rate-Erhöhung des Talents. Wenn diese wirksam wird und die KRIT-Rate des Ziels <nobr>100</nobr> % überschreitet, wird der KRIT-SCH für je 1 % überschüssiger KRIT-Rate um <nobr>2%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

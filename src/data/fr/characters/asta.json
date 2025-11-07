@@ -2,6 +2,7 @@
   "_id": 1009,
   "id": "asta",
   "name": "Asta",
+  "description": "Chercheuse en chef à bord de la Station spatiale Herta et héritière d'une noble famille.\nC'est une astronome curieuse qui se révèle très douée pour gérer l'équipe éclectique qui occupe la station spatiale.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,22 @@
       "_id": 100901,
       "id": "spectrum_beam",
       "name": "Rayon spectral",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ d'Asta à un ennemi unique.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ d'Asta à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 100902,
       "id": "meteor_storm",
       "name": "Tempête de météores",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ d'Asta à un ennemi unique et inflige des DGT 4 fois supplémentaires, infligeant à chaque fois des DGT de feu équivalents à #1[i]% de l'ATQ d'Asta à un ennemi aléatoire.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ d'Asta à un ennemi désigné et inflige des DGT 4 fois supplémentaires, infligeant à chaque fois des DGT de feu équivalents à #1[i]% de l'ATQ d'Asta à un ennemi aléatoire.",
       "simpleDesc": "Inflige des DGT de feu mineurs à des cibles ennemies uniques pour un total de 5 rebonds.",
       "type": "Compétence",
       "tag": "Rebond",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "Augmente la VIT de tous les alliés.",
       "type": "Ultime",
       "tag": "Soutien",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,15 @@
       "simpleDesc": "Le personnage obtient 1 cumul de Chargement pour chaque ennemi différent qu'il touche, pour un maximum de 5 cumuls. Chaque cumul de Chargement augmente l'ATQ de tous les alliés. Perd des cumuls de Chargement au début de son propre tour.",
       "type": "Talent",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1327,6 +1373,15 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Inflige des DGT de feu équivalents à #1[i]% de l'ATQ d'Asta à tous les ennemis après être entré en combat.",
       "simpleDesc": "Engage le combat contre les ennemis. Inflige des DGT mineurs à tous les ennemis après être entré en combat.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1343,37 +1398,79 @@
       "_id": 100901,
       "id": "star_sings_sans_verses_or_vocals",
       "name": "Chanson d'une étoile sans parole",
-      "desc": "Lors de l'utilisation de la compétence, inflige des DGT 1 fois supplémentaire à un ennemi aléatoire."
+      "desc": "Lors de l'utilisation de la compétence, inflige des DGT 1 fois supplémentaire à un ennemi aléatoire.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100902,
       "id": "moon_speaks_in_wax_and_wane",
       "name": "Aléas des cycles de la lune",
-      "desc": "Après utilisation de l'ultime d'Asta, ses cumuls de Chargement ne diminuent pas au tour suivant."
+      "desc": "Après utilisation de l'ultime d'Asta, ses cumuls de Chargement ne diminuent pas au tour suivant.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100903,
       "id": "meteor_showers_for_wish_and_want",
       "name": "Pluie de météores à volonté",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100904,
       "id": "aurora_basks_in_beauty_and_bliss",
       "name": "Manifestation de l'aurore",
-      "desc": "Le taux de régénération d'énergie d'Asta augmente de <nobr>15%</nobr> lorsqu'elle dispose de <nobr>2</nobr> cumuls de Chargement ou plus."
+      "desc": "Le taux de régénération d'énergie d'Asta augmente de <nobr>15%</nobr> lorsqu'elle dispose de <nobr>2</nobr> cumuls de Chargement ou plus.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100905,
       "id": "nebula_secludes_in_runes_and_riddles",
       "name": "Nébuleuse de runes et de mystères",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100906,
       "id": "cosmos_dreams_in_calm_and_comfort",
       "name": "Repos de la voie lactée",
-      "desc": "Les cumuls de Chargement perdus à chaque tour diminuent de <nobr>1</nobr>."
+      "desc": "Les cumuls de Chargement perdus à chaque tour diminuent de <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

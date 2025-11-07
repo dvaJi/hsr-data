@@ -2,6 +2,7 @@
   "_id": 8006,
   "id": "trailblazer_harmony_girl",
   "name": "개척자 화합",
+  "description": "은하열차에 탑승한 {F#소녀}{M#소년}.\n스텔라론이 가져온 위기를 해결하기 위해, 은하열차와의 동행을 선택한다",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 허수 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "단일 적에게 소량의 허수 속성 피해를 가하고, 총 5회 바운스한다",
       "type": "전투 스킬",
       "tag": "바운스",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "모든 아군에게 [댄스 파트너] 효과를 부여한다. [댄스 파트너]를 보유한 아군의 격파 특수효과가 증가하고, 약점 격파 상태의 적을 공격하면 추가로 슈퍼 격파 피해를 1회 가한다",
       "type": "필살기",
       "tag": "서포트",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "약점 격파 상태",
+          "desc": "적의 강인성이 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 진입한 목표는 행동 게이지가 감소한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "슈퍼 격파 피해",
+          "desc": "격파 특수효과, 이번 공격의 강인성 감소 수치, 캐릭터 레벨이 높을수록 가하는 슈퍼 격파 피해가 증가한다.\n슈퍼 격파 피해는 치명타를 발동하지 않으며, 피해 증가류 효과의 영향을 받지 않는다.\n슈퍼 격파 피해 역시 격파 피해에 속한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "적의 약점이 격파되면 개척자는 에너지를 회복한다",
       "type": "특성",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "다음 전투 시작 시 모든 아군의 격파 특수효과가 증가한다",
       "type": "비술",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800601,
       "id": "best_seat_in_the_house",
       "name": "최고의 관중석",
-      "desc": "처음으로 전투 스킬을 발동한 후 즉시 전투 스킬 포인트를 <nobr>1</nobr>pt 회복한다"
+      "desc": "처음으로 전투 스킬을 발동한 후 즉시 전투 스킬 포인트를 <nobr>1</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800602,
       "id": "jailbreaking_rainbowwalk",
       "name": "탈옥의 레인보우 스텝",
-      "desc": "전투 시작 시 개척자의 에너지 회복효율이 <nobr>25%</nobr> 증가한다. 지속 시간: <nobr>3</nobr>턴"
+      "desc": "전투 시작 시 개척자의 에너지 회복효율이 <nobr>25%</nobr> 증가한다. 지속 시간: <nobr>3</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800603,
       "id": "sanatorium_for_rest_notes",
       "name": "쉼표의 요양원",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800604,
       "id": "dove_in_tophat",
       "name": "비둘기를 감춘 모자",
-      "desc": "개척자가 필드에 있을 시, 자신을 제외한 동료의 격파 특수효과를 개척자의 격파 특수효과의 <nobr>15%</nobr>만큼 증가시킨다"
+      "desc": "개척자가 필드에 있을 시, 자신을 제외한 동료의 격파 특수효과를 개척자의 격파 특수효과의 <nobr>15%</nobr>만큼 증가시킨다",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800605,
       "id": "poem_favors_rhythms_of_old",
       "name": "오래된 리듬을 간직한 시",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800606,
       "id": "tomorrow_rest_in_spotlight",
       "name": "내일은 스포트라이트 아래서 휴식을",
-      "desc": "전투 스킬의 피해 횟수가 추가로 <nobr>2</nobr>회 증가한다"
+      "desc": "전투 스킬의 피해 횟수가 추가로 <nobr>2</nobr>회 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

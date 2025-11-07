@@ -2,6 +2,7 @@
   "_id": 1310,
   "id": "firefly",
   "name": "Luciole",
+  "description": "Membre des Chasseurs de Stellaron protégée par une armure mécanique appelée « SAM ». Son caractère est marqué par une loyauté et une détermination sans faille.\nConçue comme arme pour lutter contre l'Essaim, elle subit une croissance accélérée, ce qui lui vaut une vie éphémère.\nElle a rejoint les Chasseurs de Stellaron dans l'espoir de survivre en changeant le cours de son destin.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Consomme une partie des PV du personnage pour régénérer des points d'énergie, inflige des DGT de feu à un ennemi unique et avance la prochaine action du personnage.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,15 @@
       "simpleDesc": "Entre dans l'état Combustion complète. Avance l'action du personnage de 100 %, son ATQ normale et sa compétence deviennent renforcées, et sa VIT, son efficacité de Rupture de faiblesse et les DGT de rupture qu'il inflige aux cibles ennemies augmentent jusqu'à la fin du compte à rebours.",
       "type": "Ultime",
       "tag": "Renforcement",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,24 @@
       "simpleDesc": "Plus ses PV sont bas, moins le personnage subit de DGT. Dans l'état Combustion complète, l'effet de réduction de DGT est toujours au maximum et la RÉS aux effets augmente. Si ses points d'énergie sont inférieurs à #2[i]% en début de combat, les régénère jusqu'à #2[i]%. Quand l'énergie est à son maximum, tous les malus appliqués au personnage sont dissipés.",
       "type": "Talent",
       "tag": "Défense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Malus",
+          "desc": "Les malus sont des effets de statut négatifs qui affaiblissent les unités. Sauf indication contraire, les malus peuvent être dissipés.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1490,15 @@
       "desc": "S'envole et se déplace librement dans les airs pendant #1[i] secondes. Cet effet peut être annulé prématurément en déclenchant une attaque plongeante. À la fin de la durée, plonge et attaque immédiatement tous les ennemis dans une zone définie. Applique une Faiblesse au feu pour #3[i] tours aux ennemis au début de chaque vague, puis inflige des DGT de feu équivalents à #2[i]% de l'ATQ de SAM à tous les ennemis.",
       "simpleDesc": "S'envole pour se déplacer librement. Après quelques secondes dans les airs, plonge et attaque les ennemis dans une zone définie. Au début de chaque vague, applique une Faiblesse au feu à tous les ennemis et leur inflige des DGT de feu.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1517,105 @@
       "_id": 131001,
       "id": "in_reddened_chrysalis_i_once_rest",
       "name": "Repos de la chrysalide écarlate",
-      "desc": "Ignore <nobr>15%</nobr> de la DÉF de la cible lors de l'utilisation de la compétence renforcée et la compétence renforcée ne consomme pas de point de compétence."
+      "desc": "Ignore <nobr>15%</nobr> de la DÉF de la cible lors de l'utilisation de la compétence renforcée et la compétence renforcée ne consomme pas de point de compétence.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131002,
       "id": "from_shattered_sky_i_free_fall",
       "name": "Chute des cieux fracturés",
-      "desc": "Lorsque SAM utilise son ATQ normale renforcée ou sa compétence renforcée dans l'état Combustion complète pour éliminer une cible ennemie ou lui <u>infliger une Rupture de faiblesse</u>, 1 <u>tour supplémentaire</u> lui est immédiatement accordé. Cet effet peut se déclencher à nouveau après <nobr>1</nobr> tour."
+      "desc": "Lorsque SAM utilise son ATQ normale renforcée ou sa compétence renforcée dans l'état Combustion complète pour éliminer une cible ennemie ou lui <u>infliger une Rupture de faiblesse</u>, 1 <u>tour supplémentaire</u> lui est immédiatement accordé. Cet effet peut se déclencher à nouveau après <nobr>1</nobr> tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Tour supplémentaire",
+          "desc": "Gagne 1 tour supplémentaire qui n'augmente pas le nombre de tours avant la prochaine action. Durant ce tour supplémentaire, vous ne pouvez pas utiliser d'ultime.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131003,
       "id": "amidst_silenced_stars_i_deep_sleep",
       "name": "Sommeil au milieu de la galaxie silencieuse",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131004,
       "id": "upon_lighted_fyrefly_i_soon_gaze",
       "name": "Regard sur la flamme de luciole",
-      "desc": "Augmente de <nobr>50%</nobr> la RÉS aux effets de SAM dans l'état Combustion complète."
+      "desc": "Augmente de <nobr>50%</nobr> la RÉS aux effets de SAM dans l'état Combustion complète.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131005,
       "id": "from_undreamt_night_i_thence_shine",
       "name": "Lueur dans la nuit sans rêve",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131006,
       "id": "in_finalized_morrow_i_full_bloom",
       "name": "Métamorphose de l'ultime lendemain",
-      "desc": "Augmente de <nobr>20%</nobr> la <u>PÉN de RÉS</u> au feu de SAM dans l'état Combustion complète. Son efficacité de Rupture de faiblesse augmente de <nobr>50%</nobr> lors de l'utilisation de l'ATQ normale renforcée ou de la compétence renforcée."
+      "desc": "Augmente de <nobr>20%</nobr> la <u>PÉN de RÉS</u> au feu de SAM dans l'état Combustion complète. Son efficacité de Rupture de faiblesse augmente de <nobr>50%</nobr> lors de l'utilisation de l'ATQ normale renforcée ou de la compétence renforcée.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

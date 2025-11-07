@@ -2,6 +2,7 @@
   "_id": 1224,
   "id": "march_7th_imaginary",
   "name": "三月七 • 虛數",
+  "description": "換上仙舟服飾的三月七，執劍的武俠少女。\n向雲璃與彥卿拜師學藝，為在仙舟留下更多美好的「回憶」而躍躍欲試。",
   "rarity": 4,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量虛數屬性傷害，獲得#2[i]點充能。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "使我方單體成為【師父】。發動普通攻擊或造成強化普通攻擊的傷害時，根據【師父】命途觸發對應效果：\n「智識」、「毀滅」、「巡獵」、「記憶」：額外造成基於【師父】屬性的附加傷害。\n「同諧」、「虛無」、「存護」、「豐饒」：削韌值提高。",
       "type": "戰技",
       "tag": "輔助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -747,6 +775,24 @@
       "simpleDesc": "對敵方單體造成虛數屬性傷害，並使下一次強化普通攻擊的段數和造成傷害的機率提高。",
       "type": "終結技",
       "tag": "單體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定機率",
+          "desc": "不會被任何因素影響的固定機率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1065,6 +1111,15 @@
       "simpleDesc": "【師父】發動攻擊或施放終結技後，三月七獲得充能。充能達到#1[i]點時立即行動，造成的傷害提高，普通攻擊獲得強化。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1383,6 +1438,15 @@
       "simpleDesc": "每當隊友施放秘技，下一次進入戰鬥後三月七獲得充能。使用秘技，下一次進入戰鬥後恢復能量。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1400,37 +1464,88 @@
       "_id": 122401,
       "id": "my_sword_stirs_starlight",
       "name": "初花學劍動星芒",
-      "desc": "場上存在【師父】時，三月七的速度提高<nobr>10%</nobr>。"
+      "desc": "場上存在【師父】時，三月七的速度提高<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122402,
       "id": "blade_dances_on_waves_fight",
       "name": "白刃耀雪舞駭浪",
-      "desc": "每當【師父】發動普通攻擊或戰技攻擊敵方目標後，三月七立即發動<u>追加攻擊</u>，對本次攻擊的主目標造成等同於三月七<nobr>60%</nobr>攻擊力的虛數屬性傷害，並根據【師父】的命途觸發對應效果，隨後獲得<nobr>1</nobr>點充能。若不存在可攻擊的主目標，則攻擊敵方隨機單體。該效果每回合最多觸發1次。"
+      "desc": "每當【師父】發動普通攻擊或戰技攻擊敵方目標後，三月七立即發動<u>追加攻擊</u>，對本次攻擊的主目標造成等同於三月七<nobr>60%</nobr>攻擊力的虛數屬性傷害，並根據【師父】的命途觸發對應效果，隨後獲得<nobr>1</nobr>點充能。若不存在可攻擊的主目標，則攻擊敵方隨機單體。該效果每回合最多觸發1次。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122403,
       "id": "sharp_wit_in_martial_might",
       "name": "頭腦機靈本領強",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122404,
       "id": "being_fabulous_never_frights",
       "name": "龍飛鳳舞不窩囊",
-      "desc": "回合開始時，恢復<nobr>5</nobr>點能量。"
+      "desc": "回合開始時，恢復<nobr>5</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122405,
       "id": "sword_delights_sugar_blights",
       "name": "多練武術少吃糖",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122406,
       "id": "me_the_best_girl_in_sight",
       "name": "天下第一本小姐",
-      "desc": "施放終結技後，下一次強化普通攻擊造成的暴擊傷害提高<nobr>50%</nobr>。"
+      "desc": "施放終結技後，下一次強化普通攻擊造成的暴擊傷害提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

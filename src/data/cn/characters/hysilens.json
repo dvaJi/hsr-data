@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "海瑟音",
+  "description": "斯缇科西亚，醉与梦的海滨之城，旧日的歌声仍在浮浪间回荡。\n大海的女儿海列屈拉，清洗「海洋」火种的黄金裔，驱散污浊的暗流，为天外的英雄奏响不醉不归的盛宴\n——散场之时未到，纵然希望如泡沫般易碎，浪花也将一往无前。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量物理属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "大概率使敌方全体受到的伤害提高，并对其造成物理属性伤害。",
       "type": "战技",
       "tag": "群攻",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "展开结界使敌方全体攻击力、防御力降低，并对其造成物理属性伤害。结界存在时，敌方目标每受到1次持续伤害，对其造成1次物理属性持续伤害。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "无法战斗状态",
+          "desc": "当我方目标的当前生命值被削减至0时进入的特殊状态，处于该状态的目标无法继续战斗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "我方目标攻击时，海瑟音有大概率使被击中的敌方目标陷入风化/裂伤/灼烧/触电其中1种状态。",
       "type": "天赋",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "制造特殊领域。领域内敌人不会攻击我方目标。与领域内敌人进入战斗后，大概率使敌方每个单体目标陷入风化/裂伤/灼烧/触电其中#3[i]种状态。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "你问我心为何悲伤",
-      "desc": "海瑟音在场时，我方目标造成的持续伤害为原伤害的<nobr>116%</nobr>，当海瑟音通过天赋使敌人陷入风化/裂伤/灼烧/触电状态时，有<nobr>100%</nobr>的<u>基础概率</u>额外使其陷入一次与原天赋效果相同，且可同时存在的风化/裂伤/灼烧/触电状态。"
+      "desc": "海瑟音在场时，我方目标造成的持续伤害为原伤害的<nobr>116%</nobr>，当海瑟音通过天赋使敌人陷入风化/裂伤/灼烧/触电状态时，有<nobr>100%</nobr>的<u>基础概率</u>额外使其陷入一次与原天赋效果相同，且可同时存在的风化/裂伤/灼烧/触电状态。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "你说浪花为何喧响",
-      "desc": "结界持续期间，行迹【珍珠的琴弦】的造成伤害提高效果对我方全体生效。"
+      "desc": "结界持续期间，行迹【珍珠的琴弦】的造成伤害提高效果对我方全体生效。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "可知灯火为何遗忘",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "看呀，时间为何流淌",
-      "desc": "结界持续期间，使敌方全体全属性抗性降低<nobr>20%</nobr>。"
+      "desc": "结界持续期间，使敌方全体全属性抗性降低<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "于梳洗中，我轻吟浅唱",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "沉没的你，何日返乡",
-      "desc": "结界持续期间，每回合开始时或我方目标单次攻击后，触发海瑟音物理持续伤害效果的次数上限提高至<nobr>12</nobr>次，且造成的伤害倍率提高<nobr>20%</nobr>。"
+      "desc": "结界持续期间，每回合开始时或我方目标单次攻击后，触发海瑟音物理持续伤害效果的次数上限提高至<nobr>12</nobr>次，且造成的伤害倍率提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

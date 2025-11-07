@@ -2,6 +2,7 @@
   "_id": 1210,
   "id": "guinaifen",
   "name": "Guinaifen",
+  "description": "Nghệ sĩ tạm trú ở Xianzhou Luofu, hoặc có thể nói là, nghệ nhân đường phố.\nSau khi cơm no ba bữa, sẽ theo đuổi cuộc sống mới của mình ở Luofu.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Gây Sát Thương Hỏa cho 1 kẻ địch, gây lượng nhỏ Sát Thương Hỏa cho mục tiêu lân cận, có xác suất lớn thi triển Thiêu Đốt.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,18 @@
       "simpleDesc": "Gây sát thương Hỏa cho toàn phe địch, nếu kẻ địch đang ở trạng thái Thiêu Đốt, sẽ khiến trạng thái Thiêu Đốt này gây thêm 1 lần sát thương.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "Sau khi trạng thái Thiêu Đốt gây sát thương lên kẻ địch, sẽ có xác suất lớn thi triển \"Nuốt Lửa\".",
       "type": "Thiên Phú",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1432,6 +1496,24 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào trận sẽ gây #2[i] lần sát thương, mỗi lần sát thương sẽ gây cho 1 kẻ địch ngẫu nhiên Sát Thương Hỏa bằng #1[i]% tấn công của Guinaifen và có #3[i]% xác suất cơ bản khiến mục tiêu rơi vào trạng thái Nuốt Lửa.",
       "simpleDesc": "Tấn công kẻ địch. Sau khi vào chiến đấu, gây một lượng nhỏ Sát Thương Hỏa lên 1 kẻ địch đồng thời có xác suất lớn thi triển trạng thái \"Nuốt Lửa\", tổng cộng Nảy Bật 4 lần.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1450,37 +1532,88 @@
       "_id": 121001,
       "id": "slurping_noodles_during_handstand",
       "name": "Trồng Cây Chuối Ăn Mì",
-      "desc": "Khi thi triển Chiến Kỹ, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến kháng hiệu ứng của mục tiêu phe địch bị tấn công giảm <nobr>10%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi thi triển Chiến Kỹ, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến kháng hiệu ứng của mục tiêu phe địch bị tấn công giảm <nobr>10%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121002,
       "id": "brushing_teeth_while_whistling",
       "name": "Vừa Đánh Răng Vừa Huýt Sáo",
-      "desc": "Khi kẻ địch đang ở trạng thái Thiêu Đốt, tấn công thường và Chiến Kỹ của Guinaifen sẽ tăng <nobr>40%</nobr> Bội Số Sát Thương Thiêu Đốt gây ra cho kẻ địch đó."
+      "desc": "Khi kẻ địch đang ở trạng thái Thiêu Đốt, tấn công thường và Chiến Kỹ của Guinaifen sẽ tăng <nobr>40%</nobr> Bội Số Sát Thương Thiêu Đốt gây ra cho kẻ địch đó.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121003,
       "id": "smashing_boulder_on_chest",
       "name": "Đập Đá Trên Ngực",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121004,
       "id": "blocking_pike_with_neck",
       "name": "Yết Hầu Chặn Giáo",
-      "desc": "Mỗi khi trạng thái Thiêu Đốt do Guinaifen thi triển gây sát thương, Guinaifen sẽ hồi <nobr>2</nobr> năng lượng."
+      "desc": "Mỗi khi trạng thái Thiêu Đốt do Guinaifen thi triển gây sát thương, Guinaifen sẽ hồi <nobr>2</nobr> năng lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121005,
       "id": "swallowing_sword_to_stomach",
       "name": "Nuốt Chửng Trường Kiếm",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121006,
       "id": "catching_bullet_with_hands",
       "name": "Tay Không Bắt Đạn",
-      "desc": "Giúp số tầng cộng dồn của \"Nuốt Lửa\" tăng <nobr>1</nobr> tầng."
+      "desc": "Giúp số tầng cộng dồn của \"Nuốt Lửa\" tăng <nobr>1</nobr> tầng.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

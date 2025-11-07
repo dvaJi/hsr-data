@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "Hyacine",
+  "description": "As the city-state in the clouds crumbles through time, the Twilight Courtyard opens its gates once more, bringing a glimmer of light to Evernight.\nPhysician Hyacinthia is the Chrysos Heir who watches over the Coreflame of Sky. Carrying the will of her ancestors, she mends the torn fabric of dusk and dawn.\nMay the rainbow light pour down, dissolve all grudges, and bring the dawn back to this land.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Wind DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Summons memosprite Little Ica, and restores HP for all allies.",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "Summons memosprite Little Ica, and restores HP for all allies. Enters the \"After Rain\" state. While Hyacine is in this state, increases all allies' Max HP.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "When Hyacine or Little Ica provides healing, increases Little Ica's DMG dealt.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "When the next battle starts, restores HP for all allies and increases Max HP.",
       "type": "Technique",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Little Ica",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "Rainclouds, Time to Go!",
+        "desc": "Deals Wind DMG to all enemies by an amount equal to <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> of the tally of healing done by Hyacine and Little Ica in the current battle, and clears <nobr>#2[i]%</nobr> of this tally of healing.",
+        "simpleDesc": "Deals Wind DMG to all enemies.",
+        "type": {
+          "id": "Servant",
+          "name": "Memosprite Skill"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "Take Sky in Hand",
+        "desc": "Little Ica maintains 0 SPD, is immune to <u>debuffs</u>, and will not appear in the Action Order.\nIf the HP of an ally target (except Little Ica) is reduced, then at the start of any target's turn or after any target takes action, Little Ica will consume <nobr>#1[i]%</nobr> of their own Max HP and heal the ally target with reduced HP for an amount equal to <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> of Hyacine's Max HP plus <span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span>.\nWhile Hyacine is in the \"After Rain\" state, Little Ica gains 1 <u>extra turn</u> and automatically casts \"Rainclouds, Time to Go!\" immediately after Hyacine uses an ability. Moreover, when Little Ica triggers the Talent's healing effect, additionally restores HP for all ally targets by an amount equal to <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> of Hyacine's Max HP plus <span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>. After Little Ica uses an ability, the duration of all their <u>Continuous Effects</u> decreases by 1 turn.",
+        "simpleDesc": "If an ally target (except Little Ica) has <span style=\"color:#f29e38ff>reduced HP</span>, Little Ica will consume their own HP and <span style=\"color:#f29e38ff>restore HP</span> for the target. When Hyacine has \"After Rain,\" Little Ica gains 1 <u>extra turn</u> and automatically uses Memosprite Skill immediately after Hyacine uses an ability. After Little Ica uses an ability, the duration of their <u>Continuous Effects</u> decreases by 1 turn.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "Restore"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "Extra Turn",
+            "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "Debuff",
+            "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "Continuous Effect",
+            "desc": "Includes buffs, debuffs, and other effects.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "Soar, Unto the Sunlight",
+        "desc": "When summoned, regenerates <nobr>#1[i]</nobr> Energy for Hyacine. On the first summon, additionally regenerates <nobr>#2[i]</nobr> Energy.",
+        "simpleDesc": "When summoned, regenerates Energy for Hyacine.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "Fall, Then Take Wing",
+        "desc": "Upon disappearing, <u>advances the action</u> of Hyacine by <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Upon disappearing, <u>advances the action</u> of Hyacine.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Action Advanced",
+            "desc": "Reduces the target's waiting interval before the next action.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "Cradle the Candle of Night",
-      "desc": "While Hyacine is in the \"After Rain\" state, all ally targets additionally increase their Max HP by <nobr>50%</nobr>, and after using an attack, immediately restore their HP by an amount equal to <nobr>8%</nobr> of Hyacine's Max HP."
+      "desc": "While Hyacine is in the \"After Rain\" state, all ally targets additionally increase their Max HP by <nobr>50%</nobr>, and after using an attack, immediately restore their HP by an amount equal to <nobr>8%</nobr> of Hyacine's Max HP.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "Come Sit in My Courtyard",
-      "desc": "When an ally target's HP decreases, SPD increases by <nobr>30%</nobr>, lasting for <nobr>2</nobr> turn(s)."
+      "desc": "When an ally target's HP decreases, SPD increases by <nobr>30%</nobr>, lasting for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "Depart, Unto the Sun!",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nMemosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nMemosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "Sunlit Amber, Yours to Keep",
-      "desc": "The \"Tempestuous Halt\" Trace gets enhanced: For every <nobr>1</nobr> excess SPD, additionally increases Hyacine's and Little Ica's CRIT DMG by <nobr>2%</nobr>."
+      "desc": "The \"Tempestuous Halt\" Trace gets enhanced: For every <nobr>1</nobr> excess SPD, additionally increases Hyacine's and Little Ica's CRIT DMG by <nobr>2%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "Twilight Drapes the Tide",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nMemosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nMemosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "O Sky, Heed My Plea",
-      "desc": "When Little Ica uses Memosprite Skill, the amount cleared from the tally of healing is changed to <nobr>12%</nobr>. While Little Ica is on the field, all ally targets' All-Type <u>RES PEN</u> increases by <nobr>20%</nobr>."
+      "desc": "When Little Ica uses Memosprite Skill, the amount cleared from the tally of healing is changed to <nobr>12%</nobr>. While Little Ica is on the field, all ally targets' All-Type <u>RES PEN</u> increases by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

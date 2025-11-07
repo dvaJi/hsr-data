@@ -2,6 +2,7 @@
   "_id": 1307,
   "id": "black_swan",
   "name": "ブラックスワン",
+  "description": "「ガーデン・オブ・リコレクション」のメモキーパーで、気だるげで謎めいた雰囲気の占い師。\n他人の「記憶」に辛抱強く耳を傾け、その運命をすべて掌握している。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,32 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与え、確率で敵に「アルカナ」を付与する。風化、裂創、燃焼、または感電状態の敵に攻撃を行った後、それぞれ確率でさらに「アルカナ」を付与する。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "アルカナ",
+          "desc": "「アルカナ」は一種の持続ダメージ系デバフ。このデバフは解除されない。\n「アルカナ」状態の敵は風化状態にあると見なされる。「アルカナ」状態の敵はターンが回ってくるたびに風属性持続ダメージを受ける。\n「アルカナ」を付与する時、ターゲットの風化抵抗、裂創抵抗、燃焼抵抗、感電抵抗を無視する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -439,6 +466,32 @@
       "simpleDesc": "敵単体および隣接する敵に少量の風属性ダメージを与え、高確率で敵に「アルカナ」を付与し、高確率で敵の防御力をダウンさせる。",
       "type": "戦闘スキル",
       "tag": "拡散攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "アルカナ",
+          "desc": "「アルカナ」は一種の持続ダメージ系デバフ。このデバフは解除されない。\n「アルカナ」状態の敵は風化状態にあると見なされる。「アルカナ」状態の敵はターンが回ってくるたびに風属性持続ダメージを受ける。\n「アルカナ」を付与する時、ターゲットの風化抵抗、裂創抵抗、燃焼抵抗、感電抵抗を無視する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -793,6 +846,24 @@
       "simpleDesc": "敵全体に「開示」状態を付与する。「開示」状態の敵は自身のターンでの受けるダメージがアップし、付与されている「アルカナ」を風化、裂創、燃焼、感電状態と見なす。敵のターンが回って「アルカナ」がダメージを発生した後、層数がリセットされなくなる。敵全体に風属性ダメージを与える。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10013071,
+          "name": "アルカナ",
+          "desc": "「アルカナ」は一種の持続ダメージ系デバフ。このデバフは解除されない。\n「アルカナ」状態の敵は風化状態にあると見なされる。「アルカナ」状態の敵はターンが回ってくるたびに風属性持続ダメージを受ける。\n「アルカナ」を付与する時、ターゲットの風化抵抗、裂創抵抗、燃焼抵抗、感電抵抗を無視する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1132,6 +1203,32 @@
       "simpleDesc": "敵のターンが回ってきた時、その敵が持続ダメージを受けた場合、確率で「アルカナ」を付与され、ターンが回ってくるたびに風属性持続ダメージを受ける。また、ブラックスワンは「アルカナ」の層数に応じて追加効果を発動する。",
       "type": "天賦",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "アルカナ",
+          "desc": "「アルカナ」は一種の持続ダメージ系デバフ。このデバフは解除されない。\n「アルカナ」状態の敵は風化状態にあると見なされる。「アルカナ」状態の敵はターンが回ってくるたびに風属性持続ダメージを受ける。\n「アルカナ」を付与する時、ターゲットの風化抵抗、裂創抵抗、燃焼抵抗、感電抵抗を無視する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1531,6 +1628,32 @@
       "simpleDesc": "秘技を使用した後、次の戦闘開始時、高確率で敵それぞれに「アルカナ」を付与する。「アルカナ」の付与は失敗するまで繰り返される。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "アルカナ",
+          "desc": "「アルカナ」は一種の持続ダメージ系デバフ。このデバフは解除されない。\n「アルカナ」状態の敵は風化状態にあると見なされる。「アルカナ」状態の敵はターンが回ってくるたびに風属性持続ダメージを受ける。\n「アルカナ」を付与する時、ターゲットの風化抵抗、裂創抵抗、燃焼抵抗、感電抵抗を無視する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1548,37 +1671,121 @@
       "_id": 130701,
       "id": "seven_pillars_of_wisdom",
       "name": "{RUBY_B#ちえ}知恵{RUBY_E#}の{RUBY_B#ななはしら}七柱{RUBY_E#}",
-      "desc": "ブラックスワンが戦闘可能状態の時、風化、裂創、燃焼、感電状態の敵の対応する風、物理、炎、雷属性の耐性がそれぞれ<nobr>25%</nobr>ダウンする。"
+      "desc": "ブラックスワンが戦闘可能状態の時、風化、裂創、燃焼、感電状態の敵の対応する風、物理、炎、雷属性の耐性がそれぞれ<nobr>25%</nobr>ダウンする。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130702,
       "id": "weep_not_for_me_my_lamb",
       "name": "{RUBY_B#こひつじ}子羊{RUBY_E#}よ、\n{RUBY_B#わたし}私{RUBY_E#}のために{RUBY_B#な}泣{RUBY_E#}くなかれ",
-      "desc": "「<u>アルカナ</u>」状態の敵が倒された時、<nobr>100%</nobr>の<u>基礎確率</u>で隣接する敵に「<u>アルカナ</u>」を<nobr>6</nobr>層付与する。"
+      "desc": "「<u>アルカナ</u>」状態の敵が倒された時、<nobr>100%</nobr>の<u>基礎確率</u>で隣接する敵に「<u>アルカナ</u>」を<nobr>6</nobr>層付与する。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "アルカナ",
+          "desc": "「アルカナ」は一種の持続ダメージ系デバフ。このデバフは解除されない。\n「アルカナ」状態の敵は風化状態にあると見なされる。「アルカナ」状態の敵はターンが回ってくるたびに風属性持続ダメージを受ける。\n「アルカナ」を付与する時、ターゲットの風化抵抗、裂創抵抗、燃焼抵抗、感電抵抗を無視する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130703,
       "id": "as_above_so_below",
       "name": "{RUBY_B#げかい}下界{RUBY_E#}は{RUBY_B#じょうかい}上界{RUBY_E#}に{RUBY_B#なら}倣{RUBY_E#}う",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130704,
       "id": "in_tears_we_gift",
       "name": "{RUBY_B#なみだ}涙{RUBY_E#}もまた{RUBY_B#おく}贈{RUBY_E#}り{RUBY_B#もの}物{RUBY_E#}",
-      "desc": "「開示」状態の敵の効果抵抗-<nobr>10%</nobr>。「開示」状態の敵のターンが回ってきた時、または倒された時、ブラックスワンのEPを<nobr>8</nobr>回復する。EP回復効果は「開示」状態の継続時間内に1回まで発動できる。再度「開示」状態を付与すると、発動可能回数がリセットされる。"
+      "desc": "「開示」状態の敵の効果抵抗-<nobr>10%</nobr>。「開示」状態の敵のターンが回ってきた時、または倒された時、ブラックスワンのEPを<nobr>8</nobr>回復する。EP回復効果は「開示」状態の継続時間内に1回まで発動できる。再度「開示」状態を付与すると、発動可能回数がリセットされる。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130705,
       "id": "linnutee_flyway",
       "name": "{RUBY_B#わた}渡{RUBY_E#}り{RUBY_B#どり}鳥{RUBY_E#}の{RUBY_B#みち}道{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130706,
       "id": "pantheon_merciful_masses_pitiful",
       "name": "{RUBY_B#かみ}神{RUBY_E#}は{RUBY_B#ぜん}善{RUBY_E#}、\n{RUBY_B#くえきしゃ}苦役者{RUBY_E#}は{RUBY_B#いま}未{RUBY_E#}だ{RUBY_B#し}知{RUBY_E#}らず",
-      "desc": "ブラックスワン以外の味方が敵に攻撃を行った後、ブラックスワンは<nobr>65%</nobr>の<u>基礎確率</u>で敵に「<u>アルカナ</u>」を1層付与する。\nブラックスワンが敵に「<u>アルカナ</u>」を付与する時、<nobr>50%</nobr>の<u>固定確率</u>でその回に付与する「<u>アルカナ</u>」の層数+<nobr>1</nobr>層。"
+      "desc": "ブラックスワン以外の味方が敵に攻撃を行った後、ブラックスワンは<nobr>65%</nobr>の<u>基礎確率</u>で敵に「<u>アルカナ</u>」を1層付与する。\nブラックスワンが敵に「<u>アルカナ</u>」を付与する時、<nobr>50%</nobr>の<u>固定確率</u>でその回に付与する「<u>アルカナ</u>」の層数+<nobr>1</nobr>層。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "アルカナ",
+          "desc": "「アルカナ」は一種の持続ダメージ系デバフ。このデバフは解除されない。\n「アルカナ」状態の敵は風化状態にあると見なされる。「アルカナ」状態の敵はターンが回ってくるたびに風属性持続ダメージを受ける。\n「アルカナ」を付与する時、ターゲットの風化抵抗、裂創抵抗、燃焼抵抗、感電抵抗を無視する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000002,
+          "name": "固定確率",
+          "desc": "どのような要因にも左右されない、固定された確率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

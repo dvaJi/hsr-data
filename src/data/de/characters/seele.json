@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "Seele",
+  "description": "Diese Bewohnerin der Unterwelt ist das Herz des Wildfeuers und auch unter dem Namen „Babochka“ bekannt.\nSie tritt ziemlich barsch auf, doch tief unter der harten Schale verbirgt sich ein mitfühlender weicher Kern.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Quanten-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Fügt einem Gegner Quanten-SCH zu und erhöht die GES.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,18 @@
       "simpleDesc": "Tritt in den verstärkten Zustand ein und fügt einem Gegner massiven Quanten-SCH zu.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "Seele tritt beim Besiegen eines Gegners durch Standardangriff, Fertigkeit oder Ultimate in den verstärkten Zustand ein und erhält unmittelbar eine zusätzliche Runde. Während des verstärkten Zustands wird ihr SCH erhöht.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Zusätzliche Runde",
+          "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "Tritt in den Zustand Tarnung ein. Seele tritt zu Beginn des Kampfs sofort in den verstärkten Zustand ein, wenn sie einen Gegner aktiv angreift.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Abgeschnitten",
-      "desc": "Wenn Seele einem Gegner mit LP-Prozentsatz <nobr>80%</nobr> oder niedriger SCH zufügt, steigt ihre KRIT-Rate um <nobr>15%</nobr>."
+      "desc": "Wenn Seele einem Gegner mit LP-Prozentsatz <nobr>80%</nobr> oder niedriger SCH zufügt, steigt ihre KRIT-Rate um <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "Schmetterlingstanz",
-      "desc": "Der Effekt der GES-Erhöhung von der Fertigkeit ist bis zu <nobr>2</nobr>-mal stapelbar."
+      "desc": "Der Effekt der GES-Erhöhung von der Fertigkeit ist bis zu <nobr>2</nobr>-mal stapelbar.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "Geblendet",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Ein kurzer Blick",
-      "desc": "Besiegt Seele einen Gegner, erhält sie <nobr>15</nobr> Pkt. Energie zurück."
+      "desc": "Besiegt Seele einen Gegner, erhält sie <nobr>15</nobr> Pkt. Energie zurück.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "Scharfe Sinne, scharfer Geist",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Trennung",
-      "desc": "Der Ultimate verursacht beim getroffenen Gegner für <nobr>1</nobr> Rd. den Status „Schmetterlingssturm“. Gegner im Schmetterlingssturm erleiden bei Treffern 1-mal <u>zusätzlich Quanten-SCH</u> in Höhe von <nobr>15%</nobr> von Seeles Ultimate-SCH. Wenn ein anderer Verbündeter das Ziel durch den <u>zusätzlichen SCH</u> von Schmetterlingssturm besiegt, wird Seeles Talent nicht ausgelöst.\nIst Seele <u>handlungsunfähig</u>, wird der Status Schmetterlingssturm vom Gegner entfernt."
+      "desc": "Der Ultimate verursacht beim getroffenen Gegner für <nobr>1</nobr> Rd. den Status „Schmetterlingssturm“. Gegner im Schmetterlingssturm erleiden bei Treffern 1-mal <u>zusätzlich Quanten-SCH</u> in Höhe von <nobr>15%</nobr> von Seeles Ultimate-SCH. Wenn ein anderer Verbündeter das Ziel durch den <u>zusätzlichen SCH</u> von Schmetterlingssturm besiegt, wird Seeles Talent nicht ausgelöst.\nIst Seele <u>handlungsunfähig</u>, wird der Status Schmetterlingssturm vom Gegner entfernt.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

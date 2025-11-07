@@ -2,6 +2,7 @@
   "_id": 1112,
   "id": "topaz_and_numby",
   "name": "托帕&账账",
+  "description": "星际和平公司旗下「战略投资部」高级干部托帕，领导特殊债务纠察小组。\n年纪轻轻便已成为「石心十人」之一，基石为「催讨黄玉」。\n搭档次元扑满「账账」则能敏锐感知「财富」所在，即便是安保、催债、精算等工作也不在话下。\n如今他们正一同巡行银河，追究各类影响公司业务开展的债务纠纷。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量火属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "使敌方单体陷入【负债证明】状态，受到的追加攻击伤害提高。账账对目标造成火属性伤害。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -728,6 +762,18 @@
       "simpleDesc": "使账账进入【涨幅惊人！】状态，伤害倍率与暴击伤害提高。",
       "type": "终结技",
       "tag": "强化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1113,32 @@
       "simpleDesc": "战斗开始召唤账账，账账行动时对陷入【负债证明】的目标发动追加攻击，造成火属性伤害。\n陷入【负债证明】的敌人受到追加攻击时账账行动提前。",
       "type": "天赋",
       "tag": "单攻",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "无法战斗状态",
+          "desc": "当我方目标的当前生命值被削减至0时进入的特殊状态，处于该状态的目标无法继续战斗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1463,15 @@
       "simpleDesc": "迷宫内召唤账账跟随移动，账账会自动搜寻附近的普通战利品和扑满。施放秘技使下一场战斗中账账首次攻击后，托帕恢复能量。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1489,106 @@
       "_id": 111201,
       "id": "future_market",
       "name": "未来市场",
-      "desc": "陷入【负债证明】状态下的敌方目标受到<u>追加攻击</u>时，将会陷入【被执行】状态，单次攻击内最多生效1次。\n【被执行】使敌方目标受到的<u>追加攻击</u>的暴击伤害提高<nobr>25%</nobr>，最多叠加<nobr>2</nobr>层。【负债证明】被移除时，【被执行】也会被移除。"
+      "desc": "陷入【负债证明】状态下的敌方目标受到<u>追加攻击</u>时，将会陷入【被执行】状态，单次攻击内最多生效1次。\n【被执行】使敌方目标受到的<u>追加攻击</u>的暴击伤害提高<nobr>25%</nobr>，最多叠加<nobr>2</nobr>层。【负债证明】被移除时，【被执行】也会被移除。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111202,
       "id": "bona_fide_acquisition",
       "name": "善意收购",
-      "desc": "账账自身行动并发动攻击后，托帕恢复<nobr>5</nobr>点能量。"
+      "desc": "账账自身行动并发动攻击后，托帕恢复<nobr>5</nobr>点能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111203,
       "id": "seize_the_big_and_free_the_small",
       "name": "抓大放小",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111204,
       "id": "agile_operation",
       "name": "敏捷处理",
-      "desc": "账账自身回合开始时，托帕的<u>行动提前</u><nobr>20%</nobr>。"
+      "desc": "账账自身回合开始时，托帕的<u>行动提前</u><nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行动提前",
+          "desc": "使目标在下次行动前的等待间隔缩短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111205,
       "id": "inflationary_demand",
       "name": "需求膨胀",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111206,
       "id": "incentive_mechanism",
       "name": "激励机制",
-      "desc": "账账处于【涨幅惊人！】状态的攻击次数增加<nobr>1</nobr>次，且攻击时火属性<u>抗性穿透</u>提高<nobr>10%</nobr>。"
+      "desc": "账账处于【涨幅惊人！】状态的攻击次数增加<nobr>1</nobr>次，且攻击时火属性<u>抗性穿透</u>提高<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

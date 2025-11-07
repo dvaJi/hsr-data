@@ -2,6 +2,7 @@
   "_id": 1215,
   "id": "hanya",
   "name": "寒鴉",
+  "description": "仙舟「羅浮」十王司的判官之一。\n受命十王，執掌冥讖天筆、讀取罪業種種，並下達業報判罰。",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量物理屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "對敵方單體造成物理屬性傷害，並使其陷入【承負】狀態。每當我方目標對【承負】狀態下的敵方目標發動2次普通攻擊、戰技、終結技後，恢復1個戰技點。",
       "type": "戰技",
       "tag": "單體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 17
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "使我方單體速度提高、攻擊力提高。",
       "type": "終結技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "我方目標對陷入【承負】狀態下的敵方目標發動普通攻擊、戰技、終結技時，造成的傷害提高。",
       "type": "天賦",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1388,15 @@
       "desc": "立即攻擊敵人，進入戰鬥後對敵方隨機單體附上等同於戰技效果的【承負】。",
       "simpleDesc": "攻擊敵人，進入戰鬥後對敵方隨機單體附上等同於戰技效果的【承負】。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1356,37 +1411,88 @@
       "_id": 121501,
       "id": "one_heart",
       "name": "一心",
-      "desc": "持有終結技效果的我方目標消滅敵方目標時，寒鴉<u>行動提前</u><nobr>15%</nobr>，該效果每回合只能觸發<nobr>1</nobr>次。"
+      "desc": "持有終結技效果的我方目標消滅敵方目標時，寒鴉<u>行動提前</u><nobr>15%</nobr>，該效果每回合只能觸發<nobr>1</nobr>次。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動提前",
+          "desc": "使目標在下次行動前的等待間隔縮短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121502,
       "id": "two_views",
       "name": "二觀",
-      "desc": "施放戰技後，速度提高<nobr>20%</nobr>，持續<nobr>1</nobr>回合。"
+      "desc": "施放戰技後，速度提高<nobr>20%</nobr>，持續<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121503,
       "id": "three_temptations",
       "name": "三塵",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121504,
       "id": "four_truths",
       "name": "四諦",
-      "desc": "終結技的持續時間額外增加<nobr>1</nobr>回合。"
+      "desc": "終結技的持續時間額外增加<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121505,
       "id": "five_skandhas",
       "name": "五陰",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121506,
       "id": "six_reverences",
       "name": "六正",
-      "desc": "天賦的傷害提高效果額外提高<nobr>10%</nobr>。"
+      "desc": "天賦的傷害提高效果額外提高<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

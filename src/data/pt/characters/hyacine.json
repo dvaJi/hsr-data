@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "Hyacine",
+  "description": "À medida que a pólis nas nuvens se desfaz com o passar do tempo, o Pátio do Crepúsculo abre seus portões mais uma vez, trazendo um vislumbre de luz para a Noite Eterna.\nA médica Hyacinthia é a Herdeira de Chrysos que protege a Chama Primordial do Céu. Carregando a vontade de seus ancestrais, ela conserta o tecido rasgado do crepúsculo e do amanhecer.\nQue a luz do arco-íris caia, dissolva todos os rancores e traga de volta o amanhecer a esta terra.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Vento leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Invoca a Memoespírito Ikinha, e restaura os PV de todos os aliados.",
       "type": "Perícia",
       "tag": "Restauração",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "Invoca a Memoespírito Ikinha, e restaura os PV de todos os aliados. Em seguida, entra no estado de \"Depois da Chuva\". Quando Hyacine está nesse estado, aumenta os PV máximos de todos os aliados.",
       "type": "Perícia Suprema",
       "tag": "Suporte",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "Quando Hyacine ou Ikinha fornecem cura, aumenta o Dano causado por Ikinha.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "Quando a próxima batalha começa, restaura os PV de todos os aliados e aumenta seus PV máximos.",
       "type": "Técnica",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Ikinha",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "Nuvens de Tempestade, é Hora de Ir!",
+        "desc": "Causa Dano de Vento a todos os inimigos em uma quantidade igual a <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> da contagem de cura feita por Hyacine e Ikinha na batalha atual e elimina <nobr>#2[i]%</nobr> dessa contagem de cura.",
+        "simpleDesc": "Causa Dano de Vento a todos os inimigos.",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Área"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "Segure nas Mãos do Céu",
+        "desc": "A VEL de Ikinha permanece em 0, é imune a penalidades e não aparecerá na Ordem de Ação. \nSe os PV de um aliado-alvo (exceto a Ikinha) forem reduzidos, no início da rodada de qualquer alvo ou depois que qualquer alvo agir, a Ikinha consumirá <nobr>#1[i]%</nobr> de seus próprios PV máximos e curará o aliado-alvo com PV reduzidos por um valor igual a <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> do PV máximos de Hyacine mais <span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span>.\nEnquanto Hyacine estiver no estado de \"Depois da Chuva\", a Ikinha obtém imediatamente 1 rodada extra e lança automaticamente \"Nuvens de Tempestade, é Hora de Ir!\" após Hyacine usar uma habilidade. Além disso, quando a Ikinha ativa o efeito de cura do Talento, ela restaura adicionalmente os PV de todos os aliados-alvo em um valor igual a <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> dos PV máximos de Hyacine mais <span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>. Depois que a Ikinha usa uma habilidade, a duração de todos os seus Efeitos Contínuos diminui em 1 rodada.",
+        "simpleDesc": "Se um aliado-alvo (exceto a Ikinha) tiver <span style=\"color:#f29e38ff>PV reduzidos</span>, a Ikinha consumirá seus próprios PV e <span style=\"color:#f29e38ff>restaurará os PV</span> do alvo. Quando Hyacine estiver com \"Depois da Chuva\", a Ikinha obtém imediatamente 1 rodada extra e usa automaticamente a Perícia do Memoespírito após Hyacine usar uma habilidade. Depois que a Ikinha usa uma habilidade, a duração de seus Efeitos Contínuos diminui em 1 rodada.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "Restauração"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "Rodada Extra",
+            "desc": "Ganha 1 rodada extra que não gastará suas rodadas restantes ao tomar uma ação. Nessa rodada extra, não é possível usar nenhuma Perícia Suprema.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "Penalidade",
+            "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "Efeito Contínuo",
+            "desc": "Inclui melhorias, penalidades e outros efeitos.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "Voar, em Direção ao Sol",
+        "desc": "Ao ser invocada, regenera <nobr>#1[i]</nobr> de Energia para Hyacine. Na primeira invocação, regenera adicionalmente <nobr>#2[i]</nobr> de Energia.",
+        "simpleDesc": "Ao ser invocada, regenera Energia para Hyacine.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Aprimoramento"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "Cair, e Depois Alçar Voo",
+        "desc": "Ao desaparecer, <u>Avança Adiante a ação</u> de Hyacine em <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Ao desaparecer, Avança Adiante a ação da Hyacine.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Aprimoramento"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Ação Avançada Adiante",
+            "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "Protetora da Chama Noturna",
-      "desc": "Quando Hyacine está no estado de \"Depois da Chuva\", todos os aliados-alvo aumentam adicionalmente seus PV máximos em <nobr>50%</nobr>, e após usar um ataque, restauram imediatamente os PV em uma quantidade igual a <nobr>8%</nobr> dos PV máximos de Hyacine."
+      "desc": "Quando Hyacine está no estado de \"Depois da Chuva\", todos os aliados-alvo aumentam adicionalmente seus PV máximos em <nobr>50%</nobr>, e após usar um ataque, restauram imediatamente os PV em uma quantidade igual a <nobr>8%</nobr> dos PV máximos de Hyacine.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "Venha Sentar no Meu Pátio",
-      "desc": "Quando os PV de qualquer aliado-alvo diminuem, a VEL desta unidade aumenta em <nobr>30%</nobr> por <nobr>2</nobr> rodada(s)."
+      "desc": "Quando os PV de qualquer aliado-alvo diminuem, a VEL desta unidade aumenta em <nobr>30%</nobr> por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "Partir em Direção ao Sol!",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.\nNv. da Perícia do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.\nNv. da Perícia do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "Te Presenteio com Este Âmbar Solar",
-      "desc": "O Rastro \"Parada Tempestuosa\" é aprimorado. Para cada <nobr>1</nobr> de VEL excedente, aumenta adicionalmente o Dano CRIT de Hyacine e Ikinha em <nobr>2%</nobr>."
+      "desc": "O Rastro \"Parada Tempestuosa\" é aprimorado. Para cada <nobr>1</nobr> de VEL excedente, aumenta adicionalmente o Dano CRIT de Hyacine e Ikinha em <nobr>2%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "Cetim Crepuscular das Marés",
-      "desc": "Nv. de Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. de Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "Ó, Céu, Ouça Minha Prece",
-      "desc": "Quando a Ikinha usa a Perícia do Memoespírito, a quantidade eliminada da contagem de cura é alterada para <nobr>12%</nobr>. Enquanto Ikinha está em campo, aumenta a PEN de RES a Todos os Tipos de todos os aliados-alvo em <nobr>20%</nobr>."
+      "desc": "Quando a Ikinha usa a Perícia do Memoespírito, a quantidade eliminada da contagem de cura é alterada para <nobr>12%</nobr>. Enquanto Ikinha está em campo, aumenta a PEN de RES a Todos os Tipos de todos os aliados-alvo em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

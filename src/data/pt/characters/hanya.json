@@ -2,6 +2,7 @@
   "_id": 1215,
   "id": "hanya",
   "name": "Hanya",
+  "description": "Uma das juízas da Comissão dos Dez Senhores do Luofu do Xianzhou.\nConsagrada pelos Dez Senhores e portando a autoridade do Pincel do Oráculo, ela lê os diversos pecados e transgressões humanas, e então emite punições e retribuições cármicas.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Causa Dano Físico a um único inimigo e aplica Fardo a ele. Para cada 2 ATQs Básicos, Perícias ou Perícias Supremas que aliados utilizarem contra um inimigo com Fardo, os aliados recuperarão 1 Ponto de Perícia.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 17
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Aumenta a VEL e o ATQ de um aliado.",
       "type": "Perícia Suprema",
       "tag": "Aprimoramento",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "Quando um aliado alvo usa um ATQ Básico, uma Perícia ou uma Perícia Suprema em um inimigo-alvo afligido com \"Fardo\", o Dano causado aumenta.",
       "type": "Talento",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1388,15 @@
       "desc": "Ataca o inimigo imediatamente. Ao entrar na batalha, aplica Fardo equivalente ao aplicado pela Perícia a um inimigo aleatório.",
       "simpleDesc": "Ataca o inimigo. Ao entrar na batalha, aplica Fardo equivalente ao aplicado pela Perícia a um inimigo aleatório.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1356,37 +1411,88 @@
       "_id": 121501,
       "id": "one_heart",
       "name": "Um Coração",
-      "desc": "Quando um aliado-alvo com o efeito da Perícia Suprema de Hanya derrotar um inimigo, a ação de Hanya é Avançada Adiante em <nobr>15%</nobr>. Este efeito só pode ser ativado <nobr>1</nobr> vez(es) por rodada."
+      "desc": "Quando um aliado-alvo com o efeito da Perícia Suprema de Hanya derrotar um inimigo, a ação de Hanya é Avançada Adiante em <nobr>15%</nobr>. Este efeito só pode ser ativado <nobr>1</nobr> vez(es) por rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121502,
       "id": "two_views",
       "name": "Duas Visualizações",
-      "desc": "Após usar a Perícia, a VEL deste personagem aumenta em <nobr>20%</nobr> por <nobr>1</nobr> rodada(s)."
+      "desc": "Após usar a Perícia, a VEL deste personagem aumenta em <nobr>20%</nobr> por <nobr>1</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121503,
       "id": "three_temptations",
       "name": "Três Tentações",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121504,
       "id": "four_truths",
       "name": "Quatro Verdades",
-      "desc": "A duração da Perícia Suprema é estendida por mais <nobr>1</nobr> rodada(s)."
+      "desc": "A duração da Perícia Suprema é estendida por mais <nobr>1</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121505,
       "id": "five_skandhas",
       "name": "Cinco Skandhas",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121506,
       "id": "six_reverences",
       "name": "Seis Reverências",
-      "desc": "Aumenta o efeito de Bônus de Dano do Talento em um adicional de <nobr>10%</nobr>."
+      "desc": "Aumenta o efeito de Bônus de Dano do Talento em um adicional de <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

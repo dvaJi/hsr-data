@@ -2,6 +2,7 @@
   "_id": 1004,
   "id": "welt",
   "name": "Welt",
+  "description": "Anggota senior kru Astral Express.\nDia menikmati keajaiban petualangan yang sudah lama tidak dialami. Semangat yang tersembunyi di dalam hatinya juga kembali berkobar.\nDia terkadang akan menggambarkan pengalaman petualangannya di dalam buku.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 100402,
       "id": "edge_of_the_void",
       "name": "Edge of the Void",
-      "desc": "Mengakibatkan Imaginary DMG sebesar #1[i]% ATK Welt pada 1 musuh yang ditarget, serta mengakibatkan 2 serangan tambahan yang masing-masing mengakibatkan Imaginary DMG sebesar #1[i]% ATK Welt pada musuh secara acak. Saat serangan mengenai musuh, ada #2[i]% peluang dasar untuk mengurangi #3[i]% SPD musuh tersebut selama #4[i] giliran.",
+      "desc": "Mengakibatkan Imaginary DMG sebesar #1[i]% ATK Welt pada 1 musuh yang ditargetkan dan mengakibatkan ekstra 2 kali DMG. Setiap DMG mengakibatkan Imaginary DMG sebesar #1[i]% ATK Welt pada musuh acak. Saat serangan mengenai musuh, ada #2[i]% peluang dasar untuk mengurangi #3[i]% SPD target musuh yang terkena serangan selama #4[i] giliran.",
       "simpleDesc": "Mengakibatkan Imaginary DMG dalam jumlah kecil pada 1 musuh, total Bounce 3 kali dan berpeluang untuk memberikan status Slow pada target.",
       "type": "Skill",
       "tag": "Bounce",
+      "spBase": 10,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -754,10 +788,36 @@
       "_id": 100403,
       "id": "synthetic_black_hole",
       "name": "Synthetic Black Hole",
-      "desc": "Mengakibatkan Imaginary DMG sebesar #1[i]% ATK Welt pada seluruh musuh. Target musuh yang terkena serangan memiliki #3[i]% peluang dasar untuk memasuki status Imprisonment selama 1 giliran.\nSelama dalam status Imprisonment, target musuh mengalami penundaan aksi sebesar #2[f1]% dan SPD berkurang #4[i]%.",
-      "simpleDesc": "Mengakibatkan Imaginary DMG pada seluruh musuh dan berpeluang besar memberikan status Imprisonment pada musuh.",
+      "desc": "Mengakibatkan Imaginary DMG sebesar #1[i]% ATK Welt pada seluruh musuh, dengan #3[i]% peluang dasar membuat target musuh yang terkena serangan memasuki status Imprisonment selama 1 giliran.\nSelama berstatus Imprisonment, target musuh mengalami penundaan aksi sebesar #2[f1]% dan pengurangan SPD sebesar #4[i]%.",
+      "simpleDesc": "Mengakibatkan Imaginary DMG dan berpeluang besar menambahkan status Imprisonment pada seluruh musuh.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Penundaan Aksi",
+          "desc": "Menambah durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1157,27 @@
       "simpleDesc": "Saat menyerang target musuh berstatus Slow, akan mengakibatkan Imaginary DMG Tambahan dalam jumlah kecil.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1472,32 @@
       "simpleDesc": "Menciptakan dimensi khusus. Movement SPD musuh dalam dimensi khusus akan berkurang. Setelah memasuki pertempuran dengan musuh dalam dimensi khusus, berpeluang besar untuk membuat target musuh memasuki status Imprisonment.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Penundaan Aksi",
+          "desc": "Menambah durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1411,37 +1518,97 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "Legacy of Honor",
-      "desc": "Setelah melancarkan Ultimate, Welt akan mendapat peningkatan kekuatan. <nobr>2</nobr> Basic Attack atau Skill setelahnya akan mengakibatkan 1 kali <u>DMG Tambahan</u> pada target musuh. DMG Multiplier dari <u>DMG Tambahan</u> yang disebabkan Basic Attack adalah <nobr>50%</nobr> dari DMG Multiplier Basic Attack Welt, sedangkan DMG Multiplier dari <u>DMG Tambahan</u> yang disebabkan Skill adalah <nobr>80%</nobr> dari DMG Multiplier Skill Welt."
+      "desc": "Setelah melancarkan Ultimate, Welt akan mendapat peningkatan kekuatan. <nobr>2</nobr> Basic Attack atau Skill setelahnya akan mengakibatkan 1 kali <u>DMG Tambahan</u> pada target musuh. DMG Multiplier dari <u>DMG Tambahan</u> yang disebabkan Basic Attack adalah <nobr>50%</nobr> dari DMG Multiplier Basic Attack Welt, sedangkan DMG Multiplier dari <u>DMG Tambahan</u> yang disebabkan Skill adalah <nobr>80%</nobr> dari DMG Multiplier Skill Welt.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100402,
       "id": "conflux_of_stars",
       "name": "Conflux of Stars",
-      "desc": "Memulihkan <nobr>3</nobr> Energy Welt saat Talent terpicu."
+      "desc": "Memulihkan <nobr>3</nobr> Energy Welt saat Talent terpicu.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100403,
       "id": "prayer_of_peace",
       "name": "Prayer of Peace",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100404,
       "id": "appellation_of_justice",
       "name": "Appellation of Justice",
-      "desc": "Saat melancarkan Skill, meningkatkan <nobr>35%</nobr> <u>peluang dasar</u> untuk mengurangi SPD target musuh yang terkena serangan."
+      "desc": "Saat melancarkan Skill, meningkatkan <nobr>35%</nobr> <u>peluang dasar</u> untuk mengurangi SPD target musuh yang terkena serangan.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100405,
       "id": "power_of_kindness",
       "name": "Power of Kindness",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "Prospect of Glory",
-      "desc": "Saat melancarkan Skill, mengakibatkan 1 kali DMG tambahan pada musuh secara acak."
+      "desc": "Saat melancarkan Skill, mengakibatkan 1 kali DMG tambahan pada musuh secara acak.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1202,
   "id": "tingyun",
   "name": "Tingyun",
+  "description": "Utusan Sky-Faring Commission dari Xianzhou \"Luofu\".\nDia bepergian dengan delegasi bisnis, menjalin hubungan perdagangan dan aliansi dengan banyak dunia.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Meningkatkan ATK 1 rekan tim dan memberinya \"Benediction\". Saat rekan berstatus \"Benediction\" melancarkan serangan, akan mengakibatkan Lightning DMG tambahan dalam jumlah kecil.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Memulihkan Energy 1 rekan tim dan meningkatkan DMG yang diakibatkan rekan tersebut.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "Setelah musuh terkena serangan dari Tingyun, target berstatus \"Benediction\" akan segera mengakibatkan Lightning DMG tambahan dalam jumlah kecil pada musuh tersebut.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "Akan segera memulihkan Energy dirinya setelah menggunakan Technique.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1374,37 +1447,79 @@
       "_id": 120201,
       "id": "windfall_of_lucky_springs",
       "name": "Windfall of Lucky Springs",
-      "desc": "Setelah rekan yang mendapatkan \"Benediction\" melancarkan Ultimate, SPD rekan tersebut akan meningkat <nobr>20%</nobr> selama 1 giliran."
+      "desc": "Setelah rekan yang mendapatkan \"Benediction\" melancarkan Ultimate, SPD rekan tersebut akan meningkat <nobr>20%</nobr> selama 1 giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120202,
       "id": "gainfully_gives_givingly_gains",
       "name": "Gainfully Gives, Givingly Gains",
-      "desc": "Memulihkan <nobr>5</nobr> Energy rekan tim yang mendapatkan \"Benediction\" setelah rekan tersebut mengalahkan target musuh. Efek ini hanya dapat dipicu sekali setiap giliran."
+      "desc": "Memulihkan <nobr>5</nobr> Energy rekan tim yang mendapatkan \"Benediction\" setelah rekan tersebut mengalahkan target musuh. Efek ini hanya dapat dipicu sekali setiap giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120203,
       "id": "halcyon_bequest",
       "name": "Halcyon Bequest",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120204,
       "id": "jovial_versatility",
       "name": "Jovial Versatility",
-      "desc": "Meningkatkan <nobr>20%</nobr> DMG Multiplier dari \"Benediction\"."
+      "desc": "Meningkatkan <nobr>20%</nobr> DMG Multiplier dari \"Benediction\".",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120205,
       "id": "sauntering_coquette",
       "name": "Sauntering Coquette",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120206,
       "id": "peace_brings_wealth_to_all",
       "name": "Peace Brings Wealth to All",
-      "desc": "Jumlah Energy yang dipulihkan Ultimate Tingyun pada rekan tim meningkat sebanyak <nobr>10</nobr>."
+      "desc": "Jumlah Energy yang dipulihkan Ultimate Tingyun pada rekan tim meningkat sebanyak <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 8002,
   "id": "trailblazer_destruction_girl",
   "name": "Trazacaminos Destrucción",
+  "description": "{F#Una}{M#Un} joven que embarcó en el Expreso Astral.\nDecidió viajar con el Expreso Astral para eliminar las amenazas provocadas por el Estelaron.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Físico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Inflige Daño Físico a un objetivo y a los enemigos adyacentes.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "Elige entre ATQ individual o Ráfaga para dar un fuerte golpe.",
       "type": "Habilidad definitiva",
       "tag": "Potenciación",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Cada Ruptura de Debilidad que inflige al objetivo enemigo aumenta el ATQ.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1374,15 @@
       "simpleDesc": "Tras usar la técnica, todos los aliados regeneran PV inmediatamente.",
       "type": "Técnica",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1344,37 +1399,88 @@
       "_id": 800201,
       "id": "a_falling_star",
       "name": "Estrellas dispersas",
-      "desc": "Cuando su habilidad definitiva elimina a un enemigo, la Trazacaminos recupera <nobr>10</nobr> pts. de energía adicionales. Este efecto solo se puede activar 1 vez en cada ataque."
+      "desc": "Cuando su habilidad definitiva elimina a un enemigo, la Trazacaminos recupera <nobr>10</nobr> pts. de energía adicionales. Este efecto solo se puede activar 1 vez en cada ataque.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800202,
       "id": "an_unwilling_host",
       "name": "Anfitriona perfecta",
-      "desc": "Al golpear a un enemigo con Debilidad Física, la Trazacaminos regenera una cantidad de PV equivalente al <nobr>5%</nobr> de su ATQ."
+      "desc": "Al golpear a un enemigo con Debilidad Física, la Trazacaminos regenera una cantidad de PV equivalente al <nobr>5%</nobr> de su ATQ.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800203,
       "id": "a_leading_whisper",
       "name": "El espíritu que guía",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800204,
       "id": "a_destructing_glance",
       "name": "Contemplación del instante de destrucción",
-      "desc": "Al golpear a un enemigo con <u>Ruptura de Debilidad</u>, la Prob. CRIT aumenta en un <nobr>25%</nobr>."
+      "desc": "Al golpear a un enemigo con <u>Ruptura de Debilidad</u>, la Prob. CRIT aumenta en un <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Ruptura de Debilidad",
+          "desc": "Cuando la Firmeza del objetivo se reduce a 0, entrará en un estado especial en el que sus acciones se retrasarán.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 800205,
       "id": "a_surviving_hope",
       "name": "Esperanza de supervivencia",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800206,
       "id": "a_trailblazing_will",
       "name": "Voluntad de exploración",
-      "desc": "El talento de la Trazacaminos también se activa cuando elimina a un enemigo."
+      "desc": "El talento de la Trazacaminos también se activa cuando elimina a un enemigo.",
+      "unlockCost": [
+        {
+          "ItemID": 18001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

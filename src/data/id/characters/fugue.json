@@ -2,6 +2,7 @@
   "_id": 1225,
   "id": "fugue",
   "name": "Fugue",
+  "description": "Gadis Foxian yang cerdik dan serba bisa. Penampilan, nama, dan identitasnya semua telah dirampas oleh orang lain.\nTakdir meninggalkannya secercah harapan untuk bertahan hidup, namun tanda jejak \"Destruction\" masih bergejolak di dalam dirinya.\nSetelah melewati hidup dan mati serta memperoleh kehidupan baru, kapankah Fugue bisa kembali ke kampung halamannya?",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Fire DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Memberikan \"Foxian Prayer\" pada 1 rekan tim, meningkatkan Break Effect, dan membuat menyerang musuh tanpa Tipe Weakness yang sesuai juga dapat mengurangi Toughness musuh.\nMembuat Fugue memasuki status \"Torrid Scorch\" dan memperkuat Basic Attack-nya. Saat rekan tim yang memiliki \"Foxian Prayer\" menyerang, Fugue berpeluang besar mengurangi DEF target musuh.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,15 @@
       "simpleDesc": "Mengakibatkan Fire DMG pada seluruh musuh. Serangan kali ini akan mengabaikan Tipe Weakness untuk mengurangi Toughness seluruh musuh.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,32 @@
       "simpleDesc": "Saat Fugue berada di medan pertempuran, target musuh akan memperoleh \"Cloudflame Luster\". Saat \"Cloudflame Luster\" dikurangi hingga 0, target musuh akan menerima Weakness Break DMG sekali lagi. Setelah rekan tim menyerang target musuh yang berada dalam status Weakness Break, akan mengakibatkan Super Break DMG pada target tersebut.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Status Weakness Break",
+          "desc": "Saat Toughness target musuh berkurang menjadi 0, akan memasuki status Weakness Break, yang dapat menunda aksi musuh.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Super Break DMG",
+          "desc": "Semakin tinggi Break Effect, level karakter, dan pengurangan nilai Toughness dari serangan kali ini, maka Super Break DMG yang diakibatkan akan semakin tinggi.\nSuper Break DMG tidak dapat CRIT Hit, dan tidak akan terkena pengaruh efek peningkatan DMG.\nSuper Break DMG juga termasuk Break DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,32 @@
       "simpleDesc": "Membuat musuh dalam jangkauan tertentu memasuki status Daze. Jika menyerang musuh yang berstatus Daze, aksi Fugue akan didahulukan saat memasuki pertempuran, serta berpeluang besar untuk membuat setiap target musuh memasuki status Pengurangan DEF yang sama dengan Skill Fugue.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Pendahuluan Aksi",
+          "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1410,37 +1499,88 @@
       "_id": 122501,
       "id": "earthbound_i_was_cloudward_i_be",
       "name": "Earthbound I Was, Cloudward I Be",
-      "desc": "Meningkatkan <nobr>50%</nobr> Weakness Break Efficiency rekan tim yang memiliki \"Foxian Prayer\"."
+      "desc": "Meningkatkan <nobr>50%</nobr> Weakness Break Efficiency rekan tim yang memiliki \"Foxian Prayer\".",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122502,
       "id": "beatitude_dawns_for_the_worthy",
       "name": "Beatitude Dawns for the Worthy",
-      "desc": "Saat target musuh terkena Weakness Break, Fugue akan memulihkan <nobr>3</nobr> Energy. Setelah melancarkan Ultimate, aksi seluruh rekan tim akan <u>didahulukan</u> sebesar <nobr>24%</nobr>."
+      "desc": "Saat target musuh terkena Weakness Break, Fugue akan memulihkan <nobr>3</nobr> Energy. Setelah melancarkan Ultimate, aksi seluruh rekan tim akan <u>didahulukan</u> sebesar <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Pendahuluan Aksi",
+          "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122503,
       "id": "verity_weaves_thoughts_to_blade",
       "name": "Verity Weaves Thoughts to Blade",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122504,
       "id": "bereft_of_form_which_name_to_bear",
       "name": "Bereft of Form, Which Name to Bear",
-      "desc": "Break DMG yang diakibatkan rekan tim yang memiliki \"Foxian Prayer\" meningkat <nobr>20%</nobr>."
+      "desc": "Break DMG yang diakibatkan rekan tim yang memiliki \"Foxian Prayer\" meningkat <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122505,
       "id": "colored_cloud_rains_fortune",
       "name": "Colored Cloud Rains Fortune",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122506,
       "id": "clairvoyance_of_boom_and_doom",
       "name": "Clairvoyance of Boom and Doom",
-      "desc": "Weakness Break Efficiency Fugue meningkat <nobr>50%</nobr>. Saat Fugue berada dalam status \"Torrid Scorch\", efek \"Foxian Prayer\" akan berlaku pada seluruh rekan tim."
+      "desc": "Weakness Break Efficiency Fugue meningkat <nobr>50%</nobr>. Saat Fugue berada dalam status \"Torrid Scorch\", efek \"Foxian Prayer\" akan berlaku pada seluruh rekan tim.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

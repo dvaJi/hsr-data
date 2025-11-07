@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "Luocha",
+  "description": "Seorang pedagang asing dari luar angkasa yang membawa peti mati ke mana pun dia pergi.\nSangat ahli dalam ilmu medis.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Memulihkan HP 1 rekan tim dan memperoleh 1 lapis \"Abyss Flower\".",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "Menghapus masing-masing 1 efek Buff dari seluruh musuh dan mengakibatkan Imaginary DMG pada seluruh musuh, serta memperoleh 1 lapis \"Abyss Flower\".",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Buff memperkuat kemampuan tempur target untuk jangka waktu tertentu. Jika tidak ada ketentuan khusus, maka Buff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "Saat memiliki 2 lapis \"Abyss Flower\", sebuah area pembatas akan dihasilkan. Selama durasi area pembatas, setiap rekan yang menyerang akan memperoleh pemulihan HP.",
       "type": "Talent",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Gugur",
+          "desc": "Saat HP berkurang hingga 0, maka karakter tersebut gugur. Karakter yang gugur tidak dapat melanjutkan pertempuran.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "Setelah menggunakan Technique, efek Talent akan segera dipicu setelah memasuki pertempuran berikutnya.",
       "type": "Technique",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Ablution of the Quick",
-      "desc": "Meningkatkan <nobr>20%</nobr> ATK seluruh rekan tim saat area pembatas aktif."
+      "desc": "Meningkatkan <nobr>20%</nobr> ATK seluruh rekan tim saat area pembatas aktif.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "Bestowal From the Pure",
-      "desc": "Saat memicu efek Skill, jika persentase HP rekan tim yang ditargetkan kurang dari <nobr>50%</nobr>, maka pemulihan yang diberikan Luocha akan meningkat <nobr>30%</nobr>. Jika persentase HP rekan tim yang ditargetkan lebih dari atau sama dengan <nobr>50%</nobr>, maka Luocha akan memberikan Shield yang menahan DMG sebesar <nobr>18%</nobr> ATK Luocha +<nobr>240</nobr> selama <nobr>2</nobr> giliran."
+      "desc": "Saat memicu efek Skill, jika persentase HP rekan tim yang ditargetkan kurang dari <nobr>50%</nobr>, maka pemulihan yang diberikan Luocha akan meningkat <nobr>30%</nobr>. Jika persentase HP rekan tim yang ditargetkan lebih dari atau sama dengan <nobr>50%</nobr>, maka Luocha akan memberikan Shield yang menahan DMG sebesar <nobr>18%</nobr> ATK Luocha +<nobr>240</nobr> selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "Surveyal by the Fool",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "Heavy Lies the Crown",
-      "desc": "Membuat target musuh memasuki status Weaken saat area pembatas aktif, mengurangi <nobr>12%</nobr> DMG yang diakibatkannya."
+      "desc": "Membuat target musuh memasuki status Weaken saat area pembatas aktif, mengurangi <nobr>12%</nobr> DMG yang diakibatkannya.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "Cicatrix 'Neath the Pain",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "Reunion With the Dust",
-      "desc": "Saat melancarkan Ultimate, ada <nobr>100%</nobr> <u>peluang tetap</u> untuk mengurangi <nobr>20%</nobr> RES seluruh Tipe seluruh musuh selama <nobr>2</nobr> giliran."
+      "desc": "Saat melancarkan Ultimate, ada <nobr>100%</nobr> <u>peluang tetap</u> untuk mengurangi <nobr>20%</nobr> RES seluruh Tipe seluruh musuh selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Peluang Tetap",
+          "desc": "Peluang tetap yang tidak akan terpengaruh oleh faktor apa pun.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

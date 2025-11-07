@@ -2,6 +2,7 @@
   "_id": 1003,
   "id": "himeko",
   "name": "Himeko",
+  "description": "La restauradora del Expreso Astral.\nDecidió viajar con el Expreso Astral para contemplar el vasto cielo estrellado.\nEs aficionada a preparar café artesanal.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Inflige Daño de Fuego a un enemigo y una pequeña cantidad de Daño de Fuego a los enemigos adyacentes.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 13
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Inflige Daño de Fuego a todos los enemigos y recupera energía si elimina a alguno.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 27
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "Al comenzar la batalla o cuando se rompe la Debilidad del enemigo, consigue carga.\nDespués de que un objetivo aliado ataque, si ha acumulado el máximo de cargas, lanza un ataque adicional que inflige Daño de Fuego a todos los enemigos y consume todas sus cargas.",
       "type": "Talento",
       "tag": "ATQ AdE",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,24 @@
       "simpleDesc": "Crea una zona especial. Al entrar en combate con enemigos en la zona especial, hay una gran probabilidad de que el Daño de Fuego que reciben los enemigos aumente.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1441,79 @@
       "_id": 100301,
       "id": "childhood",
       "name": "Infancia",
-      "desc": "Cuando se activa Carrera de la victoria, la VEL de Himeko aumenta en un <nobr>20%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Cuando se activa Carrera de la victoria, la VEL de Himeko aumenta en un <nobr>20%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100302,
       "id": "convergence",
       "name": "Convergencia",
-      "desc": "Cuando el objetivo tiene un porcentaje de PV igual o inferior al <nobr>50%</nobr>, recibe un <nobr>15%</nobr> más de daño."
+      "desc": "Cuando el objetivo tiene un porcentaje de PV igual o inferior al <nobr>50%</nobr>, recibe un <nobr>15%</nobr> más de daño.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100303,
       "id": "poised",
       "name": "Aplomo",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100304,
       "id": "dedication",
       "name": "Dedicación",
-      "desc": "Cuando Himeko lanza su habilidad básica y rompe la Debilidad de un enemigo, consigue <nobr>1</nobr> carga adicional."
+      "desc": "Cuando Himeko lanza su habilidad básica y rompe la Debilidad de un enemigo, consigue <nobr>1</nobr> carga adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100305,
       "id": "aspiration",
       "name": "Aspiraciones",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100306,
       "id": "trailblaze",
       "name": "Trazando caminos",
-      "desc": "La habilidad definitiva inflige daño 2 veces adicionales. Cada vez, inflige a un enemigo al azar un Daño de Fuego equivalente al <nobr>40%</nobr> del daño original recibido."
+      "desc": "La habilidad definitiva inflige daño 2 veces adicionales. Cada vez, inflige a un enemigo al azar un Daño de Fuego equivalente al <nobr>40%</nobr> del daño original recibido.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

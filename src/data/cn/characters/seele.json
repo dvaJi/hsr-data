@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "希儿",
+  "description": "地底反抗组织「地火」的骨干，别号「蝴蝶」。\n性格率真直爽，内心隐藏着细腻敏锐的一面。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量量子属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "对敌方单体造成量子属性伤害，并使自身速度提高。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,18 @@
       "simpleDesc": "进入增幅状态，对敌方单体造成大量量子属性伤害。",
       "type": "终结技",
       "tag": "单攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "施放普攻、战技、终结技消灭敌方目标时获得额外回合并进入增幅状态，增幅状态下自身造成的伤害提高。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "额外回合",
+          "desc": "获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "进入隐身状态。攻击敌人进入战斗后立即进入增幅状态。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "斩尽",
-      "desc": "对当前生命值百分比小于等于<nobr>80%</nobr>的敌方目标造成伤害时，暴击率提高<nobr>15%</nobr>。"
+      "desc": "对当前生命值百分比小于等于<nobr>80%</nobr>的敌方目标造成伤害时，暴击率提高<nobr>15%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "蝶舞",
-      "desc": "战技的加速效果可以叠加，最多叠加<nobr>2</nobr>层。"
+      "desc": "战技的加速效果可以叠加，最多叠加<nobr>2</nobr>层。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "缭乱",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "掠影",
-      "desc": "希儿消灭敌方目标时，自身恢复<nobr>15</nobr>点能量。"
+      "desc": "希儿消灭敌方目标时，自身恢复<nobr>15</nobr>点能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "锋锐",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "离析",
-      "desc": "施放终结技后使受到攻击的敌方单体陷入【乱蝶】状态，持续<nobr>1</nobr>回合。【乱蝶】状态下的敌方目标受到攻击后，额外受到1次等同于希儿终结技伤害<nobr>15%</nobr>的量子属性<u>附加伤害</u>。若该目标被我方其他目标触发【乱蝶】状态的<u>附加伤害</u>消灭，将不会触发希儿的天赋。\n当希儿陷入<u>无法战斗状态</u>时，敌方目标的【乱蝶】状态被解除。"
+      "desc": "施放终结技后使受到攻击的敌方单体陷入【乱蝶】状态，持续<nobr>1</nobr>回合。【乱蝶】状态下的敌方目标受到攻击后，额外受到1次等同于希儿终结技伤害<nobr>15%</nobr>的量子属性<u>附加伤害</u>。若该目标被我方其他目标触发【乱蝶】状态的<u>附加伤害</u>消灭，将不会触发希儿的天赋。\n当希儿陷入<u>无法战斗状态</u>时，敌方目标的【乱蝶】状态被解除。",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "无法战斗状态",
+          "desc": "当我方目标的当前生命值被削减至0时进入的特殊状态，处于该状态的目标无法继续战斗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

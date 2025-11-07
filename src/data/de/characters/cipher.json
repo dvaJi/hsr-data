@@ -2,6 +2,7 @@
   "_id": 1406,
   "id": "cipher",
   "name": "Cipher",
+  "description": "Die verlorene Diebesstadt Dolos, wo dreihundert Schurken sich ihren Vergnügungen hingeben und ungehindert ihr Unwesen treiben.\nLauf, flinke Diebin Cifera, die Erbin von Chrysos, die mit der Kernflamme der Täuschung spielt. Mögen deine Lügen mit dem Wind reisen und durch diese Welt wehen ...\n„Ha, du willst mich reinlegen? Keine Chance!“",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Quanten-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Es besteht eine hohe Chance, dass der verursachte SCH eines Gegners sowie angrenzender Einheiten reduziert und Ciphers ANG erhöht wird. Fügt außerdem einem anvisierten Gegner Quanten-SCH sowie angrenzenden Einheiten geringen Quanten-SCH zu.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,24 @@
       "simpleDesc": "Fügt einem Gegner Quanten-SCH und einen bestimmten Prozentsatz von Tatsächlichem SCH des aktuell aufgezeichneten Talentwerts zu. Fügt außerdem dem Gegner sowie angrenzenden Einheiten geringen Quanten-SCH und einen bestimmten Prozentsatz von Tatsächlichem SCH des aktuell aufgezeichneten Talentwerts zu. Dieser Tatsächliche SCH wird auf alle Ziele der Fähigkeit aufgeteilt.",
       "type": "Ultimate",
       "tag": "Ausdehnung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        60
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "Tatsächlicher Schaden",
+          "desc": "SCH ohne Typ, der durch Effekte nicht beeinflusst wird. Dieser SCH wird nicht als 1-mal Angriff gewertet.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1173,32 @@
       "simpleDesc": "Cipher versetzt einen Gegner in den Status „Stammkunde“. Nachdem Ciphers Teammitglieder den Stammkunden angegriffen hat, führt sie einen Folgeangriff aus und verursacht Quanten-SCH. Dieser Effekt kann bis zu #3[i]-mal pro Runde ausgelöst werden.\nCipher zeichnet den SCH auf, den Verbündete dem Ziel mit dem Status „Stammkunde“ zugefügt haben. Dieser Wert wird nach dem Einsatz von Ultimate zurückgesetzt.",
       "type": "Talent",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "Tatsächlicher Schaden",
+          "desc": "SCH ohne Typ, der durch Effekte nicht beeinflusst wird. Dieser SCH wird nicht als 1-mal Angriff gewertet.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1466,6 +1538,15 @@
       "simpleDesc": "Erhält „Zagreus’ Segen“. Während der Dauer ist Cipher für Gegner unsichtbar und erhält zufällige Verbrauchsgegenstände, wenn sie sich ihnen nähert. Beim Kampfeintritt fügt Cipher allen Gegnern geringen Quanten-SCH zu.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1485,37 +1566,115 @@
       "_id": 140601,
       "id": "read_the_room_seek_the_glee",
       "name": "Beobachtung des Lächelns",
-      "desc": "Der von Cipher aufgezeichnete SCH entspricht <nobr>150%</nobr> des ursprünglich aufgezeichneten SCH. Beim Einsatz des <u>Folgeangriffs</u> ihres Talents wird Ciphers ANG für <nobr>2</nobr> Rd. um <nobr>80%</nobr> erhöht."
+      "desc": "Der von Cipher aufgezeichnete SCH entspricht <nobr>150%</nobr> des ursprünglich aufgezeichneten SCH. Beim Einsatz des <u>Folgeangriffs</u> ihres Talents wird Ciphers ANG für <nobr>2</nobr> Rd. um <nobr>80%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140602,
       "id": "in_the_fray_nab_on_a_spree",
       "name": "Sorgenschwere Fingerfertigkeit",
-      "desc": "Wenn Cipher einen Gegner trifft, besteht eine <u>Grundchance</u> von <nobr>120%</nobr>, seinen erlittenen SCH für <nobr>2</nobr> Rd. um <nobr>30%</nobr> zu erhöhen."
+      "desc": "Wenn Cipher einen Gegner trifft, besteht eine <u>Grundchance</u> von <nobr>120%</nobr>, seinen erlittenen SCH für <nobr>2</nobr> Rd. um <nobr>30%</nobr> zu erhöhen.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140603,
       "id": "from_thin_air_hard_to_foresee",
       "name": "Erlogenes erkennt man schwer",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140604,
       "id": "the_jig_is_up_quick_to_flee",
       "name": "Kaum erwischt, schon entschwunden",
-      "desc": "Nachdem der „Stammkunde“ von einem Verbündeten angegriffen wurde, fügt Cipher ihm <u>zusätzlichen Quanten-SCH</u> in Höhe von <nobr>50%</nobr> ihres ANG zu."
+      "desc": "Nachdem der „Stammkunde“ von einem Verbündeten angegriffen wurde, fügt Cipher ihm <u>zusätzlichen Quanten-SCH</u> in Höhe von <nobr>50%</nobr> ihres ANG zu.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140605,
       "id": "safe_in_numbers_light_as_a_bee",
       "name": "Gerissen wie ein Hase, flink wie eine Schwalbe",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140606,
       "id": "the_thiefs_game_unsung_and_free",
       "name": "Diebin inkognito",
-      "desc": "Erhöht den durch <u>Folgeangriffe</u> verursachten SCH von Ciphers Talent um <nobr>350%</nobr>. Zeichnet zusätzlich <nobr>16%</nobr> des nicht Überladungs-SCH dieses Angriffs auf. Nachdem der aufgezeichnete Wert durch Einsatz des Ultimates zurückgesetzt wurde, werden <nobr>20%</nobr> des entfernten Werts zurückerstattet."
+      "desc": "Erhöht den durch <u>Folgeangriffe</u> verursachten SCH von Ciphers Talent um <nobr>350%</nobr>. Zeichnet zusätzlich <nobr>16%</nobr> des nicht Überladungs-SCH dieses Angriffs auf. Nachdem der aufgezeichnete Wert durch Einsatz des Ultimates zurückgesetzt wurde, werden <nobr>20%</nobr> des entfernten Werts zurückerstattet.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

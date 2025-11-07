@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "Evernight",
+  "description": "In the Memory Zone secluded from the world, candlelight reflects the past, silently extinguishing in the mist.\nEvernight, child of Remembrance emerging from those shadows, the Chrysos Heir who conceals the Coreflame of \"Time,\" raises the waves of \"Oblivion\" to protect the wishes of those in the mirror\n\"Don't worry, I will guard the path of Trailblaze for you... at any cost. ♭\"",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Ice DMG to one designated enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Consumes this unit's HP to summon memosprite Evey and increase CRIT DMG for all ally memosprites. If Evey is already on the field, restores its HP. When using this, gains #3[i] \"Memoria.\" If in the \"Darkest Riddle\" state, additionally gains #5[i] \"Memoria.\"",
       "type": "Skill",
       "tag": "Summon",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "Deals Ice DMG to all enemies. Summons memosprite Evey and causes Evernight to enter the \"Darkest Riddle\" state, during which enemies take increased DMG and both Evernight and her memosprite deal increased DMG and are immune to Crowd Control debuffs.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Crowd Control debuff",
+          "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "When entering combat, summons memosprite Evey. Each time this unit or Evey loses HP, increases CRIT DMG for this unit and Evey, and gains \"Memoria.\"\nWhen Evernight has #6[i] or more \"Memoria,\" Evey immediately takes action.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Summon Memosprite",
+          "desc": "Summon the memosprite to the field. If the memosprite is already on the field, dispels all Crowd Control debuffs the memosprite is afflicted with.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Crowd Control debuff",
+          "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "At the start of the next battle, obtains the same effect as the one from Skill that increases memosprite CRIT DMG, and additionally gains \"Memoria.\"",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Evey",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "Remembrance, Whirling, Like Rain",
+        "desc": "This ability automatically selects a target, prioritizing the enemy target that Evernight last attacked. Deals Ice DMG equal to <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> of Evey's Max HP to one enemy. For every <nobr>#3[i]</nobr> point(s) of \"Memoria\" Evernight currently has, additionally deals Ice DMG equal to <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> of Evey's Max HP. Gains <nobr>#4[i]</nobr> point(s) of \"Memoria\" after use.",
+        "simpleDesc": "Deals minor Ice DMG to one enemy and further deals minor Ice DMG based on the amount of \"Memoria.\"",
+        "type": {
+          "id": "Servant",
+          "name": "Memosprite Skill"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "Single Target"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "Solitude, Drifting, In Murk",
+        "desc": "Evey is immune to <u>Crowd Control debuffs</u> and has an increased chance of getting attacked. While Evey is on the field, Evernight and Evey deal <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> increased DMG.",
+        "simpleDesc": "The memosprite Evey is immune to <u>Crowd Control debuffs</u>, and its chance of getting attacked increases. While it's on the field, increases its own and Evernight's DMG dealt.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Support"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "Crowd Control debuff",
+            "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "Night, Trailing, In Step",
+        "desc": "When summoned, this unit immediately takes action.",
+        "simpleDesc": "When summoned, this unit immediately takes action.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "You, Parting, Beyond Reach",
+        "desc": "Upon disappearing, increases Evernight's SPD by <nobr>#1[i]%</nobr>. If the disappearance is due to using \"Dream, Dissolving, as Dew,\" then, for every 1 \"Memoria\" point consumed by the attack, additionally increases Evernight's SPD by <nobr>#2[i]%</nobr>. Up to <nobr>#3[i]</nobr> \"Memoria\" points can be taken into account for this. The SPD Boost effect cannot stack and is removed at the start of Evernight's next turn.",
+        "simpleDesc": "Upon disappearing, increases Evernight's SPD.",
+        "type": {
+          "name": "Memosprite Talent"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "Dream, Dissolving, as Dew",
+        "desc": "This ability is used when Evernight's \"Memoria\" is greater than or equal to <nobr>#3[i]</nobr> and she is not affected by Crowd Control. For every 1 \"Memoria\" point currently held, deals Ice DMG equal to <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> of Evey's Max HP to the primary target, and Ice DMG equal to <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> of Evey's Max HP to the other enemy targets. After use, consumes all \"Memoria\" and HP, and makes Evey disappear.",
+        "simpleDesc": "<span style=\"color:#f29e38ff>Based on the amount of \"Memoria\"</span>, deals massive Ice DMG to the primary target and Ice DMG to the other enemy targets. After use, <span style=\"color:#f29e38ff>consumes all \"Memoria\" and HP, and makes Evey disappear</span>.",
+        "type": {
+          "id": "Servant",
+          "name": "Memosprite Skill"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "Sleep Tight, the Night Dreams Long",
-      "desc": "When Evernight is on the field, if there are (4 or more)/3/2/1 enemy targets on the field, ally memosprites deal DMG equal to <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> of their original DMG respectively."
+      "desc": "When Evernight is on the field, if there are (4 or more)/3/2/1 enemy targets on the field, ally memosprites deal DMG equal to <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> of their original DMG respectively.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "Listen Up, the Slumber Speaks Soft",
-      "desc": "Increases Evernight's and the memosprite Evey's CRIT DMG by <nobr>40%</nobr>. Each time Evernight gains \"Memoria,\" increases the amount of \"Memoria\" gain by <nobr>2</nobr> point(s). When using Ultimate, additionally gains <nobr>2</nobr> Charge for \"Darkest Riddle.\""
+      "desc": "Increases Evernight's and the memosprite Evey's CRIT DMG by <nobr>40%</nobr>. Each time Evernight gains \"Memoria,\" increases the amount of \"Memoria\" gain by <nobr>2</nobr> point(s). When using Ultimate, additionally gains <nobr>2</nobr> Charge for \"Darkest Riddle.\"",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "Fear Not, the Nightmare Lies Past",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nMemosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nMemosprite Talent Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "Wake Up, the Tomorrow is Yours",
-      "desc": "While Evernight is on the field, ally memosprites' Weakness Break Efficiency increases by <nobr>25%</nobr>, and the memosprite Evey's Weakness Break Efficiency additionally increases by <nobr>25%</nobr>."
+      "desc": "While Evernight is on the field, ally memosprites' Weakness Break Efficiency increases by <nobr>25%</nobr>, and the memosprite Evey's Weakness Break Efficiency additionally increases by <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "Let Go, the \"Me\" in Memories",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nMemosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nMemosprite Skill Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "Like This, Always",
-      "desc": "While Evernight is on the field, all ally targets' All-Type <u>RES PEN</u> increases by <nobr>20%</nobr>. After the memosprite Evey uses \"Dream, Dissolving, as Dew,\" Evernight gains <nobr>30%</nobr> of the amount of \"Memoria\" consumed in this attack."
+      "desc": "While Evernight is on the field, all ally targets' All-Type <u>RES PEN</u> increases by <nobr>20%</nobr>. After the memosprite Evey uses \"Dream, Dissolving, as Dew,\" Evernight gains <nobr>30%</nobr> of the amount of \"Memoria\" consumed in this attack.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

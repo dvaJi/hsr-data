@@ -2,6 +2,7 @@
   "_id": 1225,
   "id": "fugue",
   "name": "Fugue",
+  "description": "Una raposiana con mucho tacto, cuyo aspecto, nombre e identidad han sido robados.\nEl destino le ha dejado un pequeño margen para sobrevivir, pero la marca de la Destrucción aún se retuerce de impaciencia.\nLa fugitiva que ha experimentado la vida y la muerte y recibe una nueva oportunidad de vivir... ¿cuándo podrá volver a casa?",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Otorga Plegaria raposiana a un aliado: su efecto de Ruptura aumenta y también puede reducir la Firmeza de los enemigos que no tengan Debilidad de su mismo tipo.\nFugue entra en el estado de Llama tórrida: su ATQ básico se potencia. Cuando un aliado con Plegaria raposiana ataca, Fugue tiene una gran probabilidad de reducir la DEF de los objetivos enemigos.",
       "type": "Habilidad básica",
       "tag": "Apoyo",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,15 @@
       "simpleDesc": "Inflige Daño de Fuego a todos los enemigos. Este ataque ignora los tipos de Debilidad y reduce la Firmeza de todos los enemigos.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,32 @@
       "simpleDesc": "Cuando Fugue está en el campo de batalla, los enemigos reciben adicionalmente Brillo nubeígneo. Cuando Brillo nubeígneo se reduce a 0, vuelven a recibir Daño de Ruptura de Debilidad. Después de que un aliado ataque a un objetivo con Ruptura de Debilidad, le inflige adicionalmente Daño de Ultrarruptura.",
       "type": "Talento",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Ruptura de Debilidad",
+          "desc": "Cuando la Firmeza del objetivo se reduce a 0, entrará en un estado especial en el que sus acciones se retrasarán.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Daño de Ultrarruptura",
+          "desc": "Cuanto más altos sean la Reducción de Firmeza de este ataque, el nivel del personaje y el efecto de Ruptura, más Daño de Ultrarruptura inflige.\nEl Daño de Ultrarruptura no puede causar Golpes CRIT y no se ve afectado por los efectos de aumento de daño.\nEl Daño de Ultrarruptura también se considera Daño de Ruptura.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,32 @@
       "simpleDesc": "Afecta con Mareo a los enemigos que estén dentro de una zona determinada. Tras atacar a enemigos mareados y entrar en combate, la acción de Fugue se adelanta y tiene una gran probabilidad de afectar a cada uno de los objetivos enemigos con un estado de DEF reducida similar al de la habilidad básica de Fugue.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1410,37 +1499,88 @@
       "_id": 122501,
       "id": "earthbound_i_was_cloudward_i_be",
       "name": "Del suelo al cielo",
-      "desc": "La eficiencia de la Ruptura de Debilidad de los aliados con Plegaria raposiana aumenta en un <nobr>50%</nobr>."
+      "desc": "La eficiencia de la Ruptura de Debilidad de los aliados con Plegaria raposiana aumenta en un <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122502,
       "id": "beatitude_dawns_for_the_worthy",
       "name": "De la virtud viene la ventura",
-      "desc": "Cuando se rompe la Debilidad de un enemigo, Fugue recupera <nobr>3</nobr> pts. de energía. Tras lanzar su habilidad definitiva, la acción de todos los aliados se <u>adelanta</u> un <nobr>24%</nobr>."
+      "desc": "Cuando se rompe la Debilidad de un enemigo, Fugue recupera <nobr>3</nobr> pts. de energía. Tras lanzar su habilidad definitiva, la acción de todos los aliados se <u>adelanta</u> un <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122503,
       "id": "verity_weaves_thoughts_to_blade",
       "name": "Mi verdadero yo",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122504,
       "id": "bereft_of_form_which_name_to_bear",
       "name": "Cambio de forma, cambio de nombre",
-      "desc": "El Daño de Ruptura que infligen los aliados con Plegaria raposiana aumenta en un <nobr>20%</nobr>."
+      "desc": "El Daño de Ruptura que infligen los aliados con Plegaria raposiana aumenta en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122505,
       "id": "colored_cloud_rains_fortune",
       "name": "Nubes auspiciosas",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122506,
       "id": "clairvoyance_of_boom_and_doom",
       "name": "Clarividencia de fortunas y desgracias",
-      "desc": "La eficiencia de la Ruptura de Debilidad de Fugue aumenta en un <nobr>50%</nobr>. Cuando Fugue está en el estado de Llama tórrida, el efecto de Plegaria raposiana aplica a todos los aliados."
+      "desc": "La eficiencia de la Ruptura de Debilidad de Fugue aumenta en un <nobr>50%</nobr>. Cuando Fugue está en el estado de Llama tórrida, el efecto de Plegaria raposiana aplica a todos los aliados.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

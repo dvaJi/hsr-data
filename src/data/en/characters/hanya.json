@@ -2,6 +2,7 @@
   "_id": 1215,
   "id": "hanya",
   "name": "Hanya",
+  "description": "One of the judges of the Xianzhou Luofu's Ten-Lords Commission.\nOrdained by the Ten-Lords and wielding the authority of the Oracle Brush, she reads the multitudes of human sins and transgressions, then issues punishments and karmic retribution.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -243,10 +244,22 @@
       "_id": 121501,
       "id": "oracle_brush",
       "name": "Oracle Brush",
-      "desc": "Deals Physical DMG equal to #1[i]% of Hanya's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Physical DMG to a single enemy.",
+      "desc": "Deals Physical DMG equal to #1[i]% of Hanya's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Physical DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -416,9 +429,21 @@
       "id": "samsara_locked",
       "name": "Samsara, Locked",
       "desc": "Deals Physical DMG equal to #1[i]% of Hanya's ATK to one designated enemy target, then applies \"Burden\" to them.\nFor every 2 Basic ATKs, Skills, or Ultimates allies use on an enemy with \"Burden,\" allies will immediately recover 1 Skill Point. \"Burden\" is only active on the latest target it is applied to, and will be dispelled automatically after the Skill Point recovery effect has been triggered #2[i] times.",
-      "simpleDesc": "Deals Physical DMG to a single enemy and applies Burden to them. For every 2 Basic ATKs, Skills, or Ultimates allies use on an enemy with Burden, allies recover 1 Skill Point.",
+      "simpleDesc": "Deals Physical DMG to one enemy and applies \"Burden\" to them. For every 2 Basic ATKs, Skills, or Ultimates allies use on an enemy with Burden, allies recover 1 Skill Point.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 17
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Increases an ally's SPD and ATK.",
       "type": "Ultimate",
       "tag": "Enhance",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "When an ally target uses a Basic ATK, Skill, or Ultimate on an enemy target inflicted with \"Burden,\" the DMG dealt increases.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1388,15 @@
       "desc": "Immediately attacks the enemy. After entering battle, applies Burden equivalent to that applied by the Skill to a random enemy.",
       "simpleDesc": "Attacks the enemy. After entering battle, applies Burden equivalent to that applied by the Skill to a random enemy.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1356,37 +1411,88 @@
       "_id": 121501,
       "id": "one_heart",
       "name": "One Heart",
-      "desc": "When an ally target with Hanya's Ultimate effect defeats an enemy, Hanya's <u>action advances</u> by <nobr>15%</nobr>. This effect can only be triggered <nobr>1</nobr> time(s) per turn."
+      "desc": "When an ally target with Hanya's Ultimate effect defeats an enemy, Hanya's <u>action advances</u> by <nobr>15%</nobr>. This effect can only be triggered <nobr>1</nobr> time(s) per turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121502,
       "id": "two_views",
       "name": "Two Views",
-      "desc": "After using the Skill, this character's SPD increases by <nobr>20%</nobr> for <nobr>1</nobr> turn(s)."
+      "desc": "After using the Skill, this character's SPD increases by <nobr>20%</nobr> for <nobr>1</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121503,
       "id": "three_temptations",
       "name": "Three Temptations",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121504,
       "id": "four_truths",
       "name": "Four Truths",
-      "desc": "The Ultimate's duration is additionally extended for <nobr>1</nobr> turn(s)."
+      "desc": "The Ultimate's duration is additionally extended for <nobr>1</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121505,
       "id": "five_skandhas",
       "name": "Five Skandhas",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121506,
       "id": "six_reverences",
       "name": "Six Reverences",
-      "desc": "Increase the DMG Boost effect of the Talent by an additional <nobr>10%</nobr>."
+      "desc": "Increase the DMG Boost effect of the Talent by an additional <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

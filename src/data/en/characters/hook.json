@@ -2,6 +2,7 @@
   "_id": 1109,
   "id": "hook",
   "name": "Hook",
+  "description": "Boss (self-proclaimed) of an Underworld adventure squad, The Moles.\nShe loves freedom and sees life as a series of adventures.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,22 @@
       "_id": 110901,
       "id": "hehe_dont_get_burned",
       "name": "Hehe! Don't Get Burned!",
-      "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Fire DMG to a single enemy.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 110902,
       "id": "hey_remember_hook",
       "name": "Hey! Remember Hook?",
-      "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to a single enemy. In addition, there is a #2[i]% base chance to inflict Burn for #3[i] turn(s).\nWhen afflicted with Burn, enemies will take Fire DoT equal to #4[i]% of Hook's ATK at the beginning of each turn.",
-      "simpleDesc": "Deals Fire DMG to a single enemy, with a high chance to inflict Burn on the enemy.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to one designated enemy. In addition, there is a #2[i]% base chance to inflict Burn for #3[i] turn(s).\nWhen afflicted with Burn, enemies will take Fire DoT equal to #4[i]% of Hook's ATK at the beginning of each turn.",
+      "simpleDesc": "Deals Fire DMG to one enemy, with a high chance to inflict Burn on the enemy.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -748,10 +782,22 @@
       "_id": 110903,
       "id": "boom_here_comes_the_fire",
       "name": "Boom! Here Comes the Fire!",
-      "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to a single enemy.\nAfter using Ultimate, the next Skill to be used is Enhanced, which deals DMG to a single enemy and enemies adjacent to it.",
-      "simpleDesc": "Deals massive Fire DMG to a single enemy and Enhances this unit's next Skill.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Hook's ATK to one designated enemy.\nAfter using Ultimate, the next Skill to be used is Enhanced, which deals DMG to one designated enemy and enemies adjacent to it.",
+      "simpleDesc": "Deals massive Fire DMG to one enemy and Enhances this unit's next Skill.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,27 @@
       "simpleDesc": "When attacking a Burned enemy, deals Fire Additional DMG for a moderate amount, and additionally regenerates energy.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1409,24 @@
       "desc": "Immediately attacks the enemy. Upon entering battle, Hook deals Fire DMG equal to #4[i]% of her ATK to a random enemy. In addition, there is a #1[i]% base chance to inflict Burn on every enemy for #3[i] turn(s).\nWhen afflicted with Burn, enemies will take Fire DoT equal to #2[i]% of Hook's ATK at the beginning of each turn.",
       "simpleDesc": "Attacks enemies. After entering battle, deals minor Fire DMG to one random enemy, with a high chance to inflict Burn on each enemy.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1446,88 @@
       "_id": 110901,
       "id": "early_to_bed_early_to_rise",
       "name": "Early to Bed, Early to Rise",
-      "desc": "Enhanced Skill deals <nobr>20%</nobr> increased DMG."
+      "desc": "Enhanced Skill deals <nobr>20%</nobr> increased DMG.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110902,
       "id": "happy_tummy_happy_body",
       "name": "Happy Tummy, Happy Body",
-      "desc": "Extends the duration of Burn caused by Skill by <nobr>1</nobr> turn(s)."
+      "desc": "Extends the duration of Burn caused by Skill by <nobr>1</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110903,
       "id": "dont_be_picky_nothings_icky",
       "name": "Don't Be Picky, Nothing's Icky",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110904,
       "id": "its_okay_to_not_know",
       "name": "It's Okay to Not Know",
-      "desc": "When Talent is triggered, there is a <nobr>100%</nobr> <u>base chance</u> to Burn enemies adjacent to the designated enemy target, equivalent to that of Skill."
+      "desc": "When Talent is triggered, there is a <nobr>100%</nobr> <u>base chance</u> to Burn enemies adjacent to the designated enemy target, equivalent to that of Skill.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110905,
       "id": "let_the_moles_deeds_be_known",
       "name": "Let the Moles' Deeds Be Known",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110906,
       "id": "always_ready_to_punch_and_kick",
       "name": "Always Ready to Punch and Kick",
-      "desc": "Hook deals <nobr>20%</nobr> more DMG to enemies afflicted with Burn."
+      "desc": "Hook deals <nobr>20%</nobr> more DMG to enemies afflicted with Burn.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1305,
   "id": "dr_ratio",
   "name": "Dr. Ratio",
+  "description": "Anggota Intelligentsia Guild.\nMemiliki kepribadian yang eksentrik, mulut yang tajam saat berbicara namun elegan.\nWajah yang terdapat dalam kepala gipsum itu ternyata tampan.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG dalam jumlah kecil pada 1 musuh yang ditargetkan.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG pada 1 musuh yang ditargetkan.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG pada satu musuh yang ditarget dan menambahkan status \"Wiseman's Folly\" pada target. Saat rekan tim Dr. Ratio menyerang target berstatus \"Wiseman's Folly\", Dr. Ratio akan memicu 1 kali Serangan Lanjutan pada target tersebut.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1018,10 +1055,36 @@
       "_id": 130504,
       "id": "cogito_ergo_sum",
       "name": "Cogito, Ergo Sum",
-      "desc": "Saat melancarkan Skill, ada #2[i]% peluang tetap untuk melancarkan 1 kali Serangan Lanjutan pada target tersebut, yang mengakibatkan Imaginary DMG sebesar #1[i]% ATK Dr. Ratio. Untuk setiap 1 efek Debuff yang dimiliki target, akan meningkatkan #3[i]% peluang tetap pelancaran Serangan Lanjutan. Jika target dikalahkan sebelum Serangan Lanjutan dilancarkan, maka akan melancarkan Serangan Lanjutan pada satu musuh secara acak.",
-      "simpleDesc": "Saat melancarkan Skill, ada peluang untuk melancarkan 1 kali Serangan Lanjutan pada target, mengakibatkan Imaginary DMG.",
+      "desc": "Saat melancarkan Skill, ada #2[i]% peluang tetap untuk melancarkan 1 kali Serangan Lanjutan pada target tersebut, yang mengakibatkan Imaginary DMG sebesar #1[i]% ATK Dr. Ratio. Setiap 1 Debuff yang dimiliki target akan meningkatkan #3[i]% peluang tetap pelancaran Serangan Lanjutan. Jika target dikalahkan sebelum Serangan Lanjutan dilancarkan, maka akan melancarkan Serangan Lanjutan pada 1 musuh acak.",
+      "simpleDesc": "Saat melancarkan Skill, berpeluang melancarkan 1 kali Serangan Lanjutan yang mengakibatkan Imaginary DMG pada target tersebut.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Peluang Tetap",
+          "desc": "Peluang tetap yang tidak akan terpengaruh oleh faktor apa pun.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1409,24 @@
       "simpleDesc": "Menciptakan sebuah dimensi khusus. Musuh di dalam dimensi khusus akan terpancing (terkena Taunt). Setelah memasuki pertempuran dengan musuh di dalam dimensi khusus, berpeluang besar untuk mengurangi SPD target musuh.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1446,113 @@
       "_id": 130501,
       "id": "pride_comes_before_a_fall",
       "name": "Pride Comes Before a Fall",
-      "desc": "Batas jumlah lapisan Trace \"Summation\" bertambah <nobr>4</nobr>. Saat pertempuran dimulai, akan segera memperoleh <nobr>4</nobr> lapis \"Summation\". Perlu mengaktifkan Trace \"Summation\" terlebih dahulu."
+      "desc": "Batas jumlah lapisan Trace \"Summation\" bertambah <nobr>4</nobr>. Saat pertempuran dimulai, akan segera memperoleh <nobr>4</nobr> lapis \"Summation\". Perlu mengaktifkan Trace \"Summation\" terlebih dahulu.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130502,
       "id": "the_divine_is_in_the_details",
       "name": "The Divine Is in the Details",
-      "desc": "Saat <u>Serangan Lanjutan</u> dari Talent miliknya menyerang target, untuk setiap 1 <u>efek Debuff</u> yang dimiliki target, akan mengakibatkan Imaginary <u>DMG Tambahan</u> pada target sebesar <nobr>20%</nobr> ATK Dr. Ratio. Dalam setiap <u>Serangan Lanjutan</u> miliknya, efek ini maksimal terpicu <nobr>4</nobr> kali."
+      "desc": "Saat <u>Serangan Lanjutan</u> dari Talent miliknya menyerang target, untuk setiap 1 <u>efek Debuff</u> yang dimiliki target, akan mengakibatkan Imaginary <u>DMG Tambahan</u> pada target sebesar <nobr>20%</nobr> ATK Dr. Ratio. Dalam setiap <u>Serangan Lanjutan</u> miliknya, efek ini maksimal terpicu <nobr>4</nobr> kali.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130503,
       "id": "know_thyself",
       "name": "Know Thyself",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130504,
       "id": "ignorance_is_blight",
       "name": "Ignorance Is Blight",
-      "desc": "Saat memicu Talent, akan memulihkan ekstra <nobr>15</nobr> Energy untuk Dr. Ratio."
+      "desc": "Saat memicu Talent, akan memulihkan ekstra <nobr>15</nobr> Energy untuk Dr. Ratio.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130505,
       "id": "sic_itur_ad_astra",
       "name": "Sic Itur Ad Astra",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130506,
       "id": "vincit_omnia_veritas",
       "name": "Vincit Omnia Veritas",
-      "desc": "Efek terpicunya \"Wiseman's Folly\" bertambah ekstra <nobr>1</nobr> kali. DMG yang diakibatkan <u>Serangan Lanjutan</u> dari Talent meningkat <nobr>50%</nobr>."
+      "desc": "Efek terpicunya \"Wiseman's Folly\" bertambah ekstra <nobr>1</nobr> kali. DMG yang diakibatkan <u>Serangan Lanjutan</u> dari Talent meningkat <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

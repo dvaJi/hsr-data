@@ -2,6 +2,7 @@
   "_id": 1408,
   "id": "phainon",
   "name": "Phaénon",
+  "description": "L'Élysée mystérieuse, village frontalier isolé du monde, n'existe plus que dans des légendes énigmatiques.\n██████, Héros sans nom et Héritier chryséen portant la flamme divine du Porte-Monde, grave en toi les idéaux du monde entier, endosse le destin de tout un chacun et apporte la première lueur de l'aube à cette ère naissante.\n—« Mais s'il s'avérait que l'aube n'ait jamais existé, faites que la fureur consume tout mon être et le transforme en soleil ardent de demain ! »",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Obtient #3[i] Flammes divines. Inflige des DGT physiques massifs à un ennemi désigné et des DGT physiques aux ennemis adjacents.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Se transforme en Khaslana et déploie son territoire. Le territoire force le Retrait des coéquipiers, les empêche d'agir et applique une Faiblesse physique à tous les ennemis.\nKhaslana n'agit pas lors de tours classiques, mais au cours de #4[i] tours supplémentaires de Khaslana. Lors de son dernier tour, il lance une frappe finale qui inflige des DGT physiques massifs répartis de manière équitable entre tous les ennemis.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000020,
+          "name": "Territoire",
+          "desc": "Les effets d'un territoire sont uniques sur le champ de bataille. Tant qu'un territoire est actif, les autres capacités avec des effets de territoire ne peuvent pas être utilisées.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000016,
+          "name": "Retrait",
+          "desc": "Les cibles en état de Retrait ne peuvent pas être ciblées par des capacités et n'apparaissent pas dans l'ordre d'action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014082,
+          "name": "Tour supplémentaire de Khaslana",
+          "desc": "Lorsque Phaénon se transforme en Khaslana, un compte à rebours apparaît dans l'ordre d'action. Au début du compte à rebours, Khaslana obtient 1 tour supplémentaire. Au début du dernier tour du compte à rebours, Khaslana inflige une frappe finale et met fin à la transformation.\nLa valeur d'action initiale du compte à rebours est définie entre 0 et <nobr>100</nobr> %. La valeur d'action n'est pas réinitialisée au début de chaque vague.\nLorsque l'action de Khaslana est avancée, l'action du premier compte à rebours est avancée.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,15 @@
       "simpleDesc": "Talent de Phaénon. Cumuler #4[i] Flammes divines active l'ultime.\nLorsque Phaénon est la cible d'une capacité d'une autre unité, il obtient Flamme divine. Lorsqu'il est la cible d'une capacité d'un coéquipier, augmente les DGT critiques.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1482,24 @@
       "desc": "Augmente la limite de points de technique de 3 lorsque Phaénon est dans l'équipe.\nConsomme 2 points de technique et attaque immédiatement tous les ennemis dans une zone définie. Après être entré en combat, régénère #3[i] points d'énergie des alliés, obtient #2[i] Fléaux et récupère #4[i] point de compétence. Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Phaénon à tous les ennemis au début de chaque vague.\nSi Phaénon attaque un ennemi normal, il l'élimine immédiatement sans engager le combat. Aucun point de technique n'est consommé si aucun ennemi n'est touché.",
       "simpleDesc": "Augmente la limite de points de technique de 3. Consomme 2 points de technique et attaque tous les ennemis dans une zone définie. Après être entré en combat, régénère l'énergie des alliés, récupère un point de compétence et obtient Fléau. Inflige des DGT physiques à tous les ennemis au début de chaque vague.\nSi Phaénon attaque un ennemi normal, il l'élimine immédiatement sans engager le combat. Aucun point de technique n'est consommé si aucun ennemi n'est touché.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10014081,
+          "name": "Fléau",
+          "desc": "Charges exclusives à Khaslana, cumulables jusqu'à 7 fois. Cumuls conservés avant la transformation.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1439,37 +1519,122 @@
       "_id": 140801,
       "id": "fire_and_light_bind_virtue_and_vice",
       "name": "Feu et lumière sont vice et vertu",
-      "desc": "Le pourcentage hérité de la VIT de base du <u>tour supplémentaire de Khaslana</u> passe à <nobr>66%</nobr>. Pour chaque ennemi éliminé au cours d'un combat, augmente de <nobr>#1[f1]%</nobr> supplémentaires, jusqu'à un maximum de <nobr>84%</nobr>.\nUtiliser l'ultime augmente les DGT critiques de <nobr>50%</nobr> pendant <nobr>3</nobr> tours."
+      "desc": "Le pourcentage hérité de la VIT de base du <u>tour supplémentaire de Khaslana</u> passe à <nobr>66%</nobr>. Pour chaque ennemi éliminé au cours d'un combat, augmente de <nobr>#1[f1]%</nobr> supplémentaires, jusqu'à un maximum de <nobr>84%</nobr>.\nUtiliser l'ultime augmente les DGT critiques de <nobr>50%</nobr> pendant <nobr>3</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10014082,
+          "name": "Tour supplémentaire de Khaslana",
+          "desc": "Lorsque Phaénon se transforme en Khaslana, un compte à rebours apparaît dans l'ordre d'action. Au début du compte à rebours, Khaslana obtient 1 tour supplémentaire. Au début du dernier tour du compte à rebours, Khaslana inflige une frappe finale et met fin à la transformation.\nLa valeur d'action initiale du compte à rebours est définie entre 0 et <nobr>100</nobr> %. La valeur d'action n'est pas réinitialisée au début de chaque vague.\nLorsque l'action de Khaslana est avancée, l'action du premier compte à rebours est avancée.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140802,
       "id": "sky_and_earth_churn_mortal_froth",
       "name": "Ciel et terre, écume du monde mortel",
-      "desc": "La <u>PÉN de RÉS</u> physique de Khaslana augmente de <nobr>20%</nobr>. Si Khaslana consomme <nobr>4</nobr> <u>Fléaux</u> lorsqu'il utilise Fondation : Jugement de la mort stellaire, il obtient 1 <u>tour supplémentaire</u>."
+      "desc": "La <u>PÉN de RÉS</u> physique de Khaslana augmente de <nobr>20%</nobr>. Si Khaslana consomme <nobr>4</nobr> <u>Fléaux</u> lorsqu'il utilise Fondation : Jugement de la mort stellaire, il obtient 1 <u>tour supplémentaire</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014081,
+          "name": "Fléau",
+          "desc": "Charges exclusives à Khaslana, cumulables jusqu'à 7 fois. Cumuls conservés avant la transformation.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Tour supplémentaire",
+          "desc": "Gagne 1 tour supplémentaire qui n'augmente pas le nombre de tours avant la prochaine action. Durant ce tour supplémentaire, vous ne pouvez pas utiliser d'ultime.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140803,
       "id": "depths_of_quiet_entombed_in_ruin",
       "name": "Quiétude ensevelie",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140804,
       "id": "faces_of_titans_blurred_by_time",
       "name": "Titans balayés par le temps",
-      "desc": "Utiliser Calamité : Décret calcinâme accorde <nobr>4</nobr> cumuls supplémentaires de Calcinâme."
+      "desc": "Utiliser Calamité : Décret calcinâme accorde <nobr>4</nobr> cumuls supplémentaires de Calcinâme.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140805,
       "id": "the_wheel_spins_forevermore",
       "name": "Cycle éternel",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140806,
       "id": "embers_of_old_rise_still",
       "name": "Les braises d'antan brûlent encore",
-      "desc": "L'excédent de Flammes divines n'a plus de limite maximale. Au début du combat, obtient <nobr>6</nobr> Flammes divines.\nAprès avoir utilisé Fondation : Jugement de la mort stellaire, inflige des <u>DGT réels</u> supplémentaires équivalents à <nobr>36%</nobr> des DGT totaux infligés par cette attaque à la cible ayant les PV les plus élevés."
+      "desc": "L'excédent de Flammes divines n'a plus de limite maximale. Au début du combat, obtient <nobr>6</nobr> Flammes divines.\nAprès avoir utilisé Fondation : Jugement de la mort stellaire, inflige des <u>DGT réels</u> supplémentaires équivalents à <nobr>36%</nobr> des DGT totaux infligés par cette attaque à la cible ayant les PV les plus élevés.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "DGT réels",
+          "desc": "DGT sans type immunisés aux effets quelconques. Ces DGT ne sont pas considérés comme une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

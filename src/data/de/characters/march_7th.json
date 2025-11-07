@@ -2,6 +2,7 @@
   "_id": 1001,
   "id": "march_7th",
   "name": "7. März",
+  "description": "Ein Mädchen, das einst im ewigen Eis schlief und nichts über ihre Vergangenheit weiß.\nSie hat sich dem Astralexpress angeschlossen, um ihrer Herkunft auf den Grund zu gehen.\nBisher hat sie sich ca. 67 verschiedene Versionen ihrer Lebensgeschichte ausgemalt.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Eis-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Gewährt einem Verbündeten einen Schild.",
       "type": "Fertigkeit",
       "tag": "Verteidigung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,32 @@
       "simpleDesc": "Fügt allen Gegnern Eis-SCH zu und hat eine Chance, sie einzufrieren.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1145,24 @@
       "simpleDesc": "Nachdem ein Verbündeter mit Schild von einem Gegner angegriffen wird, startet 7. März sofort einen Konter gegen den Angreifer, der geringen Eis-SCH verursacht.",
       "type": "Talent",
       "tag": "Einzelangriff",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Konter",
+          "desc": "Wenn das Ziel angegriffen wird, wird der Konter automatisch ausgelöst, der einen zusätzlichen Angriff auf den Angreifer ausführt.\nEin Konter gilt ebenfalls als Folgeangriff.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1402,6 +1465,32 @@
       "desc": "Greift den Gegner unmittelbar an. Nach Kampfeintritt besteht eine Grundchance von #1[i]%, einen zufällig ausgewählten Gegner für #2[i] Rd. einzufrieren.\nEingefrorene Gegner können sich nicht bewegen und erleiden zu Beginn jeder Runde zusätzlichen Eis-SCH in Höhe von #3[i]% von 7. März’ ANG.",
       "simpleDesc": "Greift den Gegner an. Hat eine hohe Chance, einen zufälligen Gegner nach Kampfeintritt einzufrieren.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1509,88 @@
       "_id": 100101,
       "id": "memory_of_you",
       "name": "Erinnerung an dich",
-      "desc": "Für jedes Ziel, das 7. März mit ihrem Ultimate einfriert, wird ihre Energie um <nobr>6</nobr> Pkt. wiederhergestellt."
+      "desc": "Für jedes Ziel, das 7. März mit ihrem Ultimate einfriert, wird ihre Energie um <nobr>6</nobr> Pkt. wiederhergestellt.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100102,
       "id": "memory_of_it",
       "name": "Erinnerung an es",
-      "desc": "Gewährt beim Kampfeintritt dem Verbündeten mit den wenigsten LP einen Schild in Höhe von <nobr>24%</nobr> von 7. März’ VTD plus <nobr>320</nobr> für <nobr>3</nobr> Rd."
+      "desc": "Gewährt beim Kampfeintritt dem Verbündeten mit den wenigsten LP einen Schild in Höhe von <nobr>24%</nobr> von 7. März’ VTD plus <nobr>320</nobr> für <nobr>3</nobr> Rd.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100103,
       "id": "memory_of_everything",
       "name": "Erinnerung an alles",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100104,
       "id": "never_forfeit_again",
       "name": "Ich will nicht verlieren",
-      "desc": "Erhöht die Auslösungsanzahl des <u>Konters</u> durch Talent pro Runde um 1. Erhöht den durch <u>Konter</u> verursachten SCH um <nobr>30%</nobr> von 7. März’ VTD."
+      "desc": "Erhöht die Auslösungsanzahl des <u>Konters</u> durch Talent pro Runde um 1. Erhöht den durch <u>Konter</u> verursachten SCH um <nobr>30%</nobr> von 7. März’ VTD.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Konter",
+          "desc": "Wenn das Ziel angegriffen wird, wird der Konter automatisch ausgelöst, der einen zusätzlichen Angriff auf den Angreifer ausführt.\nEin Konter gilt ebenfalls als Folgeangriff.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100105,
       "id": "never_forget_again",
       "name": "Ich will nicht vergessen",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100106,
       "id": "just_like_this_always",
       "name": "Immer so weiter ...",
-      "desc": "Verbündeten, die durch den Schild der Fertigkeit geschützt sind, werden zu Beginn jeder Runde LP in Höhe von <nobr>4%</nobr> ihrer max. LP plus <nobr>106</nobr> wiederhergestellt."
+      "desc": "Verbündeten, die durch den Schild der Fertigkeit geschützt sind, werden zu Beginn jeder Runde LP in Höhe von <nobr>4%</nobr> ihrer max. LP plus <nobr>106</nobr> wiederhergestellt.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

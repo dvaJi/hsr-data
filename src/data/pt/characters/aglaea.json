@@ -2,6 +2,7 @@
   "_id": 1402,
   "id": "aglaea",
   "name": "Aglaea",
+  "description": "Naquela pólis sagrada beijada pelo amanhecer, a tecelã acaricia os fios dourados, tecendo destinos.\nA Herdeira de Chrysos que porta a Chama Primordial do \"Romance\" reuniu os heróis do mundo, liderando-os em uma longa jornada uma vez mais\n- superar as divindades, reconquistar a chama divina e conceder o renascimento à Amphoreus quase caída.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Raio leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Restaura PV da Confeccionadora. Se a Confeccionadora estiver ausente, invoca o Memoespírito da Confeccionadora, e esta unidade age imediatamente.",
       "type": "Perícia",
       "tag": "Invocar",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -753,6 +781,32 @@
       "simpleDesc": "Invoca o Memoespírito da Confeccionadora, permitindo que Aglaea entre no estado de \"Postura Suprema\", aja imediatamente e ganhe ATQ Básico Aprimorado.",
       "type": "Perícia Suprema",
       "tag": "Aprimoramento",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Penal. de Controle Negativo",
+          "desc": "Congelamento, Embaraço, Aprisionamento, Dominação, Injúria, Reverberação Forte, Sonho Alienígena, Arapuca, Em Pânico, Bloqueio de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1122,6 +1176,24 @@
       "simpleDesc": "Enquanto a Confeccionadora estiver em campo, os ataques de Aglaea infligem o estado de \"Costura Vinculante\" no alvo. Após atacar inimigos no estado de \"Costura Vinculante\", causa Dano de Raio leve Adicional.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1490,6 +1562,24 @@
       "desc": "Invoca o Memoespírito da Confeccionadora e realiza um Ataque Conjunto. Após entrar em batalha, regenera #2[i] de Energia e causa Dano de Raio igual a #1[i]% do ATQ de Aglaea a todos os inimigos-alvo. Então, inflige aleatoriamente o estado de \"Costura Vinculante\" a um inimigo-alvo aleatório.",
       "simpleDesc": "Invoca o Memoespírito da \"Confeccionadora\" e realiza um Ataque Conjunto. Após entrar em batalha, regenera Energia e causa Dano de Raio leve a todos os inimigos. Então, inflige aleatoriamente o estado de \"Costura Vinculante\" a um inimigo-alvo aleatório.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1502,42 +1592,503 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Confeccionadora",
+    "icon": "SpriteOutput/ServantIconTeam/11402B.png",
+    "hpBase": "#6",
+    "hpInherit": "#5",
+    "hpSkill": 140204,
+    "speedBase": "0",
+    "speedInherit": "#4",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1140201,
+        "name": "Armadilha de Espinhos",
+        "desc": "Causa Dano de Raio equivalente a <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> do ATQ a um inimigo e Dano de Raio equivalente a <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span> do ATQ a alvos adjacentes.",
+        "simpleDesc": "Causa Dano de Raio leve a um inimigo-alvo e a unidades adjacentes.",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "Blast",
+          "name": "Explosão"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          15
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.55,
+              0.33,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.66,
+              0.396,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.77,
+              0.462,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.88,
+              0.528,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.99,
+              0.594,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1.1,
+              0.66,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1.21,
+              0.726,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1.32,
+              0.792,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1.43,
+              0.858,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1.54,
+              0.924,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140203,
+        "name": "Um Corpo Feito de Lágrimas",
+        "desc": "Após atacar um inimigo afetado por \"Costura Vinculante\", aumenta a VEL desta unidade em <span style=\"color:#f29e38ff><nobr>#1[i]</nobr></span>, acumulando até <nobr>#3[i]</nobr> vez(es). Quando a Confeccionadora age, usa automaticamente \"Armadilha de Espinhos\", priorizando inimigos no estado de \"Costura Vinculante\".",
+        "simpleDesc": "Após atacar um inimigo afligido com \"Costura Vinculante\", <span style=\"color:#f29e38ff>aumenta a VEL desta unidade</span>. Enquanto estiver em ação, usa ataques automaticamente, priorizando inimigos no estado de \"Costura Vinculante\".",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Aprimoramento"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              44,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              46.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              48.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              50.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              52.8,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              55,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              57.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              59.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              61.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              63.8,
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140205,
+        "name": "O Verão Acelerado",
+        "desc": "Quando a Confeccionadora é invocada, a ação dessa unidade é Avançada Adiante em <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Ao ser invocada, a ação dessa unidade é Avançada Adiante.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Aprimoramento"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Ação Avançada Adiante",
+            "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140206,
+        "name": "Florescer da Grama Seca",
+        "desc": "Quando a Confeccionadora desaparece, regenera <nobr>#1[i]</nobr> de Energia para Aglaea.",
+        "simpleDesc": "Regenera Energia para Aglaea ao desaparecer.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Aprimoramento"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              20
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "Deriva ao Capricho de Vênus",
-      "desc": "Inimigos afetados por \"Costura Vinculante\" recebem <nobr>15%</nobr> de Dano aumentado. Após o ataque de Aglaea ou da \"Confeccionadora\" atingir esse alvo, Aglaea também regenera <nobr>20</nobr> de Energia."
+      "desc": "Inimigos afetados por \"Costura Vinculante\" recebem <nobr>15%</nobr> de Dano aumentado. Após o ataque de Aglaea ou da \"Confeccionadora\" atingir esse alvo, Aglaea também regenera <nobr>20</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "Navegue na Jangada das Pálpebras",
-      "desc": "Quando Aglaea ou a \"Confeccionadora\" agem, o Dano causado por elas ignora <nobr>14%</nobr> da DEF do alvo. Este efeito acumula até <nobr>3</nobr> vez(es) e dura até que qualquer unidade, exceto Aglaea ou a \"Confeccionadora\", utilize ativamente uma habilidade."
+      "desc": "Quando Aglaea ou a \"Confeccionadora\" agem, o Dano causado por elas ignora <nobr>14%</nobr> da DEF do alvo. Este efeito acumula até <nobr>3</nobr> vez(es) e dura até que qualquer unidade, exceto Aglaea ou a \"Confeccionadora\", utilize ativamente uma habilidade.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "Legado na Coalescência do Orvalho",
-      "desc": "Nv. da Perícia +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até um máximo de Nv. <nobr>10</nobr>.\nNv. do Talento do Memoespírito +1, até um máximo de Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até um máximo de Nv. <nobr>10</nobr>.\nNv. do Talento do Memoespírito +1, até um máximo de Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "Cintilação Abaixo da Superfície do Mármore",
-      "desc": "O efeito de Bônus de VEL do Talento do Memoespírito tem seu limite máximo de acúmulos aumentado em <nobr>1</nobr>. Após Aglaea realizar um ataque, também pode fazer a \"Confeccionadora\" receber o efeito de Bônus de VEL do Talento do Memoespírito."
+      "desc": "O efeito de Bônus de VEL do Talento do Memoespírito tem seu limite máximo de acúmulos aumentado em <nobr>1</nobr>. Após Aglaea realizar um ataque, também pode fazer a \"Confeccionadora\" receber o efeito de Bônus de VEL do Talento do Memoespírito.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "Tecer sob o Sudário do Infortúnio",
-      "desc": "Nv. da Perícia Suprema +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. do Talento +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. da Perícia do Memoespírito +1, até um máximo de Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. do Talento +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. da Perícia do Memoespírito +1, até um máximo de Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "Flutuar na Tapeçaria dos Destinos",
-      "desc": "Enquanto Aglaea estiver em \"Postura Suprema\", aumenta a PEN de RES a Raio dela e da \"Confeccionadora\" em <nobr>20%</nobr>. Quando a VEL de Aglaea ou da \"Confeccionadora\" for maior que <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, o Dano causado pelo <u>Ataque Conjunto</u> aumenta em <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>."
+      "desc": "Enquanto Aglaea estiver em \"Postura Suprema\", aumenta a PEN de RES a Raio dela e da \"Confeccionadora\" em <nobr>20%</nobr>. Quando a VEL de Aglaea ou da \"Confeccionadora\" for maior que <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, o Dano causado pelo <u>Ataque Conjunto</u> aumenta em <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000019,
+          "name": "Ataque Conjunto",
+          "desc": "Múltiplos alvos usam ataques respectivamente nos inimigos-alvo em uma única ação.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ]
     }
   ],
   "skillTreePoints": [

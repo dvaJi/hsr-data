@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "Seele",
+  "description": "Une habitante du Souterrain et pierre angulaire des Feux sauvages qui se fait appeler « Babotchka ».\nElle est dotée d'une personnalité franche, mais possède aussi un côté délicat et sensible qu'elle préfère masquer aux yeux du monde.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -243,10 +244,22 @@
       "_id": 110201,
       "id": "thwack",
       "name": "Représailles",
-      "desc": "Inflige des DGT quantiques équivalents à #1[i]% de l'ATQ de Seele à un ennemi unique.",
+      "desc": "Inflige des DGT quantiques équivalents à #1[i]% de l'ATQ de Seele à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT quantiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 110202,
       "id": "sheathed_blade",
       "name": "Lame rengainée",
-      "desc": "Augmente la VIT de Seele de #2[i]% pendant #3[i] tours et inflige des DGT quantiques équivalents à #1[i]% de l'ATQ de Seele à un ennemi unique.",
+      "desc": "Augmente la VIT de Seele de #2[i]% pendant #3[i] tours et inflige des DGT quantiques équivalents à #1[i]% de l'ATQ de Seele à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT quantiques à un ennemi unique et augmente la VIT.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -739,10 +764,22 @@
       "_id": 110203,
       "id": "butterfly_flurry",
       "name": "Volée de papillons",
-      "desc": "Seele entre immédiatement dans l'état amélioré et inflige des DGT quantiques équivalents à #1[i]% de son ATQ à un ennemi unique.",
+      "desc": "Seele entre immédiatement dans l'état amélioré et inflige des DGT quantiques équivalents à #1[i]% de son ATQ à un ennemi désigné.",
       "simpleDesc": "Entre dans l'état amélioré et inflige des DGT quantiques massifs à un ennemi unique.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "Gagne un tour supplémentaire et entre dans l'état amélioré en vainquant des ennemis via l'attaque normale, la compétence ou l'ultime. Dans l'état amélioré, augmente les DGT infligés par cette unité.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Tour supplémentaire",
+          "desc": "Gagne 1 tour supplémentaire qui n'augmente pas le nombre de tours avant la prochaine action. Durant ce tour supplémentaire, vous ne pouvez pas utiliser d'ultime.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "Entre en mode Furtivité. Entre dans l'état amélioré après avoir attaqué un ennemi et engagé le combat.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Coup tranchant",
-      "desc": "Lorsque le personnage inflige des DGT à un ennemi dont le pourcentage de PV est inférieur ou égal à <nobr>80%</nobr>, les chances de coup critique augmentent de <nobr>15%</nobr>."
+      "desc": "Lorsque le personnage inflige des DGT à un ennemi dont le pourcentage de PV est inférieur ou égal à <nobr>80%</nobr>, les chances de coup critique augmentent de <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "Papillon dansant",
-      "desc": "L'augmentation de VIT conférée par la compétence de Seele peut être cumulée jusqu'à <nobr>2</nobr> fois."
+      "desc": "L'augmentation de VIT conférée par la compétence de Seele peut être cumulée jusqu'à <nobr>2</nobr> fois.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "Tumulte éblouissant",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Phantasme d'un instant",
-      "desc": "Seele régénère <nobr>15</nobr> points d'énergie lorsqu'elle élimine un ennemi."
+      "desc": "Seele régénère <nobr>15</nobr> points d'énergie lorsqu'elle élimine un ennemi.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "Éclats perçants",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Ébranlements éclatants",
-      "desc": "Après utilisation de l'ultime de Seele, inflige l'effet Volée de papillons à l'ennemi attaqué pendant <nobr>1</nobr> tour. Les ennemis affectés par Volée de papillons subissent 1 instance supplémentaire de <u>DGT additionnels</u> quantiques équivalents à <nobr>15%</nobr> des DGT de l'ultime de Seele chaque fois qu'ils sont attaqués. Si la cible est vaincue par les <u>DGT additionnels</u> de Volée de papillons provoqués par les attaques d'autres alliés, le talent de Seele ne se déclenche pas.\nLorsque Seele est <u>à terre</u>, l'effet Volée de papillons infligé aux ennemis est supprimé."
+      "desc": "Après utilisation de l'ultime de Seele, inflige l'effet Volée de papillons à l'ennemi attaqué pendant <nobr>1</nobr> tour. Les ennemis affectés par Volée de papillons subissent 1 instance supplémentaire de <u>DGT additionnels</u> quantiques équivalents à <nobr>15%</nobr> des DGT de l'ultime de Seele chaque fois qu'ils sont attaqués. Si la cible est vaincue par les <u>DGT additionnels</u> de Volée de papillons provoqués par les attaques d'autres alliés, le talent de Seele ne se déclenche pas.\nLorsque Seele est <u>à terre</u>, l'effet Volée de papillons infligé aux ennemis est supprimé.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

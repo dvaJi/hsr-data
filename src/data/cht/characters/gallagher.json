@@ -2,6 +2,7 @@
   "_id": 1301,
   "id": "gallagher",
   "name": "加拉赫",
+  "description": "匹諾康尼獵犬家系的治安官，對來訪賓客以禮相待，但保有戒心。似乎有著諸多往事，卻從不主動提及。",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "立即為我方單體回復生命值。",
       "type": "戰技",
       "tag": "回復",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "使敵方全體陷入【酩酊】狀態，同時對敵方全體造成火屬性傷害。下一次普通攻擊強化為【酒花奔湧】。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1038,24 @@
       "simpleDesc": "【酩酊】使目標受到的擊破傷害提高，目標每次受到我方角色攻擊後，攻擊者回復生命值。",
       "type": "天賦",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "擊破傷害",
+          "desc": "擊破特攻、目標韌性上限、角色等級越高，造成的擊破傷害越高。\n擊破傷害無法暴擊，不受傷害提高類效果所影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "立即攻擊敵人，進入戰鬥後使敵方全體陷入【酩酊】狀態，持續#1[i]回合，並對敵方全體造成等同於加拉赫#2[i]%攻擊力的火屬性傷害。",
       "simpleDesc": "攻擊敵人，進入戰鬥後使敵方全體陷入【酩酊】狀態，並對敵方全體造成少量火屬性傷害。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,88 @@
       "_id": 130101,
       "id": "salty_dog",
       "name": "鹽與犬",
-      "desc": "加拉赫進入戰鬥後會恢復<nobr>20</nobr>點能量，效果抗性提高<nobr>50%</nobr>。"
+      "desc": "加拉赫進入戰鬥後會恢復<nobr>20</nobr>點能量，效果抗性提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130102,
       "id": "lions_tail",
       "name": "獅子之尾",
-      "desc": "施放戰技時，解除指定我方單體的<nobr>1</nobr>個<u>負面效果</u>，同時使其效果抗性提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "施放戰技時，解除指定我方單體的<nobr>1</nobr>個<u>負面效果</u>，同時使其效果抗性提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "負面效果",
+          "desc": "對戰鬥有負面效果的所有持續狀態，若無特殊說明則可加以解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130103,
       "id": "corpse_reviver",
       "name": "逝者的新生",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130104,
       "id": "last_word",
       "name": "臨終的輕語",
-      "desc": "加拉赫終結技造成的【酩酊】狀態持續時間延長<nobr>1</nobr>回合。"
+      "desc": "加拉赫終結技造成的【酩酊】狀態持續時間延長<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130105,
       "id": "death_in_the_afternoon",
       "name": "午後之死",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130106,
       "id": "blood_and_sand",
       "name": "血與沙",
-      "desc": "加拉赫的擊破特攻提高<nobr>20%</nobr>，弱點擊破效率提高<nobr>20%</nobr>。"
+      "desc": "加拉赫的擊破特攻提高<nobr>20%</nobr>，弱點擊破效率提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

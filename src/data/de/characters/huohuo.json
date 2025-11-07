@@ -2,6 +2,7 @@
   "_id": 1217,
   "id": "huohuo",
   "name": "Huohuo",
+  "description": "Dieses junge, foxianische Mädchen wird zur Richterin der Zehn-Fürsten-Kommission der Xianzhou Luofu ausgebildet und ist von einem Heliobus besessen.\nSie ist schüchtern und schwach und fürchtet sich vor allen seltsamen Dingen. Trotzdem ist es ihre Aufgabe, böse Geister herauszulocken und zu bezwingen.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Wind-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Entfernt 1 Debuff von einem Verbündeten und stellt die LP dieses Verbündeten und angrenzender Verbündeter wieder her.",
       "type": "Fertigkeit",
       "tag": "Wiederherstellung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +807,18 @@
       "simpleDesc": "Energie-Wiederherstellung für alle Verbündeten außer Huohuo und ANG-Erhöhung.",
       "type": "Ultimate",
       "tag": "Unterstützung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "Nach dem Einsatz der Fertigkeit erhält Huohuo „Gesegnete Heilung“. Besitzt Huohuo Gesegnete Heilung, wird zu Beginn jeder Runde eines Verbündeten oder beim Einsatz eines Ultimates seine LP wiederhergestellt und gleichzeitig alle Verbündeten mit niedrigen LP 1-mal geheilt.Wird ein Verbündeter durch den Einsatz von Gesegnete Heilung geheilt, wird 1 Debuff von ihm entfernt.",
       "type": "Talent",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1545,24 @@
       "simpleDesc": "Angrenzende Gegner werden von Verängstigung gepackt. Nach Kampfbeginn gegen verängstigte Gegner besteht eine hohe Chance, bei gegnerischen Zielen ANG-Reduktion zu verursachen.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1500,37 +1582,88 @@
       "_id": 121701,
       "id": "anchored_to_vessel_specters_nestled",
       "name": "Von Heliobi besessen, vom Bösen ergriffen",
-      "desc": "Die Dauer von „Gesegnete Heilung“, das vom Talent bewirkt wird, wird um <nobr>1</nobr> Rd. verlängert. Wenn Huohuo Gesegnete Heilung besitzt, wird die GES aller Verbündeten um <nobr>12%</nobr> erhöht."
+      "desc": "Die Dauer von „Gesegnete Heilung“, das vom Talent bewirkt wird, wird um <nobr>1</nobr> Rd. verlängert. Wenn Huohuo Gesegnete Heilung besitzt, wird die GES aller Verbündeten um <nobr>12%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121702,
       "id": "sealed_in_tail_wraith_subdued",
       "name": "Im Schweif versiegelt, Geister besiegt",
-      "desc": "Wenn Huohuo „Gesegnete Heilung“ besitzt und ein Verbündeter von einem Todesstoß getroffen wird, wird der Verbündete nicht <u>handlungsunfähig</u>, sondern es werden bei ihm sofort LP in Höhe von <nobr>50%</nobr> seiner max. LP wiederhergestellt. Dies reduziert die Dauer von Gesegnete Heilung um 1 Rd. Dieser Effekt kann <nobr>2</nobr>-mal pro Kampf ausgelöst werden."
+      "desc": "Wenn Huohuo „Gesegnete Heilung“ besitzt und ein Verbündeter von einem Todesstoß getroffen wird, wird der Verbündete nicht <u>handlungsunfähig</u>, sondern es werden bei ihm sofort LP in Höhe von <nobr>50%</nobr> seiner max. LP wiederhergestellt. Dies reduziert die Dauer von Gesegnete Heilung um 1 Rd. Dieser Effekt kann <nobr>2</nobr>-mal pro Kampf ausgelöst werden.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121703,
       "id": "cursed_by_fate_moths_to_flame",
       "name": "Verfluchtes Schicksal, wie Motten im Licht",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121704,
       "id": "tied_in_life_bound_to_strife",
       "name": "Gefesselt im Leben, gebunden im Streit",
-      "desc": "Wenn sie einen Verbündeten mit ihrer Fertigkeit heilt oder der Effekt ihres Talents ausgelöst wird, erhöht sich Huohuos bewirkte Heilung abhängig davon, wie niedrig die LP des Verbündeten sind, jedoch bis zu <nobr>80%</nobr>."
+      "desc": "Wenn Huohuo mit ihrer Fertigkeit oder durch Auslösen ihres Talents einen Verbündeten heilt, steigt die bewirkte Heilung umso mehr, je niedriger die aktuellen LP des Verbündeten sind, bis zu einer maximalen Erhöhung von <nobr>80%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121705,
       "id": "mandated_by_edict_evils_evicted",
       "name": "Vertreibung des Bösen, im Namen der Zehn Fürsten",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121706,
       "id": "woven_together_cohere_forever",
       "name": "Einmal verwoben, auf ewig vereint",
-      "desc": "Erhöht den zugefügten SCH eines Verbündeten für <nobr>2</nobr> Rd. um <nobr>50%</nobr>, wenn dieser geheilt wird."
+      "desc": "Erhöht den zugefügten SCH eines Verbündeten für <nobr>2</nobr> Rd. um <nobr>50%</nobr>, wenn dieser geheilt wird.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

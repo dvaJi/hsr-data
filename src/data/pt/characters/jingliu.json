@@ -2,6 +2,7 @@
   "_id": 1212,
   "id": "jingliu",
   "name": "Jingliu",
+  "description": "Ex-campeã da Espada do Luofu e criadora das lendas dos poderes invencíveis dos Cavaleiros das Nuvens.\nSeu nome foi apagado dos registros, e ela é uma traidora do Xianzhou que trafega na tênue linha entre a sanidade e a Mara.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Gelo leve a um único inimigo-alvo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Causa Dano de Gelo a um inimigo-alvo e obtém 1 acúmulo de Sizígia.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Causa Dano de Gelo massivo a um inimigo-alvo e causa Dano de Gelo aos alvos adjacentes. Obtém 1 acúmulo de Sizígia.",
       "type": "Perícia Suprema",
       "tag": "Explosão",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,15 @@
       "simpleDesc": "Ao estar em posse de #5[i] acúmulos de Sizígia, Jingliu entra no estado de Transmigração Espectral Avançando  Ação em 100%, aumentando sua Chance de CRIT e Aprimorando sua Perícia. Usar um ataque neste estado consome os PV de todos os outros aliados e aumenta o ATQ de Jingliu de acordo com o total de PV consumido. Quando os acúmulos de Sizígia chegam a 0, sai do estado de Transmigração Espectral.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1497,32 @@
       "simpleDesc": "Cria uma Dimensão Especial em volta da unidade. Inimigos dentro desta dimensão sofrerão \"Congelamento\". Após entrar em combate com inimigos nesta dimensão, este personagem recupera Energia e obtém 1 acúmulo de \"Sizígia\" com altas chances de aplicar \"Congelamento\" nos inimigos.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1472,37 +1544,79 @@
       "_id": 121201,
       "id": "moon_crashes_tianguan_gate",
       "name": "Queda Lunar nos Portões de Tianguan",
-      "desc": "Aumenta o Dano CRIT de Jingliu em <nobr>24%</nobr> pela(s) próxima(s) <nobr>1</nobr> rodada(s) quando usa sua Perícia Aprimorada ou sua Perícia Suprema. Se apenas um alvo inimigo for atacado, o alvo receberá adicionalmente Dano de Gelo igual a <nobr>100%</nobr> do ATQ de Jingliu."
+      "desc": "Aumenta o Dano CRIT de Jingliu em <nobr>24%</nobr> pela(s) próxima(s) <nobr>1</nobr> rodada(s) quando usa sua Perícia Aprimorada ou sua Perícia Suprema. Se apenas um alvo inimigo for atacado, o alvo receberá adicionalmente Dano de Gelo igual a <nobr>100%</nobr> do ATQ de Jingliu.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121202,
       "id": "crescent_shadows_qixing_dipper",
       "name": "Sombras Crescentes Sobre a Constelação de Qixing",
-      "desc": "Após usar a Perícia Suprema, aumenta o Dano da próxima Perícia Aprimorada em <nobr>80%</nobr>."
+      "desc": "Após usar a Perícia Suprema, aumenta o Dano da próxima Perícia Aprimorada em <nobr>80%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121203,
       "id": "halfmoon_gapes_mercurial_haze",
       "name": "Neblina Mercurial da Crescente",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121204,
       "id": "lunarlance_shines_skyward_dome",
       "name": "Brilho da Lança Lunar",
-      "desc": "Durante o estado de Transmigração Espectral, o ATQ obtido por consumir os PV dos aliados é adicionalmente aumentado em <nobr>90%</nobr> do total de PV consumido por toda a equipe. O limite para o aumento de ATQ feito dessa forma também aumenta em <nobr>30%</nobr>."
+      "desc": "Durante o estado de Transmigração Espectral, o ATQ obtido por consumir os PV dos aliados é adicionalmente aumentado em <nobr>90%</nobr> do total de PV consumido por toda a equipe. O limite para o aumento de ATQ feito dessa forma também aumenta em <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121205,
       "id": "night_shades_astral_radiance",
       "name": "Brilho Noturno Estelar",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121206,
       "id": "eclipse_hollows_corporeal_husk",
       "name": "Esfera Esvaziada pelo Vazio",
-      "desc": "Quando Jingliu entra no estado de Transmigração Espectral, o limite de acúmulos de Sizígia aumenta em 1, e Jingliu obtém <nobr>1</nobr> acúmulo(s) de Sizígia. Enquanto estiver no estado de Transmigração Espectral, seu Dano CRIT aumenta em <nobr>50%</nobr>."
+      "desc": "Quando Jingliu entra no estado de Transmigração Espectral, o limite de acúmulos de Sizígia aumenta em 1, e Jingliu obtém <nobr>1</nobr> acúmulo(s) de Sizígia. Enquanto estiver no estado de Transmigração Espectral, seu Dano CRIT aumenta em <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

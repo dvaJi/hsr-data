@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "Noite Eterna",
+  "description": "Na Zona da Memória isolada do mundo, a luz das velas reflete o passado, silenciosamente se extinguindo na névoa.\nNoite Eterna, filha da Recordação emergindo dessas sombras, a Herdeira de Chrysos que esconde a Chama Primordial do \"Tempo\", levanta ondas de \"Esquecimento\" para proteger os desejos daqueles no espelho.\n— \"Não se preocupe, eu protegerei o caminho do Desbravamento para você... custe o que custar. ♭\"",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Gelo leve a um inimigo-alvo designado.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Consome os PV desta unidade para invocar o Memoespírito \"Nox\" e aumenta o Dano CRIT de todos os Memoespíritos aliados. Se \"Nox\" já estiver em campo, restaura seus PV. Ao ser usada, concede #3[i] de \"Memória\". Se estiver no estado de \"Enigma Mais Sombrio\", concede #5[i] de \"Memória\" adicional.",
       "type": "Perícia",
       "tag": "Invocar",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "Causa Dano de Gelo a todos os inimigos, invoca o Memoespírito \"Nox\" e faz com que Noite Eterna entre no estado de \"Enigma Mais Sombrio\", durante o qual o Dano recebido pelos inimigos aumenta, o Dano causado por Noite Eterna e seu Memoespírito aumenta, e tanto Noite Eterna quanto seu Memoespírito ficam imunes a penalidades de Controle Negativo.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Penal. de Controle Negativo",
+          "desc": "Congelamento, Embaraço, Aprisionamento, Dominação, Injúria, Reverberação Forte, Sonho Alienígena, Arapuca, Em Pânico, Bloqueio de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "Ao entrar em combate, invoca o Memoespírito \"Nox\". Sempre que esta unidade ou \"Nox\" perde PV, aumenta o Dano CRIT desta unidade e de \"Nox\" e ganha \"Memória\".\nQuando Noite Eterna possui #6[i] ou mais de \"Memória\", \"Nox\" age imediatamente.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Penal. de Controle Negativo",
+          "desc": "Congelamento, Embaraço, Aprisionamento, Dominação, Injúria, Reverberação Forte, Sonho Alienígena, Arapuca, Em Pânico, Bloqueio de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "No início da próxima batalha, ganha um efeito idêntico ao da Perícia que aumenta o Dano CRIT do Memoespírito, e adicionalmente ganha \"Memória\".",
       "type": "Técnica",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Nox",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "Recordação a Girar Feito Chuva",
+        "desc": "Esta habilidade seleciona automaticamente um alvo, priorizando o inimigo-alvo que Noite Eterna atacou por último. Causa Dano de Gelo igual a <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> dos PV máximos de \"Nox\" a um inimigo. Para cada <nobr>#3[i]</nobr> ponto(s) de \"Memória\" que Noite Eterna possui atualmente, causa adicionalmente Dano de Gelo igual a <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> dos PV máximos de \"Nox\". Ganha <nobr>#4[i]</nobr> ponto(s) de \"Memória\" após o uso.",
+        "simpleDesc": "Causa Dano de Gelo leve a um inimigo e causa Dano de Gelo leve adicional com base na quantidade de \"Memória\".",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "Alvo Único"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "Solidão a Vagar na Escuridão",
+        "desc": "Nox é imune a penalidades de Controle Negativo, mas tem uma chance maior de ser alvo. Enquanto \"Nox\" estiver no campo, aumenta o Dano causado por Noite Eterna e por \"Nox\" em <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>.",
+        "simpleDesc": "O Memoespírito \"Nox\" é imune a penalidades de Controle Negativo e aumenta sua chance de ser alvo. Quando ativo, aumenta o Dano causado por esta unidade e por Noite Eterna.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Suporte"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "Penal. de Controle Negativo",
+            "desc": "Congelamento, Embaraço, Aprisionamento, Dominação, Injúria, Reverberação Forte, Sonho Alienígena, Arapuca, Em Pânico, Bloqueio de Ação.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "Noite a Seguir em Sintonia",
+        "desc": "Ao ser conjurada, esta unidade age imediatamente.",
+        "simpleDesc": "Ao ser conjurada, esta unidade age imediatamente.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Aprimoramento"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "Você a Partir Além do Alcance",
+        "desc": "Ao desaparecer, aumenta a VEL de Noite Eterna em <nobr>#1[i]%</nobr>. Se o desaparecimento ocorrer por conta da utilização de \"Sonho, Dissolvendo-se, como Orvalho\", para cada ponto de \"Memória\" usado neste ataque, aumenta adicionalmente a VEL de Noite Eterna em <nobr>#2[i]%</nobr>, contando até <nobr>#3[i]</nobr> ponto(s) de \"Memória\". O efeito de Bônus de VEL não pode ser acumulado e é removido no início da próxima rodada de Noite Eterna.",
+        "simpleDesc": "Ao desaparecer, aumenta a VEL de Noite Eterna.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Aprimoramento"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "Sonho, Dissolvendo-se, como Orvalho",
+        "desc": "Quando a \"Memória\" de Noite Eterna for maior ou igual a <nobr>#3[i]</nobr> pontos, e ela não estiver sob efeito de Controle Negativo, essa habilidade pode ser usada. Para cada ponto de \"Memória\" atualmente em posse, causa Dano de Gelo igual a <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> dos PV máximos de \"Nox\" no alvo principal, e Dano de Gelo igual a <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> dos PV máximos de \"Nox\" nos demais inimigos-alvo. Após o uso, consome toda a \"Memória\" e PV, e \"Nox\" desaparece.",
+        "simpleDesc": "<span style=\"color:#f29e38ff>Com base na quantidade de \"Memória\"</span>, causa um Dano de Gelo massivo ao alvo principal e Dano de Gelo a outros inimigos-alvo. Depois do uso, <span style=\"color:#f29e38ff>consome toda a \"Memória\" e os PV, fazendo \"Nox\" desaparecer</span>.",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Área"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "Durma Bem, Sonhos da Longa Noite",
-      "desc": "Quando Noite Eterna está em campo, se houver (4 ou mais)/3/2/1 inimigos-alvo em campo, os Memoespíritos aliados causam Dano igual a <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> de seu Dano original, respectivamente."
+      "desc": "Quando Noite Eterna está em campo, se houver (4 ou mais)/3/2/1 inimigos-alvo em campo, os Memoespíritos aliados causam Dano igual a <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> de seu Dano original, respectivamente.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "Escute, a Suave Fala do Sono",
-      "desc": "Aumenta o Dano CRIT de Noite Eterna e de \"Nox\", o Memoespírito, em <nobr>40%</nobr>. Sempre que Noite Eterna ganha \"Memória\", aumenta a quantidade de \"Memoria\" recebida em <nobr>2</nobr> ponto(s). Ao usar a Perícia Suprema, ganha adicionalmente <nobr>2</nobr> de Carga para \"Enigma Mais Sombrio\"."
+      "desc": "Aumenta o Dano CRIT de Noite Eterna e de \"Nox\", o Memoespírito, em <nobr>40%</nobr>. Sempre que Noite Eterna ganha \"Memória\", aumenta a quantidade de \"Memoria\" recebida em <nobr>2</nobr> ponto(s). Ao usar a Perícia Suprema, ganha adicionalmente <nobr>2</nobr> de Carga para \"Enigma Mais Sombrio\".",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "Não Tema, o Pesadelo Está no Passado",
-      "desc": "Nv. da Perícia +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até um máximo de Nv. <nobr>10</nobr>.\nNv. do Talento do Memoespírito +1, até um máximo de Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até um máximo de Nv. <nobr>10</nobr>.\nNv. do Talento do Memoespírito +1, até um máximo de Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "Acorde, o Amanhã é Seu",
-      "desc": "Enquanto Noite Eterna estiver em campo, a Eficiência de Quebra de Fraqueza dos Memoespíritos aliados aumenta em <nobr>25%</nobr>, e o Memoespírito \"Nox\" recebe <nobr>25%</nobr> de Eficiência de Quebra de Fraqueza adicional."
+      "desc": "Enquanto Noite Eterna estiver em campo, a Eficiência de Quebra de Fraqueza dos Memoespíritos aliados aumenta em <nobr>25%</nobr>, e o Memoespírito \"Nox\" recebe <nobr>25%</nobr> de Eficiência de Quebra de Fraqueza adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "Desista, o \"Eu\" nas Memórias",
-      "desc": "Nv. da Perícia Suprema +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. do Talento +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. da Perícia do Memoespírito +1, até um máximo de Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. do Talento +2, até um máximo de Nv. <nobr>15</nobr>.\nNv. da Perícia do Memoespírito +1, até um máximo de Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "Dessa Forma, Sempre",
-      "desc": "Enquanto Noite Eterna estiver no campo, a PEN de RES a todos os Tipos de todos os aliados-alvo aumenta em <nobr>20%</nobr>. Após o Memoespírito \"Nox\" usar \"Sonho, Dissolvendo-se, como Orvalho\", Noite Eterna ganha <nobr>30%</nobr> da quantidade de \"Memória\" consumida neste ataque."
+      "desc": "Enquanto Noite Eterna estiver no campo, a PEN de RES a todos os Tipos de todos os aliados-alvo aumenta em <nobr>20%</nobr>. Após o Memoespírito \"Nox\" usar \"Sonho, Dissolvendo-se, como Orvalho\", Noite Eterna ganha <nobr>30%</nobr> da quantidade de \"Memória\" consumida neste ataque.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

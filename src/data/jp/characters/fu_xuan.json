@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "{RUBY_B#フゲン}符玄{RUBY_E#}",
+  "description": "仙舟「羅浮」太卜司の長。\n第三の目と窮観の陣を用いて、仙舟の航路を占い、物事の吉凶を予見する。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の量子属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "「窮観の陣」を起動し、味方が受けたダメージを符玄が分担する。味方全体の最大HP、会心率をアップさせる。",
       "type": "戦闘スキル",
       "tag": "防御",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "分担",
+          "desc": "ダメージが発生する前に、一部のダメージを他の1名、または複数名のターゲットに分け与え、攻撃を受けたターゲットが残りの部分を引き受ける。他のターゲットに分担したダメージを再度分担することはできない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "敵全体に量子属性ダメージを与え、符玄の天賦の発動可能回数アップ。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "符玄が戦闘可能状態の時、味方全体の受けるダメージダウン。\n残りHPが少ない時、失ったHPの割合に応じて、自動で自身のHPを回復する。この効果の発動可能回数は最大で2回累積できる。",
       "type": "天賦",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "バリアを展開し、敵の攻撃を受けても戦闘に入らない。戦闘に入る時、自動で「窮観の陣」を起動する。",
       "type": "秘技",
       "tag": "防御",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "{RUBY_B#しき}司危{RUBY_E#}",
-      "desc": "「鑑知」状態の味方の会心ダメージ+<nobr>30%</nobr>。"
+      "desc": "「鑑知」状態の味方の会心ダメージ+<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "{RUBY_B#じゅうちょう}柔兆{RUBY_E#}",
-      "desc": "「窮観の陣」が起動している時、味方がHPが0になるダメージを受けても、今回の行動でHPが0になるダメージを受けたすべての味方は<u>戦闘不能状態</u>にならず、自身の最大HP<nobr>70%</nobr>分のHPを回復する。この効果は一度の戦闘で1回まで発動できる。"
+      "desc": "「窮観の陣」が起動している時、味方がHPが0になるダメージを受けても、今回の行動でHPが0になるダメージを受けたすべての味方は<u>戦闘不能状態</u>にならず、自身の最大HP<nobr>70%</nobr>分のHPを回復する。この効果は一度の戦闘で1回まで発動できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "{RUBY_B#ちょくふ}直符{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "{RUBY_B#こうたく}格澤{RUBY_E#}",
-      "desc": "「窮観の陣」の中にいる符玄以外の味方が攻撃を受けた後、符玄はEPを<nobr>5</nobr>回復する。"
+      "desc": "「窮観の陣」の中にいる符玄以外の味方が攻撃を受けた後、符玄はEPを<nobr>5</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "{RUBY_B#けいしん}計神{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "{RUBY_B#しゅりょう}種陵{RUBY_E#}",
-      "desc": "「窮観の陣」が起動している時、味方全体が戦闘中失った累計HPをカウントする。符玄の必殺技によるダメージが、戦闘中失った累計HP<nobr>200%</nobr>分アップする。\n戦闘中失った累計HPのカウントは、符玄の最大HPの<nobr>120%</nobr>を超えず、必殺技を発動した後にリセットされる。"
+      "desc": "「窮観の陣」が起動している時、味方全体が戦闘中失った累計HPをカウントする。符玄の必殺技によるダメージが、戦闘中失った累計HP<nobr>200%</nobr>分アップする。\n戦闘中失った累計HPのカウントは、符玄の最大HPの<nobr>120%</nobr>を超えず、必殺技を発動した後にリセットされる。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

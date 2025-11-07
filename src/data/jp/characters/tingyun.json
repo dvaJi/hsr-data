@@ -2,6 +2,7 @@
   "_id": 1202,
   "id": "tingyun",
   "name": "{RUBY_B#テイウン}停雲{RUBY_E#}",
+  "description": "仙舟「羅浮」の天舶司の接渡使。\n商団と共に多くの世界に足を運び、貿易関係や同盟を結んでいる。",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の雷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "味方単体の攻撃力をアップさせ、「賜福」を与える。「賜福」がある味方は攻撃を行った時に少量の雷属性付加ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "サポート",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "味方単体のEPを回復し、その味方の与ダメージをアップする。",
       "type": "必殺技",
       "tag": "サポート",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "敵が停雲の攻撃を受けた後、「賜福」を付与された味方が、その敵に少量の雷属性付加ダメージを与える。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "秘技を使用した後、自身のEPを回復する。",
       "type": "秘技",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1374,37 +1447,79 @@
       "_id": 120201,
       "id": "windfall_of_lucky_springs",
       "name": "{RUBY_B#はるかぜ}春風{RUBY_E#}{RUBY_B#ふ}吹{RUBY_E#}きて{RUBY_B#じうん}時運{RUBY_E#}{RUBY_B#めぐ}巡{RUBY_E#}る",
-      "desc": "「賜福」を与えられた味方単体は、必殺技を発動した後に速度+<nobr>20%</nobr>、1ターン継続。"
+      "desc": "「賜福」を与えられた味方単体は、必殺技を発動した後に速度+<nobr>20%</nobr>、1ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120202,
       "id": "gainfully_gives_givingly_gains",
       "name": "{RUBY_B#くんし}君子{RUBY_E#}の{RUBY_B#おんけい}恩恵{RUBY_E#}\n{RUBY_B#ほほえ}微笑{RUBY_E#}みを{RUBY_B#もっ}以{RUBY_E#}て{RUBY_B#うけたまわ}承{RUBY_E#}るべき",
-      "desc": "「賜福」を与えられた味方単体は、敵を倒した時にEPを<nobr>5</nobr>回復する、この効果はターンが回ってくるたびに1回まで発動できる。"
+      "desc": "「賜福」を与えられた味方単体は、敵を倒した時にEPを<nobr>5</nobr>回復する、この効果はターンが回ってくるたびに1回まで発動できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120203,
       "id": "halcyon_bequest",
       "name": "{RUBY_B#せいきゅう}青丘{RUBY_E#}の{RUBY_B#いおん}遺恩{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120204,
       "id": "jovial_versatility",
       "name": "{RUBY_B#じょうせい}情勢{RUBY_E#}を{RUBY_B#よ}読{RUBY_E#}み\n{RUBY_B#へんか}変化{RUBY_E#}せし{RUBY_B#めいか}鳴火{RUBY_E#}",
-      "desc": "「賜福」の付加ダメージ倍率+<nobr>20%</nobr>。"
+      "desc": "「賜福」の付加ダメージ倍率+<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120205,
       "id": "sauntering_coquette",
       "name": "{RUBY_B#やす}綏{RUBY_E#}んずる{RUBY_B#こび}狐魅{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120206,
       "id": "peace_brings_wealth_to_all",
       "name": "{RUBY_B#わきしょうざい}和気生財{RUBY_E#}",
-      "desc": "必殺技で味方のEPをさらに<nobr>10</nobr>回復する。"
+      "desc": "必殺技で味方のEPをさらに<nobr>10</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

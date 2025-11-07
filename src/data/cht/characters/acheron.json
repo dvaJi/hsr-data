@@ -2,6 +2,7 @@
   "_id": 1308,
   "id": "acheron",
   "name": "黃泉",
+  "description": "自稱「巡海遊俠」的旅人，本名不詳。\n身佩一把長刀，獨行銀河。",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量雷屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "獲得#3[i]點【殘夢】，向敵方單體附加#3[i]層【集真赤】，對其造成雷屬性傷害，對相鄰目標造成少量雷屬性傷害。",
       "type": "戰技",
       "tag": "擴散",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "對敵方單體造成3段少量雷屬性傷害，若消去目標【集真赤】則對敵方全體造成少量雷屬性傷害。最後對敵方全體造成1段雷屬性傷害並移除所有【集真赤】。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "【殘夢】達到上限時可啟動終結技。終結技期間可無視弱點屬性削減敵方韌性，並使敵方全體全屬性抗性降低。\n任意單位施放技能期間使敵方目標陷入負面效果時，黃泉獲得【殘夢】並向敵方目標附加【集真赤】。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1472,15 @@
       "desc": "立即攻擊敵人，每一波開始時獲得【四相斷我】，對敵方全體造成等同於黃泉#1[i]%攻擊力的雷屬性傷害，且無視弱點屬性削減敵方全體的韌性。擊破弱點時，觸發雷屬性的弱點擊破效果。\n【四相斷我】：施放終結技後，黃泉獲得#2[i]點【殘夢】，並向敵方隨機單體附加#2[i]層【集真赤】。\n若攻擊普通敵人則立即將其消滅，不會進入戰鬥。未命中敵人時不消耗秘技點。",
       "simpleDesc": "攻擊敵人，每個波次開始時獲得【四相斷我】，對敵方全體造成雷屬性傷害，並無視弱點屬性削減韌性。\n若攻擊普通敵人則立即將其消滅，不會進入戰鬥。未命中敵人時不消耗秘技點。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1498,97 @@
       "_id": 130801,
       "id": "silenced_sky_spake_sooth",
       "name": "高天寥落真言始",
-      "desc": "對處於<u>負面效果</u>的敵方目標造成傷害時暴擊率提高<nobr>18%</nobr>。"
+      "desc": "對處於<u>負面效果</u>的敵方目標造成傷害時暴擊率提高<nobr>18%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "負面效果",
+          "desc": "對戰鬥有負面效果的所有持續狀態，若無特殊說明則可加以解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130802,
       "id": "mute_thunder_in_still_tempest",
       "name": "霆鼓俱寂，瑟風亦止",
-      "desc": "行跡【奈落】最高數值所需的「虛無」命途角色人數減少1名，自身回合開始時獲得1點【殘夢】，同時向【集真赤】最多的敵方附加1層【集真赤】。"
+      "desc": "行跡【奈落】最高數值所需的「虛無」命途角色人數減少1名，自身回合開始時獲得1點【殘夢】，同時向【集真赤】最多的敵方附加1層【集真赤】。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130803,
       "id": "frost_bites_in_death",
       "name": "寒肅驚永蟄",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130804,
       "id": "shrined_fire_for_mirrored_soul",
       "name": "亙焰燎照鏡中人",
-      "desc": "在敵方目標進入戰鬥時，使其陷入終結技傷害易傷狀態，受到的終結技傷害提高<nobr>8%</nobr>。"
+      "desc": "在敵方目標進入戰鬥時，使其陷入終結技傷害易傷狀態，受到的終結技傷害提高<nobr>8%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130805,
       "id": "strewn_souls_on_erased_earths",
       "name": "崇岩支離，千身飄零",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130806,
       "id": "apocalypse_the_emancipator",
       "name": "災咎解桎梏",
-      "desc": "黃泉造成的終結技傷害全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>，發動普通攻擊、戰技造成的傷害同時視為終結技傷害，並無視弱點屬性削減敵方韌性。擊破弱點時，觸發雷屬性的弱點擊破效果。"
+      "desc": "黃泉造成的終結技傷害全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>，發動普通攻擊、戰技造成的傷害同時視為終結技傷害，並無視弱點屬性削減敵方韌性。擊破弱點時，觸發雷屬性的弱點擊破效果。",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

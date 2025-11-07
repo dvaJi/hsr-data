@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "Hysilens",
+  "description": "Styxia, kota pesisir yang dimabuk mimpi, tempat nyanyian masa lampau masih mengalun di antara ombak yang bergulung.\nHelektra sang Putri Lautan, Keturunan Chrysos yang menyucikan Benih Api \"Samudra\", halaulah arus kelam yang mengendap dan persembahkanlah perjamuan yang meriah bagi para pahlawan dari luar angkasa.\n— Belum tiba waktunya tirai diturunkan. Meski harapan rapuh bagaikan buih, tetapi ombak akan terus bergulir tanpa ragu.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Physical DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "Berpeluang besar untuk meningkatkan DMG yang diterima seluruh musuh, serta mengakibatkan Physical DMG pada seluruh musuh.",
       "type": "Skill",
       "tag": "AoE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "Menciptakan area pembatas yang mengurangi ATK dan DEF seluruh musuh, serta mengakibatkan Physical DMG pada seluruh musuh. Selama area pembatas aktif, setiap target musuh menerima 1 kali DoT, Hysilens akan mengakibatkan 1 kali Physical DoT padanya.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Gugur",
+          "desc": "Saat HP berkurang hingga 0, maka karakter tersebut gugur. Karakter yang gugur tidak dapat melanjutkan pertempuran.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "Saat rekan tim menyerang, Hysilens berpeluang besar untuk membuat target musuh yang terserang memasuki salah 1 dari status Wind Shear/Bleed/Burn/Shock.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "Menciptakan dimensi khusus. Musuh dalam dimensi tidak akan menyerang rekan tim. Setelah memasuki pertempuran dengan musuh di dalam dimensi, berpeluang besar untuk membuat setiap target musuh memasuki #3[i] jenis status dari status Wind Shear/Bleed/Burn/Shock.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "You Ask Why Hearts Cry",
-      "desc": "Saat Hysilens berada di medan pertempuran, DoT yang diakibatkan rekan tim adalah <nobr>116%</nobr> dari DMG aslinya. Saat Hysilens membuat musuh memasuki status Wind Shear/Bleed/Burn/Shock melalui Talent, terdapat <nobr>100%</nobr> <u>peluang dasar</u> untuk membuat musuh tersebut memasuki ekstra satu status Wind Shear/Bleed/Burn/Shock yang sama dengan efek Talent asli dan dapat aktif secara bersamaan."
+      "desc": "Saat Hysilens berada di medan pertempuran, DoT yang diakibatkan rekan tim adalah <nobr>116%</nobr> dari DMG aslinya. Saat Hysilens membuat musuh memasuki status Wind Shear/Bleed/Burn/Shock melalui Talent, terdapat <nobr>100%</nobr> <u>peluang dasar</u> untuk membuat musuh tersebut memasuki ekstra satu status Wind Shear/Bleed/Burn/Shock yang sama dengan efek Talent asli dan dapat aktif secara bersamaan.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "Tell Me Why Waves Roar High",
-      "desc": "Selama durasi area pembatas, efek peningkatan DMG yang diakibatkan dari Trace \"The Fiddle of Pearls\" akan berlaku untuk seluruh rekan tim."
+      "desc": "Selama durasi area pembatas, efek peningkatan DMG yang diakibatkan dari Trace \"The Fiddle of Pearls\" akan berlaku untuk seluruh rekan tim.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "Why Do Lights Bid Goodbye",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "Lo, How Time Flows By",
-      "desc": "Selama durasi area pembatas, mengurangi <nobr>20%</nobr> RES Seluruh Tipe dari seluruh musuh."
+      "desc": "Selama durasi area pembatas, mengurangi <nobr>20%</nobr> RES Seluruh Tipe dari seluruh musuh.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "In Ablution, I Hum and Sigh",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "When to Return From Where You Lie",
-      "desc": "Selama durasi area pembatas, setiap saat giliran dimulai atau setelah serangan tunggal rekan tim, batas maksimum pemicuan efek Physical DoT Hysilens meningkat hingga <nobr>12</nobr> kali, dan DMG Multiplier yang diakibatkan meningkat <nobr>20%</nobr>."
+      "desc": "Selama durasi area pembatas, setiap saat giliran dimulai atau setelah serangan tunggal rekan tim, batas maksimum pemicuan efek Physical DoT Hysilens meningkat hingga <nobr>12</nobr> kali, dan DMG Multiplier yang diakibatkan meningkat <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1105,
   "id": "natasha",
   "name": "Natasha",
+  "description": "Médica do Mundo de Baixo e cuidadora de crianças.\nApesar de bondosa e carinhosa, tem um lado perigoso oculto.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Restaura PV de um único aliado e concede a Cura Periódica a ele.",
       "type": "Perícia",
       "tag": "Restauração",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +789,15 @@
       "simpleDesc": "Restaura PV de todos os aliados.",
       "type": "Perícia Suprema",
       "tag": "Restauração",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1101,15 @@
       "simpleDesc": "Ao curar aliados com porcentagem dos PV baixa, aumenta a Cura Realizada. Esse efeito também funciona em curas contínuas.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1412,24 @@
       "desc": "Ataca o inimigo imediatamente. Após entrar na batalha, causa Dano Físico igual a #4[i]% do ATQ de Natasha a um inimigo aleatório, com #1[i]% de chance-base de causar Enfraquecimento a todos os inimigos.\nQuando enfraquecidos, inimigos causam #2[i]% a menos de Dano a aliados por #3[i] rodada(s).",
       "simpleDesc": "Ataca o inimigo. Depois de entrar em batalha, causa Dano Físico leve a um único inimigo aleatório, com uma alta chance de infligir Fraqueza a todos os inimigos-alvo.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1449,79 @@
       "_id": 110501,
       "id": "pharmacology_expertise",
       "name": "Especialista em Farmacologia",
-      "desc": "Após sofrer um ataque, se os PV atuais estiverem em <nobr>30%</nobr> ou menos, cura a si mesma 1 vez para restaurar <nobr>15%</nobr> de seus PV máximos + <nobr>400</nobr>. Este efeito só pode ser ativado uma vez por batalha."
+      "desc": "Após sofrer um ataque, se os PV atuais estiverem em <nobr>30%</nobr> ou menos, cura a si mesma 1 vez para restaurar <nobr>15%</nobr> de seus PV máximos + <nobr>400</nobr>. Este efeito só pode ser ativado uma vez por batalha.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110502,
       "id": "clinical_research",
       "name": "Pesquisa Clínica",
-      "desc": "Usar a sua Perícia Suprema concede cura contínua por <nobr>1</nobr> rodada(s) aos aliados com <nobr>30%</nobr> de porcentagem de PV ou menos. No início das suas rodadas, os PV dos aliados são restaurados em <nobr>6%</nobr> dos PV máximos de Natasha + <nobr>160</nobr>."
+      "desc": "Usar a sua Perícia Suprema concede cura contínua por <nobr>1</nobr> rodada(s) aos aliados com <nobr>30%</nobr> de porcentagem de PV ou menos. No início das suas rodadas, os PV dos aliados são restaurados em <nobr>6%</nobr> dos PV máximos de Natasha + <nobr>160</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110503,
       "id": "the_right_cure",
       "name": "A Cura Correta",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110504,
       "id": "miracle_cure",
       "name": "Cura Milagrosa",
-      "desc": "Após sofrer um ataque, <nobr>5</nobr> de Energia extra."
+      "desc": "Após sofrer um ataque, <nobr>5</nobr> de Energia extra.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110505,
       "id": "preventive_treatment",
       "name": "Tratamento Preventivo",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110506,
       "id": "doctors_grace",
       "name": "Graça da Médica",
-      "desc": "O ATQ Básico de Natasha adicionalmente causa Dano Físico igual a <nobr>40%</nobr> dos PV máximos dela."
+      "desc": "O ATQ Básico de Natasha adicionalmente causa Dano Físico igual a <nobr>40%</nobr> dos PV máximos dela.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

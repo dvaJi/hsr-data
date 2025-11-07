@@ -2,6 +2,7 @@
   "_id": 1405,
   "id": "anaxa",
   "name": "Anaxa",
+  "description": "O Bosque da Epifania, onde o conhecimento floresce e filósofos nascem.\nMas aqui está Anaxágoras, o blasfemo, o Herdeiro de Chrysos que desafia a Chama Primordial da Razão. E lhe é perguntado: Você desafiaria a profecia mesmo se você tivesse que carregar o fardo da infâmia e insistir em cravar os espinhos da dúvida na Árvore Sagrada da sabedoria?\n\"Ridículo. Em um mundo cheio de mentiras, somente eu sou a verdade.\"",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Vento leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Causa Dano de Vento leve a um inimigo que é Rebatido 5 vezes no total, priorizando o Rebote para alvos que não tenham sido atingidos. Quanto mais inimigos-alvo estiverem no campo de batalha, maior será o Dano.",
       "type": "Perícia",
       "tag": "Rebote",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Inflige \"Sublimação\" a todos os inimigos e causa Dano de Vento. No estado de \"Sublimação\", os alvos serão simultaneamente infligidos com 7 tipos de Fraqueza e não poderão agir se não tiverem RES a Controle.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1065,15 @@
       "simpleDesc": "Ao atingir inimigos-alvo, inflige 1 Fraqueza aleatória. Inimigos cujas Fraquezas chegam a #3[i], são infligidos com \"Revelação da Essência\". Anaxa causa Dano aumentado a alvos nesse estado. Após usar ATQ Básico ou Perícia neles, executa 1 instância adicional de Perícia sem custo.",
       "type": "Talento",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1361,6 +1398,15 @@
       "simpleDesc": "Inflige o estado \"Em Pânico\" aos inimigos ao redor. Atacar um inimigo infligido com \"Em Pânico\", sempre será considerado como entrar em batalha por meio de um golpe que atinge a Fraqueza, aplicando 1 Fraqueza do Tipo do atacante a todos os inimigos.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1378,37 +1424,79 @@
       "_id": 140501,
       "id": "magician_isolated_by_stars",
       "name": "Mago da Lua Oculta-Estrelas",
-      "desc": "Após usar a Perícia pela primeira vez, recupera <nobr>1</nobr> Ponto(s) de Perícia. Ao usar a Perícia para atingir inimigos-alvo, reduz a DEF dos alvos em <nobr>16%</nobr>, com duração de <nobr>2</nobr> rodada(s)."
+      "desc": "Após usar a Perícia pela primeira vez, recupera <nobr>1</nobr> Ponto(s) de Perícia. Ao usar a Perícia para atingir inimigos-alvo, reduz a DEF dos alvos em <nobr>16%</nobr>, com duração de <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140502,
       "id": "soul_true_to_history",
       "name": "Humano da Verdadeira História",
-      "desc": "Quando inimigos-alvo entram no campo de batalha, ativa 1 vez o efeito \"Implante de Fraqueza\" do Talento e reduz a RES a Todos os Tipos em <nobr>20%</nobr>."
+      "desc": "Quando inimigos-alvo entram no campo de batalha, ativa 1 vez o efeito \"Implante de Fraqueza\" do Talento e reduz a RES a Todos os Tipos em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140503,
       "id": "pupil_etched_into_cosmos",
       "name": "Pupila Gravada no Cosmos",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140504,
       "id": "blaze_plunged_to_canyon",
       "name": "Chamas Arremessadas no Cânion",
-      "desc": "Ao usar a Perícia, aumenta o ATQ em <nobr>30%</nobr> por <nobr>2</nobr> rodada(s). Este efeito pode ser acumulado até <nobr>2</nobr> vez(es)."
+      "desc": "Ao usar a Perícia, aumenta o ATQ em <nobr>30%</nobr> por <nobr>2</nobr> rodada(s). Este efeito pode ser acumulado até <nobr>2</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140505,
       "id": "embryo_set_beyond_vortex",
       "name": "Embrião Definido Além do Vórtex",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140506,
       "id": "everything_is_in_everything",
       "name": "Tudo Pertence ao Todo",
-      "desc": "O Dano causado por Anaxa é igual a <nobr>130%</nobr> do Dano original. Os 2 efeitos do Rastro \"Hiato Imperativo\" serão ativados diretamente e não dependerão mais do número de personagens da Erudição na equipe."
+      "desc": "O Dano causado por Anaxa é igual a <nobr>130%</nobr> do Dano original. Os 2 efeitos do Rastro \"Hiato Imperativo\" serão ativados diretamente e não dependerão mais do número de personagens da Erudição na equipe.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

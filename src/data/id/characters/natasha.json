@@ -2,6 +2,7 @@
   "_id": 1105,
   "id": "natasha",
   "name": "Natasha",
+  "description": "Seorang dokter dari Underworld, sekaligus pengasuh anak-anak.\nSelain kebaikan dan perhatiannya, dia juga memiliki sisi berbahaya yang tersembunyi.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Physical DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Memulihkan HP 1 rekan tim, dan memberikan target Pemulihan Berkelanjutan.",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +789,15 @@
       "simpleDesc": "Memulihkan HP seluruh rekan tim.",
       "type": "Ultimate",
       "tag": "Restore",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1101,15 @@
       "simpleDesc": "Meningkatkan pemulihan yang diberikan pada rekan tim yang persentase HP-nya rendah. Efek ini juga berlaku pada efek pemulihan berkelanjutan.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1412,24 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, mengakibatkan Physical DMG sebesar #4[i]% ATK Natasha pada musuh secara acak dan setiap target memiliki #1[i]% peluang dasar untuk memasuki status Weaken.\nUntuk target musuh berstatus Weaken, DMG yang diakibatkannya pada rekan tim akan berkurang #2[i]% selama #3[i] giliran.",
       "simpleDesc": "Menyerang musuh dan mengakibatkan Physical DMG dalam jumlah kecil pada musuh secara acak. Berpeluang besar untuk membuat setiap target memasuki status Weaken.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1449,79 @@
       "_id": 110501,
       "id": "pharmacology_expertise",
       "name": "Pharmacology Expertise",
-      "desc": "Setelah terkena serangan, jika persentase HP Natasha saat ini kurang dari atau sama dengan <nobr>30%</nobr>, Natasha akan menyembuhkan dirinya 1 kali, memulihkan HP sebesar <nobr>15%</nobr> Max HP Natasha + <nobr>400</nobr>. Efek ini hanya dapat dipicu sekali dalam 1 pertempuran."
+      "desc": "Setelah terkena serangan, jika persentase HP Natasha saat ini kurang dari atau sama dengan <nobr>30%</nobr>, Natasha akan menyembuhkan dirinya 1 kali, memulihkan HP sebesar <nobr>15%</nobr> Max HP Natasha + <nobr>400</nobr>. Efek ini hanya dapat dipicu sekali dalam 1 pertempuran.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110502,
       "id": "clinical_research",
       "name": "Clinical Research",
-      "desc": "Saat melancarkan Ultimate, akan memberikan efek pemulihan berkelanjutan selama <nobr>1</nobr> giliran pada rekan tim dengan persentase HP saat ini kurang dari atau sama dengan <nobr>30%</nobr>. Saat giliran mereka dimulai, memulihkan HP mereka sebesar <nobr>6%</nobr> Max HP Natasha + <nobr>160</nobr>."
+      "desc": "Saat melancarkan Ultimate, akan memberikan efek pemulihan berkelanjutan selama <nobr>1</nobr> giliran pada rekan tim dengan persentase HP saat ini kurang dari atau sama dengan <nobr>30%</nobr>. Saat giliran mereka dimulai, memulihkan HP mereka sebesar <nobr>6%</nobr> Max HP Natasha + <nobr>160</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110503,
       "id": "the_right_cure",
       "name": "The Right Cure",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110504,
       "id": "miracle_cure",
       "name": "Miracle Cure",
-      "desc": "Memulihkan <nobr>5</nobr> Energy tambahan setelah diserang musuh."
+      "desc": "Memulihkan <nobr>5</nobr> Energy tambahan setelah diserang musuh.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110505,
       "id": "preventive_treatment",
       "name": "Preventive Treatment",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110506,
       "id": "doctors_grace",
       "name": "Doctor's Grace",
-      "desc": "Saat melancarkan Basic Attack, mengakibatkan Physical DMG tambahan sebesar <nobr>40%</nobr> Max HP Natasha."
+      "desc": "Saat melancarkan Basic Attack, mengakibatkan Physical DMG tambahan sebesar <nobr>40%</nobr> Max HP Natasha.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

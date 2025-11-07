@@ -2,6 +2,7 @@
   "_id": 1223,
   "id": "moze",
   "name": "Moze",
+  "description": "Un guardia en la sombra del Yaoqing de Xianzhou. Es reservado y callado, y siempre actúa solo.\nComo experto en los servicios de inteligencia y otros asuntos que deben mantenerse ocultos, Moze rara vez se deja ver. Cuando muestra sus verdaderas capacidades, sus enemigos suelen enfrentarse a la muerte.\nTiene un amplio conocimiento sobre métodos de asesinato y parece que está increíblemente obsesionado con la pulcritud y la limpieza.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Marca a un enemigo como Presa y le inflige Daño de Rayo. Además, obtiene #2[i] pts. de carga.",
       "type": "Habilidad básica",
       "tag": "ATQ individual",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,24 @@
       "simpleDesc": "Inflige Daño de Rayo a un enemigo y lanza el ataque adicional del talento.",
       "type": "Habilidad definitiva",
       "tag": "ATQ individual",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,40 @@
       "simpleDesc": "Moze entra en el estado de Ausente mientras haya una Presa en el campo de batalla.\nDespués de que un objetivo aliado ataque a la Presa, Moze inflige Daño de Rayo adicional y gasta 1 pt. de carga. Por cada #2[i] puntos gastados, Moze lanza un ataque adicional a la Presa que le inflige Daño de Rayo. Cuando la carga llega a 0, se disipa el estado de Presa del objetivo.",
       "type": "Talento",
       "tag": "ATQ individual",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000016,
+          "name": "Ausente",
+          "desc": "Los objetivos en el estado de Ausente no pueden ser objetivos de habilidades y no aparecen en el orden de acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1399,15 @@
       "simpleDesc": "Entra en el estado de Invisibilidad. Al entrar en combate al golpear al enemigo mientras está en el estado de Invisibilidad, su daño aumenta.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,37 +1426,97 @@
       "_id": 122301,
       "id": "oathkeeper",
       "name": "Juramento",
-      "desc": "Tras entrar en combate, Moze recupera <nobr>20</nobr> pts. de energía. Cada vez que se activa el <u>daño adicional</u> del talento, Moze recupera <nobr>2</nobr> pts. de energía."
+      "desc": "Tras entrar en combate, Moze recupera <nobr>20</nobr> pts. de energía. Cada vez que se activa el <u>daño adicional</u> del talento, Moze recupera <nobr>2</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122302,
       "id": "wrathbearer",
       "name": "Castigo",
-      "desc": "El Daño CRIT que infligen todos los objetivos aliados a los enemigos marcados como Presa aumenta en un <nobr>40%</nobr>."
+      "desc": "El Daño CRIT que infligen todos los objetivos aliados a los enemigos marcados como Presa aumenta en un <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122303,
       "id": "deathchaser",
       "name": "Persecución",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122304,
       "id": "heathprowler",
       "name": "Camuflaje",
-      "desc": "Al lanzar la habilidad definitiva, el daño que inflige Moze aumenta en un <nobr>#1[f1]%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Al lanzar la habilidad definitiva, el daño que inflige Moze aumenta en un <nobr>#1[f1]%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122305,
       "id": "truthbender",
       "name": "Impostura",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122306,
       "id": "faithbinder",
       "name": "Lealtad",
-      "desc": "El multiplicador de daño del <u>ataque adicional</u> del talento aumenta en un <nobr>25%</nobr>."
+      "desc": "El multiplicador de daño del <u>ataque adicional</u> del talento aumenta en un <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

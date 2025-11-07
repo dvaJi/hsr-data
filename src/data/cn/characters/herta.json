@@ -2,6 +2,7 @@
   "_id": 1013,
   "id": "herta",
   "name": "黑塔",
+  "description": "「天才俱乐部」#83号会员，空间站的真正主人。\n智慧过人却毫无同理心的大科学家。",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量冰属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "对敌方全体造成少量冰属性伤害，对生命值较高的目标造成的伤害提高。",
       "type": "战技",
       "tag": "群攻",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "对敌方全体造成冰属性伤害。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,24 @@
       "simpleDesc": "当任意我方目标的攻击使敌方目标的当前生命值百分比小于等于#1[i]%时，黑塔立即发动追加攻击，对敌方全体造成少量冰属性伤害。",
       "type": "天赋",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1383,15 @@
       "simpleDesc": "使用秘技，下一次战斗开始时使自身攻击力提高。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1409,88 @@
       "_id": 101301,
       "id": "kick_you_when_youre_down",
       "name": "落井当下石",
-      "desc": "施放普攻时，若指定敌方单体生命值百分比小于等于<nobr>50%</nobr>，则额外造成等同于黑塔<nobr>40%</nobr>攻击力的冰属性<u>附加伤害</u>。"
+      "desc": "施放普攻时，若指定敌方单体生命值百分比小于等于<nobr>50%</nobr>，则额外造成等同于黑塔<nobr>40%</nobr>攻击力的冰属性<u>附加伤害</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101302,
       "id": "keep_the_ball_rolling",
       "name": "得胜必追击",
-      "desc": "天赋每触发1次，自身暴击率提高<nobr>3%</nobr>，该效果最多叠加<nobr>5</nobr>层。"
+      "desc": "天赋每触发1次，自身暴击率提高<nobr>3%</nobr>，该效果最多叠加<nobr>5</nobr>层。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101303,
       "id": "thats_the_kind_of_girl_i_am",
       "name": "我就是这样女子",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101304,
       "id": "hit_where_it_hurts",
       "name": "打人要打脸",
-      "desc": "触发天赋时造成的伤害提高<nobr>10%</nobr>。"
+      "desc": "触发天赋时造成的伤害提高<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101305,
       "id": "cuss_big_or_cuss_nothing",
       "name": "骂人不留口",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101306,
       "id": "no_one_can_betray_me",
       "name": "世上没人能负我",
-      "desc": "施放终结技后，攻击力提高<nobr>25%</nobr>，持续<nobr>1</nobr>回合。"
+      "desc": "施放终结技后，攻击力提高<nobr>25%</nobr>，持续<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

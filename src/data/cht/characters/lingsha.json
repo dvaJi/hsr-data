@@ -2,6 +2,7 @@
   "_id": 1222,
   "id": "lingsha",
   "name": "靈砂",
+  "description": "仙舟「羅浮」丹鼎司新任司鼎，伶俐秀慧的持明醫士。\n嗅覺敏銳，常以此識別病症，並以香薰安定他人心神。\n善於處理混雜的人際關係，即使心底暴躁如雷，表面上依舊滴水不漏。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "對敵方全體造成少量火屬性傷害，同時為我方全體回復生命值，使【浮元】行動提前。",
       "type": "戰技",
       "tag": "群體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動提前",
+          "desc": "使目標在下次行動前的等待間隔縮短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,32 @@
       "simpleDesc": "使敵方全體受到的擊破傷害提高，對敵方全體造成火屬性傷害，同時為我方全體回復生命值，使【浮元】行動提前。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "擊破傷害",
+          "desc": "擊破特攻、目標韌性上限、角色等級越高，造成的擊破傷害越高。\n擊破傷害無法暴擊，不受傷害提高類效果所影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "行動提前",
+          "desc": "使目標在下次行動前的等待間隔縮短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,40 @@
       "simpleDesc": "施放戰技召喚【浮元】：行動時發動追加攻擊，對敵方全體造成少量火屬性傷害。額外對隨機敵方單體造成少量火屬性傷害，優先選擇韌性值大於0且有火屬性弱點的目標。解除我方全體1個負面效果並回復生命值。\n重複施放戰技會增加【浮元】行動次數。",
       "type": "天賦",
       "tag": "群體攻擊",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "負面效果",
+          "desc": "對戰鬥有負面效果的所有持續狀態，若無特殊說明則可加以解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1614,15 @@
       "simpleDesc": "使用秘技，下一次戰鬥開始時立即召喚【浮元】並使敵方全體受到的擊破傷害提高。",
       "type": "秘技",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1639,79 @@
       "_id": 122201,
       "id": "bloom_on_vileward_bouquet",
       "name": "馨氣當盛，除邪避諱",
-      "desc": "靈砂的弱點擊破效率提高<nobr>50%</nobr>。當有敵方單位的弱點被擊破時，使其防禦力降低<nobr>20%</nobr>。"
+      "desc": "靈砂的弱點擊破效率提高<nobr>50%</nobr>。當有敵方單位的弱點被擊破時，使其防禦力降低<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122202,
       "id": "leisure_in_carmine_smokeveil",
       "name": "欹枕垂雲，煙奩紅雪",
-      "desc": "施放終結技時，使我方全體擊破特攻提高<nobr>40%</nobr>，持續<nobr>3</nobr>回合。"
+      "desc": "施放終結技時，使我方全體擊破特攻提高<nobr>40%</nobr>，持續<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122203,
       "id": "shine_of_floral_wick",
       "name": "含芽細炷，浪蕊濃焚",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122204,
       "id": "redolence_from_canopied_banquet",
       "name": "橫垂寶幄，半拂瓊筵",
-      "desc": "【浮元】行動時，為現有生命值最低的我方目標回復等同於靈砂<nobr>40%</nobr>攻擊力的生命值。"
+      "desc": "【浮元】行動時，為現有生命值最低的我方目標回復等同於靈砂<nobr>40%</nobr>攻擊力的生命值。",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122205,
       "id": "poise_atop_twists_and_turns",
       "name": "縱橫圓轉，內常不傾",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122206,
       "id": "arcadia_under_deep_seclusion",
       "name": "曉蘭深藏，宿香暗貯",
-      "desc": "【浮元】在場時，使敵方全體全屬性抗性降低<nobr>20%</nobr>，【浮元】攻擊時，額外造成<nobr>4</nobr>次傷害，每次傷害對隨機敵方單體造成等同於靈砂<nobr>50%</nobr>攻擊力的火屬性傷害和<nobr>5</nobr>點削韌值，優先選擇韌性值大於0且有火屬性弱點的目標。"
+      "desc": "【浮元】在場時，使敵方全體全屬性抗性降低<nobr>20%</nobr>，【浮元】攻擊時，額外造成<nobr>4</nobr>次傷害，每次傷害對隨機敵方單體造成等同於靈砂<nobr>50%</nobr>攻擊力的火屬性傷害和<nobr>5</nobr>點削韌值，優先選擇韌性值大於0且有火屬性弱點的目標。",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

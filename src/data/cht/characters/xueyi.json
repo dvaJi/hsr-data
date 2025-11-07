@@ -2,6 +2,7 @@
   "_id": 1214,
   "id": "xueyi",
   "name": "雪衣",
+  "description": "仙舟「羅浮」上監察生死的機構「十王司」的判官。\n早已身死道消多年，藉由偃偶身軀「還陽」履行使命。",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量量子屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "對敵方單體造成量子屬性傷害，對相鄰目標造成少量量子屬性傷害。",
       "type": "戰技",
       "tag": "擴散",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "對敵方單體造成大量量子屬性傷害，本次攻擊無視弱點屬性削減敵方單體的韌性，削減的韌性越多，造成的傷害越高。",
       "type": "終結技",
       "tag": "單體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        120,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,27 @@
       "simpleDesc": "雪衣發動攻擊時或雪衣的隊友發動攻擊後削減敵方韌性，雪衣會疊加【惡報】。當【惡報】疊加至上限時，立即發動追加攻擊，對敵方單體造成少量量子屬性傷害，共彈射3次，並消耗全部【惡報】。",
       "type": "天賦",
       "tag": "彈射",
+      "spBase": 2,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1415,15 @@
       "desc": "立即攻擊敵人，進入戰鬥後對敵方全體造成等同於雪衣#1[i]%攻擊力的量子屬性傷害。",
       "simpleDesc": "攻擊敵人，進入戰鬥後對敵方全體造成少量量子屬性傷害。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,37 +1440,97 @@
       "_id": 121401,
       "id": "dvesha_inhibited",
       "name": "縛心魔",
-      "desc": "天賦的<u>追加攻擊</u>造成的傷害提高<nobr>40%</nobr>。"
+      "desc": "天賦的<u>追加攻擊</u>造成的傷害提高<nobr>40%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121402,
       "id": "klesha_breached",
       "name": "破五塵",
-      "desc": "天賦的<u>追加攻擊</u>無視弱點屬性削減敵方的韌性，同時為自身恢復等同於雪衣<nobr>5%</nobr>生命上限的生命值。擊破弱點時，觸發量子屬性的弱點擊破效果。"
+      "desc": "天賦的<u>追加攻擊</u>無視弱點屬性削減敵方的韌性，同時為自身恢復等同於雪衣<nobr>5%</nobr>生命上限的生命值。擊破弱點時，觸發量子屬性的弱點擊破效果。",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121403,
       "id": "dukha_ceased",
       "name": "止苦諦",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121404,
       "id": "karma_severed",
       "name": "斷業根",
-      "desc": "施放終結技時，擊破特攻提高<nobr>40%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "施放終結技時，擊破特攻提高<nobr>40%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121405,
       "id": "deva_enthralled",
       "name": "勾靈神",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121406,
       "id": "sasra_mastered",
       "name": "司死生",
-      "desc": "【惡報】的層數上限降低至<nobr>6</nobr>層。"
+      "desc": "【惡報】的層數上限降低至<nobr>6</nobr>層。",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

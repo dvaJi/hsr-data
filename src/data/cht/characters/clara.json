@@ -2,6 +2,7 @@
   "_id": 1107,
   "id": "clara",
   "name": "克拉拉",
+  "description": "與機械生活在一起的流浪少女。\n內向、溫柔，有一顆純粹的心。\n渴望下層區的大家都能成為彼此的「家人」。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量物理屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "對敵方全體造成物理屬性傷害，對持有【反擊標記】的目標額外造成物理傷害。",
       "type": "戰技",
       "tag": "群體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,27 @@
       "simpleDesc": "自身受到的傷害降低、被攻擊的機率提高，並強化反擊的效果。",
       "type": "終結技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "反擊",
+          "desc": "當目標受到攻擊後自動觸發的效果，對攻擊者發動1次額外的攻擊。\n反擊也屬於追加攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1128,27 @@
       "simpleDesc": "自身受到敵方目標攻擊的傷害降低。發動攻擊的敵方目標會被標上【反擊標記】，並遭到史瓦羅的反擊，受到物理屬性傷害。",
       "type": "天賦",
       "tag": "單體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 25
+      },
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "反擊",
+          "desc": "當目標受到攻擊後自動觸發的效果，對攻擊者發動1次額外的攻擊。\n反擊也屬於追加攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1405,6 +1472,15 @@
       "desc": "立即攻擊敵人，進入戰鬥後克拉拉受到敵方攻擊的機率提高，持續#1[i]回合。",
       "simpleDesc": "攻擊敵人，進入戰鬥後受到敵人攻擊的機率提高。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1498,96 @@
       "_id": 110701,
       "id": "a_tall_figure",
       "name": "高大的背影",
-      "desc": "施放戰技後，不會清除敵方目標的【反擊標記】。"
+      "desc": "施放戰技後，不會清除敵方目標的【反擊標記】。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110702,
       "id": "a_tight_embrace",
       "name": "緊緊的擁抱",
-      "desc": "施放終結技後，攻擊力提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "施放終結技後，攻擊力提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110703,
       "id": "cold_steel_armor",
       "name": "冰冷的鋼甲",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110704,
       "id": "familys_warmth",
       "name": "家人的溫暖",
-      "desc": "受到攻擊後，克拉拉受到的傷害降低<nobr>30%</nobr>，效果持續到自己的下個回合開始。"
+      "desc": "受到攻擊後，克拉拉受到的傷害降低<nobr>30%</nobr>，效果持續到自己的下個回合開始。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110705,
       "id": "a_small_promise",
       "name": "小小的承諾",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110706,
       "id": "long_company",
       "name": "長久的陪伴",
-      "desc": "我方其他目標遭到攻擊後，史瓦羅也有<nobr>50%</nobr>的<u>固定機率</u>觸發對攻擊者的<u>反擊</u>，並對攻擊目標新增【反擊標記】。施放終結技時，額外增加<nobr>1</nobr>次強化反擊的次數。"
+      "desc": "我方其他目標遭到攻擊後，史瓦羅也有<nobr>50%</nobr>的<u>固定機率</u>觸發對攻擊者的<u>反擊</u>，並對攻擊目標新增【反擊標記】。施放終結技時，額外增加<nobr>1</nobr>次強化反擊的次數。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定機率",
+          "desc": "不會被任何因素影響的固定機率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000003,
+          "name": "反擊",
+          "desc": "當目標受到攻擊後自動觸發的效果，對攻擊者發動1次額外的攻擊。\n反擊也屬於追加攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

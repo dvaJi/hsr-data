@@ -2,6 +2,7 @@
   "_id": 1015,
   "id": "archer",
   "name": "아처",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "지정된 단일 적에게 소량의 양자 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -413,6 +423,15 @@
       "simpleDesc": "[회로접속] 상태에 진입한다. 지정된 단일 적에게 대량의 양자 속성 피해를 가한다. [회로접속] 상태에서 전투 스킬 발동 후 이번 턴이 종료되지 않으며, 아처의 전투 스킬이 가하는 피해가 증가한다. 전투 스킬 포인트가 부족하여 전투 스킬을 다시 발동할 수 없을 경우 [회로접속] 상태가 종료된다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 2,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,15 @@
       "simpleDesc": "지정된 단일 적에게 대량의 양자 속성 피해를 가하고 충전을 획득한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1091,6 +1119,24 @@
       "simpleDesc": "동료가 공격을 발동하면 아처는 충전을 1pt 소모하고 주목표에게 추가 공격을 발동하여 양자 속성 피해를 가하며, 전투 스킬 포인트를 1pt 회복한다",
       "type": "특성",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1384,6 +1430,15 @@
       "desc": "즉시 적을 공격하며, 전투 진입 후 모든 적에게 아처 공격력의 #1[i]%만큼 양자 속성 피해를 가하고, 충전을 #2[i]pt 획득한다",
       "simpleDesc": "즉시 적을 공격하며, 전투 진입 후 모든 적에게 양자 속성 피해를 가하고 충전을 획득한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1401,37 +1456,79 @@
       "_id": 101501,
       "id": "the_unreached_dream",
       "name": "닿지 못한 이상",
-      "desc": "단일 턴 내에 전투 스킬을 <nobr>3</nobr>회 발동하면 아군의 전투 스킬 포인트를 <nobr>2</nobr>pt 회복한다"
+      "desc": "단일 턴 내에 전투 스킬을 <nobr>3</nobr>회 발동하면 아군의 전투 스킬 포인트를 <nobr>2</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101502,
       "id": "the_unfulfilled_happiness",
       "name": "이루지 못한 행복",
-      "desc": "필살기 발동 시 적의 양자 속성 저항을 <nobr>20%</nobr> 감소시키며, 대상에게 양자 속성 약점을 부여한다, 지속 시간: <nobr>2</nobr>턴"
+      "desc": "필살기 발동 시 적의 양자 속성 저항을 <nobr>20%</nobr> 감소시키며, 대상에게 양자 속성 약점을 부여한다, 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101503,
       "id": "the_untamed_will",
       "name": "평범함을 거부하는 기개",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101504,
       "id": "the_unsung_life",
       "name": "영웅이라 불릴 수 없는 삶",
-      "desc": "가하는 필살기 피해가 <nobr>150%</nobr> 증가한다"
+      "desc": "가하는 필살기 피해가 <nobr>150%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101505,
       "id": "the_nameless_watch",
       "name": "고독한 무명의 수호",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101506,
       "id": "the_endless_pilgrimage",
       "name": "끝없는 배회의 순례",
-      "desc": "턴 시작 시 아군의 전투 스킬 포인트를 1pt 회복한다. 자신의 전투 스킬이 제공하는 피해 증가 효과의 중첩 가능 스택 최대치가 <nobr>1</nobr>스택 증가한다. 가하는 전투 스킬 피해가 방어력을 <nobr>20%</nobr> 무시한다"
+      "desc": "턴 시작 시 아군의 전투 스킬 포인트를 1pt 회복한다. 자신의 전투 스킬이 제공하는 피해 증가 효과의 중첩 가능 스택 최대치가 <nobr>1</nobr>스택 증가한다. 가하는 전투 스킬 피해가 방어력을 <nobr>20%</nobr> 무시한다",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

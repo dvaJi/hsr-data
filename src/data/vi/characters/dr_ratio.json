@@ -2,6 +2,7 @@
   "_id": 1305,
   "id": "dr_ratio",
   "name": "Dr. Ratio",
+  "description": "Học Giả Hội Trí Thức.\nTính tình kỳ quặc, lời lẽ khắt khe nhưng không kém phần phong độ.\nẨn chứa bên dưới cái đầu thạch cao kỳ quái đó là một dung mạo đẹp lạ thường.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Số Ảo cho 1 kẻ địch chỉ định.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Gây Sát Thương Số Ảo cho 1 kẻ địch chỉ định.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Gây Sát Thương Số Ảo cho 1 kẻ địch chỉ định, kèm theo Sự Mù Quáng Của Trí Giả lên kẻ này, khi đồng đội của Dr. Ratio tấn công mục tiêu đang có Sự Mù Quáng Của Trí Giả, Dr. Ratio sẽ phát động 1 lần Đòn Đánh Theo Sau lên mục tiêu này.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1022,6 +1059,32 @@
       "simpleDesc": "Khi thi triển Chiến Kỹ sẽ có xác suất phát động 1 lần Đòn Đánh Theo Sau lên mục tiêu này, gây Sát Thương Số Ảo.",
       "type": "Thiên Phú",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Xác Suất Cố Định",
+          "desc": "Xác suất cố định không bị ảnh hưởng bởi bất cứ nhân tố nào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1409,24 @@
       "simpleDesc": "Tạo một vùng đặc biệt. Kẻ địch trong vùng sẽ bị khiêu khích. Sau khi vào chiến đấu với kẻ địch trong vùng, sẽ có xác suất lớn giảm Tốc Độ của kẻ địch.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1446,113 @@
       "_id": 130501,
       "id": "pride_comes_before_a_fall",
       "name": "Ngạo Mạn Gây Tai Họa",
-      "desc": "Tăng <nobr>4</nobr> tầng giới hạn cộng dồn số tầng của Vết Tích Quy Nạp. Khi bắt đầu chiến đấu, sẽ nhận ngay <nobr>4</nobr> tầng Quy Nạp. Cần mở khóa Quy Nạp trước."
+      "desc": "Tăng <nobr>4</nobr> tầng giới hạn cộng dồn số tầng của Vết Tích Quy Nạp. Khi bắt đầu chiến đấu, sẽ nhận ngay <nobr>4</nobr> tầng Quy Nạp. Cần mở khóa Quy Nạp trước.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130502,
       "id": "the_divine_is_in_the_details",
       "name": "Chân Lý Vùi Trong Chi Tiết",
-      "desc": "Khi <u>Đòn Đánh Theo Sau</u> của Thiên Phú đánh trúng mục tiêu, mỗi lần mục tiêu có 1 <u>Hiệu Ứng Xấu</u>, sẽ gây thêm <u>Sát Thương Kèm Theo</u> thuộc tính Số Ảo bằng <nobr>20%</nobr> Tấn Công của Dr. Ratio. Hiệu ứng này trong mỗi <u>Đòn Đánh Theo Sau</u> tối đa kích hoạt <nobr>4</nobr> lần."
+      "desc": "Khi <u>Đòn Đánh Theo Sau</u> của Thiên Phú đánh trúng mục tiêu, mỗi lần mục tiêu có 1 <u>Hiệu Ứng Xấu</u>, sẽ gây thêm <u>Sát Thương Kèm Theo</u> thuộc tính Số Ảo bằng <nobr>20%</nobr> Tấn Công của Dr. Ratio. Hiệu ứng này trong mỗi <u>Đòn Đánh Theo Sau</u> tối đa kích hoạt <nobr>4</nobr> lần.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130503,
       "id": "know_thyself",
       "name": "Tự Nhận Thức Bản Thân",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130504,
       "id": "ignorance_is_blight",
       "name": "Mù Quáng Cũng Là Ngu Dốt",
-      "desc": "Khi kích hoạt Thiên Phú, Dr. Ratio sẽ hồi thêm <nobr>15</nobr> Năng Lượng."
+      "desc": "Khi kích hoạt Thiên Phú, Dr. Ratio sẽ hồi thêm <nobr>15</nobr> Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130505,
       "id": "sic_itur_ad_astra",
       "name": "Biển Rộng Không Bóng Thuyền",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130506,
       "id": "vincit_omnia_veritas",
       "name": "Sự Thật Là Vĩnh Cửu",
-      "desc": "Hiệu ứng kích hoạt Sự Mù Quáng Của Trí Giả tăng thêm <nobr>1</nobr> lần, tăng <nobr>50%</nobr> sát thương gây ra bởi <u>Đòn Đánh Theo Sau</u> của Thiên Phú."
+      "desc": "Hiệu ứng kích hoạt Sự Mù Quáng Của Trí Giả tăng thêm <nobr>1</nobr> lần, tăng <nobr>50%</nobr> sát thương gây ra bởi <u>Đòn Đánh Theo Sau</u> của Thiên Phú.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

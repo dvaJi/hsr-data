@@ -2,6 +2,7 @@
   "_id": 1006,
   "id": "silver_wolf",
   "name": "Silver Wolf",
+  "description": "Anggota \"Stellaron Hunter\". Peretas jenius.\nDia melihat alam semesta sebagai game simulasi besar yang imersif dan bersenang-senang di dalamnya.\nDia menguasai keterampilan yang disebut \"aether editing\", yang dapat digunakan untuk mengubah data riil.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Berpeluang besar untuk memberikan Weakness tambahan pada 1 musuh dan mengakibatkan Quantum DMG pada musuh tersebut.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -803,6 +837,27 @@
       "simpleDesc": "Berpeluang besar untuk mengurangi DEF, serta mengakibatkan Quantum DMG dalam jumlah besar pada 1 musuh.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1197,24 @@
       "simpleDesc": "Setelah menyerang, berpeluang untuk menanamkan 1 \"Bug\" acak pada target.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1495,6 +1568,15 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, akan mengakibatkan Quantum DMG sebesar #1[i]% ATK Silver Wolf pada seluruh musuh dan mengurangi Toughness seluruh musuh tanpa memedulikan Tipe Weakness. Saat mengakibatkan Weakness Break dengan cara ini, akan memicu efek Quantum Weakness Break.",
       "simpleDesc": "Menyerang musuh. Setelah memasuki pertempuran, akan mengakibatkan DMG dalam jumlah kecil pada seluruh musuh dan mengurangi Toughness seluruh musuh tanpa memedulikan Tipe Weakness.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1511,37 +1593,114 @@
       "_id": 100601,
       "id": "social_engineering",
       "name": "Social Engineering",
-      "desc": "Setelah Silver Wolf melancarkan Ultimate untuk menyerang target musuh, setiap 1 <u>Debuff</u> yang dimiliki target musuh akan memulihkan <nobr>7</nobr> Energy Silver Wolf. Efek ini dapat dipicu maksimal <nobr>5</nobr> kali setiap kali melancarkan Ultimate."
+      "desc": "Setelah Silver Wolf melancarkan Ultimate untuk menyerang target musuh, setiap 1 <u>Debuff</u> yang dimiliki target musuh akan memulihkan <nobr>7</nobr> Energy Silver Wolf. Efek ini dapat dipicu maksimal <nobr>5</nobr> kali setiap kali melancarkan Ultimate.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100602,
       "id": "zombie_network",
       "name": "Zombie Network",
-      "desc": "Saat target musuh memasuki pertempuran, mengurangi <nobr>20%</nobr> Effect RES target."
+      "desc": "Saat target musuh memasuki pertempuran, mengurangi <nobr>20%</nobr> Effect RES target.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100603,
       "id": "payload",
       "name": "Payload",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100604,
       "id": "bounce_attack",
       "name": "Bounce Attack",
-      "desc": "Setelah melancarkan Ultimate untuk menyerang target musuh, setiap 1 <u>Debuff</u> yang dimiliki target akan mengakibatkan Quantum <u>DMG Tambahan</u> sebesar <nobr>20%</nobr> ATK Silver Wolf. Efek ini maksimal dapat dipicu <nobr>5</nobr> kali dalam setiap serangan Ultimate."
+      "desc": "Setelah melancarkan Ultimate untuk menyerang target musuh, setiap 1 <u>Debuff</u> yang dimiliki target akan mengakibatkan Quantum <u>DMG Tambahan</u> sebesar <nobr>20%</nobr> ATK Silver Wolf. Efek ini maksimal dapat dipicu <nobr>5</nobr> kali dalam setiap serangan Ultimate.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100605,
       "id": "brute_force_attack",
       "name": "Brute Force Attack",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100606,
       "id": "overlay_network",
       "name": "Overlay Network",
-      "desc": "Setiap 1 <u>Debuff</u> yang dimiliki target musuh akan meningkatkan <nobr>20%</nobr> DMG yang diakibatkan Silver Wolf pada target tersebut, maksimal meningkat hingga <nobr>100%</nobr>."
+      "desc": "Setiap 1 <u>Debuff</u> yang dimiliki target musuh akan meningkatkan <nobr>20%</nobr> DMG yang diakibatkan Silver Wolf pada target tersebut, maksimal meningkat hingga <nobr>100%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1314,
   "id": "jade",
   "name": "제이드",
+  "description": "스타피스 컴퍼니 「전략투자부」의 고위 간부로, 「10인의 스톤하트」 중 한 명이다. 초석은 「전당의 비취」.\n서늘하게 아름답고 우아한 이 대금업자는 사람 마음을 꿰뚫어 보는 데 능하고, 「보나제이드 전당포」라는 개인적인 취미를 갖고 있다.\n가치가 높은 것들을 얻기 위해서라면 인내심을 갖고 기다리며, 가진 게 없어 보이는 고객으로부터 가치를 쥐어짜 내는 데 능하다",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 양자 속성 피해를 가하고, 인접한 목표에게 소량의 양자 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "확산",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "단일 아군이 [빚 수금업자]가 되며, 속도가 증가한다. [빚 수금업자]가 공격을 발동하면 명중한 모든 적에게 소량의 양자 속성 추가 피해를 가하고 자신의 HP를 소모한다. 제이드가 [빚 수금업자]가 되면 속도 증가 효과를 획득할 수 없고 공격 후 HP를 소모하지 않는다",
       "type": "전투 스킬",
       "tag": "서포트",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -768,6 +796,24 @@
       "simpleDesc": "모든 적에게 양자 속성 피해를 가하고, 자신의 특성의 추가 공격 피해 배율이 증가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1092,6 +1138,24 @@
       "simpleDesc": "제이드 혹은 [빚 수금업자]가 된 목표가 공격 발동 후, 적을 1기 명중할 때마다 충전을 1pt 획득한다. 충전이 #3[i]pt에 도달하면 충전을 #3[i]pt 소모하여 추가 공격을 1회 발동하고, 모든 적에게 양자 속성 피해를 가한다.\n제이드가 추가 공격 발동 시 [전당품]을 획득하고 치명타 피해가 증가한다, 최대 중첩수: #2[i]스택",
       "type": "특성",
       "tag": "범위 공격",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1446,6 +1510,15 @@
       "simpleDesc": "일정 구역 내의 적을 [맹종] 상태에 빠트린다. [맹종] 상태의 적을 공격하면 모든 [맹종] 상태의 적이 동시에 전투에 진입하며, 전투 진입 후 모든 적에게 소량의 양자 속성 피해를 가하고 즉시 [전당품]을 #3[i]스택 획득한다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1537,97 @@
       "_id": 131401,
       "id": "altruism_nevertheless_tradable",
       "name": "이타심? 역시 거래 가능",
-      "desc": "제이드 특성의 <u>추가 공격</u> 피해가 <nobr>32%</nobr> 증가한다. [빚 수금업자] 상태를 보유한 캐릭터가 공격 발동 후 명중한 적의 수량이 2/1기일 시 제이드가 충전을 추가로 <nobr>1</nobr>/<nobr>2</nobr>pt 획득한다"
+      "desc": "제이드 특성의 <u>추가 공격</u> 피해가 <nobr>32%</nobr> 증가한다. [빚 수금업자] 상태를 보유한 캐릭터가 공격 발동 후 명중한 적의 수량이 2/1기일 시 제이드가 충전을 추가로 <nobr>1</nobr>/<nobr>2</nobr>pt 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131402,
       "id": "morality_herein_authenticated",
       "name": "도덕? 담보 승인",
-      "desc": "[전당품]이 <nobr>15</nobr>스택까지 중첩될 시 제이드의 치명타 확률이 <nobr>18%</nobr> 증가한다"
+      "desc": "[전당품]이 <nobr>15</nobr>스택까지 중첩될 시 제이드의 치명타 확률이 <nobr>18%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131403,
       "id": "honesty_soon_mortgaged",
       "name": "솔직? 저당 대상이 될 뿐",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131404,
       "id": "sincerity_put_option_only",
       "name": "진심? 풋옵션만 가능",
-      "desc": "필살기 발동 시 제이드가 가하는 피해가 적의 방어력을 <nobr>12%</nobr> 무시한다. 지속 시간: <nobr>3</nobr>턴"
+      "desc": "필살기 발동 시 제이드가 가하는 피해가 적의 방어력을 <nobr>12%</nobr> 무시한다. 지속 시간: <nobr>3</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131405,
       "id": "hope_hitherto_forfeited",
       "name": "희망? 유전물이 된 지 오래",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131406,
       "id": "equity_pending_sponsorship",
       "name": "공평? 여전히 보증 필요",
-      "desc": "필드 위에 [빚 수금업자] 상태인 캐릭터가 있을 시 제이드의 양자 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가하고, 제이드가 [빚 수금업자] 상태를 획득한다"
+      "desc": "필드 위에 [빚 수금업자] 상태인 캐릭터가 있을 시 제이드의 양자 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가하고, 제이드가 [빚 수금업자] 상태를 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

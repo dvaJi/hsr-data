@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "丹恆•飲月",
+  "description": "丹恆身為持明族的本相，其上一世「飲月君」所遺存的力量。\n接受了額頂的崢嶸角冠，就要接受那罪人所留的一切功過。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量虛數屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "使普通攻擊【澤芝】分別強化為【瞬華】、【天矢陰】或【盤拏耀躍】。",
       "type": "戰技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "對敵方單體造成大量虛數屬性傷害，對相鄰目標造成虛數屬性傷害。獲得2個【逆鱗】：可抵扣丹恆•飲月的戰技點消耗且視為消耗戰技點。",
       "type": "終結技",
       "tag": "擴散",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "發動每段攻擊後，使自身造成的傷害提高，該效果可以疊加並持續至自身回合結束。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "進入【蟠躍】狀態，使用攻擊會快速向前移動一段距離並攻擊接觸到的敵人。攻擊敵人進入戰鬥後，對敵方全體造成虛數屬性傷害，並獲得1個【逆鱗】。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "縈天",
-      "desc": "使【亢心】的可疊加層數增加<nobr>4</nobr>層。且每段攻擊額外獲得1層【亢心】。"
+      "desc": "使【亢心】的可疊加層數增加<nobr>4</nobr>層。且每段攻擊額外獲得1層【亢心】。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "九斿",
-      "desc": "施放終結技後丹恆•飲月<u>行動提前</u><nobr>100%</nobr>，並且會額外獲得1個【逆鱗】。"
+      "desc": "施放終結技後丹恆•飲月<u>行動提前</u><nobr>100%</nobr>，並且會額外獲得1個【逆鱗】。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動提前",
+          "desc": "使目標在下次行動前的等待間隔縮短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "雲旂",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "嘲風",
-      "desc": "【叱吒】的<u>增益效果</u>會持續到下一個自身回合結束。"
+      "desc": "【叱吒】的<u>增益效果</u>會持續到下一個自身回合結束。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "增益效果",
+          "desc": "對戰鬥有增益效果的所有持續狀態，若無特殊說明則可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "偃蹇",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "見譙",
-      "desc": "我方其他角色施放終結技後，丹恆•飲月下一次施放【盤拏耀躍】時虛數屬性<u>抗性穿透</u>提高<nobr>20%</nobr>，該效果最多疊加<nobr>3</nobr>層。"
+      "desc": "我方其他角色施放終結技後，丹恆•飲月下一次施放【盤拏耀躍】時虛數屬性<u>抗性穿透</u>提高<nobr>20%</nobr>，該效果最多疊加<nobr>3</nobr>層。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1403,
   "id": "tribbie",
   "name": "Tribbie",
+  "description": "Dari tanah suci tempat ramalan tripartit turun, sang utusan terbagi menjadi ribuan wujud dan memulai perjalanan yang panjang.\nMaiden Janusopolis, Tribios — Keturunan Chrysos yang merebut benih api \"Perjalanan\" — harus berkelana untuk semua makhluk dan membawa berita penyelamatan dunia ke segala penjuru.\n— Carilah anak-anak umat manusia dengan darah ilahi emas yang mengalir di tubuhnya, tembuslah kegelapan dunia, dan pergilah menuju hari esok yang dipenuhi bintang dan bulan.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh dan target di sekitarnya.",
       "type": "Basic ATK",
       "tag": "Blast",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Memperoleh \"Numinosity\". Selama durasi ini, RES PEN Seluruh Tipe dari seluruh rekan tim akan meningkat.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -738,6 +766,24 @@
       "simpleDesc": "Mengaktifkan area pembatas dan mengakibatkan Quantum DMG dalam jumlah kecil pada seluruh musuh. Selama durasi area pembatas, DMG yang diterima musuh akan meningkat, dan akan mengakibatkan Quantum DMG Tambahan dalam jumlah kecil pada target dengan HP tertinggi di antara semua target yang terkena serangan berdasarkan jumlah musuh yang diserang.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1077,6 +1123,24 @@
       "simpleDesc": "Setelah karakter lain dalam tim melancarkan Ultimate, Tribbie akan melancarkan Serangan Lanjutan, mengakibatkan Quantum DMG dalam jumlah kecil pada seluruh musuh. Efek ini dapat terpicu hingga 1 kali untuk setiap karakter. Saat Tribbie melancarkan Ultimate, jumlah pemicuan untuk karakter lain dalam tim akan direset.",
       "type": "Talent",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,6 +1435,15 @@
       "simpleDesc": "Saat memasuki pertempuran, akan memperoleh \"Numinosity\".",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1387,37 +1460,114 @@
       "_id": 140301,
       "id": "rite_of_sugar_scoop",
       "name": "Rite of Sugar Scoop",
-      "desc": "Selama durasi area pembatas, setelah rekan tim menyerang musuh, akan mengakibatkan ekstra <u>True DMG</u> sebesar <nobr>24%</nobr> dari total DMG serangan kali ini pada target dari <u>DMG Tambahan</u> yang diakibatkan area pembatas."
+      "desc": "Selama durasi area pembatas, setelah rekan tim menyerang musuh, akan mengakibatkan ekstra <u>True DMG</u> sebesar <nobr>24%</nobr> dari total DMG serangan kali ini pada target dari <u>DMG Tambahan</u> yang diakibatkan area pembatas.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "True DMG",
+          "desc": "DMG Non-Tipe yang tidak terpengaruh oleh efek apa pun. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140302,
       "id": "guide_of_dream_tour",
       "name": "Guide of Dream Tour",
-      "desc": "<u>DMG Tambahan</u> yang diakibatkan area pembatas meningkat hingga <nobr>120%</nobr> dari DMG aslinya. Saat area pembatas mengakibatkan <u>DMG Tambahan</u>, akan mengakibatkan ekstra <nobr>1</nobr> kali DMG Tambahan."
+      "desc": "<u>DMG Tambahan</u> yang diakibatkan area pembatas meningkat hingga <nobr>120%</nobr> dari DMG aslinya. Saat area pembatas mengakibatkan <u>DMG Tambahan</u>, akan mengakibatkan ekstra <nobr>1</nobr> kali DMG Tambahan.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140303,
       "id": "trove_of_morning_glow",
       "name": "Trove of Morning Glow",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140304,
       "id": "peace_of_empathy_bond",
       "name": "Peace of Empathy Bond",
-      "desc": "Selama durasi \"Numinosity\", DMG yang diakibatkan seluruh rekan tim akan mengabaikan <nobr>18%</nobr> DEF target."
+      "desc": "Selama durasi \"Numinosity\", DMG yang diakibatkan seluruh rekan tim akan mengabaikan <nobr>18%</nobr> DEF target.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140305,
       "id": "clock_of_wonder_origin",
       "name": "Clock of Wonder Origin",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140306,
       "id": "morrow_of_star_shine",
       "name": "Morrow of Star Shine",
-      "desc": "Setelah Tribbie melancarkan Ultimate, akan melancarkan <u>Serangan Lanjutan</u> dari Talent miliknya pada seluruh musuh. DMG yang diakibatkan <u>Serangan Lanjutan</u> dari Talent meningkat <nobr>729%</nobr>."
+      "desc": "Setelah Tribbie melancarkan Ultimate, akan melancarkan <u>Serangan Lanjutan</u> dari Talent miliknya pada seluruh musuh. DMG yang diakibatkan <u>Serangan Lanjutan</u> dari Talent meningkat <nobr>729%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

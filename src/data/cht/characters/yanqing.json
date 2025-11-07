@@ -2,6 +2,7 @@
   "_id": 1209,
   "id": "yanqing",
   "name": "彥卿",
+  "description": "將軍景元的侍衛，不過總角之年的御劍天才。\n手中握劍，即立於不敗之地。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量冰屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "對敵方單體造成冰屬性傷害，並為自身附加【智劍連心】。",
       "type": "戰技",
       "tag": "單體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +738,27 @@
       "simpleDesc": "提高自身暴擊率，並強化【智劍連心】，對敵方單體造成大量冰屬性傷害。",
       "type": "終結技",
       "tag": "單體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "增益效果",
+          "desc": "對戰鬥有增益效果的所有持續狀態，若無特殊說明則可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1083,48 @@
       "simpleDesc": "處於【智劍連心】時受到攻擊的機率降低，自身暴擊率和暴擊傷害提高。對敵方目標發動攻擊後，有機率發動追加攻擊對其造成冰屬性傷害，並有機率使其陷入凍結狀態。\n自身受到傷害後，【智劍連心】消失。",
       "type": "天賦",
       "tag": "單體攻擊",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定機率",
+          "desc": "不會被任何因素影響的固定機率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1494,15 @@
       "simpleDesc": "使用秘技，下一次戰鬥開始時自身對生命值百分比大於等於50%的敵方目標造成的傷害提高。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1424,37 +1521,106 @@
       "_id": 120901,
       "id": "svelte_saber",
       "name": "素刃",
-      "desc": "當彥卿攻擊敵方目標時，如果目標處於凍結狀態，則立即對目標造成等同於彥卿<nobr>60%</nobr>攻擊力的冰屬性<u>附加傷害</u>。"
+      "desc": "當彥卿攻擊敵方目標時，如果目標處於凍結狀態，則立即對目標造成等同於彥卿<nobr>60%</nobr>攻擊力的冰屬性<u>附加傷害</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120902,
       "id": "supine_serenade",
       "name": "空明",
-      "desc": "擁有【智劍連心】效果時，額外提高<nobr>10%</nobr>的能量恢復效率。"
+      "desc": "擁有【智劍連心】效果時，額外提高<nobr>10%</nobr>的能量恢復效率。",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120903,
       "id": "sword_savant",
       "name": "劍胎",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120904,
       "id": "searing_sting",
       "name": "霜厲",
-      "desc": "現有生命值百分比大於等於<nobr>80%</nobr>時，提高自身<nobr>12%</nobr>的冰屬性<u>抗性穿透</u>。"
+      "desc": "現有生命值百分比大於等於<nobr>80%</nobr>時，提高自身<nobr>12%</nobr>的冰屬性<u>抗性穿透</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120905,
       "id": "surging_strife",
       "name": "武骨",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120906,
       "id": "swift_swoop",
       "name": "自在",
-      "desc": "消滅敵方目標時，如果當下持有【智劍連心】或終結技的<u>增益效果</u>，則使這些<u>增益效果</u>的持續時間全部延長1回合。"
+      "desc": "消滅敵方目標時，如果當下持有【智劍連心】或終結技的<u>增益效果</u>，則使這些<u>增益效果</u>的持續時間全部延長1回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "增益效果",
+          "desc": "對戰鬥有增益效果的所有持續狀態，若無特殊說明則可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

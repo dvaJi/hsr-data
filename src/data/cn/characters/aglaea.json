@@ -2,6 +2,7 @@
   "_id": 1402,
   "id": "aglaea",
   "name": "阿格莱雅",
+  "description": "在那黎明照拂的圣城，织者抚弄金丝，连缀命运。\n背负「浪漫」火种的黄金裔，召集世间英雄，带领他们再度踏上漫长的征程\n——击落众神，归还神火，予以几近覆灭的翁法罗斯新生。",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量雷属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "为衣匠回复生命值。衣匠不在场时，召唤忆灵衣匠并使自身立即行动。",
       "type": "战技",
       "tag": "召唤",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -753,6 +781,32 @@
       "simpleDesc": "召唤忆灵衣匠，使阿格莱雅进入【至高之姿】状态并使自身立即行动，获得强化普攻。",
       "type": "终结技",
       "tag": "强化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "控制类负面状态",
+          "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1122,6 +1176,24 @@
       "simpleDesc": "衣匠在场时，阿格莱雅施放攻击时使目标陷入【间隙织线】状态。攻击处于【间隙织线】状态下的敌人后，造成少量雷属性附加伤害。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1490,6 +1562,24 @@
       "desc": "召唤忆灵衣匠并一同向前发起攻击，进入战斗后，恢复#2[i]点能量，并对敌方全体目标造成等同于阿格莱雅#1[i]%攻击力的雷属性伤害，随后使敌方随机目标陷入【间隙织线】状态。",
       "simpleDesc": "召唤忆灵衣匠并一同向前发起攻击，进入战斗后，恢复能量并对敌方全体造成少量雷属性伤害，随后使敌方随机目标陷入【间隙织线】状态。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1502,42 +1592,503 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "衣匠",
+    "icon": "SpriteOutput/ServantIconTeam/11402B.png",
+    "hpBase": "#6",
+    "hpInherit": "#5",
+    "hpSkill": 140204,
+    "speedBase": "0",
+    "speedInherit": "#4",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1140201,
+        "name": "刺纹之陷",
+        "desc": "对敌方单体造成<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>攻击力的雷属性伤害，对其相邻目标造成<span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span>攻击力的雷属性伤害。",
+        "simpleDesc": "对敌方单体与相邻目标造成少量雷属性伤害。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "Blast",
+          "name": "扩散"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          15
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.55,
+              0.33,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.66,
+              0.396,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.77,
+              0.462,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.88,
+              0.528,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.99,
+              0.594,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1.1,
+              0.66,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1.21,
+              0.726,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1.32,
+              0.792,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1.43,
+              0.858,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1.54,
+              0.924,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140203,
+        "name": "泪水锻造的匠躯",
+        "desc": "攻击处于【间隙织线】状态的敌人后，使自身的速度提高<span style=\"color:#f29e38ff><nobr>#1[i]</nobr></span>点，该效果最多叠加<nobr>#3[i]</nobr>层。衣匠行动时自动施放【刺纹之陷】，优先攻击处于【间隙织线】状态下的敌人。",
+        "simpleDesc": "攻击处于【间隙织线】状态的敌人后，使<span style=\"color:#f29e38ff>自身的速度提高</span>。行动时自动施放攻击，优先攻击处于【间隙织线】状态下的敌人。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "强化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              44,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              46.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              48.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              50.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              52.8,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              55,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              57.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              59.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              61.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              63.8,
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140205,
+        "name": "飞驰之夏",
+        "desc": "衣匠被召唤时，使自身<u>行动提前</u><nobr>#1[i]%</nobr>。",
+        "simpleDesc": "被召唤时，使自身<u>行动提前</u>。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "强化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "行动提前",
+            "desc": "使目标在下次行动前的等待间隔缩短。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140206,
+        "name": "枯草之盈",
+        "desc": "衣匠消失时，使阿格莱雅恢复<nobr>#1[i]</nobr>点能量。",
+        "simpleDesc": "消失时，使阿格莱雅恢复能量。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "强化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              20
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "飘曳金星的行列",
-      "desc": "处于【间隙织线】状态下的敌人受到的伤害提高<nobr>15%</nobr>，阿格莱雅或衣匠攻击该目标后额外恢复<nobr>20</nobr>点能量。"
+      "desc": "处于【间隙织线】状态下的敌人受到的伤害提高<nobr>15%</nobr>，阿格莱雅或衣匠攻击该目标后额外恢复<nobr>20</nobr>点能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "行舟命运的眼睑",
-      "desc": "当阿格莱雅或衣匠行动时，使阿格莱雅与衣匠造成的伤害无视目标<nobr>14%</nobr>的防御力，该效果最多叠加<nobr>3</nobr>层，持续至除自身与衣匠以外的任意单位主动施放技能时。"
+      "desc": "当阿格莱雅或衣匠行动时，使阿格莱雅与衣匠造成的伤害无视目标<nobr>14%</nobr>的防御力，该效果最多叠加<nobr>3</nobr>层，持续至除自身与衣匠以外的任意单位主动施放技能时。",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "华珠凝滞的礼物",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "大理石内的闪烁",
-      "desc": "忆灵天赋的速度提高效果层数上限提高<nobr>1</nobr>层。阿格莱雅施放攻击后也能使衣匠获得忆灵天赋的速度提高效果。"
+      "desc": "忆灵天赋的速度提高效果层数上限提高<nobr>1</nobr>层。阿格莱雅施放攻击后也能使衣匠获得忆灵天赋的速度提高效果。",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "漆黑苦难的织者",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "盈虚无常的金线",
-      "desc": "当阿格莱雅处于【至高之姿】状态时，自身与衣匠的雷属性<u>抗性穿透</u>提高<nobr>20%</nobr>，当阿格莱雅或衣匠的速度高于<nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>点时，其造成的<u>连携攻击</u>伤害提高<nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>。"
+      "desc": "当阿格莱雅处于【至高之姿】状态时，自身与衣匠的雷属性<u>抗性穿透</u>提高<nobr>20%</nobr>，当阿格莱雅或衣匠的速度高于<nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>点时，其造成的<u>连携攻击</u>伤害提高<nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000019,
+          "name": "连携攻击",
+          "desc": "多个目标在一次行动中，分别对敌方目标施放攻击。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ]
     }
   ],
   "skillTreePoints": [

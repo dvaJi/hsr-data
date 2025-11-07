@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "에버나이트",
+  "description": "세상과 단절된 기억의 영역, 촛불은 과거를 비추고 안개 속에서 조용히 사그라든다.\n그 그림자 속에서 온 기억의 아이 에버나이트, 「세월」의 불씨를 은닉한 황금의 후예여, 「망각」의 물결을 일으켜 거울 속 존재의 염원을 지켜라.\n——「걱정하지 마. 내가 『개척』의 앞길을 지켜줄게…. 그 어떤 대가를 치르더라도♭」",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "지정된 단일 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "자신의 HP를 소모하여 기억 정령 「긴 밤」을 소환하고, 모든 아군 기억 정령의 치명타 피해를 증가시킨다. 기억 정령 「긴 밤」이 이미 필드에 있으면 대상의 HP를 회복한다. 발동 시 [기억 물질]을 #3[i]pt 획득하며, [가장 어두운 수수께끼] 상태일 경우 추가로 [기억 물질]을 #5[i]pt 획득한다",
       "type": "전투 스킬",
       "tag": "소환",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "모든 적에게 얼음 속성 피해를 가하며, 기억 정령 「긴 밤」을 소환하고 에버나이트가 [가장 어두운 수수께끼] 상태에 진입한다. 해당 상태 동안 적이 받는 피해가 증가하고, 에버나이트와 기억 정령이 가하는 피해가 증가하며, 제어류 디버프 상태에 면역된다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "제어류 디버프 상태",
+          "desc": "빙결, 얽힘, 속박, 지배, 노발대발, 강렬한 진탕, 이몽, 감금, 공포, 행동 고정",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "전투 진입 시 기억 정령 「긴 밤」을 소환한다. 자신 또는 기억 정령 「긴 밤」의 HP가 감소할 때마다 자신과 기억 정령 「긴 밤」의 치명타 피해가 증가하고 [기억 물질]을 획득한다.\n에버나이트가 보유한 [기억 물질] 수량이 #6[i]pt 이상일 시 기억 정령 「긴 밤」이 즉시 행동하게 한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "제어류 디버프 상태",
+          "desc": "빙결, 얽힘, 속박, 지배, 노발대발, 강렬한 진탕, 이몽, 감금, 공포, 행동 고정",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "다음 전투 시작 시 전투 스킬과 동일한 기억 정령 치명타 피해 증가 효과를 획득하고, 추가로 [기억 물질]을 획득한다",
       "type": "비술",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "긴 밤",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "비처럼 살랑이는 추억",
+        "desc": "해당 스킬은 자동으로 목표를 선택해 발동되며, 에버나이트가 이전에 공격한 적을 우선으로 공격한다. 단일 적에게 「긴 밤」 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>만큼 얼음 속성 피해를 가하며, 에버나이트가 현재 보유한 [기억 물질] <nobr>#3[i]</nobr>pt마다 추가로 「긴 밤」 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>만큼 얼음 속성 피해를 가한다. 발동 후 [기억 물질]을 <nobr>#4[i]</nobr>pt 획득한다",
+        "simpleDesc": "단일 적에게 소량의 얼음 속성 피해를 가하고, [기억 물질] 수량에 따라 추가로 소량의 얼음 속성 피해를 가한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "단일 공격"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "칠흑 속을 부유하는 고독",
+        "desc": "「긴 밤」은 <u>제어류 디버프 상태</u>에 면역되며, 피격 확률이 증가한다. 「긴 밤」이 필드에 있을 시 에버나이트와 「긴 밤」이 가하는 피해가 <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> 증가한다",
+        "simpleDesc": "기억 정령 「긴 밤」은 <u>제어류 디버프 상태</u>에 면역되며, 피격 확률이 증가한다. 필드에 있을 시 자신과 에버나이트가 가하는 피해가 증가한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "서포트"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "제어류 디버프 상태",
+            "desc": "빙결, 얽힘, 속박, 지배, 노발대발, 강렬한 진탕, 이몽, 감금, 공포, 행동 고정",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "그림자처럼 따라붙는 밤",
+        "desc": "소환될 시 자신이 즉시 행동한다",
+        "simpleDesc": "소환될 시 자신이 즉시 행동한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "강화"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "기약 없는 너와의 만남",
+        "desc": "사라질 시 에버나이트의 속도가 <nobr>#1[i]%</nobr> 증가하며, [이슬처럼 사라지는 미몽]을 발동해 사라질 경우 이번 공격이 소모한 [기억 물질] 1pt마다 추가로 에버나이트의 속도가 <nobr>#2[i]%</nobr> 증가하고, [기억 물질]은 최대 <nobr>#3[i]</nobr>pt까지 계산된다. 가속 효과는 중첩될 수 없으며, 에버나이트의 다음 턴 시작 시 해제된다",
+        "simpleDesc": "사라질 시 에버나이트의 속도가 증가한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "강화"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "이슬처럼 사라지는 미몽",
+        "desc": "에버나이트의 [기억 물질]이 <nobr>#3[i]</nobr>pt 이상이고 에버나이트가 제어 상태가 아닐 시 발동하며, 현재 보유한 [기억 물질] 1pt마다 주목표에게 「긴 밤」 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>만큼 얼음 속성 피해를 가하고, 다른 적에게 「긴 밤」 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>만큼 얼음 속성 피해를 가한다. 발동 후 모든 [기억 물질]과 HP를 소모하고 「긴 밤」은 사라진다",
+        "simpleDesc": "<span style=\"color:#f29e38ff>[기억 물질] 수량에 따라</span> 주목표에게 대량의 얼음 속성 피해를 가하고, 다른 적에게 얼음 속성 피해를 가한다. 발동 후 <span style=\"color:#f29e38ff>모든 [기억 물질]과 HP를 소모하고 「긴 밤」은 사라진다</span>",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "범위 공격"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "잘 자, 긴 밤에 꿈이 있으니",
-      "desc": "에버나이트가 필드에 있을 시 필드 위 적의 수가 4 이상/3/2/1이면, 아군 기억 정령이 가하는 피해가 기존 피해의 <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr>가 된다"
+      "desc": "에버나이트가 필드에 있을 시 필드 위 적의 수가 4 이상/3/2/1이면, 아군 기억 정령이 가하는 피해가 기존 피해의 <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr>가 된다",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "들어봐, 깊은 잠의 잠꼬대를",
-      "desc": "에버나이트와 기억 정령 「긴 밤」의 치명타 피해가 <nobr>40%</nobr> 증가하며, 에버나이트가 [기억 물질]을 획득할 때마다 획득하는 [기억 물질] 수량이 <nobr>2</nobr>pt 증가한다. 필살기 발동 시 추가로 [가장 어두운 수수께끼]의 충전을 <nobr>2</nobr>pt 획득한다"
+      "desc": "에버나이트와 기억 정령 「긴 밤」의 치명타 피해가 <nobr>40%</nobr> 증가하며, 에버나이트가 [기억 물질]을 획득할 때마다 획득하는 [기억 물질] 수량이 <nobr>2</nobr>pt 증가한다. 필살기 발동 시 추가로 [가장 어두운 수수께끼]의 충전을 <nobr>2</nobr>pt 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "두려워 마, 악몽은 지나갔으니",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "깨어나면, 너의 내일이 올 거야",
-      "desc": "에버나이트가 필드에 있을 시 아군 기억 정령의 약점 격파 효율이 <nobr>25%</nobr> 증가하며, 기억 정령 「긴 밤」의 약점 격파 효율이 추가로 <nobr>25%</nobr> 증가한다"
+      "desc": "에버나이트가 필드에 있을 시 아군 기억 정령의 약점 격파 효율이 <nobr>25%</nobr> 증가하며, 기억 정령 「긴 밤」의 약점 격파 효율이 추가로 <nobr>25%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "잊어, 기억 속의 「나」를",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "그냥 이대로, 계속",
-      "desc": "에버나이트가 필드에 있을 시 모든 아군의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 기억 정령 「긴 밤」이 [이슬처럼 사라지는 미몽]을 발동하면 에버나이트는 이번 공격으로 소모한 [기억 물질] 수량의 <nobr>30%</nobr>를 획득한다"
+      "desc": "에버나이트가 필드에 있을 시 모든 아군의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 기억 정령 「긴 밤」이 [이슬처럼 사라지는 미몽]을 발동하면 에버나이트는 이번 공격으로 소모한 [기억 물질] 수량의 <nobr>30%</nobr>를 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

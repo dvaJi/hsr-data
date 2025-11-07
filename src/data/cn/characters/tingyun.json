@@ -2,6 +2,7 @@
   "_id": 1202,
   "id": "tingyun",
   "name": "停云",
+  "description": "仙舟「罗浮」天舶司的接渡使。\n随商团出使过众多世界，缔结贸易与盟谊。",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量雷属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "使我方单体攻击力提高，并获得【赐福】。【赐福】状态下攻击时额外造成少量雷属性附加伤害。",
       "type": "战技",
       "tag": "辅助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "为我方单体恢复能量，并使其造成的伤害提高。",
       "type": "终结技",
       "tag": "辅助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "敌人受到停云攻击后，获得【赐福】的目标立即对其造成少量雷属性附加伤害。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "使用秘技后立即为自身恢复能量。",
       "type": "秘技",
       "tag": "辅助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1374,37 +1447,79 @@
       "_id": 120201,
       "id": "windfall_of_lucky_springs",
       "name": "春风得意，时运驰骋",
-      "desc": "得到【赐福】的我方单体施放终结技后速度提高<nobr>20%</nobr>，持续1回合。"
+      "desc": "得到【赐福】的我方单体施放终结技后速度提高<nobr>20%</nobr>，持续1回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120202,
       "id": "gainfully_gives_givingly_gains",
       "name": "君子惠渥，晏笑承之",
-      "desc": "得到【赐福】的我方单体在消灭敌方目标时恢复<nobr>5</nobr>点能量，该效果每回合只能触发1次。"
+      "desc": "得到【赐福】的我方单体在消灭敌方目标时恢复<nobr>5</nobr>点能量，该效果每回合只能触发1次。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120203,
       "id": "halcyon_bequest",
       "name": "青丘遗泽",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120204,
       "id": "jovial_versatility",
       "name": "鸣火机变，度时察势",
-      "desc": "【赐福】附加的伤害倍率提高<nobr>20%</nobr>。"
+      "desc": "【赐福】附加的伤害倍率提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120205,
       "id": "sauntering_coquette",
       "name": "绥绥狐魅",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120206,
       "id": "peace_brings_wealth_to_all",
       "name": "和气生财，泽盈四方",
-      "desc": "终结技为我方目标恢复的能量提高<nobr>10</nobr>点。"
+      "desc": "终结技为我方目标恢复的能量提高<nobr>10</nobr>点。",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

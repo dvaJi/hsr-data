@@ -2,6 +2,7 @@
   "_id": 1005,
   "id": "kafka",
   "name": "Kafka",
+  "description": "Diese ruhige, gefasste und professionell auftretende Schönheit ist Mitglied der Stellaron-Jäger.\nSie bereitete {NICKNAME} mithilfe von Geistergeflüster darauf vor, das Stellaron in sich aufzunehmen.\nMag es, shoppen zu gehen und ihre Mäntel zu sortieren.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Blitz-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Fügt einem Gegner Blitz-SCH und angrenzenden Einheiten geringen Blitz-SCH zu.\nBefindet sich das Hauptziel unter Einfluss von einem DoT-Debuff, verursacht der DoT-Debuff zusätzlich 1-mal SCH.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +765,24 @@
       "simpleDesc": "Fügt allen Gegnern geringen Blitz-SCH zu und hat eine hohe Chance, ihnen Schock zuzufügen.\nGeschockte Gegner erleiden zusätzlich 1-mal SCH durch Schock.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1137,32 @@
       "simpleDesc": "Nach dem Einsatz des Standardangriffs von einem Teammitglied führt Kafka sofort einen Folgeangriff aus und fügt diesem Ziel Blitz-SCH zu. Es besteht eine hohe Chance, den Status Schock zuzufügen. Dieser Effekt kann nur 1-mal pro Runde ausgelöst werden.",
       "type": "Talent",
       "tag": "Einzelangriff",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1486,24 @@
       "desc": "Greift alle Gegner innerhalb einer gewissen Reichweite unmittelbar an und fügt nach Kampfeintritt allen Gegnern Blitz-SCH in Höhe von #3[i]% von Kafkas ANG zu. Es besteht eine Grundchance von #1[i]%, jedem einzelnen Gegner für #2[i] Rd. den Status Schock zuzufügen, der dem Status Schock des Ultimates entspricht.",
       "simpleDesc": "Greift alle Gegner in Reichweite an. Fügt nach Kampfeintritt allen Gegnern geringen Blitz-SCH zu und hat eine hohe Chance, ihnen Schock zuzufügen.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1438,37 +1522,105 @@
       "_id": 100501,
       "id": "da_capo",
       "name": "Da capo",
-      "desc": "Bei Auslösung eines <u>Folgeangriffs</u> durch das Talent besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, den erlittenen DoT des Ziels für <nobr>2</nobr> Rd. um <nobr>30%</nobr> zu erhöhen."
+      "desc": "Bei Auslösung eines <u>Folgeangriffs</u> durch das Talent besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, den erlittenen DoT des Ziels für <nobr>2</nobr> Rd. um <nobr>30%</nobr> zu erhöhen.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100502,
       "id": "fortississimo",
       "name": "Fortississimo",
-      "desc": "Erhöht den von allen Verbündeten verursachten DoT um <nobr>25%</nobr>, wenn Kafka mitkämpft."
+      "desc": "Erhöht den von allen Verbündeten verursachten DoT um <nobr>25%</nobr>, wenn Kafka mitkämpft.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100503,
       "id": "capriccio",
       "name": "Capriccio",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100504,
       "id": "recitativo",
       "name": "Rezitativ",
-      "desc": "Wenn ein Gegner SCH durch den von Kafka verursachten Schock-Status erleidet, wird die Energie von Kafka zusätzlich um <nobr>2</nobr> Pkt. wiederhergestellt."
+      "desc": "Wenn ein Gegner SCH durch den von Kafka verursachten Schock-Status erleidet, wird die Energie von Kafka zusätzlich um <nobr>2</nobr> Pkt. wiederhergestellt.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100505,
       "id": "doloroso",
       "name": "Doloroso",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100506,
       "id": "leggiero",
       "name": "Leggiero",
-      "desc": "Erhöht den SCH-Multiplikator des Status Schock durch Ultimate, Technik und <u>Folgeangriffe</u> des Talents um <nobr>156%</nobr> und verlängert den Status Schock um <nobr>1</nobr> Rd."
+      "desc": "Erhöht den SCH-Multiplikator des Status Schock durch Ultimate, Technik und <u>Folgeangriffe</u> des Talents um <nobr>156%</nobr> und verlängert den Status Schock um <nobr>1</nobr> Rd.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

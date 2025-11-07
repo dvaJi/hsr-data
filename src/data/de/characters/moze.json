@@ -2,6 +2,7 @@
   "_id": 1223,
   "id": "moze",
   "name": "Moze",
+  "description": "Ein Schattenwächter der Yaoqing. Er ist zurückhaltend und schweigsam und handelt immer auf eigene Faust.\nAls Experte für Geheimdienste und andere Angelegenheiten, die im Dunkeln bleiben müssen, zeigt sich Moze selten vor anderen. Der Moment, in dem er seine wahren Fähigkeiten zeigt, ist für seine Gegner meist der Moment, in dem sie dem Tod ins Auge sehen.\nEr verfügt über ein umfangreiches Wissen über Attentatsmethoden und scheint eine außergewöhnliche Besessenheit für Ordnung und Sauberkeit zu haben.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Blitz-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Markiert einen Gegner als Beute und fügt ihm Blitz-SCH zu. Erhält #2[i] Pkt. Aufladung.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,24 @@
       "simpleDesc": "Fügt einem Gegner Blitz-SCH zu und startet den Folgeangriff des Talents.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,40 @@
       "simpleDesc": "Wenn sich „Beute“ auf dem Kampffeld befindet, tritt Moze in den Status Abgang ein.\nNachdem ein Verbündeter die Beute angegriffen hat, verursacht Moze zusätzlichen Blitz-SCH und verbraucht 1 Pkt. Aufladung. Für je #2[i] Pkt. verbrauchte Aufladung startet Moze einen Folgeangriff auf die Beute, der Blitz-SCH verursacht. Wenn die Aufladung 0 erreicht, wird der Status Beute vom Ziel entfernt.",
       "type": "Talent",
       "tag": "Einzelangriff",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000016,
+          "name": "Abgang",
+          "desc": "Einheiten im Status Abgang können weder als Ziel für eine Fähigkeit anvisiert werden, noch erscheinen sie in der Aktionsleiste.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1399,15 @@
       "simpleDesc": "Tritt in den Status Tarnung ein. Wenn in diesem Status durch Angriff auf den Gegner ein Kampf eingeleitet wird, wird der verursachte SCH erhöht.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,37 +1426,97 @@
       "_id": 122301,
       "id": "oathkeeper",
       "name": "Eidschwur",
-      "desc": "Nach Kampfeintritt stellt Moze <nobr>20</nobr> Pkt. Energie wieder her. Jedes Mal, wenn <u>zusätzlicher SCH</u> des Talents verursacht wird, stellt er <nobr>2</nobr> Pkt. Energie wieder her."
+      "desc": "Nach Kampfeintritt stellt Moze <nobr>20</nobr> Pkt. Energie wieder her. Jedes Mal, wenn <u>zusätzlicher SCH</u> des Talents verursacht wird, stellt er <nobr>2</nobr> Pkt. Energie wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122302,
       "id": "wrathbearer",
       "name": "Geißelung",
-      "desc": "Erhöht den von allen Verbündeten verursachten KRIT-SCH gegen Ziele, die als „Beute“ markiert sind, um <nobr>40%</nobr>."
+      "desc": "Erhöht den von allen Verbündeten verursachten KRIT-SCH gegen Ziele, die als „Beute“ markiert sind, um <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122303,
       "id": "deathchaser",
       "name": "Verfolger",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122304,
       "id": "heathprowler",
       "name": "Camouflage",
-      "desc": "Erhöht beim Einsatz des Ultimates Mozes verursachten SCH für <nobr>2</nobr> Rd. um <nobr>#1[f1]%</nobr>."
+      "desc": "Erhöht beim Einsatz des Ultimates Mozes verursachten SCH für <nobr>2</nobr> Rd. um <nobr>#1[f1]%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122305,
       "id": "truthbender",
       "name": "Täuschung",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122306,
       "id": "faithbinder",
       "name": "Loyalität",
-      "desc": "Erhöht den SCH-Multiplikator des <u>Folgeangriffs</u> des Talents um <nobr>25%</nobr>."
+      "desc": "Erhöht den SCH-Multiplikator des <u>Folgeangriffs</u> des Talents um <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

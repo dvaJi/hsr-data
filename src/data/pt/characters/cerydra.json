@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "Cerydra",
+  "description": "O império do norte, uma dinastia perdida, onde terras congeladas ardem com a febre da conquista.\nA soberana Cerydra, Herdeira de Chrysos que empunha a Chama Primordial da Lei, tece seus planos, enfrenta as divindades, julga os infiéis e determina as fundações da Perseguição às Chamas neste mundo.\n\"Isto ainda não acabou. A jornada de Amphoreus está fadada a incendiar as estrelas!\"",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Vento leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "Concede \"Mérito Militar\" a um personagem aliado e concede Carga a Cerydra. Quando a Carga atinge #4[i] pontos, o \"Mérito Militar\" é automaticamente aprimorado para \"Pariato\". O personagem com \"Pariato\" aumenta o Dano CRIT do Dano causado pela sua Perícia, aumenta a PEN de RES a todos os tipos e pode acionar \"Coup de Main\".",
       "type": "Perícia",
       "tag": "Suporte",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Penal. de Controle Negativo",
+          "desc": "Congelamento, Embaraço, Aprisionamento, Dominação, Injúria, Reverberação Forte, Sonho Alienígena, Arapuca, Em Pânico, Bloqueio de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "Coup de Main",
+          "desc": "Copia e usa imediatamente a habilidade prestes a ser usada, depois usa a habilidade original.\n\"Coup de Main\" não ativará \"Coup de Main\" novamente.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "Obtém Carga. Causa Dano de Vento a todos os inimigos.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "O personagem com \"Mérito Militar\" aumenta seu ATQ, e quando ele usar o ATQ Básico ou a Perícia, Cerydra ganha Carga. Após o personagem com \"Mérito Militar\" usar ataques, Cerydra causa adicionalmente Dano Adicional leve de Vento.",
       "type": "Talento",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "Coup de Main",
+          "desc": "Copia e usa imediatamente a habilidade prestes a ser usada, depois usa a habilidade original.\n\"Coup de Main\" não ativará \"Coup de Main\" novamente.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "Concede \"Mérito Militar\" ao personagem ativo no momento. Usa automaticamente a Perícia no personagem com \"Mérito Militar\" no início da próxima batalha.",
       "type": "Técnica",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "Reivindique Todas as Coroas",
-      "desc": "O personagem com \"Mérito Militar\" ignora <nobr>16%</nobr> da DEF do alvo ao causar Dano. Se o estado de \"Mérito Militar\" for melhorado para o estado de \"Pariato\", o personagem ignora adicionalmente <nobr>20%</nobr> da DEF dos alvos ao causar Dano de Perícia. Quando Cerydra usa sua Perícia, regenera <nobr>2</nobr> de Energia para o aliado-alvo designado."
+      "desc": "O personagem com \"Mérito Militar\" ignora <nobr>16%</nobr> da DEF do alvo ao causar Dano. Se o estado de \"Mérito Militar\" for melhorado para o estado de \"Pariato\", o personagem ignora adicionalmente <nobr>20%</nobr> da DEF dos alvos ao causar Dano de Perícia. Quando Cerydra usa sua Perícia, regenera <nobr>2</nobr> de Energia para o aliado-alvo designado.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "Forje os Desejos de Muitos",
-      "desc": "O personagem com \"Mérito Militar\" causa <nobr>40%</nobr> de Dano adicional. Enquanto houver um aliado com \"Mérito Militar\" em campo, o Dano causado de Cerydra aumenta em <nobr>160%</nobr>."
+      "desc": "O personagem com \"Mérito Militar\" causa <nobr>40%</nobr> de Dano adicional. Enquanto houver um aliado com \"Mérito Militar\" em campo, o Dano causado de Cerydra aumenta em <nobr>160%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "Incendeie as Leis Antigas",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "Recrie os Reinos dos Homens",
-      "desc": "Aumenta o Multiplicador de Dano de Perícia Suprema em <nobr>240%</nobr>."
+      "desc": "Aumenta o Multiplicador de Dano de Perícia Suprema em <nobr>240%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "Retribuição dos Favores e das Afrontas",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "Uma Jornada Estelar",
-      "desc": "O personagem com \"Mérito Militar\" aumenta sua PEN de RES a Todos os Tipos em <nobr>20%</nobr> e o multiplicador de Dano Adicional ativado por \"Mérito Militar\" é aumentado em <nobr>300%</nobr>. Enquanto houver um aliado com \"Mérito Militar\" no campo de batalha, a PEN de RES a Todos os Tipos de Cerydra aumenta em <nobr>20%</nobr>."
+      "desc": "O personagem com \"Mérito Militar\" aumenta sua PEN de RES a Todos os Tipos em <nobr>20%</nobr> e o multiplicador de Dano Adicional ativado por \"Mérito Militar\" é aumentado em <nobr>300%</nobr>. Enquanto houver um aliado com \"Mérito Militar\" no campo de batalha, a PEN de RES a Todos os Tipos de Cerydra aumenta em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1225,
   "id": "fugue",
   "name": "Fugue",
+  "description": "Uma garota Vulpe diplomática, cuja aparência, nome e identidade foram roubados.\nO destino deixou a ela uma ínfima chance de sobrevivência, mas a marca da Destruição ainda se contorce de antecipação.\nA garota em estado de fugue experienciou a vida e a morte e ganhou uma nova vida... quando ela poderá voltar para casa?",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Fogo leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Concede a um aliado a \"Prece Vulpe\", que aumenta o Efeito de Quebra e permite reduzir a Tenacidade ao atacar inimigos que não possuem o Tipo de Fraqueza correspondente.\nFaz com que esta unidade entre no estado de \"Abrasamento Tórrido\", fortalecendo o ATQ Básico. Quando aliados com \"Prece Vulpe\" atacam, Fugue tem uma alta chance de reduzir a DEF do inimigo-alvo.",
       "type": "Perícia",
       "tag": "Suporte",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,15 @@
       "simpleDesc": "Causa Dano de Fogo a todos os inimigos. Esse ataque ignora o Tipo de Fraqueza para causar Redução de Tenacidade a todos os inimigos.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,32 @@
       "simpleDesc": "Enquanto Fugue está em campo, os inimigos-alvo são adicionalmente afligidos com \"Bruma Abrasante\".. Quando a \"Bruma Abrasante\" é reduzida a 0, o inimigo receberá um Dano de Quebra de Fraqueza novamente. Após um aliado atacar inimigos-alvo infligidos com Quebra de Fraqueza, adicionalmente causa Super Dano de Quebra.",
       "type": "Talento",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Super Dano de Quebra",
+          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.\nO Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.\nSuper Dano de Quebra também é considerado Dano de Quebra.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,32 @@
       "simpleDesc": "Inflige \"Confusão\" aos inimigos dentro de uma certa área. Após entrar em combate ao atacar inimigos no estado de \"Confusão\", a ação de Fugue é Avançada Adiante, com altas chances de infligir a cada inimigo-alvo o mesmo estado de Redução de DEF aplicado pela Perícia de Fugue.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1410,37 +1499,88 @@
       "_id": 122501,
       "id": "earthbound_i_was_cloudward_i_be",
       "name": "Estava Presa à Terra, Agora Sigo para as Nuvens",
-      "desc": "O aliado-alvo com \"Prece Vulpe\" aumenta sua Eficiência de Quebra de Fraqueza em <nobr>50%</nobr>."
+      "desc": "O aliado-alvo com \"Prece Vulpe\" aumenta sua Eficiência de Quebra de Fraqueza em <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122502,
       "id": "beatitude_dawns_for_the_worthy",
       "name": "A Beatitude Alvorece para os Justos",
-      "desc": "Quando um inimigo-alvo sofre Quebra de Fraqueza, Fugue regenera <nobr>3</nobr> de Energia. Após ela usar sua Perícia Suprema, as ações de todos os aliados são Avançadas Adiante em <nobr>24%</nobr>."
+      "desc": "Quando um inimigo-alvo sofre Quebra de Fraqueza, Fugue regenera <nobr>3</nobr> de Energia. Após ela usar sua Perícia Suprema, as ações de todos os aliados são Avançadas Adiante em <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122503,
       "id": "verity_weaves_thoughts_to_blade",
       "name": "A Verdade Tece Pensamentos em Lâminas",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nATQ Básico Nv. +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nATQ Básico Nv. +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122504,
       "id": "bereft_of_form_which_name_to_bear",
       "name": "Desprovida de Forma, Qual Nome Ela Assume",
-      "desc": "O aliado-alvo com \"Prece Vulpe\" aumenta seu Dano de Quebra causado em <nobr>20%</nobr>."
+      "desc": "O aliado-alvo com \"Prece Vulpe\" aumenta seu Dano de Quebra causado em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122505,
       "id": "colored_cloud_rains_fortune",
       "name": "As Nuvens Coloridas Fazem Chover Boa Sorte",
-      "desc": "Perícia Suprema Nv. +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Perícia Suprema Nv. +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122506,
       "id": "clairvoyance_of_boom_and_doom",
       "name": "Clarividência da Aniquilação Explosiva",
-      "desc": "Aumenta a Eficiência de Quebra de Fraqueza de Fugue em <nobr>50%</nobr>. Quando Fugue estiver no estado de \"Abrasamento Tórrido\", a \"Prece Vulpe\" terá efeito em todos os aliados."
+      "desc": "Aumenta a Eficiência de Quebra de Fraqueza de Fugue em <nobr>50%</nobr>. Quando Fugue estiver no estado de \"Abrasamento Tórrido\", a \"Prece Vulpe\" terá efeito em todos os aliados.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "Hysilens",
+  "description": "Styxia, a pólis costeira da embriaguez e dos sonhos, onde os ecos de antigas canções ainda flutuam entre as ondas.\nHelektra, Filha do Mar, Herdeira de Chrysos, purifica a Chama Primordial do Oceano, dissipa as correntes turvas e orquestra um banquete de celebração para os heróis de além do céu.\nO espetáculo deve continuar. Mesmo que a esperança seja frágil como uma bolha, as ondas continuarão a avançar.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "Tem uma alta chance de aumentar o Dano recebido por todos os inimigos e causa Dano Físico a eles.",
       "type": "Perícia",
       "tag": "Área",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "Ativa um Campo que reduz o ATQ e DEF dos inimigos e causa Dano Físico a eles. Enquanto o Campo estiver ativo, para cada 1 ocorrência de Dano Contínuo recebida pelos inimigos-alvo, causa 1 ocorrência de Dano Físico Contínuo a eles.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "Quando um aliado-alvo ataca, Hysilens tem uma grande chance de infligir ao inimigo-alvo atingido um dos seguintes estados: \"Cisalhamento de Vento\"/\"Sangramento\"/\n\"Queimadura\"/\"Choque\".",
       "type": "Talento",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "Cria uma Dimensão Especial. Inimigos dentro da dimensão não atacarão os aliados-alvo. Ao entrar em combate com inimigos dentro da dimensão, há uma chance alta de infligir #3[i] estado(s) entre \"Cisalhamento de Vento\"/\"Sangramento\"/\"Queimadura\"/\"Choque\" em cada inimigo-alvo.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "Você Pondera \"Por Que Corações Choram?\"",
-      "desc": "Enquanto Hysilens está em campo, aliados-alvo causam <u>Dano Contínuo</u> igual a <nobr>116%</nobr> do Dano original. Quando Hysilens inflige \"Cisalhamento de Vento\"/\"Sangramento\"/\"Queimadura\"/\"Choque\" aos inimigos por meio de seu Talento, há uma chance-base de <nobr>100%</nobr> de infligir adicionalmente ao alvo 1 instância do estado de \"Cisalhamento de Vento\"/\"Sangramento\"/\"Queimadura\"/\"Choque\", que é igual àquele do efeito original do Talento, e que pode coexistir com o efeito original do Talento."
+      "desc": "Enquanto Hysilens está em campo, aliados-alvo causam <u>Dano Contínuo</u> igual a <nobr>116%</nobr> do Dano original. Quando Hysilens inflige \"Cisalhamento de Vento\"/\"Sangramento\"/\"Queimadura\"/\"Choque\" aos inimigos por meio de seu Talento, há uma chance-base de <nobr>100%</nobr> de infligir adicionalmente ao alvo 1 instância do estado de \"Cisalhamento de Vento\"/\"Sangramento\"/\"Queimadura\"/\"Choque\", que é igual àquele do efeito original do Talento, e que pode coexistir com o efeito original do Talento.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "Me Diga o Motivo das Ondam que Assolam",
-      "desc": "Enquanto o Campo estiver ativo, o efeito de Bônus de Dano do Rastro \"O Violino de Pérolas\" se aplica a todos os aliados."
+      "desc": "Enquanto o Campo estiver ativo, o efeito de Bônus de Dano do Rastro \"O Violino de Pérolas\" se aplica a todos os aliados.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "Por Que as Luzes se Vão?",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "Vítimas do Tempo em Eterna Vazão",
-      "desc": "Enquanto o Campo estiver ativo, reduz a RES a Todos os Tipos de todos os inimigos em <nobr>20%</nobr>."
+      "desc": "Enquanto o Campo estiver ativo, reduz a RES a Todos os Tipos de todos os inimigos em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "Em Ablução, Eu Canto e Suspiro",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "Ao Retornar do Descanso de Quem Admiro",
-      "desc": "Enquanto o Campo estiver ativo, no início de cada rodada ou depois de um ataque de um aliado-alvo, aumenta a contagem máxima de ativação do efeito de <u>Dano Físico Contínuo</u> de Hysilens para <nobr>12</nobr> e aumenta o multiplicador de Dano causado em <nobr>20%</nobr>."
+      "desc": "Enquanto o Campo estiver ativo, no início de cada rodada ou depois de um ataque de um aliado-alvo, aumenta a contagem máxima de ativação do efeito de <u>Dano Físico Contínuo</u> de Hysilens para <nobr>12</nobr> e aumenta o multiplicador de Dano causado em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

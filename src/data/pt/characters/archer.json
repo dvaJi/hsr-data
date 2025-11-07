@@ -2,6 +2,7 @@
   "_id": 1015,
   "id": "archer",
   "name": "Archer",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Quântico leve a um inimigo designado.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -413,6 +423,15 @@
       "simpleDesc": "Entra no estado de \"Conexão de Circuito\". Causa um Dano Quântico massivo a um inimigo designado. Enquanto estiver em \"Conexão de Circuito\", a rodada atual não termina após usar sua Perícia e o Dano causado pela Perícia de Archer é aumentado. Ao ficar sem Pontos de Perícia suficientes para usar a Perícia novamente, sai do estado de \"Conexão de Circuito\".",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": 2,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,15 @@
       "simpleDesc": "Causa Dano Quântico massivo a um inimigo designado e ganha Carga.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1091,6 +1119,24 @@
       "simpleDesc": "Após um aliado usar um ataque, Archer consome 1 Carga e realiza um Ataque Extra no alvo principal, causando Dano Quântico e recuperando 1 Ponto de Perícia.",
       "type": "Talento",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1384,6 +1430,15 @@
       "desc": "Ataca o inimigo imediatamente. Depois de entrar em combate, causa Dano Quântico igual a #1[i]% do ATQ de Archer a todos os inimigos e ganha #2[i] pontos de Carga.",
       "simpleDesc": "Ataca imediatamente o inimigo. Após entrar em batalha, causa Dano Quântico a todos os inimigos e ganha Carga.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1401,37 +1456,79 @@
       "_id": 101501,
       "id": "the_unreached_dream",
       "name": "O Sonho Inalcançado",
-      "desc": "Após usar a Perícia <nobr>3</nobr> vez(es) dentro de uma rodada, recupera <nobr>2</nobr> Ponto(s) de Perícia para os aliados."
+      "desc": "Após usar a Perícia <nobr>3</nobr> vez(es) dentro de uma rodada, recupera <nobr>2</nobr> Ponto(s) de Perícia para os aliados.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101502,
       "id": "the_unfulfilled_happiness",
       "name": "A Felicidade Não Realizada",
-      "desc": "Ao usar a Perícia Suprema, reduz a RES a Quântico do inimigo-alvo em <nobr>20%</nobr> e implanta Fraqueza contra Quântico, com duração de <nobr>2</nobr> rodada(s)."
+      "desc": "Ao usar a Perícia Suprema, reduz a RES a Quântico do inimigo-alvo em <nobr>20%</nobr> e implanta Fraqueza contra Quântico, com duração de <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101503,
       "id": "the_untamed_will",
       "name": "A Vontade Indomável",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101504,
       "id": "the_unsung_life",
       "name": "A Vida Não Cantada",
-      "desc": "Aumenta o Dano de Perícia Suprema em <nobr>150%</nobr>."
+      "desc": "Aumenta o Dano de Perícia Suprema em <nobr>150%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101505,
       "id": "the_nameless_watch",
       "name": "A Vigília dos Inominados",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101506,
       "id": "the_endless_pilgrimage",
       "name": "A Peregrinação Interminável",
-      "desc": "Quando a rodada começa, recupera 1 Ponto de Perícia para os aliados. O número máximo de acúmulos permitidos para o efeito de Bônus de Dano concedido pela Perícia desta unidade aumenta em <nobr>1</nobr>. O Dano causado pela Perícia ignora <nobr>20%</nobr> da DEF."
+      "desc": "Quando a rodada começa, recupera 1 Ponto de Perícia para os aliados. O número máximo de acúmulos permitidos para o efeito de Bônus de Dano concedido pela Perícia desta unidade aumenta em <nobr>1</nobr>. O Dano causado pela Perícia ignora <nobr>20%</nobr> da DEF.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

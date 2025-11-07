@@ -2,6 +2,7 @@
   "_id": 1112,
   "id": "topaz_and_numby",
   "name": "トパーズ&カブ",
+  "description": "スターピースカンパニー「戦略投資部」の高級幹部であるトパーズは、特殊債務ピケ部隊を率いている。\n若くして「十の石心」の一員となった彼女は、「徴収の黄玉」という基石を所持している。\n相棒の次元プーマン「カブ」は富の在処を鋭く感知することができるだけでなく、警備、債権回収、保険数理などの仕事も容易にこなせる。\n現在、彼女たちは銀河を巡りながら、カンパニーの事業拡大に影響を及ぼす様々な債権トラブルを調査している。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の炎属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "敵単体を「負債証明」状態にし、受ける追加攻撃ダメージをアップさせる。カブはその敵に炎属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -728,6 +762,18 @@
       "simpleDesc": "カブを「心躍る上昇幅！」状態にし、ダメージ倍率と会心ダメージをアップする。",
       "type": "必殺技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1113,32 @@
       "simpleDesc": "戦闘開始時にカブを召喚する。カブは行動時に「負債証明」を付与された敵に追加攻撃を行い、炎属性ダメージを与える。\n「負債証明」を付与された敵が追加攻撃を受ける時、カブの行動順が早まる。",
       "type": "天賦",
       "tag": "単体攻撃",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1463,15 @@
       "simpleDesc": "マップでカブを召喚する。カブは自動で近くにある普通の戦利品とプーマンを捜索する。秘技を発動すると、次の戦闘中にカブが初めて攻撃を行った後、トパーズはEPを回復する。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1489,106 @@
       "_id": 111201,
       "id": "future_market",
       "name": "フューチャーズ\nマーケット",
-      "desc": "「負債証明」状態の敵が<u>追加攻撃ダメージ</u>を受ける時、「強制執行」状態を付与される。この効果は1回の攻撃で1回まで付与できる。\n「強制執行」状態の敵が受ける<u>追加攻撃ダメージ</u>の会心ダメージ+<nobr>25%</nobr>、最大で<nobr>2</nobr>層累積できる。「負債証明」が解除される時、「強制執行」も解除される。"
+      "desc": "「負債証明」状態の敵が<u>追加攻撃ダメージ</u>を受ける時、「強制執行」状態を付与される。この効果は1回の攻撃で1回まで付与できる。\n「強制執行」状態の敵が受ける<u>追加攻撃ダメージ</u>の会心ダメージ+<nobr>25%</nobr>、最大で<nobr>2</nobr>層累積できる。「負債証明」が解除される時、「強制執行」も解除される。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111202,
       "id": "bona_fide_acquisition",
       "name": "{RUBY_B#ゆうこうてきばいしゅう}友好的買収{RUBY_E#}",
-      "desc": "カブ自身が行動し、攻撃を行った後、トパーズのEPを<nobr>5</nobr>回復する。"
+      "desc": "カブ自身が行動し、攻撃を行った後、トパーズのEPを<nobr>5</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111203,
       "id": "seize_the_big_and_free_the_small",
       "name": "{RUBY_B#だい}大{RUBY_E#}を{RUBY_B#つか}掴{RUBY_E#}み{RUBY_B#しょう}小{RUBY_E#}を{RUBY_B#はな}放{RUBY_E#}つ",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111204,
       "id": "agile_operation",
       "name": "{RUBY_B#じんそくしょり}迅速処理{RUBY_E#}",
-      "desc": "カブ自身のターンが回ってきた時、トパーズの<u>行動順が<nobr>20%</nobr>早まる</u>。"
+      "desc": "カブ自身のターンが回ってきた時、トパーズの<u>行動順が<nobr>20%</nobr>早まる</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動前倒し",
+          "desc": "対象の次の行動までの間隔が短くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111205,
       "id": "inflationary_demand",
       "name": "{RUBY_B#じゅよう}需要{RUBY_E#}インフレ",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111206,
       "id": "incentive_mechanism",
       "name": "インセンティブ",
-      "desc": "「心躍る上昇幅！」状態のカブの攻撃回数+<nobr>1</nobr>、攻撃時の炎属性<u>耐性貫通</u>+<nobr>10%</nobr>。"
+      "desc": "「心躍る上昇幅！」状態のカブの攻撃回数+<nobr>1</nobr>、攻撃時の炎属性<u>耐性貫通</u>+<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

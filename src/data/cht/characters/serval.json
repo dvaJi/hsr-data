@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "希露瓦",
+  "description": "貝洛伯格的機械師，曾任築城者技術部研究員。\n身為傑帕德•朗道的姐姐，性格卻與弟弟截然不同。\n鍾愛大寒潮前一種名為「搖滾」的古老音樂藝術。",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量雷屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,24 @@
       "simpleDesc": "對敵方單體造成雷屬性傷害，對相鄰目標造成少量雷屬性傷害。高機率對目標施加觸電狀態。",
       "type": "戰技",
       "tag": "擴散",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "對敵方全體造成雷屬性傷害，並延長目標觸電狀態的持續時間。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "發動攻擊後，對所有觸電狀態敵方目標造成少量附加傷害。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "立即攻擊敵人，進入戰鬥後對敵方隨機單體造成等同於希露瓦#4[i]%攻擊力的雷屬性傷害，同時有#1[i]%的基礎機率使敵方每個單體目標陷入觸電狀態，持續#3[i]回合。\n觸電狀態下，敵方目標每回合開始時受到等同於希露瓦#2[i]%攻擊力的雷屬性持續傷害。",
       "simpleDesc": "攻擊敵人，進入戰鬥後對敵方隨機單體造成少量雷屬性傷害，並有高機率使敵方每個單體目標陷入觸電狀態。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "餘音繞梁",
-      "desc": "普通攻擊對指定敵方目標的1個隨機相鄰目標造成等同於普通攻擊傷害<nobr>60%</nobr>的雷屬性傷害。"
+      "desc": "普通攻擊對指定敵方目標的1個隨機相鄰目標造成等同於普通攻擊傷害<nobr>60%</nobr>的雷屬性傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "安可！",
-      "desc": "每觸發1次天賦的<u>附加傷害</u>，希露瓦恢復<nobr>4</nobr>點能量。"
+      "desc": "每觸發1次天賦的<u>附加傷害</u>，希露瓦恢復<nobr>4</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "聽，齒輪的心跳",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "製造噪音吧！",
-      "desc": "施放終結技時，有<nobr>100%</nobr><u>基礎機率</u>使非觸電狀態下的敵方目標狀態陷入與戰技相同的觸電狀態。"
+      "desc": "施放終結技時，有<nobr>100%</nobr><u>基礎機率</u>使非觸電狀態下的敵方目標狀態陷入與戰技相同的觸電狀態。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "貝洛伯格最強音！",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "這一曲，貫穿天穹！",
-      "desc": "希露瓦對觸電狀態下的敵方目標造成的傷害提高<nobr>30%</nobr>。"
+      "desc": "希露瓦對觸電狀態下的敵方目標造成的傷害提高<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

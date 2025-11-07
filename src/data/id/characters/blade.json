@@ -2,6 +2,7 @@
   "_id": 1205,
   "id": "blade",
   "name": "Blade",
+  "description": "Anggota \"Stellaron Hunter\" dan seorang ahli pedang yang mengorbankan dirinya untuk menjadi pedang tajam.\nSetia pada Destiny's Slave dan memiliki kemampuan pemulihan diri yang mengerikan.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Wind DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Mengonsumsi HP diri sendiri, memperoleh Enhanced Basic Attack, dan giliran saat ini tidak akan berakhir.",
       "type": "Skill",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +780,15 @@
       "simpleDesc": "Mengonversi HP saat ini menjadi 50% dari Max HP, serta mengakibatkan Wind DMG dalam jumlah besar pada 1 musuh dan Wind DMG pada target di sekitarnya.",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1173,24 @@
       "simpleDesc": "Saat HP Blade berkurang, dia akan memperoleh 1 lapis Charge. Saat Charge mencapai batas maksimum, Blade akan melancarkan Serangan Lanjutan yang mengakibatkan Wind DMG pada seluruh musuh dan memulihkan HP dirinya, lalu mengonsumsi semua Charge.",
       "type": "Talent",
       "tag": "AoE",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1480,6 +1529,15 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, akan mengonsumsi HP sebesar #2[i]% Max HP Blade dan mengakibatkan Wind DMG sebesar #1[i]% Max HP Blade pada seluruh musuh.\nJika HP saat ini tidak mencukupi, maka saat melancarkan Technique, HP Blade saat ini akan berkurang hingga 1.",
       "simpleDesc": "Menyerang musuh. Setelah memasuki pertempuran, mengonsumsi HP diri sendiri dan mengakibatkan Wind DMG pada seluruh musuh.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1497,37 +1555,88 @@
       "_id": 120501,
       "id": "blade_cuts_the_deepest_in_hell",
       "name": "Blade Cuts the Deepest in Hell",
-      "desc": "DMG yang diakibatkan Ultimate pada 1 musuh yang ditargetkan meningkat ekstra sebesar <nobr>150%</nobr> dari akumulasi HP Blade yang berkurang dalam pertempuran ini.\nAkumulasi HP Blade yang berkurang dalam pertempuran ini maksimal tidak melebihi <nobr>90%</nobr> dari Max HP Blade. Setelah melancarkan Ultimate, perhitungan tersebut akan dihapus dan diakumulasi kembali."
+      "desc": "DMG yang diakibatkan Ultimate pada 1 musuh yang ditargetkan meningkat ekstra sebesar <nobr>150%</nobr> dari akumulasi HP Blade yang berkurang dalam pertempuran ini.\nAkumulasi HP Blade yang berkurang dalam pertempuran ini maksimal tidak melebihi <nobr>90%</nobr> dari Max HP Blade. Setelah melancarkan Ultimate, perhitungan tersebut akan dihapus dan diakumulasi kembali.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120502,
       "id": "ten_thousand_sorrows_from_one_broken_dream",
       "name": "Ten Thousand Sorrows From One Broken Dream",
-      "desc": "Saat Blade berstatus \"Hellscape\", CRIT Rate akan meningkat <nobr>15%</nobr>."
+      "desc": "Saat Blade berstatus \"Hellscape\", CRIT Rate akan meningkat <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120503,
       "id": "hardened_blade_bleeds_coldest_shade",
       "name": "Hardened Blade Bleeds Coldest Shade",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120504,
       "id": "rejected_by_death_infected_with_life",
       "name": "Rejected by Death, Infected With Life",
-      "desc": "Saat persentase HP saat ini berkurang dari <nobr>50%</nobr> ke atas menjadi kurang dari atau sama dengan <nobr>50%</nobr>, Max HP akan meningkat <nobr>20%</nobr>. Efek ini dapat ditumpuk hingga <nobr>2</nobr> lapis."
+      "desc": "Saat persentase HP saat ini berkurang dari <nobr>50%</nobr> ke atas menjadi kurang dari atau sama dengan <nobr>50%</nobr>, Max HP akan meningkat <nobr>20%</nobr>. Efek ini dapat ditumpuk hingga <nobr>2</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120505,
       "id": "death_by_ten_lords_gaze",
       "name": "Death By Ten Lords' Gaze",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120506,
       "id": "reborn_into_an_empty_husk",
       "name": "Reborn Into an Empty Husk",
-      "desc": "Batas maksimum lapisan Charge berkurang menjadi 4 lapis. DMG yang diakibatkan <u>Serangan Lanjutan</u> yang dipicu Talent meningkat ekstra sebesar <nobr>50%</nobr> Max HP Blade."
+      "desc": "Batas maksimum lapisan Charge berkurang menjadi 4 lapis. DMG yang diakibatkan <u>Serangan Lanjutan</u> yang dipicu Talent meningkat ekstra sebesar <nobr>50%</nobr> Max HP Blade.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

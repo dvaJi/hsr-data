@@ -2,6 +2,7 @@
   "_id": 1206,
   "id": "sushang",
   "name": "Sushang",
+  "description": "ผู้ที่เกิดใน Xianzhou Yaoqing และถูกส่งไปยังกองอัศวิน Cloud Knight แห่ง \"Luofu\" เพื่อรับการฝึกทหาร\nเธอใช้ดาบของครอบครัวที่แม่มอบให้ และเฝ้าใฝ่ฝันถึงอนาคต ที่ตัวเองได้วาดเอาไว้",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG กายภาพเล็กน้อย แก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "สร้าง DMG กายภาพแก่ศัตรูหนึ่งตัว และมีโอกาสเล็กน้อยที่จะปล่อย \"Sword Stance\" หากเป้าหมายติด สถานะทำลายจุดอ่อน \"Sword Stance\" จะถูกปล่อยอย่างแน่นอน",
       "type": "สกิลต่อสู้",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG เพิ่มเติม",
+          "desc": "ทำให้ผู้ที่ถูกโจมตีได้รับ DMG เพิ่มเติม 1 ครั้ง โดยการโจมตีครั้งนี้ จะไม่ถือเป็นการโจมตี 1 ครั้ง",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000006,
+          "name": "สถานะทำลายจุดอ่อน",
+          "desc": "เมื่อความทนทานของศัตรูเป้าหมาย ถูกลดทอนจนเหลือ 0 จะติดสถานะพิเศษ และเป้าหมายที่ติดสถานะนี้จะถูกหน่วงแอ็กชัน",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +779,18 @@
       "simpleDesc": "สร้าง DMG กายภาพ อย่างรุนแรงแก่ฝ่ายศัตรูหนึ่งตัว พร้อมเสริมพลังเอฟเฟกต์ \"Sword Stance\" และทำการแอ็กชันทันที",
       "type": "ท่าไม้ตาย",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1124,15 @@
       "simpleDesc": "เมื่อจุดอ่อนของศัตรูที่อยู่ในการต่อสู้ถูกทำลาย ความเร็วของตัวเองจะเพิ่มขึ้น",
       "type": "พรสวรรค์",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1435,15 @@
       "desc": "เมื่อโจมตีศัตรูทันทีและเข้าสู่การต่อสู้ จะสร้าง DMG กายภาพ #1[i]% ของ ATK ของ Sushang แก่ฝ่ายศัตรูทั้งหมด",
       "simpleDesc": "เมื่อโจมตีศัตรูและเข้าสู่การต่อสู้ จะสร้าง DMG กายภาพเล็กน้อยแก่ฝ่ายศัตรูทั้งหมด",
       "type": "เทคนิค",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,37 +1460,88 @@
       "_id": 120601,
       "id": "cut_with_ease",
       "name": "Cut With Ease",
-      "desc": "เมื่อใช้สกิลต่อสู้กับศัตรูเป้าหมาย ที่ติด <u>สถานะทำลายจุดอ่อน</u> แล้ว จะฟื้นฟูแต้มสกิลต่อสู้ 1 แต้ม"
+      "desc": "เมื่อใช้สกิลต่อสู้กับศัตรูเป้าหมาย ที่ติด <u>สถานะทำลายจุดอ่อน</u> แล้ว จะฟื้นฟูแต้มสกิลต่อสู้ 1 แต้ม",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "สถานะทำลายจุดอ่อน",
+          "desc": "เมื่อความทนทานของศัตรูเป้าหมาย ถูกลดทอนจนเหลือ 0 จะติดสถานะพิเศษ และเป้าหมายที่ติดสถานะนี้จะถูกหน่วงแอ็กชัน",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120602,
       "id": "refine_in_toil",
       "name": "Refine in Toil",
-      "desc": "หลังจากใช้ \"Sword Stance\" Sushang จะได้รับ DMG ลดลง <nobr>20%</nobr> เป็นเวลา 1 เทิร์น"
+      "desc": "หลังจากใช้ \"Sword Stance\" Sushang จะได้รับ DMG ลดลง <nobr>20%</nobr> เป็นเวลา 1 เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120603,
       "id": "rise_from_fame",
       "name": "Rise From Fame",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120604,
       "id": "cleave_with_heart",
       "name": "Cleave With Heart",
-      "desc": "เอฟเฟกต์ทำลายล้างของ Sushang เพิ่มขึ้น <nobr>40%</nobr>"
+      "desc": "เอฟเฟกต์ทำลายล้างของ Sushang เพิ่มขึ้น <nobr>40%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120605,
       "id": "prevail_via_taixu",
       "name": "Prevail via Taixu",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120606,
       "id": "dwell_like_water",
       "name": "Dwell Like Water",
-      "desc": "เอฟเฟกต์เร่งความเร็วของพรสวรรค์ สามารถซ้อนทับได้ โดยสามารถซ้อนทับได้มากสุด 2 ชั้น และหลังจากเข้าสู่การต่อสู้\nSushang จะได้รับเอฟเฟกต์เร่งความเร็ว จากพรสวรรค์ 1 ชั้นทันที"
+      "desc": "เอฟเฟกต์เร่งความเร็วของพรสวรรค์ สามารถซ้อนทับได้ โดยสามารถซ้อนทับได้มากสุด 2 ชั้น และหลังจากเข้าสู่การต่อสู้\nSushang จะได้รับเอฟเฟกต์เร่งความเร็ว จากพรสวรรค์ 1 ชั้นทันที",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

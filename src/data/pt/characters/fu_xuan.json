@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "Fu Xuan",
+  "description": "Líder da Comissão de Divinação do Luofu.\nA pessoa que usa o terceiro olho e a Matriz de Presciência para prever a rota de Xianzhou e o resultado de eventos.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Quântico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Ativa a Matriz de Presciência. O Dano recebido pelos aliados de Fu Xuan é Distribuído com ela. Além disso, aumenta a Chance de CRIT e os PV máximos de todos os aliados.",
       "type": "Perícia",
       "tag": "Defesa",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "Distribuir",
+          "desc": "Antes do Dano ser calculado, uma parte do Dano causado pela unidade atacante é distribuído com outro alvo (ou múltiplos outros alvos), e a unidade aliada que foi atingida pelo ataque original recebe o resto do Dano. O Dano distribuído a outros alvos não pode ser distribuído novamente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "Causa Dano Quântico a todos os inimigos e aumenta a contagem de ativação do Talento de Fu Xuan.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "Enquanto Fu Xuan estiver ativa em batalha, o Dano recebido pela equipe inteira é reduzido.\nQuando os PV dela estiverem baixos, ela automaticamente restaura seus próprios PV com base na porcentagem de PV já perdidos. Este efeito pode ter até 2 contagens de ativação em qualquer momento.",
       "type": "Talento",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "Ativa uma Barreira. Aliados não entrarão em batalha quando forem atacados por inimigos. Entrar em batalha ativará a Matriz de Presciência automaticamente.",
       "type": "Técnica",
       "tag": "Defesa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "Dominus Pacis",
-      "desc": "O efeito de Conhecimento aumenta o Dano CRIT em <nobr>30%</nobr>."
+      "desc": "O efeito de Conhecimento aumenta o Dano CRIT em <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "Optimus Felix",
-      "desc": "Se qualquer aliado-alvo for atingido por um golpe fatal enquanto a \"Matriz de Presciência\" estiver ativa, todos os aliados-alvo que forem atingidos por um golpe fatal durante esta ação não serão <u>derrubados</u> e <nobr>70%</nobr> de seus PV máximos serão restaurados imediatamente. Este efeito pode ser ativado 1 vez por batalha."
+      "desc": "Se qualquer aliado-alvo for atingido por um golpe fatal enquanto a \"Matriz de Presciência\" estiver ativa, todos os aliados-alvo que forem atingidos por um golpe fatal durante esta ação não serão <u>derrubados</u> e <nobr>70%</nobr> de seus PV máximos serão restaurados imediatamente. Este efeito pode ser ativado 1 vez por batalha.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "Ápice da Ligação",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "Fortuna Stellaris",
-      "desc": "Quando outros aliados sob a Matriz de Presciência são atacados, Fu Xuan regenera <nobr>5</nobr> de Energia."
+      "desc": "Quando outros aliados sob a Matriz de Presciência são atacados, Fu Xuan regenera <nobr>5</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "Árbitra Primordial",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "Omnia Vita",
-      "desc": "Assim que a Matriz de Presciência é ativada, ela manterá um registro com o valor total de PV perdidos por todos os membros da equipe na batalha atual. O Dano causado pela Perícia Suprema de Fu Xuan aumentará em <nobr>200%</nobr> desse valor de PV perdidos.\nEsse valor também é limitado a <nobr>120%</nobr> dos PV máximos de Fu Xuan e o valor registrado será reiniciado e reacumulado após a Perícia Suprema de Fu Xuan ser utilizada."
+      "desc": "Assim que a Matriz de Presciência é ativada, ela manterá um registro com o valor total de PV perdidos por todos os membros da equipe na batalha atual. O Dano causado pela Perícia Suprema de Fu Xuan aumentará em <nobr>200%</nobr> desse valor de PV perdidos.\nEsse valor também é limitado a <nobr>120%</nobr> dos PV máximos de Fu Xuan e o valor registrado será reiniciado e reacumulado após a Perícia Suprema de Fu Xuan ser utilizada.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

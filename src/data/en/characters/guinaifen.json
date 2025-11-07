@@ -2,6 +2,7 @@
   "_id": 1210,
   "id": "guinaifen",
   "name": "Guinaifen",
+  "description": "A performance artist visiting the Xianzhou Luofu — in other words, a street performer.\nShe's chasing a new life on the Luofu when not concerned with food and shelter.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,22 @@
       "_id": 121001,
       "id": "standing_ovation",
       "name": "Standing Ovation",
-      "desc": "Deals Fire DMG equal to #1[i]% of Guinaifen's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Fire DMG to a single enemy.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Guinaifen's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 121002,
       "id": "blazing_welcome",
       "name": "Blazing Welcome",
-      "desc": "Deals Fire DMG equal to #1[i]% of Guinaifen's ATK to a single enemy and Fire DMG equal to #2[i]% of Guinaifen's ATK to any adjacent enemies, with a #3[i]% base chance to Burn the target and adjacent targets. When Burned, enemies will take a Fire DoT equal to #4[i]% of Guinaifen's ATK at the beginning of each turn, lasting for #5[i] turn(s).",
-      "simpleDesc": "Deals Fire DMG to a single enemy and minor Fire DMG to adjacent enemies, with a high chance of Burning them.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Guinaifen's ATK to one designated enemy and Fire DMG equal to #2[i]% of Guinaifen's ATK to any adjacent enemies, with a #3[i]% base chance to Burn the target and adjacent targets. When Burned, enemies will take a Fire DoT equal to #4[i]% of Guinaifen's ATK at the beginning of each turn, lasting for #5[i] turn(s).",
+      "simpleDesc": "Deals Fire DMG to one enemy and minor Fire DMG to adjacent enemies, with a high chance of Burning them.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,18 @@
       "simpleDesc": "Deals Fire DMG to all enemies. If the enemies are inflicted with Burn, the Burn status deals DMG 1 extra time.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "After the Burn status causes DMG on the enemy, there is a high chance of applying Firekiss to the enemy.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1432,6 +1496,24 @@
       "desc": "Immediately attacks the enemy. After entering battle, deals DMG for #2[i] time(s), dealing Fire DMG equal to #1[i]% of Guinaifen's ATK to a random single enemy target each time, with a #3[i]% base chance of inflicting Firekiss on them.",
       "simpleDesc": "Attacks the enemy. After entering battle, deals minor Fire DMG to one enemy target with a high chance of applying Firekiss, with a total of 4 Bounces.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1450,37 +1532,88 @@
       "_id": 121001,
       "id": "slurping_noodles_during_handstand",
       "name": "Slurping Noodles During Handstand",
-      "desc": "When Skill is used, there is a <nobr>100%</nobr> <u>base chance</u> to reduce the attacked target enemy's Effect RES by <nobr>10%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "When Skill is used, there is a <nobr>100%</nobr> <u>base chance</u> to reduce the attacked target enemy's Effect RES by <nobr>10%</nobr> for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121002,
       "id": "brushing_teeth_while_whistling",
       "name": "Brushing Teeth While Whistling",
-      "desc": "When an enemy target is being Burned, the DMG multiplier of the Burn status applied by her Basic ATK or Skill increases by <nobr>40%</nobr>."
+      "desc": "When an enemy target is being Burned, the DMG multiplier of the Burn status applied by her Basic ATK or Skill increases by <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121003,
       "id": "smashing_boulder_on_chest",
       "name": "Smashing Boulder on Chest",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121004,
       "id": "blocking_pike_with_neck",
       "name": "Blocking Pike with Neck",
-      "desc": "Every time the Burn status inflicted by Guinaifen causes DMG, Guinaifen regenerates <nobr>2</nobr> Energy."
+      "desc": "Every time the Burn status inflicted by Guinaifen causes DMG, Guinaifen regenerates <nobr>2</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121005,
       "id": "swallowing_sword_to_stomach",
       "name": "Swallowing Sword to Stomach",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121006,
       "id": "catching_bullet_with_hands",
       "name": "Catching Bullet with Hands",
-      "desc": "Increases the stackable Firekiss count by <nobr>1</nobr>."
+      "desc": "Increases the stackable Firekiss count by <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

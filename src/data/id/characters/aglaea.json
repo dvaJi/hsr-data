@@ -2,6 +2,7 @@
   "_id": 1402,
   "id": "aglaea",
   "name": "Aglaea",
+  "description": "Di kota suci yang bermandikan cahaya fajar itu, sang penenun membelai benang emas dan menjalin takdir.\nSang Keturunan Chrysos yang membawa benih api \"Romansa\" mengumpulkan para pahlawan di dunia, memimpin mereka untuk sekali lagi menapaki perjalanan panjang yang tiada akhir.\nUntuk menggulingkan para dewa, mengembalikan api ilahi, dan memberi kehidupan baru bagi Amphoreus yang sudah di ambang kehancuran.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Memulihkan HP Garmentmaker. Saat Garmentmaker tidak berada di medan pertempuran, memanggil Memosprite Garmentmaker dan membuat Aglaea segera beraksi.",
       "type": "Skill",
       "tag": "Panggil",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memanggil Memosprite",
+          "desc": "Memanggil Memosprite ke medan pertempuran. Jika Memosprite sudah berada di medan pertempuran, akan menghapus semua Crowd Control Debuff yang dimiliki oleh Memosprite.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -753,6 +781,32 @@
       "simpleDesc": "Memanggil Memosprite Garmentmaker, membuat Aglaea memasuki status \"Supreme Stance\" dan membuat Aglaea segera beraksi, serta memperoleh Enhanced Basic Attack.",
       "type": "Ultimate",
       "tag": "Enhance",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memanggil Memosprite",
+          "desc": "Memanggil Memosprite ke medan pertempuran. Jika Memosprite sudah berada di medan pertempuran, akan menghapus semua Crowd Control Debuff yang dimiliki oleh Memosprite.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Crowd Control Debuff",
+          "desc": "Frozen, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Penguncian Aksi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1122,6 +1176,24 @@
       "simpleDesc": "Saat Aglaea melancarkan serangan ketika Garmentmaker berada di medan pertempuran, akan membuat target memasuki status \"Seam Stitch\". Setelah menyerang musuh yang berstatus \"Seam Stitch\", akan mengakibatkan Lightning DMG Tambahan dalam jumlah kecil.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1490,6 +1562,24 @@
       "desc": "Memanggil Memosprite Garmentmaker dan melancarkan serangan ke depan bersama-sama. Setelah memasuki pertempuran, memulihkan #2[i] Energy dan mengakibatkan Lightning DMG sebesar #1[i]% ATK Aglaea pada seluruh target musuh, kemudian membuat target musuh acak memasuki status \"Seam Stitch\".",
       "simpleDesc": "Memanggil Memosprite Garmentmaker dan melancarkan serangan ke depan bersama-sama. Setelah memasuki pertempuran, memulihkan Energy dan mengakibatkan Lightning DMG dalam jumlah kecil pada seluruh musuh, kemudian membuat target musuh acak memasuki status \"Seam Stitch\".",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memanggil Memosprite",
+          "desc": "Memanggil Memosprite ke medan pertempuran. Jika Memosprite sudah berada di medan pertempuran, akan menghapus semua Crowd Control Debuff yang dimiliki oleh Memosprite.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1502,42 +1592,503 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Garmentmaker",
+    "icon": "SpriteOutput/ServantIconTeam/11402B.png",
+    "hpBase": "#6",
+    "hpInherit": "#5",
+    "hpSkill": 140204,
+    "speedBase": "0",
+    "speedInherit": "#4",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1140201,
+        "name": "Thorned Snare",
+        "desc": "Mengakibatkan Lightning DMG sebesar <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> ATK pada 1 musuh, dan mengakibatkan Lightning DMG sebesar <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span> ATK pada target di sekitarnya.",
+        "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah kecil pada 1 musuh dan target di sekitarnya.",
+        "type": {
+          "id": "Servant",
+          "name": "Skill Memosprite"
+        },
+        "tag": {
+          "id": "Blast",
+          "name": "Blast"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          15
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.55,
+              0.33,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.66,
+              0.396,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.77,
+              0.462,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.88,
+              0.528,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.99,
+              0.594,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1.1,
+              0.66,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1.21,
+              0.726,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1.32,
+              0.792,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1.43,
+              0.858,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1.54,
+              0.924,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140203,
+        "name": "A Body Brewed by Tears",
+        "desc": "Setelah menyerang musuh berstatus \"Seam Stitch\", SPD unit ini akan meningkat <span style=\"color:#f29e38ff><nobr>#1[i]</nobr></span> poin, efek ini maksimal dapat ditumpuk hingga <nobr>#3[i]</nobr> lapis. Saat Garmentmaker beraksi, ia akan melancarkan \"Thorned Snare\" secara otomatis, dan memprioritaskan untuk menyerang musuh yang berstatus \"Seam Stitch\".",
+        "simpleDesc": "Setelah menyerang musuh berstatus \"Seam Stitch\", <span style=\"color:#f29e38ff>SPD unit ini</span> akan meningkat. Saat beraksi akan melancarkan serangan secara otomatis, dan memprioritaskan untuk menyerang musuh berstatus \"Seam Stitch\".",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              44,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              46.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              48.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              50.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              52.8,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              55,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              57.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              59.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              61.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              63.8,
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140205,
+        "name": "The Speeding Summer",
+        "desc": "Saat Garmentmaker dipanggil, unit ini akan mengalami <u>Pendahuluan Aksi</u> sebesar <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Saat dipanggil, unit ini akan mengalami <u>Pendahuluan Aksi</u>.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Pendahuluan Aksi",
+            "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140206,
+        "name": "Bloom of Drying Grass",
+        "desc": "Saat Garmentmaker menghilang, akan memulihkan <nobr>#1[i]</nobr> Energy untuk Aglaea.",
+        "simpleDesc": "Saat menghilang, akan memulihkan Energy untuk Aglaea.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Enhance"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              20
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "Drift at the Whim of Venus",
-      "desc": "DMG yang diterima musuh yang berstatus \"Seam Stitch\" meningkat <nobr>15%</nobr>. Setelah Aglaea atau Garmentmaker menyerang target tersebut, Aglaea akan memulihkan <nobr>20</nobr> Energy tambahan."
+      "desc": "DMG yang diterima musuh yang berstatus \"Seam Stitch\" meningkat <nobr>15%</nobr>. Setelah Aglaea atau Garmentmaker menyerang target tersebut, Aglaea akan memulihkan <nobr>20</nobr> Energy tambahan.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "Sail on the Raft of Eyelids",
-      "desc": "Saat Aglaea atau Garmentmaker beraksi, DMG yang diakibatkan Aglaea dan Garmentmaker akan mengabaikan <nobr>14%</nobr> DEF target. Efek ini dapat ditumpuk hingga <nobr>3</nobr> lapis, dan berlangsung hingga saat unit mana pun selain Aglaea atau Garmentmaker melancarkan kemampuan secara aktif."
+      "desc": "Saat Aglaea atau Garmentmaker beraksi, DMG yang diakibatkan Aglaea dan Garmentmaker akan mengabaikan <nobr>14%</nobr> DEF target. Efek ini dapat ditumpuk hingga <nobr>3</nobr> lapis, dan berlangsung hingga saat unit mana pun selain Aglaea atau Garmentmaker melancarkan kemampuan secara aktif.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "Bequeath in the Coalescence of Dew",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Talent Memosprite +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Talent Memosprite +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "Flicker Below the Surface of Marble",
-      "desc": "Batas maksimal lapisan efek peningkatan SPD dari Talent Memosprite meningkat <nobr>1</nobr> lapis. Setelah Aglaea melancarkan serangan, Garmentmaker juga akan memperoleh efek peningkatan SPD dari Talent Memosprite."
+      "desc": "Batas maksimal lapisan efek peningkatan SPD dari Talent Memosprite meningkat <nobr>1</nobr> lapis. Setelah Aglaea melancarkan serangan, Garmentmaker juga akan memperoleh efek peningkatan SPD dari Talent Memosprite.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "Weave Under the Shroud of Woe",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>. Level Skill Memosprite +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>. Level Skill Memosprite +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "Fluctuate in the Tapestry of Fates",
-      "desc": "Saat Aglaea berada dalam status \"Supreme Stance\", Lightning <u>RES PEN</u> dirinya dan Garmentmaker meningkat <nobr>20%</nobr>. Saat SPD Aglaea atau Garmentmaker lebih dari <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, <u>Joint Attack</u> DMG yang diakibatkannya akan meningkat <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>."
+      "desc": "Saat Aglaea berada dalam status \"Supreme Stance\", Lightning <u>RES PEN</u> dirinya dan Garmentmaker meningkat <nobr>20%</nobr>. Saat SPD Aglaea atau Garmentmaker lebih dari <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, <u>Joint Attack</u> DMG yang diakibatkannya akan meningkat <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000019,
+          "name": "Joint Attack",
+          "desc": "Beberapa target masing-masing melancarkan serangan pada target musuh dalam satu aksi.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ]
     }
   ],
   "skillTreePoints": [

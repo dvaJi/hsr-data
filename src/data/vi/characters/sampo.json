@@ -2,6 +2,7 @@
   "_id": 1108,
   "id": "sampo",
   "name": "Sampo",
+  "description": "Con buôn đi lại giữa tầng trên và dưới mặt đất.\nAnh ấy hành động như thể là bạn của tất cả mọi người, nhiệt tình hài hước, rất giỏi pha trò.",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong cho 1 kẻ địch, tổng cộng nảy bật 5 lần.",
       "type": "Chiến Kỹ",
       "tag": "Nảy Bật",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,27 @@
       "simpleDesc": "Gây Sát Thương Phong cho toàn bộ kẻ địch, có xác suất lớn khiến chúng tăng Sát Thương Duy Trì phải chịu.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "Sau khi bản thân đánh trúng kẻ địch sẽ có xác suất khiến mục tiêu rơi vào trạng thái Bào Mòn.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1452,32 @@
       "simpleDesc": "Khiến kẻ địch trong khu vực nhất định rơi vào trạng thái Mù. Tấn công kẻ địch trong trạng thái Mù, vào chiến đấu sẽ có xác suất lớn khiến mỗi một kẻ địch trì hoãn hành động.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Xác Suất Cố Định",
+          "desc": "Xác suất cố định không bị ảnh hưởng bởi bất cứ nhân tố nào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Trì Hoãn Hành Động",
+          "desc": "Kéo dài khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,37 +1496,88 @@
       "_id": 110801,
       "id": "rising_love",
       "name": "Tình Yêu Trỗi Dậy",
-      "desc": "Khi thi triển Chiến Kỹ, sẽ gây thêm <nobr>1</nobr> lần sát thương cho kẻ địch ngẫu nhiên."
+      "desc": "Khi thi triển Chiến Kỹ, sẽ gây thêm <nobr>1</nobr> lần sát thương cho kẻ địch ngẫu nhiên.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110802,
       "id": "infectious_enthusiasm",
       "name": "Nhiệt Tình Lan Toả",
-      "desc": "Khi mục tiêu phe địch đang ở trạng thái Bào Mòn bị tiêu diệt, sẽ khiến toàn phe địch có <nobr>100%</nobr> <u>xác suất cơ bản</u> cộng dồn <nobr>1</nobr> tầng bằng với trạng thái Bào Mòn của Thiên Phú."
+      "desc": "Khi mục tiêu phe địch đang ở trạng thái Bào Mòn bị tiêu diệt, sẽ khiến toàn phe địch có <nobr>100%</nobr> <u>xác suất cơ bản</u> cộng dồn <nobr>1</nobr> tầng bằng với trạng thái Bào Mòn của Thiên Phú.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110803,
       "id": "big_money",
       "name": "Con Số Lớn!",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110804,
       "id": "the_deeper_the_love_the_stronger_the_hate",
       "name": "Yêu Càng Nhiều, Hận Càng Sâu",
-      "desc": "Khi Chiến Kỹ đánh trúng mục tiêu địch có trạng thái Bào Mòn từ <nobr>5</nobr> tầng trở lên, sẽ khiến trạng thái Bào Mòn mục tiêu đó đang chịu lập tức sinh ra sát thương bằng <nobr>8%</nobr> sát thương ban đầu."
+      "desc": "Khi Chiến Kỹ đánh trúng mục tiêu địch có trạng thái Bào Mòn từ <nobr>5</nobr> tầng trở lên, sẽ khiến trạng thái Bào Mòn mục tiêu đó đang chịu lập tức sinh ra sát thương bằng <nobr>8%</nobr> sát thương ban đầu.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110805,
       "id": "huuuuge_money",
       "name": "Con Số Cực Lớn!",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110806,
       "id": "increased_spending",
       "name": "Tiêu Phí Tăng Cấp",
-      "desc": "Bội Số Sát Thương của trạng thái Bào Mòn do Thiên Phú gây ra tăng <nobr>15%</nobr>."
+      "desc": "Bội Số Sát Thương của trạng thái Bào Mòn do Thiên Phú gây ra tăng <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

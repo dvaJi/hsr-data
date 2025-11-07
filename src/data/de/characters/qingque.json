@@ -2,6 +2,7 @@
   "_id": 1201,
   "id": "qingque",
   "name": "Qingque",
+  "description": "Wahrsagerin der Wahrsagekommission an der Xianzhou Luofu, Bibliothekarin.\nSchwänzt ständig und ist dabei, die Arbeit als „Türwächterin“ zu übernehmen.",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Wirft 1 Stein und fügt einem anvisierten Gegner geringen Quanten-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Zieht einen Stein und erhöht den zugefügten SCH. Die Runde wird nicht beendet.",
       "type": "Fertigkeit",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Fügt allen Gegnern Quanten-SCH zu und zieht dann 4 Jadesteine derselben Farbe.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Zu Beginn der Runde eines Verbündeten zieht Qingque Steine. Wenn sie zu Beginn ihrer Runde 4 Steine derselben Farbe hat, werden alle Steine verbraucht und ihr Standardangriff wird verstärkt. Gleichzeitig wird ihr ANG erhöht.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1313,6 +1359,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik wird zu Beginn des nächsten Kampfs ein Stein gezogen.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,96 @@
       "_id": 120101,
       "id": "rise_through_the_tiles",
       "name": "Bauer umgewandelt, Preis erhalten",
-      "desc": "Der Ultimate verursacht <nobr>10%</nobr> mehr SCH."
+      "desc": "Der Ultimate verursacht <nobr>10%</nobr> mehr SCH.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120102,
       "id": "sleep_on_the_tiles",
       "name": "Zeit für ein Nickerchen, direkt auf dem Schachbrett",
-      "desc": "Jedes Mal, wenn Qingque einen Stein zieht, erhält sie sofort <nobr>1</nobr> Pkt. Energie zurück."
+      "desc": "Jedes Mal, wenn Qingque einen Stein zieht, erhält sie sofort <nobr>1</nobr> Pkt. Energie zurück.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120103,
       "id": "read_between_the_tiles",
       "name": "Auf die Spielsteine konzentrieren, auf das Ziehen verlassen",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120104,
       "id": "right_on_the_tiles",
       "name": "Glückliche Kombination, der letzte Stein wartet",
-      "desc": "Nach dem Einsatz der Fertigkeit besteht eine <u>feste Chance</u> von <nobr>24%</nobr>, den Status „Autarkie“ zu erhalten. Dieser Status hält bis zum Ende dieser Runde.\nIm Status Autarkie führt Qingque nach dem Einsatz des Standardangriffs oder verstärkten Standardangriffs sofort einen <u>Folgeangriff</u> aus und fügt dem Ziel Quanten-SCH in Höhe von <nobr>100</nobr> % des Standardangriff-SCH oder verstärkten Standardangriff-SCH zu."
+      "desc": "Nach dem Einsatz der Fertigkeit besteht eine <u>feste Chance</u> von <nobr>24%</nobr>, den Status „Autarkie“ zu erhalten. Dieser Status hält bis zum Ende dieser Runde.\nIm Status Autarkie führt Qingque nach dem Einsatz des Standardangriffs oder verstärkten Standardangriffs sofort einen <u>Folgeangriff</u> aus und fügt dem Ziel Quanten-SCH in Höhe von <nobr>100</nobr> % des Standardangriff-SCH oder verstärkten Standardangriff-SCH zu.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Feste Chance",
+          "desc": "Die feste Chance wird von keinem Faktor beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120105,
       "id": "gambit_for_the_tiles",
       "name": "Selbst gezogene Steine, das Glück verschmäht",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120106,
       "id": "prevail_beyond_the_tiles",
       "name": "Ruhig und gefasst, bereit für den Sieg",
-      "desc": "Stellt beim Einsatz des verstärkten Standardangriffs 1 Fertigkeitspunkt wieder her."
+      "desc": "Stellt beim Einsatz des verstärkten Standardangriffs 1 Fertigkeitspunkt wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

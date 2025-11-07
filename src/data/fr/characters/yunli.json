@@ -2,6 +2,7 @@
   "_id": 1221,
   "id": "yunli",
   "name": "Yunli",
+  "description": "Épéiste du Zhuming et petite-fille adorée du général Huaiyan, « le Cœur ardent ». Elle est franche et directe.\nElle a appris à manier l'épée et à forger auprès de Huaiyan dès son plus jeune âge, et est ainsi devenue la deuxième plus jeune épéiste de l'Octuor du disque enflammé.\nAnimée d'une profonde haine envers les épées maudites qui viennent du Zhuming, elle a juré de « traquer et d'éliminer toutes les épées maudites ».",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Restaure des PV à cette unité. Inflige des DGT physiques à un ennemi et des DGT physiques mineurs aux cibles adjacentes.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,24 @@
       "simpleDesc": "Entre en état de Parade et provoque tous les ennemis, déclenchant un puissant contre lorsqu'elle est attaquée pendant cette période. Le contre inflige des DGT physiques à l'assaillant et aux cibles adjacentes, puis inflige des DGT physiques mineurs à un ennemi unique qui rebondissent 6 fois. Si aucun contre n'est déclenché alors que Parade est actif, inflige des DGT physiques à une cible ennemie aléatoire et aux cibles adjacentes à la fin de l'état.",
       "type": "Ultime",
       "tag": "Renforcement",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contre",
+          "desc": "Effet qui se déclenche automatiquement lorsqu'une cible est attaquée et qui inflige une attaque à l'assaillant.\nLes contres sont considérés comme des ATQ de suivi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1194,24 @@
       "simpleDesc": "Quand Yunli est attaquée par une cible ennemie, elle régénère de l'énergie supplémentaire et lance immédiatement un contre, ce qui inflige des DGT physiques à l'assaillant et des DGT physiques mineurs aux cibles adjacentes.",
       "type": "Talent",
       "tag": "Propagation",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contre",
+          "desc": "Effet qui se déclenche automatiquement lorsqu'une cible est attaquée et qui inflige une attaque à l'assaillant.\nLes contres sont considérés comme des ATQ de suivi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1536,15 @@
       "simpleDesc": "Bénéficie de l'effet Protection pendant 20 secondes. Durant cette période, si le combat est engagé en attaquant un ennemi ou en subissant une attaque, Yunli inflige immédiatement Sens de l'éradication à une cible ennemie aléatoire.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1498,37 +1562,97 @@
       "_id": 122101,
       "id": "weathered_blade_does_not_sully",
       "name": "Pureté de la lame forgée",
-      "desc": "Augmente les DGT de Sens de l'entaille et de Sens de l'éradication de <nobr>20%</nobr>, et augmente le nombre d'instances de DGT supplémentaires de Sens de l'éradication de <nobr>3</nobr>."
+      "desc": "Augmente les DGT de Sens de l'entaille et de Sens de l'éradication de <nobr>20%</nobr>, et augmente le nombre d'instances de DGT supplémentaires de Sens de l'éradication de <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122102,
       "id": "first_luster_breaks_dawn",
       "name": "Rupture de l'aube",
-      "desc": "Lorsque Yunli inflige des DGT via un <u>contre</u>, elle ignore <nobr>20%</nobr> de la DÉF de la cible."
+      "desc": "Lorsque Yunli inflige des DGT via un <u>contre</u>, elle ignore <nobr>20%</nobr> de la DÉF de la cible.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contre",
+          "desc": "Effet qui se déclenche automatiquement lorsqu'une cible est attaquée et qui inflige une attaque à l'assaillant.\nLes contres sont considérés comme des ATQ de suivi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122103,
       "id": "mastlength_twirls_mountweight",
       "name": "Domination du fer",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122104,
       "id": "artisans_ironsong",
       "name": "Chant de l'acier",
-      "desc": "Augmente de <nobr>50%</nobr> la RÉS aux effets du personnage pendant <nobr>1</nobr> tour après avoir lancé Sens de l'entaille ou Sens de l'éradication."
+      "desc": "Augmente de <nobr>50%</nobr> la RÉS aux effets du personnage pendant <nobr>1</nobr> tour après avoir lancé Sens de l'entaille ou Sens de l'éradication.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122105,
       "id": "blade_of_old_outlasts_all",
       "name": "Arme de toujours",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122106,
       "id": "walk_in_blade_talk_in_zither",
       "name": "Courage à toute épreuve",
-      "desc": "Quand l'effet Parade est actif, lorsqu'un ennemi utilise activement une capacité, que ce soit pour attaquer Yunli ou non, Sens de l'éradication se déclenche et supprime l'effet Parade. Lorsque Yunli inflige des DGT via Sens de l'entaille ou Sens de l'éradication, ses chances de coup critique augmentent de <nobr>15%</nobr> et sa <u>PÉN de RÉS</u> physique augmente de <nobr>20%</nobr>."
+      "desc": "Quand l'effet Parade est actif, lorsqu'un ennemi utilise activement une capacité, que ce soit pour attaquer Yunli ou non, Sens de l'éradication se déclenche et supprime l'effet Parade. Lorsque Yunli inflige des DGT via Sens de l'entaille ou Sens de l'éradication, ses chances de coup critique augmentent de <nobr>15%</nobr> et sa <u>PÉN de RÉS</u> physique augmente de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

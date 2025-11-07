@@ -2,6 +2,7 @@
   "_id": 1202,
   "id": "tingyun",
   "name": "정운",
+  "description": "선주 「나부」 천박사(天舶司)의 사절\n상단을 따라 수많은 세계를 돌아다니며 무역과 연맹 관련 업무를 처리해왔다",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 번개 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "단일 아군의 공격력이 증가하고 [축복]을 획득한다. [축복] 상태에서 공격 시 소량의 번개 속성 추가 피해를 추가로 가한다",
       "type": "전투 스킬",
       "tag": "서포트",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "단일 아군이 에너지를 회복하고, 가하는 피해가 증가한다",
       "type": "필살기",
       "tag": "서포트",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "적이 정운에게 피격된 후 [축복]을 획득한 목표는 즉시 해당 대상에게 소량의 번개 속성 추가 피해를 가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "비술 사용 후 즉시 자신의 에너지를 회복한다",
       "type": "비술",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1374,37 +1447,79 @@
       "_id": 120201,
       "id": "windfall_of_lucky_springs",
       "name": "봄바람과 함께 불어오는 행운",
-      "desc": "[축복] 효과를 획득한 단일 아군은 필살기 발동 후 속도가 <nobr>20%</nobr> 증가한다. 지속 시간:1턴"
+      "desc": "[축복] 효과를 획득한 단일 아군은 필살기 발동 후 속도가 <nobr>20%</nobr> 증가한다. 지속 시간:1턴",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120202,
       "id": "gainfully_gives_givingly_gains",
       "name": "군자의 은혜에는 미소로 화답을",
-      "desc": "[축복] 효과를 보유 중인 단일 아군이 적을 처치할 경우 에너지를 <nobr>5</nobr>pt 회복한다. 해당 효과는 턴당 1회만 발동한다"
+      "desc": "[축복] 효과를 보유 중인 단일 아군이 적을 처치할 경우 에너지를 <nobr>5</nobr>pt 회복한다. 해당 효과는 턴당 1회만 발동한다",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120203,
       "id": "halcyon_bequest",
       "name": "푸른 언덕의 유산",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120204,
       "id": "jovial_versatility",
       "name": "명화는 변화하며 형세를 읽나니",
-      "desc": "[축복] 효과로 인한 피해 배율이 <nobr>20%</nobr> 증가한다"
+      "desc": "[축복] 효과로 인한 피해 배율이 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120205,
       "id": "sauntering_coquette",
       "name": "여우의 태연함",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120206,
       "id": "peace_brings_wealth_to_all",
       "name": "평화는 모두를 부유하게 할지니",
-      "desc": "필살기로 회복하는 아군 대상의 에너지가 <nobr>10</nobr>pt 증가한다"
+      "desc": "필살기로 회복하는 아군 대상의 에너지가 <nobr>10</nobr>pt 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

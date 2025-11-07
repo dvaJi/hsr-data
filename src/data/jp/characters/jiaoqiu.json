@@ -2,6 +2,7 @@
   "_id": 1218,
   "id": "jiaoqiu",
   "name": "{RUBY_B#ショウキュウ}椒丘{RUBY_E#}",
+  "description": "仙舟「曜青」の狐族。医士であり、策士でもある。いつも笑顔で人に接するが、実際はかなり狡猾。\n丹鼎司の名家の出。一時は心が折れ医士を辞めたが、「天撃将軍」飛霄を治療するため、再び表舞台に舞い戻った。\n医食同源の丹方の研究に精通しており、特に人に痛みを与える辛味においての造詣が深い。「九宮格」という名の火鍋薬を発明している。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の炎属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "敵単体に炎属性ダメージを与え、隣接する敵に少量の炎属性ダメージを与える。高確率でメインターゲットに「焼尽」を1層付与する。",
       "type": "戦闘スキル",
       "tag": "拡散攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -743,6 +771,32 @@
       "simpleDesc": "敵それぞれにある「焼尽」状態の層数を、フィールド上で最高層数の「焼尽」状態の層数と同じにする。その後、結界を展開し、敵全体に炎属性ダメージを与える。結界が展開されている間、敵の受ける必殺技ダメージがアップする。敵が行動する時、確率で「焼尽」を1層付与される。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1151,24 @@
       "simpleDesc": "通常攻撃、戦闘スキル、または必殺技を発動して敵に攻撃が命中する時、高確率で敵に「焼尽」を1層付与し、その敵の受けるダメージをアップし、同時に燃焼状態にあると見なされるようにする。",
       "type": "天賦",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1466,6 +1538,24 @@
       "simpleDesc": "特殊領域を作り出す。領域内の敵と戦闘に入った後、敵全体に少量の炎属性ダメージを与え、高確率で「焼尽」を1層付与する。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1484,37 +1574,79 @@
       "_id": 121801,
       "id": "pentapathic_transference",
       "name": "{RUBY_B#ごみごぞう}五味五臓{RUBY_E#}",
-      "desc": "「焼尽」状態の敵に対する味方の与ダメージ+<nobr>40%</nobr>。天賦を発動して敵に「焼尽」状態を付与する時、さらにその回に付与する「焼尽」状態層数+<nobr>1</nobr>層。"
+      "desc": "「焼尽」状態の敵に対する味方の与ダメージ+<nobr>40%</nobr>。天賦を発動して敵に「焼尽」状態を付与する時、さらにその回に付与する「焼尽」状態層数+<nobr>1</nobr>層。",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121802,
       "id": "from_savor_comes_suffer",
       "name": "{RUBY_B#こうみ}厚味{RUBY_E#}、{RUBY_B#まんびょう}万病{RUBY_E#}の{RUBY_B#もと}元{RUBY_E#}",
-      "desc": "敵が「焼尽」状態にある時、「焼尽」状態による炎属性持続ダメージの倍率+<nobr>300%</nobr>。"
+      "desc": "敵が「焼尽」状態にある時、「焼尽」状態による炎属性持続ダメージの倍率+<nobr>300%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121803,
       "id": "flavored_euphony_reigns_supreme",
       "name": "{RUBY_B#わごう}和合{RUBY_E#}の{RUBY_B#しんずい}神髄{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121804,
       "id": "leisure_in_luster_out",
       "name": "{RUBY_B#きけつじゅういつ}気血充溢{RUBY_E#}",
-      "desc": "結界が展開されている間、敵の攻撃力-<nobr>15%</nobr>。"
+      "desc": "結界が展開されている間、敵の攻撃力-<nobr>15%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121805,
       "id": "duel_in_dawn_dash_in_dusk",
       "name": "{RUBY_B#めぐ}巡{RUBY_E#}らせる{RUBY_B#きさく}奇策{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121806,
       "id": "nonamorphic_pyrobind",
       "name": "{RUBY_B#きゅうふつきゅうへん}九沸九変{RUBY_E#}",
-      "desc": "敵が倒される時、その敵にある「焼尽」状態の層数が、フィールド上の「焼尽」状態層数が最も低い敵に移る。「焼尽」状態の累積上限が<nobr>9</nobr>層にアップする。「焼尽」1層につき、敵の全属性耐性-<nobr>3%</nobr>。"
+      "desc": "敵が倒される時、その敵にある「焼尽」状態の層数が、フィールド上の「焼尽」状態層数が最も低い敵に移る。「焼尽」状態の累積上限が<nobr>9</nobr>層にアップする。「焼尽」1層につき、敵の全属性耐性-<nobr>3%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

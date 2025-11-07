@@ -2,6 +2,7 @@
   "_id": 1002,
   "id": "dan_heng",
   "name": "Dan Heng",
+  "description": "Un joven distante y reservado que guarda un secreto sobre su pasado.\nDecidió viajar con el Expreso Astral para escapar de los de su raza.",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Inflige Daño de Viento a un enemigo. Cuando asesta un golpe CRIT, tiene una gran probabilidad de causar Ralentización.",
       "type": "Habilidad básica",
       "tag": "ATQ individual",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Inflige una gran cantidad de Daño de Viento a un enemigo. Aumenta el multiplicador de daño contra los objetivos afectados por Ralentización.",
       "type": "Habilidad definitiva",
       "tag": "ATQ individual",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "Al convertirse en objetivo de la habilidad de un aliado, aumenta la PEN de la RES a Viento de su siguiente ataque. Este efecto puede volver a activarse después de 2 turnos.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "Tras usar la técnica, el ATQ aumenta en la siguiente batalla.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1375,37 +1448,79 @@
       "_id": 100201,
       "id": "the_higher_you_fly_the_harder_you_fall",
       "name": "Cuanto más subes, más dura es la caída",
-      "desc": "Cuando el porcentaje de PV del objetivo golpeado es igual o superior al <nobr>50%</nobr>, la Prob. CRIT aumenta en un <nobr>12%</nobr>."
+      "desc": "Cuando el porcentaje de PV del objetivo golpeado es igual o superior al <nobr>50%</nobr>, la Prob. CRIT aumenta en un <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100202,
       "id": "quell_the_venom_octet_quench_the_vice_oflame",
       "name": "Controlar el mal y extinguir la llama",
-      "desc": "El TdE del talento se reduce en 1 turno."
+      "desc": "El TdE del talento se reduce en 1 turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100203,
       "id": "seen_and_unseen",
       "name": "Visto y no visto",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100204,
       "id": "roaring_dragon_and_soaring_sun",
       "name": "Dragón rugiente y sol sofocante",
-      "desc": "Cuando su habilidad definitiva elimina al objetivo, Dan Heng vuelve a actuar inmediatamente."
+      "desc": "Cuando su habilidad definitiva elimina al objetivo, Dan Heng vuelve a actuar inmediatamente.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100205,
       "id": "a_drop_of_rain_feeds_a_torrent",
       "name": "Una gota de lluvia alimenta el torrente",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100206,
       "id": "the_troubled_soul_lies_in_wait",
       "name": "Alma atormentada en espera",
-      "desc": "La Ralentización causada por la habilidad básica reduce la VEL del objetivo en un <nobr>8%</nobr> adicional."
+      "desc": "La Ralentización causada por la habilidad básica reduce la VEL del objetivo en un <nobr>8%</nobr> adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

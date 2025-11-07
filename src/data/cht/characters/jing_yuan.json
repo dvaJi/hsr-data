@@ -2,6 +2,7 @@
   "_id": 1204,
   "id": "jing_yuan",
   "name": "景元",
+  "description": "仙舟聯盟帝弓七天將之一，負責統率羅浮雲騎軍的「神策將軍」。\n師從前代「羅浮」劍首，但並不顯名於武力。",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量雷屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "對敵方全體造成少量雷屬性傷害，增加【神君】的攻擊段數。",
       "type": "戰技",
       "tag": "群體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +750,15 @@
       "simpleDesc": "對敵方全體造成雷屬性傷害，並增加【神君】的攻擊段數。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1068,40 @@
       "simpleDesc": "戰鬥開始時召喚【神君】，【神君】行動時發動追加攻擊，自動對隨機敵方單體及其相鄰目標造成少量雷屬性傷害。",
       "type": "天賦",
       "tag": "彈射",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "控制類負面狀態",
+          "desc": "凍結，糾纏，禁錮，支配，怒噪，強烈震盪，異夢，纏禁，恐懼，行動鎖定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1471,15 @@
       "simpleDesc": "使用秘技，下一次進入戰鬥時增加【神君】的攻擊段數。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1496,79 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "星流霆擊碎昆岡",
-      "desc": "【神君】發動攻擊時，對指定敵方單體的相鄰目標造成的傷害倍率額外提高，提高數值等同於對主目標傷害倍率的<nobr>25%</nobr>。"
+      "desc": "【神君】發動攻擊時，對指定敵方單體的相鄰目標造成的傷害倍率額外提高，提高數值等同於對主目標傷害倍率的<nobr>25%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "戎戈動地開天陣",
-      "desc": "【神君】行動後，景元的普通攻擊、戰技、終結技造成的傷害提高<nobr>20%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "【神君】行動後，景元的普通攻擊、戰技、終結技造成的傷害提高<nobr>20%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120403,
       "id": "strike_suns_subdued",
       "name": "移鋒驚電衝霄漢",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120404,
       "id": "spin_stars_sieged",
       "name": "刃捲橫雲落玉沙",
-      "desc": "【神君】每段攻擊使景元恢復<nobr>2</nobr>點能量。"
+      "desc": "【神君】每段攻擊使景元恢復<nobr>2</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120405,
       "id": "stride_spoils_seized",
       "name": "百戰棄軀輕死生",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120406,
       "id": "sweep_souls_slain",
       "name": "威靈有應破敵讎",
-      "desc": "【神君】每段攻擊後會使指定敵方目標額外陷入易傷狀態。\n易傷狀態下的敵方目標受到的傷害提高<nobr>12%</nobr>，持續至【神君】本次攻擊結束。該效果最多疊加<nobr>3</nobr>層。"
+      "desc": "【神君】每段攻擊後會使指定敵方目標額外陷入易傷狀態。\n易傷狀態下的敵方目標受到的傷害提高<nobr>12%</nobr>，持續至【神君】本次攻擊結束。該效果最多疊加<nobr>3</nobr>層。",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

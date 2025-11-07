@@ -2,6 +2,7 @@
   "_id": 1201,
   "id": "qingque",
   "name": "청작",
+  "description": "선주 「나부」의 태복사 소속 점술가 겸 서고 관리자\n업무를 너무 태만히 한 탓에 곧 「문지기」로 좌천될 예정이라고 한다",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "패 1장을 사용해 단일 적에게 소량의 양자 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "패를 뽑고 자신이 가하는 피해가 증가하며, 이번 턴이 종료되지 않는다",
       "type": "전투 스킬",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "모든 적에게 양자 속성 피해를 가하며, 같은 문양의 패를 4장 획득한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "아군의 턴이 시작되면 패를 뽑는다. 자신의 턴이 시작될 때 같은 문양의 패를 4장 보유하고 있으면 가진 패를 모두 소진하여 이번 일반 공격을 강화하고 공격력이 증가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1313,6 +1359,15 @@
       "simpleDesc": "비술을 발동하며, 다음 전투 진입 시 패를 뽑는다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,96 @@
       "_id": 120101,
       "id": "rise_through_the_tiles",
       "name": "용감무쌍 물고기",
-      "desc": "필살기가 가하는 피해가 <nobr>10%</nobr> 증가한다"
+      "desc": "필살기가 가하는 피해가 <nobr>10%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120102,
       "id": "sleep_on_the_tiles",
       "name": "놀이판은 숙면 도우미",
-      "desc": "청작이 패 뽑기를 발동할 때마다 즉각 에너지를 <nobr>1</nobr>pt 회복한다"
+      "desc": "청작이 패 뽑기를 발동할 때마다 즉각 에너지를 <nobr>1</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120103,
       "id": "read_between_the_tiles",
       "name": "무아지경 판쓸이",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120104,
       "id": "right_on_the_tiles",
       "name": "운명을 건 마지막 패",
-      "desc": "전투 스킬 발동 후 <nobr>24%</nobr>의 <u>고정 확률</u>로 [불구인] 상태를 획득하며, 이번 턴이 종료될 때까지 지속된다.\n[불구인] 상태에서 일반 공격이나 강화된 일반 공격 발동 후 즉시 <u>추가 공격</u>을 1회 진행하고, 해당 목표에게 일반 공격이나 강화된 일반 공격 피해의 <nobr>100%</nobr>만큼 양자 속성 피해를 가한다"
+      "desc": "전투 스킬 발동 후 <nobr>24%</nobr>의 <u>고정 확률</u>로 [불구인] 상태를 획득하며, 이번 턴이 종료될 때까지 지속된다.\n[불구인] 상태에서 일반 공격이나 강화된 일반 공격 발동 후 즉시 <u>추가 공격</u>을 1회 진행하고, 해당 목표에게 일반 공격이나 강화된 일반 공격 피해의 <nobr>100%</nobr>만큼 양자 속성 피해를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "고정 확률",
+          "desc": "어떤 요인에도 영향을 받지 않는 고정 확률이다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120105,
       "id": "gambit_for_the_tiles",
       "name": "운발에 맡긴 승부",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120106,
       "id": "prevail_beyond_the_tiles",
       "name": "승리를 위한 기다림",
-      "desc": "일반 공격 강화 발동 후 전투 스킬 포인트를 1pt 회복한다"
+      "desc": "일반 공격 강화 발동 후 전투 스킬 포인트를 1pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "Luocha",
+  "description": "Ce marchand étranger venu d'au-delà des mers stellaires ne va nulle part sans son cercueil.\nIl a d'excellentes compétences médicales.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -243,10 +244,22 @@
       "_id": 120301,
       "id": "thorns_of_the_abyss",
       "name": "Épines de l'abîme",
-      "desc": "Inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Luocha à un ennemi unique.",
+      "desc": "Inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Luocha à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Restaure les PV d'un allié unique et gagne 1 cumul de Fleur de l'abîme.",
       "type": "Compétence",
       "tag": "Restauration",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "Supprime 1 bonus chez tous les ennemis, inflige des DGT imaginaires à tous les ennemis, et accorde 1 cumul de Fleur de l'abîme.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Bonus",
+          "desc": "Les bonus permettent d'améliorer la capacité de combat pendant un certain temps. Ils peuvent être dissipés, sauf indication contraire.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "Déploie une zone lorsque Fleur de l'abîme atteint 2 cumuls. Tant que la zone est active, les alliés récupèrent des PV après avoir attaqué.",
       "type": "Talent",
       "tag": "Restauration",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "Après utilisation de la technique, déclenche immédiatement l'effet du talent au début du combat suivant.",
       "type": "Technique",
       "tag": "Restauration",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Ablution de rapidité",
-      "desc": "Tant que la zone est active, l'ATQ de tous les alliés augmente de <nobr>20%</nobr>."
+      "desc": "Tant que la zone est active, l'ATQ de tous les alliés augmente de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "Cadeau de pureté",
-      "desc": "Les soins prodigués par Luocha augmentent de <nobr>30%</nobr> lorsque sa compétence se déclenche sur une cible alliée qui a moins de <nobr>50</nobr> % de ses PV. Si les PV de la cible alliée sont supérieurs ou égaux à <nobr>50</nobr> %, elle reçoit un bouclier capable d'absorber des DGT équivalents à <nobr>18%</nobr> de l'ATQ de Luocha + <nobr>240</nobr> qui dure <nobr>2</nobr> tours."
+      "desc": "Les soins prodigués par Luocha augmentent de <nobr>30%</nobr> lorsque sa compétence se déclenche sur une cible alliée qui a moins de <nobr>50</nobr> % de ses PV. Si les PV de la cible alliée sont supérieurs ou égaux à <nobr>50</nobr> %, elle reçoit un bouclier capable d'absorber des DGT équivalents à <nobr>18%</nobr> de l'ATQ de Luocha + <nobr>240</nobr> qui dure <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "Épreuve du fou",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "Lourde est la couronne",
-      "desc": "Lorsque la zone de Luocha est active, les ennemis sont affaiblis et les DGT qu'ils infligent diminuent de <nobr>12%</nobr>."
+      "desc": "Lorsque la zone de Luocha est active, les ennemis sont affaiblis et les DGT qu'ils infligent diminuent de <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "Stigmates du tourment",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "Retour à la poussière",
-      "desc": "Il y a <nobr>100%</nobr> de <u>chances fixes</u> de réduire toutes les RÉS de type de tous les ennemis de <nobr>20%</nobr> pendant <nobr>2</nobr> tours lors de l'utilisation de l'ultime."
+      "desc": "Il y a <nobr>100%</nobr> de <u>chances fixes</u> de réduire toutes les RÉS de type de tous les ennemis de <nobr>20%</nobr> pendant <nobr>2</nobr> tours lors de l'utilisation de l'ultime.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chances fixes",
+          "desc": "Probabilité fixe qui n'est affectée par aucun facteur.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

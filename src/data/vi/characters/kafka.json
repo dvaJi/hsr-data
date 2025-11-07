@@ -2,6 +2,7 @@
   "_id": 1005,
   "id": "kafka",
   "name": "Kafka",
+  "description": "Thành viên của \"Thợ Săn Stellaron\", mang vẻ đẹp của sự phóng khoáng, điềm đạm và chuyên nghiệp.\nSử dụng Bùa Mê Ngôn Từ để khiến {NICKNAME} hấp thụ Stellaron.\nSở thích là mua và sắp xếp áo khoác.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lôi cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Gây Sát Thương Lôi cho một kẻ địch và lượng nhỏ Sát Thương Lôi cho mục tiêu lân cận.\nNếu mục tiêu chính đang trong Hiệu Ứng Xấu loại Sát Thương Duy Trì, sẽ khiến Hiệu Ứng Xấu loại Sát Thương Duy Trì này gây thêm 1 lần sát thương.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +765,24 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lôi cho toàn bộ kẻ địch, có xác suất lớn thi triển trạng thái Sốc Điện.\nNếu kẻ địch ở trạng thái Sốc Điện, sẽ khiến trạng thái Sốc Điện gây thêm 1 lần sát thương.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1137,32 @@
       "simpleDesc": "Sau khi đồng đội tấn công thường lên kẻ địch, Kafka sẽ phát động ngay Đòn Đánh Theo Sau, gây Sát Thương Lôi cho mục tiêu này, đồng thời có xác suất lớn thi triển trạng thái Sốc Điện. Hiệu ứng này mỗi hiệp chỉ có thể kích hoạt 1 lần.",
       "type": "Thiên Phú",
       "tag": "Đánh Đơn",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1486,24 @@
       "desc": "Tấn công ngay tất cả kẻ địch trong phạm vi nhất định, sau khi vào chiến đấu sẽ gây Sát Thương Lôi cho toàn bộ địch bằng #3[i]% Tấn Công của Kafka, đồng thời có #1[i]% xác suất cơ bản khiến mỗi 1 kẻ địch rơi vào trạng thái Sốc Điện giống với Tuyệt Kỹ, duy trì #2[i] hiệp.",
       "simpleDesc": "Tấn công tất cả kẻ địch trong phạm vi, sau khi vào chiến đấu, sẽ gây lượng nhỏ Sát Thương Lôi cho toàn bộ địch, xác suất lớn thi triển trạng thái Sốc Điện.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1438,37 +1522,105 @@
       "_id": 100501,
       "id": "da_capo",
       "name": "Vô Cùng Vô Tận!",
-      "desc": "Khi Thiên Phú kích hoạt <u>Đòn Đánh Theo Sau</u>, sẽ có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến Sát Thương Duy Trì mà mục tiêu phải chịu tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi Thiên Phú kích hoạt <u>Đòn Đánh Theo Sau</u>, sẽ có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến Sát Thương Duy Trì mà mục tiêu phải chịu tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100502,
       "id": "fortississimo",
       "name": "Kẻ Mơ Tưởng, Thổn Thức",
-      "desc": "Khi Kafka trong trận, Sát Thương Duy Trì toàn phe ta gây ra tăng <nobr>25%</nobr>."
+      "desc": "Khi Kafka trong trận, Sát Thương Duy Trì toàn phe ta gây ra tăng <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100503,
       "id": "capriccio",
       "name": "Tôi Khen Ngợi, Cao Hứng",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100504,
       "id": "recitativo",
       "name": "Xướng Ca Dâng Tặng",
-      "desc": "Khi kẻ địch chịu sát thương Sốc Điện do Kafka gây ra, sẽ hồi thêm cho Kafka <nobr>2</nobr> Năng Lượng."
+      "desc": "Khi kẻ địch chịu sát thương Sốc Điện do Kafka gây ra, sẽ hồi thêm cho Kafka <nobr>2</nobr> Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100505,
       "id": "doloroso",
       "name": "Chỉ Cất Giọng Đêm Nay",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100506,
       "id": "leggiero",
       "name": "Uyển Chuyển Nhẹ Nhàng",
-      "desc": "Bội Số Sát Thương của trạng thái Sốc Điện được gây ra bởi Tuyệt Kỹ, Bí Kỹ và <u>Đòn Đánh Theo Sau</u> được kích hoạt từ Thiên Phú tăng <nobr>156%</nobr>, và thời gian duy trì của Sốc Điện tăng <nobr>1</nobr> hiệp."
+      "desc": "Bội Số Sát Thương của trạng thái Sốc Điện được gây ra bởi Tuyệt Kỹ, Bí Kỹ và <u>Đòn Đánh Theo Sau</u> được kích hoạt từ Thiên Phú tăng <nobr>156%</nobr>, và thời gian duy trì của Sốc Điện tăng <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

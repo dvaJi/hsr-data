@@ -2,6 +2,7 @@
   "_id": 8004,
   "id": "trailblazer_preservation_girl",
   "name": "Trailblazer Preservation",
+  "description": "Anak muda yang naik ke Astral Express.\nDia memilih untuk bertualang dengan Astral Express demi menghilangkan krisis yang disebabkan Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Fire DMG dalam jumlah kecil pada 1 musuh dan memperoleh \"Magma Will\".",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Mengurangi DMG yang diterima diri sendiri dan memperoleh \"Magma Will\". Berpeluang besar untuk memberikan efek Taunt pada seluruh musuh.",
       "type": "Skill",
       "tag": "Defense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +771,18 @@
       "simpleDesc": "Mengakibatkan Fire DMG pada seluruh musuh dan meningkatkan Basic Attack selanjutnya.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,15 @@
       "simpleDesc": "Saat diserang, akan menumpuk \"Magma Will\". Saat \"Magma Will\" tidak kurang dari 4 lapis, Basic Attack memperoleh penguatan. Setelah melancarkan Basic Attack, Skill, atau Ultimate, akan memberikan Shield pada seluruh rekan tim.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,6 +1428,15 @@
       "simpleDesc": "Setelah menggunakan Technique, akan memberikan Shield pada diri sendiri saat pertempuran berikutnya dimulai.",
       "type": "Technique",
       "tag": "Defense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1455,79 @@
       "_id": 800401,
       "id": "earthshaking_resonance",
       "name": "Earth-Shaking Resonance",
-      "desc": "Melancarkan Basic Attack/Enhanced Basic Attack akan mengakibatkan Fire DMG tambahan sebesar <nobr>25%</nobr>/<nobr>50%</nobr> DEF Trailblazer."
+      "desc": "Melancarkan Basic Attack/Enhanced Basic Attack akan mengakibatkan Fire DMG tambahan sebesar <nobr>25%</nobr>/<nobr>50%</nobr> DEF Trailblazer.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800402,
       "id": "timedefying_tenacity",
       "name": "Time-Defying Tenacity",
-      "desc": "Ketika Talent terpicu, kekuatan Shield yang diperoleh untuk seluruh rekan tim akan meningkat sebesar <nobr>2%</nobr> DEF Trailblazer + <nobr>27</nobr>."
+      "desc": "Ketika Talent terpicu, kekuatan Shield yang diperoleh untuk seluruh rekan tim akan meningkat sebesar <nobr>2%</nobr> DEF Trailblazer + <nobr>27</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800403,
       "id": "trailblazing_blueprint",
       "name": "Trail-Blazing Blueprint",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800404,
       "id": "nationbuilding_oath",
       "name": "Nation-Building Oath",
-      "desc": "Segera memperoleh <nobr>4</nobr> lapis \"Magma Will\" saat pertempuran dimulai."
+      "desc": "Segera memperoleh <nobr>4</nobr> lapis \"Magma Will\" saat pertempuran dimulai.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800405,
       "id": "spiritwarming_flame",
       "name": "Spirit-Warming Flame",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800406,
       "id": "cityforging_bulwarks",
       "name": "City-Forging Bulwarks",
-      "desc": "Meningkatkan <nobr>10%</nobr> DEF Trailblazer setelah melancarkan Enhanced Basic Attack atau Ultimate, dapat ditumpuk hingga <nobr>3</nobr> lapis."
+      "desc": "Meningkatkan <nobr>10%</nobr> DEF Trailblazer setelah melancarkan Enhanced Basic Attack atau Ultimate, dapat ditumpuk hingga <nobr>3</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

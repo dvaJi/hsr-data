@@ -2,6 +2,7 @@
   "_id": 1215,
   "id": "hanya",
   "name": "Hanya",
+  "description": "Một trong những Phán Quan của Sở Thập Vương Xianzhou Luofu.\nNhận lệnh Thập Vương, chấp chưởng Thiên Bút Tiên Tri, đọc danh sách tội nghiệt và truyền đạt kết quả phán tội.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Gây Sát Thương Vật Lý lên 1 kẻ địch, và khiến kẻ này rơi vào trạng thái \"Sức Nặng\". Sau mỗi 2 lần mục tiêu phe ta thi triển Tấn Công Thường, Chiến Kỹ, Tuyệt Kỹ lên kẻ địch ở trạng thái \"Sức Nặng\", sẽ hồi 1 Điểm Chiến Kỹ.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 17
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Tăng Tốc Độ, tăng Tấn Công cho 1 đồng đội.",
       "type": "Tuyệt Kỹ",
       "tag": "Cường Hóa",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "Khi mục tiêu phe ta thi triển Tấn Công Thường, Chiến Kỹ, Tuyệt Kỹ lên mục tiêu phe địch ở trạng thái \"Sức Nặng\", sát thương gây ra tăng.",
       "type": "Thiên Phú",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1388,15 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào chiến đấu, sẽ kèm theo \"Sức Nặng\" với hiệu ứng giống như Chiến Kỹ cho 1 kẻ địch ngẫu nhiên.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào chiến đấu, sẽ kèm theo \"Sức Nặng\" với hiệu ứng giống như Chiến Kỹ cho 1 kẻ địch ngẫu nhiên.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1356,37 +1411,88 @@
       "_id": 121501,
       "id": "one_heart",
       "name": "Nhất Tâm",
-      "desc": "Khi mục tiêu phe ta đang có hiệu ứng Tuyệt Kỹ tiêu diệt mục tiêu phe địch, Hanya sẽ <u>Ưu Tiên Hành Động</u> <nobr>15%</nobr>, hiệu ứng này mỗi hiệp chỉ có thể kích hoạt <nobr>1</nobr> lần."
+      "desc": "Khi mục tiêu phe ta đang có hiệu ứng Tuyệt Kỹ tiêu diệt mục tiêu phe địch, Hanya sẽ <u>Ưu Tiên Hành Động</u> <nobr>15%</nobr>, hiệu ứng này mỗi hiệp chỉ có thể kích hoạt <nobr>1</nobr> lần.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121502,
       "id": "two_views",
       "name": "Nhị Quan",
-      "desc": "Sau khi thi triển Chiến Kỹ, Tốc Độ tăng <nobr>20%</nobr>, duy trì <nobr>1</nobr> hiệp."
+      "desc": "Sau khi thi triển Chiến Kỹ, Tốc Độ tăng <nobr>20%</nobr>, duy trì <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121503,
       "id": "three_temptations",
       "name": "Tam Trần",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121504,
       "id": "four_truths",
       "name": "Tứ Đế",
-      "desc": "Thời gian duy trì của Tuyệt Kỹ tăng thêm <nobr>1</nobr> hiệp."
+      "desc": "Thời gian duy trì của Tuyệt Kỹ tăng thêm <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121505,
       "id": "five_skandhas",
       "name": "Ngũ Âm",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121506,
       "id": "six_reverences",
       "name": "Lục Chính",
-      "desc": "Hiệu ứng tăng sát thương của Thiên Phú tăng thêm <nobr>10%</nobr>."
+      "desc": "Hiệu ứng tăng sát thương của Thiên Phú tăng thêm <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

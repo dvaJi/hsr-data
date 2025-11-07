@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "万敌",
+  "description": "那沉入迷雾的悬锋，纷乱与战争之城！它的王室流着弑亲的血脉，它的神明以灾厄为名。\n不死的迈德漠斯，离群的狮子，逐猎「纷争」火种的黄金裔。忍受万死，浴血还乡，孤身背负疯狂的宿命\n——弑王成王，弑神登神。征战的铁蹄踏遍荒野，终归要沾上故乡的血。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量虚数属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "消耗生命值，对指定敌方单体造成虚数属性伤害，对相邻目标造成少量虚数属性伤害。",
       "type": "战技",
       "tag": "扩散",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "回复生命值并积攒天赋充能，对指定敌方单体造成大量虚数属性伤害，对相邻目标造成虚数属性伤害，并使目标与相邻目标陷入嘲讽状态。",
       "type": "终结技",
       "tag": "扩散",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "损失生命值时积攒充能，充能达到100时进入【血仇】状态，回复生命值且行动提前。【血仇】状态下当前生命上限提高，防御力保持为0。自身回合开始时自动施放【弑王成王】。\n【血仇】状态期间充能达到150时，万敌立即获得1个额外回合并自动施放【弑神登神】。\n万敌受到致命攻击时退出【血仇】状态。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "额外回合",
+          "desc": "获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "无法战斗状态",
+          "desc": "当我方目标的当前生命值被削减至0时进入的特殊状态，处于该状态的目标无法继续战斗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "牵引一定区域内的敌人并使其陷入晕眩状态。攻击陷入晕眩状态的敌人，进战后对敌方全体造成少量虚数属性伤害，并使目标陷入嘲讽状态。自身积攒天赋充能。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "寒风雕琢不屈的脊梁",
-      "desc": "【弑神登神】对主目标造成的伤害倍率提高<nobr>30%</nobr>，且变成对敌方全体造成等同于主目标伤害倍率的虚数属性伤害。"
+      "desc": "【弑神登神】对主目标造成的伤害倍率提高<nobr>30%</nobr>，且变成对敌方全体造成等同于主目标伤害倍率的虚数属性伤害。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "纷争见证尸骸的喉鸣",
-      "desc": "【血仇】状态期间，万敌造成的伤害无视敌方目标<nobr>15%</nobr>的防御力，且接受治疗后会将<nobr>40%</nobr>的治疗数值转化为充能，累计转化的充能不超过<nobr>40</nobr>点。任意单位行动后重置可累计的充能。"
+      "desc": "【血仇】状态期间，万敌造成的伤害无视敌方目标<nobr>15%</nobr>的防御力，且接受治疗后会将<nobr>40%</nobr>的治疗数值转化为充能，累计转化的充能不超过<nobr>40</nobr>点。任意单位行动后重置可累计的充能。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "荣耀辉映不渝的筵宴",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "号角惊觉缄默的狂狮",
-      "desc": "【血仇】状态期间暴击伤害提高<nobr>30%</nobr>，且受到来自敌方目标的攻击后回复等同于自身<nobr>10%</nobr>生命上限的生命值。"
+      "desc": "【血仇】状态期间暴击伤害提高<nobr>30%</nobr>，且受到来自敌方目标的攻击后回复等同于自身<nobr>10%</nobr>生命上限的生命值。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "兵戈雕刻躯身的烈焰",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "往日攀陟沉积的血山",
-      "desc": "进入战斗时立刻进入【血仇】状态且【弑神登神】所需的充能值降低至<nobr>100</nobr>点。"
+      "desc": "进入战斗时立刻进入【血仇】状态且【弑神登神】所需的充能值降低至<nobr>100</nobr>点。",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

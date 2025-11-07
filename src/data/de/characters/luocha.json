@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "Luocha",
+  "description": "Dieser Händler aus Übersee trägt stets einen Sarg mit sich herum.\nSeine medizinischen Kenntnisse sind hervorragend.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Stellt LP eines Verbündeten wieder her und erhält 1-fach „Abgrundblume“.",
       "type": "Fertigkeit",
       "tag": "Wiederherstellung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "Entfernt 1 Buff von allen Gegnern, fügt ihnen imaginären SCH zu und erhält 1 Stapelung „Abgrundblume“.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Kann eine Kampffähigkeit für eine bestimmte Dauer verstärken. Wenn nicht anders angegeben, können Buffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "Wenn „Abgrundblume“ 2-fach gestapelt wird, wird ein Feld erzeugt. Solange das Feld aktiv ist, werden die LP der Verbündeten wiederhergestellt, nachdem sie einen Angriff ausgeführt haben.",
       "type": "Talent",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik wird zu Beginn des nächsten Kampfs der Effekt des Talents sofort ausgelöst.",
       "type": "Technik",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Taufe der Lebenden",
-      "desc": "Ist das Feld aktiv, wird der ANG aller Verbündeten um <nobr>20%</nobr> erhöht."
+      "desc": "Ist das Feld aktiv, wird der ANG aller Verbündeten um <nobr>20%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "Reine Hingabe",
-      "desc": "Wenn der Effekt der Fertigkeit ausgelöst wird und der LP-Prozentsatz des anvisierten Verbündeten unter <nobr>50</nobr> % liegt, wird Luochas bewirkte Heilung um <nobr>30%</nobr> erhöht. Liegt der LP-Prozentsatz des anvisierten Verbündeten bei <nobr>50</nobr> % oder höher, gewährt Luocha ihm einen Schild, der für <nobr>2</nobr> Rd. SCH in Höhe von <nobr>18%</nobr> von Luochas ANG plus <nobr>240</nobr> absorbiert."
+      "desc": "Wenn der Effekt der Fertigkeit ausgelöst wird und der LP-Prozentsatz des anvisierten Verbündeten unter <nobr>50</nobr> % liegt, wird Luochas bewirkte Heilung um <nobr>30%</nobr> erhöht. Liegt der LP-Prozentsatz des anvisierten Verbündeten bei <nobr>50</nobr> % oder höher, gewährt Luocha ihm einen Schild, der für <nobr>2</nobr> Rd. SCH in Höhe von <nobr>18%</nobr> von Luochas ANG plus <nobr>240</nobr> absorbiert.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "Ein närrischer Versuch",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "Urteil der Dornenkrone",
-      "desc": "Ist das Feld aktiv, werden Gegner geschwächt und sie verursachen <nobr>12%</nobr> weniger SCH."
+      "desc": "Ist das Feld aktiv, werden Gegner geschwächt und sie verursachen <nobr>12%</nobr> weniger SCH.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "Opfermal",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "Staub zu Staub",
-      "desc": "Beim Einsatz des Ultimates besteht eine <u>feste Chance</u> von <nobr>100%</nobr>, den WDS aller Typen von allen Gegnern für <nobr>2</nobr> Rd. um <nobr>20%</nobr> zu reduzieren."
+      "desc": "Beim Einsatz des Ultimates besteht eine <u>feste Chance</u> von <nobr>100%</nobr>, den WDS aller Typen von allen Gegnern für <nobr>2</nobr> Rd. um <nobr>20%</nobr> zu reduzieren.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Feste Chance",
+          "desc": "Die feste Chance wird von keinem Faktor beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

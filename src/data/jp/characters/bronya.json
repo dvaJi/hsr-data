@@ -2,6 +2,7 @@
   "_id": 1101,
   "id": "bronya",
   "name": "ブローニャ",
+  "description": "ベロブルグの「大守護者」の継承者。\n姫としての高貴さと、軍人としての堅実さを兼ね備えている。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "味方単体のデバフを1つ解除し、与ダメージをアップさせ、即座に行動させる。",
       "type": "戦闘スキル",
       "tag": "サポート",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,18 @@
       "simpleDesc": "味方全体の攻撃力と会心ダメージをアップする。",
       "type": "必殺技",
       "tag": "サポート",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "通常攻撃を行った後、自身の次の行動順が早まる。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動前倒し",
+          "desc": "対象の次の行動までの間隔が短くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1455,15 @@
       "simpleDesc": "秘技を使用、次の戦闘開始時、味方全体の攻撃力をアップする。",
       "type": "秘技",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1481,97 @@
       "_id": 110101,
       "id": "hone_your_strength",
       "name": "{RUBY_B#えいき}英気{RUBY_E#}を{RUBY_B#やしな}養{RUBY_E#}う",
-      "desc": "戦闘スキルを発動した時、<nobr>50%</nobr>の<u>固定確率</u>でSPを1回復する、クールタイムは1ターン。"
+      "desc": "戦闘スキルを発動した時、<nobr>50%</nobr>の<u>固定確率</u>でSPを1回復する、クールタイムは1ターン。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定確率",
+          "desc": "どのような要因にも左右されない、固定された確率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110102,
       "id": "quick_march",
       "name": "{RUBY_B#きゅうこうぐん}急行軍{RUBY_E#}",
-      "desc": "戦闘スキルを発動した時、指定された味方は行動した後に速度+<nobr>30%</nobr>、1ターン継続。"
+      "desc": "戦闘スキルを発動した時、指定された味方は行動した後に速度+<nobr>30%</nobr>、1ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110103,
       "id": "bombardment",
       "name": "{RUBY_B#いっせいしゃげき}一斉射撃{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110104,
       "id": "take_by_surprise",
       "name": "{RUBY_B#ふい}不意{RUBY_E#}{RUBY_B#う}打{RUBY_E#}ち",
-      "desc": "他の味方が、弱点が風属性の敵に通常攻撃を行った後、ブローニャは<u>追加攻撃</u>を行い、その敵に通常攻撃ダメージ<nobr>80%</nobr>分の風属性ダメージを与える、この効果はターンが回ってくるたびに1回発動できる。"
+      "desc": "他の味方が、弱点が風属性の敵に通常攻撃を行った後、ブローニャは<u>追加攻撃</u>を行い、その敵に通常攻撃ダメージ<nobr>80%</nobr>分の風属性ダメージを与える、この効果はターンが回ってくるたびに1回発動できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110105,
       "id": "unstoppable",
       "name": "{RUBY_B#む}向{RUBY_E#}かう{RUBY_B#ところてき}所敵{RUBY_E#}なし",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110106,
       "id": "piercing_rainbow",
       "name": "{RUBY_B#きせいかんてん}気勢貫天{RUBY_E#}",
-      "desc": "戦闘スキルが付与する、指定した味方の与ダメージアップ効果の継続時間+<nobr>1</nobr>ターン。"
+      "desc": "戦闘スキルが付与する、指定した味方の与ダメージアップ効果の継続時間+<nobr>1</nobr>ターン。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

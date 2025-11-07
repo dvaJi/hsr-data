@@ -2,6 +2,7 @@
   "_id": 1211,
   "id": "bailu",
   "name": "Bailu",
+  "description": "Tôn trưởng của tộc Vidyadhara ở Xianzhou Luofu, là thầy thuốc có biệt danh \"Long Nữ Trị Liệu\".\nCứu kẻ sắp chết, giúp người bị thương bằng \"cách chữa trị\" mà chỉ có y thuật độc môn và long mạch mới có thể làm được.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lôi cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Hồi HP cho 1 đồng đội, sau đó trị liệu cho đồng đội ngẫu nhiên của phe ta.",
       "type": "Chiến Kỹ",
       "tag": "Hồi Phục",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "Hồi HP cho toàn thể phe ta, đồng thời kèm thêm Sinh Mệnh hoặc kéo dài thời gian duy trì Sinh Mệnh.",
       "type": "Tuyệt Kỹ",
       "tag": "Hồi Phục",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,24 @@
       "simpleDesc": "Mục tiêu có \"Sinh Mệnh\" của phe ta sau khi bị tấn công sẽ hồi HP.\nKhi đồng đội chịu tấn công chí tử, Bailu sẽ hồi ngay HP cho đồng đội đó. Hiệu ứng này có thể kích hoạt 1 lần trong 1 trận.",
       "type": "Thiên Phú",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1491,15 @@
       "simpleDesc": "Dùng Bí Kỹ, khi bắt đầu trận kế tiếp sẽ kèm thêm \"Sinh Mệnh\" cho toàn bộ phe ta.",
       "type": "Bí Kỹ",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1516,79 @@
       "_id": 121101,
       "id": "ambrosial_aqua",
       "name": "Xung Mạch Thánh Thần",
-      "desc": "Khi \"Sinh Mệnh\" kết thúc, nếu HP hiện tại của mục tiêu phe ta bằng với Giới Hạn HP của chính mục tiêu đó, sẽ hồi thêm <nobr>8</nobr> Năng Lượng cho mục tiêu."
+      "desc": "Khi \"Sinh Mệnh\" kết thúc, nếu HP hiện tại của mục tiêu phe ta bằng với Giới Hạn HP của chính mục tiêu đó, sẽ hồi thêm <nobr>8</nobr> Năng Lượng cho mục tiêu.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121102,
       "id": "sylphic_slumber",
       "name": "Rồng Say Ngủ Động Tiên",
-      "desc": "Sau khi thi triển Tuyệt Kỹ, lượng Trị Liệu của Bailu tăng <nobr>15%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Sau khi thi triển Tuyệt Kỹ, lượng Trị Liệu của Bailu tăng <nobr>15%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121103,
       "id": "omniscient_opulence",
       "name": "Nắm Giữ Càn Khôn, Thấu Hiểu Đạo Lý",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121104,
       "id": "evil_excision",
       "name": "Loại Trừ Khẩn Cấp",
-      "desc": "Mỗi 1 lần trị liệu mà Chiến Kỹ mang lại sẽ khiến sát thương gây ra bởi người được trị liệu tăng thêm <nobr>10%</nobr>, tối đa cộng dồn <nobr>3</nobr> tầng, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Mỗi 1 lần trị liệu mà Chiến Kỹ mang lại sẽ khiến sát thương gây ra bởi người được trị liệu tăng thêm <nobr>10%</nobr>, tối đa cộng dồn <nobr>3</nobr> tầng, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121105,
       "id": "waning_worries",
       "name": "Gột Rửa Bụi Trần",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121106,
       "id": "drooling_drop_of_draconic_divinity",
       "name": "Nước Bọt Của Rồng Thần",
-      "desc": "Số lần kích hoạt trị liệu của Bailu lên đồng đội bị tấn công chí tử tăng <nobr>1</nobr> lần."
+      "desc": "Số lần kích hoạt trị liệu của Bailu lên đồng đội bị tấn công chí tử tăng <nobr>1</nobr> lần.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

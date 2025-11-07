@@ -2,6 +2,7 @@
   "_id": 1001,
   "id": "march_7th",
   "name": "March 7th",
+  "description": "Une jeune fille qui sommeillait autrefois dans la glace éternelle et ignore tout de son passé.\nPour découvrir la vérité à propos de ses origines, elle a choisi de voyager à bord de l'Astral Express.\nÀ ce jour, elle s'est inventé pas loin de 67 versions différentes de sa propre vie.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de glace mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Accorde un bouclier à un allié unique.",
       "type": "Compétence",
       "tag": "Défense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,32 @@
       "simpleDesc": "Inflige des DGT de glace à tous les ennemis avec une chance d'appliquer l'effet Gelé.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1145,24 @@
       "simpleDesc": "Lorsqu'un allié qui bénéficie d'un bouclier est attaqué par un ennemi, March 7th lance immédiatement un contre sur l'assaillant, lui infligeant des DGT de glace mineurs.",
       "type": "Talent",
       "tag": "Cible unique",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contre",
+          "desc": "Effet qui se déclenche automatiquement lorsqu'une cible est attaquée et qui inflige une attaque à l'assaillant.\nLes contres sont considérés comme des ATQ de suivi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1402,6 +1465,32 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Il y a #1[i]% de chances de base de geler un ennemi aléatoire pendant #2[i] tour après être entré en combat.\nUn ennemi gelé ne peut pas agir et subit des DGT de glace additionnels équivalents à #3[i]% de l'ATQ de March 7th au début de chaque tour.",
       "simpleDesc": "Engage le combat contre les ennemis avec de fortes chances d'appliquer Gelé à un ennemi aléatoire en début de combat.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1509,88 @@
       "_id": 100101,
       "id": "memory_of_you",
       "name": "Souvenir de toi",
-      "desc": "Chaque fois que l'ultime de March 7th gèle une cible, elle régénère <nobr>6</nobr> points d'énergie."
+      "desc": "Chaque fois que l'ultime de March 7th gèle une cible, elle régénère <nobr>6</nobr> points d'énergie.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100102,
       "id": "memory_of_it",
       "name": "Souvenir de ça",
-      "desc": "Accorde un bouclier équivalent à <nobr>24%</nobr> de la DÉF de March 7th + <nobr>320</nobr> à l'allié dont le pourcentage de PV est le plus bas en entrant en combat, dure <nobr>3</nobr> tours."
+      "desc": "Accorde un bouclier équivalent à <nobr>24%</nobr> de la DÉF de March 7th + <nobr>320</nobr> à l'allié dont le pourcentage de PV est le plus bas en entrant en combat, dure <nobr>3</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100103,
       "id": "memory_of_everything",
       "name": "Souvenir de tout",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100104,
       "id": "never_forfeit_again",
       "name": "Ne plus jamais abandonner",
-      "desc": "L'effet de <u>contre</u> du talent peut être déclenché 1 fois de plus à chaque tour. Les DGT infligés par le <u>contre</u> augmentent d'un montant équivalent à <nobr>30%</nobr> de la DÉF de March 7th."
+      "desc": "L'effet de <u>contre</u> du talent peut être déclenché 1 fois de plus à chaque tour. Les DGT infligés par le <u>contre</u> augmentent d'un montant équivalent à <nobr>30%</nobr> de la DÉF de March 7th.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contre",
+          "desc": "Effet qui se déclenche automatiquement lorsqu'une cible est attaquée et qui inflige une attaque à l'assaillant.\nLes contres sont considérés comme des ATQ de suivi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100105,
       "id": "never_forget_again",
       "name": "Ne plus jamais oublier",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100106,
       "id": "just_like_this_always",
       "name": "Ça se passe comme ça...",
-      "desc": "Les alliés protégés par le bouclier octroyé par la compétence de March 7th restaurent un montant de PV équivalent à <nobr>4%</nobr> de leurs PV max + <nobr>106</nobr> au début de chaque tour."
+      "desc": "Les alliés protégés par le bouclier octroyé par la compétence de March 7th restaurent un montant de PV équivalent à <nobr>4%</nobr> de leurs PV max + <nobr>106</nobr> au début de chaque tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

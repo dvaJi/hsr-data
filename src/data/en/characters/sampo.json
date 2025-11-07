@@ -2,6 +2,7 @@
   "_id": 1108,
   "id": "sampo",
   "name": "Sampo",
+  "description": "A merchant who freely travels between the Overworld and the Underworld.\nHe acts like he is everyone's friend, is enthusiastically humorous, and is good at bantering.",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -243,10 +244,22 @@
       "_id": 110801,
       "id": "dazzling_blades",
       "name": "Dazzling Blades",
-      "desc": "Deals Wind DMG equal to #1[i]% of Sampo's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Wind DMG to a single enemy.",
+      "desc": "Deals Wind DMG equal to #1[i]% of Sampo's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Wind DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 110802,
       "id": "ricochet_love",
       "name": "Ricochet Love",
-      "desc": "Deals Wind DMG equal to #2[i]% of Sampo's ATK to a single enemy, and further deals DMG for #1[i] extra time(s), with each time dealing Wind DMG equal to #2[i]% of Sampo's ATK to a random enemy.",
+      "desc": "Deals Wind DMG equal to #2[i]% of Sampo's ATK to one designated enemy, and further deals DMG for #1[i] extra time(s), with each time dealing Wind DMG equal to #2[i]% of Sampo's ATK to a random enemy.",
       "simpleDesc": "Deals minor Wind DMG to single enemy targets with 5 Bounces in total.",
       "type": "Skill",
       "tag": "Bounce",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,27 @@
       "simpleDesc": "Deals Wind DMG to all enemies, with a high chance to cause increased DoT taken to them.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "After hitting an enemy, there is a chance of inflicting Wind Shear on the target.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1452,32 @@
       "simpleDesc": "Enemies in a set area are Blinded. When initiating battle against a Blinded enemy, there is a high chance to delay all enemies' actions.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Fixed Chance",
+          "desc": "Fixed chance will not be affected by any factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Action Delayed",
+          "desc": "Increases the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,37 +1496,88 @@
       "_id": 110801,
       "id": "rising_love",
       "name": "Rising Love",
-      "desc": "When using Skill, deals DMG for <nobr>1</nobr> extra time(s) to a random enemy."
+      "desc": "When using Skill, deals DMG for <nobr>1</nobr> extra time(s) to a random enemy.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110802,
       "id": "infectious_enthusiasm",
       "name": "Infectious Enthusiasm",
-      "desc": "Defeating an enemy afflicted with Wind Shear has a <nobr>100%</nobr> <u>base chance</u> to inflict all enemies with <nobr>1</nobr> stack(s) of Wind Shear, equivalent to that of Skill."
+      "desc": "Defeating an enemy afflicted with Wind Shear has a <nobr>100%</nobr> <u>base chance</u> to inflict all enemies with <nobr>1</nobr> stack(s) of Wind Shear, equivalent to that of Skill.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110803,
       "id": "big_money",
       "name": "Big Money!",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110804,
       "id": "the_deeper_the_love_the_stronger_the_hate",
       "name": "The Deeper the Love, the Stronger the Hate",
-      "desc": "When Skill hits an enemy with <nobr>5</nobr> or more stack(s) of Wind Shear, the enemy immediately takes <nobr>8%</nobr> of current Wind Shear DMG."
+      "desc": "When Skill hits an enemy with <nobr>5</nobr> or more stack(s) of Wind Shear, the enemy immediately takes <nobr>8%</nobr> of current Wind Shear DMG.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110805,
       "id": "huuuuge_money",
       "name": "Huuuuge Money!",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110806,
       "id": "increased_spending",
       "name": "Increased Spending",
-      "desc": "Talent's Wind Shear DMG multiplier increases by <nobr>15%</nobr>."
+      "desc": "Talent's Wind Shear DMG multiplier increases by <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

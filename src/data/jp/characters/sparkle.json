@@ -2,6 +2,7 @@
   "_id": 1306,
   "id": "sparkle",
   "name": "{RUBY_B#はなび}花火{RUBY_E#}",
+  "description": "「仮面の愚者」の1人。つかみどころがなく、手段を選ばない人物。\n危険な演劇のマスターで、役作りに夢中になっている。千の仮面を持ち、万の顔を演じることができる。\n富、地位、権力…これらは花火にとって重要ではない。彼女を動かせるのは「愉しいこと」だけである。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の量子属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "味方単体の会心ダメージをアップし、その味方の行動順を早める。",
       "type": "戦闘スキル",
       "tag": "サポート",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "SPを回復し、花火の天賦による与ダメージアップ効果を強化する。",
       "type": "必殺技",
       "tag": "サポート",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "最大SPがアップする。味方がSPを消費する時、味方全体の与ダメージをアップする。",
       "type": "天賦",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1473,15 @@
       "simpleDesc": "秘技を使用した後、味方全体は「ミスリード」状態になる。「ミスリード」状態になると敵に発見されなくなり、敵を先制攻撃して戦闘に入る時、SPを回復する。",
       "type": "秘技",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1499,79 @@
       "_id": 130601,
       "id": "suspension_of_disbelief",
       "name": "{RUBY_B#す}捨{RUBY_E#}て{RUBY_B#お}置{RUBY_E#}かれた{RUBY_B#ぎねん}疑念{RUBY_E#}",
-      "desc": "必殺技が付与する「奇怪な謎」の継続時間+1ターン。「奇怪な謎」を持つ味方の攻撃力+<nobr>40%</nobr>。"
+      "desc": "必殺技が付与する「奇怪な謎」の継続時間+1ターン。「奇怪な謎」を持つ味方の攻撃力+<nobr>40%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130602,
       "id": "purely_fictitious",
       "name": "{RUBY_B#いわ}謂{RUBY_E#}れなき{RUBY_B#きょこう}虚構{RUBY_E#}",
-      "desc": "天賦の効果1層につき、味方がダメージを与える時、さらに敵の防御力を<nobr>8%</nobr>無視する。"
+      "desc": "天賦の効果1層につき、味方がダメージを与える時、さらに敵の防御力を<nobr>8%</nobr>無視する。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130603,
       "id": "pipedream",
       "name": "{RUBY_B#むげんほうよう}夢幻泡影{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130604,
       "id": "life_is_a_gamble",
       "name": "{RUBY_B#ぞくせゆうきょう}俗世遊興{RUBY_E#}",
-      "desc": "必殺技がさらにSPを1回復する。天賦の最大SPアップ効果がさらに1アップする。"
+      "desc": "必殺技がさらにSPを1回復する。天賦の最大SPアップ効果がさらに1アップする。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130605,
       "id": "parallax_truth",
       "name": "{RUBY_B#うらおもて}裏表{RUBY_E#}の{RUBY_B#しんそう}真相{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130606,
       "id": "narrative_polysemy",
       "name": "{RUBY_B#かさ}重{RUBY_E#}なる{RUBY_B#かいとう}解答{RUBY_E#}",
-      "desc": "戦闘スキルの会心ダメージアップ効果が、さらに花火の会心ダメージ<nobr>30%</nobr>分アップする。花火が戦闘スキルを発動する時、戦闘スキルの会心ダメージアップ効果が、「奇怪な謎」を持つすべての味方に対して有効になる。花火が必殺技を発動する時、花火の戦闘スキルによる会心ダメージアップ効果を持つ味方が存在する場合、「奇怪な謎」を持つ味方にその効果を拡散する。"
+      "desc": "戦闘スキルの会心ダメージアップ効果が、さらに花火の会心ダメージ<nobr>30%</nobr>分アップする。花火が戦闘スキルを発動する時、戦闘スキルの会心ダメージアップ効果が、「奇怪な謎」を持つすべての味方に対して有効になる。花火が必殺技を発動する時、花火の戦闘スキルによる会心ダメージアップ効果を持つ味方が存在する場合、「奇怪な謎」を持つ味方にその効果を拡散する。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

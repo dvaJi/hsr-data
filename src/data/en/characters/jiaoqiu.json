@@ -2,6 +2,7 @@
   "_id": 1218,
   "id": "jiaoqiu",
   "name": "Jiaoqiu",
+  "description": "A foxian healer and counselor from the Xianzhou Yaoqing. Often greets people with a smile on his face and a scheme in his heart.\nBorn into a prestigious Alchemy Commission family, he once withdrew from practicing medicine due to a broken heart. However, he returned to the field to treat \"the Merlin's Claw,\" General Feixiao.\nSkilled in the study of alchemical prescription that views food as medicine, especially those that induce a sensation of spiciness. He invented a cauldron-based medicinal formula known as the \"nine-squared grid.\"",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -244,9 +245,18 @@
       "id": "heart_afire",
       "name": "Heart Afire",
       "desc": "Deals Fire DMG equal to #1[i]% of Jiaoqiu's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Fire DMG to a single enemy.",
+      "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -416,9 +426,27 @@
       "id": "scorch_onslaught",
       "name": "Scorch Onslaught",
       "desc": "Deals Fire DMG equal to #1[i]% of Jiaoqiu's ATK to one designated enemy target and Fire DMG equal to #2[i]% of Jiaoqiu's ATK to adjacent targets, with a #3[i]% base chance to inflict 1 stack of \"Ashen Roast\" on the primary target.",
-      "simpleDesc": "Deals Fire DMG to a single enemy and minor Fire DMG to adjacent targets, with a high chance to inflict 1 stack of Ashen Roast on the primary target.",
+      "simpleDesc": "Deals Fire DMG to one enemy and minor Fire DMG to adjacent targets, with a high chance to inflict 1 stack of \"Ashen Roast\" on the primary target.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -743,6 +771,32 @@
       "simpleDesc": "Sets the number of \"Ashen Roast\" stacks on enemy targets to the highest number of \"Ashen Roast\" stacks present on the battlefield. Then, activates a Zone and deals Fire DMG to all enemies. While inside the Zone, enemy targets receive increased Ultimate DMG, with a chance of being inflicted with 1 stack of Ashen Roast when taking action.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1151,24 @@
       "simpleDesc": "When attacking with Basic ATK, Skill, or Ultimate, there is a high chance to inflict 1 stack of \"Ashen Roast\" on the target, causing the enemy to take increased DMG and also be considered as Burned at the same time.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1466,6 +1538,24 @@
       "simpleDesc": "Creates a Special Dimension. After entering combat with enemies in this dimension, deals minor Fire DMG to all enemies, with a high chance of applying 1 \"Ashen Roast\" stack.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1484,37 +1574,79 @@
       "_id": 121801,
       "id": "pentapathic_transference",
       "name": "Pentapathic Transference",
-      "desc": "Allies deal <nobr>40%</nobr> increased DMG to enemy targets afflicted with Ashen Roast. Whenever inflicting Ashen Roast on an enemy target via triggering the Talent's effect, additionally increases the number of \"Ashen Roast\" stacks applied this time by <nobr>1</nobr>."
+      "desc": "Allies deal <nobr>40%</nobr> increased DMG to enemy targets afflicted with Ashen Roast. Whenever inflicting Ashen Roast on an enemy target via triggering the Talent's effect, additionally increases the number of \"Ashen Roast\" stacks applied this time by <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121802,
       "id": "from_savor_comes_suffer",
       "name": "From Savor Comes Suffer",
-      "desc": "When an enemy target is afflicted with Ashen Roast, increases the multiplier for the Fire DoT dealt by Ashen Roast to this target by <nobr>300%</nobr>."
+      "desc": "When an enemy target is afflicted with Ashen Roast, increases the multiplier for the Fire DoT dealt by Ashen Roast to this target by <nobr>300%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121803,
       "id": "flavored_euphony_reigns_supreme",
       "name": "Flavored Euphony Reigns Supreme",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121804,
       "id": "leisure_in_luster_out",
       "name": "Leisure In, Luster Out",
-      "desc": "When the Zone exists, reduces enemy target's ATK by <nobr>15%</nobr>."
+      "desc": "When the Zone exists, reduces enemy target's ATK by <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121805,
       "id": "duel_in_dawn_dash_in_dusk",
       "name": "Duel in Dawn, Dash in Dusk",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121806,
       "id": "nonamorphic_pyrobind",
       "name": "Nonamorphic Pyrobind",
-      "desc": "When an enemy target gets defeated, their accumulated \"Ashen Roast\" stacks will transfer to the enemy with the lowest number of \"Ashen Roast\" stacks on the battlefield. The maximum stack limit of Ashen Roast increases to <nobr>9</nobr>, and each \"Ashen Roast\" stack reduces the target's All-Type RES by <nobr>3%</nobr>."
+      "desc": "When an enemy target gets defeated, their accumulated \"Ashen Roast\" stacks will transfer to the enemy with the lowest number of \"Ashen Roast\" stacks on the battlefield. The maximum stack limit of Ashen Roast increases to <nobr>9</nobr>, and each \"Ashen Roast\" stack reduces the target's All-Type RES by <nobr>3%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

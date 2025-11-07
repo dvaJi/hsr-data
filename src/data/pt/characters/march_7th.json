@@ -2,6 +2,7 @@
   "_id": 1001,
   "id": "march_7th",
   "name": "7 de Março",
+  "description": "Uma garota que outrora dormira sob o gelo eterno e que não sabe nada sobre seu passado.\nPara descobrir a verdade acerca de sua origem, ela decidiu viajar com o Expresso Astral.\nAté agora, ela já criou quase 67 versões diferentes de sua história de vida.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Gelo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Aplica um Escudo em um único aliado.",
       "type": "Perícia",
       "tag": "Defesa",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,32 @@
       "simpleDesc": "Causa Dano de Gelo a todos os inimigos, com uma chance de aplicar o efeito de Congelamento a eles.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1145,24 @@
       "simpleDesc": "Depois que um aliado com Escudo é atacado por um inimigo, 7 de Março realiza imediatamente um Contra-Ataque contra o atacante, causando Dano de Gelo leve.",
       "type": "Talento",
       "tag": "Alvo Único",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contra-Ataque",
+          "desc": "Um efeito que é acionado automaticamente quando o alvo é atacado, liberando um ataque adicional no atacante.\nContra-Ataques também são considerados <u>Ataques Extras</u>.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1402,6 +1465,32 @@
       "desc": "Ataca o inimigo imediatamente. Após entrar na batalha, tem #1[i]% de chance-base de causar Congelamento a um inimigo aleatório por #2[i] rodada(s).\nDurante o Congelamento, o inimigo não pode agir e recebe #3[i]% do ATQ de 7 de Março como Dano de Gelo Adicional no início de cada rodada.",
       "simpleDesc": "Ataca o inimigo. Depois de entrar em batalha, existe uma alta chance de infligir Congelamento em um inimigo aleatório.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1509,88 @@
       "_id": 100101,
       "id": "memory_of_you",
       "name": "Memória de Você",
-      "desc": "Sempre que a Perícia Suprema de 7 de Março Congelar um alvo, ela regenera <nobr>6</nobr> de Energia."
+      "desc": "Sempre que a Perícia Suprema de 7 de Março Congelar um alvo, ela regenera <nobr>6</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100102,
       "id": "memory_of_it",
       "name": "Memória de Ser",
-      "desc": "Ao entrar na batalha, concede um Escudo igual a <nobr>24%</nobr> da DEF de 7 de Março + <nobr>320</nobr> ao aliado com a menor porcentagem de PV, durando por <nobr>3</nobr> rodada(s)."
+      "desc": "Ao entrar na batalha, concede um Escudo igual a <nobr>24%</nobr> da DEF de 7 de Março + <nobr>320</nobr> ao aliado com a menor porcentagem de PV, durando por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100103,
       "id": "memory_of_everything",
       "name": "Memória de Tudo",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100104,
       "id": "never_forfeit_again",
       "name": "Nunca se Renda de Novo",
-      "desc": "O efeito de <u>Contra-Ataque</u> do Talento pode ser ativado mais 1 vez em cada rodada. O Dano causado por <u>Contra-Ataques</u> aumenta em <nobr>30%</nobr> da DEF de 7 de Março."
+      "desc": "O efeito de <u>Contra-Ataque</u> do Talento pode ser ativado mais 1 vez em cada rodada. O Dano causado por <u>Contra-Ataques</u> aumenta em <nobr>30%</nobr> da DEF de 7 de Março.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contra-Ataque",
+          "desc": "Um efeito que é acionado automaticamente quando o alvo é atacado, liberando um ataque adicional no atacante.\nContra-Ataques também são considerados <u>Ataques Extras</u>.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100105,
       "id": "never_forget_again",
       "name": "Nunca se Esqueça de Novo",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100106,
       "id": "just_like_this_always",
       "name": "É Sempre Assim...",
-      "desc": "Aliados sob a proteção do Escudo concedido pela Perícia restauram PV equivalentes a <nobr>4%</nobr> de seus PV máximos + <nobr>106</nobr> no início de cada rodada."
+      "desc": "Aliados sob a proteção do Escudo concedido pela Perícia restauram PV equivalentes a <nobr>4%</nobr> de seus PV máximos + <nobr>106</nobr> no início de cada rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

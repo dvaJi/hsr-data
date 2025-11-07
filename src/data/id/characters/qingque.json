@@ -2,6 +2,7 @@
   "_id": 1201,
   "id": "qingque",
   "name": "Qingque",
+  "description": "Diviner dari Divination Commission di Xianzhou \"Luofu\", dan juga seorang pengelola perpustakaan.\nKarena suka bermalas-malasan, dia diturunkan pangkatnya menjadi \"penjaga pintu\".",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Melemparkan 1 lembar Jade Tile dan mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Menarik Jade Tile, meningkatkan DMG yang diakibatkan dirinya, dan giliran kali ini tidak akan berakhir.",
       "type": "Skill",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Mengakibatkan Quantum DMG pada seluruh musuh, serta mendapatkan 4 lembar Jade Tile dengan pola yang sama.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Mengambil Jade Tile saat giliran rekan tim dimulai. Saat giliran dirinya dimulai, jika memiliki 4 Jade Tile dengan pola yang sama, kartu akan dikonsumsi dan Basic Attack kali ini akan mengalami peningkatan. ATK dirinya juga akan meningkat.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1313,6 +1359,15 @@
       "simpleDesc": "Setelah menggunakan Technique, akan mengambil kartu saat memasuki pertempuran berikutnya.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,96 @@
       "_id": 120101,
       "id": "rise_through_the_tiles",
       "name": "Rise Through the Tiles",
-      "desc": "Meningkatkan <nobr>10%</nobr> DMG yang diakibatkan Ultimate."
+      "desc": "Meningkatkan <nobr>10%</nobr> DMG yang diakibatkan Ultimate.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120102,
       "id": "sleep_on_the_tiles",
       "name": "Sleep on the Tiles",
-      "desc": "Segera memulihkan <nobr>1</nobr> Energy Qingque setiap Qingque memicu pengambilan kartu."
+      "desc": "Segera memulihkan <nobr>1</nobr> Energy Qingque setiap Qingque memicu pengambilan kartu.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120103,
       "id": "read_between_the_tiles",
       "name": "Read Between the Tiles",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120104,
       "id": "right_on_the_tiles",
       "name": "Right on the Tiles",
-      "desc": "Setelah melancarkan Skill, memiliki <nobr>24%</nobr> <u>peluang tetap</u> untuk memperoleh status \"Self-Sufficer\" hingga akhir giliran saat ini.\nSetelah melancarkan Basic Attack atau Enhanced Basic Attack dalam status \"Self-Sufficer\", Qingque akan langsung melancarkan 1 <u>Serangan Lanjutan</u> yang mengakibatkan Quantum DMG pada target sebesar <nobr>100%</nobr> dari Basic Attack DMG atau Enhanced Basic Attack DMG."
+      "desc": "Setelah melancarkan Skill, memiliki <nobr>24%</nobr> <u>peluang tetap</u> untuk memperoleh status \"Self-Sufficer\" hingga akhir giliran saat ini.\nSetelah melancarkan Basic Attack atau Enhanced Basic Attack dalam status \"Self-Sufficer\", Qingque akan langsung melancarkan 1 <u>Serangan Lanjutan</u> yang mengakibatkan Quantum DMG pada target sebesar <nobr>100%</nobr> dari Basic Attack DMG atau Enhanced Basic Attack DMG.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Peluang Tetap",
+          "desc": "Peluang tetap yang tidak akan terpengaruh oleh faktor apa pun.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120105,
       "id": "gambit_for_the_tiles",
       "name": "Gambit for the Tiles",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120106,
       "id": "prevail_beyond_the_tiles",
       "name": "Prevail Beyond the Tiles",
-      "desc": "Memulihkan 1 Poin Skill setelah melancarkan Enhanced Basic Attack."
+      "desc": "Memulihkan 1 Poin Skill setelah melancarkan Enhanced Basic Attack.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1212,
   "id": "jingliu",
   "name": "Jingliu",
+  "description": "Sie war einst Schwertmeisterin der Luofu und hat die Legenden von der Unbesiegbarkeit der Wolkenritter erschaffen.\nDoch jetzt ist ihr Name aus den Annalen gelöscht worden. Sie gilt als Verräterin der Xianzhou und wandelt auf dem schmalen Grat zwischen Vernunft und Mara.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem anvisierten Gegner geringen Eis-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Fügt einem anvisierten Gegner Eis-SCH zu und erhält 1 Stapelung „Lunation“.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Fügt einem anvisierten Gegner massiven Eis-SCH und angrenzenden Einheiten Eis-SCH zu. Erhält 1 Stapelung „Lunation“.",
       "type": "Ultimate",
       "tag": "Ausdehnung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,15 @@
       "simpleDesc": "Wenn Jingliu über #5[i] Stapelungen „Lunation“ verfügt, tritt sie in den Status „Seelenwanderung“ ein, wobei ihre Aktion um 100 % vorgezogen und ihre KRIT-Rate erhöht wird. Außerdem erhält sie eine verstärkte Fertigkeit. Beim Angriff verbraucht sie die LP ihrer Teammitglieder und ihr ANG wird basierend auf den insgesamt verbrauchten Menge der LP erhöht. Wenn keine Stapelungen von Lunation vorhanden sind, wird der Status Seelenwanderung beendet.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1497,32 @@
       "simpleDesc": "Erzeugt eine spezielle Dimension um Jingliu herum. Gegner innerhalb dieser Dimension werden eingefroren. Nach Kampfeintritt mit Gegnern in dieser Dimension erhält Jingliu Energie, 1 Stapelung „Lunation“ und hat eine hohe Chance, Gegner einzufrieren.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1472,37 +1544,79 @@
       "_id": 121201,
       "id": "moon_crashes_tianguan_gate",
       "name": "Mondsturm auf die Himmelspforte",
-      "desc": "Beim Einsatz des Ultimates oder der verstärkten Fertigkeit wird Jinglius KRIT-SCH für <nobr>1</nobr> Rd. um <nobr>24%</nobr> erhöht. Wenn nur ein Gegner angegriffen wird, wird dem Ziel zusätzlich 1-mal Eis-SCH in Höhe von <nobr>100%</nobr> von Jinglius ANG zugefügt."
+      "desc": "Beim Einsatz des Ultimates oder der verstärkten Fertigkeit wird Jinglius KRIT-SCH für <nobr>1</nobr> Rd. um <nobr>24%</nobr> erhöht. Wenn nur ein Gegner angegriffen wird, wird dem Ziel zusätzlich 1-mal Eis-SCH in Höhe von <nobr>100%</nobr> von Jinglius ANG zugefügt.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121202,
       "id": "crescent_shadows_qixing_dipper",
       "name": "Neumondschatten über Himmelswagen",
-      "desc": "Erhöht nach dem Einsatz des Ultimates den SCH der nächsten verstärkten Fertigkeit um <nobr>80%</nobr>."
+      "desc": "Erhöht nach dem Einsatz des Ultimates den SCH der nächsten verstärkten Fertigkeit um <nobr>80%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121203,
       "id": "halfmoon_gapes_mercurial_haze",
       "name": "Lunare Sehnsucht",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121204,
       "id": "lunarlance_shines_skyward_dome",
       "name": "Hochgehaltenes Mondlicht",
-      "desc": "Im Status „Seelenwanderung“ wird der ANG, der durch den Verbrauch der LP von Teammitgliedern erhalten wird, zusätzlich um <nobr>90%</nobr> der insgesamt verbrauchten Menge der LP aller Verbündeten erhöht. Die Obergrenze für den auf diese Weise verstärkten ANG wird um <nobr>30%</nobr> erhöht."
+      "desc": "Im Status „Seelenwanderung“ wird der ANG, der durch den Verbrauch der LP von Teammitgliedern erhalten wird, zusätzlich um <nobr>90%</nobr> der insgesamt verbrauchten Menge der LP aller Verbündeten erhöht. Die Obergrenze für den auf diese Weise verstärkten ANG wird um <nobr>30%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121205,
       "id": "night_shades_astral_radiance",
       "name": "Obskurität über den Sternen",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121206,
       "id": "eclipse_hollows_corporeal_husk",
       "name": "Finsternis zum Nichts",
-      "desc": "Wenn Jingliu in den Status „Seelenwanderung“ eintritt, wird das Stapelungslimit von „Lunation“ um 1 erhöht und sie erhält <nobr>1</nobr> Stapelung Lunation. Im Status Seelenwanderung wird ihr KRIT-SCH um <nobr>50%</nobr> erhöht."
+      "desc": "Wenn Jingliu in den Status „Seelenwanderung“ eintritt, wird das Stapelungslimit von „Lunation“ um 1 erhöht und sie erhält <nobr>1</nobr> Stapelung Lunation. Im Status Seelenwanderung wird ihr KRIT-SCH um <nobr>50%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1307,
   "id": "black_swan",
   "name": "黑天鵝",
+  "description": "流光憶庭的憶者，慵懶神秘的占卜師。\n耐心聆聽他人「記憶」，諸般命運盡在掌握。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,32 @@
       "simpleDesc": "對敵方單體造成少量風屬性傷害，有機率對目標施加【奧跡】。攻擊陷入風化、裂傷、灼燒、觸電狀態的目標後，分別有機率額外施加【奧跡】。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奧跡",
+          "desc": "【奧跡】屬於持續傷害類負面狀態，該狀態無法解除。\n處於【奧跡】狀態時，也會視為陷入了風化狀態。【奧跡】狀態下，目標每回合開始受到風屬性持續傷害。\n施加【奧跡】狀態時無視目標的風化抵抗、裂傷抵抗、灼燒抵抗、觸電抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -439,6 +466,32 @@
       "simpleDesc": "對敵方單體及其相鄰目標造成少量風屬性傷害，有高機率對目標施加【奧跡】，並有高機率使目標防禦力降低。",
       "type": "戰技",
       "tag": "擴散",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奧跡",
+          "desc": "【奧跡】屬於持續傷害類負面狀態，該狀態無法解除。\n處於【奧跡】狀態時，也會視為陷入了風化狀態。【奧跡】狀態下，目標每回合開始受到風屬性持續傷害。\n施加【奧跡】狀態時無視目標的風化抵抗、裂傷抵抗、灼燒抵抗、觸電抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -793,6 +846,24 @@
       "simpleDesc": "對敵方全體施加【揭露】狀態，使目標回合內受到的傷害提高，並將【奧跡】視為風化、裂傷、灼燒、觸電狀態，此外使【奧跡】下一次回合開始造成傷害後不重置層數。對敵方全體造成風屬性傷害。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10013071,
+          "name": "奧跡",
+          "desc": "【奧跡】屬於持續傷害類負面狀態，該狀態無法解除。\n處於【奧跡】狀態時，也會視為陷入了風化狀態。【奧跡】狀態下，目標每回合開始受到風屬性持續傷害。\n施加【奧跡】狀態時無視目標的風化抵抗、裂傷抵抗、灼燒抵抗、觸電抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1132,6 +1203,32 @@
       "simpleDesc": "敵方目標每回合開始受到持續傷害時，有機率陷入【奧跡】，在回合開始時受到風屬性持續傷害，並且黑天鵝根據【奧跡】層數觸發額外效果。",
       "type": "天賦",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奧跡",
+          "desc": "【奧跡】屬於持續傷害類負面狀態，該狀態無法解除。\n處於【奧跡】狀態時，也會視為陷入了風化狀態。【奧跡】狀態下，目標每回合開始受到風屬性持續傷害。\n施加【奧跡】狀態時無視目標的風化抵抗、裂傷抵抗、灼燒抵抗、觸電抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1531,6 +1628,32 @@
       "simpleDesc": "使用秘技後，下一次戰鬥開始時有高機率對敵方每個單體目標施加【奧跡】，重複數次直到施加失敗。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奧跡",
+          "desc": "【奧跡】屬於持續傷害類負面狀態，該狀態無法解除。\n處於【奧跡】狀態時，也會視為陷入了風化狀態。【奧跡】狀態下，目標每回合開始受到風屬性持續傷害。\n施加【奧跡】狀態時無視目標的風化抵抗、裂傷抵抗、灼燒抵抗、觸電抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1548,37 +1671,121 @@
       "_id": 130701,
       "id": "seven_pillars_of_wisdom",
       "name": "三磅石，七階柱",
-      "desc": "當黑天鵝處於可戰鬥狀態時，處於風化、裂傷、灼燒、觸電狀態下的敵方目標對應的風、物理、火、雷屬性抗性分別降低<nobr>25%</nobr>。"
+      "desc": "當黑天鵝處於可戰鬥狀態時，處於風化、裂傷、灼燒、觸電狀態下的敵方目標對應的風、物理、火、雷屬性抗性分別降低<nobr>25%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130702,
       "id": "weep_not_for_me_my_lamb",
       "name": "羔羊，請勿為我慟哭",
-      "desc": "【<u>奧跡</u>】狀態下的敵方目標被消滅時，有<nobr>100%</nobr>的<u>基礎機率</u>使相鄰目標陷入<nobr>6</nobr>層【<u>奧跡</u>】。"
+      "desc": "【<u>奧跡</u>】狀態下的敵方目標被消滅時，有<nobr>100%</nobr>的<u>基礎機率</u>使相鄰目標陷入<nobr>6</nobr>層【<u>奧跡</u>】。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奧跡",
+          "desc": "【奧跡】屬於持續傷害類負面狀態，該狀態無法解除。\n處於【奧跡】狀態時，也會視為陷入了風化狀態。【奧跡】狀態下，目標每回合開始受到風屬性持續傷害。\n施加【奧跡】狀態時無視目標的風化抵抗、裂傷抵抗、灼燒抵抗、觸電抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130703,
       "id": "as_above_so_below",
       "name": "上界如此，下界亦然",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130704,
       "id": "in_tears_we_gift",
       "name": "淚水，亦是禮物",
-      "desc": "【揭露】狀態下，敵方目標效果抗性降低<nobr>10%</nobr>，且每回合開始時或被消滅時使黑天鵝恢復<nobr>8</nobr>點能量。能量恢復效果在【揭露】狀態持續時間內最多觸發1次，再次陷入【揭露】狀態會重置觸發次數。"
+      "desc": "【揭露】狀態下，敵方目標效果抗性降低<nobr>10%</nobr>，且每回合開始時或被消滅時使黑天鵝恢復<nobr>8</nobr>點能量。能量恢復效果在【揭露】狀態持續時間內最多觸發1次，再次陷入【揭露】狀態會重置觸發次數。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130705,
       "id": "linnutee_flyway",
       "name": "候鳥之路",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130706,
       "id": "pantheon_merciful_masses_pitiful",
       "name": "萬神皆善，苦役者未知",
-      "desc": "當敵方目標受到黑天鵝的隊友的攻擊時，黑天鵝有<nobr>65%</nobr>的<u>基礎機率</u>使目標陷入1層【<u>奧跡</u>】。\n每當黑天鵝使敵方目標陷入【<u>奧跡</u>】時，有<nobr>50%</nobr>的<u>固定機率</u>使本次疊加的【<u>奧跡</u>】層數額外提高<nobr>1</nobr>層。"
+      "desc": "當敵方目標受到黑天鵝的隊友的攻擊時，黑天鵝有<nobr>65%</nobr>的<u>基礎機率</u>使目標陷入1層【<u>奧跡</u>】。\n每當黑天鵝使敵方目標陷入【<u>奧跡</u>】時，有<nobr>50%</nobr>的<u>固定機率</u>使本次疊加的【<u>奧跡</u>】層數額外提高<nobr>1</nobr>層。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奧跡",
+          "desc": "【奧跡】屬於持續傷害類負面狀態，該狀態無法解除。\n處於【奧跡】狀態時，也會視為陷入了風化狀態。【奧跡】狀態下，目標每回合開始受到風屬性持續傷害。\n施加【奧跡】狀態時無視目標的風化抵抗、裂傷抵抗、灼燒抵抗、觸電抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000002,
+          "name": "固定機率",
+          "desc": "不會被任何因素影響的固定機率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

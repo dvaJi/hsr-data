@@ -2,6 +2,7 @@
   "_id": 1222,
   "id": "lingsha",
   "name": "Lingsha",
+  "description": "La nouvelle maîtresse des creusets de la Commission d'alchimie du Luofu de Xianzhou. Une guérisseuse vidyadharienne intelligente et vive d'esprit.\nSon odorat particulièrement développé lui est très utile pour poser son diagnostic, et elle a recours à l'encens pour apaiser l'esprit des gens.\nElle excelle dans l'art de gérer les relations sociales complexes. Même dans les moments de rage intérieure, elle garde une expression imperturbable et sereine.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Inflige des DGT de feu mineurs à tous les ennemis tout en restaurant des PV à tous les alliés. D'autre part, avance l'action de Fuyuan.",
       "type": "Compétence",
       "tag": "ZdE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,32 @@
       "simpleDesc": "Augmente les DGT de rupture subis par tous les ennemis, et leur inflige des DGT de feu, tout en restaurant des PV à tous les alliés. D'autre part, avance l'action de Fuyuan.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "DGT de rupture",
+          "desc": "Les DGT de rupture augmentent avec l'effet de Rupture, la robustesse max de la cible et le niveau du personnage.\nLes DGT de rupture ne peuvent pas infliger de coup critique et ne sont pas affectés par les effets d'augmentation de DGT.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,40 @@
       "simpleDesc": "Utiliser la compétence invoque Fuyuan. Lors de son action, Fuyuan lance une ATQ de suivi et inflige des DGT de feu mineurs à tous les ennemis. D'autre part, inflige des DGT de feu mineurs à un ennemi unique aléatoire, en priorisant les cibles dont la robustesse est supérieure à 0 et qui ont une Faiblesse au feu. Dissipe 1 malus à tous les alliés et restaure des PV.\nUtiliser la compétence de façon répétée augmente le nombre d'actions de Fuyuan.",
       "type": "Talent",
       "tag": "ZdE",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Malus",
+          "desc": "Les malus sont des effets de statut négatifs qui affaiblissent les unités. Sauf indication contraire, les malus peuvent être dissipés.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1614,15 @@
       "simpleDesc": "Invoque immédiatement Fuyuan au début du prochain combat après avoir utilisé la technique, et augmente les DGT de rupture subis par tous les ennemis.",
       "type": "Technique",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1639,79 @@
       "_id": 122201,
       "id": "bloom_on_vileward_bouquet",
       "name": "Fumée destructrice",
-      "desc": "L'efficacité de Rupture de faiblesse de Lingsha augmente de <nobr>50%</nobr>. Lorsqu'une unité ennemie subit une Rupture de faiblesse, sa DÉF est réduite de <nobr>20%</nobr>."
+      "desc": "L'efficacité de Rupture de faiblesse de Lingsha augmente de <nobr>50%</nobr>. Lorsqu'une unité ennemie subit une Rupture de faiblesse, sa DÉF est réduite de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122202,
       "id": "leisure_in_carmine_smokeveil",
       "name": "Volutes écarlates",
-      "desc": "L'effet de Rupture de tous les alliés augmente de <nobr>40%</nobr> pendant <nobr>3</nobr> tours lors de l'utilisation de l'ultime."
+      "desc": "L'effet de Rupture de tous les alliés augmente de <nobr>40%</nobr> pendant <nobr>3</nobr> tours lors de l'utilisation de l'ultime.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122203,
       "id": "shine_of_floral_wick",
       "name": "Mèche parfumée",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122204,
       "id": "redolence_from_canopied_banquet",
       "name": "Senteurs feutrées",
-      "desc": "Lors de l'action de Fuyuan, restaure un montant de PV équivalent à <nobr>40%</nobr> de l'ATQ de Lingsha à la cible alliée ayant les PV les plus bas actuellement."
+      "desc": "Lors de l'action de Fuyuan, restaure un montant de PV équivalent à <nobr>40%</nobr> de l'ATQ de Lingsha à la cible alliée ayant les PV les plus bas actuellement.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122205,
       "id": "poise_atop_twists_and_turns",
       "name": "Plénitude intérieure",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122206,
       "id": "arcadia_under_deep_seclusion",
       "name": "Paradis de l'isolement",
-      "desc": "Réduit toutes les RÉS de type de tous les ennemis de <nobr>20%</nobr> lorsque Fuyuan est sur le champ de bataille. Fuyuan inflige <nobr>4</nobr> instances de DGT supplémentaires lors de son attaque, chacune infligeant des DGT de feu équivalents à <nobr>50%</nobr> de l'ATQ de Lingsha et réduisant la robustesse d'une unité ennemie aléatoire de <nobr>5</nobr>. Les cibles dont la robustesse est supérieure à 0 et qui ont une Faiblesse au feu sont touchées en priorité."
+      "desc": "Réduit toutes les RÉS de type de tous les ennemis de <nobr>20%</nobr> lorsque Fuyuan est sur le champ de bataille. Fuyuan inflige <nobr>4</nobr> instances de DGT supplémentaires lors de son attaque, chacune infligeant des DGT de feu équivalents à <nobr>50%</nobr> de l'ATQ de Lingsha et réduisant la robustesse d'une unité ennemie aléatoire de <nobr>5</nobr>. Les cibles dont la robustesse est supérieure à 0 et qui ont une Faiblesse au feu sont touchées en priorité.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

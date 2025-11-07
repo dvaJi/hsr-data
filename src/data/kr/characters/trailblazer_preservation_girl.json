@@ -2,6 +2,7 @@
   "_id": 8004,
   "id": "trailblazer_preservation_girl",
   "name": "개척자 보존",
+  "description": "은하열차에 탑승한 {F#소녀}{M#소년}.\n스텔라론이 가져온 위기를 해결하기 위해, 은하열차와의 동행을 선택한다",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 화염 속성 피해를 주고 [불타는 의지]를 획득한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "자신이 받는 피해가 감소하고 [불타는 의지]를 획득하며, 높은 확률로 모든 적을 도발 상태에 빠트린다",
       "type": "전투 스킬",
       "tag": "방어",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +771,18 @@
       "simpleDesc": "모든 적에게 화염 속성 피해를 주고, 다음번 일반 공격을 강화한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,15 @@
       "simpleDesc": "피격 시 [불타는 의지]를 중첩한다. [불타는 의지]가 4스택 이상일 시 일반 공격이 강화된다. 일반 공격, 전투 스킬, 필살기 발동 후 모든 아군에게 실드를 제공한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,6 +1428,15 @@
       "simpleDesc": "비술 사용 후 다음 전투 시작 시 자신에게 실드를 제공한다",
       "type": "비술",
       "tag": "방어",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1455,79 @@
       "_id": 800401,
       "id": "earthshaking_resonance",
       "name": "대지의 울부짖음",
-      "desc": "일반 공격 발동 시 추가로 개척자 방어력 <nobr>25%</nobr>만큼의 화염 속성 피해를 가한다. 일반 공격 강화 발동 시 추가로 개척자 방어력 <nobr>50%</nobr>만큼의 화염 속성 피해를 가한다"
+      "desc": "일반 공격 발동 시 추가로 개척자 방어력 <nobr>25%</nobr>만큼의 화염 속성 피해를 가한다. 일반 공격 강화 발동 시 추가로 개척자 방어력 <nobr>50%</nobr>만큼의 화염 속성 피해를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800402,
       "id": "timedefying_tenacity",
       "name": "옛 한철의 굳건함",
-      "desc": "특성 발동 시 모든 아군에게 제공한 실드가 개척자 방어력 <nobr>2%</nobr>+<nobr>27</nobr>만큼의 피해를 추가로 상쇄할 수 있다"
+      "desc": "특성 발동 시 모든 아군에게 제공한 실드가 개척자 방어력 <nobr>2%</nobr>+<nobr>27</nobr>만큼의 피해를 추가로 상쇄할 수 있다",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800403,
       "id": "trailblazing_blueprint",
       "name": "미래를 축조하는 청사진",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800404,
       "id": "nationbuilding_oath",
       "name": "문명에 머무는 맹세",
-      "desc": "전투 시작 시 [불타는 의지]를 즉시 <nobr>4</nobr>스택 획득한다"
+      "desc": "전투 시작 시 [불타는 의지]를 즉시 <nobr>4</nobr>스택 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800405,
       "id": "spiritwarming_flame",
       "name": "불을 지필 용기",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800406,
       "id": "cityforging_bulwarks",
       "name": "영원토록 굳건한 성벽",
-      "desc": "일반 공격 강화 혹은 필살기 발동 후 개척자의 방어력이 <nobr>10%</nobr> 증가한다. 최대 중첩수: <nobr>3</nobr>스택"
+      "desc": "일반 공격 강화 혹은 필살기 발동 후 개척자의 방어력이 <nobr>10%</nobr> 증가한다. 최대 중첩수: <nobr>3</nobr>스택",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

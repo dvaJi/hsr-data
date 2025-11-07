@@ -2,6 +2,7 @@
   "_id": 8008,
   "id": "trailblazer_remembrance_girl",
   "name": "開拓者 記憶",
+  "description": "登上星穹列車的{F#少女}{M#少年}。\n為了消除星核帶來的危機，選擇與星穹列車同行。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量冰屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "召喚憶靈迷迷。若迷迷已在場，為迷迷回復生命值，並使迷迷獲得充能。",
       "type": "戰技",
       "tag": "召喚",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召喚憶靈",
+          "desc": "將憶靈召喚到場上。若憶靈已在場，解除憶靈陷入的所有控制類負面狀態。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "召喚憶靈迷迷。使迷迷獲得充能，隨後使迷迷對敵方全體造成大量冰屬性傷害。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召喚憶靈",
+          "desc": "將憶靈召喚到場上。若憶靈已在場，解除憶靈陷入的所有控制類負面狀態。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "我方全體每恢復一定能量，迷迷都會獲得充能。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "製造特殊領域。領域內敵人行動停止。與領域內敵人進入戰鬥後，使敵方全體行動延後，並對敵方全體造成少量冰屬性傷害。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "行動延後",
+          "desc": "使目標在下次行動前的等待間隔延長。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1449,79 @@
       "_id": 800801,
       "id": "narrator_of_the_present",
       "name": "現在的記敘者",
-      "desc": "持有【迷迷的聲援】的我方目標暴擊率提高<nobr>10%</nobr>。當我方目標持有【迷迷的聲援】時，【迷迷的聲援】的效果對該目標的憶靈/憶師也生效，該效果不可疊加。"
+      "desc": "持有【迷迷的聲援】的我方目標暴擊率提高<nobr>10%</nobr>。當我方目標持有【迷迷的聲援】時，【迷迷的聲援】的效果對該目標的憶靈/憶師也生效，該效果不可疊加。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800802,
       "id": "gleaner_of_the_past",
       "name": "過往的拾遺者",
-      "desc": "除迷迷以外的我方憶靈行動時，開拓者恢復<nobr>8</nobr>點能量。該效果每回合最多觸發<nobr>1</nobr>次，開拓者回合開始時重置可觸發次數。"
+      "desc": "除迷迷以外的我方憶靈行動時，開拓者恢復<nobr>8</nobr>點能量。該效果每回合最多觸發<nobr>1</nobr>次，開拓者回合開始時重置可觸發次數。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800803,
       "id": "chanter_of_the_future",
       "name": "未來的詠唱者",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級；憶靈天賦等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級；憶靈天賦等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800804,
       "id": "dancer_of_the_muse",
       "name": "繆斯的新舞伴",
-      "desc": "使能量上限為0的我方目標主動施放技能時，迷迷也能夠獲得<nobr>3%</nobr>充能，並且該目標透過【迷迷的聲援】造成的真實傷害倍率額外提高<nobr>6%</nobr>。"
+      "desc": "使能量上限為0的我方目標主動施放技能時，迷迷也能夠獲得<nobr>3%</nobr>充能，並且該目標透過【迷迷的聲援】造成的真實傷害倍率額外提高<nobr>6%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800805,
       "id": "seamster_of_the_ode",
       "name": "詩篇的裁縫匠",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。憶靈技等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。憶靈技等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800806,
       "id": "bearer_of_the_revelation",
       "name": "神啟的轉呈者",
-      "desc": "終結技的暴擊率固定為<nobr>100%</nobr>。"
+      "desc": "終結技的暴擊率固定為<nobr>100%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +1970,151 @@
       }
     },
     {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "壞人！麻煩！",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用點",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "思量的種",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "掠奪的本能",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "壞人！麻煩！",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用點",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "末那芽苗",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "篡改的野心",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "壞人！麻煩！",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用點",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "末那芽苗",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "篡改的野心",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "壞人！麻煩！",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用點",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "阿賴耶華",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "踐踏的意志",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "壞人！麻煩！",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用點",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "阿賴耶華",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "踐踏的意志",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8008302,
       "type": 4,
       "children": [],
@@ -1868,151 +2128,6 @@
       }
     },
     {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "壞人！麻煩！",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用點",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "思量的種",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "掠奪的本能",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "壞人！麻煩！",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用點",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "末那芽苗",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "篡改的野心",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "壞人！麻煩！",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用點",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "末那芽苗",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "篡改的野心",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "壞人！麻煩！",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用點",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "阿賴耶華",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "踐踏的意志",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "壞人！麻煩！",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用點",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "阿賴耶華",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "踐踏的意志",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8008302,
       "type": 4,
       "children": [],
@@ -2153,6 +2268,27 @@
             "id": "conquerors_will",
             "name": "踐踏的意志",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "未完的尾聲",
+        "desc": "施放終結技後，獲得1層【史詩】，最多持有<nobr>2</nobr>層。持有【史詩】且迷迷在場時，普通攻擊強化為【明天，一同寫下！】。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

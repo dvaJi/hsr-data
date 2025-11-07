@@ -2,6 +2,7 @@
   "_id": 1212,
   "id": "jingliu",
   "name": "Jingliu",
+  "description": "ผู้ที่เคยเป็นปรมาจารย์ดาบแห่ง Luofu อีกทั้งยังเป็นผู้ก่อตั้งกองอัศวิน Cloud Knight ที่ไม่มีใครโค่นล้มได้\nแต่ตอนนี้ชื่อของคนผู้นี้ ได้ถูกลบเลือนไปเสียแล้ว และกลายมาเป็นผู้ทรยศต่อ Xianzhou ที่เดินอยู่บนเส้นทาง ซึ่งคาบเกี่ยวกับการเป็น Mara-Struck",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG น้ำแข็งเล็กน้อย แก่ศัตรูที่กำหนดหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "สร้าง DMG น้ำแข็งแก่ศัตรูที่กำหนดหนึ่งตัว และได้รับ \"Syzygy\" 1 ชั้น",
       "type": "สกิลต่อสู้",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "สร้าง DMG น้ำแข็งอย่างรุนแรง แก่ฝ่ายศัตรูที่กำหนดหนึ่งตัว และสร้าง DMG น้ำแข็งแก่เป้าหมายที่อยู่ใกล้เคียง พร้อมทั้งได้รับ \"Syzygy\" 1 ชั้น",
       "type": "ท่าไม้ตาย",
       "tag": "กระจาย",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,15 @@
       "simpleDesc": "เมื่อมี \"Syzygy\" #5[i] ชั้น จะเข้าสู่สถานะ \"Spectral Transmigration\" ทำให้เร่งแอ็กชัน 100% และเพิ่มอัตราคริติคอลของตัวเอง อีกทั้งได้รับสกิลต่อสู้แบบเสริมพลัง เมื่อปล่อยการโจมตีจะใช้ HP ของเพื่อนร่วมทีม และเพิ่ม ATK ของ Jingliu ตามปริมาณ HP ทั้งหมดที่ใช้ไป เมื่อจำนวนชั้นของ \"Syzygy\" เท่ากับ 0 จะออกจากสถานะ \"Spectral Transmigration\"",
       "type": "พรสวรรค์",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1497,32 @@
       "simpleDesc": "สร้างพื้นที่พิเศษขึ้นมารอบตัวเอง โดยศัตรูในพื้นที่จะติดสถานะแช่แข็ง เมื่อเข้าสู่การต่อสู้พร้อมศัตรูในพื้นที่ จะฟื้นฟูพลังงาน และได้รับ \"Syzygy\" 1 ชั้น อีกทั้งมีโอกาสอย่างมาก ที่จะทำให้ศัตรูเป้าหมายติดสถานะแช่แข็ง",
       "type": "เทคนิค",
       "tag": "สกัดกั้น",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "โอกาสพื้นฐาน",
+          "desc": "โอกาสพื้นฐานที่จะเกิดเอฟเฟกต์ Debuff ให้กับผู้ที่ถูกโจมตี\nโดยอัตราสร้างสถานะของผู้โจมตี และการต้านทานสถานะของศัตรูเป้าหมาย จะส่งผลต่อโอกาสในขั้นสุดท้าย",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG เพิ่มเติม",
+          "desc": "ทำให้ผู้ที่ถูกโจมตีได้รับ DMG เพิ่มเติม 1 ครั้ง โดยการโจมตีครั้งนี้ จะไม่ถือเป็นการโจมตี 1 ครั้ง",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1472,37 +1544,79 @@
       "_id": 121201,
       "id": "moon_crashes_tianguan_gate",
       "name": "Moon Crashes Tianguan Gate",
-      "desc": "เมื่อปล่อยท่าไม้ตายหรือสกิลต่อสู้แบบเสริมพลัง DMG คริติคอลของ Jingliu จะเพิ่มขึ้น <nobr>24%</nobr> เป็นเวลา <nobr>1</nobr> เทิร์น หากโจมตีศัตรูเป้าหมายเพียง 1 ตัว จะสร้าง DMG น้ำแข็ง <nobr>100%</nobr> ของ ATK ของ Jingliu แก่เป้าหมายดังกล่าวเพิ่มเติม 1 ครั้ง"
+      "desc": "เมื่อปล่อยท่าไม้ตายหรือสกิลต่อสู้แบบเสริมพลัง DMG คริติคอลของ Jingliu จะเพิ่มขึ้น <nobr>24%</nobr> เป็นเวลา <nobr>1</nobr> เทิร์น หากโจมตีศัตรูเป้าหมายเพียง 1 ตัว จะสร้าง DMG น้ำแข็ง <nobr>100%</nobr> ของ ATK ของ Jingliu แก่เป้าหมายดังกล่าวเพิ่มเติม 1 ครั้ง",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121202,
       "id": "crescent_shadows_qixing_dipper",
       "name": "Crescent Shadows Qixing Dipper",
-      "desc": "หลังจากใช้ท่าไม้ตาย DMG ของสกิลต่อสู้ที่เสริมพลังในครั้งถัดไป จะเพิ่มขึ้น <nobr>80%</nobr>"
+      "desc": "หลังจากใช้ท่าไม้ตาย DMG ของสกิลต่อสู้ที่เสริมพลังในครั้งถัดไป จะเพิ่มขึ้น <nobr>80%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121203,
       "id": "halfmoon_gapes_mercurial_haze",
       "name": "Halfmoon Gapes Mercurial Haze",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121204,
       "id": "lunarlance_shines_skyward_dome",
       "name": "Lunarlance Shines Skyward Dome",
-      "desc": "ATK ที่ได้รับจากการใช้ HP ของเพื่อนร่วมทีมในสถานะ \"Spectral Transmigration\" จะเพิ่มมากขึ้นอีก <nobr>90%</nobr> ของปริมาณ HP ทั้งหมดที่ฝ่ายเราทุกตัวใช้ไป อีกทั้งขีดจำกัดสูงสุดของ ATK จะเพิ่มขึ้น <nobr>30%</nobr>"
+      "desc": "ATK ที่ได้รับจากการใช้ HP ของเพื่อนร่วมทีมในสถานะ \"Spectral Transmigration\" จะเพิ่มมากขึ้นอีก <nobr>90%</nobr> ของปริมาณ HP ทั้งหมดที่ฝ่ายเราทุกตัวใช้ไป อีกทั้งขีดจำกัดสูงสุดของ ATK จะเพิ่มขึ้น <nobr>30%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121205,
       "id": "night_shades_astral_radiance",
       "name": "Night Shades Astral Radiance",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121206,
       "id": "eclipse_hollows_corporeal_husk",
       "name": "Eclipse Hollows Corporeal Husk",
-      "desc": "เมื่อ Jingliu เข้าสู่สถานะ \"Spectral Transmigration\" ขีดจำกัดจำนวนชั้นของ \"Syzygy\" จะเพิ่มขึ้น 1 ชั้น อีกทั้งได้รับ \"Syzygy\" เพิ่มเติม <nobr>1</nobr> ชั้น เมื่ออยู่ในสถานะ \"Spectral Transmigration\" DMG คริติคอลจะเพิ่มขึ้น <nobr>50%</nobr>"
+      "desc": "เมื่อ Jingliu เข้าสู่สถานะ \"Spectral Transmigration\" ขีดจำกัดจำนวนชั้นของ \"Syzygy\" จะเพิ่มขึ้น 1 ชั้น อีกทั้งได้รับ \"Syzygy\" เพิ่มเติม <nobr>1</nobr> ชั้น เมื่ออยู่ในสถานะ \"Spectral Transmigration\" DMG คริติคอลจะเพิ่มขึ้น <nobr>50%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

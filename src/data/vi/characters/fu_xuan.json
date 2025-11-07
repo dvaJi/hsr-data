@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "Fu Xuan",
+  "description": "Thủ lĩnh Sở Thiên Tượng Xianzhou Luofu.\nDựa vào con mắt thứ ba và Ma Trận Tiên Tri để tiên đoán đường đi của Xianzhou, đoán trước tốt xấu của sự việc.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lượng Tử cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Mở \"Ma Trận Tiên Tri\", chia sẻ cho Fu Xuan sát thương mà đồng đội phải chịu. Đồng thời khiến toàn phe ta tăng Giới Hạn HP, tăng Tỷ Lệ Bạo Kích.",
       "type": "Chiến Kỹ",
       "tag": "Phòng Thủ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "Chia Sẻ",
+          "desc": "Trước khi tổng kết sát thương, sẽ chia một phần sát thương của phe tấn công lên một hoặc nhiều mục tiêu, phe bị tấn công sẽ chịu phần còn lại. Sát thương chia cho mục tiêu khác sẽ không thể bị chia sẻ một lần nữa.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "Gây sát thương Lượng Tử cho toàn phe địch, tăng số lần kích hoạt Thiên Phú của Fu Xuan.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "Khi Fu Xuan ở trạng thái có thể chiến đấu, sẽ giảm sát thương phải chịu của toàn bộ phe ta.\nKhi HP tương đối thấp, tự động hồi HP bản thân theo phần trăm HP đã mất. Hiệu ứng này tối đa có 2 lần kích hoạt.",
       "type": "Thiên Phú",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "Kích hoạt Lá Chắn, khi chịu tấn công từ kẻ địch sẽ không vào chiến đấu. Sau khi vào chiến đấu sẽ tự động mở Ma Trận Tiên Tri.",
       "type": "Bí Kỹ",
       "tag": "Phòng Thủ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "Tư Nguy",
-      "desc": "Tất cả đơn vị trong \"Giám Tri\" sẽ tăng Sát Thương Bạo Kích <nobr>30%</nobr>."
+      "desc": "Tất cả đơn vị trong \"Giám Tri\" sẽ tăng Sát Thương Bạo Kích <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "Nhu Triệu",
-      "desc": "Nếu bất kỳ mục tiêu phe ta chịu sát thương chí tử trong khi Ma Trận Tiên Tri đang kích hoạt, thì tất cả mục tiêu phe ta chịu sát thương chí tử trong lần hành động này sẽ không rơi vào trạng thái <u>không thể chiến đấu</u>, đồng thời hồi ngay HP bằng <nobr>70%</nobr> Giới Hạn HP của bản thân nhân vật đó. Hiệu ứng này có thể kích hoạt 1 lần trong 1 trận đấu."
+      "desc": "Nếu bất kỳ mục tiêu phe ta chịu sát thương chí tử trong khi Ma Trận Tiên Tri đang kích hoạt, thì tất cả mục tiêu phe ta chịu sát thương chí tử trong lần hành động này sẽ không rơi vào trạng thái <u>không thể chiến đấu</u>, đồng thời hồi ngay HP bằng <nobr>70%</nobr> Giới Hạn HP của bản thân nhân vật đó. Hiệu ứng này có thể kích hoạt 1 lần trong 1 trận đấu.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "Trực Phù",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "Cách Trạch",
-      "desc": "Sau khi mục tiêu khác của phe ta ở trạng thái \"Ma Trận Tiên Tri\" chịu tấn công, Fu Xuan hồi phục <nobr>5</nobr> điểm Năng Lượng."
+      "desc": "Sau khi mục tiêu khác của phe ta ở trạng thái \"Ma Trận Tiên Tri\" chịu tấn công, Fu Xuan hồi phục <nobr>5</nobr> điểm Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "Kế Thần",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "Chủng Lăng",
-      "desc": "Một khi kích hoạt \"Ma Trận Tiên Tri\", sẽ tích lũy HP đã tổn thất của toàn thể phe ta trong trận này. Tăng sát thương Tuyệt Kỹ gây ra của Fu Xuan bằng <nobr>200%</nobr> HP đã tổn thất tích lũy trong trận này.\nHP đã tổn thất tích lũy trong trận này tối đa không quá <nobr>120%</nobr> Giới Hạn HP của Fu Xuan, sau khi thi triển Tuyệt Kỹ sẽ xóa và tích lũy lại từ đầu."
+      "desc": "Một khi kích hoạt \"Ma Trận Tiên Tri\", sẽ tích lũy HP đã tổn thất của toàn thể phe ta trong trận này. Tăng sát thương Tuyệt Kỹ gây ra của Fu Xuan bằng <nobr>200%</nobr> HP đã tổn thất tích lũy trong trận này.\nHP đã tổn thất tích lũy trong trận này tối đa không quá <nobr>120%</nobr> Giới Hạn HP của Fu Xuan, sau khi thi triển Tuyệt Kỹ sẽ xóa và tích lũy lại từ đầu.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

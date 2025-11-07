@@ -2,6 +2,7 @@
   "_id": 1304,
   "id": "aventurine",
   "name": "砂金",
+  "description": "星际和平公司「战略投资部」的高层成员。\n风险爱好者，常面带笑容，真心却难以揣测。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "对指定敌方单体造成少量虚数属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "为我方全体提供可叠加护盾量的护盾【坚垣筹码】。",
       "type": "战技",
       "tag": "防御",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "随机获得【盲注】，使敌方单体陷入【惊惶】状态，并对目标造成虚数属性伤害，我方目标击中【惊惶】状态下的敌方目标时，造成的暴击伤害提高。",
       "type": "终结技",
       "tag": "单攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,32 @@
       "simpleDesc": "持有【坚垣筹码】的我方单体效果抵抗提高，并在受到攻击时，为砂金积攒【盲注】，砂金持有【坚垣筹码】时能抵抗控制类负面状态。【盲注】达到7点后，砂金会消耗7点【盲注】发动追加攻击，对随机敌方单体造成少量虚数属性伤害，共弹射7次。",
       "type": "天赋",
       "tag": "弹射",
+      "spBase": 1,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        10,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "控制类负面状态",
+          "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1514,15 @@
       "simpleDesc": "使用秘技，随机获得3种防御力提高效果中的1种，下一次进战后使我方全体提高对应数值的防御力。",
       "type": "秘技",
       "tag": "防御",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1470,37 +1542,88 @@
       "_id": 130401,
       "id": "prisoners_dilemma",
       "name": "囚徒博弈",
-      "desc": "持有【坚垣筹码】的我方目标暴击伤害提高<nobr>20%</nobr>。施放终结技后，为我方全体提供护盾【坚垣筹码】，护盾量等同于战技提供的护盾量的<nobr>100%</nobr>，持续<nobr>3</nobr>回合。"
+      "desc": "持有【坚垣筹码】的我方目标暴击伤害提高<nobr>20%</nobr>。施放终结技后，为我方全体提供护盾【坚垣筹码】，护盾量等同于战技提供的护盾量的<nobr>100%</nobr>，持续<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130402,
       "id": "bounded_rationality",
       "name": "有限理性",
-      "desc": "施放普攻时使目标的全属性抗性降低<nobr>12%</nobr>，持续<nobr>3</nobr>回合。"
+      "desc": "施放普攻时使目标的全属性抗性降低<nobr>12%</nobr>，持续<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130403,
       "id": "droprate_maxing",
       "name": "最高倍率",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130404,
       "id": "unexpected_hanging_paradox",
       "name": "意外绞刑",
-      "desc": "触发天赋的<u>追加攻击</u>时，会先使砂金防御力提高<nobr>40%</nobr>，持续<nobr>2</nobr>回合，并使天赋的<u>追加攻击</u>额外增加<nobr>3</nobr>段攻击段数。"
+      "desc": "触发天赋的<u>追加攻击</u>时，会先使砂金防御力提高<nobr>40%</nobr>，持续<nobr>2</nobr>回合，并使天赋的<u>追加攻击</u>额外增加<nobr>3</nobr>段攻击段数。",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130405,
       "id": "ambiguity_aversion",
       "name": "模糊厌恶",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130406,
       "id": "stag_hunt_game",
       "name": "猎鹿游戏",
-      "desc": "每有1个队友持有护盾，砂金造成的伤害提高<nobr>50%</nobr>，最高不超过<nobr>150%</nobr>。"
+      "desc": "每有1个队友持有护盾，砂金造成的伤害提高<nobr>50%</nobr>，最高不超过<nobr>150%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

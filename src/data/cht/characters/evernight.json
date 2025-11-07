@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "長夜月",
+  "description": "與世相隔的憶域，燭火映出過往，於迷霧中悄然熄去。\n自那影中而來的記憶之子長夜月，隱匿「歲月」火種的黃金裔，掀起「忘卻」的浪潮，守護鏡中人的心願\n——「別擔心，我會為你看護『開拓』的前路……不惜任何代價♭」",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "對指定敵方單體造成少量冰屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "消耗自身生命值召喚憶靈「長夜」，並使我方全體憶靈的暴擊傷害提高。若憶靈「長夜」已在場，為其回復生命值。施放時，獲得#3[i]點【憶質】，若處於【至暗之謎】狀態，額外獲得#5[i]點【憶質】。",
       "type": "戰技",
       "tag": "召喚",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召喚憶靈",
+          "desc": "將憶靈召喚到場上。若憶靈已在場，解除憶靈陷入的所有控制類負面狀態。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "對敵方全體造成冰屬性傷害，召喚憶靈「長夜」並使長夜月進入【至暗之謎】狀態，期間敵方受到的傷害提高，長夜月和憶靈造成的傷害提高，免疫控制類負面狀態。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召喚憶靈",
+          "desc": "將憶靈召喚到場上。若憶靈已在場，解除憶靈陷入的所有控制類負面狀態。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "控制類負面狀態",
+          "desc": "凍結，糾纏，禁錮，支配，怒噪，強烈震盪，異夢，纏禁，恐懼，行動鎖定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "進入戰鬥時召喚憶靈「長夜」。自身或憶靈「長夜」每次生命降低時，使自身和憶靈「長夜」的暴擊傷害提高，並獲得【憶質】。\n當長夜月持有的【憶質】數量大於等於#6[i]點時，使憶靈「長夜」立即行動。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召喚憶靈",
+          "desc": "將憶靈召喚到場上。若憶靈已在場，解除憶靈陷入的所有控制類負面狀態。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "控制類負面狀態",
+          "desc": "凍結，糾纏，禁錮，支配，怒噪，強烈震盪，異夢，纏禁，恐懼，行動鎖定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "下一次戰鬥開始時，獲得與戰技相同的提高憶靈暴擊傷害的效果，並額外獲得【憶質】。",
       "type": "秘技",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "長夜",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "追憶，蹁躚，如雨",
+        "desc": "該技能自動選擇目標施放，優先攻擊長夜月上次攻擊的敵方目標。對敵方單體造成等同於「長夜」<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>生命上限的冰屬性傷害，長夜月當下每有<nobr>#3[i]</nobr>點【憶質】，則額外造成等同於「長夜」<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>生命上限的冰屬性傷害。施放後獲得<nobr>#4[i]</nobr>點【憶質】。",
+        "simpleDesc": "對敵方單體造成少量冰屬性傷害，並根據【憶質】數量額外造成少量冰屬性傷害。",
+        "type": {
+          "id": "Servant",
+          "name": "憶靈技"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "單體攻擊"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "孤獨，浮游，漆黑",
+        "desc": "「長夜」免疫<u>控制類負面狀態</u>，被攻擊的機率提高。「長夜」在場時，長夜月和「長夜」造成的傷害提高<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>。",
+        "simpleDesc": "憶靈「長夜」免疫<u>控制類負面狀態</u>，被攻擊的機率提高。在場時，自身和長夜月造成的傷害提高。",
+        "type": {
+          "name": "憶靈天賦"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "輔助"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "控制類負面狀態",
+            "desc": "凍結，糾纏，禁錮，支配，怒噪，強烈震盪，異夢，纏禁，恐懼，行動鎖定。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "與夜，形影，不離",
+        "desc": "被召喚時，使自身立即行動。",
+        "simpleDesc": "被召喚時，使自身立即行動。",
+        "type": {
+          "name": "憶靈天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "與你，再見，無期",
+        "desc": "消失時，使長夜月的速度提高<nobr>#1[i]%</nobr>，若因施放【迷夢，流失，如露】消失，本次攻擊每消耗了1點【憶質】額外使長夜月的速度提高<nobr>#2[i]%</nobr>，最多計算<nobr>#3[i]</nobr>點【憶質】。加速效果無法疊加，長夜月下個回合開始時移除。",
+        "simpleDesc": "消失時，使長夜月的速度提高。",
+        "type": {
+          "name": "憶靈天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "迷夢，流失，如露",
+        "desc": "長夜月的【憶質】大於等於<nobr>#3[i]</nobr>點，且長夜月不處於控制狀態時施放，當下每持有1點【憶質】對主目標造成等同於「長夜」<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>生命上限的冰屬性傷害，對其他敵方目標造成等同於「長夜」<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>生命上限的冰屬性傷害，施放後，消耗全部【憶質】和生命值，並使「長夜」消失。",
+        "simpleDesc": "<span style=\"color:#f29e38ff>根據【憶質】數量</span>，對主目標造成大量冰屬性傷害，對其他敵方目標造成冰屬性傷害。施放後，<span style=\"color:#f29e38ff>消耗全部【憶質】和生命值，並使「長夜」消失</span>。",
+        "type": {
+          "id": "Servant",
+          "name": "憶靈技"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "群體攻擊"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "睡吧！長夜有所夢",
-      "desc": "長夜月在場時，場上敵方目標數量等於4以上/3/2/1名時，我方憶靈造成的傷害為原傷害的<nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr>。"
+      "desc": "長夜月在場時，場上敵方目標數量等於4以上/3/2/1名時，我方憶靈造成的傷害為原傷害的<nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "聽——沉眠中的囈語",
-      "desc": "長夜月和憶靈「長夜」的暴擊傷害提高<nobr>40%</nobr>，每當長夜月獲得【憶質】時，使獲得的【憶質】數量提高<nobr>2</nobr>點。施放終結技時，額外獲得<nobr>2</nobr>點【至暗之謎】的充能。"
+      "desc": "長夜月和憶靈「長夜」的暴擊傷害提高<nobr>40%</nobr>，每當長夜月獲得【憶質】時，使獲得的【憶質】數量提高<nobr>2</nobr>點。施放終結技時，額外獲得<nobr>2</nobr>點【至暗之謎】的充能。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "別怕——噩夢已成過去",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級。普通攻擊等級+1，最多不超過<nobr>10</nobr>級。憶靈天賦等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級。普通攻擊等級+1，最多不超過<nobr>10</nobr>級。憶靈天賦等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "醒來——便是你的明天",
-      "desc": "長夜月在場時，我方憶靈的弱點擊破效率提高<nobr>25%</nobr>，憶靈「長夜」的弱點擊破效率額外提高<nobr>25%</nobr>。"
+      "desc": "長夜月在場時，我方憶靈的弱點擊破效率提高<nobr>25%</nobr>，憶靈「長夜」的弱點擊破效率額外提高<nobr>25%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "忘卻——記憶中的「我」",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級。天賦等級+2，最多不超過<nobr>15</nobr>級。憶靈技等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級。天賦等級+2，最多不超過<nobr>15</nobr>級。憶靈技等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "就這樣，一直",
-      "desc": "長夜月在場時，我方全體目標的全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。憶靈「長夜」施放【迷夢，流失，如露】後，長夜月獲得本次攻擊消耗【憶質】數量的<nobr>30%</nobr>。"
+      "desc": "長夜月在場時，我方全體目標的全屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。憶靈「長夜」施放【迷夢，流失，如露】後，長夜月獲得本次攻擊消耗【憶質】數量的<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

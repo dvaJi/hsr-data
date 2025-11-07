@@ -2,6 +2,7 @@
   "_id": 1307,
   "id": "black_swan",
   "name": "Cisne Negro",
+  "description": "Uma Memoriadora do Jardim da Recordação. Uma indolente e misteriosa profetisa.\nA \"Recordação\" dos homens está sob a guarda dela, os fios do destino estão sob seu domínio.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,32 @@
       "simpleDesc": "Causa Dano de Vento leve a um único inimigo e tem uma chance de aplicar Arcana ao alvo. Depois de atacar um alvo afligido com Cisalhamento de Vento, Sangramento, Queimadura ou Choque, existe uma chance respectiva de aplicar Arcana adicionalmente.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana é uma penalidade que causa Dano Contínuo. Esta penalidade não pode ser removida.\nEnquanto estiver no estado de Arcana, a unidade também é considerada como estando sob o estado de Cisalhamento de Vento e recebe Dano de Vento Contínuo no início de cada rodada.\nA imposição de Arcana ignora a RES a Cisalhamento de Vento, RES a Sangramento, RES a Queimadura e RES a Choque do alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -439,6 +466,32 @@
       "simpleDesc": "Causa Dano de Vento leve a um único inimigo-alvo e a quaisquer alvos adjacentes, com uma alta chance de infligir Arcana nos alvos e reduzir a DEF deles.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana é uma penalidade que causa Dano Contínuo. Esta penalidade não pode ser removida.\nEnquanto estiver no estado de Arcana, a unidade também é considerada como estando sob o estado de Cisalhamento de Vento e recebe Dano de Vento Contínuo no início de cada rodada.\nA imposição de Arcana ignora a RES a Cisalhamento de Vento, RES a Sangramento, RES a Queimadura e RES a Choque do alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -793,6 +846,24 @@
       "simpleDesc": "Inflige Epifania em todos os inimigos, aumentando o Dano que os alvos recebem em suas rodadas. Adicionalmente, possuir Arcana é considerado como possuir Cisalhamento de Vento, Sangramento, Queimadura ou Choque. Além disso, os acúmulos de Arcana não serão redefinidos depois de causar Dano no início da próxima rodada. Causa Dano de Vento a todos os inimigos.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana é uma penalidade que causa Dano Contínuo. Esta penalidade não pode ser removida.\nEnquanto estiver no estado de Arcana, a unidade também é considerada como estando sob o estado de Cisalhamento de Vento e recebe Dano de Vento Contínuo no início de cada rodada.\nA imposição de Arcana ignora a RES a Cisalhamento de Vento, RES a Sangramento, RES a Queimadura e RES a Choque do alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1132,6 +1203,32 @@
       "simpleDesc": "Quando um inimigo-alvo recebe Dano Contínuo no início de cada rodada, há uma chance de ele ser afligido com Arcana. Ele recebe Dano de Vento Contínuo no início da rodada e Cisne Negro ativa efeitos adicionais com base no número de acúmulos de Arcana.",
       "type": "Talento",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana é uma penalidade que causa Dano Contínuo. Esta penalidade não pode ser removida.\nEnquanto estiver no estado de Arcana, a unidade também é considerada como estando sob o estado de Cisalhamento de Vento e recebe Dano de Vento Contínuo no início de cada rodada.\nA imposição de Arcana ignora a RES a Cisalhamento de Vento, RES a Sangramento, RES a Queimadura e RES a Choque do alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1531,6 +1628,32 @@
       "simpleDesc": "Depois que essa Técnica é utilizada, no início da próxima batalha há uma chance alta de cada inimigo ser afligido com Arcana até que a aplicação de Arcana falhe.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana é uma penalidade que causa Dano Contínuo. Esta penalidade não pode ser removida.\nEnquanto estiver no estado de Arcana, a unidade também é considerada como estando sob o estado de Cisalhamento de Vento e recebe Dano de Vento Contínuo no início de cada rodada.\nA imposição de Arcana ignora a RES a Cisalhamento de Vento, RES a Sangramento, RES a Queimadura e RES a Choque do alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1548,37 +1671,121 @@
       "_id": 130701,
       "id": "seven_pillars_of_wisdom",
       "name": "Sete Pilares da Sabedoria",
-      "desc": "Enquanto Cisne Negro estiver ativa em batalha, inimigos com o estado de Cisalhamento de Vento, Sangramento, Queimadura ou Choque têm, respectivamente, sua RES a Vento, Físico, Fogo ou Raio reduzida em <nobr>25%</nobr>."
+      "desc": "Enquanto Cisne Negro estiver ativa em batalha, inimigos com o estado de Cisalhamento de Vento, Sangramento, Queimadura ou Choque têm, respectivamente, sua RES a Vento, Físico, Fogo ou Raio reduzida em <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130702,
       "id": "weep_not_for_me_my_lamb",
       "name": "Não Chore por Mim, Cordeirinho",
-      "desc": "Quando um inimigo-alvo afligido por \"Arcana\" for derrotado, há uma <u>chance-base</u> de <nobr>100%</nobr> de infligir <nobr>6</nobr> acúmulo(s) de \"Arcana\" a alvos adjacentes."
+      "desc": "Quando um inimigo-alvo afligido por \"Arcana\" for derrotado, há uma <u>chance-base</u> de <nobr>100%</nobr> de infligir <nobr>6</nobr> acúmulo(s) de \"Arcana\" a alvos adjacentes.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana é uma penalidade que causa Dano Contínuo. Esta penalidade não pode ser removida.\nEnquanto estiver no estado de Arcana, a unidade também é considerada como estando sob o estado de Cisalhamento de Vento e recebe Dano de Vento Contínuo no início de cada rodada.\nA imposição de Arcana ignora a RES a Cisalhamento de Vento, RES a Sangramento, RES a Queimadura e RES a Choque do alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130703,
       "id": "as_above_so_below",
       "name": "Assim na Terra como no Céu",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130704,
       "id": "in_tears_we_gift",
       "name": "Em Lágrimas, Nós Presenteamos",
-      "desc": "Enquanto estiverem no estado de Epifania, a RES a Efeito dos inimigos-alvo é reduzida em <nobr>10%</nobr> e Cisne Negro regenera <nobr>8</nobr> de Energia no início da rodada desses alvos ou quando eles são derrotados. Essa Regeneração de Energia só pode ativar 1 vez enquanto Epifania durar. A contagem de ativação é redefinida quando Epifania é aplicada novamente."
+      "desc": "Enquanto estiverem no estado de Epifania, a RES a Efeito dos inimigos-alvo é reduzida em <nobr>10%</nobr> e Cisne Negro regenera <nobr>8</nobr> de Energia no início da rodada desses alvos ou quando eles são derrotados. Essa Regeneração de Energia só pode ativar 1 vez enquanto Epifania durar. A contagem de ativação é redefinida quando Epifania é aplicada novamente.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130705,
       "id": "linnutee_flyway",
       "name": "Voo Migratório",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130706,
       "id": "pantheon_merciful_masses_pitiful",
       "name": "Panteão Misericordioso, Massas Lamentáveis",
-      "desc": "Quando um inimigo-alvo é atacado pelos aliados da Cisne Negro, Cisne Negro tem uma <u>chance-base</u> de <nobr>65%</nobr> de infligir 1 acúmulo de \"Arcana\" no alvo.\nSempre que Cisne Negro infligir \"Arcana\" em um inimigo-alvo, há uma <u>chance fixa</u> de <nobr>50%</nobr> de aumentar adicionalmente o número de acúmulos de \"Arcana\" desta vez em <nobr>1</nobr>."
+      "desc": "Quando um inimigo-alvo é atacado pelos aliados da Cisne Negro, Cisne Negro tem uma <u>chance-base</u> de <nobr>65%</nobr> de infligir 1 acúmulo de \"Arcana\" no alvo.\nSempre que Cisne Negro infligir \"Arcana\" em um inimigo-alvo, há uma <u>chance fixa</u> de <nobr>50%</nobr> de aumentar adicionalmente o número de acúmulos de \"Arcana\" desta vez em <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcana",
+          "desc": "Arcana é uma penalidade que causa Dano Contínuo. Esta penalidade não pode ser removida.\nEnquanto estiver no estado de Arcana, a unidade também é considerada como estando sob o estado de Cisalhamento de Vento e recebe Dano de Vento Contínuo no início de cada rodada.\nA imposição de Arcana ignora a RES a Cisalhamento de Vento, RES a Sangramento, RES a Queimadura e RES a Choque do alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000002,
+          "name": "Chance fixa",
+          "desc": "Chance fixa não será afetada por nenhum fator.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

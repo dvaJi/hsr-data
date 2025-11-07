@@ -2,6 +2,7 @@
   "_id": 1006,
   "id": "silver_wolf",
   "name": "{RUBY_B#ぎんろう}銀狼{RUBY_E#}",
+  "description": "「星核ハンター」のメンバーで、凄腕のハッカー。\n宇宙を大きなシミュレーションゲームと見なして楽しんでいる。\nリアルデータを修正できる「エーテル編集」を習得している。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の量子属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "高確率で敵単体に追加の弱点を付与し、量子属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -803,6 +837,27 @@
       "simpleDesc": "高確率で敵単体の防御力をダウンさせ、大量の量子属性ダメージを与える。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1197,24 @@
       "simpleDesc": "攻撃後、確率で敵に「欠陥」を1つ埋め込む。",
       "type": "天賦",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1495,6 +1568,15 @@
       "desc": "敵を攻撃。戦闘に入った後、敵全体に銀狼の攻撃力#1[i]%分の量子属性ダメージを与え、弱点属性を無視して敵全体の靭性を削る。この秘技で敵を弱点撃破した時、量子属性の弱点撃破効果を発動する。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、敵全体に少量のダメージを与え、弱点属性を無視して靭性を削る。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1511,37 +1593,114 @@
       "_id": 100601,
       "id": "social_engineering",
       "name": "{RUBY_B#しゃかいこうがく}社会工学{RUBY_E#}",
-      "desc": "必殺技で敵を攻撃した後、敵に<u>デバフ</u>が1つあるごとに、銀狼はEPを<nobr>7</nobr>回復する。この効果は一回の必殺技発動につき、最大で<nobr>5</nobr>回発動できる。"
+      "desc": "必殺技で敵を攻撃した後、敵に<u>デバフ</u>が1つあるごとに、銀狼はEPを<nobr>7</nobr>回復する。この効果は一回の必殺技発動につき、最大で<nobr>5</nobr>回発動できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100602,
       "id": "zombie_network",
       "name": "ボットネット",
-      "desc": "敵が戦闘に入る時、効果抵抗-<nobr>20%</nobr>。"
+      "desc": "敵が戦闘に入る時、効果抵抗-<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100603,
       "id": "payload",
       "name": "ペイロード",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100604,
       "id": "bounce_attack",
       "name": "バウンス{RUBY_B#こうげき}攻撃{RUBY_E#}",
-      "desc": "必殺技で敵を攻撃した後、その敵にある<u>デバフ</u>1つにつき、さらに銀狼の攻撃力<nobr>20%</nobr>分の量子属性<u>付加ダメージ</u>を与える。この効果は1回の必殺技で、最大で<nobr>5</nobr>回発動できる。"
+      "desc": "必殺技で敵を攻撃した後、その敵にある<u>デバフ</u>1つにつき、さらに銀狼の攻撃力<nobr>20%</nobr>分の量子属性<u>付加ダメージ</u>を与える。この効果は1回の必殺技で、最大で<nobr>5</nobr>回発動できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100605,
       "id": "brute_force_attack",
       "name": "{RUBY_B#そう}総{RUBY_E#}{RUBY_B#あ}当{RUBY_E#}たり{RUBY_B#こうげき}攻撃{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100606,
       "id": "overlay_network",
       "name": "オーバーレイ\nネットワーク",
-      "desc": "敵にある<u>デバフ</u>1つにつき、その敵に対する銀狼の与ダメージ+<nobr>20%</nobr>、最大で+<nobr>100%</nobr>。"
+      "desc": "敵にある<u>デバフ</u>1つにつき、その敵に対する銀狼の与ダメージ+<nobr>20%</nobr>、最大で+<nobr>100%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

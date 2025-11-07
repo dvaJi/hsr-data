@@ -2,6 +2,7 @@
   "_id": 1101,
   "id": "bronya",
   "name": "布洛妮娅",
+  "description": "贝洛伯格「大守护者」的继承人。\n兼有公主的高傲和军人的坚贞。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量风属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "解除我方单体1个负面效果，使其造成的伤害提高，并立刻行动。",
       "type": "战技",
       "tag": "辅助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "负面效果",
+          "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,18 @@
       "simpleDesc": "使我方全体攻击力提高，暴击伤害提高。",
       "type": "终结技",
       "tag": "辅助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "施放普攻后，自身下一次行动提前。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行动提前",
+          "desc": "使目标在下次行动前的等待间隔缩短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1455,15 @@
       "simpleDesc": "使用秘技，下一次战斗开始时我方全体攻击力提高。",
       "type": "秘技",
       "tag": "辅助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1481,97 @@
       "_id": 110101,
       "id": "hone_your_strength",
       "name": "养精蓄锐",
-      "desc": "施放战技时，有<nobr>50%</nobr><u>固定概率</u>恢复1个战技点，该效果有1回合的触发冷却。"
+      "desc": "施放战技时，有<nobr>50%</nobr><u>固定概率</u>恢复1个战技点，该效果有1回合的触发冷却。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定概率",
+          "desc": "不会被任何因素影响的固定概率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110102,
       "id": "quick_march",
       "name": "快速行军",
-      "desc": "施放战技时，被指定的我方目标在行动后速度提高<nobr>30%</nobr>，持续1回合。"
+      "desc": "施放战技时，被指定的我方目标在行动后速度提高<nobr>30%</nobr>，持续1回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110103,
       "id": "bombardment",
       "name": "鼓炮齐鸣",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110104,
       "id": "take_by_surprise",
       "name": "攻其不备",
-      "desc": "我方其他角色对弱点为风属性的敌方目标施放普攻后，布洛妮娅立即进行1次<u>追加攻击</u>，对该目标造成等同于普攻伤害<nobr>80%</nobr>的风属性伤害，该效果每回合可触发1次。"
+      "desc": "我方其他角色对弱点为风属性的敌方目标施放普攻后，布洛妮娅立即进行1次<u>追加攻击</u>，对该目标造成等同于普攻伤害<nobr>80%</nobr>的风属性伤害，该效果每回合可触发1次。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110105,
       "id": "unstoppable",
       "name": "所向克捷",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110106,
       "id": "piercing_rainbow",
       "name": "气贯长虹",
-      "desc": "战技对指定我方目标造成的伤害提高效果的持续时间增加<nobr>1</nobr>回合。"
+      "desc": "战技对指定我方目标造成的伤害提高效果的持续时间增加<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

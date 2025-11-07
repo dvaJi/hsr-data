@@ -2,6 +2,7 @@
   "_id": 1308,
   "id": "acheron",
   "name": "Acheron",
+  "description": "Seorang pengelana yang mengaku dirinya adalah \"Galaxy Ranger\". Nama aslinya tidak diketahui.\nDia mengenakan sebilah pedang panjang, dan dia menelusuri alam semesta seorang diri.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Memperoleh #3[i] poin \"Slashed Dream\". Menambahkan #3[i] lapis \"Crimson Knot\" pada 1 musuh dan mengakibatkan Lightning DMG pada musuh tersebut, serta mengakibatkan Lightning DMG dalam jumlah kecil pada target di sekitar musuh tersebut.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Mengakibatkan 3 Hit Lightning DMG dalam jumlah kecil kepada 1 musuh. Jika \"Crimson Knot\" target dihilangkan, akan mengakibatkan Lightning DMG dalam jumlah kecil kepada seluruh musuh. Terakhir, akan mengakibatkan 1 Hit Lightning DMG pada seluruh musuh dan menghapus seluruh \"Crimson Knot\".",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "Saat \"Slashed Dream\" mencapai batas maksimal, Ultimate dapat diaktifkan. Selama Ultimate berlangsung, dapat mengabaikan Tipe Weakness dan mengurangi Toughness musuh, serta mengurangi RES Seluruh Tipe milik seluruh musuh.\nSaat unit mana pun melancarkan kemampuan dan kemampuan tersebut membuat target musuh memasuki status Debuff, Acheron akan memperoleh \"Slashed Dream\", dan menambahkan \"Crimson Knot\" pada target musuh.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1472,15 @@
       "desc": "Segera menyerang musuh. Saat setiap gelombang pertempuran dimulai, akan memperoleh \"Quadrivalent Ascendance\", mengakibatkan Lightning DMG kepada seluruh musuh sebesar #1[i]% ATK Acheron, lalu mengabaikan Tipe Weakness dan mengurangi Toughness seluruh musuh. Saat memicu Weakness Break, akan memicu efek Lightning Weakness Break.\n\"Quadrivalent Ascendance\": Setelah melancarkan Ultimate, Acheron akan memperoleh #2[i] poin \"Slashed Dream\", dan memberikan #2[i] lapis \"Crimson Knot\" pada 1 musuh secara acak.\nJika menyerang musuh biasa, maka akan langsung mengalahkan musuh biasa tersebut tanpa perlu memasuki pertempuran. Jika serangan ini tidak mengenai musuh, maka Poin Technique tidak akan terkonsumsi.",
       "simpleDesc": "Menyerang musuh. Saat setiap gelombang pertempuran dimulai, akan memperoleh \"Quadrivalent Ascendance\", mengakibatkan Lightning DMG pada seluruh musuh, mengabaikan Tipe Weakness dan mengurangi Toughness.\nJika menyerang musuh biasa, maka akan langsung mengalahkan musuh biasa tersebut tanpa perlu memasuki pertempuran. Jika serangan ini tidak mengenai musuh, maka Poin Technique tidak akan terkonsumsi.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1498,97 @@
       "_id": 130801,
       "id": "silenced_sky_spake_sooth",
       "name": "Silenced Sky Spake Sooth",
-      "desc": "Saat mengakibatkan DMG pada target musuh <u>berstatus Debuff</u>, CRIT Rate meningkat <nobr>18%</nobr>."
+      "desc": "Saat mengakibatkan DMG pada target musuh <u>berstatus Debuff</u>, CRIT Rate meningkat <nobr>18%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130802,
       "id": "mute_thunder_in_still_tempest",
       "name": "Mute Thunder in Still Tempest",
-      "desc": "Syarat jumlah karakter Path \"Nihility\" yang diperlukan untuk nilai maksimal Trace \"The Abyss\" berkurang 1. Saat giliran Acheron dimulai, akan memperoleh 1 poin \"Slashed Dream\", dan di saat yang bersamaan akan menambahkan 1 lapis \"Crimson Knot\" pada musuh dengan lapisan \"Crimson Knot\" terbanyak."
+      "desc": "Syarat jumlah karakter Path \"Nihility\" yang diperlukan untuk nilai maksimal Trace \"The Abyss\" berkurang 1. Saat giliran Acheron dimulai, akan memperoleh 1 poin \"Slashed Dream\", dan di saat yang bersamaan akan menambahkan 1 lapis \"Crimson Knot\" pada musuh dengan lapisan \"Crimson Knot\" terbanyak.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130803,
       "id": "frost_bites_in_death",
       "name": "Frost Bites in Death",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130804,
       "id": "shrined_fire_for_mirrored_soul",
       "name": "Shrined Fire for Mirrored Soul",
-      "desc": "Saat target musuh memasuki pertempuran, akan membuatnya memasuki status Ultimate DMG Vulnerability, meningkatkan <nobr>8%</nobr> Ultimate DMG yang diterimanya."
+      "desc": "Saat target musuh memasuki pertempuran, akan membuatnya memasuki status Ultimate DMG Vulnerability, meningkatkan <nobr>8%</nobr> Ultimate DMG yang diterimanya.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130805,
       "id": "strewn_souls_on_erased_earths",
       "name": "Strewn Souls on Erased Earths",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130806,
       "id": "apocalypse_the_emancipator",
       "name": "Apocalypse, the Emancipator",
-      "desc": "Meningkatkan <nobr>20%</nobr> <u>RES PEN</u> Seluruh Tipe dari Ultimate DMG yang diakibatkan Acheron. DMG yang diakibatkan Basic Attack dan Skill Acheron juga akan dianggap sebagai Ultimate DMG, dan mengabaikan Tipe Weakness musuh untuk mengurangi Toughness. Saat mengakibatkan Weakness Break, akan memicu efek Lightning Weakness Break."
+      "desc": "Meningkatkan <nobr>20%</nobr> <u>RES PEN</u> Seluruh Tipe dari Ultimate DMG yang diakibatkan Acheron. DMG yang diakibatkan Basic Attack dan Skill Acheron juga akan dianggap sebagai Ultimate DMG, dan mengabaikan Tipe Weakness musuh untuk mengurangi Toughness. Saat mengakibatkan Weakness Break, akan memicu efek Lightning Weakness Break.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

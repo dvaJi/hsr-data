@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "{RUBY_B#ヒショウ}飛霄{RUBY_E#}",
+  "description": "仙舟「曜青」の天撃将軍、帝弓七天将の1人。形式にとらわれない、真っ直ぐでさっぱりとした武人。\n武芸百般を修め、その身体を極限まで鍛え上げた彼女は、「大捷将軍」という名で仙舟の人々に慕われている。\nしかし、飛霄は「月狂い」の病を患っている——残された時間の中で、果たして彼女は忌み物を狩り尽くせるのだろうか。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "敵単体に風属性ダメージを与え、その後、天賦による追加攻撃を1回発動する。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "必殺技発動中、弱点属性を無視して敵の靭性を削る。敵が弱点撃破状態にない時、飛霄の弱点撃破効率がアップする。\n敵単体に「閃裂刃舞」または「斧貫衝天」を合計で#3[i]回発動し、最後に風属性ダメージを与える。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点撃破状態",
+          "desc": "敵の靭性が0まで削られた時に入る特殊状態。この状態になった敵は行動順が遅延する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "「飛黄」が#3[i]層に達すると必殺技が発動可能になる。「飛黄」は最大で#4[i]層累積できる。味方が#2[i]回攻撃を行うたびに、飛霄は「飛黄」を獲得する。\n自身以外の味方が攻撃を行った後、味方のメインターゲットとなった敵に飛霄が追加攻撃を発動し、風属性ダメージを与える。この効果はターンが回ってくるたびに1回まで発動できる。また、この攻撃を発動する時、自身の与ダメージがアップする。",
       "type": "天賦",
       "tag": "単体攻撃",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "「陥陣」状態に入り、一定範囲内の敵を継続的に引き寄せ、自身の移動速度をアップする。戦闘に入った後、「飛黄」を獲得する。\n「陥陣」状態では引き寄せたすべての敵を攻撃でき、各ウェーブ開始時、敵全体に風属性ダメージを与える。このダメージは必ず会心が発生する。なお、引き寄せた敵が多いほど、ダメージ倍率がアップする。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "{RUBY_B#きょくちちんてい}極地鎮定{RUBY_E#}",
-      "desc": "「閃裂刃舞」または「斧貫衝天」を発動した後、飛霄の与える必殺技ダメージがさらに本来のダメージの<nobr>10%</nobr>分アップする。最大<nobr>5</nobr>層累積でき、必殺技の行動終了まで継続する。"
+      "desc": "「閃裂刃舞」または「斧貫衝天」を発動した後、飛霄の与える必殺技ダメージがさらに本来のダメージの<nobr>10%</nobr>分アップする。最大<nobr>5</nobr>層累積でき、必殺技の行動終了まで継続する。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "{RUBY_B#げっけいらいさん}月桂礼賛{RUBY_E#}",
-      "desc": "天賦効果が強化される。味方の行った攻撃が<u>追加攻撃</u>だった場合、飛霄は直接「飛黄」を1層獲得する。この効果はターンが回ってくるたびに<nobr>6</nobr>回まで発動できる。"
+      "desc": "天賦効果が強化される。味方の行った攻撃が<u>追加攻撃</u>だった場合、飛霄は直接「飛黄」を1層獲得する。この効果はターンが回ってくるたびに<nobr>6</nobr>回まで発動できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "{RUBY_B#うつ}移{RUBY_E#}ろいゆく{RUBY_B#けいせい}景星{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "{RUBY_B#たんだいしんしょう}胆大心小{RUBY_E#}",
-      "desc": "天賦による<u>追加攻撃</u>の削靭値+<nobr>100%</nobr>。天賦による追加攻撃を行う時、自身の速度+<nobr>8%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "天賦による<u>追加攻撃</u>の削靭値+<nobr>100%</nobr>。天賦による追加攻撃を行う時、自身の速度+<nobr>8%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "{RUBY_B#せいてんとうは}星天踏破{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "{RUBY_B#こししゅきゅう}狐死首丘{RUBY_E#}",
-      "desc": "飛霄が与える必殺技ダメージの全属性<u>耐性貫通</u>+<nobr>20%</nobr>。天賦による<u>追加攻撃</u>ダメージが同時に必殺技ダメージと見なされ、ダメージ倍率+<nobr>140%</nobr>。"
+      "desc": "飛霄が与える必殺技ダメージの全属性<u>耐性貫通</u>+<nobr>20%</nobr>。天賦による<u>追加攻撃</u>ダメージが同時に必殺技ダメージと見なされ、ダメージ倍率+<nobr>140%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "Castorice",
+  "description": "Negeri yang menghormati kematian, Aidonia yang senantiasa diselimuti salju, kini telah tenggelam dalam tidur lelap yang manis.\nCastorice, putri dari Sungai Jiwa, Keturunan Chrysos yang mencari Benih Api \"Kematian\" ... Berangkatlah. Lindungi tangisan jiwa-jiwa di dunia, dan rangkullah kesunyian takdir.\n— Hidup dan mati adalah sebuah perjalanan. Ketika kupu-kupu hinggap di dahan, yang layu akan mekar kembali.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Mengonsumsi HP seluruh rekan tim, mengakibatkan Quantum DMG pada 1 musuh dan Quantum DMG dalam jumlah kecil pada target di sekitarnya.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Memanggil Memosprite Netherwing dan mendahulukan aksinya sebesar 100%. Di saat yang bersamaan, akan membuka Teritorial yang mengurangi RES Seluruh Tipe dari seluruh musuh.",
       "type": "Ultimate",
       "tag": "Panggil",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memanggil Memosprite",
+          "desc": "Memanggil Memosprite ke medan pertempuran. Jika Memosprite sudah berada di medan pertempuran, akan menghapus semua Crowd Control Debuff yang dimiliki oleh Memosprite.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Pendahuluan Aksi",
+          "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Teritorial",
+          "desc": "Hanya boleh ada satu Teritorial di medan pertempuran. Selama efek berlangsung, tidak dapat melancarkan kemampuan lain yang memiliki efek Teritorial.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1150,15 @@
       "simpleDesc": "Saat HP rekan tim berkurang, Castorice akan memperoleh \"Newbud\", serta akan meningkatkan DMG yang diakibatkan Castorice dan Netherwing. Saat \"Newbud\" mencapai batas maksimum, Ultimate dapat diaktifkan. Saat Netherwing berada di medan pertempuran, HP yang hilang dari rekan tim selain Netherwing akan dikonversi menjadi HP Netherwing dalam jumlah yang setara.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "Setelah menggunakan Technique, akan memasuki status \"Netherveil\" selama #3[i] detik. Saat berstatus \"Netherveil\", musuh tidak dapat mendekati Castorice secara aktif.\nMenyerang secara aktif saat berstatus \"Netherveil\" akan membuat seluruh musuh dalam jangkauan memasuki pertempuran. Di saat yang sama, akan memanggil Memosprite Netherwing dan mendahulukan aksinya sebesar 100%, serta membuka Teritorial \"Lost Netherland\". Netherwing memiliki HP sebesar #2[i]% dari batas maksimum \"Newbud\". Setelah memasuki pertempuran, akan mengonsumsi HP seluruh rekan tim selain Netherwing sebesar #1[i]% HP saat ini.\nSetelah memasuki pertempuran, jika Netherwing belum dipanggil, maka Castorice akan memperoleh \"Newbud\" sebesar #4[i]% dari batas maksimum \"Newbud\".",
       "simpleDesc": "Memasuki status \"Netherveil\". Musuh tidak dapat mendekati Castorice secara aktif.\nMenyerang saat berstatus \"Netherveil\" akan membuat seluruh musuh dalam jangkauan memasuki pertempuran, serta memanggil Memosprite Netherwing dan mendahulukan aksinya sebesar 100%. Saat memasuki pertempuran, akan mengonsumsi HP seluruh rekan tim selain Netherwing.\nSetelah memasuki pertempuran, jika Netherwing belum dipanggil, maka Castorice akan memulihkan \"Newbud\" sebesar #4[i]% dari batas maksimum \"Newbud\".",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memanggil Memosprite",
+          "desc": "Memanggil Memosprite ke medan pertempuran. Jika Memosprite sudah berada di medan pertempuran, akan menghapus semua Crowd Control Debuff yang dimiliki oleh Memosprite.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Pendahuluan Aksi",
+          "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Teritorial",
+          "desc": "Hanya boleh ada satu Teritorial di medan pertempuran. Selama efek berlangsung, tidak dapat melancarkan kemampuan lain yang memiliki efek Teritorial.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Netherwing: Pollux",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "Claw Splits the Veil",
+        "desc": "Mengakibatkan Quantum DMG sebesar <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> Max HP Castorice pada seluruh musuh.",
+        "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah kecil pada seluruh musuh.",
+        "type": {
+          "id": "Servant",
+          "name": "Skill Memosprite"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "Breath Scorches the Shadow",
+        "desc": "Melancarkan \"Breath Scorches the Shadow\" akan mengonsumsi HP sebesar <nobr>#1[i]%</nobr> Max HP Netherwing untuk mengakibatkan Quantum DMG sebesar <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> Max HP Castorice pada seluruh musuh.\nDalam satu kali serangan, \"Breath Scorches the Shadow\" dapat dilancarkan berulang kali. Saat berulang kali melancarkan \"Breath Scorches the Shadow\", DMG Multiplier akan berturut-turut meningkat menjadi <span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span>/<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>, dan tidak akan meningkat lagi setelah mencapai <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>. Efek peningkatan DMG Multiplier tidak akan berkurang sebelum Netherwing menghilang.\nSaat HP Netherwing saat ini kurang dari atau sama dengan <nobr>#5[i]%</nobr> Max HP-nya, melancarkan kemampuan ini akan mengurangi HP hingga 1, lalu secara aktif memicu efek kemampuan yang setara dengan Talent \"Wings Sweep the Ruins\".",
+        "simpleDesc": "Mengonsumsi HP diri sendiri dan mengakibatkan Quantum DMG pada seluruh musuh. Giliran kali ini tidak akan berakhir. Saat melancarkan kemampuan ini secara berulang, kemampuan ini dapat memperoleh maksimal hingga 3 kali penguatan. Saat HP kurang dari atau sama dengan <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, melancarkan kemampuan ini akan secara aktif memicu efek kemampuan Talent Memosprite \"Wings Sweep the Ruins\".",
+        "type": {
+          "id": "Servant",
+          "name": "Skill Memosprite"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "Mooncocoon Shrouds the Form",
+        "desc": "Saat Netherwing berada di medan pertempuran, ia akan menjadi <u>pendukung</u> rekan tim. Saat rekan tim menerima DMG atau mengonsumsi HP, HP unit terkait saat ini maksimal berkurang hingga 1, dan DMG yang diterima atau HP yang terkonsumsi setelah itu akan ditanggung oleh Netherwing, dengan konsumsi HP sebesar <nobr>#1[i]%</nobr> dari nilai aslinya hingga Netherwing menghilang.",
+        "simpleDesc": "Saat Netherwing berada di medan pertempuran, ia akan menjadi <u>pendukung</u> rekan tim. HP rekan tim saat ini maksimal berkurang hingga 1, dan DMG yang diterima atau HP yang terkonsumsi setelah itu akan ditanggung oleh Netherwing.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Support"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "Pendukung",
+            "desc": "Musuh tidak dapat memilih unit pendukung sebagai target secara aktif. Kemampuan tipe \"Blast\" milik rekan tim tidak dapat menyebar ke unit pendukung.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "Roar Rumbles the Realm",
+        "desc": "Saat Netherwing dipanggil, DMG yang diakibatkan seluruh rekan tim akan meningkat <nobr>#1[i]%</nobr> selama <nobr>#2[i]</nobr> giliran.",
+        "simpleDesc": "Saat dipanggil, akan meningkatkan DMG yang diakibatkan seluruh rekan tim.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Support"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "Wings Sweep the Ruins",
+        "desc": "Saat Netherwing menghilang, akan mengakibatkan <nobr>#2[i]</nobr> kali DMG, yang setiap kalinya mengakibatkan Quantum DMG sebesar <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> Max HP Castorice pada musuh acak. Di saat yang bersamaan, akan memulihkan HP seluruh rekan tim sebesar <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> Max HP Castorice + <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>.",
+        "simpleDesc": "Saat menghilang, akan mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh, total Bounce <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> kali. Di saat yang bersamaan, akan memulihkan HP seluruh rekan tim.",
+        "type": {
+          "name": "Talent Memosprite"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Bounce"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "Breath Scorches the Shadow",
+        "desc": "",
+        "simpleDesc": "Mengonsumsi HP diri sendiri dan mengakibatkan Quantum DMG pada seluruh musuh. Giliran kali ini tidak akan berakhir. Saat melancarkan kemampuan ini secara berulang, kemampuan ini dapat memperoleh maksimal hingga 3 kali penguatan. Saat HP kurang dari atau sama dengan <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, melancarkan kemampuan ini akan secara aktif memicu efek kemampuan Talent Memosprite \"Wings Sweep the Ruins\".",
+        "type": {
+          "id": "Servant",
+          "name": "Skill Memosprite"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "Breath Scorches the Shadow",
+        "desc": "",
+        "simpleDesc": "Mengonsumsi HP diri sendiri dan mengakibatkan Quantum DMG pada seluruh musuh. Giliran kali ini tidak akan berakhir. Saat melancarkan kemampuan ini secara berulang, kemampuan ini dapat memperoleh maksimal hingga 3 kali penguatan. Saat HP kurang dari atau sama dengan <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, melancarkan kemampuan ini akan secara aktif memicu efek kemampuan Talent Memosprite \"Wings Sweep the Ruins\".",
+        "type": {
+          "id": "Servant",
+          "name": "Skill Memosprite"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "AoE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "Wings Sweep the Ruins",
+        "desc": "Mengonsumsi semua HP dan mengakibatkan <nobr>#2[i]</nobr> kali DMG, yang setiap kalinya mengakibatkan Quantum DMG sebesar <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> Max HP Castorice pada musuh acak. Di saat yang bersamaan, akan memulihkan HP seluruh rekan tim sebesar <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> Max HP Castorice + <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>.",
+        "simpleDesc": "Mengonsumsi semua HP dan mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh, total Bounce <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> kali. Di saat yang bersamaan juga akan memulihkan HP seluruh rekan tim.",
+        "type": {
+          "id": "Servant",
+          "name": "Skill Memosprite"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Bounce"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "Snowbound Maiden, Memory to Tomb",
-      "desc": "Saat HP target musuh saat ini kurang dari atau sama dengan <nobr>80%</nobr>/<nobr>50%</nobr> Max HP-nya, DMG yang diakibatkan \"Boneclaw, Doomdrake's Embrace\", \"Claw Splits the Veil\", \"Breath Scorches the Shadow\", dan \"Wings Sweep the Ruins\" pada target musuh tersebut adalah <nobr>120%</nobr>/<nobr>140%</nobr> dari DMG aslinya."
+      "desc": "Saat HP target musuh saat ini kurang dari atau sama dengan <nobr>80%</nobr>/<nobr>50%</nobr> Max HP-nya, DMG yang diakibatkan \"Boneclaw, Doomdrake's Embrace\", \"Claw Splits the Veil\", \"Breath Scorches the Shadow\", dan \"Wings Sweep the Ruins\" pada target musuh tersebut adalah <nobr>120%</nobr>/<nobr>140%</nobr> dari DMG aslinya.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "Crown on Wings of Bloom",
-      "desc": "Setelah memanggil Memosprite Netherwing, Castorice akan memperoleh <nobr>2</nobr> lapis \"Ardent Will\", maksimal dapat memiliki <nobr>2</nobr> lapis \"Ardent Will\". \"Ardent Will\" dapat digunakan untuk mengurangi konsumsi HP dari Skill Memosprite Netherwing \"Breath Scorches the Shadow\", serta <u>mendahulukan aksi</u> Castorice sebesar <nobr>100%</nobr>. Pada pelancaran Enhanced Skill yang berikutnya, Castorice akan memperoleh \"Newbud\" sebesar <nobr>30%</nobr> dari batas maksimum \"Newbud\"."
+      "desc": "Setelah memanggil Memosprite Netherwing, Castorice akan memperoleh <nobr>2</nobr> lapis \"Ardent Will\", maksimal dapat memiliki <nobr>2</nobr> lapis \"Ardent Will\". \"Ardent Will\" dapat digunakan untuk mengurangi konsumsi HP dari Skill Memosprite Netherwing \"Breath Scorches the Shadow\", serta <u>mendahulukan aksi</u> Castorice sebesar <nobr>100%</nobr>. Pada pelancaran Enhanced Skill yang berikutnya, Castorice akan memperoleh \"Newbud\" sebesar <nobr>30%</nobr> dari batas maksimum \"Newbud\".",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Pendahuluan Aksi",
+          "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "Pious Pilgrim, Dance in Doom",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Talent Memosprite +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Talent Memosprite +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "Rest in Songs of Gloom",
-      "desc": "Saat Castorice berada di medan pertempuran, Pemulihan HP yang diterima seluruh rekan tim meningkat <nobr>20%</nobr>."
+      "desc": "Saat Castorice berada di medan pertempuran, Pemulihan HP yang diterima seluruh rekan tim meningkat <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "Pristine Pages, Prophecy as Plume",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>. Level Skill Memosprite +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>. Level Skill Memosprite +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "Await for Years to Loom",
-      "desc": "Saat Castorice dan Netherwing mengakibatkan DMG, Quantum <u>RES PEN</u> akan meningkat <nobr>20%</nobr>. Selama durasi serangan Netherwing, ia dapat mengurangi Toughness musuh tanpa memedulikan Tipe Weakness, dan akan memicu efek Quantum Weakness Break saat mengakibatkan Weakness Break. Selain itu, jumlah Bounce dari Talent \"Wings Sweep the Ruins\" yang dipicu akan bertambah ekstra <nobr>3</nobr> kali."
+      "desc": "Saat Castorice dan Netherwing mengakibatkan DMG, Quantum <u>RES PEN</u> akan meningkat <nobr>20%</nobr>. Selama durasi serangan Netherwing, ia dapat mengurangi Toughness musuh tanpa memedulikan Tipe Weakness, dan akan memicu efek Quantum Weakness Break saat mengakibatkan Weakness Break. Selain itu, jumlah Bounce dari Talent \"Wings Sweep the Ruins\" yang dipicu akan bertambah ekstra <nobr>3</nobr> kali.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

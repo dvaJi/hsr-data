@@ -2,6 +2,7 @@
   "_id": 8003,
   "id": "trailblazer_preservation_boy",
   "name": "開拓者 存護",
+  "description": "登上星穹列車的{F#少女}{M#少年}。\n為了消除星核帶來的危機，選擇與星穹列車同行。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害，獲得【灼熱意志】。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "降低自身受到的傷害，並獲得【灼熱意志】，高機率使敵方全體陷入嘲諷狀態。",
       "type": "戰技",
       "tag": "防禦",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +765,15 @@
       "simpleDesc": "對敵方全體造成火屬性傷害、強化下一次普通攻擊。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "被攻擊時疊加【灼熱意志】，【灼熱意志】不低於4層時，普通攻擊獲得強化。施放普通攻擊、戰技、終結技後，為我方全體提供護盾。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,6 +1419,15 @@
       "simpleDesc": "使用秘技後，下一次戰鬥開始時給自身提供護盾。",
       "type": "秘技",
       "tag": "防禦",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1446,79 @@
       "_id": 800301,
       "id": "earthshaking_resonance",
       "name": "大地芯髓的鳴動",
-      "desc": "發動普通攻擊時，額外造成等同於開拓者<nobr>25%</nobr>防禦力的火屬性傷害；發動強化普通攻擊時，額外造成等同於開拓者<nobr>50%</nobr>防禦力的火屬性傷害。"
+      "desc": "發動普通攻擊時，額外造成等同於開拓者<nobr>25%</nobr>防禦力的火屬性傷害；發動強化普通攻擊時，額外造成等同於開拓者<nobr>50%</nobr>防禦力的火屬性傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800302,
       "id": "timedefying_tenacity",
       "name": "古老寒鐵的堅守",
-      "desc": "觸發天賦時，為我方全體提供的護盾能夠額外抵消等同於開拓者防禦力<nobr>2%</nobr>+<nobr>27</nobr>的傷害。"
+      "desc": "觸發天賦時，為我方全體提供的護盾能夠額外抵消等同於開拓者防禦力<nobr>2%</nobr>+<nobr>27</nobr>的傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800303,
       "id": "trailblazing_blueprint",
       "name": "砌造未來的藍圖",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800304,
       "id": "nationbuilding_oath",
       "name": "駐留文明的誓言",
-      "desc": "戰鬥開始時，立即獲得<nobr>4</nobr>層【灼熱意志】。"
+      "desc": "戰鬥開始時，立即獲得<nobr>4</nobr>層【灼熱意志】。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800305,
       "id": "spiritwarming_flame",
       "name": "點燃光焰的勇氣",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800306,
       "id": "cityforging_bulwarks",
       "name": "永屹城垣的壁壘",
-      "desc": "發動強化普通攻擊或施放終結技後，開拓者的防禦力提高<nobr>10%</nobr>，最多疊加<nobr>3</nobr>層。"
+      "desc": "發動強化普通攻擊或施放終結技後，開拓者的防禦力提高<nobr>10%</nobr>，最多疊加<nobr>3</nobr>層。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1307,
   "id": "black_swan",
   "name": "Black Swan",
+  "description": "Người Lưu Giữ Ký Ức của Sảnh Đường Hồi Ức, nhà chiêm tinh bí ẩn thong dong.\nHãy kiên nhẫn lắng nghe \"ký ức\" của người khác, sẽ có thể nắm giữ vận mệnh trong tay.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,32 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong lên 1 kẻ địch, có xác suất thi triển Dấu Tích Bí Ẩn lên mục tiêu. Sau khi tấn công mục tiêu ở trạng thái Bào Mòn, Chảy Máu, Thiêu Đốt, Sốc Điện, sẽ lần lượt có xác suất thi triển thêm Dấu Tích Bí Ẩn.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Dấu Tích Bí Ẩn",
+          "desc": "Dấu Tích Bí Ẩn thuộc Hiệu Ứng Xấu loại Sát Thương Duy Trì, trạng thái này không thể giải trừ.\nKhi ở trạng thái Dấu Tích Bí Ẩn, cũng sẽ bị xem như rơi vào trạng thái Bào Mòn. Ở trạng thái Dấu Tích Bí Ẩn, mục tiêu sẽ chịu Sát Thương Phong liên tục khi bắt đầu mỗi hiệp.\nKhi thi triển trạng thái Dấu Tích Bí Ẩn sẽ bỏ qua Kháng Bào Mòn, Kháng Chảy Máu, Kháng Thiêu Đốt, Kháng Sốc Điện của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -439,6 +466,32 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong lên 1 kẻ địch và mục tiêu lân cận kẻ đó, có xác suất lớn thi triển Dấu Tích Bí Ẩn lên mục tiêu, và có xác suất lớn giảm Phòng Thủ của mục tiêu.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Dấu Tích Bí Ẩn",
+          "desc": "Dấu Tích Bí Ẩn thuộc Hiệu Ứng Xấu loại Sát Thương Duy Trì, trạng thái này không thể giải trừ.\nKhi ở trạng thái Dấu Tích Bí Ẩn, cũng sẽ bị xem như rơi vào trạng thái Bào Mòn. Ở trạng thái Dấu Tích Bí Ẩn, mục tiêu sẽ chịu Sát Thương Phong liên tục khi bắt đầu mỗi hiệp.\nKhi thi triển trạng thái Dấu Tích Bí Ẩn sẽ bỏ qua Kháng Bào Mòn, Kháng Chảy Máu, Kháng Thiêu Đốt, Kháng Sốc Điện của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -793,6 +846,24 @@
       "simpleDesc": "Thi triển trạng thái Vạch Trần lên toàn bộ phe địch, tăng sát thương mà mục tiêu phải chịu trong hiệp, đồng thời xem Dấu Tích Bí Ẩn như là trạng thái Bào Mòn, Chảy Máu, Thiêu Đốt, Sốc Điện. Ngoài ra, sau khi Dấu Tích Bí Ẩn gây sát thương lúc bắt đầu hiệp kế tiếp sẽ không làm mới số tầng. Gây Sát Thương Phong lên toàn phe địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10013071,
+          "name": "Dấu Tích Bí Ẩn",
+          "desc": "Dấu Tích Bí Ẩn thuộc Hiệu Ứng Xấu loại Sát Thương Duy Trì, trạng thái này không thể giải trừ.\nKhi ở trạng thái Dấu Tích Bí Ẩn, cũng sẽ bị xem như rơi vào trạng thái Bào Mòn. Ở trạng thái Dấu Tích Bí Ẩn, mục tiêu sẽ chịu Sát Thương Phong liên tục khi bắt đầu mỗi hiệp.\nKhi thi triển trạng thái Dấu Tích Bí Ẩn sẽ bỏ qua Kháng Bào Mòn, Kháng Chảy Máu, Kháng Thiêu Đốt, Kháng Sốc Điện của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1132,6 +1203,32 @@
       "simpleDesc": "Khi kẻ địch chịu Sát Thương Duy Trì lúc bắt đầu mỗi hiệp, sẽ có xác suất rơi vào Dấu Tích Bí Ẩn, khi bắt đầu hiệp sẽ chịu Sát Thương Phong Duy Trì, đồng thời Black Swan sẽ kích hoạt hiệu ứng thêm căn cứ theo số tầng của Dấu Tích Bí Ẩn.",
       "type": "Thiên Phú",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Dấu Tích Bí Ẩn",
+          "desc": "Dấu Tích Bí Ẩn thuộc Hiệu Ứng Xấu loại Sát Thương Duy Trì, trạng thái này không thể giải trừ.\nKhi ở trạng thái Dấu Tích Bí Ẩn, cũng sẽ bị xem như rơi vào trạng thái Bào Mòn. Ở trạng thái Dấu Tích Bí Ẩn, mục tiêu sẽ chịu Sát Thương Phong liên tục khi bắt đầu mỗi hiệp.\nKhi thi triển trạng thái Dấu Tích Bí Ẩn sẽ bỏ qua Kháng Bào Mòn, Kháng Chảy Máu, Kháng Thiêu Đốt, Kháng Sốc Điện của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1531,6 +1628,32 @@
       "simpleDesc": "Sau khi dùng Bí Kỹ, khi bắt đầu lần chiến đấu kế tiếp, có xác suất lớn thi triển Dấu Tích Bí Ẩn lên từng mục tiêu địch, lặp lại nhiều lần cho đến khi thi triển thất bại.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Dấu Tích Bí Ẩn",
+          "desc": "Dấu Tích Bí Ẩn thuộc Hiệu Ứng Xấu loại Sát Thương Duy Trì, trạng thái này không thể giải trừ.\nKhi ở trạng thái Dấu Tích Bí Ẩn, cũng sẽ bị xem như rơi vào trạng thái Bào Mòn. Ở trạng thái Dấu Tích Bí Ẩn, mục tiêu sẽ chịu Sát Thương Phong liên tục khi bắt đầu mỗi hiệp.\nKhi thi triển trạng thái Dấu Tích Bí Ẩn sẽ bỏ qua Kháng Bào Mòn, Kháng Chảy Máu, Kháng Thiêu Đốt, Kháng Sốc Điện của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1548,37 +1671,121 @@
       "_id": 130701,
       "id": "seven_pillars_of_wisdom",
       "name": "Bảy Trụ Cột Của Trí Tuệ",
-      "desc": "Khi Black Swan ở trạng thái có thể chiến đấu, kháng thuộc tính Phong, Vật Lý, Hỏa, Lôi tương ứng của kẻ địch ở trạng thái Bào Mòn, Chảy Máu, Thiêu Đốt, Sốc Điện lần lượt giảm <nobr>25%</nobr>."
+      "desc": "Khi Black Swan ở trạng thái có thể chiến đấu, kháng thuộc tính Phong, Vật Lý, Hỏa, Lôi tương ứng của kẻ địch ở trạng thái Bào Mòn, Chảy Máu, Thiêu Đốt, Sốc Điện lần lượt giảm <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130702,
       "id": "weep_not_for_me_my_lamb",
       "name": "Cừu Non, Xin Đừng Khóc Vì Ta",
-      "desc": "Khi mục tiêu phe địch ở trạng thái \"<u>Dấu Tích Bí Ẩn</u>\" bị tiêu diệt, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu ở gần rơi vào <nobr>6</nobr> tầng \"<u>Dấu Tích Bí Ẩn</u>\"."
+      "desc": "Khi mục tiêu phe địch ở trạng thái \"<u>Dấu Tích Bí Ẩn</u>\" bị tiêu diệt, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu ở gần rơi vào <nobr>6</nobr> tầng \"<u>Dấu Tích Bí Ẩn</u>\".",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Dấu Tích Bí Ẩn",
+          "desc": "Dấu Tích Bí Ẩn thuộc Hiệu Ứng Xấu loại Sát Thương Duy Trì, trạng thái này không thể giải trừ.\nKhi ở trạng thái Dấu Tích Bí Ẩn, cũng sẽ bị xem như rơi vào trạng thái Bào Mòn. Ở trạng thái Dấu Tích Bí Ẩn, mục tiêu sẽ chịu Sát Thương Phong liên tục khi bắt đầu mỗi hiệp.\nKhi thi triển trạng thái Dấu Tích Bí Ẩn sẽ bỏ qua Kháng Bào Mòn, Kháng Chảy Máu, Kháng Thiêu Đốt, Kháng Sốc Điện của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130703,
       "id": "as_above_so_below",
       "name": "Thượng Giới Đã Vậy, Hạ Giới Cũng Như Vậy",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130704,
       "id": "in_tears_we_gift",
       "name": "Nước Mắt, Cũng Là Một Món Quà",
-      "desc": "Ở trạng thái Vạch Trần, Kháng Hiệu Ứng của kẻ địch giảm <nobr>10%</nobr>, đồng thời khi kẻ địch bắt đầu mỗi hiệp hoặc bị tiêu diệt sẽ hồi phục <nobr>8</nobr> Năng Lượng cho Black Swan. Hiệu ứng hồi phục Năng Lượng tối đa kích hoạt 1 lần trong thời gian duy trì trạng thái Vạch Trần, rơi vào trạng thái Vạch Trần một lần nữa sẽ làm mới số lần kích hoạt."
+      "desc": "Ở trạng thái Vạch Trần, Kháng Hiệu Ứng của kẻ địch giảm <nobr>10%</nobr>, đồng thời khi kẻ địch bắt đầu mỗi hiệp hoặc bị tiêu diệt sẽ hồi phục <nobr>8</nobr> Năng Lượng cho Black Swan. Hiệu ứng hồi phục Năng Lượng tối đa kích hoạt 1 lần trong thời gian duy trì trạng thái Vạch Trần, rơi vào trạng thái Vạch Trần một lần nữa sẽ làm mới số lần kích hoạt.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130705,
       "id": "linnutee_flyway",
       "name": "Đường Bay Chim Di Trú",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130706,
       "id": "pantheon_merciful_masses_pitiful",
       "name": "Vạn Thần Nhân Từ, Chúng Sinh Khổ Đau",
-      "desc": "Khi mục tiêu phe địch bị đồng đội của Black Swan tấn công, Black Swan sẽ có <nobr>65%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu rơi vào 1 tầng \"<u>Dấu Tích Bí Ẩn</u>\".\nMỗi khi Black Swan khiến mục tiêu phe địch rơi vào \"<u>Dấu Tích Bí Ẩn</u>\", sẽ có <nobr>50%</nobr> <u>xác suất cố định</u> khiến số tầng \"<u>Dấu Tích Bí Ẩn</u>\" cộng dồn lần này tăng thêm <nobr>1</nobr> tầng."
+      "desc": "Khi mục tiêu phe địch bị đồng đội của Black Swan tấn công, Black Swan sẽ có <nobr>65%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu rơi vào 1 tầng \"<u>Dấu Tích Bí Ẩn</u>\".\nMỗi khi Black Swan khiến mục tiêu phe địch rơi vào \"<u>Dấu Tích Bí Ẩn</u>\", sẽ có <nobr>50%</nobr> <u>xác suất cố định</u> khiến số tầng \"<u>Dấu Tích Bí Ẩn</u>\" cộng dồn lần này tăng thêm <nobr>1</nobr> tầng.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Dấu Tích Bí Ẩn",
+          "desc": "Dấu Tích Bí Ẩn thuộc Hiệu Ứng Xấu loại Sát Thương Duy Trì, trạng thái này không thể giải trừ.\nKhi ở trạng thái Dấu Tích Bí Ẩn, cũng sẽ bị xem như rơi vào trạng thái Bào Mòn. Ở trạng thái Dấu Tích Bí Ẩn, mục tiêu sẽ chịu Sát Thương Phong liên tục khi bắt đầu mỗi hiệp.\nKhi thi triển trạng thái Dấu Tích Bí Ẩn sẽ bỏ qua Kháng Bào Mòn, Kháng Chảy Máu, Kháng Thiêu Đốt, Kháng Sốc Điện của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000002,
+          "name": "Xác Suất Cố Định",
+          "desc": "Xác suất cố định không bị ảnh hưởng bởi bất cứ nhân tố nào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 8007,
   "id": "trailblazer_remembrance_boy",
   "name": "Pionnier Le Souvenir",
+  "description": "{F#Une jeune fille}{M#Un jeune homme} qui a embarqué à bord de l'Astral Express.\n{F#Elle}{M#Il} a choisi de voyager à bord du train pour éliminer la menace que pose le Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de glace mineurs à un ennemi.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Invoque le mnémesprit Mem. Si Mem est déjà sur le champ de bataille, lui permet de récupérer des PV et de gagner de la charge.",
       "type": "Compétence",
       "tag": "Invocation",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "Invoque le mnémesprit Mem. Mem gagne de la charge, puis inflige des DGT massifs de glace à tous les ennemis.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "Chaque fois qu'un certain montant d'énergie est régénéré par tous les alliés, Mem gagne de la charge.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "Crée une dimension spéciale dans laquelle les ennemis cessent toute action. Lorsque vous engagez le combat contre des ennemis présents dans cette dimension, l'action de tous les ennemis est retardée et des DGT de glace mineurs sont infligés à tous les ennemis.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Action retardée",
+          "desc": "Augmente le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,42 +1444,599 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Mem",
+    "icon": "SpriteOutput/ServantIconTeam/18007B.png",
+    "hpBase": "#4",
+    "hpInherit": "#2",
+    "hpSkill": 800704,
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1800701,
+        "name": "Du balai les méchants !",
+        "desc": "Inflige <nobr>#2[i]</nobr> instances de DGT, chaque instance inflige des DGT de glace équivalents à <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> de l'ATQ de Mem à un ennemi aléatoire. Puis, inflige des DGT de glace équivalents à <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> de l'ATQ de Mem à tous les ennemis.",
+        "simpleDesc": "Inflige des DGT de glace mineurs qui rebondissent un total de <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> fois. Inflige ensuite des DGT de glace mineurs à tous les ennemis.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ZdE"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              4,
+              0.45
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.216,
+              4,
+              0.54
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.252,
+              4,
+              0.63
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.288,
+              4,
+              0.72
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.324,
+              4,
+              0.81
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.36,
+              4,
+              0.9
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.396,
+              4,
+              0.99
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.432,
+              4,
+              1.08
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.468,
+              4,
+              1.17
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.504,
+              4,
+              1.26
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800703,
+        "name": "Amis pour la vie !",
+        "desc": "Mem augmente les DGT critiques de tous les alliés à hauteur de <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> de ses propres DGT critiques + <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>.\nLorsque la charge n'est pas à <nobr>100</nobr> %, Mem utilise automatiquement Du balai les méchants ! au cours de son tour. Lorsque la charge est à <nobr>100</nobr> %, Mem agit immédiatement, Mem peut alors sélectionner un allié pour la capacité Laisse-moi t'aider ! au cours de son prochain tour.",
+        "simpleDesc": "Mem augmente les DGT critiques de tous les alliés.\nMem attaque automatiquement au cours de son tour. Lorsque la charge atteint <nobr>100</nobr> %, Mem agit immédiatement et peut utiliser une nouvelle capacité qui permet d'<span style=\"color:#f29e38ff><u>avancer l'action</u></span> d'un allié et d'infliger des <span style=\"color:#f29e38ff><u>DGT réels</u></span>.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Soutien"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.12
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.144
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.168
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.192
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.216
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.24
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.264
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.288
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.312
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.336
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800705,
+        "name": "Allez, Mem, en avant !",
+        "desc": "Mem gagne immédiatement <nobr>#1[i]%</nobr> de charge lors de son invocation.",
+        "simpleDesc": "Mem gagne immédiatement de la charge lors de son invocation.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Renforcement"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800706,
+        "name": "Aucun... regret",
+        "desc": "Mem <u>avance l'action</u> {M#du pionnier}{F#de la pionnière} de <nobr>#1[i]%</nobr> après sa disparition.",
+        "simpleDesc": "Mem <u>avance l'action</u> {M#du pionnier}{F#de la pionnière} après sa disparition.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Renforcement"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Action avancée",
+            "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800707,
+        "name": "Laisse-moi t'aider !",
+        "desc": "Mem <u>avance l'action</u> d'un allié désigné de <nobr>#3[i]%</nobr> et lui accorde Soutien de Mem pendant <nobr>#2[i]</nobr> tours.\nÀ chaque fois qu'une cible avec Soutien de Mem inflige des DGT, elle inflige également des <u>DGT réels</u> équivalents à <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> des DGT initiaux 1 fois supplémentaire.\nL'action n'est pas <u>avancée</u> lorsque la capacité est utilisée sur cette unité.",
+        "simpleDesc": "Mem <span style=\"color:#f29e38ff><u>avance l'action</u></span> d'un allié et lui accorde Soutien de Mem, ce qui lui permet d'infliger des <span style=\"color:#f29e38ff><u>DGT réels</u></span> supplémentaires après avoir infligé des DGT.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Soutien"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Action avancée",
+            "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000017,
+            "name": "DGT réels",
+            "desc": "DGT sans type immunisés aux effets quelconques. Ces DGT ne sont pas considérés comme une attaque.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.2,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.22,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.24,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.26,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.28,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.32,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.34,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.36,
+              3,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 800701,
       "id": "narrator_of_the_present",
       "name": "Narration du présent",
-      "desc": "Augmente les chances de coup critique des cibles alliées qui bénéficient de Soutien de Mem de <nobr>10%</nobr>. Lorsqu'une cible alliée bénéficie de Soutien de Mem, cet effet s'applique également au mnémesprit de la cible/au mnémomaître. Cet effet n'est pas cumulable."
+      "desc": "Augmente les chances de coup critique des cibles alliées qui bénéficient de Soutien de Mem de <nobr>10%</nobr>. Lorsqu'une cible alliée bénéficie de Soutien de Mem, cet effet s'applique également au mnémesprit de la cible/au mnémomaître. Cet effet n'est pas cumulable.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800702,
       "id": "gleaner_of_the_past",
       "name": "Récupération des vestiges du passé",
-      "desc": "Le pionnier régénère <nobr>8</nobr> points d'énergie lorsqu'un mnémesprit allié (autre que Mem) agit. Cet effet peut se déclencher jusqu'à <nobr>1</nobr> fois par tour. Le nombre de déclenchements est réinitialisé au début du tour du pionnier."
+      "desc": "Le pionnier régénère <nobr>8</nobr> points d'énergie lorsqu'un mnémesprit allié (autre que Mem) agit. Cet effet peut se déclencher jusqu'à <nobr>1</nobr> fois par tour. Le nombre de déclenchements est réinitialisé au début du tour du pionnier.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800703,
       "id": "chanter_of_the_future",
       "name": "Hymne au futur",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800704,
       "id": "dancer_of_the_muse",
       "name": "Danse des Muses",
-      "desc": "Lorsqu'une cible alliée avec 0 d'énergie max utilise activement une capacité, Mem gagne <nobr>3%</nobr> de charge. De plus, le multiplicateur des DGT réels infligés par cette cible via Soutien de Mem augmente de <nobr>6%</nobr> supplémentaires."
+      "desc": "Lorsqu'une cible alliée avec 0 d'énergie max utilise activement une capacité, Mem gagne <nobr>3%</nobr> de charge. De plus, le multiplicateur des DGT réels infligés par cette cible via Soutien de Mem augmente de <nobr>6%</nobr> supplémentaires.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800705,
       "id": "seamster_of_the_ode",
       "name": "Art des messages décousus",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800706,
       "id": "bearer_of_the_revelation",
       "name": "Transmission de l'inspiration divine",
-      "desc": "Les chances de coup critique de l'ultime sont fixées à <nobr>100</nobr> %."
+      "desc": "Les chances de coup critique de l'ultime sont fixées à <nobr>100</nobr> %.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +2485,151 @@
       }
     },
     {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Du balai les méchants !",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédits",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "Bīja de la conscience",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Instinct de pilleur",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Du balai les méchants !",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédits",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Pousse de mana",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Ambition d'usurpateur",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Du balai les méchants !",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédits",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Pousse de mana",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Ambition d'usurpateur",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Du balai les méchants !",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédits",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Fleur d'Ālaya",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Volonté de conquérant",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Du balai les méchants !",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédits",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Fleur d'Ālaya",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Volonté de conquérant",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -1868,151 +2643,6 @@
       }
     },
     {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Du balai les méchants !",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédits",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "Bīja de la conscience",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "Instinct de pilleur",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Du balai les méchants !",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédits",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Pousse de mana",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Ambition d'usurpateur",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Du balai les méchants !",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédits",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Pousse de mana",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Ambition d'usurpateur",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Du balai les méchants !",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédits",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Fleur d'Ālaya",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Volonté de conquérant",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Du balai les méchants !",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédits",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Fleur d'Ālaya",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Volonté de conquérant",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -2153,6 +2783,27 @@
             "id": "conquerors_will",
             "name": "Volonté de conquérant",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "Épilogue à écrire",
+        "desc": "Après avoir utilisé un ultime, accorde 1 cumul d'Épopée, jusqu'à un maximum de <nobr>2</nobr> cumuls. Lorsque cette unité bénéficie d'Épopée et que Mem est sur le champ de bataille, l'ATQ normale évolue et devient « Ensemble, traçons demain ! ».",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

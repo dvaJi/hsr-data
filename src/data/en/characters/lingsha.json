@@ -2,6 +2,7 @@
   "_id": 1222,
   "id": "lingsha",
   "name": "Lingsha",
+  "description": "The new Cauldron Master of the Xianzhou Luofu's Alchemy Commission is one perceptive and intelligent Vidyadhara healer.\nWith a keen sense of smell, she diagnoses ailments and calms minds with aromatic therapy.\nAdept at navigating complex social relationships, she can remain impeccably composed even when turmoil rages within.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -244,9 +245,18 @@
       "id": "votive_incense",
       "name": "Votive Incense",
       "desc": "Deals Fire DMG equal to #1[i]% of Lingsha's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Fire DMG to a single enemy.",
+      "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Deals minor Fire DMG to all enemies and, at the same time, restores HP for all allies. Fuyuan's action advances.",
       "type": "Skill",
       "tag": "AoE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,32 @@
       "simpleDesc": "Increases Break DMG taken by all enemies, deals Fire DMG to all enemies, and at the same time, restores HP for all allies. Fuyuan's action advances.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1123,10 +1177,44 @@
       "_id": 122204,
       "id": "mistdance_manifest",
       "name": "Mistdance Manifest",
-      "desc": "When using Skill, summons Fuyuan, with an initial SPD of #1[i] and an initial action count of #7[i].\nWhen taking action, Fuyuan launches Follow-up ATK, dealing Fire DMG equal to #2[i]% of Lingsha's ATK to all enemies. Additionally deals Fire DMG equal to #8[i]% of Lingsha's ATK to a single random enemy, and this DMG prioritizes targets that have both Toughness greater than 0 and Fire Weakness. Dispels #6[i] debuff(s) from all allies and restores HP equal to #3[f1]% of Lingsha's ATK plus #4[i].\nFuyuan's action count can accumulate up to #5[i]. When the action count reaches 0 or when Lingsha is knocked down, Fuyuan disappears.\nWhile Fuyuan is on the field, using Skill can increase Fuyuan's action count by #7[i].",
-      "simpleDesc": "Using Skill summons Fuyuan: When taking action, launches Follow-up ATK and deals minor Fire DMG to all enemies. Additionally deals minor Fire DMG to a single random enemy, prioritizing targets with both Toughness greater than 0 and Fire Weakness. Dispels 1 debuff from all allies, and restores HP.\nUsing Skill repeatedly will increase Fuyuan's action count.",
+      "desc": "When using Skill, summons \"Fuyuan,\" with an initial SPD of #1[i] and an initial action count of #7[i].\nWhen taking action, \"Fuyuan\" launches Follow-up ATK, dealing Fire DMG equal to #2[i]% of Lingsha's ATK to all enemies. Additionally deals Fire DMG equal to #8[i]% of Lingsha's ATK to one random enemy, and this DMG prioritizes targets that have both Toughness greater than 0 and Fire Weakness. Dispels #6[i] debuff(s) from all allies and restores HP equal to #3[f1]% of Lingsha's ATK plus #4[i].\n\"Fuyuan's\" action count can accumulate up to #5[i]. When the action count reaches 0 or when Lingsha is knocked down, \"Fuyuan\" disappears.\nWhile \"Fuyuan\" is on the field, using Skill can increase \"Fuyuan's\" action count by #7[i].",
+      "simpleDesc": "Using Skill summons \"Fuyuan\": When taking action, launches Follow-up ATK and deals minor Fire DMG to all enemies. Additionally deals minor Fire DMG to one random enemy, prioritizing targets with both Toughness greater than 0 and Fire Weakness. Dispels 1 debuff from all allies, and restores HP.\nUsing Skill repeatedly will increase \"Fuyuan's\" action count.",
       "type": "Talent",
       "tag": "AoE",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1614,15 @@
       "simpleDesc": "After using Technique, immediately summons Fuyuan at the start of the next battle and increases Break DMG taken by all enemies.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1639,79 @@
       "_id": 122201,
       "id": "bloom_on_vileward_bouquet",
       "name": "Bloom on Vileward Bouquet",
-      "desc": "Lingsha's Weakness Break Efficiency increases by <nobr>50%</nobr>. When an enemy unit's Weakness is Broken, reduces their DEF by <nobr>20%</nobr>."
+      "desc": "Lingsha's Weakness Break Efficiency increases by <nobr>50%</nobr>. When an enemy unit's Weakness is Broken, reduces their DEF by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122202,
       "id": "leisure_in_carmine_smokeveil",
       "name": "Leisure in Carmine Smokeveil",
-      "desc": "When using Ultimate, increases all allies' Break Effect by <nobr>40%</nobr>, lasting for <nobr>3</nobr> turn(s)."
+      "desc": "When using Ultimate, increases all allies' Break Effect by <nobr>40%</nobr>, lasting for <nobr>3</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122203,
       "id": "shine_of_floral_wick",
       "name": "Shine of Floral Wick",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122204,
       "id": "redolence_from_canopied_banquet",
       "name": "Redolence from Canopied Banquet",
-      "desc": "When Fuyuan takes action, restores HP equal to <nobr>40%</nobr> of Lingsha's ATK for the ally target whose current HP is the lowest."
+      "desc": "When Fuyuan takes action, restores HP equal to <nobr>40%</nobr> of Lingsha's ATK for the ally target whose current HP is the lowest.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122205,
       "id": "poise_atop_twists_and_turns",
       "name": "Poise Atop Twists and Turns",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122206,
       "id": "arcadia_under_deep_seclusion",
       "name": "Arcadia Under Deep Seclusion",
-      "desc": "While \"Fuyuan\" is on the field, reduces all enemies' All-Type RES by <nobr>20%</nobr>. When \"Fuyuan\" attacks, additionally deals <nobr>4</nobr> instance(s) of DMG, with each instance dealing Fire DMG equal to <nobr>50%</nobr> of Lingsha's ATK and <nobr>5</nobr> Toughness Reduction to one random enemy. This prioritizes targets with both Toughness greater than 0 and Fire Weakness."
+      "desc": "While \"Fuyuan\" is on the field, reduces all enemies' All-Type RES by <nobr>20%</nobr>. When \"Fuyuan\" attacks, additionally deals <nobr>4</nobr> instance(s) of DMG, with each instance dealing Fire DMG equal to <nobr>50%</nobr> of Lingsha's ATK and <nobr>5</nobr> Toughness Reduction to one random enemy. This prioritizes targets with both Toughness greater than 0 and Fire Weakness.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

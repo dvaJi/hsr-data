@@ -2,6 +2,7 @@
   "_id": 1212,
   "id": "jingliu",
   "name": "鏡流",
+  "description": "過去的羅浮劍首，雲騎軍不敗盛名的締造者。\n而今其名字已被抹去，成為行走於魔陰身邊緣的仙舟叛徒。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "對指定敵方單體造成少量冰屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "對指定敵方單體造成冰屬性傷害，並獲得1層【朔望】。",
       "type": "戰技",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "對指定敵方單體造成大量冰屬性傷害，對相鄰目標造成冰屬性傷害，並獲得1層【朔望】。",
       "type": "終結技",
       "tag": "擴散",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,15 @@
       "simpleDesc": "當擁有#5[i]層【朔望】時，進入【轉魄】狀態，使行動提前100%、提高自身暴擊率，並獲得強化戰技。發動攻擊時，消耗隊友的生命值並根據消耗總量提升鏡流的攻擊力。當【朔望】層數為0時，退出【轉魄】狀態。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1497,32 @@
       "simpleDesc": "在自身周圍製造特殊領域。領域內敵人陷入凍結狀態。與領域內敵人進入戰鬥後，恢復能量、獲得1層【朔望】並高機率使敵方目標陷入凍結狀態。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1472,37 +1544,79 @@
       "_id": 121201,
       "id": "moon_crashes_tianguan_gate",
       "name": "月犯天關",
-      "desc": "施放終結技或強化戰技時，鏡流的暴擊傷害提高<nobr>24%</nobr>，持續<nobr>1</nobr>回合。若只攻擊了1個敵方目標，則額外對該目標造成1次等同於鏡流<nobr>100%</nobr>攻擊力的冰屬性傷害。"
+      "desc": "施放終結技或強化戰技時，鏡流的暴擊傷害提高<nobr>24%</nobr>，持續<nobr>1</nobr>回合。若只攻擊了1個敵方目標，則額外對該目標造成1次等同於鏡流<nobr>100%</nobr>攻擊力的冰屬性傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121202,
       "id": "crescent_shadows_qixing_dipper",
       "name": "朔暈七星",
-      "desc": "施放終結技後，下一次強化戰技的傷害提高<nobr>80%</nobr>。"
+      "desc": "施放終結技後，下一次強化戰技的傷害提高<nobr>80%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121203,
       "id": "halfmoon_gapes_mercurial_haze",
       "name": "半璧迫望",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121204,
       "id": "lunarlance_shines_skyward_dome",
       "name": "持秉玄燭",
-      "desc": "【轉魄】狀態下消耗隊友生命值獲得的攻擊力額外提高，提高數值等同於我方全體生命值消耗總量的<nobr>90%</nobr>，獲得的攻擊力上限提高<nobr>30%</nobr>。"
+      "desc": "【轉魄】狀態下消耗隊友生命值獲得的攻擊力額外提高，提高數值等同於我方全體生命值消耗總量的<nobr>90%</nobr>，獲得的攻擊力上限提高<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121205,
       "id": "night_shades_astral_radiance",
       "name": "晦入三台",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121206,
       "id": "eclipse_hollows_corporeal_husk",
       "name": "蝕變於婁",
-      "desc": "鏡流進入【轉魄】狀態時，【朔望】的上限層數提高1層並額外獲得<nobr>1</nobr>層【朔望】。【轉魄】狀態下，暴擊傷害提高<nobr>50%</nobr>。"
+      "desc": "鏡流進入【轉魄】狀態時，【朔望】的上限層數提高1層並額外獲得<nobr>1</nobr>層【朔望】。【轉魄】狀態下，暴擊傷害提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

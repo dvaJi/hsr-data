@@ -2,6 +2,7 @@
   "_id": 8007,
   "id": "trailblazer_remembrance_boy",
   "name": "Desbravador A Recordação",
+  "description": "{F#Uma garota}{M#Um garoto} que embarcou no Expresso Astral.\n{M#Ele}{F#Ela} escolheu viajar com o Expresso Astral para eliminar os perigos apresentados pelo Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Gelo leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Invoca o Memoespírito Mem. Se Mem já estiver em campo, restaura os PV de Mem e concede Carga a Mem.",
       "type": "Perícia",
       "tag": "Invocar",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "Invoca o Memoespírito Mem. Concede Carga a Mem e, em seguida, faz Mem infligir Dano de Gelo massivo a todos os inimigos.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "Sempre que uma certa quantidade de Energia for regenerada por todos os aliados, Mem ganha Carga.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "Cria uma Dimensão Especial. Os inimigos na Dimensão ficam sem agir. Ao entrar em combate contra inimigos na Dimensão, faz com que as ações de todos os inimigos sejam atrasadas e inflige um Dano de Gelo leve a todos os inimigos.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Ação Atrasada",
+          "desc": "Aumenta o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,42 +1444,599 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Mem",
+    "icon": "SpriteOutput/ServantIconTeam/18007B.png",
+    "hpBase": "#4",
+    "hpInherit": "#2",
+    "hpSkill": 800704,
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1800701,
+        "name": "Malvadões! Treta!",
+        "desc": "Causa <nobr>#2[i]</nobr> instância(s) de Dano, com cada instância causando Dano de Gelo igual a <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> do ATQ de Mem a um inimigo aleatório. Por fim, causa Dano de Gelo igual a <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> do ATQ de Mem a todos os inimigos.",
+        "simpleDesc": "Causa Dano de Gelo leve que Ricocheteia por um total de <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> vez(es). Causa Dano de Gelo leve a todos os inimigos no fim.",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Área"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              4,
+              0.45
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.216,
+              4,
+              0.54
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.252,
+              4,
+              0.63
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.288,
+              4,
+              0.72
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.324,
+              4,
+              0.81
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.36,
+              4,
+              0.9
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.396,
+              4,
+              0.99
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.432,
+              4,
+              1.08
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.468,
+              4,
+              1.17
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.504,
+              4,
+              1.26
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800703,
+        "name": "Amigos! Unidos!",
+        "desc": "Aumenta o Dano CRIT de todos os aliados em <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> do Dano CRIT de Mem + <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>.\nSe a Carga ainda não tiver chegado a <nobr>100%</nobr>, Mem usa \"Malvadões! Treta!\" automaticamente durante a ação. Quando a Carga chega a <nobr>100%</nobr>, Mem age imediatamente e pode selecionar uma unidade-aliada para utilizar \"Deixa Eu! Ajudar Você!\" na próxima ação.",
+        "simpleDesc": "Aumenta o Dano CRIT de todos os aliados.\nAo agir, ataca automaticamente. Se a Carga chegar a <nobr>100%</nobr>, age imediatamente e pode usar uma nova habilidade: <span style=\"color:#f29e38ff>Avança Adiante</span> a ação de um aliado e causa <span style=\"color:#f29e38ff><u>Dano Verdadeiro</u></span>.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Suporte"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.12
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.144
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.168
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.192
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.216
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.24
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.264
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.288
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.312
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.336
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800705,
+        "name": "Vai, Mem, Vai!",
+        "desc": "Quando Mem é invocada imediatamente ganha <nobr>#1[i]%</nobr> de Carga.",
+        "simpleDesc": "Ao ser invocada, ganha Carga imediatamente.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Aprimoramento"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800706,
+        "name": "Sem... Arrependimentos",
+        "desc": "Quando Mem desaparece, a ação {F#da Desbravadora}{M#do Desbravador} é Avançada Adiante em <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Ao desaparecer, Avança Adiante a ação {F#da Desbravadora}{M#do Desbravador}.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Aprimoramento"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Ação Avançada Adiante",
+            "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800707,
+        "name": "Deixa! Eu Ajudar Você!",
+        "desc": "Avança Adiante a ação de um aliado designado em <nobr>#3[i]%</nobr> e concede a ele \"Suporte da Mem\", com duração de <nobr>#2[i]</nobr> rodada(s).\nA cada 1 instância de Dano causado pelo alvo que possui \"Suporte da Mem\", causa adicionalmente 1 instância de <u>Dano Verdadeiro</u> igual a <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> do Dano original.\nAo usar esta habilidade nesta unidade, o efeito de Avançar Adiante da ação não pode ser ativado.",
+        "simpleDesc": "<span style=\"color:#f29e38ff>Avança Adiante</span> a ação de um aliado e concede \"Suporte da Mem\": causa adicionalmente <span style=\"color:#f29e38ff><u>Dano Verdadeiro</u></span> depois de causar Dano.",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Suporte"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Ação Avançada Adiante",
+            "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000017,
+            "name": "Dano Verdadeiro",
+            "desc": "Dano sem Tipo que não é afetado por nenhum efeito. Esse Dano não é considerado como a utilização de 1 ataque.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.2,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.22,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.24,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.26,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.28,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.32,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.34,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.36,
+              3,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 800701,
       "id": "narrator_of_the_present",
       "name": "Narrador do Presente",
-      "desc": "Aumenta a Chance de CRIT de aliados-alvo com \"Suporte da Mem\" em <nobr>10%</nobr>. Quando um aliado-alvo possui \"Suporte da Mem\", o efeito de \"Suporte da Mem\" também se aplica ao Memoespírito/Memomestre do alvo. Este efeito não pode acumular."
+      "desc": "Aumenta a Chance de CRIT de aliados-alvo com \"Suporte da Mem\" em <nobr>10%</nobr>. Quando um aliado-alvo possui \"Suporte da Mem\", o efeito de \"Suporte da Mem\" também se aplica ao Memoespírito/Memomestre do alvo. Este efeito não pode acumular.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800702,
       "id": "gleaner_of_the_past",
       "name": "Colhedor do Passado",
-      "desc": "Quando Memoespíritos aliados (exceto por Mem) agem, o Desbravador regenera <nobr>8</nobr> de Energia. Este efeito pode ativar um máximo de <nobr>1</nobr> vez(es) por rodada. A contagem de ativação é reiniciada no início da rodada do Desbravador."
+      "desc": "Quando Memoespíritos aliados (exceto por Mem) agem, o Desbravador regenera <nobr>8</nobr> de Energia. Este efeito pode ativar um máximo de <nobr>1</nobr> vez(es) por rodada. A contagem de ativação é reiniciada no início da rodada do Desbravador.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800703,
       "id": "chanter_of_the_future",
       "name": "Cantor do Futuro",
-      "desc": "Nv. de Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. de Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800704,
       "id": "dancer_of_the_muse",
       "name": "Dançarino da Musa",
-      "desc": "Quando um aliado-alvo com 0 de Energia Máxima usa uma habilidade, Mem também pode ganhar <nobr>3%</nobr> de Carga, e o multiplicador do <u>Dano Verdadeiro</u> causado por esse alvo através do \"Suporte da Mem\" aumenta adicionalmente em <nobr>6%</nobr>."
+      "desc": "Quando um aliado-alvo com 0 de Energia Máxima usa uma habilidade, Mem também pode ganhar <nobr>3%</nobr> de Carga, e o multiplicador do <u>Dano Verdadeiro</u> causado por esse alvo através do \"Suporte da Mem\" aumenta adicionalmente em <nobr>6%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800705,
       "id": "seamster_of_the_ode",
       "name": "Costureiro da Ode",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.\nNv. da Perícia do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.\nNv. da Perícia do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800706,
       "id": "bearer_of_the_revelation",
       "name": "Portador da Revelação",
-      "desc": "A Chance de CRIT da Perícia Suprema é definida em <nobr>100%</nobr>."
+      "desc": "A Chance de CRIT da Perícia Suprema é definida em <nobr>100%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +2485,151 @@
       }
     },
     {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Malvadões! Treta!",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "Semente do Pensamento",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Instinto de Ladrão",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Malvadões! Treta!",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Muda de Manas",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Esquema do Usurpador",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Malvadões! Treta!",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Muda de Manas",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Esquema do Usurpador",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Malvadões! Treta!",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Flor de Ālaya",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Vontade de Conquistador",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Malvadões! Treta!",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Flor de Ālaya",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Vontade de Conquistador",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -1868,151 +2643,6 @@
       }
     },
     {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Malvadões! Treta!",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "Semente do Pensamento",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "Instinto de Ladrão",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Malvadões! Treta!",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Muda de Manas",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Esquema do Usurpador",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Malvadões! Treta!",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Muda de Manas",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Esquema do Usurpador",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Malvadões! Treta!",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Flor de Ālaya",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Vontade de Conquistador",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Malvadões! Treta!",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Flor de Ālaya",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Vontade de Conquistador",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -2153,6 +2783,27 @@
             "id": "conquerors_will",
             "name": "Vontade de Conquistador",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "Epílogo Inacabado",
+        "desc": "Após usar a Perícia Suprema, ganha 1 acúmulo de \"Epopeia\", até um máximo de <nobr>2</nobr> acúmulos. Quando esta unidade estiver com \"Epopeia\" e Mem estiver em campo, o ATQ Básico é aprimorado para \"Vamos Escrever o Amanhã!\"",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

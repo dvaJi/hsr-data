@@ -2,6 +2,7 @@
   "_id": 1217,
   "id": "huohuo",
   "name": "Huohuo",
+  "description": "Phán Quan thực tập của Sở Thập Vương Xianzhou Luofu, bé gái Người Hồ Ly bị Tuế Dương nhập.\nTính cách nhút nhát, yếu đuối, sợ hãi trước những sự việc quái dị, nhưng lại gánh trọng trách dụ dỗ và trấn áp tà ma.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Giải trừ 1 Hiệu Ứng Xấu cho 1 đồng đội, đồng thời hồi phục HP cho 1 đồng đội và mục tiêu ở gần.",
       "type": "Chiến Kỹ",
       "tag": "Hồi Phục",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +807,18 @@
       "simpleDesc": "Hồi phục Năng Lượng cho đồng đội ngoài bản thân, đồng thời tăng Tấn Công cho người này.",
       "type": "Tuyệt Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "Sau khi thi triển Chiến Kỹ, Huohuo sẽ nhận \"Cầu Mệnh\". Khi Huohuo có \"Cầu Mệnh\", và mục tiêu phe ta bắt đầu hiệp hoặc thi triển Tuyệt Kỹ sẽ hồi phục HP bản thân, đồng thời sinh ra 1 lần hiệu ứng hồi phục lên mỗi mục tiêu có HP tương đối thấp của phe ta. Khi kích hoạt Cầu Mệnh trị liệu cho mục tiêu phe ta, sẽ giải trừ 1 Hiệu Ứng Xấu của mục tiêu này.",
       "type": "Thiên Phú",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1545,24 @@
       "simpleDesc": "Khiến kẻ địch xung quanh rơi vào trạng thái \"Phách Tán\". Sau khi vào chiến đấu với kẻ địch ở trạng thái \"Phách Tán\", có xác suất lớn giảm Tấn Công của kẻ địch.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1500,37 +1582,88 @@
       "_id": 121701,
       "id": "anchored_to_vessel_specters_nestled",
       "name": "Tuế Dương Nhập Thể, Yêu Tà Xâm Chiếm",
-      "desc": "Thời gian duy trì Cầu Mệnh tạo ra từ Thiên Phú kéo dài <nobr>1</nobr> hiệp, hơn nữa khi Huohuo sở hữu Cầu Mệnh, toàn bộ phe ta tăng <nobr>12%</nobr> tốc độ."
+      "desc": "Thời gian duy trì Cầu Mệnh tạo ra từ Thiên Phú kéo dài <nobr>1</nobr> hiệp, hơn nữa khi Huohuo sở hữu Cầu Mệnh, toàn bộ phe ta tăng <nobr>12%</nobr> tốc độ.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121702,
       "id": "sealed_in_tail_wraith_subdued",
       "name": "Bùa Phong Ấn Đuôi, Trấn Giữ Linh Hồn",
-      "desc": "Khi Huohuo sở hữu Cầu Mệnh, nếu mục tiêu phe ta bị tấn công chí tử, sẽ không rơi vào <u>trạng thái không thể chiến đấu</u>, và lập tức hồi HP bằng <nobr>50%</nobr> Giới Hạn HP của mục tiêu đó, giảm 1 hiệp duy trì Cầu Mệnh. Hiệu ứng này có thể kích hoạt <nobr>2</nobr> lần trong 1 trận."
+      "desc": "Khi Huohuo sở hữu Cầu Mệnh, nếu mục tiêu phe ta bị tấn công chí tử, sẽ không rơi vào <u>trạng thái không thể chiến đấu</u>, và lập tức hồi HP bằng <nobr>50%</nobr> Giới Hạn HP của mục tiêu đó, giảm 1 hiệp duy trì Cầu Mệnh. Hiệu ứng này có thể kích hoạt <nobr>2</nobr> lần trong 1 trận.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121703,
       "id": "cursed_by_fate_moths_to_flame",
       "name": "Mệnh Trấn Hung, Hiểm Họa Ập Đến",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121704,
       "id": "tied_in_life_bound_to_strife",
       "name": "Một Bước Không Rời, Tranh Chấp Khó Tránh",
-      "desc": "Khi thi triển Chiến Kỹ hoặc kích hoạt Thiên Phú trị liệu cho mục tiêu phe ta, HP hiện tại của mục tiêu càng thấp thì lượng trị liệu càng cao, tối đa tăng <nobr>80%</nobr> Lượng Trị Liệu mà Huohuo cung cấp."
+      "desc": "Khi thi triển Chiến Kỹ hoặc kích hoạt Thiên Phú trị liệu cho mục tiêu phe ta, HP hiện tại của mục tiêu càng thấp thì lượng trị liệu càng cao, tối đa tăng <nobr>80%</nobr> Lượng Trị Liệu mà Huohuo cung cấp.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121705,
       "id": "mandated_by_edict_evils_evicted",
       "name": "Hàng Yêu Trừ Ma, Thập Vương Sắc Lệnh",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121706,
       "id": "woven_together_cohere_forever",
       "name": "Gắn Bó Keo Sơn, Đồng Hành Phối Hợp",
-      "desc": "Khi cung cấp trị liệu cho mục tiêu phe ta, khiến Sát Thương do mục tiêu gây ra tăng <nobr>50%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi cung cấp trị liệu cho mục tiêu phe ta, khiến Sát Thương do mục tiêu gây ra tăng <nobr>50%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

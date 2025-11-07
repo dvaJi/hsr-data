@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "{RUBY_B#ながよづき}長夜月{RUBY_E#}",
+  "description": "世界から隔離された記憶域で、蝋燭の炎は過去を照らし、霧の中で静かに消えていく。\nその影より生まれし記憶の子——長夜月、「歳月」の火種を隠す黄金裔。「忘却」の波を巻き起こし、鏡に映る人の願いを守る者である。\n——「安心して。アンタの『開拓』の道はアタシが守ってあげる…どんな代償を払ってでも♭」",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "指定した敵単体に少量の氷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "自身のHPを消費して記憶の精霊「長夜」を召喚し、味方の記憶の精霊全体の会心ダメージをアップする。長夜がすでにフィールド上にいる場合、そのHPを回復する。発動する時、「憶質」を#3[i]獲得する。「至暗の謎」状態の場合、追加で「憶質」を#5[i]獲得する。",
       "type": "戦闘スキル",
       "tag": "召喚",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "記憶の精霊を召喚",
+          "desc": "記憶の精霊をフィールドに召喚する。記憶の精霊がフィールド上にいる場合、記憶の精霊に付与されているすべての行動制限系デバフを解除する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "敵全体に氷属性ダメージを与え、記憶の精霊「長夜」を召喚し、長夜月を「至暗の謎」状態にする。この状態の間、敵の受けるダメージがアップし、長夜月と記憶の精霊の与ダメージがアップする。さらに、行動制限系デバフに抵抗できるようになる。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "記憶の精霊を召喚",
+          "desc": "記憶の精霊をフィールドに召喚する。記憶の精霊がフィールド上にいる場合、記憶の精霊に付与されているすべての行動制限系デバフを解除する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "行動制限系デバフ",
+          "desc": "凍結、もつれ、禁錮、支配、怒噪、強烈震とう、異夢、縛り、恐怖、行動ロック。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "戦闘に入る時、記憶の精霊「長夜」を召喚する。自身または長夜のHPが減少するたびに、自身と長夜の会心ダメージがアップし、「憶質」を獲得する。\n長夜月が所持している「憶質」が#6[i]以上になった時、長夜を即座に行動させる。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "記憶の精霊を召喚",
+          "desc": "記憶の精霊をフィールドに召喚する。記憶の精霊がフィールド上にいる場合、記憶の精霊に付与されているすべての行動制限系デバフを解除する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "行動制限系デバフ",
+          "desc": "凍結、もつれ、禁錮、支配、怒噪、強烈震とう、異夢、縛り、恐怖、行動ロック。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "次の戦闘開始時、戦闘スキルと同様の、記憶の精霊の会心ダメージをアップする効果を獲得し、追加で「憶質」を獲得する。",
       "type": "秘技",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "{RUBY_B#ながよ}長夜{RUBY_E#}",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "{RUBY_B#あめ}雨{RUBY_E#}のように{RUBY_B#ふ}降{RUBY_E#}る{RUBY_B#きおく}記憶{RUBY_E#}",
+        "desc": "このスキルは自動でターゲットを選択して発動する。なお、長夜月が前回攻撃した敵を優先的にターゲットとして選択する。敵単体に「長夜」の最大HP<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>分の氷属性ダメージを与える。長夜月が所持している「憶質」<nobr>#3[i]</nobr>につき、さらに長夜の最大HP<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>分の氷属性ダメージを与える。発動後、「憶質」を<nobr>#4[i]</nobr>獲得する。",
+        "simpleDesc": "敵単体に少量の氷属性ダメージを与え、「憶質」の数に応じて追加で少量の氷属性ダメージを与える。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "単体攻撃"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "{RUBY_B#くらやみ}暗闇{RUBY_E#}に{RUBY_B#う}浮{RUBY_E#}かぶ{RUBY_B#こどく}孤独{RUBY_E#}",
+        "desc": "「長夜」は<u>行動制限系デバフ</u>に抵抗でき、攻撃される確率がアップする。長夜がフィールド上にいる時、長夜月と長夜の与ダメージ+<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>。",
+        "simpleDesc": "記憶の精霊「長夜」は<u>行動制限系デバフ</u>に抵抗でき、攻撃される確率がアップする。フィールド上にいる時、自身と長夜月の与ダメージがアップする。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "サポート"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "行動制限系デバフ",
+            "desc": "凍結、もつれ、禁錮、支配、怒噪、強烈震とう、異夢、縛り、恐怖、行動ロック。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "{RUBY_B#かげ}影{RUBY_E#}のように{RUBY_B#よる}夜{RUBY_E#}に{RUBY_B#よ}寄{RUBY_E#}りそう",
+        "desc": "召喚された時に即座に行動する。",
+        "simpleDesc": "召喚された時に即座に行動する。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "さようなら、{RUBY_B#えいえん}永遠{RUBY_E#}に",
+        "desc": "退場する時、長夜月の速度+<nobr>#1[i]%</nobr>。「露のように儚い夢」の発動で退場した場合、その回の攻撃で「憶質」を1消費するごとに、さらに長夜月の速度+<nobr>#2[i]%</nobr>、カウントされる「憶質」は最大<nobr>#3[i]</nobr>まで。速度アップの効果は累積できない。効果は長夜月の次のターンが回ってきた時に解除される。",
+        "simpleDesc": "退場すると、長夜月の速度がアップする。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "{RUBY_B#つゆ}露{RUBY_E#}のように{RUBY_B#はかな}儚{RUBY_E#}い{RUBY_B#ゆめ}夢{RUBY_E#}",
+        "desc": "長夜月の「憶質」が<nobr>#3[i]</nobr>以上であり、かつ長夜月が行動制限状態でない時に発動できる。所持している「憶質」1につき、メインターゲットに「長夜」の最大HP<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>分の氷属性ダメージを与え、その他のターゲットに長夜の最大HP<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>分の氷属性ダメージを与える。発動後、「憶質」とHPをすべて消費し、長夜は退場する。",
+        "simpleDesc": "<span style=\"color:#f29e38ff>「憶質」の数に応じて</span>、メインターゲットに大量の氷属性ダメージを与え、その他のターゲットに氷属性ダメージを与える。発動後、<span style=\"color:#f29e38ff>「憶質」とHPをすべて消費し、「長夜」は退場する</span>。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "全体攻撃"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "{RUBY_B#ねむ}眠{RUBY_E#}って、\n{RUBY_B#なが}長{RUBY_E#}い{RUBY_B#よる}夜{RUBY_E#}にはいい{RUBY_B#ゆめ}夢{RUBY_E#}を",
-      "desc": "長夜月がフィールド上にいる時、フィールド上にいる敵の数が4体以上/3/2/1の場合、味方の記憶の精霊が与えるダメージは本来のダメージの<nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr>分になる。"
+      "desc": "長夜月がフィールド上にいる時、フィールド上にいる敵の数が4体以上/3/2/1の場合、味方の記憶の精霊が与えるダメージは本来のダメージの<nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr>分になる。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "{RUBY_B#みみ}耳{RUBY_E#}を{RUBY_B#す}澄{RUBY_E#}まして、\n{RUBY_B#ねむ}眠{RUBY_E#}りの{RUBY_B#なか}中{RUBY_E#}のささやきに",
-      "desc": "長夜月と記憶の精霊「長夜」の会心ダメージ+<nobr>40%</nobr>。長夜月が「憶質」を獲得するたびに、獲得する「憶質」の数+<nobr>2</nobr>。必殺技を発動する時、追加で「至暗の謎」のチャージを<nobr>2</nobr>獲得する。"
+      "desc": "長夜月と記憶の精霊「長夜」の会心ダメージ+<nobr>40%</nobr>。長夜月が「憶質」を獲得するたびに、獲得する「憶質」の数+<nobr>2</nobr>。必殺技を発動する時、追加で「至暗の謎」のチャージを<nobr>2</nobr>獲得する。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "{RUBY_B#だいじょうぶ}大丈夫{RUBY_E#}、\n{RUBY_B#あくむ}悪夢{RUBY_E#}はもう{RUBY_B#す}過{RUBY_E#}ぎ{RUBY_B#さ}去{RUBY_E#}った",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "{RUBY_B#お}起{RUBY_E#}きて、\nアンタの{RUBY_B#あした}明日{RUBY_E#}が{RUBY_B#おとず}訪{RUBY_E#}れる",
-      "desc": "長夜月がフィールド上にいる時、味方の記憶の精霊の弱点撃破効率+<nobr>25%</nobr>、記憶の精霊「長夜」の弱点撃破効率はさらに+<nobr>25%</nobr>。"
+      "desc": "長夜月がフィールド上にいる時、味方の記憶の精霊の弱点撃破効率+<nobr>25%</nobr>、記憶の精霊「長夜」の弱点撃破効率はさらに+<nobr>25%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "{RUBY_B#わす}忘{RUBY_E#}れて、\n{RUBY_B#きおく}記憶{RUBY_E#}の{RUBY_B#なか}中{RUBY_E#}のアタシを",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "このまま、ずっと",
-      "desc": "長夜月がフィールド上にいる時、味方全体の全属性<u>耐性貫通</u>+<nobr>20%</nobr>。記憶の精霊「長夜」が「露のように儚い夢」を発動した後、長夜月はその回の攻撃で消費された「憶質」の<nobr>30%</nobr>分を獲得する。"
+      "desc": "長夜月がフィールド上にいる時、味方全体の全属性<u>耐性貫通</u>+<nobr>20%</nobr>。記憶の精霊「長夜」が「露のように儚い夢」を発動した後、長夜月はその回の攻撃で消費された「憶質」の<nobr>30%</nobr>分を獲得する。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

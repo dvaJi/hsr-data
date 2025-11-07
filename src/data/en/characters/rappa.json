@@ -2,6 +2,7 @@
   "_id": 1317,
   "id": "rappa",
   "name": "Rappa",
+  "description": "A peculiar girl who appears in Penacony like a flashbang at the darkest hour of night, identifying herself as a ninja and attributing everything in the world to \"ninjutsu.\"\nUpholding the recitation of ninja mantra, creating Dazzling Ninja Seals, and studying ninja scrolls — That is, the Way of the Ninja involves rap, graffiti, and manga — Through rigorous self-discipline, she roams the stars, upholding justice and righteousness.\nAs a member of the Galaxy Rangers, she relentlessly pursues the villain known as Evil Ninja Osaru, chasing them to the very edge of the Cosmos.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Imaginary DMG to one designated enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Deals Imaginary DMG to all enemies.",
       "type": "Skill",
       "tag": "AoE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Enters the \"Sealform\" state, gains an extra turn, obtains 3 points of \"Chroma Ink,\" and increases Weakness Break Efficiency and Break Effect.\nWhile in the \"Sealform\" state, gains Enhanced Basic ATK. After using Enhanced Basic ATK, consumes 1 point of \"Chroma Ink.\" When \"Chroma Ink\" is depleted, exits the \"Sealform\" state.",
       "type": "Ultimate",
       "tag": "Enhance",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Extra Turn",
+          "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,15 @@
       "simpleDesc": "When the enemy target is Weakness Broken, Rappa gains 1 point of Charge. When launching the third hit of \"Ningu: Demonbane Petalblade,\" additionally deals Imaginary Break DMG to all enemies. This DMG can ignore Weakness Type to reduce Toughness and consume all Charge, increasing the Break DMG multiplier and Toughness Reduction.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        6,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1452,15 @@
       "simpleDesc": "Enters the \"Graffiti\" state. Moves forward rapidly for a set distance and attacks any enemies touched. After entering combat via attacking enemies, deals Toughness Reduction regardless of Weakness Type and Imaginary Break DMG to each enemy target and deals Imaginary Break DMG to their adjacent targets. At the same time, this unit regenerates Energy.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1426,37 +1481,79 @@
       "_id": 131701,
       "id": "returned_is_the_revenant_with_no_ferry_toll",
       "name": "Returned Is the Revenant With No Ferry Toll",
-      "desc": "During the \"Sealform\" state entered by using Ultimate, DMG dealt by Rappa ignores <nobr>15%</nobr> of the targets' DEF. After exiting the \"Sealform\" state, regenerates <nobr>20</nobr> Energy."
+      "desc": "During the \"Sealform\" state entered by using Ultimate, DMG dealt by Rappa ignores <nobr>15%</nobr> of the targets' DEF. After exiting the \"Sealform\" state, regenerates <nobr>20</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131702,
       "id": "free_is_the_mind_enlightened_by_haikus",
       "name": "Free Is the Mind Enlightened by Haikus",
-      "desc": "The Enhanced Basic ATK's first 2 hits have their Toughness Reduction against the one designated enemy increased by <nobr>50%</nobr>."
+      "desc": "The Enhanced Basic ATK's first 2 hits have their Toughness Reduction against the one designated enemy increased by <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131703,
       "id": "many_are_the_shrines_that_repel_no_hell",
       "name": "Many Are the Shrines That Repel No Hell",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131704,
       "id": "lost_is_the_nind_devoured_by_time",
       "name": "Lost Is the Nindō Devoured by Time",
-      "desc": "While in the \"Sealform\" state, increases all allies' SPD by <nobr>12%</nobr>."
+      "desc": "While in the \"Sealform\" state, increases all allies' SPD by <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131705,
       "id": "steady_is_the_ranger_with_unerring_arrows",
       "name": "Steady Is The Ranger With Unerring Arrows",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131706,
       "id": "righteous_is_the_wrath_that_spares_no_evil",
       "name": "Righteous Is the Wrath That Spares No Evil",
-      "desc": "When battle starts, Rappa gains <nobr>5</nobr> point(s) of her Talent's Charge, and its upper limit increases by <nobr>5</nobr> point(s). After launching the third hit of \"Ningu: Demonbane Petalblade,\" gains <nobr>5</nobr> point(s) of Charge."
+      "desc": "When battle starts, Rappa gains <nobr>5</nobr> point(s) of her Talent's Charge, and its upper limit increases by <nobr>5</nobr> point(s). After launching the third hit of \"Ningu: Demonbane Petalblade,\" gains <nobr>5</nobr> point(s) of Charge.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

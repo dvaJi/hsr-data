@@ -2,6 +2,7 @@
   "_id": 1408,
   "id": "phainon",
   "name": "Phainon",
+  "description": "Aedes Elysiae, ngôi làng biên cương tách biệt với thế giới, giờ chỉ còn là những truyền thuyết mơ hồ.\nNgười anh hùng vô danh █████, Hậu Duệ Chrysos mang trong mình Ngọn Lửa \"Phụ Thế\", khắc ghi lý tưởng của toàn nhân loại, gánh trên vai vận mệnh của muôn người, mang đến tia sáng bình minh đầu tiên cho thế giới mới\n...\"Nhưng nếu bình minh chưa từng tồn tại, vậy hãy để ngọn lửa giận dữ thiêu đốt thân xác này, hóa thành mặt trời rực rỡ của ngày mai!\"",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Nhận #3[i] điểm Ngọn Lửa, gây lượng lớn Sát Thương Vật Lý cho 1 kẻ địch, gây Sát Thương Vật Lý cho mục tiêu lân cận.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Biến thân thành Khaslana và triển khai Vùng Lãnh Thổ: Khiến đồng đội Rời Trận và không thể hành động, toàn bộ phe địch có Điểm Yếu Vật Lý.\nKhaslana sẽ không vào hiệp của bản thân, nhưng có #4[i] hiệp tăng thêm của Khaslana, phát động Đòn Đánh Cuối Cùng trong hiệp cuối cùng, gây lượng lớn Sát Thương Vật Lý chia đều cho toàn bộ phe địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000020,
+          "name": "Vùng Lãnh Thổ",
+          "desc": "Hiệu ứng Vùng Lãnh Thổ là duy nhất trên toàn trận, trong thời gian duy trì không thể sử dụng kỹ năng Vùng Lãnh Thổ khác.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000016,
+          "name": "Rời Trận",
+          "desc": "Mục tiêu ở trạng thái rời trận không thể trở thành mục tiêu kỹ năng, và sẽ không xuất hiện trên thứ tự hành động.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014082,
+          "name": "Hiệp Tăng Thêm Của Khaslana",
+          "desc": "Khi Phainon biến thân thành Khaslana, sẽ xuất hiện đếm ngược trên thứ tự hành động. Khi bắt đầu hiệp đếm ngược, Khaslana sẽ nhận 1 hiệp tăng thêm. Khi bắt đầu hiệp đếm ngược cuối cùng sẽ đổi thành Khaslana phát động Đòn Đánh Cuối Cùng và kết thúc biến thân.\nĐiểm hành động ban đầu của đếm ngược được thiết lập ở mức trung bình 0 - <nobr>100%</nobr>, khi bắt đầu mỗi đợt không làm mới điểm hành động.\nKhi Khaslana nhận hiệu ứng Ưu Tiên Hành Động, sẽ đổi thành Ưu Tiên Hành Động đếm ngược đầu tiên.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,15 @@
       "simpleDesc": "Thiên phú của Phainon. Khi Ngọn Lửa đạt #4[i] điểm có thể kích hoạt Tuyệt Kỹ.\nKhi Phainon trở thành mục tiêu kỹ năng của mục tiêu khác, sẽ nhận được Ngọn Lửa. Khi trở thành mục tiêu kỹ năng của đồng đội, sẽ tăng Sát Thương Bạo Kích.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1482,24 @@
       "desc": "Khi có Phainon trong đội, giới hạn Điểm Bí Kỹ sẽ tăng 3 điểm.\nChủ động thi triển Bí Kỹ tiêu hao 2 điểm Bí Kỹ, lập tức tấn công tất cả kẻ địch trong phạm vi nhất định. Sau khi vào chiến đấu, hồi #3[i] điểm Năng Lượng cho đồng đội, nhận #2[i] điểm Phá Hủy và #4[i] Điểm Chiến Kỹ, đồng thời khi bắt đầu mỗi đợt sẽ gây Sát Thương Vật Lý bằng #1[i]% Tấn Công của Phainon cho toàn bộ phe địch.\nNếu tấn công kẻ địch bình thường sẽ lập tức tiêu diệt kẻ đó, không vào chiến đấu. Khi chưa đánh trúng kẻ địch sẽ không tiêu hao điểm Bí Kỹ.",
       "simpleDesc": "Giới hạn điểm Bí Kỹ tăng 3 điểm. Chủ động thi triển tiêu hao 2 điểm Bí Kỹ tấn công tất cả kẻ địch trong phạm vi nhất định. Sau khi vào chiến đấu sẽ hồi Năng Lượng, Điểm Chiến Kỹ và Phá Hủy cho phe ta. Khi bắt đầu mỗi đợt sẽ gây Sát Thương Vật Lý cho toàn bộ phe địch.\nNếu tấn công kẻ địch bình thường sẽ lập tức tiêu diệt kẻ đó, không vào chiến đấu. Khi chưa đánh trúng kẻ địch sẽ không tiêu hao điểm Bí Kỹ.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10014081,
+          "name": "Phá Hủy",
+          "desc": "Nạp Năng Lượng đặc biệt của Khaslana, giới hạn là 7 điểm. Khi chưa biến thân cũng sẽ bảo lưu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1439,37 +1519,122 @@
       "_id": 140801,
       "id": "fire_and_light_bind_virtue_and_vice",
       "name": "Lửa Và Ánh Sáng, Hóa Thân Của Thiện Và Ác",
-      "desc": "Tỷ lệ kế thừa Tốc Độ cơ bản của <u>Hiệp Tăng Thêm Của Khaslana</u> tăng đến <nobr>66%</nobr>. Trong một trận đấu cứ có 1 mục tiêu phe địch bị tiêu diệt thì sẽ tăng thêm <nobr>#1[f1]%</nobr>, tối đa tăng đến <nobr>84%</nobr>.\nKhi thi triển Tuyệt Kỹ, Sát Thương Bạo Kích tăng <nobr>50%</nobr>, duy trì <nobr>3</nobr> hiệp."
+      "desc": "Tỷ lệ kế thừa Tốc Độ cơ bản của <u>Hiệp Tăng Thêm Của Khaslana</u> tăng đến <nobr>66%</nobr>. Trong một trận đấu cứ có 1 mục tiêu phe địch bị tiêu diệt thì sẽ tăng thêm <nobr>#1[f1]%</nobr>, tối đa tăng đến <nobr>84%</nobr>.\nKhi thi triển Tuyệt Kỹ, Sát Thương Bạo Kích tăng <nobr>50%</nobr>, duy trì <nobr>3</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10014082,
+          "name": "Hiệp Tăng Thêm Của Khaslana",
+          "desc": "Khi Phainon biến thân thành Khaslana, sẽ xuất hiện đếm ngược trên thứ tự hành động. Khi bắt đầu hiệp đếm ngược, Khaslana sẽ nhận 1 hiệp tăng thêm. Khi bắt đầu hiệp đếm ngược cuối cùng sẽ đổi thành Khaslana phát động Đòn Đánh Cuối Cùng và kết thúc biến thân.\nĐiểm hành động ban đầu của đếm ngược được thiết lập ở mức trung bình 0 - <nobr>100%</nobr>, khi bắt đầu mỗi đợt không làm mới điểm hành động.\nKhi Khaslana nhận hiệu ứng Ưu Tiên Hành Động, sẽ đổi thành Ưu Tiên Hành Động đếm ngược đầu tiên.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140802,
       "id": "sky_and_earth_churn_mortal_froth",
       "name": "Trời Và Đất, Bọt Bóng Của Thế Gian",
-      "desc": "<u>Xuyên Kháng</u> Vật Lý của Khaslana tăng <nobr>20%</nobr>. Thi triển 1 lần \"Trụ Cột - Phán Quyết Tử Tinh\" tiêu hao điểm <u>Phá Hủy</u> đạt <nobr>4</nobr> điểm sẽ nhận 1 <u>hiệp tăng thêm</u>."
+      "desc": "<u>Xuyên Kháng</u> Vật Lý của Khaslana tăng <nobr>20%</nobr>. Thi triển 1 lần \"Trụ Cột - Phán Quyết Tử Tinh\" tiêu hao điểm <u>Phá Hủy</u> đạt <nobr>4</nobr> điểm sẽ nhận 1 <u>hiệp tăng thêm</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014081,
+          "name": "Phá Hủy",
+          "desc": "Nạp Năng Lượng đặc biệt của Khaslana, giới hạn là 7 điểm. Khi chưa biến thân cũng sẽ bảo lưu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Hiệp Tăng Thêm",
+          "desc": "Nhận 1 hiệp thêm không tiêu hao số hiệp. Trong hiệp này, không thể chen ngang thi triển Tuyệt Kỹ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140803,
       "id": "depths_of_quiet_entombed_in_ruin",
       "name": "Mấy Tầng Tĩnh Mịch, Chôn Sâu Vào Phế Tích",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140804,
       "id": "faces_of_titans_blurred_by_time",
       "name": "Bao Nhiêu Titan, Mờ Nhạt Theo Thời Gian",
-      "desc": "Khi thi triển Tai Ương - Chiếu Chỉ Thiêu Đốt Linh Hồn, sẽ nhận thêm <nobr>4</nobr> tầng Ngọn Lửa Diệt Hồn."
+      "desc": "Khi thi triển Tai Ương - Chiếu Chỉ Thiêu Đốt Linh Hồn, sẽ nhận thêm <nobr>4</nobr> tầng Ngọn Lửa Diệt Hồn.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140805,
       "id": "the_wheel_spins_forevermore",
       "name": "Kim Đồng Hồ Vĩnh Kiếp, Quay Ba Mươi Triệu Vòng",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140806,
       "id": "embers_of_old_rise_still",
       "name": "Trỗi Dậy Từ Xa Xưa, Lửa Nuốt Chửng Mặt Trời",
-      "desc": "Điểm có thể vượt mức của Ngọn Lửa sẽ không còn giới hạn nữa. Khi bắt đầu chiến đấu, nhận <nobr>6</nobr> điểm Ngọn Lửa.\nSau khi thi triển \"Trụ Cột - Phán Quyết Tử Tinh\" tấn công, sẽ gây thêm cho mục tiêu phe địch có HP cao nhất <u>Sát Thương Chuẩn</u> bằng <nobr>36%</nobr> tổng sát thương của lần tấn công này."
+      "desc": "Điểm có thể vượt mức của Ngọn Lửa sẽ không còn giới hạn nữa. Khi bắt đầu chiến đấu, nhận <nobr>6</nobr> điểm Ngọn Lửa.\nSau khi thi triển \"Trụ Cột - Phán Quyết Tử Tinh\" tấn công, sẽ gây thêm cho mục tiêu phe địch có HP cao nhất <u>Sát Thương Chuẩn</u> bằng <nobr>36%</nobr> tổng sát thương của lần tấn công này.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "Sát Thương Chuẩn",
+          "desc": "Sát thương không thuộc tính không bị ảnh hưởng bởi bất kỳ hiệu ứng nào. Sát thương lần này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

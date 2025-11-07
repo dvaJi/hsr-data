@@ -2,6 +2,7 @@
   "_id": 1215,
   "id": "hanya",
   "name": "{RUBY_B#カンア}寒鴉{RUBY_E#}",
+  "description": "仙舟「羅浮」十王司の判官の一人。\n十王の命を受け、冥兆天筆を使って様々な罪業を読み取り、判決を下す。",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "敵単体に「承負」状態を付与して、物理属性ダメージを与える。味方が「承負」状態の敵に通常攻撃、戦闘スキルまたは必殺技のうち任意のスキルを合わせて2回発動した後、SPを1回復する。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 17
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "味方単体の速度と攻撃力をアップする。",
       "type": "必殺技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "味方が「承負」状態の敵に通常攻撃、戦闘スキル、または必殺技を発動する時、与ダメージがアップする",
       "type": "天賦",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1388,15 @@
       "desc": "敵を攻撃。戦闘に入った後、ランダムな敵単体に戦闘スキルが与えるものと同じ「承負」状態を付与する。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、ランダムな敵単体に戦闘スキルが与えるものと同じ「承負」を付与する。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1356,37 +1411,88 @@
       "_id": 121501,
       "id": "one_heart",
       "name": "{RUBY_B#いっしん}一心{RUBY_E#}",
-      "desc": "寒鴉の必殺技のバフを持つ味方が敵を倒した時、寒鴉の<u>行動順</u>が<nobr>15%</nobr>早まる。この効果はターンが回ってくるたびに<nobr>1</nobr>回まで発動できる。"
+      "desc": "寒鴉の必殺技のバフを持つ味方が敵を倒した時、寒鴉の<u>行動順</u>が<nobr>15%</nobr>早まる。この効果はターンが回ってくるたびに<nobr>1</nobr>回まで発動できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動前倒し",
+          "desc": "対象の次の行動までの間隔が短くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121502,
       "id": "two_views",
       "name": "{RUBY_B#にかん}二観{RUBY_E#}",
-      "desc": "戦闘スキルを発動した後、速度+<nobr>20%</nobr>、<nobr>1</nobr>ターン継続。"
+      "desc": "戦闘スキルを発動した後、速度+<nobr>20%</nobr>、<nobr>1</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121503,
       "id": "three_temptations",
       "name": "{RUBY_B#さんじん}三塵{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121504,
       "id": "four_truths",
       "name": "{RUBY_B#したい}四諦{RUBY_E#}",
-      "desc": "必殺技の継続時間+<nobr>1</nobr>ターン。"
+      "desc": "必殺技の継続時間+<nobr>1</nobr>ターン。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121505,
       "id": "five_skandhas",
       "name": "{RUBY_B#ごおん}五陰{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121506,
       "id": "six_reverences",
       "name": "{RUBY_B#ろくしょう}六正{RUBY_E#}",
-      "desc": "天賦のダメージアップ効果がさらに<nobr>10%</nobr>アップ。"
+      "desc": "天賦のダメージアップ効果がさらに<nobr>10%</nobr>アップ。",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

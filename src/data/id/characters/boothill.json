@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "Boothill",
+  "description": "Koboi siborg yang mengembara di galaksi. Sangat optimis dan berjiwa bebas.\nSebagai anggota \"Galaxy Ranger\" dia akan menggunakan segala cara untuk menghukum orang jahat dan melenyapkan kejahatan.\nPerilakunya yang mencolok dan gegabah bertujuan untuk menarik perhatian \"Interastral Peace Corporation\" — target balas dendamnya.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Physical DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Mengaktifkan \"Standoff\". Setelah target berstatus \"Standoff\" dikalahkan atau terkena Weakness Break, Boothill akan memperoleh \"Pocket Trickshot\" dan menghapus \"Standoff\". Membuat Boothill memperoleh penguatan Basic Attack dan giliran kali ini tidak akan berakhir.",
       "type": "Skill",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "Menambahkan Physical Weakness pada 1 musuh dan mengakibatkan Physical DMG dalam jumlah besar pada musuh tersebut, serta menunda aksinya.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Penundaan Aksi",
+          "desc": "Menambah durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "\"Pocket Trickshot\" membuat Enhanced Basic Attack karakter ini mengurangi lebih banyak nilai Toughness dan mengakibatkan Physical Break DMG tambahan pada target musuh yang berstatus Weakness Break. Setelah memenangkan pertempuran, \"Pocket Trickshot\" akan disimpan hingga pertempuran berikutnya.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Status Weakness Break",
+          "desc": "Saat Toughness target musuh berkurang menjadi 0, akan memasuki status Weakness Break, yang dapat menunda aksi musuh.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Semakin tinggi Break Effect, level karakter, dan Max Toughness musuh, maka Break DMG yang diakibatkan akan semakin tinggi.\nBreak DMG tidak dapat CRIT Hit, dan tidak akan terkena pengaruh efek peningkatan DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "Setelah melancarkan Technique, akan menambahkan Physical Weakness pada 1 musuh setelah melancarkan Skill unit ini untuk pertama kalinya dalam pertempuran berikutnya.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "Dusty Trail's Lone Star",
-      "desc": "Saat pertempuran dimulai, akan memperoleh 1 lapis \"Pocket Trickshot\". Saat Boothill mengakibatkan DMG, akan mengabaikan <nobr>16%</nobr> DEF target musuh."
+      "desc": "Saat pertempuran dimulai, akan memperoleh 1 lapis \"Pocket Trickshot\". Saat Boothill mengakibatkan DMG, akan mengabaikan <nobr>16%</nobr> DEF target musuh.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "Milestonemonger",
-      "desc": "Saat memperoleh \"Pocket Trickshot\" ketika berada dalam status \"Standoff\", akan memulihkan <nobr>1</nobr> Poin Skill dan meningkatkan <nobr>30%</nobr> Break Effect, berlangsung selama <nobr>2</nobr> giliran. Efek ini tidak dapat terpicu berulang kali dalam satu giliran, dan tetap akan terpicu saat memperoleh \"Pocket Trickshot\" yang melebihi batas maksimal."
+      "desc": "Saat memperoleh \"Pocket Trickshot\" ketika berada dalam status \"Standoff\", akan memulihkan <nobr>1</nobr> Poin Skill dan meningkatkan <nobr>30%</nobr> Break Effect, berlangsung selama <nobr>2</nobr> giliran. Efek ini tidak dapat terpicu berulang kali dalam satu giliran, dan tetap akan terpicu saat memperoleh \"Pocket Trickshot\" yang melebihi batas maksimal.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "Marble Orchard's Guard",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "Cold Cuts Chef",
-      "desc": "Saat target musuh berstatus \"Standoff\" terkena serangan Boothill, DMG yang diterimanya akan meningkat ekstra <nobr>12%</nobr>. Saat Boothill terkena serangan target musuh berstatus \"Standoff\", efek peningkatan DMG yang diterimanya akan berkurang <nobr>12%</nobr>."
+      "desc": "Saat target musuh berstatus \"Standoff\" terkena serangan Boothill, DMG yang diterimanya akan meningkat ekstra <nobr>12%</nobr>. Saat Boothill terkena serangan target musuh berstatus \"Standoff\", efek peningkatan DMG yang diterimanya akan berkurang <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "Stump Speech",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "Crowbar Hotel's Raccoon",
-      "desc": "Saat memicu <u>Break DMG</u> yang diakibatkan Talent, akan mengakibatkan <u>Break DMG</u> tambahan pada target sebesar <nobr>40%</nobr> dari DMG Multiplier aslinya, dan mengakibatkan <u>Break DMG</u> tambahan pada musuh di sekitar target sebesar <nobr>70%</nobr> dari DMG Multiplier aslinya."
+      "desc": "Saat memicu <u>Break DMG</u> yang diakibatkan Talent, akan mengakibatkan <u>Break DMG</u> tambahan pada target sebesar <nobr>40%</nobr> dari DMG Multiplier aslinya, dan mengakibatkan <u>Break DMG</u> tambahan pada musuh di sekitar target sebesar <nobr>70%</nobr> dari DMG Multiplier aslinya.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Semakin tinggi Break Effect, level karakter, dan Max Toughness musuh, maka Break DMG yang diakibatkan akan semakin tinggi.\nBreak DMG tidak dapat CRIT Hit, dan tidak akan terkena pengaruh efek peningkatan DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

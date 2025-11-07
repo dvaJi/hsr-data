@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "Cerydra",
+  "description": "The Northern Empire, a lost dynasty, where its frozen lands burn with the fever of conquest.\nSovereign Cerydra, the Chrysos Heir who wields the Coreflame of \"Law,\" weaves her schemes, contends with the gods, passes judgment upon the faithless, and lays the foundation of Flame-Chase into this world.\n...\"This is far from the end. Amphoreus's journey is set to blaze across the stars!\"",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Wind DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "Grants \"Military Merit\" to an ally character and gives Charge to Cerydra. When Charge reaches #4[i] points, automatically upgrades the ally character's \"Military Merit\" to \"Peerage.\" The character with \"Peerage\" increases the CRIT DMG for their dealt Skill DMG, increases All-Type RES PEN, and can trigger Coup de Main.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Crowd Control debuff",
+          "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "Coup de Main",
+          "desc": "Copy and immediately use the ability about to be used, then use the original ability.\nCoup de Main won't trigger Coup de Main again.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "Gains Charge. Deals Wind DMG to all enemies.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "The character with \"Military Merit\" increases their ATK. When they use Basic ATK or Skill, Cerydra gains Charge. After the character with \"Military Merit\" uses an attack, Cerydra additionally deals minor Wind Additional DMG.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "Coup de Main",
+          "desc": "Copy and immediately use the ability about to be used, then use the original ability.\nCoup de Main won't trigger Coup de Main again.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "Grants \"Military Merit\" to the current active character. Automatically uses Skill on the character with \"Military Merit\" at the start of the next battle.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "Seize the Crowns of All",
-      "desc": "The character with \"Military Merit\" ignores <nobr>16%</nobr> of the targets' DEF when dealing DMG. If \"Military Merit\" has been upgraded to \"Peerage,\" then the character additionally ignores <nobr>20%</nobr> of the targets' DEF when dealing Skill DMG. When Cerydra uses her Skill, regenerates <nobr>2</nobr> Energy for the designated ally target."
+      "desc": "The character with \"Military Merit\" ignores <nobr>16%</nobr> of the targets' DEF when dealing DMG. If \"Military Merit\" has been upgraded to \"Peerage,\" then the character additionally ignores <nobr>20%</nobr> of the targets' DEF when dealing Skill DMG. When Cerydra uses her Skill, regenerates <nobr>2</nobr> Energy for the designated ally target.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "Forge the Dreams of Many",
-      "desc": "The character with \"Military Merit\" deals <nobr>40%</nobr> increased DMG. While a teammate on the field has \"Military Merit,\" Cerydra's DMG dealt increases by <nobr>160%</nobr>."
+      "desc": "The character with \"Military Merit\" deals <nobr>40%</nobr> increased DMG. While a teammate on the field has \"Military Merit,\" Cerydra's DMG dealt increases by <nobr>160%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "Torch the Laws of Old",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "Remake the Realms of Men",
-      "desc": "Increases Ultimate's DMG multiplier by <nobr>240%</nobr>."
+      "desc": "Increases Ultimate's DMG multiplier by <nobr>240%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "Help and Hurt Repaid in Full",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "A Journey Set Starward",
-      "desc": "The character with \"Military Merit\" increases their All-Type <u>RES PEN</u> by <nobr>20%</nobr>, and the multiplier for the <u>Additional DMG</u> triggered via \"Military Merit\" increases by <nobr>300%</nobr>. While a teammate on the field has \"Military Merit,\" Cerydra's All-Type <u>RES PEN</u> increases by <nobr>20%</nobr>."
+      "desc": "The character with \"Military Merit\" increases their All-Type <u>RES PEN</u> by <nobr>20%</nobr>, and the multiplier for the <u>Additional DMG</u> triggered via \"Military Merit\" increases by <nobr>300%</nobr>. While a teammate on the field has \"Military Merit,\" Cerydra's All-Type <u>RES PEN</u> increases by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

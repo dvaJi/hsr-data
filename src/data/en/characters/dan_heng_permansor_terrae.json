@@ -2,6 +2,7 @@
   "_id": 1414,
   "id": "dan_heng_permansor_terrae",
   "name": "Dan Heng • Permansor Terrae",
+  "description": "The chest of Georios, the body of the fallen dragon supporting the shattered earth, enduring millennia of pain.\nDan Heng, the Nameless and the Chrysos Heir who guards the Earth's Coreflame, steadies the world before it falls and guides all life across the land to a new home beyond.\nRivers flow to the sea, mountains echo in harmony, and the eternal path stretches ten thousand miles.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Physical DMG to one designated enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Designates one ally character as the \"Bondmate\" and grants all allies a Shield with stackable Shield Effect.",
       "type": "Skill",
       "tag": "Defense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,32 @@
       "simpleDesc": "Deals massive Physical DMG to all enemies and provides a Shield with stackable Shield Effect to all allies. Enhances \"Souldragon.\" When \"Souldragon\" takes action, launches Follow-up ATK, dealing minor Physical DMG and minor DMG of the Bondmate's Type to all enemies. The enhancement lasts for #3[i] \"Souldragon\" action(s).",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1202,32 @@
       "simpleDesc": "When an ally character becomes the \"Bondmate,\" Dan Heng • Permansor Terrae will summon \"Souldragon\" for them.\nWhen \"Souldragon\" takes action, dispels 1 debuff from all allies and provides a Shield with stackable Shield Effect.",
       "type": "Talent",
       "tag": "Defense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1597,15 @@
       "simpleDesc": "Inflicts Daze on enemies within a certain area and grants \"Bondmate\" to the current active character. At the start of the next battle, automatically uses Skill on the character with \"Bondmate.\"",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1622,114 @@
       "_id": 141401,
       "id": "shed_scales_of_old",
       "name": "Shed Scales of Old",
-      "desc": "When Dan Heng • Permansor Terrae uses Ultimate, recovers <nobr>1</nobr> Skill Point(s) and increases the \"Bondmate's\" All-Type <u>RES PEN</u> by <nobr>18%</nobr>, lasting for <nobr>3</nobr> turn(s)."
+      "desc": "When Dan Heng • Permansor Terrae uses Ultimate, recovers <nobr>1</nobr> Skill Point(s) and increases the \"Bondmate's\" All-Type <u>RES PEN</u> by <nobr>18%</nobr>, lasting for <nobr>3</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141402,
       "id": "watch_trails_to_blaze",
       "name": "Watch Trails to Blaze",
-      "desc": "Additionally increases the number of actions for the enhanced Souldragon from Ultimate by <nobr>2</nobr>. After Dan Heng • Permansor Terrae uses Ultimate, Souldragon <u>advances action</u> by <nobr>100%</nobr>. When the enhanced \"Souldragon\" takes action, the <u>Additional DMG</u> dealt by the \"Bondmate\" becomes <nobr>200%</nobr> of its original DMG, and the Shield Effect provided in this instance becomes <nobr>200%</nobr> of its original Shield Effect."
+      "desc": "Additionally increases the number of actions for the enhanced Souldragon from Ultimate by <nobr>2</nobr>. After Dan Heng • Permansor Terrae uses Ultimate, Souldragon <u>advances action</u> by <nobr>100%</nobr>. When the enhanced \"Souldragon\" takes action, the <u>Additional DMG</u> dealt by the \"Bondmate\" becomes <nobr>200%</nobr> of its original DMG, and the Shield Effect provided in this instance becomes <nobr>200%</nobr> of its original Shield Effect.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141403,
       "id": "bear_weight_of_worlds",
       "name": "Bear Weight of Worlds",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141404,
       "id": "by_oath_this_vessel_is_i",
       "name": "By Oath, This Vessel Is I",
-      "desc": "Reduces the DMG taken by the \"Bondmate\" by <nobr>20%</nobr>."
+      "desc": "Reduces the DMG taken by the \"Bondmate\" by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141405,
       "id": "the_path_of_permanence_sweeps_far",
       "name": "The Path of Permanence Sweeps Far",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141406,
       "id": "one_dream_to_enfold_all_wilds",
       "name": "One Dream to Enfold All Wilds",
-      "desc": "When the \"Bondmate\" is on the field, increases the DMG taken by all enemies by <nobr>20%</nobr>. When the \"Bondmate\" deals DMG, ignores <nobr>12%</nobr> of the enemy targets' DEF. When Dan Heng • Permansor Terrae uses Ultimate, the \"Bondmate\" will deal <u>Additional DMG</u> of the Bondmate's Type to all enemies, equal to <nobr>330%</nobr> of the Bondmate's ATK."
+      "desc": "When the \"Bondmate\" is on the field, increases the DMG taken by all enemies by <nobr>20%</nobr>. When the \"Bondmate\" deals DMG, ignores <nobr>12%</nobr> of the enemy targets' DEF. When Dan Heng • Permansor Terrae uses Ultimate, the \"Bondmate\" will deal <u>Additional DMG</u> of the Bondmate's Type to all enemies, equal to <nobr>330%</nobr> of the Bondmate's ATK.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

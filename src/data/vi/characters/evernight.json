@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "Evernight",
+  "description": "Vùng Hồi Ức tách biệt với thế giới, ánh nến phản chiếu quá khứ, rồi lặng lẽ lụi tắt trong màn sương.\nĐứa con của Ký Ức đến từ bóng tối - Evernight, Hậu Duệ Chrysos che giấu Ngọn Lửa \"Thời Gian\", khơi dậy sóng thủy triều của sự \"Lãng Quên\", bảo vệ tâm nguyện của người trong gương.\n-\"Đừng lo lắng, tôi sẽ bảo vệ con đường \"Khai Phá\" cho cô... bằng mọi giá ♭\"",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Băng cho 1 kẻ địch chỉ định.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Tiêu hao HP bản thân để triệu hồi Linh Hồn Ký Ức \"Đêm Dài\", và tăng Sát Thương Bạo Kích của toàn bộ Linh Hồn Ký Ức phe ta. Nếu Linh Hồn Ký Ức \"Đêm Dài\" đã trong trận, sẽ hồi HP cho nó. Khi thi triển, nhận #3[i] điểm Chất Ký Ức, nếu đang ở trạng thái \"Bí Ẩn Tăm Tối\", nhận thêm #5[i] điểm Chất Ký Ức.",
       "type": "Chiến Kỹ",
       "tag": "Triệu Hồi",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "Gây Sát Thương Băng cho toàn phe địch, triệu hồi Linh Hồn Ký Ức \"Đêm Dài\" và khiến Evernight vào trạng thái \"Bí Ẩn Tăm Tối\", trong thời gian này, sát thương phe địch phải chịu tăng, sát thương Evernight và Linh Hồn Ký Ức gây ra tăng, và miễn dịch Hiệu Ứng Xấu loại khống chế.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Hiệu Ứng Xấu Loại Khống Chế",
+          "desc": "Đóng Băng, Nhiễu Loạn, Giam Cầm, Chi Phối, Bạo Nộ, Chấn Động Mạnh Mẽ, Dị Mộng, Cầm Tù Quấy Nhiễu, Kinh Hãi, Khóa Hành Động.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "Khi vào chiến đấu, triệu hồi Linh Hồn Ký Ức \"Đêm Dài\". Bản thân hoặc Linh Hồn Ký Ức \"Đêm Dài\" mỗi khi giảm HP, sẽ khiến Sát Thương Bạo Kích của bản thân và Linh Hồn Ký Ức \"Đêm Dài\" tăng, đồng thời nhận được Chất Ký Ức.\nKhi số lượng Chất Ký Ức Evernight sở hữu lớn hơn hoặc bằng #6[i] điểm, Linh Hồn Ký Ức \"Đêm Dài\" sẽ lập tức hành động.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Hiệu Ứng Xấu Loại Khống Chế",
+          "desc": "Đóng Băng, Nhiễu Loạn, Giam Cầm, Chi Phối, Bạo Nộ, Chấn Động Mạnh Mẽ, Dị Mộng, Cầm Tù Quấy Nhiễu, Kinh Hãi, Khóa Hành Động.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "Khi bắt đầu trận chiến tiếp theo, nhận hiệu ứng tăng Sát Thương Bạo Kích của Linh Hồn Ký Ức giống như Chiến Kỹ, đồng thời nhận thêm Chất Ký Ức.",
       "type": "Bí Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Đêm Dài",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "Hồi Ức, Bồng Bềnh, Như Mưa",
+        "desc": "Kỹ năng này tự động chọn mục tiêu thi triển, ưu tiên tấn công mục tiêu phe địch mà Evernight đã tấn công lần trước. Gây Sát Thương Băng bằng <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> Giới Hạn HP của \"Đêm Dài\" cho 1 kẻ địch, Evernight cứ có <nobr>#3[i]</nobr> điểm Chất Ký Ức sẽ gây thêm Sát Thương Băng bằng <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> Giới Hạn HP của \"Đêm Dài\". Sau khi thi triển sẽ nhận <nobr>#4[i]</nobr> điểm Chất Ký Ức.",
+        "simpleDesc": "Gây lượng nhỏ Sát Thương Băng cho 1 kẻ địch, đồng thời gây thêm lượng nhỏ Sát Thương Băng dựa trên số lượng Chất Ký Ức.",
+        "type": {
+          "id": "Servant",
+          "name": "Kỹ Năng Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "Đánh Đơn"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "Cô Độc, Trôi Nổi, Tăm Tối",
+        "desc": "\"Đêm Dài\" miễn dịch <u>Hiệu Ứng Xấu loại khống chế</u>, xác suất bị tấn công tăng. Khi \"Đêm Dài\" trong trận, sát thương Evernight và \"Đêm Dài\" gây ra tăng <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>.",
+        "simpleDesc": "Linh Hồn Ký Ức \"Đêm Dài\" miễn dịch <u>Hiệu Ứng Xấu loại khống chế</u>, xác suất bị tấn công tăng. Khi trong trận, sát thương bản thân và Evernight gây ra tăng.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Hỗ Trợ"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "Hiệu Ứng Xấu Loại Khống Chế",
+            "desc": "Đóng Băng, Nhiễu Loạn, Giam Cầm, Chi Phối, Bạo Nộ, Chấn Động Mạnh Mẽ, Dị Mộng, Cầm Tù Quấy Nhiễu, Kinh Hãi, Khóa Hành Động.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "Đêm Tối, Hình Bóng, Không Rời",
+        "desc": "Khi được triệu hồi, khiến bản thân lập tức hành động.",
+        "simpleDesc": "Khi được triệu hồi, khiến bản thân lập tức hành động.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Cường Hóa"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "Cùng Bạn, Tạm Biệt, Không Hẹn Gặp Lại",
+        "desc": "Khi biến mất, sẽ khiến Tốc Độ của Evernight tăng <nobr>#1[i]%</nobr>, nếu biến mất do thi triển \"Mộng Mị, Mất Mát, Như Sương\", thì lần tấn công này cứ tiêu hao 1 điểm \"Chất Ký Ức\" sẽ khiến Tốc Độ của Evernight tăng thêm <nobr>#2[i]%</nobr>, tối đa tính <nobr>#3[i]</nobr> điểm Chất Ký Ức. Hiệu ứng Tăng Tốc không thể cộng dồn, xóa khi bắt đầu hiệp tiếp theo của Evernight.",
+        "simpleDesc": "Khi biến mất, tăng Tốc Độ của Evernight.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Cường Hóa"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "Mộng Mị, Mất Mát, Như Sương",
+        "desc": "Khi Chất Ký Ức của Evernight lớn hơn hoặc bằng <nobr>#3[i]</nobr> điểm, và Evernight không trong trạng thái bị khống chế, thì sẽ thi triển, hiện tại cứ có 1 điểm Chất Ký Ức sẽ gây Sát Thương Băng bằng <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> Giới Hạn HP của \"Đêm Dài\" lên mục tiêu chính, đồng thời gây Sát Thương Băng bằng <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> Giới Hạn HP của \"Đêm Dài\" lên các mục tiêu phe địch khác. Sau khi thi triển, tiêu hao toàn bộ Chất Ký Ức và HP, đồng thời khiến \"Đêm Dài\" biến mất.",
+        "simpleDesc": "<span style=\"color:#f29e38ff>Dựa trên số lượng \"Chất Ký Ức\"</span>, gây lượng lớn Sát Thương Băng cho mục tiêu chính, gây Sát Thương Băng cho các mục tiêu phe địch khác. Sau khi thi triển, <span style=\"color:#f29e38ff>tiêu hao toàn bộ Chất Ký Ức và HP, đồng thời khiến \"Đêm Dài\" biến mất</span>.",
+        "type": {
+          "id": "Servant",
+          "name": "Kỹ Năng Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Đánh Lan"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "Ngủ Đi, Đêm Dài Sẽ Dẫn Mộng",
-      "desc": "Khi Evernight trong trận, khi số lượng mục tiêu phe địch trong trận từ 4 trở lên/3/2/1, thì sát thương Linh Hồn Ký Ức phe ta gây ra sẽ bằng <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> sát thương gốc."
+      "desc": "Khi Evernight trong trận, khi số lượng mục tiêu phe địch trong trận từ 4 trở lên/3/2/1, thì sát thương Linh Hồn Ký Ức phe ta gây ra sẽ bằng <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> sát thương gốc.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "Nghe Đi, Lời Thì Thầm Giữa Mê Sâu",
-      "desc": "Sát Thương Bạo Kích của Evernight và Linh Hồn Ký Ức \"Đêm Dài\" tăng <nobr>40%</nobr>, mỗi khi Evernight nhận được Chất Ký Ức, sẽ khiến số lượng Chất Ký Ức nhận được tăng <nobr>2</nobr> điểm. Khi thi triển Tuyệt Kỹ, nhận thêm <nobr>2</nobr> điểm Nạp Năng Lượng \"Bí Ẩn Tăm Tối\"."
+      "desc": "Sát Thương Bạo Kích của Evernight và Linh Hồn Ký Ức \"Đêm Dài\" tăng <nobr>40%</nobr>, mỗi khi Evernight nhận được Chất Ký Ức, sẽ khiến số lượng Chất Ký Ức nhận được tăng <nobr>2</nobr> điểm. Khi thi triển Tuyệt Kỹ, nhận thêm <nobr>2</nobr> điểm Nạp Năng Lượng \"Bí Ẩn Tăm Tối\".",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "Đừng Sợ, Ác Mộng Đã Thành Quá Khứ",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp Thiên Phú Linh Hồn Ký Ức +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp Thiên Phú Linh Hồn Ký Ức +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "Tỉnh Dậy, Là Ngày Mai Của Bạn",
-      "desc": "Khi Evernight trong trận, Hiệu Suất Phá Vỡ Điểm Yếu của Linh Hồn Ký Ức phe ta tăng <nobr>25%</nobr>, Hiệu Suất Phá Vỡ Điểm Yếu của Linh Hồn Ký Ức \"Đêm Dài\" tăng thêm <nobr>25%</nobr>."
+      "desc": "Khi Evernight trong trận, Hiệu Suất Phá Vỡ Điểm Yếu của Linh Hồn Ký Ức phe ta tăng <nobr>25%</nobr>, Hiệu Suất Phá Vỡ Điểm Yếu của Linh Hồn Ký Ức \"Đêm Dài\" tăng thêm <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "Lãng Quên, \"Tôi\" Trong Ký Ức",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>; Cấp kỹ năng của Linh Hồn Ký Ức +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>; Cấp kỹ năng của Linh Hồn Ký Ức +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "Cứ Như Vậy, Mãi Mãi",
-      "desc": "Khi Evernight trong trận, <u>Xuyên Kháng</u> Toàn Thuộc Tính của toàn bộ mục tiêu phe ta tăng <nobr>20%</nobr>. Sau khi Linh Hồn Ký Ức \"Đêm Dài\" thi triển \"Mộng Mị, Mất Mát, Như Sương\", Evernight sẽ nhận được <nobr>30%</nobr> số lượng Chất Ký Ức lần tấn công này đã tiêu hao."
+      "desc": "Khi Evernight trong trận, <u>Xuyên Kháng</u> Toàn Thuộc Tính của toàn bộ mục tiêu phe ta tăng <nobr>20%</nobr>. Sau khi Linh Hồn Ký Ức \"Đêm Dài\" thi triển \"Mộng Mị, Mất Mát, Như Sương\", Evernight sẽ nhận được <nobr>30%</nobr> số lượng Chất Ký Ức lần tấn công này đã tiêu hao.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

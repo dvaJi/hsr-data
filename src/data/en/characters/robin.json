@@ -2,6 +2,7 @@
   "_id": 1309,
   "id": "robin",
   "name": "Robin",
+  "description": "A Halovian singer who was born in Penacony and has risen to cosmic fame. An elegant and demure young lady.\nThis time, she has been invited home by The Family to grace everyone with song during the Charmony Festival.\nShe can use the power of \"Harmony\" to broadcast her music, manifesting \"resonance\" among not only her fans but all manner of lifeforms.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -244,9 +245,18 @@
       "id": "wingflip_white_noise",
       "name": "Wingflip White Noise",
       "desc": "Deals Physical DMG equal to #1[i]% of Robin's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Physical DMG to a single enemy.",
+      "simpleDesc": "Deals minor Physical DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Increases DMG dealt by all allies.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +747,32 @@
       "simpleDesc": "Enters the Concerto state, increases all allies' ATK, and causes all teammates to immediately take action. After an attack, Robin deals Physical Additional DMG. While Concerto lasts, Robin is immune to Crowd Control debuffs. Before Concerto ends, Robin won't take a turn or action, lasting until the end of the countdown.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Crowd Control debuff",
+          "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1142,15 @@
       "simpleDesc": "Increase all allies' CRIT DMG. After an ally target attacks the enemy, Robin additionally regenerates Energy.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1460,15 @@
       "simpleDesc": "Creates a Special Dimension around the character. Enemies within this dimension will not attack Robin. After entering battle while the dimension is active, Robin additionally regenerates #2[i] Energy at the start of each wave.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1486,106 @@
       "_id": 130901,
       "id": "land_of_smiles",
       "name": "Land of Smiles",
-      "desc": "While the \"Concerto\" state is active, all allies' All-Type <u>RES PEN</u> increases by <nobr>24%</nobr>."
+      "desc": "While the \"Concerto\" state is active, all allies' All-Type <u>RES PEN</u> increases by <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130902,
       "id": "afternoon_tea_for_two",
       "name": "Afternoon Tea For Two",
-      "desc": "While the Concerto state is active, all allies' SPD increases by <nobr>16%</nobr>. The Talent's Energy Regeneration effect additionally increases by <nobr>1</nobr>."
+      "desc": "While the Concerto state is active, all allies' SPD increases by <nobr>16%</nobr>. The Talent's Energy Regeneration effect additionally increases by <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130903,
       "id": "inverted_tuning",
       "name": "Inverted Tuning",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nUltimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nUltimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130904,
       "id": "raindrop_key",
       "name": "Raindrop Key",
-      "desc": "When using the Ultimate, dispels <u>Crowd Control debuffs</u> from all allies. While Robin is in the \"Concerto\" state, increases the Effect RES of all allies by <nobr>50%</nobr>."
+      "desc": "When using the Ultimate, dispels <u>Crowd Control debuffs</u> from all allies. While Robin is in the \"Concerto\" state, increases the Effect RES of all allies by <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Crowd Control debuff",
+          "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130905,
       "id": "lonestars_lament",
       "name": "Lonestar's Lament",
-      "desc": "Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Basic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130906,
       "id": "moonless_midnight",
       "name": "Moonless Midnight",
-      "desc": "While the \"Concerto\" state is active, the CRIT DMG for the Physical <u>Additional DMG</u> caused by the Ultimate increases by <nobr>450%</nobr>. The effect of \"Moonless Midnight\" can trigger up to <nobr>8</nobr> time(s) and the trigger count resets each time the Ultimate is used."
+      "desc": "While the \"Concerto\" state is active, the CRIT DMG for the Physical <u>Additional DMG</u> caused by the Ultimate increases by <nobr>450%</nobr>. The effect of \"Moonless Midnight\" can trigger up to <nobr>8</nobr> time(s) and the trigger count resets each time the Ultimate is used.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

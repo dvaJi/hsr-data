@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "Seele",
+  "description": "A resident of the Underworld and the backbone of Wildfire. She goes by the alias \"Babochka.\"\nShe has a frank personality, but there is a delicate and sensitive hidden side to her deep in her heart.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -243,10 +244,22 @@
       "_id": 110201,
       "id": "thwack",
       "name": "Thwack",
-      "desc": "Deals Quantum DMG equal to #1[i]% of Seele's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Quantum DMG to a single enemy.",
+      "desc": "Deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Quantum DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 110202,
       "id": "sheathed_blade",
       "name": "Sheathed Blade",
-      "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to a single enemy.",
-      "simpleDesc": "Deals Quantum DMG to a single enemy and increases SPD.",
+      "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
+      "simpleDesc": "Deals Quantum DMG to one enemy and increases SPD.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -739,10 +764,22 @@
       "_id": 110203,
       "id": "butterfly_flurry",
       "name": "Butterfly Flurry",
-      "desc": "Seele enters the Amplification state and deals Quantum DMG equal to #1[i]% of her ATK to a single enemy.",
-      "simpleDesc": "Enters the Amplification state and deals massive Quantum DMG to a single enemy.",
+      "desc": "Seele enters the Amplification state and deals Quantum DMG equal to #1[i]% of her ATK to one designated enemy.",
+      "simpleDesc": "Enters the Amplification state and deals massive Quantum DMG to one enemy.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "When defeating enemy targets with Basic ATK, Skill, or Ultimate, gains an extra turn and enters the Amplification state. While in Amplification, increases the DMG dealt by this unit.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Extra Turn",
+          "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "Enter Stealth mode. After attacking an enemy and entering battle, enters the Amplification state.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Extirpating Slash",
-      "desc": "When dealing DMG to an enemy whose HP percentage is <nobr>80%</nobr> or lower, CRIT Rate increases by <nobr>15%</nobr>."
+      "desc": "When dealing DMG to an enemy whose HP percentage is <nobr>80%</nobr> or lower, CRIT Rate increases by <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "Dancing Butterfly",
-      "desc": "The SPD Boost effect of Seele's Skill can stack up to <nobr>2</nobr> time(s)."
+      "desc": "The SPD Boost effect of Seele's Skill can stack up to <nobr>2</nobr> time(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "Dazzling Tumult",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Flitting Phantasm",
-      "desc": "Seele regenerates <nobr>15</nobr> Energy when she defeats an enemy."
+      "desc": "Seele regenerates <nobr>15</nobr> Energy when she defeats an enemy.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "Piercing Shards",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Shattering Shambles",
-      "desc": "After Seele uses Ultimate, inflict the attacked enemy with \"Butterfly Flurry\" for <nobr>1</nobr> turn(s). Enemies in \"Butterfly Flurry\" will additionally take 1 instance of Quantum <u>Additional DMG</u> equal to <nobr>15%</nobr> of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"Butterfly Flurry\" state's <u>Additional DMG</u> triggered by other allies' attacks, Seele's Talent will not be triggered.\nWhen Seele is <u>knocked down</u>, the \"Butterfly Flurry\" inflicted on the enemies will be removed."
+      "desc": "After Seele uses Ultimate, inflict the attacked enemy with \"Butterfly Flurry\" for <nobr>1</nobr> turn(s). Enemies in \"Butterfly Flurry\" will additionally take 1 instance of Quantum <u>Additional DMG</u> equal to <nobr>15%</nobr> of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"Butterfly Flurry\" state's <u>Additional DMG</u> triggered by other allies' attacks, Seele's Talent will not be triggered.\nWhen Seele is <u>knocked down</u>, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

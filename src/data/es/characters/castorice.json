@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "Castorice",
+  "description": "La nación que venera a la muerte, Aidonia, el reino de las nieves perpetuas, se ha sumido en un dulce y profundo sueño.\nCastorice, la hija del río Estigia, la Heredera de Crisos que busca la Yesca de la Muerte, comienza su viaje. Debe proteger el llanto de las almas del mundo y abrazar la soledad del destino.\nLa vida y la muerte son solo un viaje. Cuando la mariposa se posa en una rama, lo marchito vuelve a renacer.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Cuántico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Consume PV de todos los aliados e inflige Daño Cuántico a un enemigo y una pequeña cantidad de Daño Cuántico a los objetivos adyacentes.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Invoca al mnemoduende Dragón Caído y adelanta la acción de este un 100%. A su vez, despliega un Territorio que reduce la RES a todos los tipos de todos los enemigos.",
       "type": "Habilidad definitiva",
       "tag": "Invocación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Territorio",
+          "desc": "Los efectos de Territorio son únicos en el campo de batalla y, mientras duran, no se pueden lanzar habilidades con otros efectos de Territorio.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1150,15 @@
       "simpleDesc": "Cuando un aliado pierde PV, Castorice obtiene Nuevo brote, y aumenta el daño que infligen Castorice y el Dragón Caído. Cuando Nuevo brote llega al máximo, se activa la habilidad definitiva. Mientras el Dragón Caído está en el campo de batalla, los PV que pierdan los aliados (excepto el Dragón Caído) se convierten en la misma cantidad de PV para el Dragón Caído.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "Tras usar la técnica, entra en el estado de Vastedad lúgubre durante #3[i] s. Mientras el estado de Vastedad lúgubre está activo, los enemigos no pueden acercarse por iniciativa propia a Castorice.\nAl atacar en el estado de Vastedad lúgubre, todos los enemigos en el área entran en combate y Castorice invoca al mnemoduende Dragón Caído. A su vez, adelanta la acción del Dragón Caído un 100% y despliega el Territorio Inframundo perdido. El Dragón Caído empieza con unos PV actuales equivalentes al #2[i]% del límite máximo de Nuevo brote. Tras entrar en combate, se consume un #1[i]% de los PV actuales de todos los aliados (excepto del Dragón Caído).\nTras entrar en combate y antes de invocar al Dragón Caído, Castorice obtiene una cantidad de Nuevo brote equivalente al #4[i]% del límite máximo.",
       "simpleDesc": "Entra en el estado de Vastedad lúgubre, y los enemigos no pueden acercarse por iniciativa propia a Castorice.\nAl atacar en el estado de Vastedad lúgubre, hace que todos los enemigos en el área entren en combate e invoca al mnemoduende Dragón Caído, el cual adelanta su acción un 100%. Al entrar en combate, se consumen PV de todos los aliados (excepto del Dragón Caído).\nTras entrar en combate y antes de invocar al Dragón Caído, Castorice regenera una cantidad de Nuevo brote equivalente al #4[i]% del límite máximo.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Territorio",
+          "desc": "Los efectos de Territorio son únicos en el campo de batalla y, mientras duran, no se pueden lanzar habilidades con otros efectos de Territorio.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Pólux, el Dragón Caído",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "Garras que rasgan la oscuridad",
+        "desc": "Inflige un Daño Cuántico equivalente al <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> de los PV máx. de Castorice a todos los enemigos.",
+        "simpleDesc": "Inflige una pequeña cantidad de Daño Cuántico a todos los enemigos.",
+        "type": {
+          "id": "Servant",
+          "name": "Habilidad de mnemoduende"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ATQ AdE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "Aliento que prende las sombras",
+        "desc": "Al lanzar Aliento que prende las sombras, consume un <nobr>#1[i]%</nobr> de los PV máx. del Dragón Caído e inflige a todos los enemigos un Daño Cuántico equivalente al <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> de los PV máx. de Castorice.\nPuede lanzar repetidamente Aliento que prende las sombras en un ataque. Al lanzarlo repetidamente, el multiplicador de daño aumenta sucesivamente hasta el <span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span>/<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>. Tras alcanzar el <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>, ya no sigue aumentando. El efecto de aumento del multiplicador de daño no disminuye hasta que el Dragón Caído desaparezca.\nSi los PV actuales del Dragón Caído son iguales o inferiores al <nobr>#5[i]%</nobr> de sus PV máx. al lanzar esta habilidad, los PV se reducen a 1 y se activa un efecto de habilidad equivalente al de Alas que abaten las ruinas del talento de mnemoduende.",
+        "simpleDesc": "Consume sus PV, inflige Daño Cuántico a todos los enemigos y el turno no termina. Lanzar esta habilidad repetidamente potencia la habilidad hasta 3 veces. Si tiene un <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> o menos de PV, lanzar esta habilidad activa un efecto de habilidad equivalente al de Alas que abaten las ruinas del talento de mnemoduende.",
+        "type": {
+          "id": "Servant",
+          "name": "Habilidad de mnemoduende"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ATQ AdE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "Cuerpo oculto en la crisálida",
+        "desc": "Cuando está en el campo de batalla, el Dragón Caído actúa de <u>Refuerzo</u> de los aliados. Los PV actuales de los aliados pueden reducirse hasta un mínimo de 1 al recibir daño o consumir PV, tras lo cual el Dragón Caído recibe el daño o consume PV en su lugar en una proporción del <nobr>#1[i]%</nobr> del valor original, hasta que el Dragón Caído desaparezca.",
+        "simpleDesc": "Cuando está en el campo de batalla, el Dragón Caído actúa de <u>Refuerzo</u> de los aliados. Después de que los PV actuales de un aliado se hayan reducido a 1, el Dragón Caído recibe el daño o consume PV en su lugar.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Apoyo"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "Refuerzo",
+            "desc": "Los enemigos no pueden marcar activamente como objetivo a las unidades de Refuerzo. Las habilidades de Ráfaga de los aliados no pueden extenderse a las unidades de Refuerzo.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "Rugido que estremece el páramo",
+        "desc": "Cuando el Dragón Caído es invocado, el daño que infligen todos los aliados aumenta en un <nobr>#1[i]%</nobr> durante <nobr>#2[i]</nobr> turnos.",
+        "simpleDesc": "Al ser invocado, el daño que infligen todos los aliados aumenta.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Apoyo"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "Alas que abaten las ruinas",
+        "desc": "Cuando el Dragón Caído desaparece, inflige daño <nobr>#2[i]</nobr> veces. Cada vez inflige a un enemigo al azar un Daño Cuántico equivalente al <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> de los PV máx. de Castorice. Además, regenera a todos los aliados una cantidad de PV equivalente al <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> de los PV máx. de Castorice + <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>.",
+        "simpleDesc": "Al desaparecer, inflige una pequeña cantidad de Daño Cuántico a un enemigo, que se dispara <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> veces en total. Además, regenera PV a todos los aliados.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Rebote"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "Aliento que prende las sombras",
+        "desc": "",
+        "simpleDesc": "Consume sus PV, inflige Daño Cuántico a todos los enemigos y el turno no termina. Lanzar esta habilidad repetidamente potencia la habilidad hasta 3 veces. Si tiene un <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> o menos de PV, lanzar esta habilidad activa un efecto de habilidad equivalente al de Alas que abaten las ruinas del talento de mnemoduende.",
+        "type": {
+          "id": "Servant",
+          "name": "Habilidad de mnemoduende"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ATQ AdE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "Aliento que prende las sombras",
+        "desc": "",
+        "simpleDesc": "Consume sus PV, inflige Daño Cuántico a todos los enemigos y el turno no termina. Lanzar esta habilidad repetidamente potencia la habilidad hasta 3 veces. Si tiene un <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> o menos de PV, lanzar esta habilidad activa un efecto de habilidad equivalente al de Alas que abaten las ruinas del talento de mnemoduende.",
+        "type": {
+          "id": "Servant",
+          "name": "Habilidad de mnemoduende"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ATQ AdE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "Alas que abaten las ruinas",
+        "desc": "Consume todos los PV e inflige daño <nobr>#2[i]</nobr> veces. Cada vez inflige a un enemigo al azar un Daño Cuántico equivalente al <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> de los PV máx. de Castorice. Además, regenera a todos los aliados una cantidad de PV equivalente al <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> de los PV máx. de Castorice + <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>.",
+        "simpleDesc": "Consume todos los PV e inflige una pequeña cantidad de Daño Cuántico a un enemigo, que se dispara <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> veces en total. Además, regenera PV a todos los aliados.",
+        "type": {
+          "id": "Servant",
+          "name": "Habilidad de mnemoduende"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Rebote"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "Doncella nívea y recuerdos amortajados",
-      "desc": "Cuando los PV actuales del enemigo son iguales o inferiores al <nobr>80%</nobr>/<nobr>50%</nobr> de sus PV máx., el daño que le infligen Garra ósea, abrazo del dragón lóbrego, Garras que rasgan la oscuridad, Aliento que prende las sombras y Alas que abaten las ruinas es un <nobr>120%</nobr>/<nobr>140%</nobr> del daño original."
+      "desc": "Cuando los PV actuales del enemigo son iguales o inferiores al <nobr>80%</nobr>/<nobr>50%</nobr> de sus PV máx., el daño que le infligen Garra ósea, abrazo del dragón lóbrego, Garras que rasgan la oscuridad, Aliento que prende las sombras y Alas que abaten las ruinas es un <nobr>120%</nobr>/<nobr>140%</nobr> del daño original.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "Coronación de flores aladas",
-      "desc": "Tras invocar al mnemoduende Dragón Caído, Castorice obtiene <nobr>2</nobr> acumulaciones de Voluntad ardiente, que se puede acumular hasta <nobr>2</nobr> veces. Voluntad ardiente compensa el consumo de PV del Dragón Caído cuando usa la habilidad del mnemoduende Aliento que prende las sombras y <u>adelanta la acción</u> de Castorice un <nobr>100%</nobr>. Además, Castorice obtiene un <nobr>30%</nobr> de los puntos máximos de Nuevo brote la siguiente vez que lance la habilidad básica potenciada."
+      "desc": "Tras invocar al mnemoduende Dragón Caído, Castorice obtiene <nobr>2</nobr> acumulaciones de Voluntad ardiente, que se puede acumular hasta <nobr>2</nobr> veces. Voluntad ardiente compensa el consumo de PV del Dragón Caído cuando usa la habilidad de mnemoduende Aliento que prende las sombras y <u>adelanta la acción</u> de Castorice un <nobr>100%</nobr>. Además, Castorice obtiene un <nobr>30%</nobr> de los puntos máximos de Nuevo brote la siguiente vez que lance la habilidad básica potenciada.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "Danza postrera de los devotos",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de talento del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de talento de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "Descanso arropado en lamentos",
-      "desc": "Cuando Castorice está en la batalla, los PV regenerados por todos los aliados al recibir curación aumentan en un <nobr>20%</nobr>."
+      "desc": "Cuando Castorice está en la batalla, los PV regenerados por todos los aliados al recibir curación aumentan en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "Capítulos de profecías prístinas",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de habilidad del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de habilidad de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "Crisálida que el tiempo romperá",
-      "desc": "Cuando Castorice o el Dragón Caído infligen daño, la <u>PEN de la RES</u> a Cuántico aumenta en un <nobr>20%</nobr>. Mientras ataca, el Dragón Caído puede reducir la firmeza de los enemigos ignorando sus tipos de Debilidad, y activa el efecto de Ruptura Cuántica cuando rompe su Debilidad. Además, la cantidad de rebotes del talento Alas que abaten las ruinas aumenta adicionalmente en <nobr>3</nobr>."
+      "desc": "Cuando Castorice o el Dragón Caído infligen daño, la <u>PEN de la RES</u> a Cuántico aumenta en un <nobr>20%</nobr>. Mientras ataca, el Dragón Caído puede reducir la firmeza de los enemigos ignorando sus tipos de Debilidad, y activa el efecto de Ruptura Cuántica cuando rompe su Debilidad. Además, la cantidad de rebotes del talento Alas que abaten las ruinas aumenta adicionalmente en <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

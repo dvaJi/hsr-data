@@ -2,6 +2,7 @@
   "_id": 1306,
   "id": "sparkle",
   "name": "Sparkle",
+  "description": "Ein Mitglied der Maskierten Narren. Skrupellos und unberechenbar.\nEine gefährliche Theaterkünstlerin, die es liebt, in verschiedene Rollen zu schlüpfen. Eine Frau mit unzähligen Masken und der Fähigkeit, unendlich viele Charaktere zu verkörpern.\nReichtum, Status, Macht ... Nichts davon ist für Sparkle wichtig. Das Einzige, was ihr Interesse wecken kann, ist die „Unterhaltung“.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Quanten-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Erhöht den KRIT-SCH eines Verbündeten und zieht seine Aktion vor.",
       "type": "Fertigkeit",
       "tag": "Unterstützung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Stellt Fertigkeitspunkte wieder her und erhöht zusätzlich die SCH-Erhöhung von Sparkles Talent.",
       "type": "Ultimate",
       "tag": "Unterstützung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "Erhöht die max. Anzahl der Fertigkeitspunkte. Wenn ein Verbündeter Fertigkeitspunkte verbraucht, wird der verursachte SCH aller Verbündeten erhöht.",
       "type": "Talent",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1473,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik erhalten alle Verbündeten den Status „Irreführung“, der sie für Gegner unsichtbar macht. Stellt beim Kampfeintritt mit Irreführung Fertigkeitspunkte wieder her.",
       "type": "Technik",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1499,79 @@
       "_id": 130601,
       "id": "suspension_of_disbelief",
       "name": "Am Rande des Zweifels",
-      "desc": "Verlängert die Dauer von „Rätselhaft“, das durch den Ultimate verursacht wurde, zusätzlich um 1 Rd. Der ANG der Verbündeten mit Rätselhaft wird um <nobr>40%</nobr> erhöht."
+      "desc": "Verlängert die Dauer von „Rätselhaft“, das durch den Ultimate verursacht wurde, zusätzlich um 1 Rd. Der ANG der Verbündeten mit Rätselhaft wird um <nobr>40%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130602,
       "id": "purely_fictitious",
       "name": "Sinnleere Fiktion",
-      "desc": "Jede Stapelung des Talents lässt Verbündete <nobr>8%</nobr> der VTD des Ziels ignorieren."
+      "desc": "Jede Stapelung des Talents lässt Verbündete <nobr>8%</nobr> der VTD des Ziels ignorieren.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130603,
       "id": "pipedream",
       "name": "Fantasieblase",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130604,
       "id": "life_is_a_gamble",
       "name": "Das Leben ist ein Spiel",
-      "desc": "Der Ultimate stellt zusätzlich 1 Fertigkeitspunkt wieder her. Das Talent erhöht die max. Anzahl an Fertigkeitspunkten zusätzlich um 1."
+      "desc": "Der Ultimate stellt zusätzlich 1 Fertigkeitspunkt wieder her. Das Talent erhöht die max. Anzahl an Fertigkeitspunkten zusätzlich um 1.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130605,
       "id": "parallax_truth",
       "name": "Zweigesichtige Wahrheit",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130606,
       "id": "narrative_polysemy",
       "name": "Mehrfachauswahl",
-      "desc": "Die KRIT-SCH-Erhöhung der Fertigkeit wird zusätzlich um <nobr>30%</nobr> von Sparkles KRIT-SCH erhöht. Wenn sie ihre Fertigkeit einsetzt, wirkt der Effekt der KRIT-SCH-Erhöhung für Sparkles Teammitglieder mit „Rätselhaft“. Wenn Sparkle ihren Ultimate einsetzt und ein Verbündeter den von der Fertigkeit verursachten Effekt der KRIT-SCH-Erhöhung besitzt, wird dieser Effekt auf alle Teammitglieder mit Rätselhaft ausgedehnt."
+      "desc": "Die KRIT-SCH-Erhöhung der Fertigkeit wird zusätzlich um <nobr>30%</nobr> von Sparkles KRIT-SCH erhöht. Wenn sie ihre Fertigkeit einsetzt, wirkt der Effekt der KRIT-SCH-Erhöhung für Sparkles Teammitglieder mit „Rätselhaft“. Wenn Sparkle ihren Ultimate einsetzt und ein Verbündeter den von der Fertigkeit verursachten Effekt der KRIT-SCH-Erhöhung besitzt, wird dieser Effekt auf alle Teammitglieder mit Rätselhaft ausgedehnt.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

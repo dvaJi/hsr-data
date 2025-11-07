@@ -2,6 +2,7 @@
   "_id": 1310,
   "id": "firefly",
   "name": "반디",
+  "description": "스텔라론 헌터의 멤버로, 기갑 「샘」을 입고 전투를 벌인다. 임무에 충실하고 강인한 성격을 가졌다.\n곤충 떼를 물리치기 위한 병기로 태어났으며, 성장 속도가 평범한 사람보다 빠르지만 수명이 매우 짧다.\n「삶」의 기회를 찾기 위해 스텔라론 헌터에 합류하여 운명을 거스를 방법을 찾고 있다",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 화염 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "자신의 일부 HP를 소모해 에너지를 회복하고, 단일 적에게 화염 속성 피해를 가한다. 자신의 다음번 행동 게이지를 증가시킨다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,15 @@
       "simpleDesc": "「완전연소」 상태에 진입하고 자신의 행동 게이지를 100% 증가시킨다. 일반 공격 강화 및 전투 스킬 강화를 획득하고, 자신의 속도, 약점 격파 효율, 적이 받는 격파 피해가 증가하며, 카운트다운이 종료될 때까지 지속된다",
       "type": "필살기",
       "tag": "강화",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,24 @@
       "simpleDesc": "HP가 낮을수록 받는 피해가 감소한다. 「완전연소」 상태에서는 피해 감소 효과가 최대치를 유지하며, 효과 저항이 증가한다. 전투 시작 시 에너지가 #2[i]% 미만이면 에너지가 #2[i]%까지 회복된다. 에너지가 최대치까지 회복되면 자신의 모든 디버프 효과가 해제된다",
       "type": "특성",
       "tag": "방어",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "디버프 효과",
+          "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1490,15 @@
       "desc": "공중으로 도약해 #1[i]초 동안 자유롭게 이동하며, 이때 낙하 공격을 발동하면 지속 시간을 조기 종료한다. 지속 시간이 종료되면 낙하해 즉시 일정 범위 내 모든 적을 공격하고, 매 웨이브 시작 시 모든 적에게 화염 속성 약점을 추가한다, 지속 시간: #3[i]턴. 이후 모든 적에게 기갑 「샘」 공격력의 #2[i]%만큼 화염 속성 피해를 가한다",
       "simpleDesc": "공중으로 도약해 자유롭게 이동하며, 수초 이동 후 낙하해 범위 내 모든 적을 공격한다. 매 웨이브 시작 시 모든 적에게 화염 속성 약점을 추가하고, 모든 적에게 화염 속성 피해를 가한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1517,105 @@
       "_id": 131001,
       "id": "in_reddened_chrysalis_i_once_rest",
       "name": "나는 잠들었네, 붉은 고치 안에서",
-      "desc": "강화된 전투 스킬 발동 시 목표의 방어력을 <nobr>15%</nobr> 무시하고, 강화된 전투 스킬은 전투 스킬 포인트를 소모하지 않는다"
+      "desc": "강화된 전투 스킬 발동 시 목표의 방어력을 <nobr>15%</nobr> 무시하고, 강화된 전투 스킬은 전투 스킬 포인트를 소모하지 않는다",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131002,
       "id": "from_shattered_sky_i_free_fall",
       "name": "부서진 하늘에서 추락해",
-      "desc": "「완전연소」 상태에서 강화된 일반 공격, 강화된 전투 스킬을 발동해 적을 처치하거나 적을 <u>약점 격파 상태</u>에 빠트릴 시 기갑 「샘」이 즉시 <u>보너스 턴</u>을 1개 획득한다. 해당 효과는 <nobr>1</nobr>턴 후 다시 발동할 수 있다"
+      "desc": "「완전연소」 상태에서 강화된 일반 공격, 강화된 전투 스킬을 발동해 적을 처치하거나 적을 <u>약점 격파 상태</u>에 빠트릴 시 기갑 「샘」이 즉시 <u>보너스 턴</u>을 1개 획득한다. 해당 효과는 <nobr>1</nobr>턴 후 다시 발동할 수 있다",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "약점 격파 상태",
+          "desc": "적의 강인성이 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 진입한 목표는 행동 게이지가 감소한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "보너스 턴",
+          "desc": "턴 횟수를 소모하지 않는 보너스 턴 1개를 획득한다. 해당 턴에서는 필살기를 발동할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131003,
       "id": "amidst_silenced_stars_i_deep_sleep",
       "name": "고요한 성하에 깊이 잠들고",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131004,
       "id": "upon_lighted_fyrefly_i_soon_gaze",
       "name": "나는 보리라, 반딧불이의 불빛을",
-      "desc": "「완전연소」 상태일 때 기갑 「샘」의 효과 저항이 <nobr>50%</nobr> 증가한다"
+      "desc": "「완전연소」 상태일 때 기갑 「샘」의 효과 저항이 <nobr>50%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131005,
       "id": "from_undreamt_night_i_thence_shine",
       "name": "꿈 없는 긴밤에서 비추며",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131006,
       "id": "in_finalized_morrow_i_full_bloom",
       "name": "종극의 내일에 피어나리",
-      "desc": "「완전연소」 상태에서 기갑 「샘」의 화염 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 강화된 일반 공격, 강화된 전투 스킬 발동 시 약점 격파 효율이 <nobr>50%</nobr> 증가한다"
+      "desc": "「완전연소」 상태에서 기갑 「샘」의 화염 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 강화된 일반 공격, 강화된 전투 스킬 발동 시 약점 격파 효율이 <nobr>50%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

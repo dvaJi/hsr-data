@@ -2,6 +2,7 @@
   "_id": 1309,
   "id": "robin",
   "name": "Robin",
+  "description": "Una cantante aureoliana originaria de Colonipenal que saltó a la fama cósmica. Una joven elegante y modesta.\nEsta vez, La Familia la invitó para agasajar a todos con sus canciones durante el Festival Carismonía.\nPuede usar el poder de la Armonía para transmitir su música, manifestando \"resonancia\" entre sus fans y todo tipo de formas de vida.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Físico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Aumenta el daño que infligen todos los aliados.",
       "type": "Habilidad básica",
       "tag": "Apoyo",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +747,32 @@
       "simpleDesc": "Entra en el estado de Concierto, aumenta el ATQ de todos los aliados y hace que todos excepto ella actúen inmediatamente. Después de que un aliado ataque, Robin inflige Daño Físico adicional. En el estado de Concierto, Robin es inmune a estados negativos de Control. Antes de que Concierto termine, Robin no puede actuar ni entrar en su turno hasta que termine la cuenta regresiva.",
       "type": "Habilidad definitiva",
       "tag": "Apoyo",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Estados negativos de control",
+          "desc": "Congelación, Enredo, Prisión, Dominación, Cólera, Reverberación potente, Sueño extraño, Enredo-Prisión, Aterrorizado y Bloqueo de acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1142,15 @@
       "simpleDesc": "Aumenta el Daño CRIT de todos los aliados. Después de que un objetivo aliado ataque a un enemigo, Robin recupera energía adicional.",
       "type": "Talento",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1460,15 @@
       "simpleDesc": "Crea una zona especial a su alrededor. Los enemigos que estén en la zona no pueden atacar a Robin. Tras entrar en combate mientras la zona especial está activa, Robin recupera #2[i] pts. de energía adicionales al comienzo de cada oleada.",
       "type": "Técnica",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1486,106 @@
       "_id": 130901,
       "id": "land_of_smiles",
       "name": "País de sonrisas",
-      "desc": "Cuando está en el estado de Concierto, la <u>PEN de la RES</u> a todos los tipos de todos los aliados aumenta en un <nobr>24%</nobr>."
+      "desc": "Cuando está en el estado de Concierto, la <u>PEN de la RES</u> a todos los tipos de todos los aliados aumenta en un <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130902,
       "id": "afternoon_tea_for_two",
       "name": "Té de la tarde para dos",
-      "desc": "Cuando está en el estado de Concierto, la VEL de todos los aliados aumenta en un <nobr>16%</nobr>. El efecto de recuperación de energía del talento aumenta adicionalmente en <nobr>1</nobr> pt."
+      "desc": "Cuando está en el estado de Concierto, la VEL de todos los aliados aumenta en un <nobr>16%</nobr>. El efecto de recuperación de energía del talento aumenta adicionalmente en <nobr>1</nobr> pt.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130903,
       "id": "inverted_tuning",
       "name": "Afinación inversa",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130904,
       "id": "raindrop_key",
       "name": "Llave de lluvia",
-      "desc": "Al usar su habilidad definitiva, disipa los <u>estados negativos de Control</u> de todos los aliados. Cuando Robin está en el estado de Concierto, la RES a efecto de todos los aliados aumenta en un <nobr>50%</nobr>."
+      "desc": "Al usar su habilidad definitiva, disipa los <u>estados negativos de Control</u> de todos los aliados. Cuando Robin está en el estado de Concierto, la RES a efecto de todos los aliados aumenta en un <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Estados negativos de control",
+          "desc": "Congelación, Enredo, Prisión, Dominación, Cólera, Reverberación potente, Sueño extraño, Enredo-Prisión, Aterrorizado y Bloqueo de acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130905,
       "id": "lonestars_lament",
       "name": "Lamento de la estrella solitaria",
-      "desc": "Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130906,
       "id": "moonless_midnight",
       "name": "Noche sin luna",
-      "desc": "Cuando está en el estado de Concierto, el Daño CRIT del Daño Físico <u>adicional</u> infligido por la habilidad definitiva aumenta en un <nobr>450%</nobr>. El efecto de Noche sin luna se puede activar hasta <nobr>8</nobr> veces. Cada vez que usa la habilidad definitiva, se reinicia el número de veces que se puede activar."
+      "desc": "Cuando está en el estado de Concierto, el Daño CRIT del Daño Físico <u>adicional</u> infligido por la habilidad definitiva aumenta en un <nobr>450%</nobr>. El efecto de Noche sin luna se puede activar hasta <nobr>8</nobr> veces. Cada vez que usa la habilidad definitiva, se reinicia el número de veces que se puede activar.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

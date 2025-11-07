@@ -2,6 +2,7 @@
   "_id": 1201,
   "id": "qingque",
   "name": "Qingque",
+  "description": "Adivina de la Comisión de Adivinación del Luofu de Xianzhou y administradora de la biblioteca.\nComo siempre holgazanea en el trabajo, está a punto de ser degradada a un puesto inferior.",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Lanza 1 ficha e inflige una pequeña cantidad de Daño Cuántico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Roba, aumenta el daño infligido y el turno no termina.",
       "type": "Habilidad básica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Inflige Daño Cuántico a todos los enemigos y obtiene 4 fichas del mismo palo.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Roba una ficha cuando un aliado comienza su turno. Si tiene 4 fichas del mismo palo al comenzar su turno, se deshace de todas sus fichas y potencia su ATQ básico a la vez que aumenta su ATQ.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1313,6 +1359,15 @@
       "simpleDesc": "Tras usar la técnica, roba ficha en la siguiente batalla.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,96 @@
       "_id": 120101,
       "id": "rise_through_the_tiles",
       "name": "Peón coronado, premio obtenido",
-      "desc": "El daño que inflige la habilidad definitiva de Qingque aumenta en un <nobr>10%</nobr>."
+      "desc": "El daño que inflige la habilidad definitiva de Qingque aumenta en un <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120102,
       "id": "sleep_on_the_tiles",
       "name": "Hora de la siesta en las fichas",
-      "desc": "Cada vez que Qingque roba fichas, recupera inmediatamente <nobr>1</nobr> pt. de energía."
+      "desc": "Cada vez que Qingque roba fichas, recupera inmediatamente <nobr>1</nobr> pt. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120103,
       "id": "read_between_the_tiles",
       "name": "Confiar en la suerte",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120104,
       "id": "right_on_the_tiles",
       "name": "Combo oportuno, la última ficha espera",
-      "desc": "Tras usar su habilidad básica, Qingque tiene un <nobr>24%</nobr> de <u>probabilidad fija</u> de obtener Autosuficiencia hasta que termine el turno.\nEn el estado de Autosuficiencia, al usar el ATQ básico o el ATQ básico potenciado, se lanza inmediatamente un <u>ataque adicional</u> que inflige al mismo objetivo u objetivos un Daño Cuántico equivalente al <nobr>100%</nobr> del daño de ATQ básico o de ATQ básico potenciado."
+      "desc": "Tras usar su habilidad básica, Qingque tiene un <nobr>24%</nobr> de <u>probabilidad fija</u> de obtener Autosuficiencia hasta que termine el turno.\nEn el estado de Autosuficiencia, al usar el ATQ básico o el ATQ básico potenciado, se lanza inmediatamente un <u>ataque adicional</u> que inflige al mismo objetivo u objetivos un Daño Cuántico equivalente al <nobr>100%</nobr> del daño de ATQ básico o de ATQ básico potenciado.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Probabilidad fija",
+          "desc": "La probabilidad fija no se ve afectada por ningún factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120105,
       "id": "gambit_for_the_tiles",
       "name": "Fichas sacadas, suerte acabada",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120106,
       "id": "prevail_beyond_the_tiles",
       "name": "Calma y serena, lista para ganar",
-      "desc": "Tras utilizar el ATQ básico potenciado, recupera 1 pt. de habilidad básica."
+      "desc": "Tras utilizar el ATQ básico potenciado, recupera 1 pt. de habilidad básica.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

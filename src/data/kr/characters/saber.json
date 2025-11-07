@@ -2,6 +2,7 @@
   "_id": 1014,
   "id": "saber",
   "name": "세이버",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "지정된 단일 적에게 소량의 바람 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "지정된 단일 적에게 바람 속성 피해를 가하고, 인접한 목표에게 소량의 바람 속성 피해를 가한다. 공격 후 [노심 공명]을 소모하여 에너지를 전부 회복할 수 있을 경우, 이번 전투 스킬의 피해 배율이 [노심 공명]에 따라 증가하고, 공격 후 모든 [노심 공명]을 소모하며, 그렇지 않을 경우 [노심 공명]을 #3[i]pt 획득한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "모든 적에게 대량의 바람 속성 피해를 가한다. 추가로 랜덤 단일 적에게 소량의 바람 속성 피해를 가하고, 총 #3[i]회 바운스하며, 다음 일반 공격을 강화한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        120,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1110,15 @@
       "simpleDesc": "전투 진입 시 [노심 공명]을 #8[i]pt 획득한다. 임의의 아군이 필살기를 발동하면 세이버가 가하는 피해가 증가하고 [노심 공명]을 #1[i]pt 획득한다. [노심 공명]을 소모하면 세이버의 에너지를 회복할 수 있다",
       "type": "특성",
       "tag": "강화",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1518,15 @@
       "simpleDesc": "비술 사용 후 다음 전투 시작 시 [노심 공명]을 #3[i]pt 획득하고 공격력이 증가한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1499,37 +1545,97 @@
       "_id": 101401,
       "id": "the_lost_white_walls",
       "name": "잃어버린 백악의 성",
-      "desc": "<nobr>세이버</nobr>가 가하는 필살기 피해가 <nobr>60%</nobr> 증가하고, <nobr>세이버</nobr>가 일반 공격 또는 전투 스킬 발동 후 [노심 공명]을 <nobr>1</nobr>pt 획득한다"
+      "desc": "<nobr>세이버</nobr>가 가하는 필살기 피해가 <nobr>60%</nobr> 증가하고, <nobr>세이버</nobr>가 일반 공격 또는 전투 스킬 발동 후 [노심 공명]을 <nobr>1</nobr>pt 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101402,
       "id": "the_lost_oath_of_the_round_table",
       "name": "먼지 덮인 원탁의 맹세",
-      "desc": "이번 전투에서 [노심 공명]을 1pt 획득할 때마다 <nobr>세이버</nobr>가 가하는 피해가 목표의 방어력을 <nobr>#2[f1]%</nobr> 무시하며, 해당 효과는 최대 <nobr>15</nobr>스택 중첩된다. [노심 공명] 전투 스킬 배율 증가 효과를 발동할 시 [노심 공명] 1pt마다 추가로 이번 전투 스킬의 피해 배율이 <nobr>7%</nobr> 증가한다"
+      "desc": "이번 전투에서 [노심 공명]을 1pt 획득할 때마다 <nobr>세이버</nobr>가 가하는 피해가 목표의 방어력을 <nobr>#2[f1]%</nobr> 무시하며, 해당 효과는 최대 <nobr>15</nobr>스택 중첩된다. [노심 공명] 전투 스킬 배율 증가 효과를 발동할 시 [노심 공명] 1pt마다 추가로 이번 전투 스킬의 피해 배율이 <nobr>7%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101403,
       "id": "a_wish_across_fifteen_centuries",
       "name": "열다섯 세기를 초월한 추적",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101404,
       "id": "the_saga_of_sixteen_winter_days",
       "name": "열여섯 겨울날에 걸친 기우",
-      "desc": "<nobr>세이버</nobr>의 바람 속성 <u>저항 관통</u>이 <nobr>8%</nobr> 증가한다. 필살기 발동 후 <nobr>세이버</nobr>의 바람 속성 <u>저항 관통</u>이 <nobr>4%</nobr> 증가한다, 해당 효과 최대 중첩수: <nobr>3</nobr>스택"
+      "desc": "<nobr>세이버</nobr>의 바람 속성 <u>저항 관통</u>이 <nobr>8%</nobr> 증가한다. 필살기 발동 후 <nobr>세이버</nobr>의 바람 속성 <u>저항 관통</u>이 <nobr>4%</nobr> 증가한다, 해당 효과 최대 중첩수: <nobr>3</nobr>스택",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101405,
       "id": "the_dreamed_utopian_dawn",
       "name": "이상에 도달한 새벽 아래",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101406,
       "id": "the_long_fated_night",
       "name": "운명의 긴 밤을 수호하며",
-      "desc": "<nobr>세이버</nobr>가 가하는 필살기 피해의 바람 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가하고, 행적 [호수의 축복]으로 누적되는 초과 에너지가 <nobr>200</nobr>pt로 증가한다. 전투 진입 후 처음으로 필살기를 발동하면 <nobr>세이버</nobr>의 에너지가 고정으로 <nobr>300</nobr>pt 회복되며, 해당 효과는 필살기를 <nobr>3</nobr>회 더 발동할 때마다 1회 발동할 수 있다"
+      "desc": "<nobr>세이버</nobr>가 가하는 필살기 피해의 바람 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가하고, 행적 [호수의 축복]으로 누적되는 초과 에너지가 <nobr>200</nobr>pt로 증가한다. 전투 진입 후 처음으로 필살기를 발동하면 <nobr>세이버</nobr>의 에너지가 고정으로 <nobr>300</nobr>pt 회복되며, 해당 효과는 필살기를 <nobr>3</nobr>회 더 발동할 때마다 1회 발동할 수 있다",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

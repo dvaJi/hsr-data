@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "단항•음월",
+  "description": "단항의 비디아다라족으로서의 본모습, 전생의 「음월군」이 남긴 힘.\n이맛전의 각관을 받으면 그 죄인의 모든 공과를 이어받아야 한다",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 허수 속성 피해를 준다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "일반 공격 [연화]를 각각 [순간], [신성의 창] 또는 [빛나는 도약]으로 강화한다",
       "type": "전투 스킬",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "단일 적에게 대량의 허수 속성 피해를 주고, 인접한 목표에게 허수 속성 피해를 준다. [역린] 2개를 획득한다: 단항•음월의 전투 스킬 포인트를 대체하여 소모되며, 전투 스킬 포인트 소모로 간주한다",
       "type": "필살기",
       "tag": "확산",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "공격 단수를 발동할 때마다 자신이 가하는 피해가 증가한다. 해당 효과는 자신의 턴이 종료될 때까지 중첩 및 지속된다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "[용의 도약] 상태 진입 후, 공격을 사용하면 빠른 속도로 전방을 향해 일정 거리 이동하고 접촉한 적을 공격한다. 적을 공격하여 전투에 진입하면 모든 적에게 허수 속성 피해를 주고 [역린]을 1개 획득한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "휘감긴 하늘",
-      "desc": "[긍지]의 중첩 가능 스택 수가 <nobr>4</nobr>스택 증가하며, 공격 단수마다 [긍지]를 1스택 추가로 획득한다"
+      "desc": "[긍지]의 중첩 가능 스택 수가 <nobr>4</nobr>스택 증가하며, 공격 단수마다 [긍지]를 1스택 추가로 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "구유(九斿)",
-      "desc": "필살기 발동 후 단항•음월의 <u>행동 게이지가 <nobr>100%</nobr> 증가</u>하고 추가로 [역린] 1개를 획득한다"
+      "desc": "필살기 발동 후 단항•음월의 <u>행동 게이지가 <nobr>100%</nobr> 증가</u>하고 추가로 [역린] 1개를 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "구름 깃발",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "조풍(嘲風)",
-      "desc": "[노호]의 <u>버프 효과</u>가 자신의 다음 턴이 종료될 때까지 지속된다"
+      "desc": "[노호]의 <u>버프 효과</u>가 자신의 다음 턴이 종료될 때까지 지속된다",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "버프 효과",
+          "desc": "전투에 버프 효과가 있는 모든 지속 상태. 특별 안내가 없다면 해제 가능하다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "오만한 기세",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "용의 강림",
-      "desc": "다른 아군 캐릭터가 필살기를 발동하면 단항•음월이 다음 번에 [빛나는 도약] 발동 시 허수 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 해당 효과 최대 중첩수: <nobr>3</nobr>스택"
+      "desc": "다른 아군 캐릭터가 필살기를 발동하면 단항•음월이 다음 번에 [빛나는 도약] 발동 시 허수 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 해당 효과 최대 중첩수: <nobr>3</nobr>스택",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

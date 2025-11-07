@@ -2,6 +2,7 @@
   "_id": 1225,
   "id": "fugue",
   "name": "Fugue",
+  "description": "A tactful foxian girl, whose appearance, name, and identity have all been stolen.\nThe fates have left her a thread of chance at survival, yet the brand of Destruction still writhes with anticipation.\nThe one in a fugue who has experienced life and death and is given a new life... when would she be able to return home?",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Grants one ally \"Foxian Prayer\", which increases Break Effect, and enables to reduce Toughness when attacking enemies that don't have the corresponding Weakness Type.\nMakes this unit enter the \"Torrid Scorch\" state, enhancing Basic ATK. When ally units with \"Foxian Prayer\" attack, Fugue has a high chance to reduce the enemy target's DEF.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,15 @@
       "simpleDesc": "Deals Fire DMG to all enemies. This attack ignores Weakness Type to reduce all enemies' Toughness.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,32 @@
       "simpleDesc": "While Fugue is on the field, enemy targets will get additionally afflicted with \"Cloudflame Luster.\" When \"Cloudflame Luster\" is reduced to 0, the enemy will take Weakness Break DMG again. After allies attack Weakness Broken enemy targets, additionally deals Super Break DMG.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Weakness Break State",
+          "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Super Break DMG",
+          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\nSuper Break DMG is also considered Break DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,32 @@
       "simpleDesc": "Inflicts Daze on enemies within a certain area. After entering battle via attacking Dazed enemies, Fugue's action advances, with a high chance to inflict each enemy target with the same DEF Reduction state as that applied by Fugue's Skill.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1410,37 +1499,88 @@
       "_id": 122501,
       "id": "earthbound_i_was_cloudward_i_be",
       "name": "Earthbound I Was, Cloudward I Be",
-      "desc": "Ally target with \"Foxian Prayer\" increases their Weakness Break Efficiency by <nobr>50%</nobr>."
+      "desc": "Ally target with \"Foxian Prayer\" increases their Weakness Break Efficiency by <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122502,
       "id": "beatitude_dawns_for_the_worthy",
       "name": "Beatitude Dawns for the Worthy",
-      "desc": "When an enemy target's Weakness gets broken, Fugue regenerates <nobr>3</nobr> Energy. After using Ultimate, <u>advances the action</u> of all allies by <nobr>24%</nobr>."
+      "desc": "When an enemy target's Weakness gets broken, Fugue regenerates <nobr>3</nobr> Energy. After using Ultimate, <u>advances the action</u> of all allies by <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122503,
       "id": "verity_weaves_thoughts_to_blade",
       "name": "Verity Weaves Thoughts to Blade",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122504,
       "id": "bereft_of_form_which_name_to_bear",
       "name": "Bereft of Form, Which Name to Bear",
-      "desc": "Ally target with \"Foxian Prayer\" increases their Break DMG dealt by <nobr>20%</nobr>."
+      "desc": "Ally target with \"Foxian Prayer\" increases their Break DMG dealt by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122505,
       "id": "colored_cloud_rains_fortune",
       "name": "Colored Cloud Rains Fortune",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122506,
       "id": "clairvoyance_of_boom_and_doom",
       "name": "Clairvoyance of Boom and Doom",
-      "desc": "Increases Fugue's Weakness Break Efficiency by <nobr>50%</nobr>. While Fugue is in the \"Torrid Scorch\" state, \"Foxian Prayer\" takes effect on all allies."
+      "desc": "Increases Fugue's Weakness Break Efficiency by <nobr>50%</nobr>. While Fugue is in the \"Torrid Scorch\" state, \"Foxian Prayer\" takes effect on all allies.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

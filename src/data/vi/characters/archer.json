@@ -2,6 +2,7 @@
   "_id": 1015,
   "id": "archer",
   "name": "Archer",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lượng Tử cho 1 kẻ địch chỉ định.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -413,6 +423,15 @@
       "simpleDesc": "Vào trạng thái Kết Nối Mạch. Gây lượng lớn Sát Thương Lượng Tử cho 1 kẻ địch chỉ định. Ở trạng thái Kết Nối Mạch, sau khi thi triển Chiến Kỹ sẽ không kết thúc hiệp, và tăng Sát Thương Chiến Kỹ Archer gây ra. Khi Điểm Chiến Kỹ không đủ để thi triển Chiến Kỹ lần nữa thì sẽ thoát khỏi trạng thái Kết Nối Mạch.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 2,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,15 @@
       "simpleDesc": "Gây lượng lớn Sát Thương Lượng Tử cho 1 kẻ địch chỉ định, đồng thời nhận Nạp Năng Lượng.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1091,6 +1119,24 @@
       "simpleDesc": "Sau khi đồng đội thi triển tấn công, Archer sẽ tiêu hao 1 điểm Nạp Năng Lượng, phát động Đòn Đánh Theo Sau lên mục tiêu chính, gây Sát Thương Lượng Tử và hồi 1 điểm Chiến Kỹ.",
       "type": "Thiên Phú",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1384,6 +1430,15 @@
       "desc": "Lập tức tấn công kẻ địch, sau khi vào chiến đấu sẽ gây cho toàn phe địch Sát Thương Lượng Tử bằng #1[i]% Tấn Công của Archer, đồng thời nhận #2[i] điểm Nạp Năng Lượng.",
       "simpleDesc": "Lập tức tấn công kẻ địch, sau khi vào chiến đấu sẽ gây Sát Thương Lượng Tử cho toàn bộ kẻ địch, đồng thời nhận Nạp Năng Lượng.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1401,37 +1456,79 @@
       "_id": 101501,
       "id": "the_unreached_dream",
       "name": "Lý Tưởng Chưa Từng Chạm Đến",
-      "desc": "Sau khi thi triển <nobr>3</nobr> lần Chiến Kỹ trong một hiệp, sẽ hồi <nobr>2</nobr> Điểm Chiến Kỹ cho phe ta."
+      "desc": "Sau khi thi triển <nobr>3</nobr> lần Chiến Kỹ trong một hiệp, sẽ hồi <nobr>2</nobr> Điểm Chiến Kỹ cho phe ta.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101502,
       "id": "the_unfulfilled_happiness",
       "name": "Hạnh Phúc Chưa Thành Hiện Thực",
-      "desc": "Khi thi triển Tuyệt Kỹ, khiến Kháng Lượng Tử của mục tiêu phe địch giảm <nobr>20%</nobr>, đồng thời thêm Điểm Yếu Lượng Tử cho kẻ đó, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi thi triển Tuyệt Kỹ, khiến Kháng Lượng Tử của mục tiêu phe địch giảm <nobr>20%</nobr>, đồng thời thêm Điểm Yếu Lượng Tử cho kẻ đó, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101503,
       "id": "the_untamed_will",
       "name": "Đồng Minh Của Chính Nghĩa",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101504,
       "id": "the_unsung_life",
       "name": "Một Đời Chưa Trọn Chữ Anh Hùng",
-      "desc": "Sát Thương Tuyệt Kỹ gây ra tăng <nobr>150%</nobr>."
+      "desc": "Sát Thương Tuyệt Kỹ gây ra tăng <nobr>150%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101505,
       "id": "the_nameless_watch",
       "name": "Người Bảo Vệ Vô Danh Lẻ Bóng",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101506,
       "id": "the_endless_pilgrimage",
       "name": "Cuộc Hành Hương Vô Tận",
-      "desc": "Khi bắt đầu hiệp, sẽ hồi cho phe ta 1 điểm Chiến Kỹ. Số tầng giới hạn của hiệu ứng Tăng Sát Thương có thể cộng dồn mà Chiến Kỹ của bản thân cung cấp sẽ tăng <nobr>1</nobr> tầng. Sát thương Chiến Kỹ gây ra sẽ bỏ qua <nobr>20%</nobr> Phòng Thủ."
+      "desc": "Khi bắt đầu hiệp, sẽ hồi cho phe ta 1 điểm Chiến Kỹ. Số tầng giới hạn của hiệu ứng Tăng Sát Thương có thể cộng dồn mà Chiến Kỹ của bản thân cung cấp sẽ tăng <nobr>1</nobr> tầng. Sát thương Chiến Kỹ gây ra sẽ bỏ qua <nobr>20%</nobr> Phòng Thủ.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

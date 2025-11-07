@@ -2,6 +2,7 @@
   "_id": 1104,
   "id": "gepard",
   "name": "杰帕德",
+  "description": "银鬃铁卫的戍卫官，贝洛伯格数一数二的战士。\n表里如一，一丝不苟，从不懈怠。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量冰属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "对敌方单体造成冰属性伤害，有概率对目标施加冻结状态。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +800,18 @@
       "simpleDesc": "为我方全体提供护盾。",
       "type": "终结技",
       "tag": "防御",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1136,24 @@
       "simpleDesc": "受到致命攻击时不会陷入无法战斗状态，立即回复生命值。单场战斗中仅触发1次。",
       "type": "天赋",
       "tag": "回复",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "无法战斗状态",
+          "desc": "当我方目标的当前生命值被削减至0时进入的特殊状态，处于该状态的目标无法继续战斗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1448,15 @@
       "simpleDesc": "使用秘技，下一次战斗开始时我方全体获得护盾。",
       "type": "秘技",
       "tag": "防御",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1475,88 @@
       "_id": 110401,
       "id": "due_diligence",
       "name": "恪尽职守",
-      "desc": "施放战技时，使受到攻击的敌方目标陷入冻结状态的<u>基础概率</u>提高<nobr>35%</nobr>。"
+      "desc": "施放战技时，使受到攻击的敌方目标陷入冻结状态的<u>基础概率</u>提高<nobr>35%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110402,
       "id": "lingering_cold",
       "name": "余寒",
-      "desc": "战技使敌方目标陷入的冻结状态解除后，目标的速度降低<nobr>20%</nobr>，持续<nobr>1</nobr>回合。"
+      "desc": "战技使敌方目标陷入的冻结状态解除后，目标的速度降低<nobr>20%</nobr>，持续<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110403,
       "id": "never_surrender",
       "name": "永不陷落",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110404,
       "id": "faith_moves_mountains",
       "name": "精诚所至",
-      "desc": "杰帕德在场时，我方全体的效果抵抗提高<nobr>20%</nobr>。"
+      "desc": "杰帕德在场时，我方全体的效果抵抗提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110405,
       "id": "cold_iron_fist",
       "name": "拳似寒铁",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110406,
       "id": "unyielding_resolve",
       "name": "不屈的决意",
-      "desc": "触发天赋时杰帕德立即行动，且当前生命值的回复量额外增加自身生命上限的<nobr>50%</nobr>。"
+      "desc": "触发天赋时杰帕德立即行动，且当前生命值的回复量额外增加自身生命上限的<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

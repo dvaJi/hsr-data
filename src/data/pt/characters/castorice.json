@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "Castorice",
+  "description": "Aquele reino que venera a morte, Aidonia, a terra de neve perpétua, já caiu em um doce sono profundo.\nÓ Castorice, filha do Rio das Almas, Herdeira de Chrysos em busca da Chama Primordial da \"Morte\", siga em frente! Proteja o lamento das almas e abrace a solidão do destino.\nA vida e a morte são uma única jornada. O galho seco renasce no tocar delicado do pouso de uma borboleta.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Quântico leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Consome PV de todos os aliados. Causa Dano Quântico a um inimigo e Dano Quântico leve aos alvos adjacentes.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Invoca o Memoespírito \"Dragão Abissal\" e Avança Adiante sua ação em 100%. Ao mesmo tempo, cria um \"Território\" que reduz a RES a Todos os Tipos de todos os inimigos.",
       "type": "Perícia Suprema",
       "tag": "Invocar",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Território",
+          "desc": "Os efeitos de \"Território\" são únicos na batalha. Enquanto ele existir, outras habilidades com efeitos de \"Território\" não poderão ser usadas.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1094,9 +1147,18 @@
       "id": "desolation_across_palms",
       "name": "Palmas da Desolação",
       "desc": "O limite máximo de \"Brotar\" está relacionado aos níveis de todos os personagens no campo de batalha. Para cada ponto de PV perdido por todos os aliados, Castorice ganha 1 ponto de \"Brotar\". Quando \"Brotar\" atinge seu limite máximo, a Perícia Suprema pode ser ativada. Quando aliados perdem PV, o Dano causado por Castorice e pelo \"Dragão Abissal\" aumenta em #2[i]%. Este efeito pode se acumular até #3[i] vez(es), durando por #4[i] rodada(s).\nQuando o \"Dragão Abissal\" estiver em Campo, \"Brotar\" não poderá ser adquirido através do Talento, e os PV perdidos por todos os aliados (exceto o \"Dragão Abissal\") serão convertidos na mesma quantidade de PV para o \"Dragão Abissal\".",
-      "simpleDesc": "Quando qualquer aliado perde PV, Castorice ganha \"Brotar\". Aumenta o Dano causado de Castorice e \"Dragão Abissal\". Quando \"Brotar\" alcança o máximo, a Perícia Suprema de Castorice pode ser usada. Enquanto \"Dragão Abissal\" estiver no campo de batalha, os PV perdidos por qualquer unidade aliada (exceto \"Dragão Abissal\") serão convertidos em um valor igual de PV para \"Dragão Abissal\".",
+      "simpleDesc": "Quando aliados perdem PV, Castorice ganha \"Brotar\". Aumenta o Dano causado de Castorice e do \"Dragão Abissal\". Quando \"Brotar\" atinge seu limite máximo, a Perícia Suprema pode ser ativada. Enquanto o \"Dragão Abissal\" estiver em campo, os PV perdidos por aliados (exceto o \"Dragão Abissal\") serão convertidos na mesma quantidade de PV para o \"Dragão Abissal\".",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "Após usar a Técnica, entra no estado \"Confusão Mortal\", que dura por #3[i] segundos. Enquanto \"Confusão Mortal\" estiver ativa, inimigos não podem se aproximar ativamente da Castorice.\nDurante a \"Confusão Mortal\", ataques ativos farão com que todos os inimigos dentro do alcance entrem em combate. Ao mesmo tempo, invoca o Memoespírito \"Dragão Abissal\", Avança Adiante sua ação em 100% e ativa o Território \"Reino Perdido\". O \"Dragão Abissal\" começa com PV atuais em um valor igual a #2[i]% do máximo de \"Brotar\". Após entrar em combate, consome #1[i]% dos PV atuais de todos os aliados (exceto o \"Dragão Abissal\").\nSe o \"Dragão Abissal\" não for invocado após entrar em combate, Castorice ganha \"Brotar\" em uma quantidade igual a #4[i]% do máximo de \"Brotar\".",
       "simpleDesc": "Entra no estado de \"Confusão Mortal\". Inimigos não podem se aproximar ativamente de Castorice.\nDurante a \"Confusão Mortal\", ataques farão com que todos os inimigos dentro do alcance entrem em combate. Ao mesmo tempo, invoca o Memoespírito \"Dragão Abissal\" e Avança Adiante sua ação em 100%. Ao entrar em combate, consome os PV de todos os aliados (exceto o \"Dragão Abissal\").\nSe o \"Dragão Abissal\" não for invocado após entrar em combate, Castorice ganha \"Brotar\" em uma quantidade igual a #4[i]% do máximo de \"Brotar\".",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocar Memoespírito",
+          "desc": "Invoca o Memoespírito para o campo. Se o Memoespírito já estiver no campo, dissipa todas as penalidades de Controle Negativo que o Memoespírito está sofrendo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Território",
+          "desc": "Os efeitos de \"Território\" são únicos na batalha. Enquanto ele existir, outras habilidades com efeitos de \"Território\" não poderão ser usadas.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Dragão Abissal: Pollux",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "Garras Rompem o Véu",
+        "desc": "Causa Dano Quântico igual a <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> dos PV máximos de Castorice a todos os inimigos.",
+        "simpleDesc": "Causa Dano Quântico leve a todos os inimigos.",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Área"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "Sopro de Chama Negra",
+        "desc": "Ativar \"Sopro de Chama Negra\" consumirá <nobr>#1[i]%</nobr> dos PV máximos do \"Dragão Abissal\" para causar Dano Quântico igual a <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> dos PV máximos de Castorice a todos os inimigos.\nEm um único ataque, \"Sopro de Chama Negra\" pode ser ativado repetidamente, com o multiplicador de Dano aumentando progressivamente para <span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span> / <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>. Após atingir <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>, não aumentará mais. O efeito de Bônus de multiplicador de Dano não será reduzido antes do desaparecimento do \"Dragão Abissal\".\nQuando os PV atuais do \"Dragão Abissal\" forem iguais ou inferiores a <nobr>#5[i]%</nobr> de seus PV máximos, ativar a habilidade reduzirá os PV para 1 e ativará um efeito equivalente ao do Talento \"Asas Sobre as Ruínas\".",
+        "simpleDesc": "Consome PV desta unidade para causar Dano Quântico a todos os inimigos. Esta rodada não será concluída. Ao usar esta habilidade repetidamente, ela pode ser aprimorada até 3 vezes. Quando os PV forem menores ou iguais a <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, usar esta habilidade ativará o efeito da habilidade do Talento do Memoespírito \"Asas Sobre as Ruínas\".",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Área"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "O Casulo Lunar Envolve a Forma",
+        "desc": "Quando o \"Dragão Abissal\" está no campo, ele fornece apoio aos aliados. Quando os aliados recebem Dano ou consomem PV, seus PV atuais podem ser reduzidos até um mínimo de 1, após o qual o \"Dragão Abissal\" assumirá a perda de PV. Porém, o \"Dragão Abissal\" consome PV equivalente a <nobr>#1[i]%</nobr> do valor original. Isso persiste até que o \"Dragão Abissal\" desapareça.",
+        "simpleDesc": "Quando o \"Dragão Abissal\" está no campo, ele fornece apoio aos aliados. Os PV atuais dos aliados podem ser reduzidos até o mínimo de 1, após o qual o \"Dragão Abissal\" suportará o Dano recebido ou o consumo de PV.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Suporte"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "Apoio",
+            "desc": "Os inimigos não podem atingir ativamente as unidades de apoio. As habilidades do tipo Explosão dos aliados não podem atingir unidades de apoio com Explosão.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "O Rugido Ecoa pelo Reino",
+        "desc": "Quando o \"Dragão Abissal\" é invocado, aumenta o Dano causado por todos os aliados em <nobr>#1[i]%</nobr> por <nobr>#2[i]</nobr> rodada(s).",
+        "simpleDesc": "Quando invocado, aumenta o Dano causado por todos os aliados.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Suporte"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "Asas Sobre as Ruínas",
+        "desc": "Quando o \"Dragão Abissal\" desaparece, causa <nobr>#2[i]</nobr> instância(s) de Dano, com cada uma causando Dano Quântico igual a <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> dos PV máximos de Castorice a uma unidade inimiga aleatória. Ao mesmo tempo, restaura PV em um valor igual a <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> dos PV máximos de Castorice + <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span> a todos os aliados.",
+        "simpleDesc": "Ao desaparecer, causa Dano Quântico leve a um inimigo, com <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> Ricochete(s) no total. Ao mesmo tempo, restaura os PV de todos os aliados.",
+        "type": {
+          "name": "Talento do Memoespírito"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Rebote"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "Sopro de Chama Negra",
+        "desc": "",
+        "simpleDesc": "Consome PV desta unidade para causar Dano Quântico a todos os inimigos. Esta rodada não será concluída. Ao usar esta habilidade repetidamente, ela pode ser aprimorada até 3 vezes. Quando os PV forem menores ou iguais a <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, usar esta habilidade ativará o efeito da habilidade do Talento do Memoespírito \"Asas Sobre as Ruínas\".",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Área"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "Sopro de Chama Negra",
+        "desc": "",
+        "simpleDesc": "Consome PV desta unidade para causar Dano Quântico a todos os inimigos. Esta rodada não será concluída. Ao usar esta habilidade repetidamente, ela pode ser aprimorada até 3 vezes. Quando os PV forem menores ou iguais a <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, usar esta habilidade ativará o efeito da habilidade do Talento do Memoespírito \"Asas Sobre as Ruínas\".",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Área"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "Asas Sobre as Ruínas",
+        "desc": "Consome todos os PV e causa <nobr>#2[i]</nobr> instância(s) de Dano, com cada uma causando Dano Quântico igual a <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> dos PV máximos de Castorice a uma unidade inimiga aleatória. Ao mesmo tempo, restaura PV em um valor igual a <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> dos PV máximos de Castorice + <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span> a todos os aliados.",
+        "simpleDesc": "Consome todos os PV e causa Dano Quântico leve a um inimigo, com <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> Ricochete(s) no total. Ao mesmo tempo, restaura os PV de todos os aliados.",
+        "type": {
+          "id": "Servant",
+          "name": "Perícia do Memoespírito"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Rebote"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "Memórias Sepultadas da Donzela da Terra da Neve",
-      "desc": "Quando os PV atuais do inimigo-alvo forem iguais ou inferiores a <nobr>80%</nobr>/<nobr>50%</nobr> dos PV máximos, o Dano causado por \"Garraespectral do Dragão da Perdição\", \"Garras Rompem o Véu\", \"Sopro de Chama Negra\" e \"Asas Sobre as Ruínas\" será igual a <nobr>120%</nobr>/<nobr>140%</nobr> do Dano original, respectivamente."
+      "desc": "Quando os PV atuais do inimigo-alvo forem iguais ou inferiores a <nobr>80%</nobr>/<nobr>50%</nobr> dos PV máximos, o Dano causado por \"Garraespectral do Dragão da Perdição\", \"Garras Rompem o Véu\", \"Sopro de Chama Negra\" e \"Asas Sobre as Ruínas\" será igual a <nobr>120%</nobr>/<nobr>140%</nobr> do Dano original, respectivamente.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "Coroa nas Asas do Desabrochar",
-      "desc": "Após conjurar o Memoespírito \"Dragão Abissal\", Castorice recebe <nobr>2</nobr> acúmulo(s) de \"Determinação Ardente\". \"Determinação Ardente\" pode acumular até <nobr>2</nobr> vez(es) e pode ser usada para compensar o custo de PV da Perícia do Memoespírito do \"Dragão Abissal\", \"Sopro de Chama Negra\", além de Avançar Adiante a ação de Castorice em <nobr>100%</nobr>. Ao usar a próxima Perícia Aprimorada, Castorice ganha \"Brotar\" em uma quantidade equivalente a <nobr>30%</nobr> do \"Brotar\" máximo."
+      "desc": "Após conjurar o Memoespírito \"Dragão Abissal\", Castorice recebe <nobr>2</nobr> acúmulo(s) de \"Determinação Ardente\". \"Determinação Ardente\" pode acumular até <nobr>2</nobr> vez(es) e pode ser usada para compensar o custo de PV da Perícia do Memoespírito do \"Dragão Abissal\", \"Sopro de Chama Negra\", além de Avançar Adiante a ação de Castorice em <nobr>100%</nobr>. Ao usar a próxima Perícia Aprimorada, Castorice ganha \"Brotar\" em uma quantidade equivalente a <nobr>30%</nobr> do \"Brotar\" máximo.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "Dança da Peregrina no Reino da Morte",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.\nNv. do Talento do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.\nNv. do Talento do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "Descanso nas Melodias da Melancolia",
-      "desc": "Enquanto Castorice estiver em campo, a Cura Recebida de todos os aliados durante a restauração de PV aumenta em <nobr>20%</nobr>."
+      "desc": "Enquanto Castorice estiver em campo, a Cura Recebida de todos os aliados durante a restauração de PV aumenta em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "Páginas Imaculadas, a Profecia como uma Pluma",
-      "desc": "Nv. de Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento +2, até no máximo Nv. <nobr>15</nobr>.\nNv. da Perícia do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. de Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Talento +2, até no máximo Nv. <nobr>15</nobr>.\nNv. da Perícia do Memoespírito +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "O Desabrochar para Além do Casulo",
-      "desc": "Quando Castorice ou \"Dragão Abissal\" causa Dano, aumenta a PEN de RES a Quântico em <nobr>20%</nobr>. Durante os ataques do \"Dragão Abissal\", pode reduzir a Tenacidade do inimigo independentemente dos Tipos de Fraqueza. Ao realizar uma Quebra de Fraqueza, ativa o efeito de Fraqueza contra Quântico. Além disso, o número de Rebotes do Talento do \"Dragão Abissal\", \"Asas Sobre as Ruínas\", aumenta em <nobr>3</nobr>."
+      "desc": "Quando Castorice ou \"Dragão Abissal\" causa Dano, aumenta a PEN de RES a Quântico em <nobr>20%</nobr>. Durante os ataques do \"Dragão Abissal\", pode reduzir a Tenacidade do inimigo independentemente dos Tipos de Fraqueza. Ao realizar uma Quebra de Fraqueza, ativa o efeito de Fraqueza contra Quântico. Além disso, o número de Rebotes do Talento do \"Dragão Abissal\", \"Asas Sobre as Ruínas\", aumenta em <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

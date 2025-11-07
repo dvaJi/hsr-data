@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "丹恒•饮月",
+  "description": "丹恒身为持明族的本相，其上一世「饮月君」所遗存的力量。\n接受了额顶的峥嵘角冠，就要接受那罪人所立的一切功过。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量虚数属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "使普攻【泽芝】分别强化为【瞬华】、【天矢阴】或【盘拏耀跃】。",
       "type": "战技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "对敌方单体造成大量虚数属性伤害，对相邻目标造成虚数属性伤害。获得2个【逆鳞】：可抵扣丹恒•饮月的战技点消耗且视为消耗战技点。",
       "type": "终结技",
       "tag": "扩散",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "施放每段攻击后，使自身造成的伤害提高，该效果可以叠加并持续至自身回合结束。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "进入【蟠跃】状态，使用攻击会快速向前移动一段距离并攻击接触到的敌人。攻击敌人进战后，对敌方全体造成虚数属性伤害，并获得1个【逆鳞】。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "萦天",
-      "desc": "使【亢心】的可叠加层数增加<nobr>4</nobr>层。且每段攻击额外获得1层【亢心】。"
+      "desc": "使【亢心】的可叠加层数增加<nobr>4</nobr>层。且每段攻击额外获得1层【亢心】。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "九斿",
-      "desc": "施放终结技后丹恒•饮月<u>行动提前</u><nobr>100%</nobr>，并且会额外获得1个【逆鳞】。"
+      "desc": "施放终结技后丹恒•饮月<u>行动提前</u><nobr>100%</nobr>，并且会额外获得1个【逆鳞】。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行动提前",
+          "desc": "使目标在下次行动前的等待间隔缩短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "云旂",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "嘲风",
-      "desc": "【叱咤】的<u>增益效果</u>会持续到下一个自身回合结束。"
+      "desc": "【叱咤】的<u>增益效果</u>会持续到下一个自身回合结束。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "增益效果",
+          "desc": "对战斗有增益效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "偃蹇",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "见谯",
-      "desc": "我方其他角色施放终结技后，丹恒•饮月下一次施放【盘拏耀跃】时虚数属性<u>抗性穿透</u>提高<nobr>20%</nobr>，该效果最多叠加<nobr>3</nobr>层。"
+      "desc": "我方其他角色施放终结技后，丹恒•饮月下一次施放【盘拏耀跃】时虚数属性<u>抗性穿透</u>提高<nobr>20%</nobr>，该效果最多叠加<nobr>3</nobr>层。",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

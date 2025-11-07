@@ -2,6 +2,7 @@
   "_id": 1204,
   "id": "jing_yuan",
   "name": "Jing Yuan",
+  "description": "The Divine Foresight, one of the Seven Arbiter-Generals of the Xianzhou Alliance, leads the Cloud Knights of the Xianzhou Luofu.\nA student of the Luofu's previous Sword Champion, though not known for his martial prowess.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -243,10 +244,22 @@
       "_id": 120401,
       "id": "glistening_light",
       "name": "Glistening Light",
-      "desc": "Jing Yuan deals Lightning DMG equal to #1[i]% of his ATK to a single enemy.",
-      "simpleDesc": "Deals minor Lightning DMG to a single enemy.",
+      "desc": "Jing Yuan deals Lightning DMG equal to #1[i]% of his ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Lightning DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Deals minor Lightning DMG to all enemies and increases Lightning-Lord's Hits Per Action.",
       "type": "Skill",
       "tag": "AoE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +750,15 @@
       "simpleDesc": "Deals Lightning DMG to all enemies and increases Lightning-Lord's Hits Per Action.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1068,40 @@
       "simpleDesc": "At the start of the battle, summons \"Lightning-Lord.\" When \"Lightning-Lord\" takes action, launches Follow-up ATK to automatically deal minor Lightning DMG to one random enemy and adjacent targets.",
       "type": "Talent",
       "tag": "Bounce",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Crowd Control debuff",
+          "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1471,15 @@
       "simpleDesc": "After using Technique, for the next battle, increases Lightning-Lord's Hits Per Action.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1496,79 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "Slash, Seas Split",
-      "desc": "When Lightning-Lord attacks, the DMG multiplier on enemies adjacent to the target enemy increases by an extra amount equal to <nobr>25%</nobr> of the DMG multiplier against the primary target enemy."
+      "desc": "When Lightning-Lord attacks, the DMG multiplier on enemies adjacent to the target enemy increases by an extra amount equal to <nobr>25%</nobr> of the DMG multiplier against the primary target enemy.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "Swing, Skies Squashed",
-      "desc": "After Lightning-Lord takes action, DMG dealt by Jing Yuan's Basic ATK, Skill, and Ultimate increases by <nobr>20%</nobr>, lasting for <nobr>2</nobr> turn(s)."
+      "desc": "After Lightning-Lord takes action, DMG dealt by Jing Yuan's Basic ATK, Skill, and Ultimate increases by <nobr>20%</nobr>, lasting for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120403,
       "id": "strike_suns_subdued",
       "name": "Strike, Suns Subdued",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120404,
       "id": "spin_stars_sieged",
       "name": "Spin, Stars Sieged",
-      "desc": "For each hit performed by the Lightning-Lord when it takes action, Jing Yuan regenerates <nobr>2</nobr> Energy."
+      "desc": "For each hit performed by the Lightning-Lord when it takes action, Jing Yuan regenerates <nobr>2</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120405,
       "id": "stride_spoils_seized",
       "name": "Stride, Spoils Seized",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120406,
       "id": "sweep_souls_slain",
       "name": "Sweep, Souls Slain",
-      "desc": "Each hit performed by the Lightning-Lord when it takes action will make the target enemy Vulnerable.\nWhile Vulnerable, enemies receive <nobr>12%</nobr> more DMG until the end of the Lightning-Lord's current turn, stacking up to <nobr>3</nobr> time(s)."
+      "desc": "Each hit performed by the Lightning-Lord when it takes action will make the target enemy Vulnerable.\nWhile Vulnerable, enemies receive <nobr>12%</nobr> more DMG until the end of the Lightning-Lord's current turn, stacking up to <nobr>3</nobr> time(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

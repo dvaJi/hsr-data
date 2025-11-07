@@ -2,6 +2,7 @@
   "_id": 1301,
   "id": "gallagher",
   "name": "Gallagher",
+  "description": "A security officer of the Bloodhound Family at Penacony. He is always courteous toward visiting guests but keeps his vigilance about him. He seems to carry a weight of a complicated past, yet he never voluntarily divulges any details.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -244,9 +245,18 @@
       "id": "corkage_fee",
       "name": "Corkage Fee",
       "desc": "Deals Fire DMG equal to #1[i]% of Gallagher's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Fire DMG to a single enemy.",
+      "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Immediately restores an ally's HP.",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "Inflicts Besotted on all enemies and deals Fire DMG to them at the same time. Enhances the next Basic ATK to Nectar Blitz.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1038,24 @@
       "simpleDesc": "The Besotted state makes targets receive more Break DMG. Every time the target gets attacked by an ally character, the attacker's HP is restored.",
       "type": "Talent",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Immediately attacks the enemy. Upon entering battle, inflicts Besotted on all enemies, lasting for #1[i] turn(s). And deals Fire DMG equal to #2[i]% of Gallagher's ATK to all enemies.",
       "simpleDesc": "Attacks the enemy. After entering battle, inflicts Besotted to all enemies and deals minor Fire DMG to all enemies.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,88 @@
       "_id": 130101,
       "id": "salty_dog",
       "name": "Salty Dog",
-      "desc": "When entering the battle, Gallagher regenerates <nobr>20</nobr> Energy and increases Effect RES by <nobr>50%</nobr>."
+      "desc": "When entering the battle, Gallagher regenerates <nobr>20</nobr> Energy and increases Effect RES by <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130102,
       "id": "lions_tail",
       "name": "Lion's Tail",
-      "desc": "When using the Skill, dispels <nobr>1</nobr> <u>debuff(s)</u> from the designated ally. At the same time, increases their Effect RES by <nobr>30%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "When using the Skill, dispels <nobr>1</nobr> <u>debuff(s)</u> from the designated ally. At the same time, increases their Effect RES by <nobr>30%</nobr> for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130103,
       "id": "corpse_reviver",
       "name": "Corpse Reviver",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130104,
       "id": "last_word",
       "name": "Last Word",
-      "desc": "Extends the duration of the Besotted state inflicted by Gallagher's Ultimate by <nobr>1</nobr> turn(s)."
+      "desc": "Extends the duration of the Besotted state inflicted by Gallagher's Ultimate by <nobr>1</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130105,
       "id": "death_in_the_afternoon",
       "name": "Death in the Afternoon",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130106,
       "id": "blood_and_sand",
       "name": "Blood and Sand",
-      "desc": "Increases Gallagher's Break Effect by <nobr>20%</nobr> and Weakness Break Efficiency by <nobr>20%</nobr>."
+      "desc": "Increases Gallagher's Break Effect by <nobr>20%</nobr> and Weakness Break Efficiency by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

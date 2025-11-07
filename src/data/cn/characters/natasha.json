@@ -2,6 +2,7 @@
   "_id": 1105,
   "id": "natasha",
   "name": "娜塔莎",
+  "description": "贝洛伯格下层区的医生，也是孩子们的照料者。\n性格温柔可亲、又藏着危险的一面。",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量物理属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "为我方单体回复生命值，并使目标持续回复生命值。",
       "type": "战技",
       "tag": "回复",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +789,15 @@
       "simpleDesc": "为我方全体回复生命值。",
       "type": "终结技",
       "tag": "回复",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1101,15 @@
       "simpleDesc": "为当前生命值百分比较低的我方目标提供治疗时，治疗量提高。该效果对持续治疗效果也会生效。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1412,24 @@
       "desc": "立即攻击敌人，进入战斗后对敌方随机单体造成等同于娜塔莎#4[i]%攻击力的物理属性伤害，并有#1[i]%的基础概率使敌方每个单体目标陷入虚弱状态。\n虚弱状态下的敌方目标对我方造成的伤害降低#2[i]%，持续#3[i]回合。",
       "simpleDesc": "攻击敌人，进战后对敌方随机单体造成少量物理属性伤害，大概率使敌方每个单体目标陷入虚弱状态。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1449,79 @@
       "_id": 110501,
       "id": "pharmacology_expertise",
       "name": "遍识药理",
-      "desc": "受到攻击后，若当前生命值百分比小于等于<nobr>30%</nobr>，对自身施放1次治疗，回复等同于自身<nobr>15%</nobr>生命上限+<nobr>400</nobr>的生命值。该效果单场战斗中只能触发1次。"
+      "desc": "受到攻击后，若当前生命值百分比小于等于<nobr>30%</nobr>，对自身施放1次治疗，回复等同于自身<nobr>15%</nobr>生命上限+<nobr>400</nobr>的生命值。该效果单场战斗中只能触发1次。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110502,
       "id": "clinical_research",
       "name": "临床研学",
-      "desc": "施放终结技时，对当前生命值百分比小于等于<nobr>30%</nobr>的我方目标附加<nobr>1</nobr>回合的持续治疗效果，目标回合开始时为其回复等同于娜塔莎<nobr>6%</nobr>生命上限+<nobr>160</nobr>的生命值。"
+      "desc": "施放终结技时，对当前生命值百分比小于等于<nobr>30%</nobr>的我方目标附加<nobr>1</nobr>回合的持续治疗效果，目标回合开始时为其回复等同于娜塔莎<nobr>6%</nobr>生命上限+<nobr>160</nobr>的生命值。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110503,
       "id": "the_right_cure",
       "name": "对症下药",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110504,
       "id": "miracle_cure",
       "name": "妙手回春",
-      "desc": "受到攻击后，额外恢复<nobr>5</nobr>点能量。"
+      "desc": "受到攻击后，额外恢复<nobr>5</nobr>点能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110505,
       "id": "preventive_treatment",
       "name": "医治未病",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110506,
       "id": "doctors_grace",
       "name": "医者仁心",
-      "desc": "施放普攻时，额外造成等同于娜塔莎生命上限<nobr>40%</nobr>的物理属性伤害。"
+      "desc": "施放普攻时，额外造成等同于娜塔莎生命上限<nobr>40%</nobr>的物理属性伤害。",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

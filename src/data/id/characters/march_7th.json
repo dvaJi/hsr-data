@@ -2,6 +2,7 @@
   "_id": 1001,
   "id": "march_7th",
   "name": "March 7th",
+  "description": "Gadis yang sempat tertidur dalam es abadi dan tidak mengetahui masa lalunya.\nDia memilih untuk bertualang dengan Astral Express demi mencari kebenaran asal-usulnya.\nSampai saat ini dia sudah menyiapkan hampir 67 versi \"kisah hidupnya\".",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Memberikan Shield pada 1 rekan tim.",
       "type": "Skill",
       "tag": "Defense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,32 @@
       "simpleDesc": "Mengakibatkan Ice DMG pada seluruh musuh, dan berpeluang untuk mengakibatkan status Frozen.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1145,24 @@
       "simpleDesc": "Saat rekan tim yang dilindungi Shield terkena serangan musuh, March 7th akan segera melancarkan Serangan Balasan pada penyerang, yang akan mengakibatkan Ice DMG dalam jumlah kecil.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Serangan Balasan",
+          "desc": "Efek yang otomatis terpicu setelah target terkena serangan, yang akan melancarkan 1 kali serangan tambahan pada penyerang.\nSerangan Balasan juga termasuk Serangan Lanjutan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1402,6 +1465,32 @@
       "desc": "Segera menyerang musuh dan setelah memasuki pertempuran, memiliki #1[i]% peluang dasar untuk mengakibatkan 1 musuh memasuki status Frozen secara acak selama #2[i] giliran.\nSaat dalam status Frozen, target musuh tidak dapat beraksi dan di saat bersamaan akan menerima Ice DMG tambahan sebesar #3[i]% ATK March 7th setiap kali gilirannya dimulai.",
       "simpleDesc": "Menyerang musuh dan berpeluang besar untuk membuat 1 musuh secara acak memasuki status Frozen setelah memasuki pertempuran.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1509,88 @@
       "_id": 100101,
       "id": "memory_of_you",
       "name": "Memory of You",
-      "desc": "Memulihkan <nobr>6</nobr> Energy March 7th setiap kali Ultimate membekukan 1 target."
+      "desc": "Memulihkan <nobr>6</nobr> Energy March 7th setiap kali Ultimate membekukan 1 target.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100102,
       "id": "memory_of_it",
       "name": "Memory of It",
-      "desc": "Saat memasuki pertempuran, memberikan Shield sebesar <nobr>24%</nobr> DEF March 7th +<nobr>320</nobr> pada rekan tim dengan persentase HP terendah selama <nobr>3</nobr> giliran."
+      "desc": "Saat memasuki pertempuran, memberikan Shield sebesar <nobr>24%</nobr> DEF March 7th +<nobr>320</nobr> pada rekan tim dengan persentase HP terendah selama <nobr>3</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100103,
       "id": "memory_of_everything",
       "name": "Memory of Everything",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100104,
       "id": "never_forfeit_again",
       "name": "Never Forfeit Again",
-      "desc": "Jumlah efek <u>Serangan Balasan</u> dari Talent yang dapat dipicu setiap giliran bertambah 1 kali. Meningkatkan DMG dari <u>Serangan Balasan</u> sebesar <nobr>30%</nobr> DEF March 7th."
+      "desc": "Jumlah efek <u>Serangan Balasan</u> dari Talent yang dapat dipicu setiap giliran bertambah 1 kali. Meningkatkan DMG dari <u>Serangan Balasan</u> sebesar <nobr>30%</nobr> DEF March 7th.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Serangan Balasan",
+          "desc": "Efek yang otomatis terpicu setelah target terkena serangan, yang akan melancarkan 1 kali serangan tambahan pada penyerang.\nSerangan Balasan juga termasuk Serangan Lanjutan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100105,
       "id": "never_forget_again",
       "name": "Never Forget Again",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100106,
       "id": "just_like_this_always",
       "name": "Just Like This, Always ...",
-      "desc": "Rekan tim yang dilindungi Shield dari Skill ini akan memulihkan HP sebesar <nobr>4%</nobr> Max HP masing-masing +<nobr>106</nobr> setiap saat gilirannya dimulai."
+      "desc": "Rekan tim yang dilindungi Shield dari Skill ini akan memulihkan HP sebesar <nobr>4%</nobr> Max HP masing-masing +<nobr>106</nobr> setiap saat gilirannya dimulai.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

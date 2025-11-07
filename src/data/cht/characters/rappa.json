@@ -2,6 +2,7 @@
   "_id": 1317,
   "id": "rappa",
   "name": "亂破",
+  "description": "如丑時三刻的閃光彈一般現身在匹諾康尼，以忍者自居，將世間一切歸因於「忍法」的奇妙少女。\n貫徹吟誦忍•真言、繪製繚亂•忍符、修習忍•法帖的「忍•道」——即饒舌、塗鴉、漫畫——苦煉自身意志，馳騁星間行俠仗義。\n身為「巡海遊俠」的一員，始終追獵著名為「御猿•邪忍」的惡黨，直至銀河盡頭。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "對指定敵方單體造成少量虛數屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "對敵方全體造成虛數屬性傷害。",
       "type": "戰技",
       "tag": "群體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "進入【結印】狀態，獲得額外回合並獲得3點【彩墨】，且弱點擊破效率提高，擊破特攻提高。\n【結印】狀態下獲得強化普通攻擊，施放強化普通攻擊後會消耗1點【彩墨】，耗盡時退出【結印】狀態。",
       "type": "終結技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "額外回合",
+          "desc": "獲得1個不消耗回合數的額外回合，在此回合中無法插入施放終結技。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,15 @@
       "simpleDesc": "當敵方目標的弱點被擊破時，亂破獲得1點充能。發動【忍具•降魔花弁】的第3段攻擊時，額外對敵方全體造成虛數屬性擊破傷害，該傷害可無視弱點屬性削韌，並消耗所有充能，使本次擊破傷害倍率和削韌值提高。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        6,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1452,15 @@
       "simpleDesc": "進入【塗鴉】狀態，快速向前移動一段距離並攻擊接觸到的敵人。攻擊敵人進入戰鬥後，對每個敵方目標造成無視弱點屬性的削韌及虛數屬性擊破傷害，並對其相鄰目標造成虛數屬性擊破傷害，同時使自身獲得能量。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1426,37 +1481,79 @@
       "_id": 131701,
       "id": "returned_is_the_revenant_with_no_ferry_toll",
       "name": "常世道返三途無六錢",
-      "desc": "施放終結技進入【結印】狀態期間，亂破造成的傷害無視目標<nobr>15%</nobr>的防禦，退出【結印】狀態後恢復<nobr>20</nobr>點能量。"
+      "desc": "施放終結技進入【結印】狀態期間，亂破造成的傷害無視目標<nobr>15%</nobr>的防禦，退出【結印】狀態後恢復<nobr>20</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131702,
       "id": "free_is_the_mind_enlightened_by_haikus",
       "name": "俳句暗記有識無罣礙",
-      "desc": "強化普通攻擊的前2段攻擊對指定敵方單體的削韌值提高<nobr>50%</nobr>。"
+      "desc": "強化普通攻擊的前2段攻擊對指定敵方單體的削韌值提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131703,
       "id": "many_are_the_shrines_that_repel_no_hell",
       "name": "堂塔伽藍末法無間獄",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131704,
       "id": "lost_is_the_nind_devoured_by_time",
       "name": "經年劣化任俠無忍義",
-      "desc": "【結印】狀態期間，我方全體速度提高<nobr>12%</nobr>。"
+      "desc": "【結印】狀態期間，我方全體速度提高<nobr>12%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131705,
       "id": "steady_is_the_ranger_with_unerring_arrows",
       "name": "一心不亂鳴弦無徒矢",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131706,
       "id": "righteous_is_the_wrath_that_spares_no_evil",
       "name": "破邪顯正應報無慈悲",
-      "desc": "戰鬥開始時亂破獲得<nobr>5</nobr>點天賦效果的充能，且充能上限增加<nobr>5</nobr>點。發動【忍具•降魔花弁】第3段攻擊後獲得<nobr>5</nobr>點充能。"
+      "desc": "戰鬥開始時亂破獲得<nobr>5</nobr>點天賦效果的充能，且充能上限增加<nobr>5</nobr>點。發動【忍具•降魔花弁】第3段攻擊後獲得<nobr>5</nobr>點充能。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1106,
   "id": "pela",
   "name": "Pela",
+  "description": "Eine Aufklärungsoffizierin der Silbermähnen-Wachen.\nSie hat eine strenge Art und genießt ein hohes Ansehen bei den anderen Silbermähnen-Wachen.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Eis-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Entfernt 1 Buff eines Gegners und fügt einem Gegner Eis-SCH zu.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Kann eine Kampffähigkeit für eine bestimmte Dauer verstärken. Wenn nicht anders angegeben, können Buffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +756,27 @@
       "simpleDesc": "Hat eine hohe Chance, die VTD aller Gegner zu reduzieren und fügt allen Gegnern geringen Eis-SCH zu.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1110,24 @@
       "simpleDesc": "Wenn der Gegner nach Pelas Angriff einen Debuff hat, stellt Pela Energie wieder her.",
       "type": "Talent",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1415,24 @@
       "desc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt einem zufälligen Gegner Eis-SCH in Höhe von #4[i]% von Pelas ANG zu und hat eine Grundchance von #1[i]%, die VTD aller Gegner für #3[i] Rd. um #2[i]% zu reduzieren.",
       "simpleDesc": "Greift Gegner an. Fügt nach Kampfeintritt einem zufälligen Gegner geringen Eis-SCH zu und hat eine hohe Chance, die VTD aller Gegner zu reduzieren.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1452,114 @@
       "_id": 110601,
       "id": "victory_report",
       "name": "Siegesbericht",
-      "desc": "Wird ein Gegner besiegt, erhält Pela <nobr>5</nobr> Pkt. Energie zurück."
+      "desc": "Wird ein Gegner besiegt, stellt Pela <nobr>5</nobr> Pkt. Energie wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110602,
       "id": "adamant_charge",
       "name": "Hartnäckige Ladung",
-      "desc": "Nach Einsatz der Fertigkeit zum Entfernen eines <u>Buffs</u> wird die GES dieser Einheit für <nobr>2</nobr> Rd. um <nobr>10%</nobr> erhöht."
+      "desc": "Nach Einsatz der Fertigkeit zum Entfernen eines <u>Buffs</u> wird die GES dieser Einheit für <nobr>2</nobr> Rd. um <nobr>10%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Kann eine Kampffähigkeit für eine bestimmte Dauer verstärken. Wenn nicht anders angegeben, können Buffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110603,
       "id": "suppressive_force",
       "name": "Unterdrückungskraft",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110604,
       "id": "full_analysis",
       "name": "Vollständige Analyse",
-      "desc": "Beim Einsatz der Fertigkeit besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, den Eis-WDS des Gegners für <nobr>2</nobr> Rd. um <nobr>12%</nobr> zu reduzieren."
+      "desc": "Beim Einsatz der Fertigkeit besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, den Eis-WDS des Gegners für <nobr>2</nobr> Rd. um <nobr>12%</nobr> zu reduzieren.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110605,
       "id": "absolute_jeopardy",
       "name": "Absolute Gefährdung",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110606,
       "id": "feeble_pursuit",
       "name": "Schwache Verfolgung",
-      "desc": "Wenn der Gegner nach Pelas Angriff einen <u>Debuff</u> hat, fügt sie ihm <u>zusätzlichen Eis-SCH</u> in Höhe von <nobr>40%</nobr> von Pelas ANG zu."
+      "desc": "Wenn der Gegner nach Pelas Angriff einen <u>Debuff</u> hat, fügt sie ihm <u>zusätzlichen Eis-SCH</u> in Höhe von <nobr>40%</nobr> von Pelas ANG zu.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1005,
   "id": "kafka",
   "name": "Kafka",
+  "description": "Miembro de los Cazadores de Estelaron. Una amante de la moda muy estilosa y profesional.\nUtilizó el encantamiento Encantadora de espíritus para que {NICKNAME} absorbiera el Estelaron.\nLe gusta comprar y ordenar sus abrigos.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Inflige Daño de Rayo a un enemigo y una pequeña cantidad de Daño de Rayo a los enemigos adyacentes.\nSi el objetivo principal está afectado por estados negativos de Daño con el tiempo, estos infligen daño 1 vez adicional.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +765,24 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a todos los enemigos y tiene una gran probabilidad de afectarlos con Electrocución.\nSi los objetivos están ya electrocutados, este estado inflige daño 1 vez adicional.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1137,32 @@
       "simpleDesc": "Cuando un aliado usa el ATQ básico contra un enemigo, Kafka lanza un ataque adicional a ese objetivo y le inflige Daño de Rayo. Además, tiene una gran probabilidad de afectarlo con Electrocución. Este efecto solo puede activarse 1 vez por turno.",
       "type": "Talento",
       "tag": "ATQ individual",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1486,24 @@
       "desc": "Ataca inmediatamente a todos los enemigos de un área determinada y entra en combate. Inflige un #3[i]% del ATQ de Kafka como Daño de Rayo a todos los enemigos. Además, cada enemigo tiene una probabilidad base del #1[i]% de ser afectado por una Electrocución equivalente a la de la habilidad definitiva durante #2[i] turnos.",
       "simpleDesc": "Ataca a todos los enemigos de un área determinada e inflige una pequeña cantidad de Daño de Rayo a todos ellos tras entrar en combate. Gran probabilidad de afectarlos con Electrocución.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1438,37 +1522,105 @@
       "_id": 100501,
       "id": "da_capo",
       "name": "Da capo",
-      "desc": "Cuando el talento activa un <u>ataque adicional</u>, hay un <nobr>100%</nobr> de <u>probabilidad base</u> de que el Daño con el tiempo que recibe el objetivo aumente en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Cuando el talento activa un <u>ataque adicional</u>, hay un <nobr>100%</nobr> de <u>probabilidad base</u> de que el Daño con el tiempo que recibe el objetivo aumente en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100502,
       "id": "fortississimo",
       "name": "Fortississimo",
-      "desc": "Cuando Kafka está en la batalla, el Daño con el tiempo que infligen todos los aliados aumenta en un <nobr>25%</nobr>."
+      "desc": "Cuando Kafka está en la batalla, el Daño con el tiempo que infligen todos los aliados aumenta en un <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100503,
       "id": "capriccio",
       "name": "Capriccio",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100504,
       "id": "recitativo",
       "name": "Recitativo",
-      "desc": "Cuando el objetivo recibe daño del estado de Electrocución provocado por Kafka, Kafka recupera <nobr>2</nobr> pts. de energía adicionales."
+      "desc": "Cuando el objetivo recibe daño del estado de Electrocución provocado por Kafka, Kafka recupera <nobr>2</nobr> pts. de energía adicionales.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100505,
       "id": "doloroso",
       "name": "Doloroso",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100506,
       "id": "leggiero",
       "name": "Leggiero",
-      "desc": "El multiplicador de daño de la Electrocución que aplica la habilidad definitiva, la técnica o el <u>ataque adicional</u> del talento aumenta en un <nobr>156%</nobr> y la duración de Electrocución se alarga en <nobr>1</nobr> turno."
+      "desc": "El multiplicador de daño de la Electrocución que aplica la habilidad definitiva, la técnica o el <u>ataque adicional</u> del talento aumenta en un <nobr>156%</nobr> y la duración de Electrocución se alarga en <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

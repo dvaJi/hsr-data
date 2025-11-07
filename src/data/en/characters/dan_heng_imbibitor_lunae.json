@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "Dan Heng • Imbibitor Lunae",
+  "description": "Dan Heng's true form from his Vidyadhara lineage carries the residual power left behind by his past incarnation, the Imbibitor Lunae.\nUpon accepting the majestic horns atop his crown, he must accept all the merits and faults attributed to that sinner.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -243,10 +244,22 @@
       "_id": 121301,
       "id": "beneficent_lotus",
       "name": "Beneficent Lotus",
-      "desc": "Uses a 2-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to a single enemy target.",
-      "simpleDesc": "Deals minor Imaginary DMG to a single enemy.",
+      "desc": "Uses a 2-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target.",
+      "simpleDesc": "Deals minor Imaginary DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Enhances the Basic ATK Beneficent Lotus to Transcendence, Divine Spear, or Fulgurant Leap.",
       "type": "Skill",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -724,10 +749,22 @@
       "_id": 121303,
       "id": "azures_aqua_ablutes_all",
       "name": "Azure's Aqua Ablutes All",
-      "desc": "Uses a 3-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to a single enemy target. At the same time, deals Imaginary DMG equal to #2[i]% of Dan Heng • Imbibitor Lunae's ATK to adjacent targets. Then, obtains #3[i] Squama Sacrosancta.\nIt's possible to hold up to #4[i] Squama Sacrosancta, which can be used to offset Dan Heng • Imbibitor Lunae's consumption of skill points. Consuming Squama Sacrosancta is considered equivalent to consuming skill points.",
-      "simpleDesc": "Deals massive Imaginary DMG to a single enemy, deals Imaginary DMG to adjacent targets, and gains 2 Squama Sacrosancta, which can offset Dan Heng • Imbibitor Lunae's consumption of skill points. Consuming Squama Sacrosancta is considered equivalent to consuming skill points.",
+      "desc": "Uses a 3-hit attack and deals Imaginary DMG equal to #1[i]% of Dan Heng • Imbibitor Lunae's ATK to one designated enemy target. At the same time, deals Imaginary DMG equal to #2[i]% of Dan Heng • Imbibitor Lunae's ATK to adjacent targets. Then, obtains #3[i] \"Squama Sacrosancta.\"\nIt's possible to hold up to #4[i] \"Squama Sacrosancta,\" which can be used to offset Dan Heng • Imbibitor Lunae's consumption of skill points. Consuming \"Squama Sacrosancta\" is considered equivalent to consuming skill points.",
+      "simpleDesc": "Deals massive Imaginary DMG to one enemy, deals Imaginary DMG to adjacent targets, and gains 2 \"Squama Sacrosancta,\" which can offset Dan Heng • Imbibitor Lunae's consumption of skill points. Consuming Squama Sacrosancta is considered equivalent to consuming skill points.",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "Increases DMG for every hit dealt. This effect is stackable and lasts until the end of this character's turn.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "Enters the Leaping Dragon state. Attacking will cause this character to move forward rapidly for a set distance and attack all enemies touched. After entering combat via attacking enemies, deals Imaginary DMG to all enemies, and gains 1 Squama Sacrosancta.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "Tethered to Sky",
-      "desc": "Increases the stackable Righteous Heart count by <nobr>4</nobr>, and gains 1 extra stack of Righteous Heart for each hit during an attack."
+      "desc": "Increases the stackable Righteous Heart count by <nobr>4</nobr>, and gains 1 extra stack of Righteous Heart for each hit during an attack.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "Imperium On Cloud Nine",
-      "desc": "After using his Ultimate, Dan Heng • Imbibitor Lunae's <u>action advances</u> by <nobr>100%</nobr> and gains 1 extra \"Squama Sacrosancta.\""
+      "desc": "After using his Ultimate, Dan Heng • Imbibitor Lunae's <u>action advances</u> by <nobr>100%</nobr> and gains 1 extra \"Squama Sacrosancta.\"",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "Clothed in Clouds",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "Zephyr's Bliss",
-      "desc": "The <u>buff</u> effect granted by \"Outroar\" lasts until the end of this unit's next turn."
+      "desc": "The <u>buff</u> effect granted by \"Outroar\" lasts until the end of this unit's next turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "Fall is the Pride",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "Reign, Returned",
-      "desc": "After another ally character uses their Ultimate, the Imaginary <u>RES PEN</u> of Dan Heng • Imbibitor Lunae's next \"Fulgurant Leap\" attack increases by <nobr>20%</nobr>. This effect can stack up to <nobr>3</nobr> time(s)."
+      "desc": "After another ally character uses their Ultimate, the Imaginary <u>RES PEN</u> of Dan Heng • Imbibitor Lunae's next \"Fulgurant Leap\" attack increases by <nobr>20%</nobr>. This effect can stack up to <nobr>3</nobr> time(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

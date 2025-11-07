@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "Mydei",
+  "description": "Kremnos, the mist-shrouded city of chaos and war! Its royal lineage is tainted with patricide, and its god bears the name of calamity.\nThe undying Mydeimos, the lion apart from the rest. Chrysos Heir who seeks the Coreflame of Strife, must suffer a thousand deaths, be bathed in blood on the path home, and bear the madness of fate alone.\n— Kingslayer be king, godslayer be god. Iron-hooves pound across the wilderness for the campaign, and must eventually soak in the blood of their homeland.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Imaginary DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Consumes HP and deals Imaginary DMG to one designated enemy unit and minor Imaginary DMG to adjacent targets.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Restores HP and accumulates Talent's Charge. Deals massive Imaginary DMG to one designated enemy and Imaginary DMG to adjacent targets, then Taunts the target and their adjacent targets.",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "When losing HP, accumulates Charge. When Charge is at 100, enters the \"Vendetta\" state, restores HP and advances action. During \"Vendetta,\" Max HP increases and DEF remains at 0. At the start of this unit's turn, automatically uses \"Kingslayer Be King.\"\nWhen Charge reaches 150 during \"Vendetta,\" Mydei immediately gains 1 extra turn and automatically uses \"Godslayer Be God.\"\nWhen Mydei receives a killing blow, he exits the \"Vendetta\" state.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Extra Turn",
+          "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "Pulls in enemies within a certain area and inflicts Daze on them. After attacking Dazed enemies and entering battle, deals minor Imaginary DMG to all enemies and Taunts the targets. This unit accumulates Talent's Charge.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "Frost Hones Spine of Steel",
-      "desc": "Increases the DMG multiplier dealt by \"Godslayer Be God\" to the primary target by <nobr>30%</nobr>. This ability now deals to all enemies Imaginary DMG equal to the DMG multiplier dealt to the primary target."
+      "desc": "Increases the DMG multiplier dealt by \"Godslayer Be God\" to the primary target by <nobr>30%</nobr>. This ability now deals to all enemies Imaginary DMG equal to the DMG multiplier dealt to the primary target.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "Strife Beholds Cry of Dead",
-      "desc": "During \"Vendetta,\" the DMG dealt by Mydei ignores <nobr>15%</nobr> of enemy targets' DEF. After he receives healing, converts <nobr>40%</nobr> of the healed amount to Charge. The tally of the converted Charge cannot exceed <nobr>40</nobr> point(s). Resets this tally of Charge after any unit takes action."
+      "desc": "During \"Vendetta,\" the DMG dealt by Mydei ignores <nobr>15%</nobr> of enemy targets' DEF. After he receives healing, converts <nobr>40%</nobr> of the healed amount to Charge. The tally of the converted Charge cannot exceed <nobr>40</nobr> point(s). Resets this tally of Charge after any unit takes action.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "Honor Exalts Feast of Faith",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "Siren Jolts the Laconic Lion",
-      "desc": "While in \"Vendetta,\" increases CRIT DMG by <nobr>30%</nobr> and restores HP by <nobr>10%</nobr> of this unit's Max HP after receiving attacks from enemy targets."
+      "desc": "While in \"Vendetta,\" increases CRIT DMG by <nobr>30%</nobr> and restores HP by <nobr>10%</nobr> of this unit's Max HP after receiving attacks from enemy targets.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "War Chisels Flesh of Flame",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "Legacy Scales Mound of Blood",
-      "desc": "When entering battle, immediately enters the \"Vendetta\" state, and lowers the Charge required for \"Godslayer Be God\" to <nobr>100</nobr> point(s)."
+      "desc": "When entering battle, immediately enters the \"Vendetta\" state, and lowers the Charge required for \"Godslayer Be God\" to <nobr>100</nobr> point(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

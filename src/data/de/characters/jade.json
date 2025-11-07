@@ -2,6 +2,7 @@
   "_id": 1314,
   "id": "jade",
   "name": "Jade",
+  "description": "Eine hochrangige Führungskraft in der Abteilung für strategische Investitionen der IFK und eines der Zehn Steinherzen, bekannt für ihren Kernstein „Jade des Darlehens“.\nSie ist eine kaltherzige, aber elegante Kreditgeberin, die das menschliche Gemüt gut versteht und ein Hobby namens „Bonajade-Pfandhaus“ pflegt.\nSie ist bereit, geduldig auf hochwertige Akquisitionen zu warten und versteht es, aus scheinbar mittellosen Kunden etwas herauszuholen.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Quanten-SCH zu und fügt angrenzenden Einheiten geringen Quanten-SCH zu.",
       "type": "Standardangriff",
       "tag": "Ausdehnung",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Lässt einen Verbündeten zum Schuldeneintreiber werden und erhöht seine GES. Nachdem der Schuldeneintreiber angegriffen hat, verbraucht er seine eigenen LP und fügt allen getroffenen Gegnern geringen zusätzlichen Quanten-SCH zu. Wenn Jade zur Schuldeneintreiberin wird, kann sie den Effekt der GES-Erhöhung nicht erhalten und ihre Angriffe verbrauchen keine LP.",
       "type": "Fertigkeit",
       "tag": "Unterstützung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -768,6 +796,24 @@
       "simpleDesc": "Fügt allen Gegnern Quanten-SCH zu und erhöht den SCH-Multiplikator für Folgeangriffe des Talents.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1092,6 +1138,24 @@
       "simpleDesc": "Nachdem Jade oder der Schuldeneintreiber angegriffen hat, erhält Jade für jeden getroffenen Gegner 1 Pkt. Aufladung. Wenn die Aufladung #3[i] Pkt. erreicht, werden #3[i] Pkt. Aufladungen verbraucht, um 1-mal einen Folgeangriff auszuführen, der allen Gegnern Quanten-SCH zufügt.\nWenn Jade den Folgeangriff startet, erhält sie „Verpfändung“, wodurch ihr KRIT-SCH erhöht wird. Dieser Effekt ist bis zu #2[i]-fach stapelbar.",
       "type": "Talent",
       "tag": "Flächenangriff",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1446,6 +1510,15 @@
       "simpleDesc": "Belegt Gegner in einem bestimmten Wirkungsbereich mit „Blindlings“. Beim Angriff auf Gegner mit Blindlings treten alle Gegner mit diesem Status gleichzeitig in den Kampf ein. Fügt nach Kampfeintritt allen Gegnern geringen Quanten-SCH zu und Jade erhält sofort #3[i]-fach „Verpfändung“.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1537,97 @@
       "_id": 131401,
       "id": "altruism_nevertheless_tradable",
       "name": "Uneigennützigkeit? Auch handelbar",
-      "desc": "Erhöht den <u>Folgeangriff-SCH</u> von Jades Talent um <nobr>32%</nobr>. Wenn ein Verbündeter als „Schuldeneintreiber“ angreift und 2/1 Gegner trifft, erhält Jade zusätzlich <nobr>1</nobr>/<nobr>2</nobr> Pkt. Aufladung."
+      "desc": "Erhöht den <u>Folgeangriff-SCH</u> von Jades Talent um <nobr>32%</nobr>. Wenn ein Verbündeter als „Schuldeneintreiber“ angreift und 2/1 Gegner trifft, erhält Jade zusätzlich <nobr>1</nobr>/<nobr>2</nobr> Pkt. Aufladung.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131402,
       "id": "morality_herein_authenticated",
       "name": "Moralität? Hiermit bescheinigt",
-      "desc": "Wenn „Verpfändung“ <nobr>15</nobr> Stapelungen erreicht, wird Jades KRIT-Rate um <nobr>18%</nobr> erhöht."
+      "desc": "Wenn „Verpfändung“ <nobr>15</nobr> Stapelungen erreicht, wird Jades KRIT-Rate um <nobr>18%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131403,
       "id": "honesty_soon_mortgaged",
       "name": "Ehrlichkeit? Bald verpfändet",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131404,
       "id": "sincerity_put_option_only",
       "name": "Aufrichtigkeit? Nur mit Verkaufsoption",
-      "desc": "Beim Einsatz des Ultimates ignoriert der von Jade verursachte SCH für <nobr>3</nobr> Rd. <nobr>12%</nobr> der VTD der Gegner."
+      "desc": "Beim Einsatz des Ultimates ignoriert der von Jade verursachte SCH für <nobr>3</nobr> Rd. <nobr>12%</nobr> der VTD der Gegner.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131405,
       "id": "hope_hitherto_forfeited",
       "name": "Hoffnung? Bereits ausverkauft",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131406,
       "id": "equity_pending_sponsorship",
       "name": "Gerechtigkeit? Ausstehender Sponsor",
-      "desc": "Wenn sich ein Verbündeter als „Schuldeneintreiber“ auf dem Kampffeld befindet, wird Jades <u>Quanten-WDS-DUR</u> um <nobr>20%</nobr> erhöht und sie tritt in den Status Schuldeneintreiber ein."
+      "desc": "Wenn sich ein Verbündeter als „Schuldeneintreiber“ auf dem Kampffeld befindet, wird Jades <u>Quanten-WDS-DUR</u> um <nobr>20%</nobr> erhöht und sie tritt in den Status Schuldeneintreiber ein.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

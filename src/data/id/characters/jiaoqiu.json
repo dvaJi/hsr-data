@@ -2,6 +2,7 @@
   "_id": 1218,
   "id": "jiaoqiu",
   "name": "Jiaoqiu",
+  "description": "Seorang dokter dan konselor Foxian di Xianzhou \"Yaoqing\". Dia selalu menyambut orang dengan senyuman, tapi sebenarnya cerdik dan pandai berstrategi.\nDia berasal dari keluarga terkenal di Alchemy Commission. Dia pernah mengasingkan diri dari dunia dan berhenti berpraktik medis. Namun, dia kembali untuk mengobati \"Merlin's Claw\" Feixiao.\nSangat ahli dalam penelitian ramuan obat yang mengikuti prinsip \"obat dan makanan berasal dari sumber yang sama\", terutama terkait makanan pedas yang bisa memberikan sensasi sakit pada orang. Dia juga menciptakan metode obat kuali yang dinamakan \"Persegi Sembilan Kotak\".",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Fire DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Mengakibatkan Fire DMG pada 1 musuh, dan mengakibatkan Fire DMG dalam jumlah kecil pada musuh di sekitar target. Berpeluang besar untuk menambahkan 1 lapis \"Ashen Roast\" pada target utama.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -743,6 +771,32 @@
       "simpleDesc": "Menyesuaikan jumlah lapisan \"Ashen Roast\" yang dimiliki target musuh menjadi jumlah lapisan \"Ashen Roast\" tertinggi yang ada di medan pertempuran. Setelah itu, akan mengaktifkan area pembatas dan mengakibatkan Fire DMG pada seluruh musuh. Saat target musuh berada di dalam area pembatas, Ultimate DMG yang diterima target musuh akan meningkat, dan memiliki peluang untuk menambahkan 1 lapis \"Ashen Roast\" pada target musuh saat target beraksi.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Gugur",
+          "desc": "Saat HP berkurang hingga 0, maka karakter tersebut gugur. Karakter yang gugur tidak dapat melanjutkan pertempuran.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1151,24 @@
       "simpleDesc": "Saat Basic Attack, Skill atau Ultimate mengenai musuh, berpeluang besar untuk menambahkan 1 lapis \"Ashen Roast\" pada target, membuat DMG yang diterima musuh meningkat, dan musuh juga akan dianggap memasuki status Burn.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1466,6 +1538,24 @@
       "simpleDesc": "Menciptakan sebuah dimensi khusus. Setelah memasuki pertempuran dengan musuh di dalam dimensi khusus, akan mengakibatkan Fire DMG dalam jumlah kecil pada seluruh musuh, dan berpeluang besar untuk menambahkan 1 lapis \"Ashen Roast\".",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1484,37 +1574,79 @@
       "_id": 121801,
       "id": "pentapathic_transference",
       "name": "Pentapathic Transference",
-      "desc": "Meningkatkan <nobr>40%</nobr> DMG yang diakibatkan rekan tim pada target musuh berstatus \"Ashen Roast\". Setiap kali membuat target musuh memasuki status \"Ashen Roast\" melalui efek Talent, maka jumlah lapisan \"Ashen Roast\" yang ditambahkan kali ini bertambah ekstra <nobr>1</nobr> lapis."
+      "desc": "Meningkatkan <nobr>40%</nobr> DMG yang diakibatkan rekan tim pada target musuh berstatus \"Ashen Roast\". Setiap kali membuat target musuh memasuki status \"Ashen Roast\" melalui efek Talent, maka jumlah lapisan \"Ashen Roast\" yang ditambahkan kali ini bertambah ekstra <nobr>1</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121802,
       "id": "from_savor_comes_suffer",
       "name": "From Savor Comes Suffer",
-      "desc": "Saat target musuh berada dalam status \"Ashen Roast\", DMG Multiplier dari Fire DoT yang diakibatkan \"Ashen Roast\" pada target tersebut meningkat <nobr>300%</nobr>."
+      "desc": "Saat target musuh berada dalam status \"Ashen Roast\", DMG Multiplier dari Fire DoT yang diakibatkan \"Ashen Roast\" pada target tersebut meningkat <nobr>300%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121803,
       "id": "flavored_euphony_reigns_supreme",
       "name": "Flavored Euphony Reigns Supreme",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121804,
       "id": "leisure_in_luster_out",
       "name": "Leisure In, Luster Out",
-      "desc": "Selama area pembatas ada, ATK target musuh berkurang <nobr>15%</nobr>."
+      "desc": "Selama area pembatas ada, ATK target musuh berkurang <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121805,
       "id": "duel_in_dawn_dash_in_dusk",
       "name": "Duel in Dawn, Dash in Dusk",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121806,
       "id": "nonamorphic_pyrobind",
       "name": "Nonamorphic Pyrobind",
-      "desc": "Saat target musuh dikalahkan, lapisan \"Ashen Roast\" yang dimilikinya akan ditumpuk ke musuh dengan jumlah lapisan \"Ashen Roast\" tersedikit yang masih hidup di medan pertempuran. Batas maksimum jumlah lapisan \"Ashen Roast\" bertambah menjadi <nobr>9</nobr>, dan setiap lapis \"Ashen Roast\" akan membuat RES Seluruh Tipe target berkurang <nobr>3%</nobr>."
+      "desc": "Saat target musuh dikalahkan, lapisan \"Ashen Roast\" yang dimilikinya akan ditumpuk ke musuh dengan jumlah lapisan \"Ashen Roast\" tersedikit yang masih hidup di medan pertempuran. Batas maksimum jumlah lapisan \"Ashen Roast\" bertambah menjadi <nobr>9</nobr>, dan setiap lapis \"Ashen Roast\" akan membuat RES Seluruh Tipe target berkurang <nobr>3%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

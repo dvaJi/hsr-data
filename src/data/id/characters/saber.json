@@ -2,6 +2,7 @@
   "_id": 1014,
   "id": "saber",
   "name": "Saber",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Wind DMG dalam jumlah kecil pada 1 musuh yang ditargetkan.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Mengakibatkan Wind DMG pada 1 musuh yang ditargetkan dan Wind DMG dalam jumlah kecil pada target di sekitarnya. Jika mengonsumsi \"Core Resonance\" setelah menyerang dapat memulihkan Energy hingga penuh, maka akan meningkatkan Skill DMG Multiplier kali ini berdasarkan \"Core Resonance\" dan mengonsumsi semua \"Core Resonance\" setelah menyerang. Jika tidak, akan memperoleh #3[i] \"Core Resonance\".",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Mengakibatkan Wind DMG dalam jumlah besar pada seluruh musuh. Mengakibatkan ekstra Wind DMG dalam jumlah kecil pada musuh acak, total Bounce #3[i] kali, dan memperkuat Basic Attack berikutnya.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        120,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1110,15 @@
       "simpleDesc": "Memperoleh #8[i] \"Core Resonance\" saat memasuki pertempuran. Saat rekan tim mana pun melancarkan Ultimate, DMG yang diakibatkan Saber akan meningkat dan Saber akan memperoleh #1[i] \"Core Resonance\". Mengonsumsi \"Core Resonance\" akan memulihkan Energy Saber.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1518,15 @@
       "simpleDesc": "Setelah menggunakan Technique, saat pertempuran berikutnya dimulai, akan memperoleh #3[i] \"Core Resonance\" dan ATK akan meningkat.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1499,37 +1545,97 @@
       "_id": 101401,
       "id": "the_lost_white_walls",
       "name": "The Lost White Walls",
-      "desc": "Ultimate DMG yang diakibatkan <nobr>Saber</nobr> meningkat <nobr>60%</nobr>. Setelah <nobr>Saber</nobr> melancarkan Basic Attack atau Skill, akan memperoleh <nobr>1</nobr> \"Core Resonance\"."
+      "desc": "Ultimate DMG yang diakibatkan <nobr>Saber</nobr> meningkat <nobr>60%</nobr>. Setelah <nobr>Saber</nobr> melancarkan Basic Attack atau Skill, akan memperoleh <nobr>1</nobr> \"Core Resonance\".",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101402,
       "id": "the_lost_oath_of_the_round_table",
       "name": "The Lost Oath of the Round Table",
-      "desc": "Setiap 1 \"Core Resonance\" yang diperoleh dalam pertempuran ini akan membuat DMG yang diakibatkan <nobr>Saber</nobr> mengabaikan <nobr>#2[f1]%</nobr> DEF target. Efek ini dapat ditumpuk hingga <nobr>15</nobr> lapis. Saat memicu efek peningkatan Skill Multiplier dari \"Core Resonance\", setiap 1 \"Core Resonance\" akan meningkatkan ekstra <nobr>7%</nobr> DMG Multiplier dari Skill kali ini."
+      "desc": "Setiap 1 \"Core Resonance\" yang diperoleh dalam pertempuran ini akan membuat DMG yang diakibatkan <nobr>Saber</nobr> mengabaikan <nobr>#2[f1]%</nobr> DEF target. Efek ini dapat ditumpuk hingga <nobr>15</nobr> lapis. Saat memicu efek peningkatan Skill Multiplier dari \"Core Resonance\", setiap 1 \"Core Resonance\" akan meningkatkan ekstra <nobr>7%</nobr> DMG Multiplier dari Skill kali ini.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101403,
       "id": "a_wish_across_fifteen_centuries",
       "name": "A Wish Across Fifteen Centuries",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101404,
       "id": "the_saga_of_sixteen_winter_days",
       "name": "The Saga of Sixteen Winter Days",
-      "desc": "Wind <u>RES PEN</u> <nobr>Saber</nobr> meningkat <nobr>8%</nobr>. Setelah melancarkan Ultimate, Wind <u>RES PEN</u> <nobr>Saber</nobr> akan meningkat <nobr>4%</nobr>, efek ini dapat ditumpuk hingga <nobr>3</nobr> lapis."
+      "desc": "Wind <u>RES PEN</u> <nobr>Saber</nobr> meningkat <nobr>8%</nobr>. Setelah melancarkan Ultimate, Wind <u>RES PEN</u> <nobr>Saber</nobr> akan meningkat <nobr>4%</nobr>, efek ini dapat ditumpuk hingga <nobr>3</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101405,
       "id": "the_dreamed_utopian_dawn",
       "name": "The Dreamed Utopian Dawn",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101406,
       "id": "the_long_fated_night",
       "name": "The Long Fated Night",
-      "desc": "Wind <u>RES PEN</u> dari Ultimate DMG yang diakibatkan <nobr>Saber</nobr> meningkat <nobr>20%</nobr>, dan Energy berlebih yang dapat diakumulasi oleh Trace \"Blessing of the Lake\" meningkat menjadi <nobr>200</nobr>. Setelah memasuki pertempuran dan melancarkan Ultimate untuk pertama kalinya, akan memulihkan <nobr>300</nobr> Energy <nobr>Saber</nobr> dalam jumlah tetap, efek ini dapat dipicu 1 kali setiap melancarkan <nobr>3</nobr> kali Ultimate."
+      "desc": "Wind <u>RES PEN</u> dari Ultimate DMG yang diakibatkan <nobr>Saber</nobr> meningkat <nobr>20%</nobr>, dan Energy berlebih yang dapat diakumulasi oleh Trace \"Blessing of the Lake\" meningkat menjadi <nobr>200</nobr>. Setelah memasuki pertempuran dan melancarkan Ultimate untuk pertama kalinya, akan memulihkan <nobr>300</nobr> Energy <nobr>Saber</nobr> dalam jumlah tetap, efek ini dapat dipicu 1 kali setiap melancarkan <nobr>3</nobr> kali Ultimate.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

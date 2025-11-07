@@ -2,6 +2,7 @@
   "_id": 1214,
   "id": "xueyi",
   "name": "Xueyi",
+  "description": "Richterin der Zehn-Fürsten-Kommission, die auf der Xianzhou Luofu über Leben und Tod entscheidet.\nIhr Körper starb schon vor vielen Jahren. Sie hat einen Marionettenkörper, mit dem sie in die Welt zurückkehren kann, um ihre Mission zu erfüllen.",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Quanten-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Fügt einem Gegner Quanten-SCH zu und fügt angrenzenden Einheiten geringen Quanten-SCH zu.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Fügt einem Gegner massiven Quanten-SCH zu. Dieser Angriff verringert den WDS des Gegners unabhängig vom Schwächetyp. Je mehr WDS verringert wird, desto höher ist der zugefügte SCH.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        120,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,27 @@
       "simpleDesc": "Wenn Xueyi einen Angriff ausführt oder ihre Verbündeten den WDS des Ziels aufbrauchen, fügt sie ihm Stapelungen von „Karma“ zu. Wenn Karma maximal gestapelt wurde, führt sie sofort einen Folgeangriff aus, der einem anvisierten Gegner geringen Quanten-SCH zufügt, 3-mal abprallt und das gesamte Karma verbraucht.",
       "type": "Talent",
       "tag": "Abpraller",
+      "spBase": 2,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1415,15 @@
       "desc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt allen Gegnern Quanten-SCH in Höhe von #1[i]% von Xueyis ANG zu.",
       "simpleDesc": "Greift den Gegner an. Fügt nach Kampfeintritt allen Gegnern geringen Quanten-SCH zu.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,37 +1440,97 @@
       "_id": 121401,
       "id": "dvesha_inhibited",
       "name": "Dvesha, gefesselt",
-      "desc": "Erhöht den durch <u>Folgeangriffe</u> verursachten SCH des Talents um <nobr>40%</nobr>."
+      "desc": "Erhöht den durch <u>Folgeangriffe</u> verursachten SCH des Talents um <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121402,
       "id": "klesha_breached",
       "name": "Klesha, durchbrochen",
-      "desc": "Der <u>Folgeangriff</u> des Talents verringert den WDS unabhängig vom Schwächetyp und stellt gleichzeitig Xueyis LP in Höhe von <nobr>5%</nobr> ihrer max. LP wieder her. Beim Schwächebruch wird der Effekt „Schwächebruch: Quanten“ ausgelöst."
+      "desc": "Der <u>Folgeangriff</u> des Talents verringert den WDS unabhängig vom Schwächetyp und stellt gleichzeitig Xueyis LP in Höhe von <nobr>5%</nobr> ihrer max. LP wieder her. Beim Schwächebruch wird der Effekt „Schwächebruch: Quanten“ ausgelöst.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121403,
       "id": "dukha_ceased",
       "name": "Duhkha, ruhend",
-      "desc": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121404,
       "id": "karma_severed",
       "name": "Karma, durchtrennt",
-      "desc": "Erhöht den Brucheffekt beim Einsatz des Ultimates für <nobr>2</nobr> Rd. um <nobr>40%</nobr>."
+      "desc": "Erhöht den Brucheffekt beim Einsatz des Ultimates für <nobr>2</nobr> Rd. um <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121405,
       "id": "deva_enthralled",
       "name": "Deva, beschwingt",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121406,
       "id": "sasra_mastered",
       "name": "Samsara, gemeistert",
-      "desc": "Verringert die maximale Stapelung von „Karma“ auf <nobr>6</nobr>."
+      "desc": "Verringert die maximale Stapelung von „Karma“ auf <nobr>6</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

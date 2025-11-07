@@ -2,6 +2,7 @@
   "_id": 1108,
   "id": "sampo",
   "name": "Sampo",
+  "description": "Hombre de negocios que viaja entre la superficie y el subsuelo.\nEs cercano con todo el mundo, tiene un gran sentido del humor y le gusta bromear.",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo. Se dispara 5 veces en total.",
       "type": "Habilidad básica",
       "tag": "Rebote",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,27 @@
       "simpleDesc": "Inflige Daño de Viento a todos los enemigos y tiene una gran probabilidad de que aumente el Daño con el tiempo que reciben.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "Cuando golpea a un enemigo, tiene una probabilidad de afectarlo con Intemperie.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1452,32 @@
       "simpleDesc": "Hace que los enemigos de un área determinada sean afectados por Ceguera. Al entrar en combate contra enemigos cegados, cada enemigo tiene una gran probabilidad de que su acción se retrase.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Probabilidad fija",
+          "desc": "La probabilidad fija no se ve afectada por ningún factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Acción retrasada",
+          "desc": "Incrementa el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,37 +1496,88 @@
       "_id": 110801,
       "id": "rising_love",
       "name": "Amor en aumento",
-      "desc": "Al usar la habilidad básica, inflige daño a un enemigo al azar <nobr>1</nobr> vez más."
+      "desc": "Al usar la habilidad básica, inflige daño a un enemigo al azar <nobr>1</nobr> vez más.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110802,
       "id": "infectious_enthusiasm",
       "name": "Entusiasmo contagioso",
-      "desc": "Cuando elimina a un enemigo afectado por Intemperie, todos los enemigos tienen una <u>probabilidad base</u> del <nobr>100%</nobr> de recibir <nobr>1</nobr> acumulación del estado de Intemperie equivalente a las del talento."
+      "desc": "Cuando elimina a un enemigo afectado por Intemperie, todos los enemigos tienen una <u>probabilidad base</u> del <nobr>100%</nobr> de recibir <nobr>1</nobr> acumulación del estado de Intemperie equivalente a las del talento.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110803,
       "id": "big_money",
       "name": "¡Mucho dinero!",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110804,
       "id": "the_deeper_the_love_the_stronger_the_hate",
       "name": "Cuánto amor, cuánto odio",
-      "desc": "Cuando la habilidad básica golpea a un enemigo que tenga <nobr>5</nobr> o más acumulaciones de Intemperie, ese enemigo recibe inmediatamente un <nobr>8%</nobr> del daño de su estado de Intemperie."
+      "desc": "Cuando la habilidad básica golpea a un enemigo que tenga <nobr>5</nobr> o más acumulaciones de Intemperie, ese enemigo recibe inmediatamente un <nobr>8%</nobr> del daño de su estado de Intemperie.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110805,
       "id": "huuuuge_money",
       "name": "¡Muchísimo dinero!",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110806,
       "id": "increased_spending",
       "name": "Gasto en aumento",
-      "desc": "El multiplicador de daño del estado de Intemperie aplicado por el talento aumenta en un <nobr>15%</nobr>."
+      "desc": "El multiplicador de daño del estado de Intemperie aplicado por el talento aumenta en un <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

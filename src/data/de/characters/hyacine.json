@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "Hyacine",
+  "description": "Während der Stadtstaat in den Wolken mit der Zeit zerfällt, öffnet der Hof der Dämmerung erneut seine Tore und bringt einen Lichtschimmer in die Ewignacht.\nHeilerin Hyacinthia, Erbin von Chrysos, die über die Kernflamme des Himmels wacht. Sie muss den Willen ihrer Vorfahren fortführen und die Risse zwischen Morgen- und Abenddämmerung flicken.\nMöge das Regenbogenlicht herabströmen, um den Hass zu schmelzen und die Morgendämmerung in dieses Land zurückzubringen.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Wind-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Beschwört den Memogeist Kleiner Ika und stellt bei allen Verbündeten LP wieder her.",
       "type": "Fertigkeit",
       "tag": "Wiederherstellung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "Beschwört den Memogeist Kleiner Ika und stellt bei allen Verbündeten LP wieder her. Tritt in den Status „Sonne nach dem Regen“ ein. Wenn sich Hyacine in diesem Status befindet, werden die max. LP aller Verbündeten erhöht.",
       "type": "Ultimate",
       "tag": "Unterstützung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "Erhöht den vom Kleinen Ika verursachten SCH, wenn Hyacine oder der Kleine Ika Heilung bewirken.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "Stellt zu Beginn des nächsten Kampfes bei allen Verbündeten LP wieder her und erhöht ihre max. LP.",
       "type": "Technik",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Kleiner Ika",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "Weg mit euch, Wolken!",
+        "desc": "Fügt allen Gegnern Wind-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> der gesamten bewirkten Heilung von Hyacine und dem Kleinen Ika in diesem Kampf zu. Entfernt dann <nobr>#2[i]%</nobr> der gesamten bewirkten Heilung.",
+        "simpleDesc": "Fügt allen Gegnern Wind-SCH zu.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Flächenangriff"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "Halte die Hand des klaren Himmels",
+        "desc": "Die GES des Kleinen Ika bleibt bei 0, er wird immun gegen <u>Debuffs</u> und erscheint nicht in der Aktionsreihenfolge.\nWenn die LP eines Verbündeten außer dem Kleinen Ika reduziert werden, verbraucht der Kleine Ika zu Beginn der Runde eines beliebigen Verbündeten oder nach seiner Aktion eigene LP in Höhe von <nobr>#1[i]%</nobr> seiner max. LP, um bei dem betroffenen Ziel LP in Höhe von <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> von Hyacines max. LP plus <span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span> wiederherzustellen.\nWenn sich Hyacine im Status „Sonne nach dem Regen“ befindet, erhält der Kleine Ika nach dem Einsatz von Hyacines Fähigkeit sofort 1 <u>zusätzliche Runde</u> und setzt automatisch „Weg mit euch, Wolken!“ ein. Wenn der Kleine Ika den Heileffekt des Talents auslöst, werden bei allen Verbündeten zusätzlich LP in Höhe von <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> von Hyacines max. LP plus <span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span> wiederhergestellt. Nachdem der Kleine Ika seine Fähigkeit eingesetzt hat, wird die Dauer aller seiner <u>Kontinuierlichen Effekte</u> um 1 Rd. reduziert.",
+        "simpleDesc": "Wenn die LP eines Verbündeten außer dem Kleinen Ika <span style=\"color:#f29e38ff>reduziert</span> werden, verbraucht der Kleine Ika seine eigenen LP, um bei dem betroffenen Ziel <span style=\"color:#f29e38ff>LP wiederherzustellen</span>. Wenn Hyacine „Sonne nach dem Regen“ besitzt, erhält der Kleine Ika nach dem Einsatz von Hyacines Fähigkeit sofort 1 <u>zusätzliche Runde</u> und setzt automatisch seine Memogeist-Technik ein. Nachdem der Kleine Ika Fähigkeit eingesetzt hat, wird die Dauer seiner eigenen <u>Kontinuierlichen Effekte</u> um 1 Rd. reduziert.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "Wiederherstellung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "Zusätzliche Runde",
+            "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "Debuff",
+            "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "Kontinuierlicher Effekt",
+            "desc": "Enthält Buffs, Debuffs und andere Effekte.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "Mit ausgebreiteten Flügeln gen Sonne",
+        "desc": "Stellt bei der Beschwörung <nobr>#1[i]</nobr> Pkt. Energie für Hyacine wieder her. Stellt bei der ersten Beschwörung zusätzlich <nobr>#2[i]</nobr> Pkt. Energie wieder her.",
+        "simpleDesc": "Stellt bei der Beschwörung Energie für Hyacine wieder her.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Verstärkung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "Fallen, dann fliegen",
+        "desc": "Wenn der Kleine Ika verschwindet, wird Hyacines <u>Aktion um <nobr>#1[i]%</nobr> vorgezogen</u>.",
+        "simpleDesc": "Wenn der Kleine Ika verschwindet, wird Hyacines <u>Aktion vorgezogen</u>.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Verstärkung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Aktion vorziehen",
+            "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "Schütze die Kerze in der Nacht",
-      "desc": "Erhöht die max. LP aller Verbündeten zusätzlich um <nobr>50%</nobr>, wenn sich Hyacine im Status „Sonne nach dem Regen“ befindet. Nach einem Angriff werden sofort LP in Höhe von <nobr>8%</nobr> von Hyacines max. LP wiederhergestellt."
+      "desc": "Erhöht die max. LP aller Verbündeten zusätzlich um <nobr>50%</nobr>, wenn sich Hyacine im Status „Sonne nach dem Regen“ befindet. Nach einem Angriff werden sofort LP in Höhe von <nobr>8%</nobr> von Hyacines max. LP wiederhergestellt.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "Besuche mich in meinem Hof",
-      "desc": "Erhöht ihre GES für <nobr>2</nobr> Rd. um <nobr>30%</nobr>, wenn die LP von Verbündeten reduziert werden."
+      "desc": "Erhöht ihre GES für <nobr>2</nobr> Rd. um <nobr>30%</nobr>, wenn die LP von Verbündeten reduziert werden.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "Auf zu einem Abenteuer in Richtung Sonne!",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "Glänzender Bernstein für dich",
-      "desc": "Die Spur „Stillstand des Sturms“ wird verstärkt. Für je <nobr>1</nobr> Pkt. zusätzliche GES wird der KRIT-SCH von Hyacine und dem Kleinen Ika um <nobr>2%</nobr> erhöht."
+      "desc": "Die Spur „Stillstand des Sturms“ wird verstärkt. Für je <nobr>1</nobr> Pkt. zusätzliche GES wird der KRIT-SCH von Hyacine und dem Kleinen Ika um <nobr>2%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "Roter Schein, verborgen im Meer",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "O Himmel ... erhöre meine Bitten",
-      "desc": "Die gesamte bewirkte Heilung, die durch Einsatz der Memogeist-Technik vom Kleinen Ika entfernt wird, wird auf <nobr>12%</nobr> geändert. Wenn der Kleine Ika sich auf dem Kampffeld befindet, wird die <u>WDS-DUR</u> aller Typen aller Verbündeten um <nobr>20%</nobr> erhöht."
+      "desc": "Die gesamte bewirkte Heilung, die durch Einsatz der Memogeist-Technik vom Kleinen Ika entfernt wird, wird auf <nobr>12%</nobr> geändert. Wenn der Kleine Ika sich auf dem Kampffeld befindet, wird die <u>WDS-DUR</u> aller Typen aller Verbündeten um <nobr>20%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

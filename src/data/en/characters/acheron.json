@@ -2,6 +2,7 @@
   "_id": 1308,
   "id": "acheron",
   "name": "Acheron",
+  "description": "A drifter claiming to be a Galaxy Ranger. Her true name is unknown.\nShe walks the cosmos alone, carrying with her a long sword.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -244,9 +245,18 @@
       "id": "trilateral_wiltcross",
       "name": "Trilateral Wiltcross",
       "desc": "Deals Lightning DMG equal to #1[i]% of Acheron's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Lightning DMG to a single enemy.",
+      "simpleDesc": "Deals minor Lightning DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Gains #3[i] point(s) of Slashed Dream. Inflicts #3[i] stack(s) of Crimson Knot on one enemy, dealing Lightning DMG to this target, as well as minor Lightning DMG to adjacent targets.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -740,9 +759,18 @@
       "id": "slashed_dream_cries_in_red",
       "name": "Slashed Dream Cries in Red",
       "desc": "Sequentially unleash \"Rainblade\" 3 times and \"Stygian Resurge\" 1 time, dealing Lightning DMG up to #6[i]% of Acheron's ATK to one designated enemy target, as well as Lightning DMG up to #7[i]% of Acheron's ATK to other targets.\n\"Rainblade\": Deals Lightning DMG equal to #1[f1]% of Acheron's ATK to one designated enemy target and removes up to 3 stacks of \"Crimson Knot\" from the target. When \"Crimson Knot\" is removed, immediately deals Lightning DMG equal to #2[f1]% of Acheron's ATK to all enemies. For every stack of \"Crimson Knot\" removed, this DMG Multiplier is additionally increased, up to a maximum of #5[f1]%.\n\"Stygian Resurge\": Deals Lightning DMG equal to #3[i]% of Acheron's ATK to all enemies and remove all \"Crimson Knots.\"\n\"Crimson Knot\" cannot be applied to enemies during the Ultimate.",
-      "simpleDesc": "Deals 3 hits of minor Lightning DMG to a single enemy. If Crimson Knot is removed from the target, then deals minor Lightning DMG to all enemies. Finally, deals 1 hit of Lightning DMG to all enemies and removes all Crimson Knots.",
+      "simpleDesc": "Deals 3 hits of minor Lightning DMG to one enemy. If \"Crimson Knot\" is removed from the target, then deals minor Lightning DMG to all enemies. Finally, deals 1 hit of Lightning DMG to all enemies and removes all \"Crimson Knots.\"",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "When Slashed Dream reaches its upper limit, the Ultimate can be activated. During the Ultimate, reduces enemies' Toughness regardless of Weakness Types and reduces all enemies' All-Type RES.\nWhen any unit inflicts debuffs on an enemy target while using their ability, Acheron gains Slashed Dream and inflicts Crimson Knot on an enemy target.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1472,15 @@
       "desc": "Immediately attacks the enemy. At the start of each wave, gains Quadrivalent Ascendance, dealing Lightning DMG equal to #1[i]% of Acheron's ATK to all enemies and reducing Toughness of all enemies irrespective of Weakness Types. When breaking Weaknesses, triggers the Lightning Weakness Break effect.\nQuadrivalent Ascendance: After using the Ultimate, Acheron gains #2[i] point(s) of Slashed Dream and inflicts #2[i] stack(s) of Crimson Knot on a single random enemy.\nIf attacking a normal enemy, immediately defeats them without entering combat. When not hitting enemies, no Technique Points are consumed.",
       "simpleDesc": "Attacks the enemy. At the start of each wave, gains Quadrivalent Ascendance, dealing Lightning DMG to all enemies and reducing Toughness regardless of Weakness Types.\nIf attacking a normal enemy, immediately defeats them without entering combat. When not hitting enemies, no Technique Points are consumed.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1498,97 @@
       "_id": 130801,
       "id": "silenced_sky_spake_sooth",
       "name": "Silenced Sky Spake Sooth",
-      "desc": "When dealing DMG to <u>debuffed</u> enemies, increases CRIT Rate by <nobr>18%</nobr>."
+      "desc": "When dealing DMG to <u>debuffed</u> enemies, increases CRIT Rate by <nobr>18%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130802,
       "id": "mute_thunder_in_still_tempest",
       "name": "Mute Thunder in Still Tempest",
-      "desc": "The number of Nihility characters required for the Trace \"The Abyss\" to achieve its highest possible effect is reduced by 1. When this unit's turn starts, gains 1 point of Slashed Dream and inflicts 1 stack of Crimson Knot on the enemy with the most Crimson Knot stacks."
+      "desc": "The number of Nihility characters required for the Trace \"The Abyss\" to achieve its highest possible effect is reduced by 1. When this unit's turn starts, gains 1 point of Slashed Dream and inflicts 1 stack of Crimson Knot on the enemy with the most Crimson Knot stacks.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130803,
       "id": "frost_bites_in_death",
       "name": "Frost Bites in Death",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130804,
       "id": "shrined_fire_for_mirrored_soul",
       "name": "Shrined Fire for Mirrored Soul",
-      "desc": "When enemy targets enter combat, inflicts them with the Ultimate DMG Vulnerability, increasing the amount of Ultimate DMG they take by <nobr>8%</nobr>."
+      "desc": "When enemy targets enter combat, inflicts them with the Ultimate DMG Vulnerability, increasing the amount of Ultimate DMG they take by <nobr>8%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130805,
       "id": "strewn_souls_on_erased_earths",
       "name": "Strewn Souls on Erased Earths",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130806,
       "id": "apocalypse_the_emancipator",
       "name": "Apocalypse, the Emancipator",
-      "desc": "Increases the All-Type <u>RES PEN</u> for the Ultimate DMG dealt by Acheron by <nobr>20%</nobr>. The DMG dealt by Basic ATK and Skill will also be considered as Ultimate DMG and can Reduce enemy Toughness regardless of Weakness Types. When breaking Weaknesses, triggers the Lightning Weakness Break effect."
+      "desc": "Increases the All-Type <u>RES PEN</u> for the Ultimate DMG dealt by Acheron by <nobr>20%</nobr>. The DMG dealt by Basic ATK and Skill will also be considered as Ultimate DMG and can Reduce enemy Toughness regardless of Weakness Types. When breaking Weaknesses, triggers the Lightning Weakness Break effect.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

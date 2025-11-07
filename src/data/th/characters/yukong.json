@@ -2,6 +2,7 @@
   "_id": 1207,
   "id": "yukong",
   "name": "Yukong",
+  "description": "หัวหน้าของ Sky-Faring Commission แห่ง Xianzhou \"Luofu\" ผู้เป็นนักบินและมือยิง ที่ผ่านสมรภูมิมามากมาย\nปัจจุบันจมอยู่ในกองงานที่แสนซับซ้อน จนยากจะปลีกตัวออกมาได้",
   "rarity": 4,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG จินตภาพเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "ได้รับ \"Roaring Bowstrings\" 2 ชั้น เมื่อตัวเองมี \"Roaring Bowstrings\" แล้ว ATK ของฝ่ายเราทั้งหมดจะเพิ่มขึ้น",
       "type": "สกิลต่อสู้",
       "tag": "สนับสนุน",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,15 @@
       "simpleDesc": "เมื่อตัวเองได้รับ \"Roaring Bowstrings\" อัตราคริติคอลและ DMG คริติคอล ของฝ่ายตัวเองทั้งหมดจะเพิ่มขึ้น และสร้าง DMG จินตภาพอย่างรุนแรงแก่ศัตรูหนึ่งตัว",
       "type": "ท่าไม้ตาย",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1074,18 @@
       "simpleDesc": "ทำให้การโจมตีปกติสร้าง DMG เพิ่มเล็กน้อย และเพิ่มการลดค่าความทนทานของการโจมตีปกติครั้งนี้ โดยจะสามารถเกิดเอฟเฟกต์นี้ได้อีกครั้ง หลังจากผ่านไป 1 เทิร์น",
       "type": "พรสวรรค์",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1404,15 @@
       "simpleDesc": "ทำให้ความเร็วในการเคลื่อนที่ของตัวเองเพิ่มขึ้น หลังจากโจมตีศัตรูและเข้าสู่การต่อสู้ จะได้รับ \"Roaring Bowstrings\" 2 ชั้น",
       "type": "เทคนิค",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1431,79 @@
       "_id": 120701,
       "id": "aerial_marshal",
       "name": "Aerial Marshal",
-      "desc": "เมื่อเข้าสู่การต่อสู้ ความเร็วของฝ่ายเราทั้งหมดจะเพิ่มขึ้น <nobr>10%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น"
+      "desc": "เมื่อเข้าสู่การต่อสู้ ความเร็วของฝ่ายเราทั้งหมดจะเพิ่มขึ้น <nobr>10%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120702,
       "id": "skyward_command",
       "name": "Skyward Command",
-      "desc": "เมื่อค่าพลังงานในปัจจุบัน ของเป้าหมายตัวใดตัวหนึ่งในฝ่ายเรา เท่ากับพลังงานสูงสุดของตัวเอง Yukong จะฟื้นฟูพลังงานเพิ่มเติม <nobr>5</nobr> หน่วย โดยเอฟเฟกต์นี้จะปล่อยได้แค่ 1 ครั้งต่อเป้าหมายแต่ละตัวในฝ่ายเรา และเมื่อ Yukong ใช้ท่าไม้ตายแล้ว จำนวนการปล่อยเอฟเฟกต์ดังกล่าว จะถูกรีเซ็ต"
+      "desc": "เมื่อค่าพลังงานในปัจจุบัน ของเป้าหมายตัวใดตัวหนึ่งในฝ่ายเรา เท่ากับพลังงานสูงสุดของตัวเอง Yukong จะฟื้นฟูพลังงานเพิ่มเติม <nobr>5</nobr> หน่วย โดยเอฟเฟกต์นี้จะปล่อยได้แค่ 1 ครั้งต่อเป้าหมายแต่ละตัวในฝ่ายเรา และเมื่อ Yukong ใช้ท่าไม้ตายแล้ว จำนวนการปล่อยเอฟเฟกต์ดังกล่าว จะถูกรีเซ็ต",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120703,
       "id": "torrential_fusillade",
       "name": "Torrential Fusillade",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120704,
       "id": "zephyrean_echoes",
       "name": "Zephyrean Echoes",
-      "desc": "เมื่อมี \"Roaring Bowstrings\" อยู่ Yukong จะสร้าง DMG เพิ่มขึ้น <nobr>30%</nobr>"
+      "desc": "เมื่อมี \"Roaring Bowstrings\" อยู่ Yukong จะสร้าง DMG เพิ่มขึ้น <nobr>30%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120705,
       "id": "august_deadshot",
       "name": "August Deadshot",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120706,
       "id": "bowstring_thunderclap",
       "name": "Bowstring Thunderclap",
-      "desc": "เมื่อ Yukong ปล่อยท่าไม้ตาย จะได้รับ \"Roaring Bowstrings\" <nobr>1</nobr> ชั้นก่อนทันที"
+      "desc": "เมื่อ Yukong ปล่อยท่าไม้ตาย จะได้รับ \"Roaring Bowstrings\" <nobr>1</nobr> ชั้นก่อนทันที",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

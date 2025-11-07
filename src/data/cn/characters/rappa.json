@@ -2,6 +2,7 @@
   "_id": 1317,
   "id": "rappa",
   "name": "乱破",
+  "description": "如丑时三刻的闪光弹一般现身在匹诺康尼，以忍者自居，将世间一切归因于「忍法」的奇妙少女。\n贯彻吟诵忍•真言、绘制缭乱•忍符、修习忍•法帖的「忍•道」——即说唱，涂鸦，漫画——苦炼自身意志，驰骋星间行侠仗义。\n身为「巡海游侠」的一员，始终追猎着名为「御猿•邪忍」的恶党，直至银河尽头。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "对指定敌方单体造成少量虚数属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "对敌方全体造成虚数属性伤害。",
       "type": "战技",
       "tag": "群攻",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "进入【结印】状态，获得额外回合并获得3点【彩墨】，且弱点击破效率提高，击破特攻提高。\n【结印】状态下获得强化普攻，施放强化普攻后会消耗1点【彩墨】，耗尽时退出【结印】状态。",
       "type": "终结技",
       "tag": "强化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "额外回合",
+          "desc": "获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,15 @@
       "simpleDesc": "当敌方目标的弱点被击破时，乱破获得1点充能。发动【忍具•降魔花弁】的第3段攻击时，额外对敌方全体造成虚数属性击破伤害，该伤害可无视弱点属性削韧，并消耗所有充能，使本次击破伤害倍率和削韧值提高。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        6,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1452,15 @@
       "simpleDesc": "进入【涂鸦】状态，快速向前移动一段距离并攻击接触到的敌人。攻击敌人进战后，对每个敌方目标造成无视弱点属性的削韧及虚数属性击破伤害，并对其相邻目标造成虚数属性击破伤害，同时使自身获得能量。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1426,37 +1481,79 @@
       "_id": 131701,
       "id": "returned_is_the_revenant_with_no_ferry_toll",
       "name": "常世道返三途无六钱",
-      "desc": "施放终结技进入【结印】状态期间，乱破造成的伤害无视目标<nobr>15%</nobr>的防御，退出【结印】状态后恢复<nobr>20</nobr>点能量。"
+      "desc": "施放终结技进入【结印】状态期间，乱破造成的伤害无视目标<nobr>15%</nobr>的防御，退出【结印】状态后恢复<nobr>20</nobr>点能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131702,
       "id": "free_is_the_mind_enlightened_by_haikus",
       "name": "俳句暗记有识无挂碍",
-      "desc": "强化普攻的前2段攻击对指定敌方单体的削韧值提高<nobr>50%</nobr>。"
+      "desc": "强化普攻的前2段攻击对指定敌方单体的削韧值提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131703,
       "id": "many_are_the_shrines_that_repel_no_hell",
       "name": "堂塔伽蓝末法无间狱",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131704,
       "id": "lost_is_the_nind_devoured_by_time",
       "name": "经年劣化任侠无忍义",
-      "desc": "【结印】状态期间，我方全体速度提高<nobr>12%</nobr>。"
+      "desc": "【结印】状态期间，我方全体速度提高<nobr>12%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131705,
       "id": "steady_is_the_ranger_with_unerring_arrows",
       "name": "一心不乱鸣弦无徒矢",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131706,
       "id": "righteous_is_the_wrath_that_spares_no_evil",
       "name": "破邪显正应报无慈悲",
-      "desc": "战斗开始时乱破获得<nobr>5</nobr>点天赋效果的充能，且充能上限增加<nobr>5</nobr>点。发动【忍具•降魔花弁】第3段攻击后获得<nobr>5</nobr>点充能。"
+      "desc": "战斗开始时乱破获得<nobr>5</nobr>点天赋效果的充能，且充能上限增加<nobr>5</nobr>点。发动【忍具•降魔花弁】第3段攻击后获得<nobr>5</nobr>点充能。",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

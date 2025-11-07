@@ -2,6 +2,7 @@
   "_id": 1003,
   "id": "himeko",
   "name": "Himeko",
+  "description": "La jeune femme chargée de réparer l'Astral Express.\nElle a choisi de voyager à bord de ce train afin d'observer les étoiles.\nSon passe-temps préféré est de préparer du café maison.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 100302,
       "id": "molten_detonation",
       "name": "Détonation en fusion",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Himeko à un ennemi unique et des DGT de feu équivalents à #2[i]% de l'ATQ de Himeko aux ennemis adjacents.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Himeko à un ennemi désigné et des DGT de feu équivalents à #2[i]% de l'ATQ de Himeko aux ennemis adjacents.",
       "simpleDesc": "Inflige des DGT de feu à un ennemi unique et des DGT de feu mineurs aux ennemis adjacents.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 13
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Inflige des DGT de feu à tous les ennemis et régénère des points d'énergie si des ennemis sont vaincus.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 27
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "Obtient de la Charge en début de combat ou lorsqu'une unité ennemie subit une Rupture de faiblesse.\nLorsqu'une cible alliée attaque et que la Charge est complète, Himeko lance une ATQ de suivi qui inflige des DGT de feu à tous les ennemis, en consommant tous les points de Charge.",
       "type": "Talent",
       "tag": "ZdE",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,24 @@
       "simpleDesc": "Crée une dimension spéciale. Il y a de fortes chances d'augmenter les DGT de feu subis par les ennemis lorsque le combat est engagé avec des ennemis de la dimension.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1441,79 @@
       "_id": 100301,
       "id": "childhood",
       "name": "Enfance",
-      "desc": "Après avoir déclenché Ruée vers la victoire, la VIT de Himeko augmente de <nobr>20%</nobr> pendant <nobr>2</nobr> tours."
+      "desc": "Après avoir déclenché Ruée vers la victoire, la VIT de Himeko augmente de <nobr>20%</nobr> pendant <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100302,
       "id": "convergence",
       "name": "Convergence",
-      "desc": "Inflige <nobr>15%</nobr> de DGT supplémentaires aux ennemis dont le pourcentage de PV est inférieur ou égal à <nobr>50%</nobr>."
+      "desc": "Inflige <nobr>15%</nobr> de DGT supplémentaires aux ennemis dont le pourcentage de PV est inférieur ou égal à <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100303,
       "id": "poised",
       "name": "Assurance",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100304,
       "id": "dedication",
       "name": "Dévouement",
-      "desc": "Lorsque la compétence de Himeko fait subir une Rupture de faiblesse à un ennemi, elle obtient <nobr>1</nobr> point de Charge supplémentaire."
+      "desc": "Lorsque la compétence de Himeko fait subir une Rupture de faiblesse à un ennemi, elle obtient <nobr>1</nobr> point de Charge supplémentaire.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100305,
       "id": "aspiration",
       "name": "Aspiration",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100306,
       "id": "trailblaze",
       "name": "En avant !",
-      "desc": "L'ultime inflige 2 instances de DGT de feu supplémentaires équivalents à <nobr>40%</nobr> des DGT initiaux à un ennemi aléatoire."
+      "desc": "L'ultime inflige 2 instances de DGT de feu supplémentaires équivalents à <nobr>40%</nobr> des DGT initiaux à un ennemi aléatoire.",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

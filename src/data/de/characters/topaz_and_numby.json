@@ -2,6 +2,7 @@
   "_id": 1112,
   "id": "topaz_and_numby",
   "name": "Topaz & Kontie",
+  "description": "Topaz, eine hochrangige Führungskraft in der Abteilung für strategische Investitionen der Interastralen Friedenskorporation und Leiterin des Teams zur Überwachung besonderer Schulden.\nTopaz ist trotz ihres jungen Alters bereits eine der „Zehn Steinherzen“. Ihr Kernstein ist der „Topas der Schuldeneintreibung“.\nIhr Partner, das Warp-Sparschwein „Kontie“, kann sogar Aufgaben erledigen, die mit dem Eintreiben von Schulden, Wertpapieren und Versicherungswissenschaften zu tun haben.\nGegenwärtig bereisen sie gemeinsam den Kosmos, um Schulden und Passiva nachzujagen, die sich negativ auf die unternehmerischen Vorhaben der IFK auswirken.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Feuer-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Verursacht bei einem Gegner „Schuldennachweis“ und lässt ihn mehr Folgeangriff-SCH erleiden. Kontie fügt dem Ziel Feuer-SCH zu.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -728,6 +762,18 @@
       "simpleDesc": "Kontie tritt in den Status „Erstaunlicher Aufstieg!“ ein und sein SCH-Multiplikator und KRIT-SCH werden erhöht.",
       "type": "Ultimate",
       "tag": "Verstärkung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1113,32 @@
       "simpleDesc": "Beschwört Kontie zu Beginn des Kampfes. Wenn Kontie eine Aktion ausführt, startet es einen Folgeangriff auf Gegner mit „Schuldennachweis“ und verursache Feuer-SCH.\nWenn Gegner mit „Schuldennachweis“ Folgeangriffe eines Verbündeten erhalten, wird Konties Aktion vorgezogen.",
       "type": "Talent",
       "tag": "Einzelangriff",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1463,15 @@
       "simpleDesc": "Beschwört Kontie, sich in einem Labyrinth anzuschließen. Kontie wird automatisch nach gewöhnlichen Schätzen und Sparschweinen in der Nähe suchen. Beim Einsatz der Technik wird die Energie für Topaz nach Konties erstem Angriff im nächsten Kampf wiederhergestellt.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1489,106 @@
       "_id": 111201,
       "id": "future_market",
       "name": "Markt der Zukunft",
-      "desc": "Wenn Gegner mit „Schuldennachweis“ von <u>Folgeangriffen</u> getroffen werden, gehen sie in den Status „Schuldner“ über. Dies kann nur 1-mal in einem einzigen Angriff wirksam werden.\nSchuldner erhöht den KRIT-SCH von <u>Folgeangriffen</u>, der den betroffenen Gegnern zugefügt wird, um <nobr>25%</nobr>, bis zu <nobr>2</nobr>-fach stapelbar. Wenn Schuldennachweis entfernt wird, wird auch der Status Schuldner entfernt."
+      "desc": "Wenn Gegner mit „Schuldennachweis“ von <u>Folgeangriffen</u> getroffen werden, gehen sie in den Status „Schuldner“ über. Dies kann nur 1-mal in einem einzigen Angriff wirksam werden.\nSchuldner erhöht den KRIT-SCH von <u>Folgeangriffen</u>, der den betroffenen Gegnern zugefügt wird, um <nobr>25%</nobr>, bis zu <nobr>2</nobr>-fach stapelbar. Wenn Schuldennachweis entfernt wird, wird auch der Status Schuldner entfernt.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111202,
       "id": "bona_fide_acquisition",
       "name": "Freundliche Übernahme",
-      "desc": "Nachdem Kontie eine Aktion ausgeführt und einen Angriff gestartet hat, wird Topaz’ Energie um <nobr>5</nobr> Pkt. wiederhergestellt."
+      "desc": "Nachdem Kontie eine Aktion ausgeführt und einen Angriff gestartet hat, wird Topaz’ Energie um <nobr>5</nobr> Pkt. wiederhergestellt.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111203,
       "id": "seize_the_big_and_free_the_small",
       "name": "Vorrangsteuerung",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111204,
       "id": "agile_operation",
       "name": "Schnelle Handhabung",
-      "desc": "Wenn Konties Runde beginnt, wird Topaz’ Aktion um <nobr>20%</nobr> <u>vorgezogen</u>."
+      "desc": "Wenn Konties Runde beginnt, wird Topaz’ Aktion um <nobr>20%</nobr> <u>vorgezogen</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Aktion vorziehen",
+          "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111205,
       "id": "inflationary_demand",
       "name": "Überhöhte Nachfrage",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111206,
       "id": "incentive_mechanism",
       "name": "Anreizmechanismen",
-      "desc": "Erhöht Konties Trefferzahl im Status „Erstaunlicher Aufstieg!“ um <nobr>1</nobr>. Erhöht seine <u>Feuer-WDS-DUR</u> beim Angriff um <nobr>10%</nobr>."
+      "desc": "Erhöht Konties Trefferzahl im Status „Erstaunlicher Aufstieg!“ um <nobr>1</nobr>. Erhöht seine <u>Feuer-WDS-DUR</u> beim Angriff um <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

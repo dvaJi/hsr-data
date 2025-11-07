@@ -2,6 +2,7 @@
   "_id": 1313,
   "id": "sunday",
   "name": "Sunday",
+  "description": "Le rêve de l'Ordre s'est évanoui dans les limbes, mais certains ne sont pas prêts à renoncer à leurs idéaux.\nOù les pas de ce voyageur à qui on a coupé les ailes vont-ils le mener ?",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi désigné.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Permet à un personnage allié désigné et à son invocation d'agir immédiatement, tout en augmentant les DGT qu'ils infligent. L'effet d'augmentation de DGT est plus important si la cible a une invocation.\nRécupère 1 point de compétence après avoir utilisé la compétence sur le Béatifié.\nLorsque Sunday utilise cette capacité sur un personnage de la Voie de l'Harmonie, l'effet d'action immédiate n'est pas déclenché.",
       "type": "Compétence",
       "tag": "Soutien",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Permet de restaurer de l'énergie à un personnage allié désigné et lui accorde ainsi qu'à son invocation le statut Béatifié. Les Béatifiés voient leur DGT critiques augmenter.",
       "type": "Ultime",
       "tag": "Soutien",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "Augmente les chances de coup critique de la cible lors de l'utilisation de la compétence.",
       "type": "Talent",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1443,15 @@
       "simpleDesc": "Après avoir utilisé cette technique, la première fois que Sunday utilise une capacité sur une cible alliée au cours du prochain combat, les DGT infligés par cette cible augmentent.",
       "type": "Technique",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1469,79 @@
       "_id": 131301,
       "id": "millenniums_quietus",
       "name": "Quiétude du millénaire",
-      "desc": "Lorsque Sunday utilise sa compétence, le personnage cible ignore <nobr>16%</nobr> de la DÉF de la cible ennemie et ses invocations ignorent <nobr>40%</nobr> de la DÉF de la cible ennemie en cas de DGT infligés, pour une durée de <nobr>2</nobr> tours."
+      "desc": "Lorsque Sunday utilise sa compétence, le personnage cible ignore <nobr>16%</nobr> de la DÉF de la cible ennemie et ses invocations ignorent <nobr>40%</nobr> de la DÉF de la cible ennemie en cas de DGT infligés, pour une durée de <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131302,
       "id": "faith_outstrips_frailty",
       "name": "Rempart de la foi",
-      "desc": "Récupère <nobr>2</nobr> points de compétence après la première utilisation de l'ultime. Les DGT infligés par les Béatifiés augmentent de <nobr>30%</nobr>."
+      "desc": "Récupère <nobr>2</nobr> points de compétence après la première utilisation de l'ultime. Les DGT infligés par les Béatifiés augmentent de <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131303,
       "id": "hermitage_of_thorns",
       "name": "Sanctuaire de ronces",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131304,
       "id": "sculptures_preamble",
       "name": "Préambule à la sculpture",
-      "desc": "Régénère <nobr>8</nobr> points d'énergie au début du tour."
+      "desc": "Régénère <nobr>8</nobr> points d'énergie au début du tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131305,
       "id": "paper_raft_in_silver_bay",
       "name": "Radeau de papier de la baie d'argent",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131306,
       "id": "dawn_of_sidereal_cacophony",
       "name": "Aube de la cacophonie stellaire",
-      "desc": "L'effet d'augmentation des chances de coup critique du talent peut être cumulé jusqu'à <nobr>3</nobr> fois et la durée du talent augmente de <nobr>1</nobr> tour. Quand Sunday utilise son ultime, il applique également l'effet d'augmentation des chances de coup critique du talent à la cible. Lorsque l'effet d'augmentation des chances de coup critique du talent est actif et que les chances de coup critique de la cible dépassent <nobr>100</nobr> %, chaque 1 % supplémentaire augmente les DGT critiques de <nobr>2%</nobr>."
+      "desc": "L'effet d'augmentation des chances de coup critique du talent peut être cumulé jusqu'à <nobr>3</nobr> fois et la durée du talent augmente de <nobr>1</nobr> tour. Quand Sunday utilise son ultime, il applique également l'effet d'augmentation des chances de coup critique du talent à la cible. Lorsque l'effet d'augmentation des chances de coup critique du talent est actif et que les chances de coup critique de la cible dépassent <nobr>100</nobr> %, chaque 1 % supplémentaire augmente les DGT critiques de <nobr>2%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

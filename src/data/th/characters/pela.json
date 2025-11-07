@@ -2,6 +2,7 @@
   "_id": 1106,
   "id": "pela",
   "name": "Pela",
+  "description": "เจ้าหน้าที่ข่าวกรองของกองกำลัง Silvermane\nเธอเป็นคนที่จริงจัง และเป็นที่เคารพของเหล่าสมาชิกกองกำลัง Silvermane",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG น้ำแข็งเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "ลบเอฟเฟกต์ Buff 1 เอฟเฟกต์ จากศัตรูหนึ่งตัว และสร้าง DMG น้ำแข็งแก่ศัตรูหนึ่งตัว",
       "type": "สกิลต่อสู้",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "เอฟเฟกต์ Buff",
+          "desc": "สถานะต่อเนื่องทั้งหมด ที่เป็นเอฟเฟกต์ Buff ในการต่อสู้ หากไม่มีคำอธิบายพิเศษ จะสามารถลบล้างได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +756,27 @@
       "simpleDesc": "มีโอกาสอย่างมากที่จะลด DEF ของศัตรูเป้าหมายลง และสร้าง DMG น้ำแข็งเล็กน้อย แก่ฝ่ายศัตรูทั้งหมด",
       "type": "ท่าไม้ตาย",
       "tag": "โจมตีหมู่",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "โอกาสพื้นฐาน",
+          "desc": "โอกาสพื้นฐานที่จะเกิดเอฟเฟกต์ Debuff ให้กับผู้ที่ถูกโจมตี\nโดยอัตราสร้างสถานะของผู้โจมตี และการต้านทานสถานะของศัตรูเป้าหมาย จะส่งผลต่อโอกาสในขั้นสุดท้าย",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1110,24 @@
       "simpleDesc": "หลังจากทำการโจมตี หากศัตรูเป้าหมายติดเอฟเฟกต์ Debuff Pela จะฟื้นฟูพลังงาน",
       "type": "พรสวรรค์",
       "tag": "สนับสนุน",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "เอฟเฟกต์ Debuff",
+          "desc": "สถานะต่อเนื่องทั้งหมดที่มีเอฟเฟกต์ Debuff ในการต่อสู้ หากไม่มีคำอธิบายพิเศษ จะสามารถลบล้างได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1415,24 @@
       "desc": "เมื่อโจมตีศัตรูทันทีและเข้าสู่การต่อสู้ จะสุ่มสร้าง DMG น้ำแข็ง #4[i]% ของ ATK ของ Pela แก่ศัตรูหนึ่งตัว พร้อมทั้งมีโอกาสพื้นฐาน #1[i]% ที่จะทำให้ DEF ของศัตรูเป้าหมายแต่ละตัวลดลง #2[i]% เป็นเวลา #3[i] เทิร์น",
       "simpleDesc": "เมื่อโจมตีศัตรูและเข้าสู่การต่อสู้ จะสุ่มสร้าง DMG เล็กน้อยแก่ศัตรูหนึ่งตัว และมีโอกาสอย่างมากที่จะทำให้ DEF ของศัตรูเป้าหมายแต่ละตัวลดลง",
       "type": "เทคนิค",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "โอกาสพื้นฐาน",
+          "desc": "โอกาสพื้นฐานที่จะเกิดเอฟเฟกต์ Debuff ให้กับผู้ที่ถูกโจมตี\nโดยอัตราสร้างสถานะของผู้โจมตี และการต้านทานสถานะของศัตรูเป้าหมาย จะส่งผลต่อโอกาสในขั้นสุดท้าย",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1452,114 @@
       "_id": 110601,
       "id": "victory_report",
       "name": "Victory Report",
-      "desc": "เมื่อศัตรูเป้าหมายถูกกำจัด\nPela จะฟื้นฟูพลังงาน <nobr>5</nobr> หน่วย"
+      "desc": "เมื่อศัตรูเป้าหมายถูกกำจัด\nPela จะฟื้นฟูพลังงาน <nobr>5</nobr> หน่วย",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110602,
       "id": "adamant_charge",
       "name": "Adamant Charge",
-      "desc": "เมื่อปล่อยสกิลต่อสู้และลบ <u>เอฟเฟกต์ Buff</u> ความเร็วจะเพิ่มขึ้น <nobr>10%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น"
+      "desc": "เมื่อปล่อยสกิลต่อสู้และลบ <u>เอฟเฟกต์ Buff</u> ความเร็วจะเพิ่มขึ้น <nobr>10%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "เอฟเฟกต์ Buff",
+          "desc": "สถานะต่อเนื่องทั้งหมด ที่เป็นเอฟเฟกต์ Buff ในการต่อสู้ หากไม่มีคำอธิบายพิเศษ จะสามารถลบล้างได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110603,
       "id": "suppressive_force",
       "name": "Suppressive Force",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110604,
       "id": "full_analysis",
       "name": "Full Analysis",
-      "desc": "เมื่อใช้สกิลต่อสู้ จะมี <u>โอกาสพื้นฐาน</u> <nobr>100%</nobr> ที่จะลดความต้านทานน้ำแข็ง ของศัตรูเป้าหมายลง <nobr>12%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น"
+      "desc": "เมื่อใช้สกิลต่อสู้ จะมี <u>โอกาสพื้นฐาน</u> <nobr>100%</nobr> ที่จะลดความต้านทานน้ำแข็ง ของศัตรูเป้าหมายลง <nobr>12%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "โอกาสพื้นฐาน",
+          "desc": "โอกาสพื้นฐานที่จะเกิดเอฟเฟกต์ Debuff ให้กับผู้ที่ถูกโจมตี\nโดยอัตราสร้างสถานะของผู้โจมตี และการต้านทานสถานะของศัตรูเป้าหมาย จะส่งผลต่อโอกาสในขั้นสุดท้าย",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110605,
       "id": "absolute_jeopardy",
       "name": "Absolute Jeopardy",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110606,
       "id": "feeble_pursuit",
       "name": "Feeble Pursuit",
-      "desc": "หลังจากทำการโจมตี หากศัตรูเป้าหมายอยู่ภายใต้ <u>เอฟเฟกต์ Debuff</u> จะสร้าง <u>DMG น้ำแข็งเพิ่มเติม</u> <nobr>40%</nobr> ของ ATK ของ Pela แก่ศัตรูดังกล่าว"
+      "desc": "หลังจากทำการโจมตี หากศัตรูเป้าหมายอยู่ภายใต้ <u>เอฟเฟกต์ Debuff</u> จะสร้าง <u>DMG น้ำแข็งเพิ่มเติม</u> <nobr>40%</nobr> ของ ATK ของ Pela แก่ศัตรูดังกล่าว",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "เอฟเฟกต์ Debuff",
+          "desc": "สถานะต่อเนื่องทั้งหมดที่มีเอฟเฟกต์ Debuff ในการต่อสู้ หากไม่มีคำอธิบายพิเศษ จะสามารถลบล้างได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG เพิ่มเติม",
+          "desc": "ทำให้ผู้ที่ถูกโจมตีได้รับ DMG เพิ่มเติม 1 ครั้ง โดยการโจมตีครั้งนี้ จะไม่ถือเป็นการโจมตี 1 ครั้ง",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1206,
   "id": "sushang",
   "name": "{RUBY_B#スショウ}素裳{RUBY_E#}",
+  "description": "仙舟「曜青」で生まれ、「羅浮」の雲騎軍で訓練を受けている新兵。\n彼女は母から贈られた家伝の剣を手に、これから訪れる未来に期待を膨らませている。",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "敵単体に物理属性ダメージを与え、低確率で「剣勢」を発動する。敵が弱点撃破状態なら「剣勢」は必ず発動する。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000006,
+          "name": "弱点撃破状態",
+          "desc": "敵の靭性が0まで削られた時に入る特殊状態。この状態になった敵は行動順が遅延する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +779,18 @@
       "simpleDesc": "敵単体に大量の物理属性ダメージを与え、「剣勢」の効果を強化して即座に行動する。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1124,15 @@
       "simpleDesc": "敵が弱点撃破された時、自身の速度をアップする。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1435,15 @@
       "desc": "敵を攻撃。戦闘に入った後、敵全体に素裳の攻撃力#1[i]%分の物理属性ダメージを与える。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、敵全体に少量の物理属性ダメージを与える。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,37 +1460,88 @@
       "_id": 120601,
       "id": "cut_with_ease",
       "name": "{RUBY_B#ゆうじんゆうよ}游刃有余{RUBY_E#}",
-      "desc": "<u>弱点撃破状態</u>の敵に対して戦闘スキルを発動した後、SPを1回復する。"
+      "desc": "<u>弱点撃破状態</u>の敵に対して戦闘スキルを発動した後、SPを1回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点撃破状態",
+          "desc": "敵の靭性が0まで削られた時に入る特殊状態。この状態になった敵は行動順が遅延する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120602,
       "id": "refine_in_toil",
       "name": "{RUBY_B#そ}其{RUBY_E#}の{RUBY_B#み}身{RUBY_E#}、{RUBY_B#ひゃくれん}百煉{RUBY_E#}",
-      "desc": "「剣勢」発動後、素裳の被ダメージ-<nobr>20%</nobr>、1ターン継続。"
+      "desc": "「剣勢」発動後、素裳の被ダメージ-<nobr>20%</nobr>、1ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120603,
       "id": "rise_from_fame",
       "name": "{RUBY_B#でんこけんりゅう}伝古剣流{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120604,
       "id": "cleave_with_heart",
       "name": "{RUBY_B#そ}其{RUBY_E#}の{RUBY_B#こころ}心{RUBY_E#}、{RUBY_B#ひゃくへき}百闢{RUBY_E#}",
-      "desc": "素裳の撃破特効+<nobr>40%</nobr>。"
+      "desc": "素裳の撃破特効+<nobr>40%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120605,
       "id": "prevail_via_taixu",
       "name": "{RUBY_B#たいきょしんい}太虚神意{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120606,
       "id": "dwell_like_water",
       "name": "{RUBY_B#じょうぜんじゃくすい}上善若水{RUBY_E#}",
-      "desc": "天賦の加速効果が累積できるようになる、最大で2層累積できる。戦闘に入った後、素裳は天賦の加速効果を1層獲得する。"
+      "desc": "天賦の加速効果が累積できるようになる、最大で2層累積できる。戦闘に入った後、素裳は天賦の加速効果を1層獲得する。",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

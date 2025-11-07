@@ -2,6 +2,7 @@
   "_id": 1209,
   "id": "yanqing",
   "name": "Yanqing",
+  "description": "Serviçal do general Jing Yuan. Espadachim habilidoso que nem atingiu a maioridade ainda.\nCom uma espada na mão, Yanqing é invencível.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Gelo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Causa Dano de Gelo a um único inimigo e ativa a Sincronia d'Alma de Ferro.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +738,27 @@
       "simpleDesc": "Aumenta a Chance de CRIT de Yanqing. Aprimora a Sincronia d'Alma de Ferro e causa Dano de Gelo massivo a um único inimigo.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Melhoria",
+          "desc": "Pode fornecer melhorias à habilidade de combate por um período de tempo, que podem ser removidas, a menos que esteja especificado de outra forma.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1083,48 @@
       "simpleDesc": "Durante Sincronia d'Alma de Ferro, reduz a chance deste personagem ser atacado e aumenta a Chance de CRIT e Dano CRIT. Depois de atacar um inimigo, tem uma chance de realizar um Ataque Extra, causando Dano de Gelo com uma chance de causar Congelamento ao alvo.\nSincronia d'Alma de Ferro será removida depois que este personagem recebe Dano.",
       "type": "Talento",
       "tag": "Alvo Único",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chance fixa",
+          "desc": "Chance fixa não será afetada por nenhum fator.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1494,15 @@
       "simpleDesc": "Depois que este personagem usa sua Técnica, no início da próxima batalha, aumenta o Dano causado por este personagem a inimigos-alvo com PV em 50% ou mais.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1424,37 +1521,106 @@
       "_id": 120901,
       "id": "svelte_saber",
       "name": "Sabre Esbelto",
-      "desc": "Quando Yanqing ataca um inimigo afligido com \"Congelamento\", ele causa <nobr>60%</nobr> de seu ATQ como <u>Dano de Gelo Adicional</u>."
+      "desc": "Quando Yanqing ataca um inimigo afligido com \"Congelamento\", ele causa <nobr>60%</nobr> de seu ATQ como <u>Dano de Gelo Adicional</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120902,
       "id": "supine_serenade",
       "name": "Serenata do Supino",
-      "desc": "Quando a Sincronia d'Alma de Ferro estiver ativa, a Taxa de Regeneração de Energia aumenta em <nobr>10%</nobr> extra."
+      "desc": "Quando a Sincronia d'Alma de Ferro estiver ativa, a Taxa de Regeneração de Energia aumenta em <nobr>10%</nobr> extra.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120903,
       "id": "sword_savant",
       "name": "Espada Erudita",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120904,
       "id": "searing_sting",
       "name": "Perfuração Flamejante",
-      "desc": "Quando os PV atuais estiverem em <nobr>80%</nobr> ou mais, a <u>PEN de RES a Gelo</u> desta unidade aumenta em <nobr>12%</nobr>."
+      "desc": "Quando os PV atuais estiverem em <nobr>80%</nobr> ou mais, a <u>PEN de RES a Gelo</u> desta unidade aumenta em <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120905,
       "id": "surging_strife",
       "name": "Conflito Crescente",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120906,
       "id": "swift_swoop",
       "name": "Ataque Rápido",
-      "desc": "Se as <u>melhorias</u> de \"Sincronia d'Alma de Ferro\" ou da Perícia Suprema estiverem em efeito quando o inimigo for derrotado, a duração dessas <u>melhorias</u> é estendida em 1 rodada."
+      "desc": "Se as <u>melhorias</u> de \"Sincronia d'Alma de Ferro\" ou da Perícia Suprema estiverem em efeito quando o inimigo for derrotado, a duração dessas <u>melhorias</u> é estendida em 1 rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Melhoria",
+          "desc": "Pode fornecer melhorias à habilidade de combate por um período de tempo, que podem ser removidas, a menos que esteja especificado de outra forma.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

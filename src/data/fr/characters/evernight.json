@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "Nocterna",
+  "description": "Dans la Zone de mémoire isolée du monde, la lueur des bougies reflète le passé, qui dans la brume s'éteint sans un bruit.\nNocterna, enfant du Souvenir née de l'ombre, Héritière chryséenne chargée de dissimuler la flamme divine du Temps, tu agiteras la marée de l'Oubli, et protégeras le souhait de ceux reflétés dans le miroir.\n« Ne t'inquiète pas, je garderai la Voie du Pionnier pour toi... quoi qu'il en coûte. ♭ »",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de glace mineurs à un ennemi désigné.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Consomme les PV de cette unité pour invoquer le mnémesprit Nox et augmenter les DGT critiques de tous les mnémesprits alliés. Si le mnémesprit Nox est déjà sur le champ de bataille, il récupère des PV. Utiliser cette capacité accorde #3[i] Vestiges. Si Nocterna bénéficie d'Énigme sibylline, accorde #5[i] Vestiges supplémentaires.",
       "type": "Compétence",
       "tag": "Invocation",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "Inflige des DGT de glace à tous les ennemis, invoque le mnémesprit Nox et fait entrer Nocterna dans l'état Énigme sibylline. Dans cet état, augmente les DGT subis par les ennemis, augmente les DGT infligés par Nocterna et son mnémesprit et leur accorde une immunité aux malus de contrôle.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Malus de contrôle",
+          "desc": "Gelé, Enchevêtrement, Emprisonnement, Dominé, Indignation, Forte réverbération, Rêve étrange, Emprisonnement enchevêtré, Terrifié et Immobilité.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "Invoque le mnémesprit Nox en entrant en combat. Chaque fois que Nocterna ou Nox perd des PV, augmente les DGT critiques des deux unités et accorde un certain nombre de Vestiges.\nLorsque Nocterna bénéficie de #6[i] Vestiges ou plus, Nox agit immédiatement.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Malus de contrôle",
+          "desc": "Gelé, Enchevêtrement, Emprisonnement, Dominé, Indignation, Forte réverbération, Rêve étrange, Emprisonnement enchevêtré, Terrifié et Immobilité.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "Au début du prochain combat, accorde aux mnémesprits un effet d'augmentation des DGT critiques identique à celui de la compétence, ainsi qu'un Vestige.",
       "type": "Technique",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Nox",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "Pluie de souvenirs",
+        "desc": "Cette capacité sélectionne automatiquement une cible, donnant la priorité à la cible ennemie que Nocterna a attaquée en dernier. Inflige des DGT de glace équivalents à <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> des PV max de Nox à un ennemi unique. Pour chaque tranche de <nobr>#3[i]</nobr> points de Vestige dont bénéficie Nocterna, inflige des DGT de glace supplémentaires équivalents à <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> des PV max de Nox. Accorde <nobr>#4[i]</nobr> point(s) de Vestige après utilisation.",
+        "simpleDesc": "Inflige des DGT de glace mineurs à un ennemi unique et inflige des DGT de glace mineurs supplémentaires selon le nombre de Vestiges.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "Cible unique"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "Solitude obscure à la dérive",
+        "desc": "Nox est immunisée contre les <u>malus de contrôle</u> et ses chances d'être attaquée augmentent. Lorsque Nox est sur le champ de bataille, Nocterna et Nox infligent <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> de DGT supplémentaires.",
+        "simpleDesc": "Nox est immunisée contre les <u>malus de contrôle</u> et ses chances d'être attaquée augmentent. Lorsque Nox est sur le champ de bataille, augmente les DGT infligés par Nox et Nocterna.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Soutien"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "Malus de contrôle",
+            "desc": "Gelé, Enchevêtrement, Emprisonnement, Dominé, Indignation, Forte réverbération, Rêve étrange, Emprisonnement enchevêtré, Terrifié et Immobilité.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "Dans les pas de la nuit",
+        "desc": "Lorsque cette unité est invoquée, elle agit immédiatement.",
+        "simpleDesc": "Lorsque cette unité est invoquée, elle agit immédiatement.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Renforcement"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "Adieu sans borne",
+        "desc": "Après sa disparition, augmente la VIT de Nocterna de <nobr>#1[i]%</nobr>. Si Nox disparaît après avoir lancé Évanouissement des rêves, pour chaque Vestige utilisé par cette attaque, augmente la VIT de Nocterna de <nobr>#2[i]%</nobr> supplémentaire, jusqu'à un maximum de <nobr>#3[i]</nobr> Vestiges utilisés. L'effet de bonus de VIT ne peut pas se cumuler, et se dissipe au début du prochain tour de Nocterna.",
+        "simpleDesc": "Après sa disparition, augmente la VIT de Nocterna.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Renforcement"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "Évanouissement des rêves",
+        "desc": "Lorsque Nocterna bénéficie de <nobr>#3[i]</nobr> Vestiges ou plus, si elle n'est pas affectée par un malus de contrôle, cette capacité peut être utilisée. Pour chaque Vestige dont bénéficie actuellement Nocterna, Nox inflige des DGT de glace équivalents à <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> de ses PV max à la cible principale, et des DGT de glace équivalents à <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> de ses PV max aux autres cibles ennemies. Après utilisation, consomme tous les PV et les Vestiges, et Nox disparaît.",
+        "simpleDesc": "Inflige des DGT de glace massifs à la cible principale et des DGT de glace aux autres cibles ennemies <span style=\"color:#f29e38ff>selon le nombre de Vestiges</span>. Après avoir utilisé cette capacité, <span style=\"color:#f29e38ff>Nox consomme tous ses PV et tous les Vestiges avant de disparaître</span>.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ZdE"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "Dors, car une longue nuit de rêves t'attend",
-      "desc": "Lorsque Nocterna est sur le champ de bataille et que le champ de bataille compte 4+/3/2/1 cibles ennemies, les mnémesprits alliés infligent des DGT équivalents à <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> de leurs DGT initiaux."
+      "desc": "Lorsque Nocterna est sur le champ de bataille et que le champ de bataille compte 4+/3/2/1 cibles ennemies, les mnémesprits alliés infligent des DGT équivalents à <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> de leurs DGT initiaux.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "Écoute les murmures du sommeil",
-      "desc": "Augmente les DGT critiques de Nocterna et du mnémesprit Nox de <nobr>40%</nobr>. Chaque fois que Nocterna obtient Vestige, augmente le nombre de Vestiges obtenus de <nobr>2</nobr>. Accorde <nobr>2</nobr> charges supplémentaires d'Énigme sibylline lors de l'utilisation de l'ultime."
+      "desc": "Augmente les DGT critiques de Nocterna et du mnémesprit Nox de <nobr>40%</nobr>. Chaque fois que Nocterna obtient Vestige, augmente le nombre de Vestiges obtenus de <nobr>2</nobr>. Accorde <nobr>2</nobr> charges supplémentaires d'Énigme sibylline lors de l'utilisation de l'ultime.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "Rassure-toi, fini est le cauchemar",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "Debout, demain t'appartient",
-      "desc": "Lorsque Nocterna est sur le champ de bataille, augmente l'efficacité de Rupture de faiblesse des mnémesprits alliés de <nobr>25%</nobr>. L'efficacité de Rupture de faiblesse de Nox augmente de <nobr>25%</nobr> supplémentaires."
+      "desc": "Lorsque Nocterna est sur le champ de bataille, augmente l'efficacité de Rupture de faiblesse des mnémesprits alliés de <nobr>25%</nobr>. L'efficacité de Rupture de faiblesse de Nox augmente de <nobr>25%</nobr> supplémentaires.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "Oublie celle qui vit dans les souvenirs",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "Ainsi, pour toujours",
-      "desc": "Lorsque Nocterna est sur le champ de bataille, augmente la <u>PÉN de RÉS</u> à tous les types de toutes les cibles alliées de <nobr>20%</nobr>. Après que le mnémesprit Nox a utilisé Évanouissement des rêves, Nocterna obtient <nobr>30%</nobr> des Vestiges consommés lors de cette attaque."
+      "desc": "Lorsque Nocterna est sur le champ de bataille, augmente la <u>PÉN de RÉS</u> à tous les types de toutes les cibles alliées de <nobr>20%</nobr>. Après que le mnémesprit Nox a utilisé Évanouissement des rêves, Nocterna obtient <nobr>30%</nobr> des Vestiges consommés lors de cette attaque.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

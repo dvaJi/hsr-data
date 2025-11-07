@@ -2,6 +2,7 @@
   "_id": 1001,
   "id": "march_7th",
   "name": "三月七",
+  "description": "一度沉睡于恒冰，对过去一无所知的少女。\n为了寻找身世的真相，选择与星穹列车同行。\n目前为自己准备了约六十七种「身世故事」。",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量冰属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "对我方单体施加护盾。",
       "type": "战技",
       "tag": "防御",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,32 @@
       "simpleDesc": "对敌方全体造成冰属性伤害，有概率施加冻结状态。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1145,24 @@
       "simpleDesc": "持有护盾的我方目标受到敌方攻击后，三月七立即对其反击，造成少量冰属性伤害。",
       "type": "天赋",
       "tag": "单攻",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "反击",
+          "desc": "当目标受到攻击后自动触发的效果，对攻击者施放1次额外的攻击。\n反击也属于追加攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1402,6 +1465,32 @@
       "desc": "立即攻击敌人，进入战斗后有#1[i]%的基础概率使随机敌方单体陷入冻结状态，持续#2[i]回合。\n冻结状态下，敌方目标不能行动同时每回合开始时受到等同于三月七#3[i]%攻击力的冰属性附加伤害。",
       "simpleDesc": "攻击敌人，进战后大概率使敌方随机单体陷入冻结状态。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1509,88 @@
       "_id": 100101,
       "id": "memory_of_you",
       "name": "记忆中的你",
-      "desc": "终结技每冻结1个目标，为三月七恢复<nobr>6</nobr>点能量。"
+      "desc": "终结技每冻结1个目标，为三月七恢复<nobr>6</nobr>点能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100102,
       "id": "memory_of_it",
       "name": "记忆中的它",
-      "desc": "进入战斗时，为当前生命值百分比最低的我方目标提供等同于三月七<nobr>24%</nobr>防御力+<nobr>320</nobr>的护盾，持续<nobr>3</nobr>回合。"
+      "desc": "进入战斗时，为当前生命值百分比最低的我方目标提供等同于三月七<nobr>24%</nobr>防御力+<nobr>320</nobr>的护盾，持续<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100103,
       "id": "memory_of_everything",
       "name": "记忆中的一切",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100104,
       "id": "never_forfeit_again",
       "name": "不愿再失去",
-      "desc": "天赋的<u>反击</u>效果每回合可触发的次数增加1次。使<u>反击</u>造成的伤害值提高，提高数值等同于三月七防御力的<nobr>30%</nobr>。"
+      "desc": "天赋的<u>反击</u>效果每回合可触发的次数增加1次。使<u>反击</u>造成的伤害值提高，提高数值等同于三月七防御力的<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "反击",
+          "desc": "当目标受到攻击后自动触发的效果，对攻击者施放1次额外的攻击。\n反击也属于追加攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100105,
       "id": "never_forget_again",
       "name": "不想再忘却",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100106,
       "id": "just_like_this_always",
       "name": "就这样，一直…",
-      "desc": "在战技提供的护盾保护下的我方目标，每回合开始时回复等同于各自<nobr>4%</nobr>生命上限+<nobr>106</nobr>的生命值。"
+      "desc": "在战技提供的护盾保护下的我方目标，每回合开始时回复等同于各自<nobr>4%</nobr>生命上限+<nobr>106</nobr>的生命值。",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

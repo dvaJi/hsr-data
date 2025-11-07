@@ -2,6 +2,7 @@
   "_id": 1205,
   "id": "blade",
   "name": "刃",
+  "description": "「星核猎手」的成员，弃身锋刃的剑客。\n效忠于「命运的奴隶」，拥有可怖的自愈能力。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量风属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "消耗自身生命值，获得强化普攻，且本回合不会结束。",
       "type": "战技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +780,15 @@
       "simpleDesc": "将当前生命值转化为生命上限的50%，并对敌方单体造成大量风属性伤害，对相邻目标造成风属性伤害。",
       "type": "终结技",
       "tag": "扩散",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1173,24 @@
       "simpleDesc": "刃的生命值降低时，获得1层充能。充能达到上限时发动追加攻击，对敌方全体造成风属性伤害并回复生命值，消耗所有充能。",
       "type": "天赋",
       "tag": "群攻",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1480,6 +1529,15 @@
       "desc": "立即攻击敌人，进入战斗后消耗等同于刃生命上限#2[i]%的生命值，同时对敌方全体造成等同于刃生命上限#1[i]%的风属性伤害。\n若当前生命值不足，施放秘技时刃的当前生命值降低至1点。",
       "simpleDesc": "攻击敌人，进战后消耗自身生命值，并对敌方全体造成风属性伤害。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1497,37 +1555,88 @@
       "_id": 120501,
       "id": "blade_cuts_the_deepest_in_hell",
       "name": "剑录大限，地狱变相",
-      "desc": "终结技对指定敌方单体造成的伤害额外提高，提高数值等同于刃<nobr>150%</nobr>本场战斗中累计的已损失生命值。\n本场战斗中累计已损失生命值最高不超过刃生命上限的<nobr>90%</nobr>，施放终结技后会清空并进行重新累计。"
+      "desc": "终结技对指定敌方单体造成的伤害额外提高，提高数值等同于刃<nobr>150%</nobr>本场战斗中累计的已损失生命值。\n本场战斗中累计已损失生命值最高不超过刃生命上限的<nobr>90%</nobr>，施放终结技后会清空并进行重新累计。",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120502,
       "id": "ten_thousand_sorrows_from_one_broken_dream",
       "name": "支离旧梦，万端遗恨",
-      "desc": "刃处于【地狱变】状态时，暴击率提高<nobr>15%</nobr>。"
+      "desc": "刃处于【地狱变】状态时，暴击率提高<nobr>15%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120503,
       "id": "hardened_blade_bleeds_coldest_shade",
       "name": "冶炼玄钢，铣淬寒芒",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120504,
       "id": "rejected_by_death_infected_with_life",
       "name": "泉台歧路，百骸回春",
-      "desc": "当前生命值百分比从大于<nobr>50%</nobr>降低至小于等于<nobr>50%</nobr>时，生命上限提高<nobr>20%</nobr>，该效果最多叠加<nobr>2</nobr>层。"
+      "desc": "当前生命值百分比从大于<nobr>50%</nobr>降低至小于等于<nobr>50%</nobr>时，生命上限提高<nobr>20%</nobr>，该效果最多叠加<nobr>2</nobr>层。",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120505,
       "id": "death_by_ten_lords_gaze",
       "name": "十王判死，业镜悬照",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120506,
       "id": "reborn_into_an_empty_husk",
       "name": "命留魂销，复返此身",
-      "desc": "充能的层数上限降低至4层。天赋触发<u>追加攻击</u>造成的伤害额外提高，提高数值等同于刃<nobr>50%</nobr>的生命上限。"
+      "desc": "充能的层数上限降低至4层。天赋触发<u>追加攻击</u>造成的伤害额外提高，提高数值等同于刃<nobr>50%</nobr>的生命上限。",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

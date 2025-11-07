@@ -2,6 +2,7 @@
   "_id": 1205,
   "id": "blade",
   "name": "Blade",
+  "description": "Thành viên của Thợ Săn Stellaron, một kiếm khách từ bỏ thân mình, trở thành lưỡi kiếm sắc nhọn.\nTrung thành với \"Nô Lệ Của Số Phận\", sở hữu năng lực tự chữa lành đáng sợ.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Tiêu hao HP của bản thân để cường hóa Tấn Công Thường, và hiệp này sẽ không kết thúc.",
       "type": "Chiến Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +780,15 @@
       "simpleDesc": "Chuyển hóa HP hiện tại thành 50% Giới Hạn HP đồng thời gây lượng lớn Sát Thương Phong cho 1 kẻ địch, gây Sát Thương Phong cho mục tiêu lân cận.",
       "type": "Tuyệt Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1173,24 @@
       "simpleDesc": "Khi HP của Blade giảm xuống sẽ nhận 1 tầng Nạp Năng Lượng. Khi Nạp Năng Lượng đạt giới hạn sẽ phát động Đòn Đánh Theo Sau, gây Sát Thương Phong cho toàn phe địch và hồi HP, tiêu hao tất cả Nạp Năng Lượng.",
       "type": "Thiên Phú",
       "tag": "Đánh Lan",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1480,6 +1529,15 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào chiến đấu, tiêu hao HP bằng #2[i]% Giới Hạn HP của Blade, đồng thời gây Sát Thương Phong cho toàn bộ kẻ địch bằng #1[i]% Giới Hạn HP của Blade.\nNếu HP hiện tại không đủ, khi thi triển Bí Kỹ, HP hiện tại của Blade sẽ giảm còn 1 điểm.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào trận sẽ tiêu hao HP của bản thân, và gây Sát Thương Phong cho toàn bộ kẻ địch.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1497,37 +1555,88 @@
       "_id": 120501,
       "id": "blade_cuts_the_deepest_in_hell",
       "name": "Lưỡi Kiếm Tối Thượng, Địa Ngục Biến Tướng",
-      "desc": "Tăng thêm sát thương Tuyệt Kỹ gây ra cho 1 kẻ địch chỉ định, mức tăng bằng <nobr>150%</nobr> HP đã mất của Blade tích lũy trong trận này.\nHP mất đi trong trận này tối đa không vượt quá <nobr>90%</nobr> Giới Hạn HP của Blade, sau khi thi triển Tuyệt Kỹ sẽ xóa và tích lũy lại từ đầu."
+      "desc": "Tăng thêm sát thương Tuyệt Kỹ gây ra cho 1 kẻ địch chỉ định, mức tăng bằng <nobr>150%</nobr> HP đã mất của Blade tích lũy trong trận này.\nHP mất đi trong trận này tối đa không vượt quá <nobr>90%</nobr> Giới Hạn HP của Blade, sau khi thi triển Tuyệt Kỹ sẽ xóa và tích lũy lại từ đầu.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120502,
       "id": "ten_thousand_sorrows_from_one_broken_dream",
       "name": "Mộng Xưa Vỡ Nát, Ân Hận Khôn Cùng",
-      "desc": "Khi Blade ở trạng thái Địa Ngục Biến, Tỷ Lệ Bạo Kích tăng <nobr>15%</nobr>."
+      "desc": "Khi Blade ở trạng thái Địa Ngục Biến, Tỷ Lệ Bạo Kích tăng <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120503,
       "id": "hardened_blade_bleeds_coldest_shade",
       "name": "Luyện Thép Đen, Tôi Quang Hàn",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120504,
       "id": "rejected_by_death_infected_with_life",
       "name": "Hoàng Tuyền Rẽ Lối, Hài Cốt Hồi Sinh",
-      "desc": "Khi phần trăm HP hiện tại từ lớn hơn <nobr>50%</nobr> giảm còn nhỏ hơn hoặc bằng <nobr>50%</nobr>, thì Giới Hạn HP tăng <nobr>20%</nobr>, hiệu ứng này tối đa cộng dồn <nobr>2</nobr> tầng."
+      "desc": "Khi phần trăm HP hiện tại từ lớn hơn <nobr>50%</nobr> giảm còn nhỏ hơn hoặc bằng <nobr>50%</nobr>, thì Giới Hạn HP tăng <nobr>20%</nobr>, hiệu ứng này tối đa cộng dồn <nobr>2</nobr> tầng.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120505,
       "id": "death_by_ten_lords_gaze",
       "name": "Thập Vương Xử Tử, Soi Chiếu Nghiệp Chướng",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120506,
       "id": "reborn_into_an_empty_husk",
       "name": "Mạng Còn Hồn Tan, Tái Sinh Xác Rỗng",
-      "desc": "Giới hạn số tầng nạp năng lượng giảm còn 4 tầng. Tăng thêm sát thương gây ra bởi <u>Đòn Đánh Theo Sau</u> được Thiên Phú kích hoạt, mức tăng tương đương <nobr>50%</nobr> Giới Hạn HP của Blade."
+      "desc": "Giới hạn số tầng nạp năng lượng giảm còn 4 tầng. Tăng thêm sát thương gây ra bởi <u>Đòn Đánh Theo Sau</u> được Thiên Phú kích hoạt, mức tăng tương đương <nobr>50%</nobr> Giới Hạn HP của Blade.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

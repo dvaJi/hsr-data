@@ -2,6 +2,7 @@
   "_id": 1108,
   "id": "sampo",
   "name": "삼포",
+  "description": "지상 지하를 자유롭게 넘나드는 밀수꾼\n붙임성이 좋고 열정적이며, 유머러스한 성격으로 농담을 잘한다",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 바람 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 110802,
       "id": "ricochet_love",
       "name": "변덕스러운 사랑",
-      "desc": "지정된 단일 적에게 삼포 공격력 #2[i]%만큼의 바람 속성 피해를 주고, 추가로 #1[i]회 피해를 가한다. 피해마다 임의의 단일 적에게 삼포 공격력 #2[i]%만큼의 바람 속성 피해를 가한다",
+      "desc": "지정된 단일 적에게 삼포 공격력의 #2[i]%만큼 바람 속성 피해를 가하고, 추가로 피해를 #1[i]회 가한다. 피해마다 랜덤 단일 적에게 삼포 공격력의 #2[i]%만큼 바람 속성 피해를 가한다",
       "simpleDesc": "단일 적에게 소량의 바람 속성 피해를 가하고, 총 5회 바운스한다",
       "type": "전투 스킬",
       "tag": "바운스",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,27 @@
       "simpleDesc": "모든 적에게 바람 속성 피해를 가하고, 높은 확률로 받는 지속 피해가 증가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "자신이 적을 명중하면 일정 확률로 적을 풍화 상태에 빠트린다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1452,32 @@
       "simpleDesc": "일정 구역 내의 적을 실명 상태에 빠트린다. 실명 상태에 빠진 적을 공격하면 전투 진입 후 높은 확률로 각 단일 적의 행동 게이지가 감소한다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "고정 확률",
+          "desc": "어떤 요인에도 영향을 받지 않는 고정 확률이다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "행동 게이지 감소",
+          "desc": "목표의 다음 행동 전 대기 간격을 연장한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,37 +1496,88 @@
       "_id": 110801,
       "id": "rising_love",
       "name": "곱절의 사랑",
-      "desc": "전투 스킬 발동 시 임의의 단일 적에게 추가로 <nobr>1</nobr>회 피해를 가한다"
+      "desc": "전투 스킬 발동 시 랜덤 단일 적에게 추가로 피해를 <nobr>1</nobr>회 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110802,
       "id": "infectious_enthusiasm",
       "name": "전염되는 열정",
-      "desc": "풍화 상태의 적 처치 시 모든 적은 <nobr>100%</nobr>의 <u>기본 확률</u>로 특성만큼의 풍화 상태를 <nobr>1</nobr>스택 중첩한다"
+      "desc": "풍화 상태의 적 처치 시 모든 적은 <nobr>100%</nobr>의 <u>기본 확률</u>로 특성만큼의 풍화 상태를 <nobr>1</nobr>스택 중첩한다",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110803,
       "id": "big_money",
       "name": "큰 돈!",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110804,
       "id": "the_deeper_the_love_the_stronger_the_hate",
       "name": "사랑할수록 커지는 증오",
-      "desc": "전투 스킬이 풍화 상태를 <nobr>5</nobr>스택 이상 보유한 적을 명중할 시 보유한 풍화 상태는 즉시 기존 피해 <nobr>8%</nobr>만큼의 피해를 준다"
+      "desc": "전투 스킬이 풍화 상태를 <nobr>5</nobr>스택 이상 보유한 적을 명중할 시 보유한 풍화 상태는 즉시 기존 피해의 <nobr>8%</nobr>만큼 피해를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110805,
       "id": "huuuuge_money",
       "name": "엄청난 돈!",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110806,
       "id": "increased_spending",
       "name": "커진 씀씀이",
-      "desc": "특성이 부여한 풍화 상태의 피해 배율이 <nobr>15%</nobr> 증가한다"
+      "desc": "특성이 부여한 풍화 상태의 피해 배율이 <nobr>15%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11108,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1204,
   "id": "jing_yuan",
   "name": "경원",
+  "description": "선주 연맹 천궁의 7대 장군 중 하나로 나부 운기군을 통솔하는 「신책 장군」\n전대 「나부」 검술의 일인자를 스승으로 모셨으나, 무예로 이름을 날리지는 않았다",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 번개 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "모든 적에게 소량의 번개 속성 피해를 가하고 [신군]의 공격 단수가 증가한다",
       "type": "전투 스킬",
       "tag": "범위 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +750,15 @@
       "simpleDesc": "모든 적에게 번개 속성 피해를 가하고 [신군]의 공격 단수가 증가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1068,40 @@
       "simpleDesc": "전투 시작 시 [신군]을 소환한다. [신군]은 행동 시 추가 공격을 발동하며, 자동으로 랜덤 단일 적 및 인접한 목표에게 소량의 번개 속성 피해를 가한다",
       "type": "특성",
       "tag": "바운스",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "전투 불능 상태",
+          "desc": "아군의 현재 HP가 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 있으면 목표는 전투를 계속할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "제어류 디버프 상태",
+          "desc": "빙결, 얽힘, 속박, 지배, 노발대발, 강렬한 진탕, 이몽, 감금, 공포, 행동 고정",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1471,15 @@
       "simpleDesc": "비술을 발동하면 다음 전투 진입 시 [신군]의 공격 단수가 증가한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1496,79 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "곤륜을 파괴하는 성류 뇌격",
-      "desc": "[신군]이 공격 발동 시 지정된 단일 적에 인접한 목표에게 가하는 피해 배율이 추가로 증가한다. 증가 수치는 주목표에게 가한 피해 배율의 <nobr>25%</nobr>이다"
+      "desc": "[신군]이 공격 발동 시 지정된 단일 적에 인접한 목표에게 가하는 피해 배율이 추가로 증가한다. 증가 수치는 주목표에게 가한 피해 배율의 <nobr>25%</nobr>이다",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "천지를 뒤흔드는 하늘의 창",
-      "desc": "[신군]이 행동한 후 경원은 일반 공격, 전투 스킬, 필살기로 가하는 피해가 <nobr>20%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "[신군]이 행동한 후 경원은 일반 공격, 전투 스킬, 필살기로 가하는 피해가 <nobr>20%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120403,
       "id": "strike_suns_subdued",
       "name": "하늘을 꿰뚫는 번개",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120404,
       "id": "spin_stars_sieged",
       "name": "백사에 떨어진 칼날에 감긴 구름",
-      "desc": "[신군]의 공격은 단마다 경원의 에너지를 <nobr>2</nobr>pt 회복한다"
+      "desc": "[신군]의 공격은 단마다 경원의 에너지를 <nobr>2</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120405,
       "id": "stride_spoils_seized",
       "name": "목숨을 아끼지 않는 백전 장군",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120406,
       "id": "sweep_souls_slain",
       "name": "적을 격멸하는 위령(威霊)",
-      "desc": "[신군]의 공격은 단마다 지정된 적을 추가로 취약 상태에 빠트린다.\n취약 상태의 적은 받는 피해가 <nobr>12%</nobr> 증가하며, 이번 [신군] 공격 종료까지 지속된다. 해당 효과 최대 중첩수: <nobr>3</nobr>스택"
+      "desc": "[신군]의 공격은 단마다 지정된 적을 추가로 취약 상태에 빠트린다.\n취약 상태의 적은 받는 피해가 <nobr>12%</nobr> 증가하며, 이번 [신군] 공격 종료까지 지속된다. 해당 효과 최대 중첩수: <nobr>3</nobr>스택",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

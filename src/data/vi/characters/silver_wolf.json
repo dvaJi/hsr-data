@@ -2,6 +2,7 @@
   "_id": 1006,
   "id": "silver_wolf",
   "name": "Sói Bạc",
+  "description": "Thành viên của \"Thợ Săn Stellaron\", một bậc thầy hacker.\nXem vũ trụ là một trò chơi mô phỏng nhập vai tầm cỡ và vui chơi trong đó.\nNắm giữ \"Trình Chỉnh Sửa Aether\" có thể sửa đổi dữ liệu hiện thực.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lượng Tử cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Có xác suất lớn thêm Điểm Yếu cho 1 kẻ địch và gây Sát Thương Lượng Tử cho kẻ đó.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -803,6 +837,27 @@
       "simpleDesc": "Xác suất lớn giảm Phòng Thủ của 1 kẻ địch và gây lượng lớn Sát Thương Lượng Tử cho kẻ đó.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1197,24 @@
       "simpleDesc": "Sau khi tấn công có xác suất cài 1 Bug ngẫu nhiên cho mục tiêu.",
       "type": "Thiên Phú",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1495,6 +1568,15 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào chiến đấu sẽ gây Sát Thương Lượng Tử bằng #1[i]% Tấn Công của Sói Bạc cho toàn bộ địch, đồng thời bỏ qua các thuộc tính Điểm Yếu và làm giảm Sức Bền của toàn phe địch. Khi phá vỡ điểm yếu sẽ kích hoạt hiệu ứng Phá Vỡ Điểm Yếu thuộc tính Lượng Tử.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào trận sẽ gây một lượng nhỏ sát thương cho toàn bộ địch, bỏ qua thuộc tính điểm yếu và làm giảm Sức Bền.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1511,37 +1593,114 @@
       "_id": 100601,
       "id": "social_engineering",
       "name": "Công Trình Xã Hội",
-      "desc": "Sau khi thi triển Tuyệt Kỹ tấn công mục tiêu phe địch, mỗi một <u>Hiệu Ứng Xấu</u> mà mục tiêu sở hữu sẽ khiến Sói Bạc hồi <nobr>7</nobr> điểm Năng Lượng. Hiệu ứng này tối đa có hiệu lực <nobr>5</nobr> lần trong mỗi lần dùng Tuyệt Kỹ."
+      "desc": "Sau khi thi triển Tuyệt Kỹ tấn công mục tiêu phe địch, mỗi một <u>Hiệu Ứng Xấu</u> mà mục tiêu sở hữu sẽ khiến Sói Bạc hồi <nobr>7</nobr> điểm Năng Lượng. Hiệu ứng này tối đa có hiệu lực <nobr>5</nobr> lần trong mỗi lần dùng Tuyệt Kỹ.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100602,
       "id": "zombie_network",
       "name": "Mạng Zombie",
-      "desc": "Khi kẻ địch vào chiến đấu sẽ giảm <nobr>20%</nobr> Kháng Hiệu Ứng của kẻ đó."
+      "desc": "Khi kẻ địch vào chiến đấu sẽ giảm <nobr>20%</nobr> Kháng Hiệu Ứng của kẻ đó.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100603,
       "id": "payload",
       "name": "Tải Trọng Tấn Công",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100604,
       "id": "bounce_attack",
       "name": "Tấn Công Phản Đòn",
-      "desc": "Sau khi thi triển Tuyệt Kỹ tấn công mục tiêu phe địch, mỗi một <u>Hiệu Ứng Xấu</u> mà mục tiêu sở hữu sẽ gây thêm <u>Sát Thương Kèm Theo</u> thuộc tính Lượng Tử bằng <nobr>20%</nobr> Tấn Công của Sói Bạc. Hiệu ứng này tối đa kích hoạt <nobr>5</nobr> lần trong mỗi lần dùng Tuyệt Kỹ."
+      "desc": "Sau khi thi triển Tuyệt Kỹ tấn công mục tiêu phe địch, mỗi một <u>Hiệu Ứng Xấu</u> mà mục tiêu sở hữu sẽ gây thêm <u>Sát Thương Kèm Theo</u> thuộc tính Lượng Tử bằng <nobr>20%</nobr> Tấn Công của Sói Bạc. Hiệu ứng này tối đa kích hoạt <nobr>5</nobr> lần trong mỗi lần dùng Tuyệt Kỹ.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100605,
       "id": "brute_force_attack",
       "name": "Diệt Trừ Bạo Lực",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100606,
       "id": "overlay_network",
       "name": "Mạng Lưới Trùng Lặp",
-      "desc": "Với mỗi một <u>Hiệu Ứng Xấu</u> mà mục tiêu phe địch sở hữu, sát thương Sói Bạc gây ra cho mục tiêu đó sẽ tăng <nobr>20%</nobr>, tối đa tăng <nobr>100%</nobr>."
+      "desc": "Với mỗi một <u>Hiệu Ứng Xấu</u> mà mục tiêu phe địch sở hữu, sát thương Sói Bạc gây ra cho mục tiêu đó sẽ tăng <nobr>20%</nobr>, tối đa tăng <nobr>100%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11006,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

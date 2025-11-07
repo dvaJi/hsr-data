@@ -2,6 +2,7 @@
   "_id": 1205,
   "id": "blade",
   "name": "Blade",
+  "description": "A member of the Stellaron Hunters, and a swordsman who abandoned his body to become a blade.\nPledges loyalty to \"Destiny's Slave,\" and possesses a terrifying self-healing ability.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Deals minor Wind DMG to an enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Consumes HP to Enhance Basic ATK, and this turn does not end after this Skill is used.",
       "type": "Skill",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -754,10 +776,19 @@
       "_id": 120503,
       "id": "death_sentence",
       "name": "Death Sentence",
-      "desc": "Sets Blade's current HP to 50% of his Max HP and deals Wind DMG to a single enemy equal to the sum of #1[i]% of his ATK, #2[i]% of his Max HP, and #5[i]% of the tally of Blade's HP loss in the current battle. At the same time, deals Wind DMG to adjacent targets equal to the sum of #3[f1]% of his ATK, #4[i]% of his Max HP, and #6[i]% of the tally of his HP loss in the current battle.\nThe tally of Blade's HP loss in the current battle is capped at #7[i]% of his Max HP. This value will be reset and re-accumulated after his Ultimate has been used.",
-      "simpleDesc": "Sets current HP to 50% of Max HP, and deals massive Wind DMG to a single enemy and Wind DMG to adjacent targets.",
+      "desc": "Sets Blade's current HP to 50% of his Max HP and deals Wind DMG to one enemy equal to the sum of #1[i]% of his ATK, #2[i]% of his Max HP, and #5[i]% of the tally of Blade's HP loss in the current battle. At the same time, deals Wind DMG to adjacent targets equal to the sum of #3[f1]% of his ATK, #4[i]% of his Max HP, and #6[i]% of the tally of his HP loss in the current battle.\nThe tally of Blade's HP loss in the current battle is capped at #7[i]% of his Max HP. This value will be reset and re-accumulated after his Ultimate has been used.",
+      "simpleDesc": "Sets current HP to 50% of Max HP, and deals massive Wind DMG to one enemy and Wind DMG to adjacent targets.",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1173,24 @@
       "simpleDesc": "When Blade's HP decreases, gains 1 stack of Charge. Upon reaching maximum Charge, launches Follow-up ATK, dealing Wind DMG to all enemies, restoring HP, and consuming all Charges.",
       "type": "Talent",
       "tag": "AoE",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1480,6 +1529,15 @@
       "desc": "Immediately attacks the enemy. After entering combat, consumes #2[i]% of Blade's Max HP while dealing Wind DMG equal to #1[i]% of his Max HP to all enemies.\nIf Blade's current HP is insufficient, his HP will be reduced to 1 when this Technique is used.",
       "simpleDesc": "Attacks the enemy. After entering combat, consumes own HP and deals Wind DMG to all enemies.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1497,37 +1555,88 @@
       "_id": 120501,
       "id": "blade_cuts_the_deepest_in_hell",
       "name": "Blade Cuts the Deepest in Hell",
-      "desc": "Blade's Ultimate deals additionally increased DMG to a single enemy target, with the increased amount equal to <nobr>150%</nobr> of the tally of Blade's HP loss in the current battle.\nThe tally of Blade's HP loss in the current battle is capped at <nobr>90%</nobr> of his Max HP. The tally value will be reset and re-accumulated after his Ultimate has been used."
+      "desc": "Blade's Ultimate deals additionally increased DMG to one designated enemy target, with the increased amount equal to <nobr>150%</nobr> of the tally of Blade's HP loss in the current battle.\nThe tally of Blade's HP loss in the current battle is capped at <nobr>90%</nobr> of his Max HP. The tally value will be reset and re-accumulated after his Ultimate has been used.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120502,
       "id": "ten_thousand_sorrows_from_one_broken_dream",
       "name": "Ten Thousand Sorrows From One Broken Dream",
-      "desc": "When Blade is in the Hellscape state, his CRIT Rate increases by <nobr>15%</nobr>."
+      "desc": "When Blade is in the Hellscape state, his CRIT Rate increases by <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120503,
       "id": "hardened_blade_bleeds_coldest_shade",
       "name": "Hardened Blade Bleeds Coldest Shade",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120504,
       "id": "rejected_by_death_infected_with_life",
       "name": "Rejected by Death, Infected With Life",
-      "desc": "When Blade's current HP percentage drops to <nobr>50%</nobr> or lower of his Max HP, increases his Max HP by <nobr>20%</nobr>. Stacks up to <nobr>2</nobr> time(s)."
+      "desc": "When Blade's current HP percentage drops to <nobr>50%</nobr> or lower of his Max HP, increases his Max HP by <nobr>20%</nobr>. Stacks up to <nobr>2</nobr> time(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120505,
       "id": "death_by_ten_lords_gaze",
       "name": "Death By Ten Lords' Gaze",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120506,
       "id": "reborn_into_an_empty_husk",
       "name": "Reborn Into an Empty Husk",
-      "desc": "The maximum number of Charge stacks is reduced to 4. The <u>Follow-up ATK</u> triggered by Talent deals additionally increased DMG equal to <nobr>50%</nobr> of Blade's Max HP."
+      "desc": "The maximum number of Charge stacks is reduced to 4. The <u>Follow-up ATK</u> triggered by Talent deals additionally increased DMG equal to <nobr>50%</nobr> of Blade's Max HP.",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1223,
   "id": "moze",
   "name": "Moze",
+  "description": "Gardien de l'ombre du Yaoqing taciturne qui agit toujours en solitaire.\nSpécialisé dans les services de renseignement et les affaires secrètes, Moze apparaît rarement en public. Le seul moment où il montre ses talents précède généralement la mort de ses ennemis.\nIl maîtrise un large éventail de techniques d'assassinat et il a une obsession pour la propreté et l'ordre.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de foudre mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Désigne un ennemi comme Proie et lui inflige des DGT de foudre. Gagne #2[i] points de charge.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,24 @@
       "simpleDesc": "Inflige des DGT de foudre à un ennemi unique, et déclenche l'ATQ de suivi du talent.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,40 @@
       "simpleDesc": "Moze entre dans l'état Retrait lorsqu'il y a une Proie sur le champ de bataille.\nLorsque les alliés attaquent la Proie, Moze inflige des DGT de foudre additionnels et consomme 1 point de charge. Moze lance une ATQ de suivi sur la Proie tous les #2[i] points de charge consommés, ce qui inflige des DGT de foudre. L'état Proie de la cible est dissipé lorsque la charge tombe à 0.",
       "type": "Talent",
       "tag": "Cible unique",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000016,
+          "name": "Retrait",
+          "desc": "Les cibles en état de Retrait ne peuvent pas être ciblées par des capacités et n'apparaissent pas dans l'ordre d'action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1399,15 @@
       "simpleDesc": "Entre en état de Furtivité. Les DGT infligés augmentent après être entré en combat en attaquant un ennemi en état de Furtivité.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,37 +1426,97 @@
       "_id": 122301,
       "id": "oathkeeper",
       "name": "Gardien du serment",
-      "desc": "Moze gagne <nobr>20</nobr> points d'énergie après être entré en combat et <nobr>2</nobr> points d'énergie chaque fois que les <u>DGT additionnels</u> de son talent sont déclenchés."
+      "desc": "Moze gagne <nobr>20</nobr> points d'énergie après être entré en combat et <nobr>2</nobr> points d'énergie chaque fois que les <u>DGT additionnels</u> de son talent sont déclenchés.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122302,
       "id": "wrathbearer",
       "name": "Héraut du châtiment",
-      "desc": "Augmente de <nobr>40%</nobr> les DGT critiques lorsque tous les alliés infligent des DGT à une cible ennemie marquée comme Proie."
+      "desc": "Augmente de <nobr>40%</nobr> les DGT critiques lorsque tous les alliés infligent des DGT à une cible ennemie marquée comme Proie.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122303,
       "id": "deathchaser",
       "name": "Justicier implacable",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122304,
       "id": "heathprowler",
       "name": "Rôdeur des ombres",
-      "desc": "Les DGT infligés par Moze augmentent de <nobr>#1[f1]%</nobr> pendant <nobr>2</nobr> tours lors de l'utilisation de l'ultime."
+      "desc": "Les DGT infligés par Moze augmentent de <nobr>#1[f1]%</nobr> pendant <nobr>2</nobr> tours lors de l'utilisation de l'ultime.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122305,
       "id": "truthbender",
       "name": "Manipulateur de vérité",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122306,
       "id": "faithbinder",
       "name": "Rassembleur de loyauté",
-      "desc": "Augmente le multiplicateur de DGT de l'<u>ATQ de suivi</u> du talent de <nobr>25%</nobr>."
+      "desc": "Augmente le multiplicateur de DGT de l'<u>ATQ de suivi</u> du talent de <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1304,
   "id": "aventurine",
   "name": "어벤츄린",
+  "description": "스타피스 컴퍼니 「전략투자부」의 고위 간부.\n리스크를 즐기며, 미소를 띠고 있지만 진심을 가늠하기 어렵다",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "지정된 단일 적에게 소량의 허수 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "모든 아군에게 실드량이 중첩 가능한 실드 [견고한 칩]을 제공한다",
       "type": "전투 스킬",
       "tag": "방어",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "랜덤으로 [블라인드 베팅]을 획득하고 단일 적을 [당황] 상태에 빠트리며, 목표에게 허수 속성 피해를 가한다. 아군이 [당황] 상태의 적을 명중하면 가하는 치명타 피해가 증가한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,32 @@
       "simpleDesc": "[견고한 칩]을 보유한 단일 아군의 효과 저항이 증가하고, 피격 시 어벤츄린에게 [블라인드 베팅]을 쌓는다. 어벤츄린은 [견고한 칩] 보유 시 제어류 디버프 상태에 저항할 수 있다. [블라인드 베팅]이 7pt를 도달하면 어벤츄린은 [블라인드 베팅] 7pt를 소모하여 추가 공격을 발동해 랜덤 단일 적에게 소량의 허수 속성 피해를 가하고, 총 7회 바운스한다",
       "type": "특성",
       "tag": "바운스",
+      "spBase": 1,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        10,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "제어류 디버프 상태",
+          "desc": "빙결, 얽힘, 속박, 지배, 노발대발, 강렬한 진탕, 이몽, 감금, 공포, 행동 고정",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1514,15 @@
       "simpleDesc": "비술을 발동하면 3가지 방어력 증가 효과 중 랜덤으로 1개를 획득한다. 다음 전투 진입 후 모든 아군의 방어력이 대응하는 수치만큼 증가한다",
       "type": "비술",
       "tag": "방어",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1470,37 +1542,88 @@
       "_id": 130401,
       "id": "prisoners_dilemma",
       "name": "죄수의 딜레마",
-      "desc": "[견고한 칩]을 보유한 아군의 치명타 피해가 <nobr>20%</nobr> 증가한다. 필살기 발동 후 모든 아군에게 실드 [견고한 칩]을 제공한다. 실드량은 전투 스킬이 제공하는 실드량의 <nobr>100%</nobr>다. 지속 시간: <nobr>3</nobr>턴"
+      "desc": "[견고한 칩]을 보유한 아군의 치명타 피해가 <nobr>20%</nobr> 증가한다. 필살기 발동 후 모든 아군에게 실드 [견고한 칩]을 제공한다. 실드량은 전투 스킬이 제공하는 실드량의 <nobr>100%</nobr>다. 지속 시간: <nobr>3</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130402,
       "id": "bounded_rationality",
       "name": "제한된 합리성",
-      "desc": "일반 공격 발동 시 목표의 모든 속성 저항이 <nobr>12%</nobr> 감소한다. 지속 시간: <nobr>3</nobr>턴"
+      "desc": "일반 공격 발동 시 목표의 모든 속성 저항이 <nobr>12%</nobr> 감소한다. 지속 시간: <nobr>3</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130403,
       "id": "droprate_maxing",
       "name": "최고 배당",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130404,
       "id": "unexpected_hanging_paradox",
       "name": "사형수의 역설",
-      "desc": "특성의 <u>추가 공격</u> 발동 시, 우선 어벤츄린의 방어력이 <nobr>40%</nobr> 증가한다, 지속 시간: <nobr>2</nobr>턴. 또한, 특성 <u>추가 공격</u>의 공격 단수가 추가로 <nobr>3</nobr>단 증가한다"
+      "desc": "특성의 <u>추가 공격</u> 발동 시, 우선 어벤츄린의 방어력이 <nobr>40%</nobr> 증가한다, 지속 시간: <nobr>2</nobr>턴. 또한, 특성 <u>추가 공격</u>의 공격 단수가 추가로 <nobr>3</nobr>단 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130405,
       "id": "ambiguity_aversion",
       "name": "모호성 회피",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130406,
       "id": "stag_hunt_game",
       "name": "사슴 사냥 게임",
-      "desc": "실드를 보유한 동료 1명마다 어벤츄린이 가하는 피해가 <nobr>50%</nobr> 증가하며, 최대 <nobr>150%</nobr>를 초과하지 않는다"
+      "desc": "실드를 보유한 동료 1명마다 어벤츄린이 가하는 피해가 <nobr>50%</nobr> 증가하며, 최대 <nobr>150%</nobr>를 초과하지 않는다",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

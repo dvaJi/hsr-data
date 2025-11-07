@@ -2,6 +2,7 @@
   "_id": 1301,
   "id": "gallagher",
   "name": "ギャラガー",
+  "description": "ピノコニーのハウンド家の保安官。来賓には礼儀正しく接しているが、常に警戒心を持っている。何やら複雑な過去があるようだが、自分からそれについて言及することはない。",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の炎属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "味方単体のHPを回復する。",
       "type": "戦闘スキル",
       "tag": "回復",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "敵全体を「酩酊」状態にし、敵全体に炎属性ダメージを与える。次の通常攻撃を「極上の泡立ち」に強化する。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1038,24 @@
       "simpleDesc": "「酩酊」状態の敵が受ける弱点撃破ダメージがアップする。「酩酊」状態の敵が味方の攻撃を受けた後、攻撃者のHPを回復する。",
       "type": "天賦",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "弱点撃破ダメージ",
+          "desc": "撃破特効、ターゲットの最大靭性またはキャラクターのレベルが高いほど、与える弱点撃破ダメージがアップする。\n弱点撃破ダメージは会心が発生せず、ダメージアップ系効果の影響を受けない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "敵を攻撃。戦闘に入った後、敵全体を「酩酊」状態にする、#1[i]ターン継続。敵全体にギャラガーの攻撃力#2[i]%分の炎属性ダメージを与える。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、敵全体を「酩酊」状態にし、敵全体に少量の炎属性ダメージを与える。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,88 @@
       "_id": 130101,
       "id": "salty_dog",
       "name": "ソルティ・ドッグ",
-      "desc": "戦闘に入った後、ギャラガーはEPを<nobr>20</nobr>回復する。同時にギャラガーの効果抵抗+<nobr>50%</nobr>。"
+      "desc": "戦闘に入った後、ギャラガーはEPを<nobr>20</nobr>回復する。同時にギャラガーの効果抵抗+<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130102,
       "id": "lions_tail",
       "name": "レオ・ザ・ライオン",
-      "desc": "戦闘スキルを発動した時、指定した味方単体の<u>デバフ</u>を<nobr>1</nobr>つ解除し、その味方の効果抵抗+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "戦闘スキルを発動した時、指定した味方単体の<u>デバフ</u>を<nobr>1</nobr>つ解除し、その味方の効果抵抗+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130103,
       "id": "corpse_reviver",
       "name": "コープス・リバイバー",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130104,
       "id": "last_word",
       "name": "ラスト・ワード",
-      "desc": "ギャラガーの必殺技が付与する「酩酊」状態の継続時間+<nobr>1</nobr>ターン。"
+      "desc": "ギャラガーの必殺技が付与する「酩酊」状態の継続時間+<nobr>1</nobr>ターン。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130105,
       "id": "death_in_the_afternoon",
       "name": "デス・イン・ジ・\nアフタヌーン",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130106,
       "id": "blood_and_sand",
       "name": "ブラッド・アンド・\nサンド",
-      "desc": "ギャラガーの撃破特効+<nobr>20%</nobr>、弱点撃破効率+<nobr>20%</nobr>。"
+      "desc": "ギャラガーの撃破特効+<nobr>20%</nobr>、弱点撃破効率+<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

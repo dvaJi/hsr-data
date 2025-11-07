@@ -2,6 +2,7 @@
   "_id": 1312,
   "id": "misha",
   "name": "Misha",
+  "description": "Um jovem bem-comportado que trabalha como servente em Penacony.\nMisha tem uma grande admiração pelos Inominados e sonha em um dia embarcar em sua própria jornada.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Gelo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Causa Dano de Gelo a um inimigo e Dano de Gelo leve a inimigos adjacentes a ele. Além disso, aumenta os Golpes por Ação da próxima Perícia Suprema de Misha.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +756,32 @@
       "simpleDesc": "Causa Dano de Gelo leve a inimigos únicos. O ataque ricocheteia #1[i] vezes por padrão, até um máximo de #5[i] vezes. Antes que cada golpe acerte, há uma pequena chance de infligir Congelamento no alvo.",
       "type": "Perícia Suprema",
       "tag": "Rebote",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1085,6 +1130,15 @@
       "simpleDesc": "Para cada 1 Ponto de Perícia consumido por aliados, a próxima Perícia Suprema de Misha realiza mais Golpes por Ação, e Misha regenera sua Energia.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1442,15 @@
       "simpleDesc": "Cria uma dimensão especial que para todos os inimigos que estiverem dentro dela. Ao entrar em batalha contra inimigos na dimensão, a próxima Perícia Suprema de Misha causa mais Golpes por Ação.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1405,37 +1468,88 @@
       "_id": 131201,
       "id": "whimsicality_of_fancy",
       "name": "Capricho Extravagante",
-      "desc": "Ao usar a Perícia Suprema, para cada inimigo no campo, aumenta adicionalmente os Golpes por Ação da Perícia Suprema atual em <nobr>1</nobr> golpe(s), até um aumento máximo de <nobr>5</nobr> golpe(s)."
+      "desc": "Ao usar a Perícia Suprema, para cada inimigo no campo, aumenta adicionalmente os Golpes por Ação da Perícia Suprema atual em <nobr>1</nobr> golpe(s), até um aumento máximo de <nobr>5</nobr> golpe(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131202,
       "id": "yearning_of_youth",
       "name": "Anseio da Juventude",
-      "desc": "Antes do acerto de cada golpe da Perícia Suprema, existe uma <u>chance-base</u> de <nobr>24%</nobr> de reduzir a DEF do alvo em <nobr>16%</nobr> por <nobr>3</nobr> rodada(s)."
+      "desc": "Antes do acerto de cada golpe da Perícia Suprema, existe uma <u>chance-base</u> de <nobr>24%</nobr> de reduzir a DEF do alvo em <nobr>16%</nobr> por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131203,
       "id": "vestige_of_happiness",
       "name": "Vestígio de Felicidade",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131204,
       "id": "visage_of_kinship",
       "name": "Visão de Afinidade",
-      "desc": "Aumenta o Multiplicador de Dano de cada golpe da Perícia Suprema em <nobr>6%</nobr>."
+      "desc": "Aumenta o Multiplicador de Dano de cada golpe da Perícia Suprema em <nobr>6%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131205,
       "id": "genesis_of_first_love",
       "name": "Gênesis do Primeiro Amor",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131206,
       "id": "estrangement_of_dream",
       "name": "Alienação do Sonho",
-      "desc": "Ao usar a Perícia Suprema, aumenta o próprio Dano em <nobr>30%</nobr>, durando até o final da rodada. Além disso, da próxima vez que a Perícia for utilizada, recupera <nobr>1</nobr> Ponto(s) de Perícia para a equipe."
+      "desc": "Ao usar a Perícia Suprema, aumenta o próprio Dano em <nobr>30%</nobr>, durando até o final da rodada. Além disso, da próxima vez que a Perícia for utilizada, recupera <nobr>1</nobr> Ponto(s) de Perícia para a equipe.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

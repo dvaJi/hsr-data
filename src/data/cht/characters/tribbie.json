@@ -2,6 +2,7 @@
   "_id": 1403,
   "id": "tribbie",
   "name": "緹寶",
+  "description": "自那三相神諭垂憐的聖地，信使分作千身，啟程遠行。\n雅努薩波利斯的聖女，緹里西庇俄絲，竊奪「門徑」火種的黃金裔，為眾生奔走，令救世的訊息曉喻大地\n——找尋那流淌黃金神血的人子，衝破世間至暗，去往星月滿天的明日。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體及其相鄰目標造成少量量子屬性傷害。",
       "type": "普通攻擊",
       "tag": "擴散",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "獲得【神啟】，持續期間內我方全體目標全屬性抗性穿透提高。",
       "type": "戰技",
       "tag": "輔助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -738,6 +766,24 @@
       "simpleDesc": "開啟結界，對敵方全體造成少量量子屬性傷害。結界持續期間，敵方受到的傷害提高，並根據攻擊敵人的個數對被攻擊目標中生命值最高的目標造成少量量子屬性附加傷害。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1077,6 +1123,24 @@
       "simpleDesc": "我方其他角色施放終結技後，緹寶發動追加攻擊，對敵方全體造成少量量子屬性傷害。該效果每個角色最多觸發1次，緹寶施放終結技時重置我方其他角色可觸發次數。",
       "type": "天賦",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,6 +1435,15 @@
       "simpleDesc": "進入戰鬥時獲得【神啟】。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1387,37 +1460,114 @@
       "_id": 140301,
       "id": "rite_of_sugar_scoop",
       "name": "拾起砂糖的祭典",
-      "desc": "結界持續期間，我方目標攻擊敵人後，對結界造成<u>附加傷害</u>的目標額外造成等同於本次攻擊總傷害值<nobr>24%</nobr>的<u>真實傷害</u>。"
+      "desc": "結界持續期間，我方目標攻擊敵人後，對結界造成<u>附加傷害</u>的目標額外造成等同於本次攻擊總傷害值<nobr>24%</nobr>的<u>真實傷害</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "真實傷害",
+          "desc": "不受任何效果所影響的無屬性傷害，本次傷害不視為造成了1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140302,
       "id": "guide_of_dream_tour",
       "name": "探訪佳夢的嚮導",
-      "desc": "結界造成的<u>附加傷害</u>提高至原傷害的<nobr>120%</nobr>。結界造成<u>附加傷害</u>時，會額外造成<nobr>1</nobr>次附加傷害。"
+      "desc": "結界造成的<u>附加傷害</u>提高至原傷害的<nobr>120%</nobr>。結界造成<u>附加傷害</u>時，會額外造成<nobr>1</nobr>次附加傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140303,
       "id": "trove_of_morning_glow",
       "name": "盛滿晨曦的寶藏",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140304,
       "id": "peace_of_empathy_bond",
       "name": "心意相契的安寧",
-      "desc": "【神啟】持續期間，我方全體造成傷害時無視目標<nobr>18%</nobr>的防禦力。"
+      "desc": "【神啟】持續期間，我方全體造成傷害時無視目標<nobr>18%</nobr>的防禦力。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140305,
       "id": "clock_of_wonder_origin",
       "name": "開啟奇跡的時鐘",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140306,
       "id": "morrow_of_star_shine",
       "name": "星月滿天的明日",
-      "desc": "緹寶施放終結技後，對敵方全體發動天賦的<u>追加攻擊</u>。天賦的<u>追加攻擊</u>造成的傷害提高<nobr>729%</nobr>。"
+      "desc": "緹寶施放終結技後，對敵方全體發動天賦的<u>追加攻擊</u>。天賦的<u>追加攻擊</u>造成的傷害提高<nobr>729%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

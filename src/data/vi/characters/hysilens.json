@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "Hysilens",
+  "description": "Styxia, thành phố ven biển của men say và mộng mơ, nơi tiếng hát ngày xưa vẫn còn vang vọng giữa những con sóng dập dềnh.\nNgười con gái của biển cả - Helektra, Hậu Duệ Chrysos thanh tẩy Ngọn Lửa của \"Biển Cả\", xua tan những dòng chảy ngầm ô uế, tấu lên bữa tiệc không say không về cho những anh hùng đến từ bên ngoài bầu trời\n...Bữa tiệc vẫn chưa đến lúc kết thúc, cho dù hy vọng mong manh như bọt biển, những con sóng vẫn sẽ tiếp tục tiến về phía trước.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "Xác suất lớn khiến sát thương toàn bộ phe địch phải chịu tăng, đồng thời gây Sát Thương Vật Lý cho chúng.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "Triển khai kết giới làm giảm Tấn Công và Phòng Thủ của toàn bộ phe địch, đồng thời gây Sát Thương Vật Lý cho chúng. Khi Kết Giới tồn tại, mục tiêu phe địch cứ chịu 1 lần Sát Thương Duy Trì sẽ gây cho kẻ đó 1 lần Sát Thương Vật Lý Duy Trì.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "Khi mục tiêu phe ta tấn công, Hysilens có xác suất lớn khiến mục tiêu phe địch bị đánh trúng rơi vào một trong các trạng thái Bào Mòn/Chảy Máu/Thiêu Đốt/Sốc Điện.",
       "type": "Thiên Phú",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "Tạo một vùng đặc biệt. Kẻ địch trong vùng sẽ không tấn công mục tiêu phe ta. Sau khi vào chiến đấu với kẻ địch trong vùng đó, sẽ có xác suất lớn khiến mỗi mục tiêu địch rơi vào #3[i] trạng thái trong số các trạng thái Bào Mòn/Chảy Máu/Thiêu Đốt/Sốc Điện.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "Người Hỏi, Sao Tôi Lại Buồn Bã",
-      "desc": "Khi Hysilens trong trận, Sát Thương Duy Trì mà mục tiêu phe ta gây ra sẽ bằng <nobr>116%</nobr> của sát thương gốc, khi Hysilens dùng Thiên Phú khiến kẻ địch rơi vào trạng thái Bào Mòn/Chảy Máu/Thiêu Đốt/Sốc Điện, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến kẻ đó rơi vào thêm một lần trạng thái Bào Mòn/Chảy Máu/Thiêu Đốt/Sốc Điện giống với hiệu ứng Thiên Phú ban đầu và có thể cùng tồn tại."
+      "desc": "Khi Hysilens trong trận, Sát Thương Duy Trì mà mục tiêu phe ta gây ra sẽ bằng <nobr>116%</nobr> của sát thương gốc, khi Hysilens dùng Thiên Phú khiến kẻ địch rơi vào trạng thái Bào Mòn/Chảy Máu/Thiêu Đốt/Sốc Điện, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến kẻ đó rơi vào thêm một lần trạng thái Bào Mòn/Chảy Máu/Thiêu Đốt/Sốc Điện giống với hiệu ứng Thiên Phú ban đầu và có thể cùng tồn tại.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "Người Hỏi, Sao Sóng Lại Ồn Ã",
-      "desc": "Trong thời gian duy trì kết giới, hiệu ứng tăng sát thương do Vết Tích \"Dây Đàn Ngọc Trai\" gây ra sẽ có hiệu lực với toàn bộ phe ta."
+      "desc": "Trong thời gian duy trì kết giới, hiệu ứng tăng sát thương do Vết Tích \"Dây Đàn Ngọc Trai\" gây ra sẽ có hiệu lực với toàn bộ phe ta.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "Người Hỏi, Sao Ánh Đèn Bị Lãng Quên",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "Đưa Mắt Nhìn Kìa, Sao Năm Tháng Lại Trôi",
-      "desc": "Trong thời gian duy trì kết giới, khiến Kháng Toàn Thuộc Tính của toàn bộ phe địch giảm <nobr>20%</nobr>."
+      "desc": "Trong thời gian duy trì kết giới, khiến Kháng Toàn Thuộc Tính của toàn bộ phe địch giảm <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "Vươn Tay Chải Chuốt, Ngâm Nga Tôi Khẽ Hát",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "Người Đã Trầm Luân, Liệu Có Tỏ Ngày Về",
-      "desc": "Trong thời gian kết giới duy trì, khi bắt đầu mỗi hiệp hoặc sau 1 lần tấn công của mục tiêu phe ta, giới hạn số lần kích hoạt hiệu ứng Sát Thương Vật Lý Duy Trì của Hysilens tăng đến <nobr>12</nobr> lần, và Bội Số Sát Thương gây ra tăng <nobr>20%</nobr>."
+      "desc": "Trong thời gian kết giới duy trì, khi bắt đầu mỗi hiệp hoặc sau 1 lần tấn công của mục tiêu phe ta, giới hạn số lần kích hoạt hiệu ứng Sát Thương Vật Lý Duy Trì của Hysilens tăng đến <nobr>12</nobr> lần, và Bội Số Sát Thương gây ra tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

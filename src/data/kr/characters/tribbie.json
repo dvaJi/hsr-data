@@ -2,6 +2,7 @@
   "_id": 1403,
   "id": "tribbie",
   "name": "트리비",
+  "description": "삼상의 신탁의 자비를 받은 성지에서, 전달자는 수많은 몸으로 나뉘어 먼 길을 떠났다.\n야누소폴리스의 성녀 트리스비오스, 「통로」의 불씨를 훔친 황금의 후예. 사람들을 위해 바삐 돌아다니며 구세의 소식을 온 땅에 전한다.\n——황금 피가 흐르는 사람의 아이를 찾아 세상의 어둠을 뚫고 별과 달이 가득한 내일을 향해 나아가길",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적 및 인접한 목표에게 소량의 양자 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "확산",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "[신의 계시]를 획득하며, 지속 시간 동안 모든 아군의 모든 속성 저항 관통이 증가한다",
       "type": "전투 스킬",
       "tag": "서포트",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -738,6 +766,24 @@
       "simpleDesc": "결계를 활성화하고, 모든 적에게 소량의 양자 속성 피해를 가한다. 결계 지속 시간 동안 적이 받는 피해가 증가하고, 공격한 적의 수량에 따라 피격된 목표 중 HP가 가장 높은 목표에게 소량의 양자 속성 추가 피해를 가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1077,6 +1123,24 @@
       "simpleDesc": "다른 아군 캐릭터가 필살기를 발동하면 트리비가 추가 공격을 발동하여 모든 적에게 소량의 양자 속성 피해를 가한다. 해당 효과는 캐릭터마다 최대 1회 발동하며, 트리비가 필살기를 발동할 시 다른 아군 캐릭터의 발동 가능 횟수가 초기화된다",
       "type": "특성",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,6 +1435,15 @@
       "simpleDesc": "전투 진입 시 [신의 계시]를 획득한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1387,37 +1460,114 @@
       "_id": 140301,
       "id": "rite_of_sugar_scoop",
       "name": "설탕을 줍는 축제",
-      "desc": "결계 지속 시간 동안 아군이 적을 공격하면 결계가 <u>추가 피해</u>를 가하는 목표에게 추가로 이번 공격 총 피해량의 <nobr>24%</nobr>만큼 <u>확정 피해</u>를 가한다"
+      "desc": "결계 지속 시간 동안 아군이 적을 공격하면 결계가 <u>추가 피해</u>를 가하는 목표에게 추가로 이번 공격 총 피해량의 <nobr>24%</nobr>만큼 <u>확정 피해</u>를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "확정 피해",
+          "desc": "어떤 효과에도 영향을 받지 않는 무속성 피해, 이번 피해는 공격을 1회 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140302,
       "id": "guide_of_dream_tour",
       "name": "좋은 꿈을 탐방하는 길잡이",
-      "desc": "결계가 가하는 <u>추가 피해</u>가 기존 피해의 <nobr>120%</nobr>로 증가한다. 결계가 <u>추가 피해</u>를 가할 시 추가 피해를 <nobr>1</nobr>회 추가로 가한다"
+      "desc": "결계가 가하는 <u>추가 피해</u>가 기존 피해의 <nobr>120%</nobr>로 증가한다. 결계가 <u>추가 피해</u>를 가할 시 추가 피해를 <nobr>1</nobr>회 추가로 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140303,
       "id": "trove_of_morning_glow",
       "name": "아침 햇살이 가득한 보물",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140304,
       "id": "peace_of_empathy_bond",
       "name": "마음이 통하는 평안",
-      "desc": "[신의 계시] 지속 시간 동안, 모든 아군이 피해를 가할 시 목표의 방어력을 <nobr>18%</nobr> 무시한다"
+      "desc": "[신의 계시] 지속 시간 동안, 모든 아군이 피해를 가할 시 목표의 방어력을 <nobr>18%</nobr> 무시한다",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140305,
       "id": "clock_of_wonder_origin",
       "name": "기적을 여는 시계",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140306,
       "id": "morrow_of_star_shine",
       "name": "별과 달이 가득한 내일",
-      "desc": "트리비가 필살기 발동 후, 모든 적에게 특성의 <u>추가 공격</u>을 발동한다. 특성의 <u>추가 공격</u>이 가하는 피해가 <nobr>729%</nobr> 증가한다"
+      "desc": "트리비가 필살기 발동 후, 모든 적에게 특성의 <u>추가 공격</u>을 발동한다. 특성의 <u>추가 공격</u>이 가하는 피해가 <nobr>729%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

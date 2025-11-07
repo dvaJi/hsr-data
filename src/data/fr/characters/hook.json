@@ -2,6 +2,7 @@
   "_id": 1109,
   "id": "hook",
   "name": "Hook",
+  "description": "Cheffe autoproclamée de l'escouade d'aventure des Taupes, dans le Souterrain.\nElle chérit sa liberté et voit la vie comme une succession d'aventures.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,22 @@
       "_id": 110901,
       "id": "hehe_dont_get_burned",
       "name": "Héhé ! Attention, ça brûle !",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Hook à un ennemi unique.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Hook à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 110902,
       "id": "hey_remember_hook",
       "name": "Hé ! Tu te souviens de moi ?",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Hook à un ennemi unique, avec #2[i]% de chances de base de lui infliger Brûlure pendant #3[i] tours.\nLes ennemis affectés par l'état Brûlure subissent des dégâts de feu sur la durée équivalents à #4[i]% de l'ATQ de Hook au début de chaque tour.",
-      "simpleDesc": "Inflige des DGT de feu à un ennemi unique, avec de fortes chances de lui infliger Brûlure.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Hook à un ennemi désigné, avec #2[i]% de chances de base de lui infliger Brûlure pendant #3[i] tours.\nLes ennemis affectés par l'état Brûlure subissent des dégâts de feu sur la durée équivalents à #4[i]% de l'ATQ de Hook au début de chaque tour.",
+      "simpleDesc": "Inflige des DGT de feu à un ennemi unique, avec de fortes chances de lui appliquer Brûlure.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -748,10 +782,22 @@
       "_id": 110903,
       "id": "boom_here_comes_the_fire",
       "name": "Boom ! Ça prend feu !",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Hook à un ennemi unique.\nAprès utilisation de l'ultime, la prochaine compétence utilisée est renforcée, infligeant des DGT à la cible ennemie et aux ennemis adjacents.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Hook à un ennemi désigné.\nAprès utilisation de l'ultime, la prochaine compétence utilisée est renforcée, infligeant des DGT à la cible ennemie désignée et aux ennemis adjacents.",
       "simpleDesc": "Inflige des DGT de feu massifs à un ennemi unique et renforce la compétence lors de sa prochaine utilisation.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,27 @@
       "simpleDesc": "Lorsque Hook attaque une cible qui souffre de Brûlure, elle inflige des DGT de feu additionnels moyens et régénère de l'énergie supplémentaires.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1409,24 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Hook inflige des DGT de feu équivalents à #4[i]% de son ATQ à un ennemi aléatoire en entrant en combat. D'autre part, il y a #1[i]% de chances de base d'infliger Brûlure à tous les ennemis pendant #3[i] tours.\nLes ennemis affectés par l'état Brûlure subissent des dégâts de feu sur la durée équivalents à #2[i]% de l'ATQ de Hook au début de chaque tour.",
       "simpleDesc": "Engage le combat contre les ennemis. Inflige des DGT de feu mineurs à un ennemi aléatoire après être entré en combat, avec de fortes chances d'infliger l'effet Brûlure à chaque ennemi.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1446,88 @@
       "_id": 110901,
       "id": "early_to_bed_early_to_rise",
       "name": "Couche-tôt, lève-tôt",
-      "desc": "Les DGT de la compétence renforcée augmentent de <nobr>20%</nobr>."
+      "desc": "Les DGT de la compétence renforcée augmentent de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110902,
       "id": "happy_tummy_happy_body",
       "name": "Quand l'appétit va, tout va",
-      "desc": "Prolonge la durée de l'effet Brûlure infligé par la compétence d'<nobr>1</nobr> tour."
+      "desc": "Prolonge la durée de l'effet Brûlure infligé par la compétence d'<nobr>1</nobr> tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110903,
       "id": "dont_be_picky_nothings_icky",
       "name": "Pas la peine de faire la fine bouche",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110904,
       "id": "its_okay_to_not_know",
       "name": "C'est normal de ne pas savoir",
-      "desc": "Lorsque le talent se déclenche, il y a <nobr>100%</nobr> de <u>chances de base</u> d'infliger un effet de Brûlure équivalent à celui de la compétence aux ennemis adjacents à la cible ennemie désignée."
+      "desc": "Lorsque le talent se déclenche, il y a <nobr>100%</nobr> de <u>chances de base</u> d'infliger un effet de Brûlure équivalent à celui de la compétence aux ennemis adjacents à la cible ennemie désignée.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110905,
       "id": "let_the_moles_deeds_be_known",
       "name": "Gloire aux Taupes",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110906,
       "id": "always_ready_to_punch_and_kick",
       "name": "Toujours prête à en découdre",
-      "desc": "Les DGT de Hook augmentent de <nobr>20%</nobr> sur les ennemis affectés par l'état Brûlure."
+      "desc": "Les DGT de Hook augmentent de <nobr>20%</nobr> sur les ennemis affectés par l'état Brûlure.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

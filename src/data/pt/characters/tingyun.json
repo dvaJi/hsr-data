@@ -2,6 +2,7 @@
   "_id": 1202,
   "id": "tingyun",
   "name": "Tingyun",
+  "description": "Amoraxadora da Comissão de Exploração do Céu do Luofu do Xianzhou.\nEla viaja com representantes comerciais, forjando alianças e relações de comércio com muitos mundos.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Raio leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Aumenta o ATQ de um único aliado e concede Bênção a ele. O aliado com Bênção causa adicionalmente Dano Adicional de Raio leve ao atacar.",
       "type": "Perícia",
       "tag": "Suporte",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Regenera a Energia de um aliado-alvo e aumenta o Dano causado por ele.",
       "type": "Perícia Suprema",
       "tag": "Suporte",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "Quando um inimigo é atacado por Tingyun, o aliado com Bênção causa imediatamente Dano de Raio Adicional leve ao mesmo inimigo.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "Depois de usar esta Técnica, este personagem regenera Energia para si imediatamente.",
       "type": "Técnica",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1374,37 +1447,79 @@
       "_id": 120201,
       "id": "windfall_of_lucky_springs",
       "name": "A Sorte Sorri com Bondade",
-      "desc": "Após usar a Perícia Suprema, o aliado com Bênção ganha <nobr>20%</nobr> de aumento de VEL por 1 rodada."
+      "desc": "Após usar a Perícia Suprema, o aliado com Bênção ganha <nobr>20%</nobr> de aumento de VEL por 1 rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120202,
       "id": "gainfully_gives_givingly_gains",
       "name": "Dá os Ganhos, Ganha o que Dá",
-      "desc": "O aliado com Bênção regenera <nobr>5</nobr> de Energia após derrotar um inimigo. Esse efeito só pode ser ativado uma vez por rodada."
+      "desc": "O aliado com Bênção regenera <nobr>5</nobr> de Energia após derrotar um inimigo. Esse efeito só pode ser ativado uma vez por rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120203,
       "id": "halcyon_bequest",
       "name": "Legado de Alcíone",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120204,
       "id": "jovial_versatility",
       "name": "Versatilidade Jovial",
-      "desc": "O multiplicador de Dano concedido pela Bênção aumenta em <nobr>20%</nobr>."
+      "desc": "O multiplicador de Dano concedido pela Bênção aumenta em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120205,
       "id": "sauntering_coquette",
       "name": "Astúcia Tranquila",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120206,
       "id": "peace_brings_wealth_to_all",
       "name": "A Paz Traz Riqueza a Todos",
-      "desc": "A Perícia Suprema regenera mais <nobr>10</nobr> de Energia para o aliado-alvo."
+      "desc": "A Perícia Suprema regenera mais <nobr>10</nobr> de Energia para o aliado-alvo.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

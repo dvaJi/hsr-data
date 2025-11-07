@@ -2,6 +2,7 @@
   "_id": 1212,
   "id": "jingliu",
   "name": "Jingliu",
+  "description": "Former Sword Champion of the Luofu, and the creator of the Cloud Knights' legends of undefeated might.\nNow, her name has been wiped from the records, and she is a traitor of the Xianzhou walking on the fine line between sanity and mara-struck.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -243,10 +244,22 @@
       "_id": 121201,
       "id": "lucent_moonglow",
       "name": "Lucent Moonglow",
-      "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Ice DMG to a single enemy target.",
+      "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Ice DMG to one designated enemy target.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 121202,
       "id": "transcendent_flash",
       "name": "Transcendent Flash",
-      "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to a single enemy and obtains #2[i] stack(s) of Syzygy.",
+      "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to one designated enemy and obtains #2[i] stack(s) of \"Syzygy.\"",
       "simpleDesc": "Deals Ice DMG to a target enemy and obtains 1 stack of Syzygy.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -724,10 +749,22 @@
       "_id": 121203,
       "id": "florephemeral_dreamflux",
       "name": "Florephemeral Dreamflux",
-      "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to a single enemy, and deals Ice DMG equal to #3[i]% of Jingliu's ATK to any adjacent enemies. Gains #2[i] stack(s) of Syzygy after attack ends.",
+      "desc": "Deals Ice DMG equal to #1[i]% of Jingliu's ATK to one designated enemy, and deals Ice DMG equal to #3[i]% of Jingliu's ATK to any adjacent enemies. Gains #2[i] stack(s) of \"Syzygy\" after attack ends.",
       "simpleDesc": "Deals massive Ice DMG to a target enemy and deals Ice DMG to adjacent targets. Obtains 1 stack of Syzygy.",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,15 @@
       "simpleDesc": "When possessing #5[i] stacks of Syzygy, Jingliu enters the Spectral Transmigration state with her action advanced by 100%, her CRIT Rate increased, and her Skill becoming enhanced. Using an attack in this state consumes HP from her teammates and increases Jingliu's ATK according to the total HP consumed. When Syzygy stacks become 0, exits the Spectral Transmigration state.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1497,32 @@
       "simpleDesc": "Creates a Special Dimension around this unit. Enemies within this dimension will become Frozen. After entering combat with enemies in the dimension, this character regenerates Energy and gains 1 stack of \"Syzygy\" with a high chance to Freeze enemies.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1472,37 +1544,79 @@
       "_id": 121201,
       "id": "moon_crashes_tianguan_gate",
       "name": "Moon Crashes Tianguan Gate",
-      "desc": "When using her Ultimate or Enhanced Skill, Jingliu's CRIT DMG increases by <nobr>24%</nobr> for <nobr>1</nobr> turn(s). If only one enemy target is attacked, the target will additionally be dealt Ice DMG equal to <nobr>100%</nobr> of Jingliu's ATK."
+      "desc": "When using her Ultimate or Enhanced Skill, Jingliu's CRIT DMG increases by <nobr>24%</nobr> for <nobr>1</nobr> turn(s). If only one enemy target is attacked, the target will additionally be dealt Ice DMG equal to <nobr>100%</nobr> of Jingliu's ATK.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121202,
       "id": "crescent_shadows_qixing_dipper",
       "name": "Crescent Shadows Qixing Dipper",
-      "desc": "After using Ultimate, increases the DMG of the next Enhanced Skill by <nobr>80%</nobr>."
+      "desc": "After using Ultimate, increases the DMG of the next Enhanced Skill by <nobr>80%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121203,
       "id": "halfmoon_gapes_mercurial_haze",
       "name": "Halfmoon Gapes Mercurial Haze",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121204,
       "id": "lunarlance_shines_skyward_dome",
       "name": "Lunarlance Shines Skyward Dome",
-      "desc": "During the Spectral Transmigration state, the ATK gained from consuming teammates' HP is additionally increased by <nobr>90%</nobr> of the total HP consumed from the entire team. The cap for ATK gained this way also increases by <nobr>30%</nobr>."
+      "desc": "During the Spectral Transmigration state, the ATK gained from consuming teammates' HP is additionally increased by <nobr>90%</nobr> of the total HP consumed from the entire team. The cap for ATK gained this way also increases by <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121205,
       "id": "night_shades_astral_radiance",
       "name": "Night Shades Astral Radiance",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121206,
       "id": "eclipse_hollows_corporeal_husk",
       "name": "Eclipse Hollows Corporeal Husk",
-      "desc": "When Jingliu enters the Spectral Transmigration state, the Syzygy stack limit increases by 1, and Jingliu obtains <nobr>1</nobr> stack(s) of Syzygy. While she is in the Spectral Transmigration state, her CRIT DMG increases by <nobr>50%</nobr>."
+      "desc": "When Jingliu enters the Spectral Transmigration state, the Syzygy stack limit increases by 1, and Jingliu obtains <nobr>1</nobr> stack(s) of Syzygy. While she is in the Spectral Transmigration state, her CRIT DMG increases by <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

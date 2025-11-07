@@ -2,6 +2,7 @@
   "_id": 1405,
   "id": "anaxa",
   "name": "那刻夏",
+  "description": "神悟樹庭，滋養知識的學府，誕育哲人的搖床。\n但瀆神的阿那克薩戈拉斯，詰問「理性」火種的黃金裔，試問：你甘願身負惡名，也要違逆預言，將懷疑的枝杈刺入智慧的聖樹？\n——「可笑。這世界遍地虛假，唯有我才是真實。」",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量風屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "對敵方單體造成少量風屬性傷害，共彈射5次，優先彈射未命中的目標。場上敵方目標越多造成的傷害越高。",
       "type": "戰技",
       "tag": "彈射",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "對敵方全體施加【昇華】並造成風屬性傷害。【昇華】狀態下，目標同時被附加7種屬性弱點，若不具有控制抵抗則無法行動。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1065,15 @@
       "simpleDesc": "命中敵方目標後，新增1個隨機弱點。弱點數量達到#3[i]的敵方目標陷入【質性揭露】。那刻夏對處於【質性揭露】狀態的目標造成的傷害提高，對其發動普通攻擊或戰技後額外施放1次無消耗的戰技。",
       "type": "天賦",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1361,6 +1398,15 @@
       "simpleDesc": "使周圍的敵人陷入恐懼狀態。攻擊陷入恐懼狀態的敵人總視為弱點進入戰鬥，為敵方全體附加攻擊者屬性的弱點。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1378,37 +1424,79 @@
       "_id": 140501,
       "id": "magician_isolated_by_stars",
       "name": "月掩星夜的魔術師",
-      "desc": "首次施放戰技後，恢復<nobr>1</nobr>個戰技點。施放戰技命中敵方目標時，使目標防禦力降低<nobr>16%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "首次施放戰技後，恢復<nobr>1</nobr>個戰技點。施放戰技命中敵方目標時，使目標防禦力降低<nobr>16%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140502,
       "id": "soul_true_to_history",
       "name": "真實歷史的自然人",
-      "desc": "敵方目標入場時，觸發1次天賦的弱點附加效果，並使其全屬性抗性降低<nobr>20%</nobr>。"
+      "desc": "敵方目標入場時，觸發1次天賦的弱點附加效果，並使其全屬性抗性降低<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140503,
       "id": "pupil_etched_into_cosmos",
       "name": "鐫刻進深空的瞳孔",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140504,
       "id": "blaze_plunged_to_canyon",
       "name": "墜落在山谷的熾熱",
-      "desc": "施放戰技時，攻擊力提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。該效果最多疊加<nobr>2</nobr>層。"
+      "desc": "施放戰技時，攻擊力提高<nobr>30%</nobr>，持續<nobr>2</nobr>回合。該效果最多疊加<nobr>2</nobr>層。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140505,
       "id": "embryo_set_beyond_vortex",
       "name": "離心漩渦外的胚種",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140506,
       "id": "everything_is_in_everything",
       "name": "萬物皆在萬物之中",
-      "desc": "那刻夏造成的傷害為原傷害的<nobr>130%</nobr>。行跡【必要的留白】的2種效果都會直接觸發，不再依賴我方隊伍中「智識」命途角色的數量。"
+      "desc": "那刻夏造成的傷害為原傷害的<nobr>130%</nobr>。行跡【必要的留白】的2種效果都會直接觸發，不再依賴我方隊伍中「智識」命途角色的數量。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

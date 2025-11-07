@@ -2,6 +2,7 @@
   "_id": 1014,
   "id": "saber",
   "name": "Saber",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi désigné.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inflige des DGT de vent à un ennemi désigné et des DGT de vent mineurs aux cibles adjacentes. Si après avoir attaqué, Saber peut régénérer toute son énergie en consommant Résonance cardinale, augmente le multiplicateur de DGT de cette instance de compétence en fonction des points de Résonance cardinale, et consomme toute la Résonance cardinale après l'attaque. Sinon, accorde #3[i] points de Résonance cardinale.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Inflige des DGT de vent massifs à tous les ennemis. De plus, inflige des DGT de vent mineurs à un ennemi aléatoire. Ces DGT rebondissent #3[i] fois, et renforcent la prochaine ATQ normale.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        120,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1110,15 @@
       "simpleDesc": "Accorde #8[i] point de Résonance cardinale en début de combat. Lorsqu'une cible alliée lance un ultime, augmente les DGT infligés par Saber et accorde #1[i] points de Résonance cardinale. Lorsqu'un point de Résonance cardinale est consommé, Saber régénère des points d'énergie.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1518,15 @@
       "simpleDesc": "Après avoir utilisé la technique, accorde #3[i] points de Résonance cardinale et augmente l'ATQ au début du prochain combat.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1499,37 +1545,97 @@
       "_id": 101401,
       "id": "the_lost_white_walls",
       "name": "Les murs blancs disparus",
-      "desc": "Augmente les DGT d'ultime infligés par <nobr>Saber</nobr> de <nobr>60%</nobr>. Après que <nobr>Saber</nobr> a utilisé une ATQ normale ou une compétence, gagne <nobr>1</nobr> point de Résonance cardinale."
+      "desc": "Augmente les DGT d'ultime infligés par <nobr>Saber</nobr> de <nobr>60%</nobr>. Après que <nobr>Saber</nobr> a utilisé une ATQ normale ou une compétence, gagne <nobr>1</nobr> point de Résonance cardinale.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101402,
       "id": "the_lost_oath_of_the_round_table",
       "name": "Le serment perdu de la Table ronde",
-      "desc": "Pour chaque point de Résonance cardinale obtenu au cours du combat, les DGT infligés par <nobr>Saber</nobr> ignorent <nobr>#2[f1]%</nobr> de la DÉF des cibles. Cet effet peut être cumulé jusqu'à <nobr>15</nobr> fois. Lorsque l'effet d'augmentation du multiplicateur de la compétence est activé, chaque point de Résonance cardinale augmente le multiplicateur de DGT de cette utilisation de la compétence de <nobr>7%</nobr> supplémentaires."
+      "desc": "Pour chaque point de Résonance cardinale obtenu au cours du combat, les DGT infligés par <nobr>Saber</nobr> ignorent <nobr>#2[f1]%</nobr> de la DÉF des cibles. Cet effet peut être cumulé jusqu'à <nobr>15</nobr> fois. Lorsque l'effet d'augmentation du multiplicateur de la compétence est activé, chaque point de Résonance cardinale augmente le multiplicateur de DGT de cette utilisation de la compétence de <nobr>7%</nobr> supplémentaires.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101403,
       "id": "a_wish_across_fifteen_centuries",
       "name": "Un vœu vieux de quinze siècles",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101404,
       "id": "the_saga_of_sixteen_winter_days",
       "name": "Épopée des seize jours d'hiver",
-      "desc": "Augmente la <u>PÉN de RÉS</u> de vent de <nobr>Saber</nobr> de <nobr>8%</nobr>. Après avoir utilisé l'ultime, augmente la <u>PÉN de RÉS</u> de vent de <nobr>Saber</nobr> de <nobr>4%</nobr>. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois."
+      "desc": "Augmente la <u>PÉN de RÉS</u> de vent de <nobr>Saber</nobr> de <nobr>8%</nobr>. Après avoir utilisé l'ultime, augmente la <u>PÉN de RÉS</u> de vent de <nobr>Saber</nobr> de <nobr>4%</nobr>. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101405,
       "id": "the_dreamed_utopian_dawn",
       "name": "Rêve d'une aube utopique",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101406,
       "id": "the_long_fated_night",
       "name": "Longue nuit destinée",
-      "desc": "La <u>PÉN de RÉS</u> au vent des DGT d'ultime infligés par <nobr>Saber</nobr> augmente de <nobr>20%</nobr>, et l'excédent d'énergie pouvant être accumulé par la Trace Bénédiction du lac passe à <nobr>200</nobr> points. Après avoir utilisé un ultime pour la première fois en combat, <nobr>Saber</nobr> récupère un montant fixe de <nobr>300</nobr> points d'énergie. Après cela, cet effet peut être déclenché 1 fois tous les <nobr>3</nobr> ultimes."
+      "desc": "La <u>PÉN de RÉS</u> au vent des DGT d'ultime infligés par <nobr>Saber</nobr> augmente de <nobr>20%</nobr>, et l'excédent d'énergie pouvant être accumulé par la Trace Bénédiction du lac passe à <nobr>200</nobr> points. Après avoir utilisé un ultime pour la première fois en combat, <nobr>Saber</nobr> récupère un montant fixe de <nobr>300</nobr> points d'énergie. Après cela, cet effet peut être déclenché 1 fois tous les <nobr>3</nobr> ultimes.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

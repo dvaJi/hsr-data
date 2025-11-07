@@ -2,6 +2,7 @@
   "_id": 1310,
   "id": "firefly",
   "name": "Glühwürmchen",
+  "description": "Ein Mitglied der Stellaron-Jäger. Sie kämpft in ihrer mechanischen Rüstung namens „SAM“ und ihr Charakter ist von Loyalität und Entschlossenheit gekennzeichnet.\nSie wurde als Waffe gegen den Schwarm entwickelt und erfährt ein beschleunigtes Wachstum, hat aber eine tragisch verkürzte Lebenserwartung.\nSie schloss sich den Stellaron-Jägern an, um einen Weg zu finden, dem Schicksal zu trotzen.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Feuer-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Verbraucht einen Teil der eigenen LP und stellt Energie wieder her, um einem Gegner Feuer-SCH zuzufügen. Die nächste Aktion wird vorgezogen.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Aktion vorziehen",
+          "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,15 @@
       "simpleDesc": "Tritt in den Status „Vollständige Verbrennung“ ein. Zieht die eigene Aktion um 100 %  und erhält den verstärkten Standardangriff sowie die verstärkte Fertigkeit. Erhöht außerdem die GES, Schwächebruch-Effizienz und den von Gegnern erlittenen Bruch-SCH bis zum Ende des Countdowns.",
       "type": "Ultimate",
       "tag": "Verstärkung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,24 @@
       "simpleDesc": "Je niedriger die LP sind, desto geringer wird der erlittene SCH. Im Status „Vollständige Verbrennung“ ist die SCH-Reduktion stets maximal wirksam und der Effekt-WDS wird erhöht. Wenn die Energie beim Kampfbeginn unter #2[i]% liegt, wird sie auf #2[i]% wiederhergestellt. Sobald die Energie vollständig wiederhergestellt ist, werden alle Debuffs entfernt.",
       "type": "Talent",
       "tag": "Verteidigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1490,15 @@
       "desc": "Springt in die Luft und bewegt sich ohne Einschränkungen. Dies dauert #1[i] Sek. an und kann mit einem Sturzangriff vorzeitig beendet werden. Nach dem Ende der freien Bewegung steigt SAM herab und greift sofort alle Gegner in einem bestimmten Wirkungsbereich an. Implantiert allen Gegnern zu Beginn jeder Kampfwelle für #3[i] Rd. Feuer-Schwäche und fügt ihnen dann Feuer-SCH in Höhe von #2[i]% von SAMs ANG zu.",
       "simpleDesc": "Springt in die Luft und bewegt sich ohne Einschränkungen. Steigt nach einigen Sekunden herab und greift alle Gegner im Wirkungsbereich der Bewegung an. Implantiert allen Gegnern zu Beginn jeder Kampfwelle Feuer-Schwäche und fügt ihnen dann Feuer-SCH zu.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1517,105 @@
       "_id": 131001,
       "id": "in_reddened_chrysalis_i_once_rest",
       "name": "Im geröteten Kokon schlief ich einst",
-      "desc": "Beim Einsatz der verstärkten Fertigkeit werden <nobr>15%</nobr> der VTD des Ziels ignoriert und keine Fertigkeitspunkte verbraucht."
+      "desc": "Beim Einsatz der verstärkten Fertigkeit werden <nobr>15%</nobr> der VTD des Ziels ignoriert und keine Fertigkeitspunkte verbraucht.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131002,
       "id": "from_shattered_sky_i_free_fall",
       "name": "Fall aus zerbrochenem Himmel",
-      "desc": "Wenn im Status „Vollständige Verbrennung“ durch den Einsatz des verstärkten Standardangriffs oder der verstärkten Fertigkeit ein Gegner besiegt wird oder <u>Schwächebruch</u> erleidet, erhält SAM sofort eine <u>zusätzliche Runde</u>. Dieser Effekt kann nach <nobr>1</nobr> Rd. erneut ausgelöst werden."
+      "desc": "Wenn im Status „Vollständige Verbrennung“ durch den Einsatz des verstärkten Standardangriffs oder der verstärkten Fertigkeit ein Gegner besiegt wird oder <u>Schwächebruch</u> erleidet, erhält SAM sofort eine <u>zusätzliche Runde</u>. Dieser Effekt kann nach <nobr>1</nobr> Rd. erneut ausgelöst werden.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Schwächebruch",
+          "desc": "Wenn der Widerstand gegnerischer Ziele auf 0 sinkt, treten sie in den Zustand Schwächebruch ein, was ihre Aktionen verzögert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Zusätzliche Runde",
+          "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131003,
       "id": "amidst_silenced_stars_i_deep_sleep",
       "name": "Schlummern in der totenstillen Galaxie",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131004,
       "id": "upon_lighted_fyrefly_i_soon_gaze",
       "name": "Ich sehe sie bald, die Flamme des Glühwürmchens",
-      "desc": "Erhöht im Status „Vollständige Verbrennung“ SAMs Effekt-WDS um <nobr>50%</nobr>."
+      "desc": "Erhöht im Status „Vollständige Verbrennung“ SAMs Effekt-WDS um <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131005,
       "id": "from_undreamt_night_i_thence_shine",
       "name": "Entfacht aus traumloser Nacht",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131006,
       "id": "in_finalized_morrow_i_full_bloom",
       "name": "Erblüht aus endgültigem Morgen",
-      "desc": "Erhöht im Status „Vollständige Verbrennung“ SAMs <u>Feuer-WDS-DUR</u> um <nobr>20%</nobr>. Beim Einsatz des verstärkten Standardangriffs und der verstärkten Fertigkeit wird die Schwächebruch-Effizienz um <nobr>50%</nobr> erhöht."
+      "desc": "Erhöht im Status „Vollständige Verbrennung“ SAMs <u>Feuer-WDS-DUR</u> um <nobr>20%</nobr>. Beim Einsatz des verstärkten Standardangriffs und der verstärkten Fertigkeit wird die Schwächebruch-Effizienz um <nobr>50%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 8007,
   "id": "trailblazer_remembrance_boy",
   "name": "開拓者 {RUBY_B#きおく}記憶{RUBY_E#}",
+  "description": "星穹列車に乗車した{F#少女}{M#少年}。\n星核がもたらす危機を回避するため、星穹列車に同行することを選択した。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の氷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "記憶の精霊「ミュリオン」を召喚する。ミュリオンがすでにフィールド上にいる場合、ミュリオンはHPを回復し、チャージを獲得する。",
       "type": "戦闘スキル",
       "tag": "召喚",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "記憶の精霊を召喚",
+          "desc": "記憶の精霊をフィールドに召喚する。記憶の精霊がフィールド上にいる場合、記憶の精霊に付与されているすべての行動制限系デバフを解除する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "記憶の精霊「ミュリオン」を召喚する。ミュリオンはチャージを獲得し、その後、敵全体に大量の氷属性ダメージを与える。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "記憶の精霊を召喚",
+          "desc": "記憶の精霊をフィールドに召喚する。記憶の精霊がフィールド上にいる場合、記憶の精霊に付与されているすべての行動制限系デバフを解除する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "味方全体で一定のEPを回復するたびに、ミュリオンがチャージを獲得する。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "特殊領域を作り出す。領域内の敵は行動を停止する。領域内の敵と戦闘に入った後、敵全体の行動順を遅延させ、敵全体に少量の氷属性ダメージを与える。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "行動遅延",
+          "desc": "対象の次の行動までの間隔が長くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,42 +1444,599 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "ミュリオン",
+    "icon": "SpriteOutput/ServantIconTeam/18007B.png",
+    "hpBase": "#4",
+    "hpInherit": "#2",
+    "hpSkill": 800704,
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1800701,
+        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
+        "desc": "<nobr>#2[i]</nobr>回ダメージを与える。毎回ランダムな敵単体に「ミュリオン」の攻撃力<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>分の氷属性ダメージを与え、最後に敵全体にミュリオンの攻撃力<span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>分の氷属性ダメージを与える。",
+        "simpleDesc": "敵単体に少量の氷属性ダメージを与える、<span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>回バウンドする。最後に敵全体に少量の氷属性ダメージを与える。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "全体攻撃"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              4,
+              0.45
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.216,
+              4,
+              0.54
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.252,
+              4,
+              0.63
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.288,
+              4,
+              0.72
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.324,
+              4,
+              0.81
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.36,
+              4,
+              0.9
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.396,
+              4,
+              0.99
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.432,
+              4,
+              1.08
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.468,
+              4,
+              1.17
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.504,
+              4,
+              1.26
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800703,
+        "name": "{RUBY_B#なかま}仲間{RUBY_E#}と{RUBY_B#いっしょ}一緒{RUBY_E#}に！",
+        "desc": "味方全体の会心ダメージを、「ミュリオン」の会心ダメージ<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>分+<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>アップする。\nチャージが<nobr>100%</nobr>未満の場合、ミュリオンは行動する時に自動で「厄介な悪者さん！」を発動する。チャージが<nobr>100%</nobr>に達した時、ミュリオンは即座に行動し、指定した味方単体に「あたしが助ける！」を発動できるようになる。",
+        "simpleDesc": "味方全体の会心ダメージをアップする。\n行動時に自動で攻撃を行う。チャージが<nobr>100%</nobr>に達すると即座に行動し、別のスキルを発動できる。別スキルの効果：味方単体の<span style=\"color:#f29e38ff><u>行動順を早め</u></span>、<span style=\"color:#f29e38ff><u>確定ダメージ</u></span>を与えられるようにする。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "サポート"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.12
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.144
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.168
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.192
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.216
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.24
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.264
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.288
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.312
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.336
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800705,
+        "name": "がんばれミュリオン！",
+        "desc": "「ミュリオン」が召喚された時、即座にチャージを<nobr>#1[i]%</nobr>獲得する。",
+        "simpleDesc": "ミュリオンが召喚された時、即座にチャージを獲得する。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800706,
+        "name": "{RUBY_B#く}悔{RUBY_E#}いは…{RUBY_B#のこ}残{RUBY_E#}さないの",
+        "desc": "「ミュリオン」が退場する時、開拓者の<u>行動順</u>を<nobr>#1[i]%</nobr><u>早める</u>。",
+        "simpleDesc": "退場する時、開拓者の<u>行動順を早める</u>。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "行動前倒し",
+            "desc": "対象の次の行動までの間隔が短くなる。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800707,
+        "name": "あたしが{RUBY_B#たす}助{RUBY_E#}ける！",
+        "desc": "指定した味方単体の<u>行動順</u>を<nobr>#3[i]%</nobr><u>早め</u>、「ミュリオンの応援」を付与する、<nobr>#2[i]</nobr>ターン継続。\n「ミュリオンの応援」を持つ味方はダメージを1回与えるたびに、追加で本来のダメージ<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>分の<u>確定ダメージ</u>を1回与える。\nスキルターゲットがミュリオン自身の場合、<u>行動順を早める</u>効果は発動しない。",
+        "simpleDesc": "味方単体の<span style=\"color:#f29e38ff><u>行動順を早め</u></span>、「ミュリオンの応援」を付与する。\n「ミュリオンの応援」を持つ味方は、ダメージを与えた後に追加で<span style=\"color:#f29e38ff><u>確定ダメージ</u></span>を与える。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "サポート"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "行動前倒し",
+            "desc": "対象の次の行動までの間隔が短くなる。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000017,
+            "name": "確定ダメージ",
+            "desc": "いかなる効果にも影響されない無属性ダメージ。このダメージは攻撃を1回行ったと見なされない。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.2,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.22,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.24,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.26,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.28,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.32,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.34,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.36,
+              3,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 800701,
       "id": "narrator_of_the_present",
       "name": "{RUBY_B#げんざい}現在{RUBY_E#}を{RUBY_B#きろく}記録{RUBY_E#}する{RUBY_B#もの}者{RUBY_E#}",
-      "desc": "「ミュリオンの応援」を持つ味方の会心率+<nobr>10%</nobr>。味方が「ミュリオンの応援」を持つ時、その効果はその味方の記憶の精霊/召喚者、両方に適用される。なお、この効果は累積できない。"
+      "desc": "「ミュリオンの応援」を持つ味方の会心率+<nobr>10%</nobr>。味方が「ミュリオンの応援」を持つ時、その効果はその味方の記憶の精霊/召喚者、両方に適用される。なお、この効果は累積できない。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800702,
       "id": "gleaner_of_the_past",
       "name": "{RUBY_B#かこ}過去{RUBY_E#}を{RUBY_B#ひろ}拾{RUBY_E#}う{RUBY_B#もの}者{RUBY_E#}",
-      "desc": "「ミュリオン」以外の味方の記憶の精霊が行動する時、開拓者のEPを<nobr>8</nobr>回復する。この効果はターンが回ってくるたびに<nobr>1</nobr>回まで発動でき、開拓者のターンが回ってきた時に発動可能回数がリセットされる。"
+      "desc": "「ミュリオン」以外の味方の記憶の精霊が行動する時、開拓者のEPを<nobr>8</nobr>回復する。この効果はターンが回ってくるたびに<nobr>1</nobr>回まで発動でき、開拓者のターンが回ってきた時に発動可能回数がリセットされる。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800703,
       "id": "chanter_of_the_future",
       "name": "{RUBY_B#みらい}未来{RUBY_E#}を{RUBY_B#うた}詠{RUBY_E#}う{RUBY_B#もの}者{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800704,
       "id": "dancer_of_the_muse",
       "name": "ミューズの{RUBY_B#あら}新{RUBY_E#}たな\n{RUBY_B#おど}踊{RUBY_E#}り{RUBY_B#て}手{RUBY_E#}",
-      "desc": "最大EPが0の味方がスキルを発動する時、「ミュリオン」はチャージを<nobr>3%</nobr>獲得し、その味方が「ミュリオンの応援」による確定ダメージのダメージ倍率がさらに+<nobr>6%</nobr>。"
+      "desc": "最大EPが0の味方がスキルを発動する時、「ミュリオン」はチャージを<nobr>3%</nobr>獲得し、その味方が「ミュリオンの応援」による確定ダメージのダメージ倍率がさらに+<nobr>6%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800705,
       "id": "seamster_of_the_ode",
       "name": "{RUBY_B#しへん}詩篇{RUBY_E#}の{RUBY_B#つむ}紡{RUBY_E#}ぎ{RUBY_B#て}手{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800706,
       "id": "bearer_of_the_revelation",
       "name": "{RUBY_B#けいじ}啓示{RUBY_E#}の{RUBY_B#かた}語{RUBY_E#}り{RUBY_B#て}手{RUBY_E#}",
-      "desc": "必殺技の会心率が<nobr>100%</nobr>に固定される。"
+      "desc": "必殺技の会心率が<nobr>100%</nobr>に固定される。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +2485,151 @@
       }
     },
     {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用ポイント",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "イの種",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "略奪の本能",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用ポイント",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "マナの苗",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "改ざんの野心",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用ポイント",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "マナの苗",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "改ざんの野心",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用ポイント",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "アラヤの花",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "踏みにじる意志",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用ポイント",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "アラヤの花",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "踏みにじる意志",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -1868,151 +2643,6 @@
       }
     },
     {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用ポイント",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "イの種",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "略奪の本能",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用ポイント",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "マナの苗",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "改ざんの野心",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用ポイント",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "マナの苗",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "改ざんの野心",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用ポイント",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "アラヤの花",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "踏みにじる意志",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "{RUBY_B#やっかい}厄介{RUBY_E#}な{RUBY_B#わるもの}悪者{RUBY_E#}さん！",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用ポイント",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "アラヤの花",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "踏みにじる意志",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -2153,6 +2783,27 @@
             "id": "conquerors_will",
             "name": "踏みにじる意志",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "{RUBY_B#お}終{RUBY_E#}わらないエピローグ",
+        "desc": "必殺技を発動した後、「叙事詩」を1層獲得する。「叙事詩」は最大で<nobr>2</nobr>層累積できる。「叙事詩」を持ち、かつミュリオンがフィールド上にいる時、通常攻撃が「明日を一緒に紡ごう！」に強化される。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

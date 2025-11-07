@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "Hyacine",
+  "description": "La polis entre las nubes se desvanece con el paso del tiempo, y el Patio Claroscuro abre nuevamente sus puertas para traer un destello de luz a la noche eterna.\nSanadora Hyacinta, Heredera de Crisos que custodia la Yesca del Cielo, deberás heredar la voluntad de tus ancestros y zurcir el tejido roto del crepúsculo.\nQue la luz del arcoíris caiga, que el rencor se disuelva, y que el amanecer regrese a la tierra.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Invoca al mnemoduende Ica y regenera PV a todos los aliados.",
       "type": "Habilidad básica",
       "tag": "Regeneración",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "Invoca al mnemoduende Ica y regenera PV a todos los aliados. Entra en el estado de Cielo lavado. Mientras Hyacine está en este estado, los PV máx. de todos los aliados aumentan.",
       "type": "Habilidad definitiva",
       "tag": "Apoyo",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "Cuando Hyacine o Ica realizan una curación, el daño que inflige Ica aumenta.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "Al comenzar la siguiente batalla, regenera PV a todos los aliados y aumenta sus PV máx.",
       "type": "Técnica",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Ica",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "¡Apártense, nubarrones!",
+        "desc": "Inflige a todos los enemigos un Daño de Viento equivalente al <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> de la curación de Hyacine e Ica acumulada durante esta batalla y borra un <nobr>#2[i]%</nobr> del valor de curación acumulada.",
+        "simpleDesc": "Inflige Daño de Viento a todos los enemigos.",
+        "type": {
+          "id": "Servant",
+          "name": "Habilidad de mnemoduende"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ATQ AdE"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "Tomar la mano del cielo",
+        "desc": "Ica mantiene su VEL en 0, es inmune a los <u>estados negativos</u> y no aparece en el orden de acción.\nSi los PV de los aliados (exceptuando a Ica) se reducen, al comienzo del turno de cualquier objetivo o tras la acción de cualquier objetivo, Ica consume un <nobr>#1[i]%</nobr> de sus propios PV máx. y regenera una cantidad de PV equivalente al <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> de los PV máx. de Hyacine + <span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span> a los aliados cuyos PV se hayan reducido.\nDespués de que Hyacine lance una habilidad mientras está en el estado de Cielo lavado, Ica obtiene inmediatamente un <u>turno adicional</u> y lanza automáticamente ¡Apártense, nubarrones! Además, cuando Ica activa el efecto de curación del talento, regenera adicionalmente a todos los aliados una cantidad de PV equivalente al <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> de los PV máx. de Hyacine + <span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>. Tras lanzar una habilidad, la duración de todos los <u>efectos continuos</u> que tenga Ica se reduce en 1 turno.",
+        "simpleDesc": "Cuando <span style=\"color:#f29e38ff>se reducen los PV</span> de los aliados (que no sean Ica), Ica consume sus propios PV y <span style=\"color:#f29e38ff>regenera PV</span> a esos aliados. Después de que Hyacine lance una habilidad mientras tiene Cielo lavado, Ica obtiene inmediatamente un <u>turno adicional</u> y lanza automáticamente la habilidad de mnemoduende. Después de que Ica lance la habilidad, la duración de los <u>efectos continuos</u> que tenga Ica se reduce en 1 turno.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "Regeneración"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "Turno adicional",
+            "desc": "Obtiene 1 turno adicional que no se resta de la cantidad de turnos. Durante este turno adicional no se puede usar la habilidad definitiva.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "Estado negativo",
+            "desc": "Reduce la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos estados se pueden eliminar.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "Efecto continuo",
+            "desc": "Incluye efectos positivos, estados negativos y otros efectos.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "Alas extendidas hacia el sol",
+        "desc": "Cuando es invocado, Hyacine recupera <nobr>#1[i]</nobr> pts. de energía. Cuando es invocado por primera vez, Hyacine recupera <nobr>#2[i]</nobr> pts. de energía adicionales.",
+        "simpleDesc": "Al ser invocado, recupera energía para Hyacine.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Potenciación"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "Caer, para luego volar",
+        "desc": "Al desaparecer, <u>la acción de Hyacine se adelanta</u> un <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Al desaparecer, <u>la acción de Hyacine se adelanta</u>.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Potenciación"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Acción adelantada",
+            "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "Protectora de la llama nocturna",
-      "desc": "Cuando Hyacine está en el estado de Cielo lavado, todos los aliados aumentan sus PV máx. en un <nobr>50%</nobr> adicional y, tras atacar, regeneran inmediatamente una cantidad de PV equivalente al <nobr>8%</nobr> de los PV máx. de Hyacine."
+      "desc": "Cuando Hyacine está en el estado de Cielo lavado, todos los aliados aumentan sus PV máx. en un <nobr>50%</nobr> adicional y, tras atacar, regeneran inmediatamente una cantidad de PV equivalente al <nobr>8%</nobr> de los PV máx. de Hyacine.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "Ven a sentarte en mi jardín",
-      "desc": "Cuando los PV de un aliado se reducen, la VEL aumenta en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Cuando los PV de un aliado se reducen, la VEL aumenta en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "¡Aventurémonos hacia el sol!",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de habilidad del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de habilidad de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "Te regalo este ámbar brillante",
-      "desc": "El Rastro \"Respiro en el vendaval\" se potencia. Por cada <nobr>1</nobr> pt. de VEL de exceso, el Daño CRIT de Hyacine e Ica aumenta en un <nobr>2%</nobr> adicional."
+      "desc": "El Rastro \"Respiro en el vendaval\" se potencia. Por cada <nobr>1</nobr> pt. de VEL de exceso, el Daño CRIT de Hyacine e Ica aumenta en un <nobr>2%</nobr> adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "Reverso de arrebol marino",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "Cielos, escuchen mi ruego",
-      "desc": "El porcentaje de curación acumulada que se borra cuando Ica lanza la habilidad del mnemoduende pasa a ser el <nobr>12%</nobr>. Cuando Ica está en el campo de batalla, la <u>PEN de la RES</u> a todos los tipos de todos los aliados aumenta en un <nobr>20%</nobr>."
+      "desc": "El porcentaje de curación acumulada que se borra cuando Ica lanza la habilidad de mnemoduende pasa a ser el <nobr>12%</nobr>. Cuando Ica está en el campo de batalla, la <u>PEN de la RES</u> a todos los tipos de todos los aliados aumenta en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

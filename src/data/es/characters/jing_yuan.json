@@ -2,6 +2,7 @@
   "_id": 1204,
   "id": "jing_yuan",
   "name": "Jing Yuan",
+  "description": "La Premonición Divina, uno de los siete generales celestiales del Señor Arquero de la Alianza Xianzhou. Está al mando de los Nimbocaballeros del Luofu.\nEs discípulo de la anterior maestra de espadas del Luofu, pero no es conocido por sus habilidades marciales.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a todos los enemigos e incrementa los golpes por acción del caballero divino.",
       "type": "Habilidad básica",
       "tag": "ATQ AdE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +750,15 @@
       "simpleDesc": "Inflige Daño de Rayo a todos los enemigos e incrementa los golpes por acción del caballero divino.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1068,40 @@
       "simpleDesc": "Invoca al caballero divino al comenzar la batalla. Al actuar, el caballero divino lanza un ataque adicional que inflige una pequeña cantidad de Daño de Rayo automáticamente a un enemigo al azar y a los objetivos adyacentes.",
       "type": "Talento",
       "tag": "Rebote",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Estados negativos de control",
+          "desc": "Congelación, Enredo, Prisión, Dominación, Cólera, Reverberación potente, Sueño extraño, Enredo-Prisión, Aterrorizado y Bloqueo de acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1471,15 @@
       "simpleDesc": "Tras usar la técnica, en la siguiente batalla se incrementan los golpes por acción del caballero divino.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1496,79 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "Corte, acantilados cercenados",
-      "desc": "Cuando el caballero divino lanza un ataque, el multiplicador de daño que inflige a los enemigos adyacentes al objetivo aumenta adicionalmente en una cantidad equivalente al <nobr>25%</nobr> del multiplicador de daño del objetivo principal."
+      "desc": "Cuando el caballero divino lanza un ataque, el multiplicador de daño que inflige a los enemigos adyacentes al objetivo aumenta adicionalmente en una cantidad equivalente al <nobr>25%</nobr> del multiplicador de daño del objetivo principal.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "Falange, soles bloqueados",
-      "desc": "Tras la acción del caballero divino, el ATQ básico, la habilidad básica y la habilidad definitiva de Jing Yuan infligen un <nobr>20%</nobr> más de daño durante <nobr>2</nobr> turnos."
+      "desc": "Tras la acción del caballero divino, el ATQ básico, la habilidad básica y la habilidad definitiva de Jing Yuan infligen un <nobr>20%</nobr> más de daño durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120403,
       "id": "strike_suns_subdued",
       "name": "Golpe, luz destrozada",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120404,
       "id": "spin_stars_sieged",
       "name": "Espada, estrellas derribadas",
-      "desc": "Por cada golpe que inflige el caballero divino, Jing Yuan recupera <nobr>2</nobr> pts. de energía."
+      "desc": "Por cada golpe que inflige el caballero divino, Jing Yuan recupera <nobr>2</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120405,
       "id": "stride_spoils_seized",
       "name": "Veteranía, muerte conquistada",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120406,
       "id": "sweep_souls_slain",
       "name": "Conjuro, enemigos derrotados",
-      "desc": "Cada golpe que inflige el caballero divino hace que el objetivo enemigo entre en un estado de Vulnerabilidad.\nLos enemigos vulnerables reciben un <nobr>12%</nobr> más de daño hasta que termine el ataque actual del caballero divino. Este efecto se puede acumular hasta <nobr>3</nobr> veces."
+      "desc": "Cada golpe que inflige el caballero divino hace que el objetivo enemigo entre en un estado de Vulnerabilidad.\nLos enemigos vulnerables reciben un <nobr>12%</nobr> más de daño hasta que termine el ataque actual del caballero divino. Este efecto se puede acumular hasta <nobr>3</nobr> veces.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

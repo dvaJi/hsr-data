@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "Luocha",
+  "description": "Comerciante extranjero que vino de otra galaxia y que siempre lleva consigo un ataúd.\nPosee unos conocimientos médicos excelentes.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Imaginario a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Regenera los PV de un aliado y obtiene una acumulación de Flor abisal.",
       "type": "Habilidad básica",
       "tag": "Regeneración",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "Elimina 1 efecto positivo de todos los enemigos y les inflige Daño Imaginario. Obtiene 1 acumulación de Flor abisal.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Efecto positivo",
+          "desc": "Refuerza la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos efectos se pueden eliminar.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "Genera un campo al alcanzar 2 acumulaciones de Flor abisal. Los aliados regeneran PV al atacar mientras el campo está activo.",
       "type": "Talento",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "Al usar la técnica, el talento se activa inmediatamente en la siguiente batalla.",
       "type": "Técnica",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Ablución de los vivos",
-      "desc": "Mientras el campo está activo, el ATQ de todos los aliados aumenta en un <nobr>20%</nobr>."
+      "desc": "Mientras el campo está activo, el ATQ de todos los aliados aumenta en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "Concesión inmaculada",
-      "desc": "Al activar el efecto de la habilidad básica, si el aliado objetivo tiene en ese momento un porcentaje de PV inferior al <nobr>50%</nobr>, la curación realizada por Luocha aumenta en un <nobr>30%</nobr>. Si el aliado tiene un porcentaje de PV igual o superior al <nobr>50%</nobr>, Luocha le otorga un escudo que absorbe un daño equivalente al <nobr>18%</nobr> del ATQ de Luocha + <nobr>240</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Al activar el efecto de la habilidad básica, si el aliado objetivo tiene en ese momento un porcentaje de PV inferior al <nobr>50%</nobr>, la curación realizada por Luocha aumenta en un <nobr>30%</nobr>. Si el aliado tiene un porcentaje de PV igual o superior al <nobr>50%</nobr>, Luocha le otorga un escudo que absorbe un daño equivalente al <nobr>18%</nobr> del ATQ de Luocha + <nobr>240</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "Intento de bobos",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "Juicio de espinas",
-      "desc": "Los enemigos se ven afectados por Debilitación cuando el campo de Luocha está activo y el daño que infligen se reduce en un <nobr>12%</nobr>."
+      "desc": "Los enemigos se ven afectados por Debilitación cuando el campo de Luocha está activo y el daño que infligen se reduce en un <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "Marca de sacrificio",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "En polvo te convertirás",
-      "desc": "Al usar la habilidad definitiva, hay una <u>probabilidad fija</u> del <nobr>100%</nobr> de que la RES a todos los tipos de todos los enemigos se reduzca en un <nobr>20%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Al usar la habilidad definitiva, hay una <u>probabilidad fija</u> del <nobr>100%</nobr> de que la RES a todos los tipos de todos los enemigos se reduzca en un <nobr>20%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Probabilidad fija",
+          "desc": "La probabilidad fija no se ve afectada por ningún factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

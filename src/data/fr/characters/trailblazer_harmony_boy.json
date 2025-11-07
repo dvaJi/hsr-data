@@ -2,6 +2,7 @@
   "_id": 8005,
   "id": "trailblazer_harmony_boy",
   "name": "Pionnier L'Harmonie",
+  "description": "{F#Une jeune fille}{M#Un jeune homme} qui a embarqué à bord de l'Astral Express.\n{F#Elle}{M#Il} a choisi de voyager à bord du train pour éliminer la menace que pose le Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inflige des DGT imaginaires mineurs à des cibles ennemies uniques pour un total de 5 rebonds.",
       "type": "Compétence",
       "tag": "Rebond",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "Applique l'effet Soutien sur scène à tous les alliés. Les alliés qui bénéficient de l'effet Soutien sur scène voient leur effet de Rupture augmenté et infligent des DGT de rupture extrême 1 fois lorsqu'ils attaquent des cibles ennemies qui subissent une Rupture de faiblesse.",
       "type": "Ultime",
       "tag": "Soutien",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "DGT de rupture extrême",
+          "desc": "Les DGT de rupture extrême augmentent avec l'effet de Rupture, la réduction de robustesse de l'attaque et le niveau du personnage.\nLes DGT de rupture extrême ne peuvent pas infliger de coup critique et ne sont pas affectés par les effets d'augmentation de DGT.\nLes DGT de rupture extrême sont aussi considérés comme étant des DGT de rupture.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "Le pionnier régénère de l'énergie chaque fois qu'une cible ennemie subit une Rupture de faiblesse.",
       "type": "Talent",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "Augmente l'effet de Rupture de tous les alliés au début du prochain combat.",
       "type": "Technique",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800501,
       "id": "best_seat_in_the_house",
       "name": "Premières loges",
-      "desc": "Récupère <nobr>1</nobr> point de compétence après la première utilisation de la compétence."
+      "desc": "Récupère <nobr>1</nobr> point de compétence après la première utilisation de la compétence.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800502,
       "id": "jailbreaking_rainbowwalk",
       "name": "Charleston endiablé",
-      "desc": "Le taux de régénération d'énergie du pionnier augmente de <nobr>25%</nobr> pour une durée de <nobr>3</nobr> tours en début de combat."
+      "desc": "Le taux de régénération d'énergie du pionnier augmente de <nobr>25%</nobr> pour une durée de <nobr>3</nobr> tours en début de combat.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800503,
       "id": "sanatorium_for_rest_notes",
       "name": "Note finale",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800504,
       "id": "dove_in_tophat",
       "name": "Chapeau l'artiste",
-      "desc": "Lorsque le pionnier est sur le champ de bataille, augmente l'effet de Rupture de tous les alliés à l'exception du pionnier. L'augmentation est équivalente à <nobr>15%</nobr> de l'effet de Rupture du pionnier."
+      "desc": "Lorsque le pionnier est sur le champ de bataille, augmente l'effet de Rupture de tous les alliés à l'exception du pionnier. L'augmentation est équivalente à <nobr>15%</nobr> de l'effet de Rupture du pionnier.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800505,
       "id": "poem_favors_rhythms_of_old",
       "name": "Rythmes anciens",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800506,
       "id": "tomorrow_rest_in_spotlight",
       "name": "Sous les feux de la rampe",
-      "desc": "Augmente les DGT supplémentaires de la compétence de <nobr>2</nobr> frappes."
+      "desc": "Augmente les DGT supplémentaires de la compétence de <nobr>2</nobr> frappes.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

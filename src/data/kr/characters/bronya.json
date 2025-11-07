@@ -2,6 +2,7 @@
   "_id": 1101,
   "id": "bronya",
   "name": "브로냐",
+  "description": "벨로보그 「수호자」의 계승자.\n공주의 고고함과 군인의 꿋꿋함이 공존한다",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 바람 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "단일 아군의 디버프 효과를 1개 해제하고, 해당 아군이 가하는 피해가 증가하며 즉시 행동한다",
       "type": "전투 스킬",
       "tag": "서포트",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "디버프 효과",
+          "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,18 @@
       "simpleDesc": "모든 아군의 공격력이 증가하고 치명타 피해가 증가한다",
       "type": "필살기",
       "tag": "서포트",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "일반 공격 발동 후 자신의 다음 행동 게이지가 증가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1455,15 @@
       "simpleDesc": "비술을 발동하고 다음 전투 시작 시 모든 아군의 공격력이 증가한다",
       "type": "비술",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1481,97 @@
       "_id": 110101,
       "id": "hone_your_strength",
       "name": "정신 무장, 전투력 비축",
-      "desc": "전투 스킬 발동 시 <nobr>50%</nobr>의 <u>고정 확률</u>로 전투 스킬 포인트를 1pt 회복한다. 해당 효과의 재발동 대기시간은 1턴이다"
+      "desc": "전투 스킬 발동 시 <nobr>50%</nobr>의 <u>고정 확률</u>로 전투 스킬 포인트를 1pt 회복한다. 해당 효과의 재발동 대기시간은 1턴이다",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "고정 확률",
+          "desc": "어떤 요인에도 영향을 받지 않는 고정 확률이다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110102,
       "id": "quick_march",
       "name": "빠른 행군",
-      "desc": "전투 스킬 발동 시 지정된 아군은 행동 후 속도가 <nobr>30%</nobr> 증가한다. 지속 시간: 1턴"
+      "desc": "전투 스킬 발동 시 지정된 아군은 행동 후 속도가 <nobr>30%</nobr> 증가한다. 지속 시간: 1턴",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110103,
       "id": "bombardment",
       "name": "포격 개시",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110104,
       "id": "take_by_surprise",
       "name": "허점 공격",
-      "desc": "다른 아군 캐릭터가 바람 속성 약점을 보유한 적에게 일반 공격을 발동하면, 브로냐는 즉시 <u>추가 공격</u>을 1회 발동하여 해당 목표에게 일반 공격 피해의 <nobr>80%</nobr>만큼 바람 속성 피해를 가한다. 해당 효과는 턴마다 1회 발동할 수 있다"
+      "desc": "다른 아군 캐릭터가 바람 속성 약점을 보유한 적에게 일반 공격을 발동하면, 브로냐는 즉시 <u>추가 공격</u>을 1회 발동하여 해당 목표에게 일반 공격 피해의 <nobr>80%</nobr>만큼 바람 속성 피해를 가한다. 해당 효과는 턴마다 1회 발동할 수 있다",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110105,
       "id": "unstoppable",
       "name": "승승장구",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110106,
       "id": "piercing_rainbow",
       "name": "드높은 기세",
-      "desc": "전투 스킬이 지정한 아군이 가하는 피해 증가 효과 지속 시간이 <nobr>1</nobr>턴 증가한다"
+      "desc": "전투 스킬이 지정한 아군이 가하는 피해 증가 효과 지속 시간이 <nobr>1</nobr>턴 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

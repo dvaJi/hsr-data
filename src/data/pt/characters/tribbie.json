@@ -2,6 +2,7 @@
   "_id": 1403,
   "id": "tribbie",
   "name": "Tribbie",
+  "description": "Daquela terra sagrada abençoada pela profecia tripartite, a mensageira se dividiu em mil formas, embarcando em uma longa jornada.\nTribios, Donzela Sagrada de Janusópolis, a Herdeira de Chrysos que roubou a Chama Primordial da Passagem, trabalhou pelas massas e levou a notícia da libertação a todos os domínios.\n- Busque os filhos da humanidade com sangue dourado em suas veias, destrua a escuridão mais obscura deste mundo e caminhe em direção ao amanhã onde as estrelas brilham.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Quântico leve a um único inimigo e unidades adjacentes.",
       "type": "ATQ Básico",
       "tag": "Explosão",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Ganha \"Numinosidade\", durante a qual todos os aliados-alvo têm sua PEN de RES a Todos os Tipos aumentada.",
       "type": "Perícia",
       "tag": "Suporte",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -738,6 +766,24 @@
       "simpleDesc": "Ativa um Campo e causa Dano Quântico leve a todos os inimigos. Enquanto o Campo durar, aumenta o Dano recebido pelos inimigos e causa Dano Quântico leve Adicional ao alvo que tem os maiores PV entre os alvos atingidos com base no número de inimigos atacados.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1077,6 +1123,24 @@
       "simpleDesc": "Após outros personagens aliados utilizarem sua Perícia Suprema, Tribbie realiza um Ataque Extra, causando Dano Quântico leve a todos os inimigos. Este efeito pode ser ativado até 1 vez por personagem. Quando Tribbie usa sua Perícia Suprema, a contagem de ativação para outros personagens aliados é reiniciada.",
       "type": "Talento",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,6 +1435,15 @@
       "simpleDesc": "Ao entrar em batalha, obtém \"Numinosidade\".",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1387,37 +1460,114 @@
       "_id": 140301,
       "id": "rite_of_sugar_scoop",
       "name": "Ritual da Colher de Açúcar",
-      "desc": "Enquanto o Campo estiver ativo e após aliados-alvo atacarem inimigos, causa adicionalmente <u>Dano Verdadeiro</u> igual a <nobr>24%</nobr> do Dano total deste ataque aos alvos que receberam <u>Dano Adicional</u> do Campo."
+      "desc": "Enquanto o Campo estiver ativo e após aliados-alvo atacarem inimigos, causa adicionalmente <u>Dano Verdadeiro</u> igual a <nobr>24%</nobr> do Dano total deste ataque aos alvos que receberam <u>Dano Adicional</u> do Campo.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "Dano Verdadeiro",
+          "desc": "Dano sem Tipo que não é afetado por nenhum efeito. Esse Dano não é considerado como a utilização de 1 ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140302,
       "id": "guide_of_dream_tour",
       "name": "Guia de Visita aos Sonhos",
-      "desc": "O <u>Dano Adicional</u> causado pelo Campo aumenta para <nobr>120%</nobr> do Dano original. Quando o Campo causa <u>Dano Adicional</u>, causa adicionalmente <nobr>1</nobr> instância(s) de <u>Dano Adicional</u>."
+      "desc": "O <u>Dano Adicional</u> causado pelo Campo aumenta para <nobr>120%</nobr> do Dano original. Quando o Campo causa <u>Dano Adicional</u>, causa adicionalmente <nobr>1</nobr> instância(s) de <u>Dano Adicional</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140303,
       "id": "trove_of_morning_glow",
       "name": "Tesouro do Brilho Matutino",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140304,
       "id": "peace_of_empathy_bond",
       "name": "Paz do Laço Empático",
-      "desc": "Enquanto \"Numinosidade\" durar, o Dano causado por todos os aliados ignora <nobr>18%</nobr> da DEF do alvo."
+      "desc": "Enquanto \"Numinosidade\" durar, o Dano causado por todos os aliados ignora <nobr>18%</nobr> da DEF do alvo.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140305,
       "id": "clock_of_wonder_origin",
       "name": "Relógio da Origem das Maravilhas",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140306,
       "id": "morrow_of_star_shine",
       "name": "Manhã do Brilho Estelar",
-      "desc": "Após Tribbie utilizar sua Perícia Suprema, ela realiza o <u>Ataque Extra</u> do seu Talento contra todos os inimigos. O Dano causado pelo <u>Ataque Extra</u> do seu Talento é aumentado em <nobr>729%</nobr>."
+      "desc": "Após Tribbie utilizar sua Perícia Suprema, ela realiza o <u>Ataque Extra</u> do seu Talento contra todos os inimigos. O Dano causado pelo <u>Ataque Extra</u> do seu Talento é aumentado em <nobr>729%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

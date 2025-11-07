@@ -2,6 +2,7 @@
   "_id": 8003,
   "id": "trailblazer_preservation_boy",
   "name": "Pionnier La Préservation",
+  "description": "{F#Une jeune fille}{M#Un jeune homme} qui a embarqué à bord de l'Astral Express.\n{F#Elle}{M#Il} a choisi de voyager à bord du train pour éliminer la menace que pose le Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,19 @@
       "_id": 800301,
       "id": "icebreaking_light",
       "name": "Feu fendeur de glace",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ du pionnier à un ennemi unique et gagne 1 cumul de Volonté du magma.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ du pionnier à un ennemi désigné et gagne 1 cumul de Volonté du magma.",
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi unique et gagne Volonté du magma.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Réduit les DGT subis et gagne Volonté du magma, avec de fortes chances de provoquer tous les ennemis.",
       "type": "Compétence",
       "tag": "Défense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +765,15 @@
       "simpleDesc": "Inflige des DGT de feu à tous les ennemis et renforce la prochaine ATQ normale de cette unité.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1036,10 +1073,19 @@
       "_id": 800304,
       "id": "treasure_of_the_architects",
       "name": "Trésor des Architectes",
-      "desc": "Chaque fois que le pionnier est touché, il obtient 1 cumul de Volonté du magma pour un maximum de #3[i] cumuls.\nLorsque Volonté du magma atteint au moins 4 cumuls, l'ATQ normale du pionnier est renforcée, infligeant des DGT à un ennemi unique et aux ennemis adjacents.\nLorsque le pionnier utilise l'ATQ normale, la compétence ou l'ultime, il accorde un bouclier qui absorbe des DGT équivalents à #1[f1]% de sa propre DÉF + #4[i] à tous les alliés. Le bouclier dure #2[i] tours.",
+      "desc": "Chaque fois que le pionnier est touché, il obtient 1 cumul de Volonté du magma pour un maximum de #3[i] cumuls.\nLorsque Volonté du magma atteint au moins 4 cumuls, l'ATQ normale du pionnier est renforcée, infligeant des DGT à un ennemi désigné et aux ennemis adjacents.\nLorsque le pionnier utilise l'ATQ normale, la compétence ou l'ultime, il accorde un bouclier qui absorbe des DGT équivalents à #1[f1]% de sa propre DÉF + #4[i] à tous les alliés. Le bouclier dure #2[i] tours.",
       "simpleDesc": "Cumule de la Volonté du magma lorsque l'unité subit une attaque. Lorsque Volonté du magma atteint au moins 4 cumuls, l'ATQ normale devientrenforcée. Accorde un bouclier à l'équipe après avoir utilisé l'ATQ normale, la compétence ou l'ultime.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,6 +1419,15 @@
       "simpleDesc": "Après avoir utilisé la technique, fournit un bouclier à cette unité au début du prochain combat.",
       "type": "Technique",
       "tag": "Défense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1446,79 @@
       "_id": 800301,
       "id": "earthshaking_resonance",
       "name": "Déflagration du cœur en fusion",
-      "desc": "Lorsque le pionnier utilise son ATQ normale, il inflige des DGT de feu supplémentaires équivalents à <nobr>25%</nobr> de sa DÉF. Lorsqu'il utilise son ATQ normale renforcée, il inflige des DGT de feu supplémentaires équivalents à <nobr>50%</nobr> de sa DÉF."
+      "desc": "Lorsque le pionnier utilise son ATQ normale, il inflige des DGT de feu supplémentaires équivalents à <nobr>25%</nobr> de sa DÉF. Lorsqu'il utilise son ATQ normale renforcée, il inflige des DGT de feu supplémentaires équivalents à <nobr>50%</nobr> de sa DÉF.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800302,
       "id": "timedefying_tenacity",
       "name": "Ténacité sans faille",
-      "desc": "Le bouclier appliqué à tous les alliés grâce au talent du pionnier absorbe des DGT supplémentaires équivalents à <nobr>2%</nobr> de la DÉF du pionnier + <nobr>27</nobr>."
+      "desc": "Le bouclier appliqué à tous les alliés grâce au talent du pionnier absorbe des DGT supplémentaires équivalents à <nobr>2%</nobr> de la DÉF du pionnier + <nobr>27</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800303,
       "id": "trailblazing_blueprint",
       "name": "Tout feu, tout flamme",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800304,
       "id": "nationbuilding_oath",
       "name": "Serment de survie de la civilisation",
-      "desc": "Gagne immédiatement <nobr>4</nobr> cumuls de Volonté du magma en début de combat."
+      "desc": "Gagne immédiatement <nobr>4</nobr> cumuls de Volonté du magma en début de combat.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800305,
       "id": "spiritwarming_flame",
       "name": "Flamme d'inspiration",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800306,
       "id": "cityforging_bulwarks",
       "name": "Remparts de la cité éblouissante",
-      "desc": "Après utilisation de l'ATQ normale renforcée ou de l'ultime du pionnier, sa DÉF augmente de <nobr>10%</nobr>. Cumulable jusqu'à <nobr>3</nobr> fois."
+      "desc": "Après utilisation de l'ATQ normale renforcée ou de l'ultime du pionnier, sa DÉF augmente de <nobr>10%</nobr>. Cumulable jusqu'à <nobr>3</nobr> fois.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

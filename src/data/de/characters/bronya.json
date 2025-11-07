@@ -2,6 +2,7 @@
   "_id": 1101,
   "id": "bronya",
   "name": "Bronya",
+  "description": "Die mutmaßliche Nachfolgerin der Obersten Wächterin von Belobog.\nIhr Stolz ist einer Prinzessin würdig, doch sie besitzt darüber hinaus die Entschlossenheit und Integrität einer Soldatin.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Wind-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Entfernt 1 Debuff von einem Verbündeten, erhöht dessen SCH und er tritt sofort in Aktion.",
       "type": "Fertigkeit",
       "tag": "Unterstützung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,18 @@
       "simpleDesc": "Erhöht den ANG und KRIT-SCH aller Verbündeten.",
       "type": "Ultimate",
       "tag": "Unterstützung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "Nach dem Einsatz des Standardangriffs wird die nächste eigene Aktion vorgezogen.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Aktion vorziehen",
+          "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1455,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik wird der ANG aller Verbündeten zu Beginn des nächsten Kampfes erhöht.",
       "type": "Technik",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1481,97 @@
       "_id": 110101,
       "id": "hone_your_strength",
       "name": "Stärke erhöhen",
-      "desc": "Beim Einsatz der Fertigkeit besteht eine <u>feste Chance</u> von <nobr>50%</nobr>, 1 Fertigkeitspunkt wiederherzustellen. Dieser Effekt hat eine Abklingzeit von 1 Rd."
+      "desc": "Beim Einsatz der Fertigkeit besteht eine <u>feste Chance</u> von <nobr>50%</nobr>, 1 Fertigkeitspunkt wiederherzustellen. Dieser Effekt hat eine Abklingzeit von 1 Rd.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Feste Chance",
+          "desc": "Die feste Chance wird von keinem Faktor beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110102,
       "id": "quick_march",
       "name": "Eilmarsch",
-      "desc": "Erhöht beim Einsatz der Fertigkeit die GES eines anvisierten Verbündeten für 1 Rd. um <nobr>30%</nobr>, wenn er eine Aktion ausführt."
+      "desc": "Erhöht beim Einsatz der Fertigkeit die GES eines anvisierten Verbündeten für 1 Rd. um <nobr>30%</nobr>, wenn er eine Aktion ausführt.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110103,
       "id": "bombardment",
       "name": "Bombardement",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110104,
       "id": "take_by_surprise",
       "name": "Überraschungsangriff",
-      "desc": "Nach einem Standardangriff eines Verbündeten auf einen Gegner mit Wind-Schwäche startet Bronya unmittelbar einen <u>Folgeangriff</u> und fügt dem Ziel Wind-SCH in Höhe von <nobr>80%</nobr> des Standardangriff-SCH zu. Dieser Effekt kann 1-mal pro Runde ausgelöst werden."
+      "desc": "Nach einem Standardangriff eines Verbündeten auf einen Gegner mit Wind-Schwäche startet Bronya unmittelbar einen <u>Folgeangriff</u> und fügt dem Ziel Wind-SCH in Höhe von <nobr>80%</nobr> des Standardangriff-SCH zu. Dieser Effekt kann 1-mal pro Runde ausgelöst werden.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110105,
       "id": "unstoppable",
       "name": "Unaufhaltsam",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110106,
       "id": "piercing_rainbow",
       "name": "Durchdringender Regenbogen",
-      "desc": "Verlängert die Dauer des erhöhten SCH durch Fertigkeit auf dem anvisierten Verbündeten um <nobr>1</nobr> Rd."
+      "desc": "Verlängert die Dauer des erhöhten SCH durch Fertigkeit auf dem anvisierten Verbündeten um <nobr>1</nobr> Rd.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

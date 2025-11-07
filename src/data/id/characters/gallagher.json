@@ -2,6 +2,7 @@
   "_id": 1301,
   "id": "gallagher",
   "name": "Gallagher",
+  "description": "Petugas keamanan dari Bloodhound Family saat ini di Penacony. Dia selalu sopan terhadap pengunjung, namun juga selalu waspada. Dia kelihatannya memiliki masa lalu yang rumit, tapi dia tidak pernah inisiatif membicarakannya.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Fire DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Segera memulihkan HP 1 rekan tim.",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "Membuat seluruh musuh memasuki status \"Besotted\", dan di saat yang bersamaan mengakibatkan Fire DMG pada seluruh musuh. Basic Attack berikutnya akan diperkuat menjadi \"Nectar Blitz\".",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1038,24 @@
       "simpleDesc": "\"Besotted\" meningkatkan Break DMG yang diterima target. Setiap kali setelah target berstatus \"Besotted\" terkena serangan rekan tim, akan memulihkan HP penyerang.",
       "type": "Talent",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Semakin tinggi Break Effect, level karakter, dan Max Toughness musuh, maka Break DMG yang diakibatkan akan semakin tinggi.\nBreak DMG tidak dapat CRIT Hit, dan tidak akan terkena pengaruh efek peningkatan DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, akan membuat seluruh musuh memasuki status \"Besotted\" selama #1[i] giliran, serta mengakibatkan Fire DMG sebesar #2[i]% ATK Gallagher pada seluruh musuh.",
       "simpleDesc": "Menyerang musuh. Setelah memasuki pertempuran, membuat seluruh musuh memasuki status \"Besotted\", serta mengakibatkan Fire DMG dalam jumlah kecil pada seluruh musuh.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,88 @@
       "_id": 130101,
       "id": "salty_dog",
       "name": "Salty Dog",
-      "desc": "Gallagher akan memulihkan <nobr>20</nobr> Energy setelah memasuki pertempuran, dan meningkatkan <nobr>50%</nobr> Effect RES dirinya."
+      "desc": "Gallagher akan memulihkan <nobr>20</nobr> Energy setelah memasuki pertempuran, dan meningkatkan <nobr>50%</nobr> Effect RES dirinya.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130102,
       "id": "lions_tail",
       "name": "Lion's Tail",
-      "desc": "Saat melancarkan Skill, akan menghilangkan <nobr>1</nobr> <u>efek Debuff</u> dari 1 rekan tim yang ditargetkan. Di saat bersamaan, akan meningkatkan <nobr>30%</nobr> Effect RES rekan tersebut, berlangsung selama <nobr>2</nobr> giliran."
+      "desc": "Saat melancarkan Skill, akan menghilangkan <nobr>1</nobr> <u>efek Debuff</u> dari 1 rekan tim yang ditargetkan. Di saat bersamaan, akan meningkatkan <nobr>30%</nobr> Effect RES rekan tersebut, berlangsung selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130103,
       "id": "corpse_reviver",
       "name": "Corpse Reviver",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130104,
       "id": "last_word",
       "name": "Last Word",
-      "desc": "Meningkatkan durasi status \"Besotted\" yang diakibatkan Ultimate Gallagher sebanyak <nobr>1</nobr> giliran."
+      "desc": "Meningkatkan durasi status \"Besotted\" yang diakibatkan Ultimate Gallagher sebanyak <nobr>1</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130105,
       "id": "death_in_the_afternoon",
       "name": "Death in the Afternoon",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130106,
       "id": "blood_and_sand",
       "name": "Blood and Sand",
-      "desc": "Meningkatkan <nobr>20%</nobr> Break Effect dan <nobr>20%</nobr> Weakness Break Efficiency Gallagher."
+      "desc": "Meningkatkan <nobr>20%</nobr> Break Effect dan <nobr>20%</nobr> Weakness Break Efficiency Gallagher.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "ブートヒル",
+  "description": "宇宙を放浪するサイボーグカウボーイ。かなり楽観的で、自由奔放。\n「巡海レンジャー」の一員で、悪を懲らしめるためなら手段を選ばない——\nその派手な行動は、復讐の対象である「スターピースカンパニー」の注意を引くためである。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "「九死の決闘」を始める。「九死の決闘」のターゲットが倒される、または弱点撃破された後、ブートヒルは「ポケットアドバンテージ」を獲得し、「九死の決闘」を解除する。通常攻撃を強化する。ターンは終了しない。",
       "type": "戦闘スキル",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "敵単体に物理属性弱点を付与し、大量の物理属性ダメージを与え、行動順を遅延させる。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "行動遅延",
+          "desc": "対象の次の行動までの間隔が長くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "「ポケットアドバンテージ」は「ファニング」の削靭値をアップし、弱点撃破された敵にさらに物理属性弱点撃破ダメージを与える。戦闘に勝利した後、「ポケットアドバンテージ」を次の戦闘に持ち越せる。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点撃破状態",
+          "desc": "敵の靭性が0まで削られた時に入る特殊状態。この状態になった敵は行動順が遅延する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "弱点撃破ダメージ",
+          "desc": "撃破特効、ターゲットの最大靭性またはキャラクターのレベルが高いほど、与える弱点撃破ダメージがアップする。\n弱点撃破ダメージは会心が発生せず、ダメージアップ系効果の影響を受けない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "秘技を使用、次の戦闘で初めて戦闘スキルを発動する時、敵単体に物理属性弱点を付与する。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "{RUBY_B#さじん}砂塵{RUBY_E#}の{RUBY_B#なか}中{RUBY_E#}の{RUBY_B#いっとうせい}一等星{RUBY_E#}",
-      "desc": "戦闘開始時、「ポケットアドバンテージ」を1層獲得する。ブートヒルがダメージを与える時、敵の防御力を<nobr>16%</nobr>無視する。"
+      "desc": "戦闘開始時、「ポケットアドバンテージ」を1層獲得する。ブートヒルがダメージを与える時、敵の防御力を<nobr>16%</nobr>無視する。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "マイルストーン・\nマンガー",
-      "desc": "「九死の決闘」状態で「ポケットアドバンテージ」を獲得する時、SPを<nobr>1</nobr>回復する。同時に撃破特効+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。この効果はターンが回ってくるたびに1回まで発動でき、獲得する「ポケットアドバンテージ」が上限を超える時にも触発される。"
+      "desc": "「九死の決闘」状態で「ポケットアドバンテージ」を獲得する時、SPを<nobr>1</nobr>回復する。同時に撃破特効+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。この効果はターンが回ってくるたびに1回まで発動でき、獲得する「ポケットアドバンテージ」が上限を超える時にも触発される。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "{RUBY_B#はかもり}墓守{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "{RUBY_B#さ}冷{RUBY_E#}めた{RUBY_B#にく}肉{RUBY_E#}の{RUBY_B#りょうりにん}料理人{RUBY_E#}",
-      "desc": "「九死の決闘」状態の敵がブートヒルの攻撃を受ける時、被ダメージアップ効果さらに+<nobr>12%</nobr>。ブートヒルが「九死の決闘」状態の敵の攻撃を受ける時、被ダメージアップ効果-<nobr>12%</nobr>。"
+      "desc": "「九死の決闘」状態の敵がブートヒルの攻撃を受ける時、被ダメージアップ効果さらに+<nobr>12%</nobr>。ブートヒルが「九死の決闘」状態の敵の攻撃を受ける時、被ダメージアップ効果-<nobr>12%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "{RUBY_B#き}切{RUBY_E#}り{RUBY_B#かぶ}株{RUBY_E#}の{RUBY_B#えんぜつか}演説家{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "{RUBY_B#てつごうし}鉄格子{RUBY_E#}ホテルの{RUBY_B#じょうれん}常連{RUBY_E#}",
-      "desc": "天賦を触発して<u>弱点撃破ダメージ</u>を与える時、ターゲットに対してさらに本来のダメージ倍率<nobr>40%</nobr>分の<u>弱点撃破ダメージ</u>を与え、隣接する敵に本来のダメージ倍率<nobr>70%</nobr>分の<u>弱点撃破ダメージ</u>を与える。"
+      "desc": "天賦を触発して<u>弱点撃破ダメージ</u>を与える時、ターゲットに対してさらに本来のダメージ倍率<nobr>40%</nobr>分の<u>弱点撃破ダメージ</u>を与え、隣接する敵に本来のダメージ倍率<nobr>70%</nobr>分の<u>弱点撃破ダメージ</u>を与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "弱点撃破ダメージ",
+          "desc": "撃破特効、ターゲットの最大靭性またはキャラクターのレベルが高いほど、与える弱点撃破ダメージがアップする。\n弱点撃破ダメージは会心が発生せず、ダメージアップ系効果の影響を受けない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1112,
   "id": "topaz_and_numby",
   "name": "Topaz & Numby",
+  "description": "Topaz, cán bộ cao cấp của Bộ Đầu Tư Chiến Lược thuộc Công Ty Hành Tinh Hòa Bình, lãnh đạo nhóm theo dõi khoản nợ đặc biệt.\nTuổi còn trẻ mà đã trở thành một trong \"10 người có trái tim đá\", với nền tảng là \"giục trả nợ\".\nCộng sự Heo Đất Không Gian \"Numby\" lại có thể cảm nhận nhạy bén về sự tồn tại của \"của cải\", ngay cả những việc liên quan đến an ninh, đòi nợ, thống kê v.v... cũng không thành vấn đề.\nNgày nay họ đang cùng nhau tuần tra ngân hà, theo đuổi các vấn đề tranh chấp nợ nần gây ảnh hưởng đến sự phát triển của công ty.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Khiến 1 kẻ địch rơi vào trạng thái \"Bằng Chứng Nợ Nần\", tăng Sát Thương Đòn Đánh Theo Sau phải chịu. Numby gây Sát Thương Hỏa lên mục tiêu.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -728,6 +762,18 @@
       "simpleDesc": "Khiến Numby rơi vào trạng thái \"Chồng Chất\", tăng Bội Số Sát Thương và Sát Thương Bạo Kích.",
       "type": "Tuyệt Kỹ",
       "tag": "Cường Hóa",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1113,32 @@
       "simpleDesc": "Bắt đầu chiến đấu, sẽ triệu hồi Numby, khi Numby hành động sẽ phát động  Đòn Đánh Theo Sau lên mục tiêu đang rơi vào Bằng Chứng Nợ Nần, gây Sát Thương Hỏa.\nKhi kẻ địch đang trong Bằng Chứng Nợ Nần phải chịu Đòn Đánh Theo Sau, Numby sẽ Ưu Tiên Hành Động.",
       "type": "Thiên Phú",
       "tag": "Đánh Đơn",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1463,15 @@
       "simpleDesc": "Trong mê cung triệu hồi Numby đi theo, Numby sẽ tự động tìm kiếm Chiến Lợi Phẩm thường và Heo Đất ở gần. Sau khi dùng Bí Kỹ khiến Numby tấn công lần đầu trong trận chiến kế tiếp, Topaz Năng Lượng.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1489,106 @@
       "_id": 111201,
       "id": "future_market",
       "name": "Thị Trường Tương Lai",
-      "desc": "Khi mục tiêu phe địch ở trạng thái \"Bằng Chứng Nợ Nần\" chịu <u>Đòn Đánh Theo Sau</u>, sẽ rơi vào trạng thái \"Cưỡng Chế Thực Thi\", trong 1 lần tấn công tối đa hiệu lực 1 lần.\n\"Cưỡng Chế Thực Thi\" làm tăng <nobr>25%</nobr> sát thương bạo kích của <u>Đòn Đánh Theo Sau</u> mà mục tiêu phe địch phải chịu, tối đa cộng dồn <nobr>2</nobr> tầng. Khi \"Bằng Chứng Nợ Nần\" bị xóa bỏ, \"Cưỡng Chế Thực Thi\" cũng sẽ bị xóa bỏ."
+      "desc": "Khi mục tiêu phe địch ở trạng thái \"Bằng Chứng Nợ Nần\" chịu <u>Đòn Đánh Theo Sau</u>, sẽ rơi vào trạng thái \"Cưỡng Chế Thực Thi\", trong 1 lần tấn công tối đa hiệu lực 1 lần.\n\"Cưỡng Chế Thực Thi\" làm tăng <nobr>25%</nobr> sát thương bạo kích của <u>Đòn Đánh Theo Sau</u> mà mục tiêu phe địch phải chịu, tối đa cộng dồn <nobr>2</nobr> tầng. Khi \"Bằng Chứng Nợ Nần\" bị xóa bỏ, \"Cưỡng Chế Thực Thi\" cũng sẽ bị xóa bỏ.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111202,
       "id": "bona_fide_acquisition",
       "name": "Thiện Chí Thu Mua",
-      "desc": "Sau khi Numby hành động và phát động tấn công, Topaz hồi <nobr>5</nobr> điểm Năng Lượng."
+      "desc": "Sau khi Numby hành động và phát động tấn công, Topaz hồi <nobr>5</nobr> điểm Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111203,
       "id": "seize_the_big_and_free_the_small",
       "name": "Thả Con Tép Bắt Con Tôm",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111204,
       "id": "agile_operation",
       "name": "Xử Lý Nhanh Nhạy",
-      "desc": "Sau khi hiệp của Numby bắt đầu, Topaz sẽ <u>Ưu Tiên Hành Động</u> <nobr>20%</nobr>."
+      "desc": "Sau khi hiệp của Numby bắt đầu, Topaz sẽ <u>Ưu Tiên Hành Động</u> <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111205,
       "id": "inflationary_demand",
       "name": "Nhu Cầu Tăng Vọt",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111206,
       "id": "incentive_mechanism",
       "name": "Cơ Chế Khích Lệ",
-      "desc": "Số lần tấn công khi Numby ở trạng thái \"Chồng Chất\" tăng <nobr>1</nobr> lần, đồng thời khi tấn công, <u>Xuyên Kháng</u> Hỏa tăng <nobr>10%</nobr>."
+      "desc": "Số lần tấn công khi Numby ở trạng thái \"Chồng Chất\" tăng <nobr>1</nobr> lần, đồng thời khi tấn công, <u>Xuyên Kháng</u> Hỏa tăng <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

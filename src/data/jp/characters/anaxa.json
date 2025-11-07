@@ -2,6 +2,7 @@
   "_id": 1405,
   "id": "anaxa",
   "name": "アナイクス",
+  "description": "神悟の樹庭、それは知恵を培う学府であり、哲人を育む揺籃でもある。\n神を冒涜するアナクサゴラス、「理性」の火種を問いただす黄金裔。汚名を甘受し預言に背き、懐疑の枝を知性の聖樹に突き刺す者である。\n——「滑稽ですね。偽りに満ちているこの世界でただ1人、私だけが真実なのですよ」",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与え、5回バウンドする。バウンドはその回の戦闘スキルの攻撃を受けていない敵が優先される。フィールドの敵が多いほど、与ダメージがアップする。",
       "type": "戦闘スキル",
       "tag": "バウンド",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "敵全体に「昇華」状態を付与し、風属性ダメージを与える。「昇華」状態の敵は7つの弱点属性を付与され、行動制限抵抗がない場合は行動できなくなる。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1065,15 @@
       "simpleDesc": "攻撃が敵に命中した後、弱点属性をランダムに1つ付与する。弱点属性の数が#3[i]に達した時、敵は「本質暴露」状態になる。また、この状態の敵に対して、アナイクスの与ダメージがアップする。さらにこの状態の敵に通常攻撃または戦闘スキルを発動した後、追加で1回SPを消費しない戦闘スキルを発動する。",
       "type": "天賦",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1361,6 +1398,15 @@
       "simpleDesc": "周囲の敵を恐怖状態にする。恐怖状態の敵を攻撃した場合、弱点を攻撃して戦闘に入ったものと見なされる。敵全体に攻撃者の属性を弱点属性として付与する。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1378,37 +1424,79 @@
       "_id": 140501,
       "id": "magician_isolated_by_stars",
       "name": "{RUBY_B#えんぺい}掩蔽{RUBY_E#}の{RUBY_B#まじゅつし}魔術師{RUBY_E#}",
-      "desc": "戦闘スキルを初めて発動した後、SPを<nobr>1</nobr>回復する。戦闘スキルが敵に命中する時、敵の防御力-<nobr>16%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "戦闘スキルを初めて発動した後、SPを<nobr>1</nobr>回復する。戦闘スキルが敵に命中する時、敵の防御力-<nobr>16%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140502,
       "id": "soul_true_to_history",
       "name": "{RUBY_B#しじつ}史実{RUBY_E#}の{RUBY_B#しぜんじん}自然人{RUBY_E#}",
-      "desc": "敵が戦闘に入る時、天賦の弱点付与効果を1回発動し、その敵の全属性耐性を<nobr>20%</nobr>ダウンさせる。"
+      "desc": "敵が戦闘に入る時、天賦の弱点付与効果を1回発動し、その敵の全属性耐性を<nobr>20%</nobr>ダウンさせる。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140503,
       "id": "pupil_etched_into_cosmos",
       "name": "{RUBY_B#しんうちゅう}深宇宙{RUBY_E#}に{RUBY_B#きざ}刻{RUBY_E#}まれた{RUBY_B#ひとみ}瞳{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140504,
       "id": "blaze_plunged_to_canyon",
       "name": "{RUBY_B#きょうこく}峡谷{RUBY_E#}に{RUBY_B#お}落{RUBY_E#}ちる{RUBY_B#しゃくねつ}灼熱{RUBY_E#}",
-      "desc": "戦闘スキルを発動する時、攻撃力+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。この効果は最大で<nobr>2</nobr>層累積できる。"
+      "desc": "戦闘スキルを発動する時、攻撃力+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。この効果は最大で<nobr>2</nobr>層累積できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140505,
       "id": "embryo_set_beyond_vortex",
       "name": "{RUBY_B#かじょうわんがい}渦状腕外{RUBY_E#}の{RUBY_B#はいしゅ}胚種{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140506,
       "id": "everything_is_in_everything",
       "name": "{RUBY_B#ばんぶつ}万物{RUBY_E#}は{RUBY_B#ばんぶつ}万物{RUBY_E#}の{RUBY_B#なか}中{RUBY_E#}",
-      "desc": "アナイクスの与ダメージは本来の<nobr>130%</nobr>になる。軌跡「必要な空白」の2つの効果は同時に直接発動するようになり、パーティ内の「知恵」の運命を歩むキャラクターの数に依存しなくなる。"
+      "desc": "アナイクスの与ダメージは本来の<nobr>130%</nobr>になる。軌跡「必要な空白」の2つの効果は同時に直接発動するようになり、パーティ内の「知恵」の運命を歩むキャラクターの数に依存しなくなる。",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

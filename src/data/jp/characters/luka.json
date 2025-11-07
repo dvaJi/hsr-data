@@ -2,6 +2,7 @@
   "_id": 1111,
   "id": "luka",
   "name": "ルカ",
+  "description": "ベロブルグ下層部のボクシングチャンピオン、「地炎」の中堅メンバーの一人。\nファイトクラブの王座保持者。その熱情で下層部の夢ある子どもたちを励ましてきた。",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "敵単体に物理属性ダメージを与え、高確率で敵を裂創状態にする。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,27 @@
       "simpleDesc": "「闘志」を#5[i]層獲得する。高確率で敵単体の受けるダメージをアップし、大量の物理属性ダメージを与える。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1115,6 +1170,18 @@
       "simpleDesc": "通常攻撃「裂地拳」または戦闘スキル「裂創拳」を発動した後、「闘志」を1層獲得。「闘志」が2層以上の時、通常攻撃を強化する。\n敵が裂創状態の場合、強化通常攻撃「砕天拳」により裂創状態がダメージを1回発生する。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1417,6 +1484,24 @@
       "desc": "敵を攻撃。戦闘に入った後、ランダムな敵単体にルカの攻撃力#1[i]%分の物理属性ダメージを与え、#2[i]%の基礎確率でその敵を、戦闘スキルが与えるものと同じ裂創状態にする。その後、ルカは「闘志」をさらに1層獲得する。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、ランダムな敵単体に少量の物理属性ダメージを与え、高確率でその敵を裂創状態にする。その後、「闘志」をさらに1層獲得する。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1434,37 +1519,79 @@
       "_id": 111101,
       "id": "fighting_endlessly",
       "name": "{RUBY_B#や}止{RUBY_E#}まぬ{RUBY_B#あらそ}争{RUBY_E#}い",
-      "desc": "ルカが行動する時、指定した敵が裂創状態の場合、ルカの与ダメージ+<nobr>15%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "ルカが行動する時、指定した敵が裂創状態の場合、ルカの与ダメージ+<nobr>15%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111102,
       "id": "the_enemy_is_weak_i_am_strong",
       "name": "オレが{RUBY_B#つよ}強{RUBY_E#}い",
-      "desc": "物理属性の弱点がある敵に戦闘スキルが命中した場合、「闘志」を<nobr>1</nobr>層獲得する。"
+      "desc": "物理属性の弱点がある敵に戦闘スキルが命中した場合、「闘志」を<nobr>1</nobr>層獲得する。",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111103,
       "id": "born_for_the_ring",
       "name": "リングに{RUBY_B#た}立{RUBY_E#}つため{RUBY_B#う}生{RUBY_E#}まれた{RUBY_B#おとこ}男{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111104,
       "id": "never_turning_back",
       "name": "{RUBY_B#ふとうふくつ}不撓不屈{RUBY_E#}",
-      "desc": "「闘志」を1層獲得するごとに、攻撃力+<nobr>5%</nobr>。この効果は最大で<nobr>4</nobr>層累積できる。"
+      "desc": "「闘志」を1層獲得するごとに、攻撃力+<nobr>5%</nobr>。この効果は最大で<nobr>4</nobr>層累積できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111105,
       "id": "the_spirit_of_wildfire",
       "name": "{RUBY_B#ちえんだましい}地炎魂{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111106,
       "id": "a_champions_applause",
       "name": "チャンピオンに{RUBY_B#ふさわ}相応{RUBY_E#}しい{RUBY_B#かっさい}喝采{RUBY_E#}",
-      "desc": "強化通常攻撃の「砕天拳」が裂創状態の敵に命中した後、その回の攻撃で「裂地拳」を1段行ったごとに、敵に付与された裂創状態が、さらに本来のダメージ<nobr>8%</nobr>分のダメージを1回発生する。"
+      "desc": "強化通常攻撃の「砕天拳」が裂創状態の敵に命中した後、その回の攻撃で「裂地拳」を1段行ったごとに、敵に付与された裂創状態が、さらに本来のダメージ<nobr>8%</nobr>分のダメージを1回発生する。",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

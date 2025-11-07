@@ -2,6 +2,7 @@
   "_id": 1002,
   "id": "dan_heng",
   "name": "Dan Heng",
+  "description": "Ein kalter, zugeknöpfter junger Mann, der eisern schweigt, wenn es um seine Vergangenheit geht.\nEr hat sich dem Astralexpress angeschlossen, um Abstand von seiner Familie zu gewinnen.",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Wind-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Fügt einem Gegner Wind-SCH zu. Nach einem KRIT wird das Ziel mit hoher Wahrscheinlichkeit verlangsamt.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Fügt einem Gegner massiven Wind-SCH zu. Wenn der Gegner verlangsamt wird, steigt der verursachte SCH.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "Ist Dan Heng Ziel einer Fähigkeit eines Verbündeten, so steigt die Wind-WDS-DUR seines nächsten Angriffs. Dieser Effekt kann nach 2 Rd. erneut ausgelöst werden.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik wird der ANG zu Beginn des nächsten Kampfs erhöht.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1375,37 +1448,79 @@
       "_id": 100201,
       "id": "the_higher_you_fly_the_harder_you_fall",
       "name": "Wer hoch steigt, fällt tief",
-      "desc": "Wenn der anvisierte Gegner aktuell min. <nobr>50%</nobr> seiner LP hat, steigt Dan Hengs KRIT-Rate um <nobr>12%</nobr>."
+      "desc": "Wenn der anvisierte Gegner aktuell min. <nobr>50%</nobr> seiner LP hat, steigt Dan Hengs KRIT-Rate um <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100202,
       "id": "quell_the_venom_octet_quench_the_vice_oflame",
       "name": "Bosheit kontrollieren, Flamme löschen",
-      "desc": "Verringert die Abklingzeit des Talents um 1 Rd."
+      "desc": "Verringert die Abklingzeit des Talents um 1 Rd.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100203,
       "id": "seen_and_unseen",
       "name": "Sichtbar und unsichtbar",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100204,
       "id": "roaring_dragon_and_soaring_sun",
       "name": "Gleichgewicht wie die Sonne am Himmel",
-      "desc": "Nachdem Dan Heng einen Gegner mit seinem Ultimate besiegt hat, wird er sofort wieder in Aktion treten."
+      "desc": "Nachdem Dan Heng einen Gegner mit seinem Ultimate besiegt hat, wird er sofort wieder in Aktion treten.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100205,
       "id": "a_drop_of_rain_feeds_a_torrent",
       "name": "Ein Regentropfen speist einen Sturzbach",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100206,
       "id": "the_troubled_soul_lies_in_wait",
       "name": "Die geplagte Seele liegt auf der Lauer",
-      "desc": "Die durch die Fertigkeit ausgelöste Verlangsamung reduziert die GES des Gegners zusätzlich um <nobr>8%</nobr>."
+      "desc": "Die durch die Fertigkeit ausgelöste Verlangsamung reduziert die GES des Gegners zusätzlich um <nobr>8%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

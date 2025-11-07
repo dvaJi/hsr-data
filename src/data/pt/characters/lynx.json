@@ -2,6 +2,7 @@
   "_id": 1110,
   "id": "lynx",
   "name": "Lynx",
+  "description": "Uma exploradora das Planícies Nevadas Beloboguianas e a irmã mais nova dos Landaus.\nCalma e paciente, ela possui uma forte inclinação para a ação. Costuma sair em aventuras sozinha para explorar a natureza nevada.",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Quântico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Aplica \"Resposta de Sobrevivência\" a um único aliado, aumentando os PV máximos, e restaurando os PV dele.",
       "type": "Perícia",
       "tag": "Restauração",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -782,6 +807,27 @@
       "simpleDesc": "Remove 1 penalidade de todos os aliados e restaura seus PV.",
       "type": "Perícia Suprema",
       "tag": "Restauração",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1146,18 @@
       "simpleDesc": "Ao usar a Perícia ou a Perícia Suprema, aplica cura contínua ao aliado-alvo. Se o alvo tiver uma \"Resposta de Sobrevivência\" ativa, então o efeito da cura contínua aumenta adicionalmente.",
       "type": "Talento",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1448,6 +1506,15 @@
       "simpleDesc": "Depois que esta personagem usa sua Técnica, no início da próxima batalha, todos os aliados recebem um efeito de cura contínua.",
       "type": "Técnica",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1531,88 @@
       "_id": 111001,
       "id": "morning_of_snow_hike",
       "name": "Madrugada da Caminhada na Neve",
-      "desc": "Ao curar aliados com porcentagem de PV igual ou menor que <nobr>50%</nobr>, a Cura Realizada de Lynx aumenta em <nobr>20%</nobr>. Este efeito também funciona em curas contínuas."
+      "desc": "Ao curar aliados com porcentagem de PV igual ou menor que <nobr>50%</nobr>, a Cura Realizada de Lynx aumenta em <nobr>20%</nobr>. Este efeito também funciona em curas contínuas.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111002,
       "id": "noon_of_portable_furnace",
       "name": "Manhã da Fornalha Portátil",
-      "desc": "Um alvo com \"Resposta de Sobrevivência\" pode resistir à aplicação de <u>penalidade</u> por <nobr>1</nobr> vez(es)."
+      "desc": "Um alvo com \"Resposta de Sobrevivência\" pode resistir à aplicação de <u>penalidade</u> por <nobr>1</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111003,
       "id": "afternoon_of_avalanche_beacon",
       "name": "Tarde do Sinalizador de Avalanche",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111004,
       "id": "dusk_of_warm_campfire",
       "name": "Crepúsculo da Fogueira Acolhedora",
-      "desc": "Quando a \"Resposta de Sobrevivência\" é recebida, aumenta o ATQ do alvo em uma quantidade igual a <nobr>#1[f1]%</nobr> dos PV máximos de Lynx por <nobr>1</nobr> rodada(s)."
+      "desc": "Quando a \"Resposta de Sobrevivência\" é recebida, aumenta o ATQ do alvo em uma quantidade igual a <nobr>#1[f1]%</nobr> dos PV máximos de Lynx por <nobr>1</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111005,
       "id": "night_of_aurora_tea",
       "name": "Noite do Chá de Aurora",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111006,
       "id": "dawn_of_explorers_chart",
       "name": "Amanhecer do Mapa dos Exploradores",
-      "desc": "Melhora adicionalmente o efeito de aumento de PV máximos da \"Resposta de Sobrevivência\" em uma quantidade igual a <nobr>#1[f1]%</nobr> dos PV máximos de Lynx e aumenta a RES a Efeito em <nobr>30%</nobr>."
+      "desc": "Melhora adicionalmente o efeito de aumento de PV máximos da \"Resposta de Sobrevivência\" em uma quantidade igual a <nobr>#1[f1]%</nobr> dos PV máximos de Lynx e aumenta a RES a Efeito em <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

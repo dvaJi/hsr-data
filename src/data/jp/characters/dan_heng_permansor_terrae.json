@@ -2,6 +2,7 @@
   "_id": 1414,
   "id": "dan_heng_permansor_terrae",
   "name": "{RUBY_B#たんこう}丹恒{RUBY_E#}・{RUBY_B#とうこう}騰荒{RUBY_E#}",
+  "description": "ジョーリアの胸——伏竜は、その身体で砕けた大地を支え、千年もの間苦痛に耐え続けている。\nナナシビト丹恒、「大地」の火種を守る黄金裔。崩れゆく世界を支え、地上の生命を遠くの天地へと連れていく者である。\n——百の川が海へと帰り、山々が響きあう。不朽の道は遥か彼方まで続いていく。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "指定した敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "指定した味方キャラを「同袍」にし、味方全体に耐久値を累積できるバリアを付与する。",
       "type": "戦闘スキル",
       "tag": "防御",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,32 @@
       "simpleDesc": "敵全体に大量の物理属性ダメージを与え、味方全体に耐久値を累積できるバリアを付与する。\n「龍霊」を強化する。「龍霊」は行動する時、追加攻撃を行い、敵全体に少量の物理属性ダメージと、「同袍」に対応する属性のダメージを少量与える。この強化は「龍霊」が#3[i]回行動するまで継続する。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1202,32 @@
       "simpleDesc": "味方キャラが「同袍」になった時、丹恒・騰荒はその味方に「龍霊」を召喚する。\n「龍霊」が行動する時、味方それぞれが持つデバフを1つ解除し、耐久値を累積できるバリアを付与する。",
       "type": "天賦",
       "tag": "防御",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1597,15 @@
       "simpleDesc": "一定の範囲内の敵を目眩状態にし、現在行動中のキャラに「同袍」を付与する。次の戦闘開始時、「同袍」を所持しているキャラに自動で戦闘スキルを発動する。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1622,114 @@
       "_id": 141401,
       "id": "shed_scales_of_old",
       "name": "{RUBY_B#ふる}旧{RUBY_E#}き{RUBY_B#うろこ}鱗{RUBY_E#}を{RUBY_B#す}捨{RUBY_E#}てた{RUBY_B#こうりゅう}荒龍{RUBY_E#}",
-      "desc": "丹恒・騰荒が必殺技を発動する時、SPを<nobr>1</nobr>回復し、「同袍」の全属性<u>耐性貫通</u>+<nobr>18%</nobr>、<nobr>3</nobr>ターン継続。"
+      "desc": "丹恒・騰荒が必殺技を発動する時、SPを<nobr>1</nobr>回復し、「同袍」の全属性<u>耐性貫通</u>+<nobr>18%</nobr>、<nobr>3</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141402,
       "id": "watch_trails_to_blaze",
       "name": "{RUBY_B#かいたく}開拓{RUBY_E#}を{RUBY_B#みまも}見守{RUBY_E#}る{RUBY_B#じゅんしん}純真{RUBY_E#}",
-      "desc": "必殺技による龍霊強化において、効果が継続する行動可能回数+<nobr>2</nobr>回。丹恒・騰荒が必殺技を発動した後、「龍霊」の<u>行動順</u>が<nobr>100%</nobr><u>早まる</u>。強化後の「龍霊」が行動する時、「同袍」による<u>付加ダメージ</u>は本来の<nobr>200%</nobr>分になり、その回で付与するバリア耐久値は本来の<nobr>200%</nobr>分になる。"
+      "desc": "必殺技による龍霊強化において、効果が継続する行動可能回数+<nobr>2</nobr>回。丹恒・騰荒が必殺技を発動した後、「龍霊」の<u>行動順</u>が<nobr>100%</nobr><u>早まる</u>。強化後の「龍霊」が行動する時、「同袍」による<u>付加ダメージ</u>は本来の<nobr>200%</nobr>分になり、その回で付与するバリア耐久値は本来の<nobr>200%</nobr>分になる。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動前倒し",
+          "desc": "対象の次の行動までの間隔が短くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141403,
       "id": "bear_weight_of_worlds",
       "name": "{RUBY_B#さんが}山河{RUBY_E#}より{RUBY_B#たく}託{RUBY_E#}されしもの",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141404,
       "id": "by_oath_this_vessel_is_i",
       "name": "{RUBY_B#きんせき}金石{RUBY_E#}に{RUBY_B#ちか}誓{RUBY_E#}いて{RUBY_B#み}身{RUBY_E#}を{RUBY_B#ふね}船{RUBY_E#}に",
-      "desc": "「同袍」の受けるダメージ-<nobr>20%</nobr>。"
+      "desc": "「同袍」の受けるダメージ-<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141405,
       "id": "the_path_of_permanence_sweeps_far",
       "name": "{RUBY_B#ふきゅう}不朽{RUBY_E#}の{RUBY_B#みち}道{RUBY_E#}は{RUBY_B#れんめん}連綿{RUBY_E#}たり",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141406,
       "id": "one_dream_to_enfold_all_wilds",
-      "name": "{RUBY_B#そうもく}草木{RUBY_E#}も{RUBY_B#ちり}塵{RUBY_E#}も{RUBY_B#ゆめ}夢{RUBY_E#}に{RUBY_B#いれ}入{RUBY_E#}れ",
-      "desc": "フィールド上に「同袍」がいる場合、敵全体の受けるダメージ+<nobr>20%</nobr>。「同袍」がダメージを与える時、敵の防御力を<nobr>12%</nobr>分無視する。丹恒・騰荒が必殺技を発動した時、「同袍」は敵全体に自身の攻撃力<nobr>330%</nobr>分、かつ対応する属性の<u>付加ダメージ</u>を与える。"
+      "name": "{RUBY_B#そうもく}草木{RUBY_E#}も{RUBY_B#ちり}塵{RUBY_E#}も{RUBY_B#ゆめ}夢{RUBY_E#}に{RUBY_B#い}入{RUBY_E#}れ",
+      "desc": "フィールド上に「同袍」がいる場合、敵全体の受けるダメージ+<nobr>20%</nobr>。「同袍」がダメージを与える時、敵の防御力を<nobr>12%</nobr>分無視する。丹恒・騰荒が必殺技を発動した時、「同袍」は敵全体に自身の攻撃力<nobr>330%</nobr>分、かつ対応する属性の<u>付加ダメージ</u>を与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

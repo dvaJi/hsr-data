@@ -2,6 +2,7 @@
   "_id": 1314,
   "id": "jade",
   "name": "Jade",
+  "description": "Cán bộ cao cấp của Bộ Phận Đầu Tư Chiến Lược thuộc Công Ty Hành Tinh Hòa Bình, một trong 10 Người Có Trái Tim Đá, Đá Tảng là Jade Tín Chấp.\nMột kẻ cho vay kiều diễm lịch thiệp, thấu hiểu lòng người, có sở thích cá nhân mang tên Hiệu Cầm Đồ Bonajade.\nSẵn sàng kiên nhẫn chờ đợi để có được những thứ có giá trị cao, đồng thời cũng giỏi moi giá trị từ những khách hàng tưởng như chẳng có gì trong tay.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lượng Tử cho một kẻ địch, gây lượng nhỏ Sát Thương Lượng Tử cho các mục tiêu ở gần.",
       "type": "Tấn Công Thường",
       "tag": "Khuếch Tán",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Khiến 1 đồng đội trở thành Người Thu Nợ, tăng Tốc Độ của đồng đội đó. Sau khi Người Thu Nợ tấn công, sẽ gây lượng nhỏ Sát Thương Lượng Tử Kèm Theo lên mỗi kẻ địch bị đánh trúng, đồng thời tiêu hao HP của bản thân. Khi Jade trở thành Người Thu Nợ, sẽ không thể nhận hiệu ứng tăng Tốc Độ, đồng thời sau khi tấn công sẽ không tiêu hao HP.",
       "type": "Chiến Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -768,6 +796,24 @@
       "simpleDesc": "Gây Sát Thương Lượng Tử cho toàn phe địch, tăng Bội Số Sát Thương của Đòn Đánh Theo Sau từ Thiên Phú của bản thân.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1092,6 +1138,24 @@
       "simpleDesc": "Sau khi Jade hoặc mục tiêu trở thành Người Thu Nợ tung đòn tấn công, cứ đánh trúng 1 mục tiêu địch sẽ nhận được 1 Điểm Nạp Năng Lượng. Sau khi Nạp Năng Lượng đạt #3[i] điểm, sẽ tiêu hao #3[i] Điểm Nạp Năng Lượng để phát động 1 lần Đòn Đánh Theo Sau, gây Sát Thương Lượng Tử cho toàn phe địch.\nKhi Jade phát động Đòn Đánh Theo Sau sẽ nhận được Vật Thế Chấp, giúp tăng Sát Thương Bạo Kích, tối đa cộng dồn #2[i] tầng.",
       "type": "Thiên Phú",
       "tag": "Đánh Lan",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1446,6 +1510,15 @@
       "simpleDesc": "Khiến kẻ địch trong khu vực nhất định rơi vào trạng thái Trung Thành Mù Quáng. Tấn công kẻ địch đang ở trạng thái Trung Thành Mù Quáng, sẽ khiến tất cả kẻ địch đang ở trạng thái Trung Thành Mù Quáng vào chiến đấu cùng lúc, sau khi vào chiến đấu sẽ gây lượng ít Sát Thương Lượng Tử cho toàn phe địch, nhận ngay #3[i] tầng Vật Thế Chấp.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1537,97 @@
       "_id": 131401,
       "id": "altruism_nevertheless_tradable",
       "name": "Vị Tha? Cho Phép Giao Dịch",
-      "desc": "Sát thương <u>Đòn Đánh Theo Sau</u> đến từ Thiên Phú của Jade tăng <nobr>32%</nobr>, nhân vật mang trạng thái Người Thu Nợ sau khi tấn công, nếu số lượng địch đánh trúng bằng 2 hoặc 1, thì Jade sẽ nhận thêm <nobr>1</nobr> hoặc <nobr>2</nobr> điểm Nạp Năng Lượng."
+      "desc": "Sát thương <u>Đòn Đánh Theo Sau</u> đến từ Thiên Phú của Jade tăng <nobr>32%</nobr>, nhân vật mang trạng thái Người Thu Nợ sau khi tấn công, nếu số lượng địch đánh trúng bằng 2 hoặc 1, thì Jade sẽ nhận thêm <nobr>1</nobr> hoặc <nobr>2</nobr> điểm Nạp Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131402,
       "id": "morality_herein_authenticated",
       "name": "Đạo Đức? Đã Chứng Thực Cầm Cố",
-      "desc": "Khi Vật Thế Chấp cộng dồn đến <nobr>15</nobr> tầng, Tỷ Lệ Bạo Kích của Jade tăng <nobr>18%</nobr>."
+      "desc": "Khi Vật Thế Chấp cộng dồn đến <nobr>15</nobr> tầng, Tỷ Lệ Bạo Kích của Jade tăng <nobr>18%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131403,
       "id": "honesty_soon_mortgaged",
       "name": "Bộc Trực? Chỉ Chờ Đem Cầm",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131404,
       "id": "sincerity_put_option_only",
       "name": "Chân Thành? Chỉ Có Quyền Chọn Bán",
-      "desc": "Khi thi triển Tuyệt Kỹ, khiến sát thương Jade gây ra bỏ qua <nobr>12%</nobr> Phòng Thủ của kẻ địch, duy trì <nobr>3</nobr> hiệp."
+      "desc": "Khi thi triển Tuyệt Kỹ, khiến sát thương Jade gây ra bỏ qua <nobr>12%</nobr> Phòng Thủ của kẻ địch, duy trì <nobr>3</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131405,
       "id": "hope_hitherto_forfeited",
       "name": "Hy Vọng? Đã Bán Quyền Sở Hữu",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131406,
       "id": "equity_pending_sponsorship",
       "name": "Công Bằng? Đang Chờ Tài Trợ",
-      "desc": "Khi trong trận có nhân vật đang ở trạng thái Người Thu Nợ, <u>Xuyên Kháng</u> Lượng Tử của Jade tăng <nobr>20%</nobr>, đồng thời Jade nhận được trạng thái Người Thu Nợ."
+      "desc": "Khi trong trận có nhân vật đang ở trạng thái Người Thu Nợ, <u>Xuyên Kháng</u> Lượng Tử của Jade tăng <nobr>20%</nobr>, đồng thời Jade nhận được trạng thái Người Thu Nợ.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1401,
   "id": "the_herta",
   "name": "La Grande Herta",
+  "description": "Membre estimé n° 83 de la Société des génies, humaine, féminine, jeune, belle, séduisante.\nOn raconte qu'elle vit aux confins de l'univers, n'en sortant presque jamais. On peut supposer que si elle nous gratifie de sa présence...\nC'est qu'il y a un problème qui nécessite son attention particulière...",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de glace mineurs à un ennemi désigné.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -449,6 +459,15 @@
       "simpleDesc": "Inflige des DGT à un ennemi désigné. Puis inflige des DGT aux cibles touchées par cette instance de la compétence et à leurs cibles adjacentes respectives, répétés 2 fois.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        45,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Réorganise le nombre de cumuls d'Interprétation sur tous les ennemis, en transférant les nombres de cumuls les plus élevés en priorité aux cibles de niveau élite ou supérieur. Puis, inflige des DGT de glace à tous les ennemis. Après utilisation, renforce la compétence et permet d'agir immédiatement.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "La compétence renforcée augmente les DGT infligés en fonction des cumuls d'Interprétation de la cible.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1533,24 @@
       "simpleDesc": "Après utilisation de la technique, la Grande Herta peut marquer l'emplacement de plusieurs coffres de base et son ATQ augmente au début du combat suivant.\nLorsqu'elle entre en combat après avoir utilisé la technique dans l'Univers simulé ou l'Univers parallèle, la Grande Herta inflige des DGT réels massifs à tous les ennemis au début de chaque vague.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "DGT réels",
+          "desc": "DGT sans type immunisés aux effets quelconques. Ces DGT ne sont pas considérés comme une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1517,37 +1572,88 @@
       "_id": 140101,
       "id": "night_at_shorefall",
       "name": "Nuit des étoiles déchues",
-      "desc": "Lors du calcul des cumuls d'Interprétation pour la compétence renforcée, prend également en compte <nobr>50%</nobr> du nombre actuel de cumuls d'Interprétation sur la cible qui a le plus de cumuls parmi la cible principale et ses cibles adjacentes. Lorsque le statut Interprétation est réinitialisé par l'utilisation de la compétence renforcée, le nombre de cumuls est ramené à <nobr>15</nobr>."
+      "desc": "Lors du calcul des cumuls d'Interprétation pour la compétence renforcée, prend également en compte <nobr>50%</nobr> du nombre actuel de cumuls d'Interprétation sur la cible qui a le plus de cumuls parmi la cible principale et ses cibles adjacentes. Lorsque le statut Interprétation est réinitialisé par l'utilisation de la compétence renforcée, le nombre de cumuls est ramené à <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140102,
       "id": "wind_through_keyhole",
       "name": "Clé des vents",
-      "desc": "Après que la Grande Herta entre en combat ou utilise son ultime, elle obtient 1 cumul d'Inspiration. Après l'utilisation de la compétence renforcée, la prochaine action de la Grande Herta est <u>avancée</u> de <nobr>35%</nobr>."
+      "desc": "Après que la Grande Herta entre en combat ou utilise son ultime, elle obtient 1 cumul d'Inspiration. Après l'utilisation de la compétence renforcée, la prochaine action de la Grande Herta est <u>avancée</u> de <nobr>35%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140103,
       "id": "door_into_summer",
       "name": "Porte vers l'été",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140104,
       "id": "the_sixteenth_key",
       "name": "Seizième clé",
-      "desc": "La VIT des personnages de l'Érudition dans l'équipe augmente de <nobr>12%</nobr>."
+      "desc": "La VIT des personnages de l'Érudition dans l'équipe augmente de <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140105,
       "id": "bitter_pill_of_truth",
       "name": "Pilule de vérité amère",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140106,
       "id": "sweet_lure_of_answer",
       "name": "Appât de la réponse",
-      "desc": "La PÉN de RÉS à la glace de la Grande Herta augmente de <nobr>20%</nobr>. Lorsque le nombre de cibles ennemies sur le champ de bataille est de 3 (ou plus)/2/1, le multiplicateur de DGT de l'ultime augmente de <nobr>140%</nobr>/<nobr>250%</nobr>/<nobr>400%</nobr> respectivement."
+      "desc": "La PÉN de RÉS à la glace de la Grande Herta augmente de <nobr>20%</nobr>. Lorsque le nombre de cibles ennemies sur le champ de bataille est de 3 (ou plus)/2/1, le multiplicateur de DGT de l'ultime augmente de <nobr>140%</nobr>/<nobr>250%</nobr>/<nobr>400%</nobr> respectivement.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

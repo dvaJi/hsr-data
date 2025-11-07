@@ -2,6 +2,7 @@
   "_id": 1205,
   "id": "blade",
   "name": "블레이드",
+  "description": "「스텔라론 헌터」의 멤버, 전장에 몸을 내던지는 검객\n「운명의 노예」에 충성을 다하며 무서운 자가 치유 능력을 가지고 있다",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 바람 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "자신의 HP를 소모하여 일반 공격을 강화하고, 이번 턴이 종료되지 않는다",
       "type": "전투 스킬",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +780,15 @@
       "simpleDesc": "현재 HP가 HP 최대치의 50%로 전환되고, 단일 적에게 대량의 바람 속성 피해를 가하며, 인접한 목표에게 바람 속성 피해를 가한다",
       "type": "필살기",
       "tag": "확산",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1173,24 @@
       "simpleDesc": "블레이드의 HP가 감소하면 충전을 1스택 획득한다. 충전이 최대치에 도달하면 추가 공격을 발동하며, 모든 적에게 바람 속성 피해를 가하고 HP를 회복한 후 모든 충전을 소모한다",
       "type": "특성",
       "tag": "범위 공격",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1480,6 +1529,15 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 블레이드 HP 최대치의 #2[i]%만큼 HP를 소모하고, 모든 적에게 블레이드 HP 최대치의 #1[i]%만큼 바람 속성 피해를 가한다.\n현재 HP가 부족할 때 비술을 발동하면 블레이드의 현재 HP가 1pt까지 감소한다",
       "simpleDesc": "적을 공격하며, 전투 진입 후 자신의 HP를 소모하고 모든 적에게 바람 속성 피해를 가한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1497,37 +1555,88 @@
       "_id": 120501,
       "id": "blade_cuts_the_deepest_in_hell",
       "name": "검록의 끝, 지옥변상",
-      "desc": "필살기로 지정된 단일 적에게 가하는 피해가 이번 전투에서 누적 손실한 블레이드 HP의 <nobr>150%</nobr>만큼 추가로 증가한다.\n이번 전투에서 누적 손실한 HP는 블레이드 HP 최대치의 <nobr>90%</nobr>를 넘지 않는다. 필살기 발동 후 리셋하고 다시 누적된다"
+      "desc": "필살기로 지정된 단일 적에게 가하는 피해가 이번 전투에서 누적 손실한 블레이드 HP의 <nobr>150%</nobr>만큼 추가로 증가한다.\n이번 전투에서 누적 손실한 HP는 블레이드 HP 최대치의 <nobr>90%</nobr>를 넘지 않는다. 필살기 발동 후 리셋하고 다시 누적된다",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120502,
       "id": "ten_thousand_sorrows_from_one_broken_dream",
       "name": "흩어진 옛 꿈, 갖가지 여한",
-      "desc": "블레이드가 [지옥변] 상태일 때 치명타 확률이 <nobr>15%</nobr> 증가한다"
+      "desc": "블레이드가 [지옥변] 상태일 때 치명타 확률이 <nobr>15%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120503,
       "id": "hardened_blade_bleeds_coldest_shade",
       "name": "제련한 현철, 서늘한 빛",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120504,
       "id": "rejected_by_death_infected_with_life",
       "name": "황천의 기로, 육신의 회생",
-      "desc": "현재 HP 백분율이 <nobr>50%</nobr>를 초과한 상태에서 <nobr>50%</nobr> 이하로 떨어지면 HP 최대치가 <nobr>20%</nobr> 증가한다. 해당 효과 최대 중첩수: <nobr>2</nobr>스택"
+      "desc": "현재 HP 백분율이 <nobr>50%</nobr>를 초과한 상태에서 <nobr>50%</nobr> 이하로 떨어지면 HP 최대치가 <nobr>20%</nobr> 증가한다. 해당 효과 최대 중첩수: <nobr>2</nobr>스택",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120505,
       "id": "death_by_ten_lords_gaze",
       "name": "시왕의 사형 선고, 마주한 업경",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120506,
       "id": "reborn_into_an_empty_husk",
       "name": "죽음의 끝, 돌아온 영혼",
-      "desc": "충전 스택 수 상한이 4스택으로 감소한다. 특성으로 발동되는 <u>추가 공격</u>으로 가하는 피해가 블레이드 HP 최대치의 <nobr>50%</nobr>만큼 추가로 증가한다"
+      "desc": "충전 스택 수 상한이 4스택으로 감소한다. 특성으로 발동되는 <u>추가 공격</u>으로 가하는 피해가 블레이드 HP 최대치의 <nobr>50%</nobr>만큼 추가로 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11205,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1222,
   "id": "lingsha",
   "name": "Lingsha",
+  "description": "La nueva líder de la Comisión de Alquimia del Luofu de Xianzhou. Una sanadora vidyadhara inteligente e ingeniosa.\nTiene un agudo sentido del olfato y suele usarlo para diagnosticar enfermedades, además de usar su incienso para calmar las mentes de los demás.\nEs experta manejando relaciones sociales complicadas. Aunque por dentro quizás esté furiosa, su expresión se mantendrá calmada y serena.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a todos los enemigos, regenera PV a todos los aliados y adelanta la acción de Fuyuan.",
       "type": "Habilidad básica",
       "tag": "ATQ AdE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,32 @@
       "simpleDesc": "Aumenta el Daño de Ruptura que reciben todos los enemigos, inflige Daño de Fuego a todos los enemigos, regenera PV a todos los aliados y adelanta la acción de Fuyuan.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Daño de Ruptura",
+          "desc": "Cuanto más altos sean la Firmeza máxima del objetivo, el nivel del personaje y el efecto de Ruptura, más Daño de Ruptura inflige.\nEl Daño de Ruptura no puede causar Golpes CRIT y no se ve afectado por los efectos de aumento de daño.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,40 @@
       "simpleDesc": "Al lanzar la habilidad básica, invoca a Fuyuan: cuando actúa, lanza un ataque adicional que inflige una pequeña cantidad de Daño de Fuego a todos los enemigos. Además, inflige una pequeña cantidad de Daño de Fuego a un enemigo al azar, priorizando objetivos con una Firmeza superior a 0 y que tengan Debilidad de Fuego. Disipa 1 estado negativo y regenera PV a todos los aliados.\nLas veces que Fuyuan puede actuar aumentan al lanzar repetidamente la habilidad básica.",
       "type": "Talento",
       "tag": "ATQ AdE",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Estado negativo",
+          "desc": "Reduce la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos estados se pueden eliminar.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1614,15 @@
       "simpleDesc": "Tras usar la técnica, invoca inmediatamente a Fuyuan al comenzar la siguiente batalla y hace que todos los enemigos reciban más Daño de Ruptura.",
       "type": "Técnica",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1639,79 @@
       "_id": 122201,
       "id": "bloom_on_vileward_bouquet",
       "name": "Ramo en flor contra los males",
-      "desc": "La eficiencia de la Ruptura de Debilidad de Lingsha aumenta en un <nobr>50%</nobr>. Cuando se rompe la Debilidad de un enemigo, reduce su DEF en un <nobr>20%</nobr>."
+      "desc": "La eficiencia de la Ruptura de Debilidad de Lingsha aumenta en un <nobr>50%</nobr>. Cuando se rompe la Debilidad de un enemigo, reduce su DEF en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122202,
       "id": "leisure_in_carmine_smokeveil",
       "name": "Reposo tras el velo de humo",
-      "desc": "Al lanzar la habilidad definitiva, el efecto de Ruptura de todos los aliados aumenta en un <nobr>40%</nobr> durante <nobr>3</nobr> turnos."
+      "desc": "Al lanzar la habilidad definitiva, el efecto de Ruptura de todos los aliados aumenta en un <nobr>40%</nobr> durante <nobr>3</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122203,
       "id": "shine_of_floral_wick",
       "name": "Brillo del pábilo floral",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122204,
       "id": "redolence_from_canopied_banquet",
       "name": "Aromas del recuerdo bajo el dosel",
-      "desc": "Cuando Fuyuan actúa, regenera al objetivo aliado con menos PV actualmente una cantidad de PV equivalente al <nobr>40%</nobr> del ATQ de Lingsha."
+      "desc": "Cuando Fuyuan actúa, regenera al objetivo aliado con menos PV actualmente una cantidad de PV equivalente al <nobr>40%</nobr> del ATQ de Lingsha.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122205,
       "id": "poise_atop_twists_and_turns",
       "name": "Compostura ante las vueltas y revueltas",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122206,
       "id": "arcadia_under_deep_seclusion",
       "name": "Reclusión de fragancia acumulada",
-      "desc": "Cuando Fuyuan está en el campo de batalla, la RES a todos los tipos de todos los enemigos se reduce en un <nobr>20%</nobr>. Cuando Fuyuan ataca, inflige daño <nobr>4</nobr> veces adicionales. Cada vez, inflige un <nobr>50%</nobr> del ATQ de Lingsha como Daño de Fuego a un enemigo al azar y causa <nobr>5</nobr> puntos de Reducción de Firmeza. Elige prioritariamente a objetivos con una Firmeza superior a 0 y que tengan Debilidad de Fuego."
+      "desc": "Cuando Fuyuan está en el campo de batalla, la RES a todos los tipos de todos los enemigos se reduce en un <nobr>20%</nobr>. Cuando Fuyuan ataca, inflige daño <nobr>4</nobr> veces adicionales. Cada vez, inflige un <nobr>50%</nobr> del ATQ de Lingsha como Daño de Fuego a un enemigo al azar y causa <nobr>5</nobr> puntos de Reducción de Firmeza. Elige prioritariamente a objetivos con una Firmeza superior a 0 y que tengan Debilidad de Fuego.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

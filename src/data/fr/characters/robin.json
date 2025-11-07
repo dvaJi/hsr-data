@@ -2,6 +2,7 @@
   "_id": 1309,
   "id": "robin",
   "name": "Robin",
+  "description": "Chanteuse halovienne née à Penacony et connue dans toute la galaxie. C'est une jeune femme élégante et discrète.\nCette fois-ci, la Famille l'a invitée à jouer dans sa terre natale lors du Festival Ôdiapason.\nElle peut utiliser le pouvoir de l'Harmonie pour diffuser sa musique qui « résonne » non seulement parmi ses fans mais également chez n'importe quelle forme de vie.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Augmente les DGT infligés par tous les alliés.",
       "type": "Compétence",
       "tag": "Soutien",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +747,32 @@
       "simpleDesc": "Entre dans l'état Concerto, ce qui augmente l'ATQ de tous les alliés et permet à tous les coéquipiers d'agir immédiatement. Robin inflige des DGT physiques additionnels après une attaque. Lorsque Robin est dans l'état Concerto, elle est immunisée aux malus de contrôle. Pendant toute la durée de cet état, Robin ne peut ni agir ni jouer son tour jusqu'à la fin du compte à rebours.",
       "type": "Ultime",
       "tag": "Soutien",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Malus de contrôle",
+          "desc": "Gelé, Enchevêtrement, Emprisonnement, Dominé, Indignation, Forte réverbération, Rêve étrange, Emprisonnement enchevêtré, Terrifié et Immobilité.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1142,15 @@
       "simpleDesc": "Augmente les DGT critiques de tous les personnages alliés. Lorsqu'une cible alliée attaque un ennemi, Robin régénère des points d'énergie.",
       "type": "Talent",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1460,15 @@
       "simpleDesc": "Crée une dimension spéciale autour du personnage. Les ennemis qui se trouvent dans cette dimension n'attaquent pas Robin. Robin régénère #2[i] points d'énergie supplémentaires au début de chaque vague lorsque le combat est engagé alors que la dimension est active.",
       "type": "Technique",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1486,106 @@
       "_id": 130901,
       "id": "land_of_smiles",
       "name": "Royaume du sourire",
-      "desc": "Lorsque l'état Concerto est actif, la <u>PÉN de RÉS</u> à tous les types de tous les alliés augmente de <nobr>24%</nobr>."
+      "desc": "Lorsque l'état Concerto est actif, la <u>PÉN de RÉS</u> à tous les types de tous les alliés augmente de <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130902,
       "id": "afternoon_tea_for_two",
       "name": "Thé d'après-midi pour deux",
-      "desc": "Lorsque l'état Concerto est actif, la VIT de tous les alliés augmente de <nobr>16%</nobr>. L'effet de régénération d'énergie du talent augmente de <nobr>1</nobr> point supplémentaire."
+      "desc": "Lorsque l'état Concerto est actif, la VIT de tous les alliés augmente de <nobr>16%</nobr>. L'effet de régénération d'énergie du talent augmente de <nobr>1</nobr> point supplémentaire.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130903,
       "id": "inverted_tuning",
       "name": "Accordage inversé",
-      "desc": "Niv. de la compétence +2, jusqu'au niv. <nobr>15</nobr> maximum.\nNiv. de l'ultime +2, jusqu'au niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au niv. <nobr>15</nobr> maximum.\nNiv. de l'ultime +2, jusqu'au niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130904,
       "id": "raindrop_key",
       "name": "Clé de la goutte de pluie",
-      "desc": "Lorsque Robin utilise son ultime, elle dissipe les <u>malus de contrôle</u> de tous les alliés. Lorsque Robin est dans l'état Concerto, la RÉS aux effets de tous les alliés augmente de <nobr>50%</nobr>."
+      "desc": "Lorsque Robin utilise son ultime, elle dissipe les <u>malus de contrôle</u> de tous les alliés. Lorsque Robin est dans l'état Concerto, la RÉS aux effets de tous les alliés augmente de <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Malus de contrôle",
+          "desc": "Gelé, Enchevêtrement, Emprisonnement, Dominé, Indignation, Forte réverbération, Rêve étrange, Emprisonnement enchevêtré, Terrifié et Immobilité.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130905,
       "id": "lonestars_lament",
       "name": "Lamentation de l'étoile solitaire",
-      "desc": "Niv. de l'ATQ normale +1, jusqu'au niv. <nobr>10</nobr> maximum.\nNiv. du talent +2, jusqu'au niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ATQ normale +1, jusqu'au niv. <nobr>10</nobr> maximum.\nNiv. du talent +2, jusqu'au niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130906,
       "id": "moonless_midnight",
       "name": "Minuit sans lune",
-      "desc": "Lorsque l'état Concerto est actif, les DGT critiques des <u>DGT additionnels</u> physiques infligés par l'ultime augmentent de <nobr>450%</nobr>. L'effet Minuit sans lune peut être déclenché jusqu'à <nobr>8</nobr> fois et le nombre de déclenchements est réinitialisé chaque fois que Robin utilise son ultime."
+      "desc": "Lorsque l'état Concerto est actif, les DGT critiques des <u>DGT additionnels</u> physiques infligés par l'ultime augmentent de <nobr>450%</nobr>. L'effet Minuit sans lune peut être déclenché jusqu'à <nobr>8</nobr> fois et le nombre de déclenchements est réinitialisé chaque fois que Robin utilise son ultime.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

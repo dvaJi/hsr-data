@@ -2,6 +2,7 @@
   "_id": 8007,
   "id": "trailblazer_remembrance_boy",
   "name": "开拓者 记忆",
+  "description": "登上星穹列车的{F#少女}{M#少年}。\n为了消除星核带来的危机，选择与星穹列车同行。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量冰属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "召唤忆灵迷迷。若迷迷已在场，为迷迷回复生命值，并使迷迷获得充能。",
       "type": "战技",
       "tag": "召唤",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "召唤忆灵迷迷。使迷迷获得充能，随后使迷迷对敌方全体造成大量冰属性伤害。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "我方全体每恢复一定能量，迷迷都会获得充能。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "制造特殊领域。领域内敌人行动停止。与领域内敌人进入战斗后，使敌方全体行动延后，并对敌方全体造成少量冰属性伤害。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "行动延后",
+          "desc": "使目标在下次行动前的等待间隔延长。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,42 +1444,599 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "迷迷",
+    "icon": "SpriteOutput/ServantIconTeam/18007B.png",
+    "hpBase": "#4",
+    "hpInherit": "#2",
+    "hpSkill": 800704,
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1800701,
+        "name": "坏人！麻烦！",
+        "desc": "造成<nobr>#2[i]</nobr>次伤害，每次对敌方随机单体造成等同于迷迷<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>攻击力的冰属性伤害。最后对敌方全体造成等同于迷迷<span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>攻击力的冰属性伤害。",
+        "simpleDesc": "造成少量冰属性伤害，共弹射<span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>次。最后对敌方全体造成少量冰属性伤害。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "群攻"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              4,
+              0.45
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.216,
+              4,
+              0.54
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.252,
+              4,
+              0.63
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.288,
+              4,
+              0.72
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.324,
+              4,
+              0.81
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.36,
+              4,
+              0.9
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.396,
+              4,
+              0.99
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.432,
+              4,
+              1.08
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.468,
+              4,
+              1.17
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.504,
+              4,
+              1.26
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800703,
+        "name": "伙伴！一起！",
+        "desc": "使我方全体的暴击伤害提高，提高数值等同于迷迷<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>暴击伤害+<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>。\n若充能未达到<nobr>100%</nobr>，迷迷行动时自动施放【坏人！麻烦！】。充能达到<nobr>100%</nobr>时迷迷立即行动，下一次行动时能够选择我方单体并施放【我会！帮你！】。",
+        "simpleDesc": "使我方全体暴击伤害提高。\n行动时自动施放攻击。若充能达到<nobr>100%</nobr>则立即行动并可施放新技能：使我方单体<span style=\"color:#f29e38ff><u>行动提前</u></span>并能造成<span style=\"color:#f29e38ff><u>真实伤害</u></span>。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "辅助"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.12
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.144
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.168
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.192
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.216
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.24
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.264
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.288
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.312
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.336
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800705,
+        "name": "迷迷，加油！",
+        "desc": "迷迷被召唤时，立即获得<nobr>#1[i]%</nobr>充能。",
+        "simpleDesc": "被召唤时，立即获得充能。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "强化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800706,
+        "name": "遗憾…不留",
+        "desc": "迷迷消失时，使开拓者<u>行动提前</u><nobr>#1[i]%</nobr>。",
+        "simpleDesc": "消失时，使开拓者<u>行动提前</u>。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "强化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "行动提前",
+            "desc": "使目标在下次行动前的等待间隔缩短。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800707,
+        "name": "我会！帮你！",
+        "desc": "使指定我方单体<u>行动提前</u><nobr>#3[i]%</nobr>并附上【迷迷的声援】，持续<nobr>#2[i]</nobr>回合。\n持有【迷迷的声援】的目标每造成1次伤害，都会再额外造成1次等同于原伤害<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>的<u>真实伤害</u>。\n当对自身施放该技能时，无法触发<u>行动提前</u>效果。",
+        "simpleDesc": "使我方单体<span style=\"color:#f29e38ff><u>行动提前</u></span>并附上【迷迷的声援】：造成伤害后额外造成<span style=\"color:#f29e38ff><u>真实伤害</u></span>。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "辅助"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "行动提前",
+            "desc": "使目标在下次行动前的等待间隔缩短。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000017,
+            "name": "真实伤害",
+            "desc": "不受任何效果所影响的无属性伤害，本次伤害不视为造成了1次攻击。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.2,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.22,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.24,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.26,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.28,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.32,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.34,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.36,
+              3,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 800701,
       "id": "narrator_of_the_present",
       "name": "现在的记叙者",
-      "desc": "持有【迷迷的声援】的我方目标暴击率提高<nobr>10%</nobr>。当我方目标持有【迷迷的声援】时，【迷迷的声援】的效果对该目标的忆灵/忆师也生效，该效果不可叠加。"
+      "desc": "持有【迷迷的声援】的我方目标暴击率提高<nobr>10%</nobr>。当我方目标持有【迷迷的声援】时，【迷迷的声援】的效果对该目标的忆灵/忆师也生效，该效果不可叠加。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800702,
       "id": "gleaner_of_the_past",
       "name": "过往的拾遗者",
-      "desc": "除迷迷以外的我方忆灵行动时，开拓者恢复<nobr>8</nobr>点能量。该效果每回合最多触发<nobr>1</nobr>次，开拓者回合开始时重置可触发次数。"
+      "desc": "除迷迷以外的我方忆灵行动时，开拓者恢复<nobr>8</nobr>点能量。该效果每回合最多触发<nobr>1</nobr>次，开拓者回合开始时重置可触发次数。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800703,
       "id": "chanter_of_the_future",
       "name": "未来的咏唱者",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800704,
       "id": "dancer_of_the_muse",
       "name": "缪斯的新舞伴",
-      "desc": "使能量上限为0的我方目标主动施放技能时，迷迷也能够获得<nobr>3%</nobr>充能，并且该目标通过【迷迷的声援】造成的真实伤害倍率额外提高<nobr>6%</nobr>。"
+      "desc": "使能量上限为0的我方目标主动施放技能时，迷迷也能够获得<nobr>3%</nobr>充能，并且该目标通过【迷迷的声援】造成的真实伤害倍率额外提高<nobr>6%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800705,
       "id": "seamster_of_the_ode",
       "name": "诗篇的裁缝匠",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800706,
       "id": "bearer_of_the_revelation",
       "name": "神启的转呈者",
-      "desc": "终结技的暴击率固定为<nobr>100%</nobr>。"
+      "desc": "终结技的暴击率固定为<nobr>100%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +2485,151 @@
       }
     },
     {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "坏人！麻烦！",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用点",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "思量的种",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "掠夺的本能",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "坏人！麻烦！",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用点",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "末那芽苗",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "篡改的野心",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "坏人！麻烦！",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用点",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "末那芽苗",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "篡改的野心",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "坏人！麻烦！",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用点",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "阿赖耶华",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "践踏的意志",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "坏人！麻烦！",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "信用点",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "阿赖耶华",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "践踏的意志",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -1868,151 +2643,6 @@
       }
     },
     {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "坏人！麻烦！",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用点",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "思量的种",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "掠夺的本能",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "坏人！麻烦！",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用点",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "末那芽苗",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "篡改的野心",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "坏人！麻烦！",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用点",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "末那芽苗",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "篡改的野心",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "坏人！麻烦！",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用点",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "阿赖耶华",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "践踏的意志",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "坏人！麻烦！",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "信用点",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "阿赖耶华",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "践踏的意志",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -2153,6 +2783,27 @@
             "id": "conquerors_will",
             "name": "践踏的意志",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "未完的尾声",
+        "desc": "施放终结技后，获得1层【史诗】，最多持有<nobr>2</nobr>层。持有【史诗】且迷迷在场时，普攻强化为【明天，一同写下！】。",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

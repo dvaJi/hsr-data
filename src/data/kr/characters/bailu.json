@@ -2,6 +2,7 @@
   "_id": 1211,
   "id": "bailu",
   "name": "백로",
+  "description": "선주 「나부」 비디아다라족의 큰어른, 「약을 품은 용녀」라 불리는 의사\n독자적인 의학 이론과 용맥만이 실행할 수 있는 「의료 수단」으로 생명을 구하고 치료한다",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 번개 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "단일 아군의 HP를 회복한 다음 랜덤으로 단일 아군을 치유한다",
       "type": "전투 스킬",
       "tag": "회복",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "모든 아군의 HP를 회복하고, [생명] 효과를 부여하거나 [생명]의 지속 시간을 늘린다",
       "type": "필살기",
       "tag": "회복",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,24 @@
       "simpleDesc": "[생명]을 보유한 아군은 피격된 후 HP를 회복한다.\n동료가 치명적인 공격을 받으면 백로가 즉시 대상의 HP를 회복시킨다. 해당 효과는 단일 전투에서 1회 발동할 수 있다",
       "type": "특성",
       "tag": "회복",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "전투 불능 상태",
+          "desc": "아군의 현재 HP가 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 있으면 목표는 전투를 계속할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1491,15 @@
       "simpleDesc": "비술을 사용하면 다음 전투 시작 시 모든 아군에게 [생명]을 부여한다",
       "type": "비술",
       "tag": "회복",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1516,79 @@
       "_id": 121101,
       "id": "ambrosial_aqua",
       "name": "맥을 가라앉히는 감로",
-      "desc": "[생명] 효과 종료 시 아군의 현재 HP가 HP 최대치면, 추가로 해당 아군의 에너지를 <nobr>8</nobr>pt 회복한다"
+      "desc": "[생명] 효과 종료 시 아군의 현재 HP가 HP 최대치면, 추가로 해당 아군의 에너지를 <nobr>8</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121102,
       "id": "sylphic_slumber",
       "name": "항아리 속 동천에는 운룡이 잠든다",
-      "desc": "필살기 발동 후 백로의 치유량이 <nobr>15%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "필살기 발동 후 백로의 치유량이 <nobr>15%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121103,
       "id": "omniscient_opulence",
       "name": "건곤을 깨우치고 통현하다",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121104,
       "id": "evil_excision",
       "name": "눈이 맑아지는 비급",
-      "desc": "전투 스킬이 제공하는 치유를 받을 때마다 치유를 받는 아군은 가하는 피해가 추가로 <nobr>10%</nobr> 증가한다. 최대 중첩수: <nobr>3</nobr>스택. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "전투 스킬이 제공하는 치유를 받을 때마다 치유를 받는 아군은 가하는 피해가 추가로 <nobr>10%</nobr> 증가한다. 최대 중첩수: <nobr>3</nobr>스택. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121105,
       "id": "waning_worries",
       "name": "속세의 먼지를 씻는 단비",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121106,
       "id": "drooling_drop_of_draconic_divinity",
       "name": "영험한 용의 침방울",
-      "desc": "백로가 단일 전투에서 치명적인 공격을 받은 아군에게 제공하는 치유 효과 발동 횟수가 <nobr>1</nobr>회 증가한다"
+      "desc": "백로가 단일 전투에서 치명적인 공격을 받은 아군에게 제공하는 치유 효과 발동 횟수가 <nobr>1</nobr>회 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

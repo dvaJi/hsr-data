@@ -2,6 +2,7 @@
   "_id": 1002,
   "id": "dan_heng",
   "name": "{RUBY_B#タンコウ}丹恒{RUBY_E#}",
+  "description": "自分の過去をひた隠しにしている、凛とした無口な青年。\n同族を避けるため、星穹列車に同行することを決めた。",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "敵単体に風属性ダメージを与え、会心時に高確率で減速状態を付与。",
       "type": "戦闘スキル",
       "tag": "単体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "敵単体に大量の風属性ダメージを与える、減速状態の敵に対してダメージ倍率アップ。",
       "type": "必殺技",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "味方スキルのターゲットになった時、次の攻撃の風属性耐性貫通をアップする。この効果は2ターン後に再度発動できる。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "秘技を使用、次の戦闘に入った後に攻撃力アップ。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1375,37 +1448,79 @@
       "_id": 100201,
       "id": "the_higher_you_fly_the_harder_you_fall",
       "name": "{RUBY_B#きょくてんきゅうじん}極天窮尽{RUBY_E#}するも\n{RUBY_B#たかぶ}昂{RUBY_E#}り{RUBY_B#たも}保{RUBY_E#}てず",
-      "desc": "攻撃が命中した敵の残りHPが<nobr>50%</nobr>以上の場合、会心率+<nobr>12%</nobr>。"
+      "desc": "攻撃が命中した敵の残りHPが<nobr>50%</nobr>以上の場合、会心率+<nobr>12%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100202,
       "id": "quell_the_venom_octet_quench_the_vice_oflame",
       "name": "{RUBY_B#はちどくあっとう}八毒圧倒{RUBY_E#}\n{RUBY_B#えんえんめっきゃく}炎煙滅却{RUBY_E#}",
-      "desc": "天賦のクールタイム-1ターン。"
+      "desc": "天賦のクールタイム-1ターン。",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100203,
       "id": "seen_and_unseen",
       "name": "{RUBY_B#ゆうめい}幽明{RUBY_E#}の{RUBY_B#へんげ}変化{RUBY_E#}\n{RUBY_B#ゆうりゅう}遊龍{RUBY_E#}の{RUBY_B#ごと}如{RUBY_E#}く{RUBY_B#じざい}自在{RUBY_E#}にあり",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100204,
       "id": "roaring_dragon_and_soaring_sun",
       "name": "{RUBY_B#ふんじんざんまい}奮迅三昧{RUBY_E#}\n{RUBY_B#にちりん}日輪{RUBY_E#}が{RUBY_B#ごと}如{RUBY_E#}く",
-      "desc": "必殺技で敵を倒した時、丹恒が即座に行動する。"
+      "desc": "必殺技で敵を倒した時、丹恒が即座に行動する。",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100205,
       "id": "a_drop_of_rain_feeds_a_torrent",
       "name": "{RUBY_B#てんすい}天水{RUBY_E#}{RUBY_B#わ}分{RUBY_E#}かつ{RUBY_B#いっそう}一槍{RUBY_E#}\n{RUBY_B#ろっきょ}六虚{RUBY_E#}の{RUBY_B#こうりゅうふ}洪流{RUBY_E#}振り{RUBY_B#お}起{RUBY_E#}こす",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100206,
       "id": "the_troubled_soul_lies_in_wait",
       "name": "{RUBY_B#こんじょうじょうばく}今生縄縛{RUBY_E#}\n{RUBY_B#と}解{RUBY_E#}く{RUBY_B#とき}時{RUBY_E#}{RUBY_B#せ}急{RUBY_E#}く{RUBY_B#なか}勿{RUBY_E#}れ",
-      "desc": "戦闘スキルによって減速状態を付与された敵は、さらに速度-<nobr>8%</nobr>。"
+      "desc": "戦闘スキルによって減速状態を付与された敵は、さらに速度-<nobr>8%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

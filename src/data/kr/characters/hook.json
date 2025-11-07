@@ -2,6 +2,7 @@
   "_id": 1109,
   "id": "hook",
   "name": "후크",
+  "description": "지하 모험단 「두더지파」의 대장(자칭)\n자유를 사랑하며 인생을 끊이지 않는 모험이라고 생각한다",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 화염 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "단일 적에게 화염 속성 피해를 가하고, 높은 확률로 연소 상태를 부여한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "단일 적에게 대량의 화염 속성 피해를 가하고, 자신의 다음번 전투 스킬을 강화한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,27 @@
       "simpleDesc": "연소 상태의 적 공격 시 소량의 화염 속성 추가 피해를 가하고 에너지를 추가로 회복한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1409,24 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 랜덤 단일 적에게 후크 공격력의 #4[i]%만큼 화염 속성 피해를 가하고, 각 단일 적을 #1[i]%의 기본 확률로 연소 상태에 빠트린다. 지속 시간: #3[i]턴\n연소 상태의 적은 새로운 턴이 시작될 때마다 후크 공격력 #2[i]%만큼의 화염 속성 지속 피해를 받는다",
       "simpleDesc": "적을 공격하며, 전투 진입 후 랜덤 단일 적에게 소량의 화염 속성 피해를 가하고, 높은 확률로 각 단일 적을 연소 상태에 빠트린다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1446,88 @@
       "_id": 110901,
       "id": "early_to_bed_early_to_rise",
       "name": "건강한 수면 사이클",
-      "desc": "전투 스킬 강화 후 가하는 피해가 <nobr>20%</nobr> 증가한다"
+      "desc": "전투 스킬 강화 후 가하는 피해가 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110902,
       "id": "happy_tummy_happy_body",
       "name": "건강한 식습관",
-      "desc": "전투 스킬은 적의 연소 상태 지속 시간을 <nobr>1</nobr>턴 증가시킨다"
+      "desc": "전투 스킬은 적의 연소 상태 지속 시간을 <nobr>1</nobr>턴 증가시킨다",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110903,
       "id": "dont_be_picky_nothings_icky",
       "name": "가리지 않고 전부",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110904,
       "id": "its_okay_to_not_know",
       "name": "얼렁뚱땅해도 이상 무",
-      "desc": "특성 발동 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 지정된 적의 인접한 목표를 전투 스킬과 같은 연소 상태에 빠트린다"
+      "desc": "특성 발동 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 지정된 적의 인접한 목표를 전투 스킬과 같은 연소 상태에 빠트린다",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110905,
       "id": "let_the_moles_deeds_be_known",
       "name": "이름 날린 두더지파",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110906,
       "id": "always_ready_to_punch_and_kick",
       "name": "항시 악에 맞설 준비",
-      "desc": "후크가 연소 상태를 보유한 적에게 가하는 피해가 <nobr>20%</nobr> 증가한다"
+      "desc": "후크가 연소 상태를 보유한 적에게 가하는 피해가 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

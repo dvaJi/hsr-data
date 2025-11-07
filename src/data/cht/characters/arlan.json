@@ -2,6 +2,7 @@
   "_id": 1008,
   "id": "arlan",
   "name": "阿蘭",
+  "description": "太空站「黑塔」的防衛科負責人。\n不善言辭，希望保護珍視研究的人們順利完成他們的研究。",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量雷屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "消耗自身部分生命值，對敵方單體造成雷屬性傷害。",
       "type": "戰技",
       "tag": "單體攻擊",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "對敵方單體造成大量雷屬性傷害，對相鄰目標造成雷屬性傷害。",
       "type": "終結技",
       "tag": "擴散",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "根據自身目前已損失的生命值百分比提高傷害。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "立即攻擊敵人，進入戰鬥後對敵方全體造成等同於阿蘭#1[i]%攻擊力的雷屬性傷害。",
       "simpleDesc": "攻擊敵人，進入戰鬥後對敵方全體造成少量雷屬性傷害。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,37 +1383,97 @@
       "_id": 100801,
       "id": "to_the_bitter_end",
       "name": "萬死不辭",
-      "desc": "現有生命值百分比小於等於<nobr>50%</nobr>時，戰技造成的傷害提高<nobr>10%</nobr>。"
+      "desc": "現有生命值百分比小於等於<nobr>50%</nobr>時，戰技造成的傷害提高<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100802,
       "id": "breaking_free",
       "name": "除制去縛",
-      "desc": "施放戰技、終結技時，解除自身的1個<u>負面效果</u>。"
+      "desc": "施放戰技、終結技時，解除自身的1個<u>負面效果</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "負面效果",
+          "desc": "對戰鬥有負面效果的所有持續狀態，若無特殊說明則可加以解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100803,
       "id": "power_through",
       "name": "重劍強攻",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100804,
       "id": "turn_the_tables",
       "name": "絕境反擊",
-      "desc": "進入戰鬥後，受到致命攻擊時阿蘭不會陷入<u>無法戰鬥狀態</u>，並立即回復至自身生命上限的<nobr>25%</nobr>。該效果在觸發1次後或持續<nobr>2</nobr>回合後自動解除。"
+      "desc": "進入戰鬥後，受到致命攻擊時阿蘭不會陷入<u>無法戰鬥狀態</u>，並立即回復至自身生命上限的<nobr>25%</nobr>。該效果在觸發1次後或持續<nobr>2</nobr>回合後自動解除。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100805,
       "id": "hammer_and_tongs",
       "name": "全力傾注",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100806,
       "id": "selfsacrifice",
       "name": "以身作引",
-      "desc": "生命值百分比小於等於<nobr>50%</nobr>時，終結技造成的傷害提高<nobr>20%</nobr>，且對相鄰目標的傷害倍率提高到與主目標傷害倍率相同。"
+      "desc": "生命值百分比小於等於<nobr>50%</nobr>時，終結技造成的傷害提高<nobr>20%</nobr>，且對相鄰目標的傷害倍率提高到與主目標傷害倍率相同。",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

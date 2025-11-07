@@ -2,6 +2,7 @@
   "_id": 1014,
   "id": "saber",
   "name": "Saber",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inflige Daño de Viento a un enemigo y una pequeña cantidad de Daño de Viento a los objetivos adyacentes. Si puede recuperar toda su energía tras atacar consumiendo Resonancia del núcleo, entonces el multiplicador de daño de habilidad básica de este ataque aumenta según la Resonancia del núcleo y se consume toda la Resonancia del núcleo tras atacar. De lo contrario, obtiene #3[i] pts. de Resonancia del núcleo.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Inflige una gran cantidad de Daño de Viento a todos los enemigos. Además, inflige una pequeña cantidad de Daño de Viento a un enemigo al azar. Se dispara #3[i] veces y potencia el siguiente ATQ básico.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        120,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1110,15 @@
       "simpleDesc": "Al entrar en combate, obtiene #8[i] pt. de Resonancia del núcleo. Cuando cualquier aliado lanza la habilidad definitiva, el daño que inflige Saber aumenta y obtiene #1[i] pts. de Resonancia del núcleo. Consumir Resonancia del núcleo recupera la energía de Saber.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1518,15 @@
       "simpleDesc": "Tras usar la técnica, obtiene #3[i] pts. de Resonancia del núcleo y aumenta el ATQ al comenzar la siguiente batalla.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1499,37 +1545,97 @@
       "_id": 101401,
       "id": "the_lost_white_walls",
       "name": "Caída de los muros pálidos",
-      "desc": "El daño de habilidad definitiva que inflige <nobr>Saber</nobr> aumenta en un <nobr>60%</nobr>. Además, después de que <nobr>Saber</nobr> lance el ATQ básico o la habilidad básica, obtiene <nobr>1</nobr> pt. de Resonancia del núcleo."
+      "desc": "El daño de habilidad definitiva que inflige <nobr>Saber</nobr> aumenta en un <nobr>60%</nobr>. Además, después de que <nobr>Saber</nobr> lance el ATQ básico o la habilidad básica, obtiene <nobr>1</nobr> pt. de Resonancia del núcleo.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101402,
       "id": "the_lost_oath_of_the_round_table",
       "name": "Juramento de la mesa redonda olvidado",
-      "desc": "Por cada pt. de Resonancia del núcleo obtenido en una batalla, el daño que inflige <nobr>Saber</nobr> ignora un <nobr>#2[f1]%</nobr> de la DEF del objetivo. Este efecto se puede acumular hasta <nobr>15</nobr> veces. Al activar el efecto de aumento del multiplicador de la habilidad básica de Resonancia del núcleo, cada punto de Resonancia del núcleo aumenta el multiplicador de daño de ese uso de la habilidad básica en un <nobr>7%</nobr> adicional."
+      "desc": "Por cada pt. de Resonancia del núcleo obtenido en una batalla, el daño que inflige <nobr>Saber</nobr> ignora un <nobr>#2[f1]%</nobr> de la DEF del objetivo. Este efecto se puede acumular hasta <nobr>15</nobr> veces. Al activar el efecto de aumento del multiplicador de la habilidad básica de Resonancia del núcleo, cada punto de Resonancia del núcleo aumenta el multiplicador de daño de ese uso de la habilidad básica en un <nobr>7%</nobr> adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101403,
       "id": "a_wish_across_fifteen_centuries",
       "name": "Búsqueda a lo largo de quince siglos",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101404,
       "id": "the_saga_of_sixteen_winter_days",
       "name": "Saga de dieciséis días invernales",
-      "desc": "La <u>PEN de la RES</u> a Viento de Saber aumenta en un <nobr>8%</nobr>. Tras lanzar la habilidad definitiva, la <u>PEN de la RES</u> a Viento de Saber aumenta en un <nobr>4%</nobr>. Este efecto se puede acumular hasta <nobr>3</nobr> veces."
+      "desc": "La <u>PEN de la RES</u> a Viento de Saber aumenta en un <nobr>8%</nobr>. Tras lanzar la habilidad definitiva, la <u>PEN de la RES</u> a Viento de Saber aumenta en un <nobr>4%</nobr>. Este efecto se puede acumular hasta <nobr>3</nobr> veces.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101405,
       "id": "the_dreamed_utopian_dawn",
       "name": "Llegada del amanecer utópico",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101406,
       "id": "the_long_fated_night",
       "name": "La larga noche del destino",
-      "desc": "La <u>PEN de la RES</u> a Viento del daño de habilidad definitiva que inflige <nobr>Saber</nobr> aumenta en un <nobr>20%</nobr>, y la energía excedente que puede acumular el Rastro \"Bendición del lago\" aumenta a <nobr>200</nobr> pts. Al entrar en combate, después de lanzar la habilidad definitiva por primera vez, <nobr>Saber</nobr> recupera <nobr>300</nobr> pts. de energía de forma fija. Este efecto se puede activar 1 vez tras cada <nobr>3</nobr> lanzamientos de la habilidad definitiva."
+      "desc": "La <u>PEN de la RES</u> a Viento del daño de habilidad definitiva que inflige <nobr>Saber</nobr> aumenta en un <nobr>20%</nobr>, y la energía excedente que puede acumular el Rastro \"Bendición del lago\" aumenta a <nobr>200</nobr> pts. Al entrar en combate, después de lanzar la habilidad definitiva por primera vez, <nobr>Saber</nobr> recupera <nobr>300</nobr> pts. de energía de forma fija. Este efecto se puede activar 1 vez tras cada <nobr>3</nobr> lanzamientos de la habilidad definitiva.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

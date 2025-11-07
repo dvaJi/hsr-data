@@ -2,6 +2,7 @@
   "_id": 1310,
   "id": "firefly",
   "name": "Firefly",
+  "description": "Thành viên Thợ Săn Stellaron, mặc Chiến Giáp SAM khi chiến đấu. Trung thành với nhiệm vụ, kiên cường khó lay chuyển.\nSinh ra làm vũ khí để đánh bại Đàn Côn Trùng, tốc độ trưởng thành khác người, nhưng tuổi thọ rất ngắn.\nĐể tìm cơ hội \"sống\", đã gia nhập Thợ Săn Stellaron, tìm cách chống lại vận mệnh.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng ít Sát Thương Hỏa cho một kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Tiêu hao một phần HP của bản thân để hồi năng lượng, gây Sát Thương Hỏa cho một kẻ địch. Khiến bản thân lần sau Ưu Tiên Hành Động.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,15 @@
       "simpleDesc": "Bước vào trạng thái Thiêu Đốt Hoàn Toàn, khiến bản thân ưu tiên hành động 100%, nhận được Tấn Công Thường Cường Hóa và Chiến Kỹ Cường Hóa, đồng thời tăng tốc độ, Hiệu Suất Phá Vỡ Điểm Yếu của bản thân, và Sát Thương Phá Vỡ mà kẻ địch phải chịu, cho đến khi đếm ngược kết thúc.",
       "type": "Tuyệt Kỹ",
       "tag": "Cường Hóa",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,24 @@
       "simpleDesc": "HP càng thấp, sát thương phải chịu càng thấp. Hiệu ứng Giảm Sát Thương trong trạng thái Thiêu Đốt Hoàn Toàn duy trì mức tối đa, tăng Kháng Hiệu Ứng. Nếu năng lượng không đủ #2[i]% thì khi bắt đầu chiến đấu, năng lượng sẽ hồi đến #2[i]%. Khi năng lượng hồi đến giới hạn sẽ giải trừ tất cả Hiệu Ứng Xấu của bản thân.",
       "type": "Thiên Phú",
       "tag": "Phòng Thủ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1490,15 @@
       "desc": "Nhảy lên không trung và thực hiện di chuyển tự do, duy trì #1[i] giây, lúc này dùng tấn công từ trên cao sẽ kết thúc sớm thời gian duy trì. Sau khi hết thời gian duy trì, sẽ đáp xuống và tấn công ngay tất cả kẻ địch trong phạm vi nhất định, khi bắt đầu mỗi đợt sẽ thêm Điểm Yếu Hỏa cho toàn phe địch, duy trì #3[i] hiệp, sau đó sẽ gây Sát Thương Hỏa bằng #2[i]% Tấn Công của Chiến Giáp SAM cho toàn phe địch.",
       "simpleDesc": "Nhảy lên không trung và di chuyển tự do, sau vài giây sẽ đáp xuống và tấn công tất cả kẻ địch trong phạm vi, khi bắt đầu mỗi đợt sẽ thêm Điểm Yếu Hỏa cho toàn phe địch, đồng thời gây Sát Thương Hỏa cho toàn phe địch.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1517,105 @@
       "_id": 131001,
       "id": "in_reddened_chrysalis_i_once_rest",
       "name": "Tôi Từng Ngủ Yên, Trong Chiếc Kén Đỏ",
-      "desc": "Khi thi triển Chiến Kỹ Cường Hóa sẽ bỏ qua <nobr>15%</nobr> phòng thủ của mục tiêu, Chiến Kỹ Cường Hóa không tiêu hao Điểm Chiến Kỹ."
+      "desc": "Khi thi triển Chiến Kỹ Cường Hóa sẽ bỏ qua <nobr>15%</nobr> phòng thủ của mục tiêu, Chiến Kỹ Cường Hóa không tiêu hao Điểm Chiến Kỹ.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131002,
       "id": "from_shattered_sky_i_free_fall",
       "name": "Rơi Xuống, Từ Bầu Trời Vỡ Vụn",
-      "desc": "Khi đang ở trong trạng thái Thiêu Đốt Hoàn Toàn, thi triển Tấn Công Thường Cường Hóa, Chiến Kỹ Cường Hóa tiêu diệt mục tiêu phe địch hoặc khiến mục tiêu rơi vào <u>trạng thái Phá Vỡ Điểm Yếu</u>, Chiến Giáp SAM sẽ nhận ngay 1 <u>hiệp cộng thêm</u>. Hiệu ứng này có thể kích hoạt lại sau <nobr>1</nobr> hiệp."
+      "desc": "Khi đang ở trong trạng thái Thiêu Đốt Hoàn Toàn, thi triển Tấn Công Thường Cường Hóa, Chiến Kỹ Cường Hóa tiêu diệt mục tiêu phe địch hoặc khiến mục tiêu rơi vào <u>trạng thái Phá Vỡ Điểm Yếu</u>, Chiến Giáp SAM sẽ nhận ngay 1 <u>hiệp cộng thêm</u>. Hiệu ứng này có thể kích hoạt lại sau <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Hiệp Tăng Thêm",
+          "desc": "Nhận 1 hiệp thêm không tiêu hao số hiệp. Trong hiệp này, không thể chen ngang thi triển Tuyệt Kỹ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131003,
       "id": "amidst_silenced_stars_i_deep_sleep",
       "name": "Ngủ Say Trong Thiên Hà Lặng Thinh",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131004,
       "id": "upon_lighted_fyrefly_i_soon_gaze",
       "name": "Tôi Sẽ Nhìn Thấy, Ngọn Lửa Đom Đóm",
-      "desc": "Ở trạng thái Thiêu Đốt Hoàn Toàn, Kháng Hiệu Ứng của Chiến Giáp SAM tăng <nobr>50%</nobr>."
+      "desc": "Ở trạng thái Thiêu Đốt Hoàn Toàn, Kháng Hiệu Ứng của Chiến Giáp SAM tăng <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131005,
       "id": "from_undreamt_night_i_thence_shine",
       "name": "Sáng Lên Từ Đêm Không Mộng Mị",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131006,
       "id": "in_finalized_morrow_i_full_bloom",
       "name": "Nở Rộ Ở Ngày Mai Vô Tận",
-      "desc": "<u>Xuyên Kháng</u> Hỏa của Chiến Giáp SAM ở trạng thái Thiêu Đốt Hoàn Toàn tăng <nobr>20%</nobr>. Khi thi triển Tấn Công Thường Cường Hóa, Chiến Kỹ Cường Hóa, Hiệu Suất Phá Vỡ Điểm Yếu sẽ tăng <nobr>50%</nobr>."
+      "desc": "<u>Xuyên Kháng</u> Hỏa của Chiến Giáp SAM ở trạng thái Thiêu Đốt Hoàn Toàn tăng <nobr>20%</nobr>. Khi thi triển Tấn Công Thường Cường Hóa, Chiến Kỹ Cường Hóa, Hiệu Suất Phá Vỡ Điểm Yếu sẽ tăng <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

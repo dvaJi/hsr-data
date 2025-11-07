@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "나찰",
+  "description": "늘 관을 지니고 다니는 하늘 밖의 바다에서 온 의술이 뛰어난 화외 행상",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 허수 속성 피해를 준다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "단일 아군의 HP를 회복하고, [백화의 순간]을 1스택 획득한다",
       "type": "전투 스킬",
       "tag": "회복",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "모든 적의 버프 효과를 1개 해제하고, 모든 적에게 허수 속성 피해를 준다. 동시에 [백화의 순간]을 1스택 획득한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "버프 효과",
+          "desc": "전투에 버프 효과가 있는 모든 지속 상태. 특별 안내가 없다면 해제 가능하다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "[백화의 순간] 효과가 2스택 중첩되면 결계를 펼친다. 결계가 있을 때 아군이 공격하면 HP를 회복한다",
       "type": "특성",
       "tag": "회복",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "전투 불능 상태",
+          "desc": "아군의 현재 HP가 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 있으면 목표는 전투를 계속할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "비술 발동 후 다음 전투 진입 시 특성 효과를 발동한다",
       "type": "비술",
       "tag": "회복",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "생자 정화",
-      "desc": "결계 효과 발동 시 모든 아군의 공격력이 <nobr>20%</nobr> 증가한다"
+      "desc": "결계 효과 발동 시 모든 아군의 공격력이 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "정토의 선물",
-      "desc": "전투 스킬 효과 발동 시 지정한 아군의 현재 HP 백분율이 <nobr>50%</nobr> 미만일 경우 나찰이 제공하는 치유량이 <nobr>30%</nobr> 증가하고, 현재 HP 백분율이 <nobr>50%</nobr> 이상일 경우, 나찰 공격력의 <nobr>18%</nobr>+<nobr>240</nobr>만큼 피해를 막아낼 수 있는 실드를 제공한다. 실드 지속 시간: <nobr>2</nobr>턴"
+      "desc": "전투 스킬 효과 발동 시 지정한 아군의 현재 HP 백분율이 <nobr>50%</nobr> 미만일 경우 나찰이 제공하는 치유량이 <nobr>30%</nobr> 증가하고, 현재 HP 백분율이 <nobr>50%</nobr> 이상일 경우 나찰 공격력의 <nobr>18%</nobr>+<nobr>240</nobr>만큼 피해를 상쇄할 수 있는 실드를 제공한다. 실드 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "우인의 모색",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "가시관의 심판",
-      "desc": "결계 효과 발동 시 적은 허약 상태에 빠지고, 가하는 피해가 <nobr>12%</nobr> 감소한다"
+      "desc": "결계 효과 발동 시 적은 허약 상태에 빠지고, 가하는 피해가 <nobr>12%</nobr> 감소한다",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "수난의 흔적",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "모두가 먼지로 돌아가리",
-      "desc": "필살기 발동 시 <nobr>100%</nobr>의 <u>고정 확률</u>로 모든 적의 모든 속성 저항이 <nobr>20%</nobr> 감소한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "필살기 발동 시 <nobr>100%</nobr>의 <u>고정 확률</u>로 모든 적의 모든 속성 저항이 <nobr>20%</nobr> 감소한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "고정 확률",
+          "desc": "어떤 요인에도 영향을 받지 않는 고정 확률이다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

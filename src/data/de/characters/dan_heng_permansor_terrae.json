@@ -2,6 +2,7 @@
   "_id": 1414,
   "id": "dan_heng_permansor_terrae",
   "name": "Dan Heng – Permansor Terrae",
+  "description": "Georios’ Brust und der Körper des Wanderdrachen stützen die zerbrochene Erde und ertragen so tausendjährige Qualen.\nDer Namenlose Dan Heng, Erbe von Chrysos, der die Kernflamme der Erde beschützt, die kippende Welt stützt und die Lebewesen der Erde in eine ferne Welt führt.\nWie alle Flüsse ins Meer münden und die Berge im Einklang rufen, erstreckt sich der Weg der Beständigkeit über zehntausend Meilen.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner geringen physischen SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Macht eine ausgewählte verbündete Figur zum „Kameraden“ und gewährt allen Verbündeten einen Schild mit stapelbarer Schildmenge.",
       "type": "Fertigkeit",
       "tag": "Verteidigung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,32 @@
       "simpleDesc": "Fügt allen Gegnern massiven physischen SCH zu und gewährt allen Verbündeten einen Schild mit stapelbarer Schildmenge. Verstärkt außerdem „Drachenseele“, die während ihrer Aktion einen Folgeangriff auslöst und allen Gegnern geringen physischen SCH sowie geringen SCH vom Typ des Kameraden zufügt. Die Verstärkung hält für #3[i] Aktionen von Drachenseele an.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1202,32 @@
       "simpleDesc": "Wenn ein Verbündeter zum „Kameraden“ wird, beschwört Dan Heng – Permansor Terrae für ihn „Drachenseele“.\nWenn Drachenseele eine Aktion ausführt, entfernt sie 1 Debuff von allen Verbündeten und gewährt einen Schild mit stapelbarer Schildmenge.",
       "type": "Talent",
       "tag": "Verteidigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1597,15 @@
       "simpleDesc": "Versetzt Gegner in einem bestimmten Bereich in den Status Schwindel und verleiht der aktuell aktiven Figur „Kamerad“. Setzt zu Beginn des nächsten Kampfes automatisch die Fertigkeit auf die Figur mit Kamerad ein.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1622,114 @@
       "_id": 141401,
       "id": "shed_scales_of_old",
       "name": "Abstreifen alter Schuppen",
-      "desc": "Wenn Dan Heng – Permansor Terrae seinen Ultimate einsetzt, stellt er <nobr>1</nobr> Fertigkeitspunkt wieder her und erhöht die <u>WDS-DUR</u> aller Typen des „Kameraden“ für <nobr>3</nobr> Rd. um <nobr>18%</nobr>."
+      "desc": "Wenn Dan Heng – Permansor Terrae seinen Ultimate einsetzt, stellt er <nobr>1</nobr> Fertigkeitspunkt wieder her und erhöht die <u>WDS-DUR</u> aller Typen des „Kameraden“ für <nobr>3</nobr> Rd. um <nobr>18%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141402,
       "id": "watch_trails_to_blaze",
       "name": "Wächter des Trailblaze",
-      "desc": "Erhöht zusätzlich die Verstärkungsanzahl für „Drachenseele“ durch den Ultimate um <nobr>2</nobr>. Nachdem Dan Heng – Permansor Terrae seinen Ultimate eingesetzt hat, wird <u>die Aktion</u> von Drachenseele um <nobr>100</nobr> % <u>vorgezogen</u>. Wenn die verstärkte Drachenseele eine Aktion ausführt, beträgt der <u>zusätzliche SCH</u> des Kameraden <nobr>200%</nobr> des ursprünglichen SCH und die gewährte Schildmenge <nobr>200%</nobr> der ursprünglichen Schildmenge."
+      "desc": "Erhöht zusätzlich die Verstärkungsanzahl für „Drachenseele“ durch den Ultimate um <nobr>2</nobr>. Nachdem Dan Heng – Permansor Terrae seinen Ultimate eingesetzt hat, wird <u>die Aktion</u> von Drachenseele um <nobr>100</nobr> % <u>vorgezogen</u>. Wenn die verstärkte Drachenseele eine Aktion ausführt, beträgt der <u>zusätzliche SCH</u> des Kameraden <nobr>200%</nobr> des ursprünglichen SCH und die gewährte Schildmenge <nobr>200%</nobr> der ursprünglichen Schildmenge.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Aktion vorziehen",
+          "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141403,
       "id": "bear_weight_of_worlds",
       "name": "Erbe von Sonne, Mond und Erde",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141404,
       "id": "by_oath_this_vessel_is_i",
       "name": "Schwur wie Gold, Leib als Boot",
-      "desc": "Reduziert den erlittenen SCH des „Kameraden“ um <nobr>20%</nobr>."
+      "desc": "Reduziert den erlittenen SCH des „Kameraden“ um <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141405,
       "id": "the_path_of_permanence_sweeps_far",
       "name": "Endloser Weg der Beständigkeit",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141406,
       "id": "one_dream_to_enfold_all_wilds",
       "name": "In die Träume fließt die Natur",
-      "desc": "Wenn sich ein „Kamerad“ auf dem Kampffeld befindet, wird der erlittene SCH aller Gegner um <nobr>20%</nobr> erhöht. Wenn der Kamerad SCH verursacht, ignoriert er <nobr>12%</nobr> der VTD des Gegners. Wenn Dan Heng – Permansor Terrae seinen Ultimate einsetzt, fügt der Kamerad allen Gegnern <u>zusätzlichen SCH</u> vom Typ des Kameraden in Höhe von <nobr>330%</nobr> seines ANG zu."
+      "desc": "Wenn sich ein „Kamerad“ auf dem Kampffeld befindet, wird der erlittene SCH aller Gegner um <nobr>20%</nobr> erhöht. Wenn der Kamerad SCH verursacht, ignoriert er <nobr>12%</nobr> der VTD des Gegners. Wenn Dan Heng – Permansor Terrae seinen Ultimate einsetzt, fügt der Kamerad allen Gegnern <u>zusätzlichen SCH</u> vom Typ des Kameraden in Höhe von <nobr>330%</nobr> seines ANG zu.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

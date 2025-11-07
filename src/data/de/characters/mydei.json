@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "Mydei",
+  "description": "Die in Nebel versunkene Stadt, Castrum Kremnos, eine Stadt voller Chaos und Krieg! Ihre Königsfamilie hat das Blut des Vatermords in sich, und ihre Götter tragen den Namen des Unheils.\nDer unsterbliche Mydeimos, der einsame Löwe und der Erbe von Chrysos, der die Kernflamme des Zwists jagt, muss unzählige Tode ertragen, blutüberströmt in seine Heimat zurückkehren und allein den Wahnsinn des Schicksals tragen.\n– Einen König töten, um König zu werden. Einen Gott töten, um Gott zu werden. Die kriegerischen Eisenhufe durchziehen die Wildnis, aber am Ende wird auch das Blut der Heimat an ihnen kleben.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Verbraucht LP und fügt einem anvisierten Gegner imaginären SCH sowie angrenzenden Einheiten geringen imaginären SCH zu.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Stellt LP wieder her und sammelt Aufladung für das Talent an. Fügt einem anvisierten Gegner massiven imaginären SCH und angrenzenden Einheiten imaginären SCH zu. Verursacht beim Ziel und angrenzenden Einheiten Verspotten.",
       "type": "Ultimate",
       "tag": "Ausdehnung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "Wenn Mydei LP verliert, erhält er Aufladung. Wenn die Aufladung 100 erreicht, tritt er in den Status Blutrache ein. Er stellt LP wieder her und seine Aktion wird vorgezogen. Im Status Blutrache werden die max. LP erhöht und die VTD bleibt bei 0. Zu Beginn der eigenen Runde wird automatisch „Königsmörder sei König“ eingesetzt.\nWenn die Aufladung während der Dauer von Blutrache 150 erreicht, erhält Mydei sofort 1 zusätzliche Runde und setzt automatisch „Gottesmörder sei Gott“ ein.\nWenn Mydei einen Todesstoß erleidet, wird Blutrache beendet.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Zusätzliche Runde",
+          "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "Zieht Gegner in einem bestimmten Bereich an und belegt sie mit Schwindel. Nach Kampfeintritt mit einem Angriff auf von Schwindel betroffene Gegner wird allen Gegnern geringer imaginärer SCH zugefügt und bei ihnen Verspotten verursacht. Sammelt außerdem Aufladung für das Talent an.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "Unnachgiebiges Rückgrat im Eiswind",
-      "desc": "Erhöht den SCH-Multiplikator gegen das Hauptziel von „Gottesmörder sei Gott“ um <nobr>30%</nobr>. Diese Fähigkeit fügt nun allen Gegnern imaginären SCH zu, der dem SCH-Multiplikator des Hauptziels entspricht."
+      "desc": "Erhöht den SCH-Multiplikator gegen das Hauptziel von „Gottesmörder sei Gott“ um <nobr>30%</nobr>. Diese Fähigkeit fügt nun allen Gegnern imaginären SCH zu, der dem SCH-Multiplikator des Hauptziels entspricht.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "Todesgesang des Zwists",
-      "desc": "Während der Dauer von „Blutrache“ ignoriert der von Mydei verursachte SCH <nobr>15%</nobr> der VTD des Ziels. Wenn er geheilt wird, werden <nobr>40%</nobr> der erhaltenen Heilung in Aufladung umgewandelt. Die gesamte umgewandelte Aufladung kann <nobr>40</nobr> Pkt. nicht überschreiten. Nachdem eine beliebige Einheit eine Aktion ausgeführt hat, wird die ansammelbare Aufladung zurückgesetzt."
+      "desc": "Während der Dauer von „Blutrache“ ignoriert der von Mydei verursachte SCH <nobr>15%</nobr> der VTD des Ziels. Wenn er geheilt wird, werden <nobr>40%</nobr> der erhaltenen Heilung in Aufladung umgewandelt. Die gesamte umgewandelte Aufladung kann <nobr>40</nobr> Pkt. nicht überschreiten. Nachdem eine beliebige Einheit eine Aktion ausgeführt hat, wird die ansammelbare Aufladung zurückgesetzt.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "Festmahl der unvergänglichen Ehre",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "Erwecken der stillen Löwen",
-      "desc": "Erhöht im Status „Blutrache“ den KRIT-SCH um <nobr>30%</nobr>. Stellt LP in Höhe von <nobr>10%</nobr> der max. LP wieder her, nachdem er von Gegnern angegriffen wurde."
+      "desc": "Erhöht im Status „Blutrache“ den KRIT-SCH um <nobr>30%</nobr>. Stellt LP in Höhe von <nobr>10%</nobr> der max. LP wieder her, nachdem er von Gegnern angegriffen wurde.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "Flamme der gemeißelten Narben",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "Blutiger Hügel aus vergangenen Schlachten",
-      "desc": "Tritt beim Kampfeintritt sofort in den Status „Blutrache“ ein und die für „Gottesmörder sei Gott“ benötigte Aufladung wird auf <nobr>100</nobr> Pkt. verringert."
+      "desc": "Tritt beim Kampfeintritt sofort in den Status „Blutrache“ ein und die für „Gottesmörder sei Gott“ benötigte Aufladung wird auf <nobr>100</nobr> Pkt. verringert.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 8006,
   "id": "trailblazer_harmony_girl",
   "name": "Trazacaminos Armonía",
+  "description": "{F#Una}{M#Un} joven que embarcó en el Expreso Astral.\nDecidió viajar con el Expreso Astral para eliminar las amenazas provocadas por el Estelaron.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Imaginario a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Imaginario a un enemigo. Se dispara 5 veces en total.",
       "type": "Habilidad básica",
       "tag": "Rebote",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "Aplica el efecto Bailarín de apoyo a todos los aliados. Los aliados bajo el efecto de Bailarín de apoyo tienen mayor efecto de Ruptura e infligen adicionalmente 1 vez Daño de Ultrarruptura cuando atacan a enemigos con Ruptura de Debilidad.",
       "type": "Habilidad definitiva",
       "tag": "Apoyo",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Ruptura de Debilidad",
+          "desc": "Cuando la Firmeza del objetivo se reduce a 0, entrará en un estado especial en el que sus acciones se retrasarán.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Daño de Ultrarruptura",
+          "desc": "Cuanto más altos sean la Reducción de Firmeza de este ataque, el nivel del personaje y el efecto de Ruptura, más Daño de Ultrarruptura inflige.\nEl Daño de Ultrarruptura no puede causar Golpes CRIT y no se ve afectado por los efectos de aumento de daño.\nEl Daño de Ultrarruptura también se considera Daño de Ruptura.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "La Trazacaminos recupera energía cuando se rompe la Debilidad de un enemigo.",
       "type": "Talento",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "Aumenta el efecto de Ruptura de todos los aliados en la siguiente batalla.",
       "type": "Técnica",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800601,
       "id": "best_seat_in_the_house",
       "name": "El mejor asiento del local",
-      "desc": "Regenera <nobr>1</nobr> pt. de habilidad básica tras usar la habilidad por primera vez en una batalla."
+      "desc": "Regenera <nobr>1</nobr> pt. de habilidad básica tras usar la habilidad por primera vez en una batalla.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800602,
       "id": "jailbreaking_rainbowwalk",
       "name": "Arcoíris fugaprisiones",
-      "desc": "Al comenzar la batalla, la recuperación de energía de la Trazacaminos aumenta en un <span style=\"color:#f29e38ff><nobr>25%</nobr></span> durante <nobr>3</nobr> turnos."
+      "desc": "Al comenzar la batalla, la recuperación de energía de la Trazacaminos aumenta en un <span style=\"color:#f29e38ff><nobr>25%</nobr></span> durante <nobr>3</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800603,
       "id": "sanatorium_for_rest_notes",
       "name": "Sanatorio del silencio de redonda",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800604,
       "id": "dove_in_tophat",
       "name": "Paloma en la chistera",
-      "desc": "Mientras la Trazacaminos está en el campo de batalla, el efecto de Ruptura de todos los aliados excepto ella aumenta en una cantidad equivalente al <nobr>15%</nobr> del efecto de Ruptura de la Trazacaminos."
+      "desc": "Mientras la Trazacaminos está en el campo de batalla, el efecto de Ruptura de todos los aliados excepto ella aumenta en una cantidad equivalente al <nobr>15%</nobr> del efecto de Ruptura de la Trazacaminos.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800605,
       "id": "poem_favors_rhythms_of_old",
       "name": "Poema de viejos ritmos",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800606,
       "id": "tomorrow_rest_in_spotlight",
       "name": "Mañana descansaremos bajo los focos",
-      "desc": "Aumenta el daño extra de la habilidad básica <nobr>2</nobr> veces."
+      "desc": "Aumenta el daño extra de la habilidad básica <nobr>2</nobr> veces.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

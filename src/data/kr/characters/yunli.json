@@ -2,6 +2,7 @@
   "_id": 1221,
   "id": "yunli",
   "name": "운리",
+  "description": "선주 「주명」의 검 사냥꾼, 「촉연 장군」 회염의 총애를 받는 손녀로, 솔직한 성격을 가지고 있다.\n어릴 적부터 회염을 따라 검예와 단조 기술을 배워 「염륜팔엽」 중 두 번째로 어린 천재 검객이 되었다.\n주명에서 유출된 마검을 증오하고 「모든 마검을 사냥해 파괴하겠다」고 맹세했다",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 물리 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "자신의 HP를 회복하며, 단일 적에게 물리 속성 피해를 가하고, 인접한 목표에게 소량의 물리 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,24 @@
       "simpleDesc": "[막기]에 진입하고 모든 적을 도발한다. 도중에 피격되면 강력한 반격을 발동해 공격자 및 인접한 목표에게 물리 속성 피해를 가하고, 이후 단일 적에게 소량의 물리 속성 피해를 가하며 총 6회 바운스한다. [막기] 상태에서 반격이 발동되지 않으면 상태 종료 시 랜덤 적 및 인접한 목표에게 물리 속성 피해를 가한다",
       "type": "필살기",
       "tag": "강화",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "반격",
+          "desc": "목표가 공격을 받으면 자동으로 발동되는 효과. 공격자에게 추가로 공격을 1회 발동한다.\n반격은 추가 공격으로 간주한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1194,24 @@
       "simpleDesc": "운리가 적에게 피격될 시, 추가로 에너지를 회복하고 즉시 반격해 공격자에게 물리 속성 피해를 가하고, 인접한 목표에게 소량의 물리 속성 피해를 가한다",
       "type": "특성",
       "tag": "확산",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "반격",
+          "desc": "목표가 공격을 받으면 자동으로 발동되는 효과. 공격자에게 추가로 공격을 1회 발동한다.\n반격은 추가 공격으로 간주한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1536,15 @@
       "simpleDesc": "자신이 [튕겨내기] 효과를 획득한다, 지속 시간: 20초. 도중에 적을 공격하거나 적에게 피격되어 전투에 진입하면 즉시 랜덤 단일 적에게 [간파•멸]을 발동한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1498,37 +1562,97 @@
       "_id": 122101,
       "id": "weathered_blade_does_not_sully",
       "name": "번뇌를 벗어난 칼날",
-      "desc": "[간파•참]과 [간파•멸]이 가하는 피해가 <nobr>20%</nobr> 증가하고, [간파•멸]의 추가 피해 횟수가 <nobr>3</nobr>회 증가한다"
+      "desc": "[간파•참]과 [간파•멸]이 가하는 피해가 <nobr>20%</nobr> 증가하고, [간파•멸]의 추가 피해 횟수가 <nobr>3</nobr>회 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122102,
       "id": "first_luster_breaks_dawn",
       "name": "새로 태어난 첫 빛",
-      "desc": "<u>반격</u>을 발동해 피해를 가할 시 적의 방어력을 <nobr>20%</nobr> 무시한다"
+      "desc": "<u>반격</u>을 발동해 피해를 가할 시 적의 방어력을 <nobr>20%</nobr> 무시한다",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "반격",
+          "desc": "목표가 공격을 받으면 자동으로 발동되는 효과. 공격자에게 추가로 공격을 1회 발동한다.\n반격은 추가 공격으로 간주한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122103,
       "id": "mastlength_twirls_mountweight",
       "name": "구척검을 휘두르는 기예",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122104,
       "id": "artisans_ironsong",
       "name": "망치를 휘두르는 거장",
-      "desc": "[간파•참] 또는 [간파•멸] 발동 후 자신의 효과 저항이 <nobr>50%</nobr> 증가한다. 지속 시간: <nobr>1</nobr>턴"
+      "desc": "[간파•참] 또는 [간파•멸] 발동 후 자신의 효과 저항이 <nobr>50%</nobr> 증가한다. 지속 시간: <nobr>1</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122105,
       "id": "blade_of_old_outlasts_all",
       "name": "변치 않는 무기는 돌이 아니니",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122106,
       "id": "walk_in_blade_talk_in_zither",
       "name": "담대한 검법, 부드러운 마음",
-      "desc": "[막기] 상태일 때, 적이 스킬을 직접 발동할 시 운리를 공격하는지와 상관없이 [간파•멸]을 발동하고 동시에 [막기] 효과를 해제한다. [간파•참] 또는 [간파•멸]을 발동해 피해를 가할 시 치명타 확률이 <nobr>15%</nobr> 증가하고, 물리 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다"
+      "desc": "[막기] 상태일 때, 적이 스킬을 직접 발동할 시 운리를 공격하는지와 상관없이 [간파•멸]을 발동하고 동시에 [막기] 효과를 해제한다. [간파•참] 또는 [간파•멸]을 발동해 피해를 가할 시 치명타 확률이 <nobr>15%</nobr> 증가하고, 물리 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

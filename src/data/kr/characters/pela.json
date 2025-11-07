@@ -2,6 +2,7 @@
   "_id": 1106,
   "id": "pela",
   "name": "페라",
+  "description": "실버메인 철위대의 정보관.\n진중한 성격 덕에 철위대 멤버들에게 존경을 받고 있다",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "단일 적의 버프 효과를 1개 해제하고, 단일 적에게 얼음 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "버프 효과",
+          "desc": "전투에 버프 효과가 있는 모든 지속 상태. 특별 안내가 없다면 해제 가능하다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +756,27 @@
       "simpleDesc": "높은 확률로 적의 방어력을 감소시키고 모든 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1110,24 @@
       "simpleDesc": "공격 발동 후 적이 디버프 효과상태에 빠지면, 페라는 에너지를 회복한다",
       "type": "특성",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "디버프 효과",
+          "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1415,24 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 임의의 단일 적에게 페라 공격력 #4[i]%만큼의 얼음 속성 피해를 준다. 동시에 #1[i]%의 기본 확률로 각 단일 적의 방어력이 #2[i]% 감소한다. 지속 시간: #3[i]턴",
       "simpleDesc": "적을 공격하며, 전투 진입 후 임의의 단일 적에게 소량의 피해를 가하고, 높은 확률로 각 단일 적의 방어력이 감소한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1452,114 @@
       "_id": 110601,
       "id": "victory_report",
       "name": "승리의 피드백",
-      "desc": "적이 처치될 경우 페라는 에너지를 <nobr>5</nobr>pt 회복한다"
+      "desc": "적이 처치될 경우 페라는 에너지를 <nobr>5</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110602,
       "id": "adamant_charge",
       "name": "무한 질주",
-      "desc": "전투 스킬을 발동해 <u>버프 효과</u>를 해제하면 속도가 <nobr>10%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "전투 스킬을 발동해 <u>버프 효과</u>를 해제하면 속도가 <nobr>10%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "버프 효과",
+          "desc": "전투에 버프 효과가 있는 모든 지속 상태. 특별 안내가 없다면 해제 가능하다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110603,
       "id": "suppressive_force",
       "name": "성장 억제",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110604,
       "id": "full_analysis",
       "name": "완벽 해부",
-      "desc": "전투 스킬 발동 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 적의 얼음 속성 저항이 <nobr>12%</nobr> 감소한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "전투 스킬 발동 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 적의 얼음 속성 저항이 <nobr>12%</nobr> 감소한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110605,
       "id": "absolute_jeopardy",
       "name": "빙점 방해",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110606,
       "id": "feeble_pursuit",
       "name": "힘 없는 추격",
-      "desc": "공격 발동 후 적이 <u>디버프 효과</u>를 보유한 경우, 페라 공격력의 <nobr>40%</nobr>만큼 얼음 속성 <u>추가 피해</u>를 가한다"
+      "desc": "공격 발동 후 적이 <u>디버프 효과</u>를 보유한 경우, 페라 공격력의 <nobr>40%</nobr>만큼 얼음 속성 <u>추가 피해</u>를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "디버프 효과",
+          "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

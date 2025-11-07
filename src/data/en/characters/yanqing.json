@@ -2,6 +2,7 @@
   "_id": 1209,
   "id": "yanqing",
   "name": "Yanqing",
+  "description": "General Jing Yuan's retainer. A gifted swordsman who hasn't even come of age.\nNo one can best Yanqing when he holds a sword in hand.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -243,10 +244,22 @@
       "_id": 120901,
       "id": "frost_thorn",
       "name": "Frost Thorn",
-      "desc": "Deals Ice DMG equal to #1[i]% of Yanqing's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Ice DMG to a single enemy.",
+      "desc": "Deals Ice DMG equal to #1[i]% of Yanqing's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Ice DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 120902,
       "id": "darting_ironthorn",
       "name": "Darting Ironthorn",
-      "desc": "Deals Ice DMG equal to #1[i]% of Yanqing's ATK to a single enemy and activates Soulsteel Sync for 1 turn.",
-      "simpleDesc": "Deals Ice DMG to a single enemy and activates the Soulsteel Sync.",
+      "desc": "Deals Ice DMG equal to #1[i]% of Yanqing's ATK to one designated enemy and activates \"Soulsteel Sync\" for 1 turn.",
+      "simpleDesc": "Deals Ice DMG to one designated enemy and activates the \"Soulsteel Sync.\"",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -709,10 +734,31 @@
       "_id": 120903,
       "id": "amidst_the_raining_bliss",
       "name": "Amidst the Raining Bliss",
-      "desc": "Increases Yanqing's CRIT Rate by #1[i]%. When Soulsteel Sync is active, increases Yanqing's CRIT DMG by an extra #2[i]%. This buff lasts for one turn. Afterwards, deals Ice DMG equal to #3[i]% of Yanqing's ATK to a single enemy.",
-      "simpleDesc": "Increases Yanqing's CRIT Rate. Enhances \"Soulsteel Sync\" and deals massive Ice DMG to a single enemy.",
+      "desc": "Increases Yanqing's CRIT Rate by #1[i]%. When \"Soulsteel Sync\" is active, increases Yanqing's CRIT DMG by an extra #2[i]%. This buff lasts for one turn. Afterwards, deals Ice DMG equal to #3[i]% of Yanqing's ATK to one designated enemy.",
+      "simpleDesc": "Increases Yanqing's CRIT Rate. Enhances \"Soulsteel Sync\" and deals massive Ice DMG to one enemy.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1083,48 @@
       "simpleDesc": "During Soulsteel Sync, reduces the chance of this character being attacked and increases their CRIT Rate and CRIT DMG. After attacking an enemy, there is a chance of launching a Follow-up ATK, dealing Ice DMG with a chance to Freeze the target.\nSoulsteel Sync will be removed after this character receives damage.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Fixed Chance",
+          "desc": "Fixed chance will not be affected by any factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1494,15 @@
       "simpleDesc": "After this character uses Technique, at the start of the next battle, increases the DMG dealt by this character to enemy targets whose HP percentage is 50% or higher.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1424,37 +1521,106 @@
       "_id": 120901,
       "id": "svelte_saber",
       "name": "Svelte Saber",
-      "desc": "When Yanqing attacks a Frozen enemy, he deals Ice <u>Additional DMG</u> equal to <nobr>60%</nobr> of his ATK."
+      "desc": "When Yanqing attacks a Frozen enemy, he deals Ice <u>Additional DMG</u> equal to <nobr>60%</nobr> of his ATK.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120902,
       "id": "supine_serenade",
       "name": "Supine Serenade",
-      "desc": "When Soulsteel Sync is active, Energy Regeneration Rate increases by an extra <nobr>10%</nobr>."
+      "desc": "When Soulsteel Sync is active, Energy Regeneration Rate increases by an extra <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120903,
       "id": "sword_savant",
       "name": "Sword Savant",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120904,
       "id": "searing_sting",
       "name": "Searing Sting",
-      "desc": "When the current HP percentage is <nobr>80%</nobr> or higher, this unit's Ice <u>RES PEN</u> increases by <nobr>12%</nobr>."
+      "desc": "When the current HP percentage is <nobr>80%</nobr> or higher, this unit's Ice <u>RES PEN</u> increases by <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120905,
       "id": "surging_strife",
       "name": "Surging Strife",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120906,
       "id": "swift_swoop",
       "name": "Swift Swoop",
-      "desc": "If the <u>buff</u>s from \"Soulsteel Sync\" or the Ultimate are in effect when an enemy is defeated, the duration of these <u>buffs</u> is extended by 1 turn."
+      "desc": "If the <u>buff</u>s from \"Soulsteel Sync\" or the Ultimate are in effect when an enemy is defeated, the duration of these <u>buffs</u> is extended by 1 turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

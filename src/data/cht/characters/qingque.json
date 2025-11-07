@@ -2,6 +2,7 @@
   "_id": 1201,
   "id": "qingque",
   "name": "青雀",
+  "description": "仙舟「羅浮」太卜司的卜者兼書庫管理員。\n因工作一再偷閒摸魚，即將貶無可貶成為「掌門人」。",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "使用1張牌，對敵方單體造成少量量子屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "抽牌，使自身造成的傷害提高，且本回合不會結束。",
       "type": "戰技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "對敵方全體造成量子屬性傷害，獲得4張相同花色的牌。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "我方目標回合開始時，抽牌。自身回合開始時，若持有4張同花色牌，則清空已有牌並強化當次普通攻擊，同時使自身攻擊力提高。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1313,6 +1359,15 @@
       "simpleDesc": "使用秘技，下一次進入戰鬥時抽牌。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,96 @@
       "_id": 120101,
       "id": "rise_through_the_tiles",
       "name": "散勇化驍摸么魚",
-      "desc": "施放終結技造成的傷害提高<nobr>10%</nobr>。"
+      "desc": "施放終結技造成的傷害提高<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120102,
       "id": "sleep_on_the_tiles",
       "name": "棋枰作枕好入眠",
-      "desc": "青雀每次觸發抽牌時，立即恢復<nobr>1</nobr>點能量。"
+      "desc": "青雀每次觸發抽牌時，立即恢復<nobr>1</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120103,
       "id": "read_between_the_tiles",
       "name": "觀瓊視煢門前清",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120104,
       "id": "right_on_the_tiles",
       "name": "帝垣翔鱗和絕張",
-      "desc": "施放戰技後，有<nobr>24%</nobr>的<u>固定機率</u>獲得【不求人】狀態，持續至本回合結束。\n【不求人】狀態下，發動普通攻擊或發動強化普通攻擊後立即進行1次<u>追加攻擊</u>，對該目標造成等同於普通攻擊或強化普通攻擊傷害<nobr>100%</nobr>的量子屬性傷害。"
+      "desc": "施放戰技後，有<nobr>24%</nobr>的<u>固定機率</u>獲得【不求人】狀態，持續至本回合結束。\n【不求人】狀態下，發動普通攻擊或發動強化普通攻擊後立即進行1次<u>追加攻擊</u>，對該目標造成等同於普通攻擊或強化普通攻擊傷害<nobr>100%</nobr>的量子屬性傷害。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定機率",
+          "desc": "不會被任何因素影響的固定機率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120105,
       "id": "gambit_for_the_tiles",
       "name": "七星流離全不靠",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120106,
       "id": "prevail_beyond_the_tiles",
       "name": "虛心平意候梟盧",
-      "desc": "發動強化普通攻擊後，恢復1個戰技點。"
+      "desc": "發動強化普通攻擊後，恢復1個戰技點。",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

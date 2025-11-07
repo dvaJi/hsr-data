@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "セイレンス",
+  "description": "スティコシア――酔いと夢が溢れる海辺の街。古き歌声は今も波間に響いている。\n海の娘ヘレクトラ、「海洋」の火種を清める黄金裔。濁りし暗流を払い、天外より来たる英雄のために、盛大な酒宴の旋律を奏でる者である。\n――まだ閉幕の時ではない。たとえ希望が泡のように儚いものだとしても、波は前へと進み続けるのだ。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "高確率で敵全体の受けるダメージをアップし、物理属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "全体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "結界を展開し、敵全体の攻撃力と防御力をダウンさせ、物理属性ダメージを与える。結界が展開されている間、敵が持続ダメージを1回受けるたびに、その敵に物理属性持続ダメージを1回与える。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "味方が攻撃する時、セイレンスは高確率でその回の攻撃を受けた敵に風化/裂創/燃焼/感電状態のいずれか1種類を付与する。",
       "type": "天賦",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "特殊領域を作り出す。領域内の敵は味方を攻撃しない。領域内の敵と戦闘に入った後、高確率で敵それぞれに風化/裂創/燃焼/感電状態の中から#3[i]種類の状態を付与する。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "{RUBY_B#なにゆえ}何故{RUBY_E#}、\n{RUBY_B#こころ}心{RUBY_E#}は{RUBY_B#かな}悲{RUBY_E#}しむか",
-      "desc": "セイレンスがフィールド上にいる時、味方が与える持続ダメージは本来の<nobr>116%</nobr>になる。セイレンスが天賦で敵に風化/裂創/燃焼/感電状態を付与する時、<nobr>100%</nobr>の<u>基礎確率</u>で、元の天賦効果と同じ、かつ同時に存在可能な風化/裂創/燃焼/感電状態を追加で1つ付与する。"
+      "desc": "セイレンスがフィールド上にいる時、味方が与える持続ダメージは本来の<nobr>116%</nobr>になる。セイレンスが天賦で敵に風化/裂創/燃焼/感電状態を付与する時、<nobr>100%</nobr>の<u>基礎確率</u>で、元の天賦効果と同じ、かつ同時に存在可能な風化/裂創/燃焼/感電状態を追加で1つ付与する。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "{RUBY_B#なにゆえ}何故{RUBY_E#}、\n{RUBY_B#しお}潮{RUBY_E#}はさんざめく",
-      "desc": "結界が展開されている間、軌跡「真珠の琴線」による与ダメージアップ効果が味方全体に適用される。"
+      "desc": "結界が展開されている間、軌跡「真珠の琴線」による与ダメージアップ効果が味方全体に適用される。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "{RUBY_B#なにゆえ}何故{RUBY_E#}、\n{RUBY_B#あかり}灯{RUBY_E#}は{RUBY_B#わす}忘{RUBY_E#}らるる",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "{RUBY_B#なにゆえ}何故{RUBY_E#}、\n{RUBY_B#とき}時{RUBY_E#}は{RUBY_B#なが}流{RUBY_E#}れるか",
-      "desc": "結界が展開されている間、敵全体の全属性耐性-<nobr>20%</nobr>。"
+      "desc": "結界が展開されている間、敵全体の全属性耐性-<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "{RUBY_B#かみ}髪{RUBY_E#}を{RUBY_B#す}梳{RUBY_E#}き、\n{RUBY_B#くち}口{RUBY_E#}ずさむ",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "{RUBY_B#しず}沈{RUBY_E#}みし{RUBY_B#きみ}君{RUBY_E#}、\nいずれ{RUBY_B#ききょう}帰郷{RUBY_E#}せん",
-      "desc": "結界が展開されている間、敵のターンが回ってきた時に、または味方が攻撃を1回行った後に発動する、セイレンスの物理属性持続ダメージの発動可能回数の上限が<nobr>12</nobr>回になる。またそのダメージ倍率+<nobr>20%</nobr>。"
+      "desc": "結界が展開されている間、敵のターンが回ってきた時に、または味方が攻撃を1回行った後に発動する、セイレンスの物理属性持続ダメージの発動可能回数の上限が<nobr>12</nobr>回になる。またそのダメージ倍率+<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

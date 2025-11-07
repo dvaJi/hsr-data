@@ -2,6 +2,7 @@
   "_id": 1110,
   "id": "lynx",
   "name": "Lynx",
+  "description": "Exploradora de las llanuras nevadas de Belobog y hermana pequeña de la familia Landau.\nTiene una personalidad calmada y una gran iniciativa para la acción. A menudo se adentra sola en las llanuras nevadas para explorar.",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Cuántico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Un aliado obtiene Reacción de supervivencia, lo que aumenta sus PV máx. Además, sus PV se regeneran.",
       "type": "Habilidad básica",
       "tag": "Regeneración",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -782,6 +807,27 @@
       "simpleDesc": "Elimina 1 estado negativo de todos los aliados. Todos los aliados regeneran PV.",
       "type": "Habilidad definitiva",
       "tag": "Regeneración",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Estado negativo",
+          "desc": "Reduce la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos estados se pueden eliminar.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1146,18 @@
       "simpleDesc": "Al usar la habilidad básica o la habilidad definitiva, un aliado obtiene un efecto de regeneración continua de PV. Si el objetivo está afectado por Reacción de supervivencia, el efecto de regeneración continua de PV aumenta de forma adicional.",
       "type": "Talento",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1448,6 +1506,15 @@
       "simpleDesc": "Tras usar la técnica, al comenzar la siguiente batalla, todos los aliados obtienen un efecto de curación continua.",
       "type": "Técnica",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1531,88 @@
       "_id": 111001,
       "id": "morning_of_snow_hike",
       "name": "Mañana de paseo por la nieve",
-      "desc": "La curación realizada por Lynx aumenta en un <nobr>20%</nobr> para los objetivos aliados que tengan un porcentaje de PV igual o inferior al <nobr>50%</nobr>. También aplica a la curación continua."
+      "desc": "La curación realizada por Lynx aumenta en un <nobr>20%</nobr> para los objetivos aliados que tengan un porcentaje de PV igual o inferior al <nobr>50%</nobr>. También aplica a la curación continua.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111002,
       "id": "noon_of_portable_furnace",
       "name": "Mediodía de hornillo portátil",
-      "desc": "Los objetivos con Reacción de supervivencia pueden resistir la aplicación de <u>estados negativos</u> <nobr>1</nobr> vez."
+      "desc": "Los objetivos con Reacción de supervivencia pueden resistir la aplicación de <u>estados negativos</u> <nobr>1</nobr> vez.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Estado negativo",
+          "desc": "Reduce la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos estados se pueden eliminar.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111003,
       "id": "afternoon_of_avalanche_beacon",
       "name": "Tarde de baliza de avalanchas",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111004,
       "id": "dusk_of_warm_campfire",
       "name": "Atardecer de fuego de campamento",
-      "desc": "Al obtener Reacción de supervivencia, el ATQ del objetivo aumenta en una cantidad equivalente al <nobr>#1[f1]%</nobr> de los PV máx. de Lynx durante <nobr>1</nobr> turno."
+      "desc": "Al obtener Reacción de supervivencia, el ATQ del objetivo aumenta en una cantidad equivalente al <nobr>#1[f1]%</nobr> de los PV máx. de Lynx durante <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111005,
       "id": "night_of_aurora_tea",
       "name": "Noche de té de la aurora",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111006,
       "id": "dawn_of_explorers_chart",
       "name": "Alba del mapa de exploración",
-      "desc": "El efecto de aumento de los PV máx. de Reacción de supervivencia se incrementa de forma adicional en una cantidad equivalente al <nobr>#1[f1]%</nobr> de los PV máx. de Lynx. Además, la RES a efecto aumenta en un <nobr>30%</nobr>."
+      "desc": "El efecto de aumento de los PV máx. de Reacción de supervivencia se incrementa de forma adicional en una cantidad equivalente al <nobr>#1[f1]%</nobr> de los PV máx. de Lynx. Además, la RES a efecto aumenta en un <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

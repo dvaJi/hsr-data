@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "Dan Heng – Imbibitor Lunae",
+  "description": "Dan Hengs wahre Form aus seiner Vidyadhara-Abstammung trägt die verbleibenden Kräfte seiner letzten Wiedergeburt Imbibitor Lunae in sich.\nBei Annahme seiner Krone aus majestätischen Hörnern muss er alle Vorzüge und Fehler hinnehmen, die mit diesem Sünder in Verbindung stehen.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Verstärkt den Standardangriff Segensreicher Lotus zu Transzendenz, Himmlischer Speer oder Blitzartiger Sprung.",
       "type": "Fertigkeit",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Fügt einem Gegner massiven imaginären SCH zu, fügt angrenzenden Einheiten imaginären SCH zu und verleiht Dan Heng – Imbibitor Lunae 2 „Unantastbare Schuppen“. Dan Heng – Imbibitor Lunae kann anstelle von Fertigkeitspunkten die gleiche Anzahl von Unantastbaren Schuppen verbrauchen. Der Verbrauch von „Unantastbaren Schuppen“ wird mit dem Verbrauch von Fertigkeitspunkten gleichgesetzt.",
       "type": "Ultimate",
       "tag": "Ausdehnung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "Erhöht den verursachten SCH nach jedem Treffer. Dieser Effekt ist stapelbar und hält bis zum Ende der Runde dieser Figur an.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "Geht in den Status „Springender Drache“ über. Beim Einsatz des Angriffs bewegt sich Dan Heng – Imbibitor Lunae eine bestimmte Strecke schnell vorwärts und greift Gegner an, die er berührt. Wenn er durch Angriff auf den Gegner einen Kampf einleitet, fügt er allen Gegnern imaginären SCH zu und erhält 1 „Unantastbare Schuppe“.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "Fessel des Himmels",
-      "desc": "Erhöht die Anzahl der möglichen Stapelungen von „Aufrichtiges Herz“ um <nobr>4</nobr>. Erhält für jeden Treffer 1 zusätzliche Stapelung von „Aufrichtiges Herz“."
+      "desc": "Erhöht die Anzahl der möglichen Stapelungen von „Aufrichtiges Herz“ um <nobr>4</nobr>. Erhält für jeden Treffer 1 zusätzliche Stapelung von „Aufrichtiges Herz“.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "Banner der Herrschaft",
-      "desc": "Nach dem Einsatz seines Ultimates wird Dan Heng – Imbibitor Lunaes Aktion um <nobr>100</nobr> % <u>vorgezogen</u> und er erhält 1 zusätzliche „Unantastbare Schuppe“."
+      "desc": "Nach dem Einsatz seines Ultimates wird Dan Heng – Imbibitor Lunaes Aktion um <nobr>100</nobr> % <u>vorgezogen</u> und er erhält 1 zusätzliche „Unantastbare Schuppe“.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Aktion vorziehen",
+          "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "Wolkenbanner",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "Ausfliegendes Drachenkind",
-      "desc": "Die <u>Buffs</u> von „Beherrschendes Gebrüll“ bleiben bis zum Ende der nächsten Runde dieser Figur erhalten."
+      "desc": "Die <u>Buffs</u> von „Beherrschendes Gebrüll“ bleiben bis zum Ende der nächsten Runde dieser Figur erhalten.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Kann eine Kampffähigkeit für eine bestimmte Dauer verstärken. Wenn nicht anders angegeben, können Buffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "Erhöhte Arroganz",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "Rückkehr des Drachen",
-      "desc": "Nachdem ein anderer Verbündeter seinen Ultimate eingesetzt hat, wird Dan Heng – Imbibitor Lunaes imaginäre <u>WDS-DUR</u> beim nächsten Einsatz von „Blitzartiger Sprung“ um <nobr>20%</nobr> erhöht. Dieser Effekt ist bis zu <nobr>3</nobr>-fach stapelbar."
+      "desc": "Nachdem ein anderer Verbündeter seinen Ultimate eingesetzt hat, wird Dan Heng – Imbibitor Lunaes imaginäre <u>WDS-DUR</u> beim nächsten Einsatz von „Blitzartiger Sprung“ um <nobr>20%</nobr> erhöht. Dieser Effekt ist bis zu <nobr>3</nobr>-fach stapelbar.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "Dan Heng · Imbibitor Lunae",
+  "description": "Wujud asli Dan Heng dari ras Vidyadhara, yang memiliki sisa kekuatan \"Imbibitor Lunae\" di kehidupan sebelumnya.\nSaat dirinya menerima mahkota tanduk yang agung di atas kepalanya, dia juga harus menerima semua jasa dan dosa yang ditinggalkan sang penjahat.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Memperkuat Basic Attack \"Beneficent Lotus\" menjadi \"Transcendence\", \"Divine Spear\" atau \"Fulgurant Leap\".",
       "type": "Skill",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG dalam jumlah besar pada 1 musuh dan mengakibatkan Imaginary DMG pada musuh di sekitar target. Mendapatkan 2 \"Squama Sacrosancta\": Dapat digunakan untuk Mengurangi konsumsi Poin Skill dari Dan Heng · Imbibitor Lunae. Mengonsumsi \"Squama Sacrosancta\" dianggap sama dengan mengonsumsi Poin Skill.",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "Setiap Hit serangan yang dilancarkan dapat meningkatkan DMG yang diakibatkan diri sendiri. Efek ini dapat ditumpuk dan berlangsung hingga giliran dirinya berakhir.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "Memasuki status \"Leaping Dragon\". Melancarkan serangan dapat bergerak maju dengan cepat dan serangan akan langsung mengenai musuh. Setelah memasuki pertempuran dengan menyerang musuh, akan mengakibatkan Imaginary DMG pada seluruh musuh, dan mendapatkan 1 \"Squama Sacrosancta\".",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "Tethered to Sky",
-      "desc": "Meningkatkan jumlah maksimal lapisan \"Righteous Heart\" sebanyak <nobr>4</nobr> lapis, dan akan memperoleh 1 lapis \"Righteous Heart\" tambahan untuk setiap Hit serangan."
+      "desc": "Meningkatkan jumlah maksimal lapisan \"Righteous Heart\" sebanyak <nobr>4</nobr> lapis, dan akan memperoleh 1 lapis \"Righteous Heart\" tambahan untuk setiap Hit serangan.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "Imperium On Cloud Nine",
-      "desc": "Setelah Dan Heng · Imbibitor Lunae melancarkan Ultimate, aksi dirinya akan <u>didahulukan</u> sebesar <nobr>100%</nobr>, dan memperoleh 1 \"Squama Sacrosancta\" tambahan."
+      "desc": "Setelah Dan Heng · Imbibitor Lunae melancarkan Ultimate, aksi dirinya akan <u>didahulukan</u> sebesar <nobr>100%</nobr>, dan memperoleh 1 \"Squama Sacrosancta\" tambahan.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Pendahuluan Aksi",
+          "desc": "Mengurangi durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "Clothed in Clouds",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "Zephyr's Bliss",
-      "desc": "<u>Efek Buff</u> dari \"Outroar\" akan berlangsung hingga akhir giliran berikutnya dari karakter ini."
+      "desc": "<u>Efek Buff</u> dari \"Outroar\" akan berlangsung hingga akhir giliran berikutnya dari karakter ini.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Buff memperkuat kemampuan tempur target untuk jangka waktu tertentu. Jika tidak ada ketentuan khusus, maka Buff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "Fall is the Pride",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "Reign, Returned",
-      "desc": "Setelah rekan tim lain melancarkan Ultimate, Imaginary <u>RES PEN</u> Dan Heng · Imbibitor Lunae untuk serangan \"Fulgurant Leap\" yang berikutnya akan meningkat <nobr>20%</nobr>. Efek ini dapat ditumpuk hingga <nobr>3</nobr> lapis."
+      "desc": "Setelah rekan tim lain melancarkan Ultimate, Imaginary <u>RES PEN</u> Dan Heng · Imbibitor Lunae untuk serangan \"Fulgurant Leap\" yang berikutnya akan meningkat <nobr>20%</nobr>. Efek ini dapat ditumpuk hingga <nobr>3</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

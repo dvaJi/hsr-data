@@ -2,6 +2,7 @@
   "_id": 1008,
   "id": "arlan",
   "name": "Arlan",
+  "description": "Chefe do Departamento de Segurança da Estação Espacial Herta.\nUm rapaz quieto que almeja proteger os pesquisadores que valorizam a busca por conhecimento e ajudá-los a realizar suas tarefas.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Raio leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Consome uma porção dos PV para causar Dano de Raio a um único inimigo.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Causa Dano de Raio massivo a um único inimigo e Dano de Raio pequeno a inimigos adjacentes a ele.",
       "type": "Perícia Suprema",
       "tag": "Explosão",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Ganha bônus de Dano baseado na porcentagem atual de PV perdidos.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Ataca o inimigo imediatamente. Depois de entrar na batalha, causa #1[i]% do ATQ de Arlan como Dano de Raio a todos os inimigos.",
       "simpleDesc": "Ataca o inimigo. Após entrar na batalha, causa Dano de Raio leve a todos os inimigos.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,37 +1383,97 @@
       "_id": 100801,
       "id": "to_the_bitter_end",
       "name": "Até o Amargo Fim",
-      "desc": "Quando a porcentagem dos PV estiverem abaixo ou iguais a <nobr>50%</nobr> dos PV máximos, o Dano da Perícia aumenta em <nobr>10%</nobr>."
+      "desc": "Quando a porcentagem dos PV estiverem abaixo ou iguais a <nobr>50%</nobr> dos PV máximos, o Dano da Perícia aumenta em <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100802,
       "id": "breaking_free",
       "name": "Libertação",
-      "desc": "Usar a Perícia ou a Perícia Suprema remove 1 <u>penalidade</u> desta unidade."
+      "desc": "Usar a Perícia ou a Perícia Suprema remove 1 <u>penalidade</u> desta unidade.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100803,
       "id": "power_through",
       "name": "Superação",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100804,
       "id": "turn_the_tables",
       "name": "Virando o Jogo",
-      "desc": "Ao ser atingido por um golpe fatal depois de entrar em batalha, Arlan restaura seus PV igual a <nobr>25%</nobr> de seus PV máximos ao invés de ser <u>derrubado</u>. Esse efeito é removido automaticamente após ser ativado uma vez ou depois que <nobr>2</nobr> rodada(s) tiverem passado."
+      "desc": "Ao ser atingido por um golpe fatal depois de entrar em batalha, Arlan restaura seus PV igual a <nobr>25%</nobr> de seus PV máximos ao invés de ser <u>derrubado</u>. Esse efeito é removido automaticamente após ser ativado uma vez ou depois que <nobr>2</nobr> rodada(s) tiverem passado.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100805,
       "id": "hammer_and_tongs",
       "name": "Fogo da Forja",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100806,
       "id": "selfsacrifice",
       "name": "Autossacrifício",
-      "desc": "Quando a porcentagem atual de PV cai para <nobr>50%</nobr> ou menos, a Perícia Suprema causa <nobr>20%</nobr> a mais de Dano e o multiplicador de Dano para alvos adjacentes é elevado ao mesmo nível que o do alvo principal."
+      "desc": "Quando a porcentagem atual de PV cai para <nobr>50%</nobr> ou menos, a Perícia Suprema causa <nobr>20%</nobr> a mais de Dano e o multiplicador de Dano para alvos adjacentes é elevado ao mesmo nível que o do alvo principal.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

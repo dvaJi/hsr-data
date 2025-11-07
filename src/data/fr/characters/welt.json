@@ -2,6 +2,7 @@
   "_id": 1004,
   "id": "welt",
   "name": "Welt",
+  "description": "L'un des membres d'équipage de l'Express les plus aguerris.\nL'ardeur enfouie dans son cœur brûle à nouveau depuis qu'il s'est lancé à corps perdu dans cette nouvelle aventure.\nIl dessine parfois ses observations lors de ses voyages dans un carnet de croquis.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -243,10 +244,22 @@
       "_id": 100401,
       "id": "gravity_suppression",
       "name": "Suppression de la gravité",
-      "desc": "Inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Welt à un ennemi unique.",
+      "desc": "Inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Welt à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 100402,
       "id": "edge_of_the_void",
       "name": "Frontière du vide",
-      "desc": "Inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Welt à un ennemi unique et inflige des DGT 2 fois supplémentaires, infligeant à chaque fois des DGT imaginaires équivalents à #1[i]% de l'ATQ de Welt à un ennemi aléatoire. Les attaques qui touchent un ennemi ont #2[i]% de chances de base de réduire sa VIT de #3[i]% pendant #4[i] tours.",
-      "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi. Cette attaque peut rebondir 3 fois et a une chance de ralentir les ennemis touchés.",
+      "desc": "Inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Welt à un ennemi désigné et inflige des DGT 2 fois supplémentaires, infligeant à chaque fois des DGT imaginaires équivalents à #1[i]% de l'ATQ de Welt à un ennemi aléatoire. Les attaques qui touchent un ennemi ont #2[i]% de chances de base de réduire sa VIT de #3[i]% pendant #4[i] tours.",
+      "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi unique. Cette attaque peut rebondir 3 fois et a une chance de ralentir les ennemis touchés.",
       "type": "Compétence",
       "tag": "Rebond",
+      "spBase": 10,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,32 @@
       "simpleDesc": "Inflige des DGT imaginaires à tous les ennemis, avec de fortes chances de les emprisonner.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Action retardée",
+          "desc": "Augmente le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1157,27 @@
       "simpleDesc": "Après avoir attaqué des ennemis ralentis, inflige des DGT additionnels imaginaires mineurs.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1472,32 @@
       "simpleDesc": "Crée une dimension spéciale. La vitesse de déplacement des ennemis à l'intérieur de la dimension est réduite. Il y a de fortes chances d'appliquer Emprisonné aux ennemis lorsque le combat est engagé avec des ennemis de la dimension.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Action retardée",
+          "desc": "Augmente le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1411,37 +1518,97 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "Héritage d'honneur",
-      "desc": "Après utilisation de son ultime, Welt est renforcé. Puis, les <nobr>2</nobr> prochaines fois où il utilise l'ATQ normale ou la compétence, Welt inflige 1 instance de <u>DGT additionnels</u> supplémentaire à la cible ennemie. Les <u>DGT additionnels</u> infligés en utilisant l'ATQ normale sont équivalents à <nobr>50%</nobr> du multiplicateur de DGT de l'ATQ normale. Les <u>DGT additionnels</u> infligés en utilisant la compétence sont équivalents à <nobr>80%</nobr> du multiplicateur de DGT de la compétence."
+      "desc": "Après utilisation de son ultime, Welt est renforcé. Puis, les <nobr>2</nobr> prochaines fois où il utilise l'ATQ normale ou la compétence, Welt inflige 1 instance de <u>DGT additionnels</u> supplémentaire à la cible ennemie. Les <u>DGT additionnels</u> infligés en utilisant l'ATQ normale sont équivalents à <nobr>50%</nobr> du multiplicateur de DGT de l'ATQ normale. Les <u>DGT additionnels</u> infligés en utilisant la compétence sont équivalents à <nobr>80%</nobr> du multiplicateur de DGT de la compétence.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100402,
       "id": "conflux_of_stars",
       "name": "Confluence des étoiles",
-      "desc": "Lorsque son talent est déclenché, Welt régénère <nobr>3</nobr> points d'énergie."
+      "desc": "Lorsque son talent est déclenché, Welt régénère <nobr>3</nobr> points d'énergie.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100403,
       "id": "prayer_of_peace",
       "name": "Prière de paix",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100404,
       "id": "appellation_of_justice",
       "name": "Au nom de la justice",
-      "desc": "Augmente les <u>chances de base</u> de la compétence de réduire la VIT des ennemis touchés de <nobr>35%</nobr>."
+      "desc": "Augmente les <u>chances de base</u> de la compétence de réduire la VIT des ennemis touchés de <nobr>35%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100405,
       "id": "power_of_kindness",
       "name": "Pouvoir de la bonté",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "Perspective de gloire",
-      "desc": "Lors de l'utilisation de la compétence, inflige des DGT 1 fois supplémentaire à un ennemi aléatoire."
+      "desc": "Lors de l'utilisation de la compétence, inflige des DGT 1 fois supplémentaire à un ennemi aléatoire.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

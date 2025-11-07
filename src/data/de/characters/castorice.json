@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "Castorice",
+  "description": "Das Land, das den Tod verehrt, Aidonia, wo unablässig Schnee fällt, liegt heute in einem süßen Schlummer versunken.\nCastorice, Tochter des Flusses der Seelen und Erbin von Chrysos, die auf der Suche nach der Kernflamme des Todes ist, mache dich auf den Weg. Behüte die Klage der Seelen und umarme die Einsamkeit des Schicksals.\nLeben und Tod sind nur eine Reise. Wenn der Schmetterling auf dem Ast verweilt, wird das, was verwelkt, neu erblühen.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Quanten-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Verbraucht die LP aller Verbündeten und fügt einem Gegner Quanten-SCH sowie angrenzenden Einheiten geringen Quanten-SCH zu.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Beschwört den Memogeist Netherschwinge und zieht seine Aktion um 100 % vor. Erzeugt gleichzeitig einen Bereich, der den WDS aller Typen bei allen Gegnern verringert.",
       "type": "Ultimate",
       "tag": "Beschwörung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Aktion vorziehen",
+          "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Bereich",
+          "desc": "Im Kampf können Bereich-Effekte nur alleine bestehen. Solange einer aktiv ist, können andere Fähigkeiten mit Bereich-Effekten nicht verwendet werden.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1094,9 +1147,18 @@
       "id": "desolation_across_palms",
       "name": "Trostlosigkeit auf den Handflächen",
       "desc": "Die Obergrenze von „Neuer Spross“ basiert auf den Stufen aller Figuren auf dem Kampffeld. Für jeden LP, den die Verbündeten verlieren, erhält Castorice 1 Pkt. Neuer Spross. Wenn Neuer Spross seine Obergrenze erreicht, kann Castorices Ultimate aktiviert werden. Wenn Verbündete LP verlieren, wird der von Castorice und Netherschwinge verursachte SCH um #2[i]% erhöht. Dieser Effekt ist bis zu #3[i]-fach stapelbar und hält #4[i] Rd. an.\nWährend sich Netherschwinge auf dem Kampffeld befindet, kann Neuer Spross nicht durch Talent erhalten werden und wenn Verbündete (außer Netherschwinge selbst) LP verlieren, wird jeder Punkt der verlorenen LP in die gleiche Menge LP für Netherschwinge umgewandelt.",
-      "simpleDesc": "Wenn Verbündete LP verlieren, erhält Castorice Neuer Spross. Erhöht gleichzeitig den von Castorice und Netherschwinge verursachten SCH. Wenn Neuer Spross seine Obergrenze erreicht, kann Castorices Ultimate aktiviert werden. Wenn Verbündete (außer Netherschwinge selbst) LP verlieren, während sich Netherschwinge auf dem Kampffeld befindet, werden diese verlorenen LP in die gleiche Menge LP für Netherschwinge umgewandelt.",
+      "simpleDesc": "Wenn Verbündete LP verlieren, erhält Castorice Neuer Spross. Erhöht gleichzeitig den von Castorice und Netherschwinge verursachten SCH. Wenn Neuer Spross seine Obergrenze erreicht, kann der Ultimate aktiviert werden. Wenn Verbündete (außer Netherschwinge selbst) LP verlieren, während sich Netherschwinge auf dem Kampffeld befindet, werden diese verlorenen LP in die gleiche Menge LP für Netherschwinge umgewandelt.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "Tritt nach dem Einsatz der Technik für #3[i] Sek. in den Status „Schleier der Unterwelt“ ein. Während dieser Status aktiv ist, können Gegner sich Castorice nicht von sich aus nähern.\nBeim Einsatz von aktiven Angriffen im Status Schleier der Unterwelt betreten alle Gegner in Reichweite den Kampf. Beschwört den Memogeist Netherschwinge, zieht seine Aktion um 100 % vor und erzeugt den Bereich „Unentdeckte Unterwelt“. Netherschwinge hat die aktuellen LP in Höhe von #2[i]% der Obergrenze von „Neuer Spross“. Nach Kampfeintritt werden #1[i]% der aktuellen LP aller Verbündeten (außer Netherschwinge) verbraucht.\nWenn Netherschwinge nach Kampfeintritt nicht beschworen wird, erhält Castorice Neuer Spross in Höhe von #4[i]% seiner Obergrenze.",
       "simpleDesc": "Tritt in den Status „Schleier der Unterwelt“ ein. Gegner können sich Castorice nicht von sich aus nähern.\nBeim Einsatz von Angriffen im Status Schleier der Unterwelt betreten alle Gegner in Reichweite den Kampf. Beschwört den Memogeist Netherschwinge und zieht seine Aktion um 100 % vor. Beim Kampfeintritt werden die LP aller Verbündeten (außer Netherschwinge) verbraucht.\nWenn Netherschwinge nach Kampfeintritt nicht beschworen wird, erhält Castorice „Neuer Spross“ in Höhe von #4[i]% seiner Obergrenze.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Aktion vorziehen",
+          "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Bereich",
+          "desc": "Im Kampf können Bereich-Effekte nur alleine bestehen. Solange einer aktiv ist, können andere Fähigkeiten mit Bereich-Effekten nicht verwendet werden.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Netherschwinge: Pollux",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "Klauenspuren im Schleier",
+        "desc": "Fügt allen Gegnern Quanten-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> der max. LP von Castorice zu.",
+        "simpleDesc": "Fügt allen Gegnern geringen Quanten-SCH zu.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Flächenangriff"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "Atem versengt den Schatten",
+        "desc": "Das Auslösen von „Atem versengt den Schatten“ verbraucht LP in Höhe von <nobr>#1[i]%</nobr> der max. LP von Netherschwinge und fügt allen Gegnern Quanten-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> der max. LP von Castorice zu.\nIn einem einzelnen Angriff kann Atem versengt den Schatten wiederholt ausgelöst werden. Beim wiederholten Auslösen wird der SCH-Multiplikator nacheinander auf <span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span>/<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> erhöht, bis zu <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>. Die Erhöhung des SCH-Multiplikators hält an, bis Netherschwinge verschwindet.\nWenn die aktuellen LP von Netherschwinge <nobr>#5[i]%</nobr> seiner max. LP oder weniger betragen, reduziert das Auslösen dieser Fähigkeit LP auf 1 und der Effekt wird ausgelöst, der dem des Talents „Flügel fegen über Ruinen hinweg“ entspricht.",
+        "simpleDesc": "Verbraucht eigene LP und fügt allen Gegnern Quanten-SCH zu. Diese Runde wird nicht beendet. Wenn die Fähigkeit wiederholt eingesetzt wird, wird sie bis zu 3-mal verstärkt. Wenn die LP <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> oder weniger betragen, löst der Einsatz dieser Fähigkeit aktiv den Effekt des Memogeist-Talents „Flügel fegen über Ruinen hinweg“ aus.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Flächenangriff"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "Mondkokon verhüllt den Leib",
+        "desc": "Wenn sich Netherschwinge auf dem Kampffeld befindet, dient er Verbündeten als <u>Verstärkung</u>. Wenn Verbündete SCH erleiden oder LP verbrauchen, werden ihre aktuellen LP auf ein Minimum von 1 reduziert und Netherschwinge nimmt anschließend den erlittenen SCH auf sich, wobei er allerdings LP <nobr>#1[i]%</nobr> des ursprünglichen Werts verbraucht. Dies hält an, bis Netherschwinge verschwindet.",
+        "simpleDesc": "Wenn sich Netherschwinge auf dem Kampffeld befindet, dient er Verbündeten als <u>Verstärkung</u>. Die aktuellen LP der Verbündeten werden auf ein Minimum von 1 reduziert und Netherschwinge nimmt anschließend den erlittenen SCH oder die verbrauchten LP auf sich.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Unterstützung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "Verstärkung",
+            "desc": "Gegner können nicht aktiv auf Verstärkungseinheiten zielen. Die Fähigkeiten mit Ausdehnung der Verbündeten können nicht auf Verstärkungseinheiten wirken.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "Erderschütterndes Brüllen",
+        "desc": "Wenn Netherschwinge beschworen wird, wird der verursachte SCH aller Verbündeten für <nobr>#2[i]</nobr> Rd. um <nobr>#1[i]%</nobr> erhöht.",
+        "simpleDesc": "Erhöht bei der Beschwörung den verursachten SCH aller Verbündeten.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Unterstützung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "Flügel fegen über Ruinen hinweg",
+        "desc": "Wenn Netherschwinge verschwindet, verursacht er <nobr>#2[i]</nobr>-mal SCH. Jeder Treffer fügt einem zufälligen Gegner Quanten-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> der max. LP von Castorice zu. Stellt gleichzeitig bei allen Verbündeten LP in Höhe von <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> der max. LP von Castorice plus <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span> Pkt. wieder her.",
+        "simpleDesc": "Fügt beim Verschwinden einem Gegner geringen Quanten-SCH zu, der insgesamt <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>-mal abprallt. Stellt gleichzeitig bei allen Verbündeten LP wieder her.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Abpraller"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "Atem versengt den Schatten",
+        "desc": "",
+        "simpleDesc": "Verbraucht eigene LP und fügt allen Gegnern Quanten-SCH zu. Diese Runde wird nicht beendet. Wenn die Fähigkeit wiederholt eingesetzt wird, wird sie bis zu 3-mal verstärkt. Wenn die LP <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> oder weniger betragen, löst der Einsatz dieser Fähigkeit aktiv den Effekt des Memogeist-Talents „Flügel fegen über Ruinen hinweg“ aus.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Flächenangriff"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "Atem versengt den Schatten",
+        "desc": "",
+        "simpleDesc": "Verbraucht eigene LP und fügt allen Gegnern Quanten-SCH zu. Diese Runde wird nicht beendet. Wenn die Fähigkeit wiederholt eingesetzt wird, wird sie bis zu 3-mal verstärkt. Wenn die LP <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> oder weniger betragen, löst der Einsatz dieser Fähigkeit aktiv den Effekt des Memogeist-Talents „Flügel fegen über Ruinen hinweg“ aus.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Flächenangriff"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "Flügel fegen über Ruinen hinweg",
+        "desc": "Verbraucht alle LP und verursacht <nobr>#2[i]</nobr>-mal SCH. Jeder Treffer fügt einem zufälligen Gegner Quanten-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> der max. LP von Castorice zu. Stellt gleichzeitig bei allen Verbündeten LP in Höhe von <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> der max. LP von Castorice plus <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span> Pkt. wieder her.",
+        "simpleDesc": "Verbraucht alle LP und fügt einem Gegner geringen Quanten-SCH zu, der insgesamt <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>-mal abprallt. Stellt gleichzeitig bei allen Verbündeten LP wieder her.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Abpraller"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "Schneebedeckte Maid, Erinnerung im Grab",
-      "desc": "Wenn die aktuellen LP des Gegners <nobr>80%</nobr>/<nobr>50%</nobr> oder niedriger ihrer max. LP betragen, fügen die folgenden Fähigkeiten ihm SCH in Höhe von <nobr>120%</nobr>/<nobr>140%</nobr> des ursprünglichen SCH zu: „Knochenklaue, Umarmung des Düsterdrachen“, „Klauenspuren im Schleier“, „Atem versengt den Schatten“ und „Flügel fegen über Ruinen hinweg“."
+      "desc": "Wenn die aktuellen LP des Gegners <nobr>80%</nobr>/<nobr>50%</nobr> oder niedriger ihrer max. LP betragen, fügen die folgenden Fähigkeiten ihm SCH in Höhe von <nobr>120%</nobr>/<nobr>140%</nobr> des ursprünglichen SCH zu: „Knochenklaue, Umarmung des Düsterdrachen“, „Klauenspuren im Schleier“, „Atem versengt den Schatten“ und „Flügel fegen über Ruinen hinweg“.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "Krone auf Blütenflügeln",
-      "desc": "Nachdem der Memogeist Netherschwinge beschworen wurde, erhält Castorice <nobr>2</nobr> Stapelungen „Feuriger Wille“. Sie kann höchstens <nobr>2</nobr> Stapelungen auf einmal besitzen. Mit Feuriger Wille kann der LP-Verbrauch von Netherschwinge ausgeglichen werden, wenn die Memogeist-Technik „Atem versengt den Schatten“ eingesetzt wird, und Castorices Aktion wird um <nobr>100</nobr> % <u>vorgezogen</u>. Beim nächsten Einsatz der verstärkten Fertigkeit erhält Castorice <nobr>30%</nobr> der Obergrenze von „Neuer Spross“."
+      "desc": "Nachdem der Memogeist Netherschwinge beschworen wurde, erhält Castorice <nobr>2</nobr> Stapelungen „Feuriger Wille“. Sie kann höchstens <nobr>2</nobr> Stapelungen auf einmal besitzen. Mit Feuriger Wille kann der LP-Verbrauch von Netherschwinge ausgeglichen werden, wenn die Memogeist-Technik „Atem versengt den Schatten“ eingesetzt wird, und Castorices Aktion wird um <nobr>100</nobr> % <u>vorgezogen</u>. Beim nächsten Einsatz der verstärkten Fertigkeit erhält Castorice <nobr>30%</nobr> der Obergrenze von „Neuer Spross“.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Aktion vorziehen",
+          "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "Fromme Pilgerin im Tanz durch das Totenreich",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "Ruhe in Liedern der Schwermut",
-      "desc": "Während sich Castorice auf dem Kampffeld befindet, wird die LP-Wiederherstellung der erhaltenen Heilung bei allen Verbündeten um <nobr>20%</nobr> erhöht."
+      "desc": "Während sich Castorice auf dem Kampffeld befindet, wird die LP-Wiederherstellung der erhaltenen Heilung bei allen Verbündeten um <nobr>20%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "Blütenweiße Seiten, geschmückt mit Prophezeiungen",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "Bis die Zeit unaufhaltsam dahinströmt",
-      "desc": "Wenn Castorice und Netherschwinge SCH verursachen, wird die Quanten-<u>WDS-DUR</u> um <nobr>20%</nobr> erhöht. Die Angriffe von Netherschwinge können den WDS der Gegner unabhängig vom Schwächetyp reduzieren. Wenn Schwächebruch zugefügt wird, wird der Effekt „Schwächebruch: Quanten“ ausgelöst und die Anzahl der Abpralle für das Talent „Flügel fegen über Ruinen hinweg“ zusätzlich um <nobr>3</nobr>-mal erhöht."
+      "desc": "Wenn Castorice und Netherschwinge SCH verursachen, wird die Quanten-<u>WDS-DUR</u> um <nobr>20%</nobr> erhöht. Die Angriffe von Netherschwinge können den WDS der Gegner unabhängig vom Schwächetyp reduzieren. Wenn Schwächebruch zugefügt wird, wird der Effekt „Schwächebruch: Quanten“ ausgelöst und die Anzahl der Abpralle für das Talent „Flügel fegen über Ruinen hinweg“ zusätzlich um <nobr>3</nobr>-mal erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

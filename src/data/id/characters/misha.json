@@ -2,6 +2,7 @@
   "_id": 1312,
   "id": "misha",
   "name": "Misha",
+  "description": "Penjaga pintu hotel Penacony. Anak laki-laki yang baik hati dan bijaksana.\nSangat mengagumi The Nameless, dan memiliki impian bahwa suatu hari juga bisa memulai perjalanan petualangan.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Mengakibatkan Ice DMG pada 1 musuh dan mengakibatkan Ice DMG dalam jumlah kecil pada target di sekitarnya, serta menambah jumlah Hits Per Action untuk Ultimate Misha yang berikutnya.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +756,32 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil pada 1 musuh. Total dapat Bounce #1[i] kali secara default, maksimal dapat Bounce #5[i] kali. Sebelum setiap Hit-nya mengenai target, berpeluang kecil untuk membuat target memasuki status Frozen.",
       "type": "Ultimate",
       "tag": "Bounce",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1085,6 +1130,15 @@
       "simpleDesc": "Setiap 1 Poin Skill yang dikonsumsi seluruh rekan tim akan menambah jumlah Hits Per Action untuk Ultimate Misha yang berikutnya, dan juga memulihkan Energy Misha.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1442,15 @@
       "simpleDesc": "Menciptakan sebuah dimensi khusus. Aksi musuh dalam dimensi khusus akan terhenti. Setelah memasuki pertempuran melawan musuh dalam dimensi khusus, akan menambah jumlah Hits Per Action untuk Ultimate Misha yang berikutnya.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1405,37 +1468,88 @@
       "_id": 131201,
       "id": "whimsicality_of_fancy",
       "name": "Whimsicality of Fancy",
-      "desc": "Saat melancarkan Ultimate, untuk setiap 1 target musuh yang ada di medan pertempuran, akan menambah ekstra <nobr>1</nobr> Hit untuk Hits Per Action dari Ultimate kali ini, maksimal hingga ekstra <nobr>5</nobr> Hit."
+      "desc": "Saat melancarkan Ultimate, untuk setiap 1 target musuh yang ada di medan pertempuran, akan menambah ekstra <nobr>1</nobr> Hit untuk Hits Per Action dari Ultimate kali ini, maksimal hingga ekstra <nobr>5</nobr> Hit.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131202,
       "id": "yearning_of_youth",
       "name": "Yearning of Youth",
-      "desc": "Sebelum setiap Hit dari Ultimate mengenai target, memiliki <nobr>24%</nobr> <u>Peluang Dasar</u> untuk mengurangi <nobr>16%</nobr> DEF target selama <nobr>3</nobr> giliran."
+      "desc": "Sebelum setiap Hit dari Ultimate mengenai target, memiliki <nobr>24%</nobr> <u>Peluang Dasar</u> untuk mengurangi <nobr>16%</nobr> DEF target selama <nobr>3</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131203,
       "id": "vestige_of_happiness",
       "name": "Vestige of Happiness",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131204,
       "id": "visage_of_kinship",
       "name": "Visage of Kinship",
-      "desc": "Meningkatkan <nobr>6%</nobr> DMG Multiplier dari setiap Hit Ultimate."
+      "desc": "Meningkatkan <nobr>6%</nobr> DMG Multiplier dari setiap Hit Ultimate.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131205,
       "id": "genesis_of_first_love",
       "name": "Genesis of First Love",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131206,
       "id": "estrangement_of_dream",
       "name": "Estrangement of Dream",
-      "desc": "Saat melancarkan Ultimate, meningkatkan <nobr>30%</nobr> DMG yang diakibatkan diri sendiri hingga giliran berakhir. Dan pada pelancaran Skill Misha yang berikutnya, akan memulihkan <nobr>1</nobr> Poin Skill untuk rekan tim."
+      "desc": "Saat melancarkan Ultimate, meningkatkan <nobr>30%</nobr> DMG yang diakibatkan diri sendiri hingga giliran berakhir. Dan pada pelancaran Skill Misha yang berikutnya, akan memulihkan <nobr>1</nobr> Poin Skill untuk rekan tim.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

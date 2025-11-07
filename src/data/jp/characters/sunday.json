@@ -2,6 +2,7 @@
   "_id": 1313,
   "id": "sunday",
   "name": "サンデー",
+  "description": "「秩序」の美しい夢は散ったが、それでも最初の願いを諦めない者がいる。\n——翼を失い地に落ちた旅人よ、その足で次はどこへ向かう？",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "指定した敵単体に少量の虚数属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "指定した味方キャラ単体およびその召喚物を即座に行動させ、与ダメージをアップする。その味方キャラが召喚物をすでに召喚していた場合、与ダメージをアップする効果がさらにアップする。\n「祝福されし者」が付与されている味方に戦闘スキルを発動した後、SPを1回復する。\nなお、「調和」の運命を歩むキャラをターゲットにした場合、即座に行動させる効果は発動しない。",
       "type": "戦闘スキル",
       "tag": "サポート",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "味方キャラ単体のEPを回復し、ターゲットおよびその召喚物を「祝福されし者」にする。「祝福されし者」は会心ダメージアップ。",
       "type": "必殺技",
       "tag": "サポート",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "戦闘スキルを発動する時、ターゲットの会心率アップ。",
       "type": "天賦",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1443,15 @@
       "simpleDesc": "秘技を使用した後、次の戦闘でサンデーが初めて味方にスキルを発動する時、ターゲットの与ダメージがアップする。",
       "type": "秘技",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1469,79 @@
       "_id": 131301,
       "id": "millenniums_quietus",
       "name": "{RUBY_B#せんねん}千年{RUBY_E#}の{RUBY_B#せいじゃく}静寂{RUBY_E#}の{RUBY_B#は}果{RUBY_E#}て",
-      "desc": "サンデーが戦闘スキルを発動する時、スキルターゲットに以下の効果を付与する。\nキャラがダメージを与える時、敵の防御力を<nobr>16%</nobr>無視する。召喚物がダメージを与える時、敵の防御力を<nobr>40%</nobr>無視する。<nobr>2</nobr>ターン継続。"
+      "desc": "サンデーが戦闘スキルを発動する時、スキルターゲットに以下の効果を付与する。\nキャラがダメージを与える時、敵の防御力を<nobr>16%</nobr>無視する。召喚物がダメージを与える時、敵の防御力を<nobr>40%</nobr>無視する。<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131302,
       "id": "faith_outstrips_frailty",
       "name": "{RUBY_B#かきん}瑕瑾{RUBY_E#}を{RUBY_B#おぎな}補{RUBY_E#}う{RUBY_B#しんこう}信仰{RUBY_E#}",
-      "desc": "初めて必殺技を発動した後、SPを<nobr>2</nobr>回復する。「祝福されし者」状態の味方の与ダメージ+<nobr>30%</nobr>。"
+      "desc": "初めて必殺技を発動した後、SPを<nobr>2</nobr>回復する。「祝福されし者」状態の味方の与ダメージ+<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131303,
       "id": "hermitage_of_thorns",
       "name": "{RUBY_B#せいひつ}静謐{RUBY_E#}な{RUBY_B#いばら}茨{RUBY_E#}の{RUBY_B#かく}隠{RUBY_E#}れ{RUBY_B#が}家{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131304,
       "id": "sculptures_preamble",
       "name": "{RUBY_B#ちょうぞう}彫像{RUBY_E#}の{RUBY_B#じょげん}序言{RUBY_E#}",
-      "desc": "ターンが回ってきた時、EPを<nobr>8</nobr>回復する。"
+      "desc": "ターンが回ってきた時、EPを<nobr>8</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131305,
       "id": "paper_raft_in_silver_bay",
       "name": "{RUBY_B#ぎんわん}銀湾{RUBY_E#}に{RUBY_B#ただよ}漂{RUBY_E#}う{RUBY_B#かみ}紙{RUBY_E#}の{RUBY_B#ふね}船{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131306,
       "id": "dawn_of_sidereal_cacophony",
       "name": "{RUBY_B#ぐんせいけんそう}群星喧騒{RUBY_E#}の{RUBY_B#れいめい}黎明{RUBY_E#}",
-      "desc": "天賦の会心率アップ効果が累積可能になる。最大で<nobr>3</nobr>層。また、天賦効果の継続時間+<nobr>1</nobr>ターン。サンデーが必殺技を発動する時、ターゲットに天賦による会心率アップ効果を付与する。また、天賦による会心率アップ効果が発動する時、ターゲットの会心率が<nobr>100%</nobr>を超えている場合、1%超過するごとに会心ダメージが<nobr>2%</nobr>アップする。"
+      "desc": "天賦の会心率アップ効果が累積可能になる。最大で<nobr>3</nobr>層。また、天賦効果の継続時間+<nobr>1</nobr>ターン。サンデーが必殺技を発動する時、ターゲットに天賦による会心率アップ効果を付与する。また、天賦による会心率アップ効果が発動する時、ターゲットの会心率が<nobr>100%</nobr>を超えている場合、1%超過するごとに会心ダメージが<nobr>2%</nobr>アップする。",
+      "unlockCost": [
+        {
+          "ItemID": 11313,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

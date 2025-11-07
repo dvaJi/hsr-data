@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "Fu Xuan",
+  "description": "Cheffe de la Commission de divination du Luofu.\nGrâce au troisième œil et à la Matrice de prémonition, elle est capable de prédire l'itinéraire de Xianzhou et l'issue des événements futurs.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -243,10 +244,22 @@
       "_id": 120801,
       "id": "novaburst",
       "name": "Frappe stellaire",
-      "desc": "Inflige des DGT quantiques équivalents à #1[i]% des PV max de Fu Xuan à un ennemi unique.",
+      "desc": "Inflige des DGT quantiques équivalents à #1[i]% des PV max de Fu Xuan à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT quantiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Active Matrice de prémonition. Les DGT subis par les coéquipiers de Fu Xuan lui sont transférés. D'autre part, augmente les chances de coup critique et les PV max de tous les alliés.",
       "type": "Compétence",
       "tag": "Défense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "Répartition",
+          "desc": "Une partie des DGT infligés par l'assaillant est distribuée à une autre cible (ou plusieurs autres cibles) avant que les DGT finaux ne soient calculés, la cible touchée par l'attaque subissant le reste des DGT. Les DGT transférés à d'autres cibles ne peuvent pas l'être à nouveau.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "Inflige des DGT quantiques à tous les ennemis et augmente le nombre de fois où le talent de Fu Xuan se déclenche.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "Tant que Fu Xuan n'est pas à terre, les DGT subis par tous les membres de l'équipe sont réduits.\nSi les PV de Fu Xuan sont faibles, elle restaure automatiquement ses propres PV en fonction du pourcentage de PV déjà perdus. Cet effet peut être déclenché 2 fois au maximum à n'importe quel moment.",
       "type": "Talent",
       "tag": "Restauration",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "Active une barrière. Les alliés n'entrent pas en combat lorsqu'ils sont attaqués par des ennemis. Matrice de prémonition s'active automatiquement lorsque vous engagez le combat.",
       "type": "Technique",
       "tag": "Défense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "Dominus Pacis",
-      "desc": "Connaissance augmente les DGT critiques de <nobr>30%</nobr>."
+      "desc": "Connaissance augmente les DGT critiques de <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "Optimus Felix",
-      "desc": "Si une cible alliée est frappée par un coup fatal alors que Matrice de prémonition est active, alors toutes les cibles alliées qui ont été frappées par un coup fatal pendant cette action ne tombent pas <u>à terre</u> et récupèrent <nobr>70%</nobr> de leurs PV max immédiatement. Cet effet peut se déclencher 1 fois par combat."
+      "desc": "Si une cible alliée est frappée par un coup fatal alors que Matrice de prémonition est active, alors toutes les cibles alliées qui ont été frappées par un coup fatal pendant cette action ne tombent pas <u>à terre</u> et récupèrent <nobr>70%</nobr> de leurs PV max immédiatement. Cet effet peut se déclencher 1 fois par combat.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "Apex Nexus",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "Fortuna Stellaris",
-      "desc": "Lorsque d'autres alliés sous l'effet de Matrice de prémonition sont attaqués, Fu Xuan régénère <nobr>5</nobr> points d'énergie."
+      "desc": "Lorsque d'autres alliés sous l'effet de Matrice de prémonition sont attaqués, Fu Xuan régénère <nobr>5</nobr> points d'énergie.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "Arbiter Primus",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "Omnia Vita",
-      "desc": "Lorsque Matrice de prémonition est activée, le total des PV perdus par tous les membres de l'équipe est enregistré au cours du combat. Les DGT infligés par l'ultime de Fu Xuan augmentent d'un montant équivalent à <nobr>200%</nobr> de ce total.\nCe total est plafonné à <nobr>120%</nobr> des PV max de Fu Xuan et sa valeur est réinitialisée et recommence à s'accumuler après utilisation de l'ultime de Fu Xuan."
+      "desc": "Lorsque Matrice de prémonition est activée, le total des PV perdus par tous les membres de l'équipe est enregistré au cours du combat. Les DGT infligés par l'ultime de Fu Xuan augmentent d'un montant équivalent à <nobr>200%</nobr> de ce total.\nCe total est plafonné à <nobr>120%</nobr> des PV max de Fu Xuan et sa valeur est réinitialisée et recommence à s'accumuler après utilisation de l'ultime de Fu Xuan.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

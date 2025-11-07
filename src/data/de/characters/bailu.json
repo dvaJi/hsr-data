@@ -2,6 +2,7 @@
   "_id": 1211,
   "id": "bailu",
   "name": "Bailu",
+  "description": "Die Hohe Älteste der Vidyadharas wird auf der Xianzhou Luofu auch „Heilerin“ genannt.\nMit ihrer einzigartigen Heilkunst und Behandlungsmethoden, die nur von den Vidyadhara-Drachen eingesetzt werden können, rettet sie Leben.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Blitz-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Stellt LP für einen Verbündeten wieder her und heilt dann einen weiteren zufälligen Verbündeten.",
       "type": "Fertigkeit",
       "tag": "Wiederherstellung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "Stellt LP für alle Verbündeten wieder her. Belebt die Verbündeten oder verlängert die Dauer der „Belebung“.",
       "type": "Ultimate",
       "tag": "Wiederherstellung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,24 @@
       "simpleDesc": "Verbündete mit Belebung stellen ihre LP wieder her, nachdem sie angegriffen wurden.\nWenn ein Verbündeter einen Todesstoß erleidet, stellt Bailu sofort seine LP wieder her. Dieser Effekt kann nur 1-mal pro Kampf ausgelöst werden.",
       "type": "Talent",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1491,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik erhalten alle Verbündeten zu Beginn des nächsten Kampfes „Belebung“.",
       "type": "Technik",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1516,79 @@
       "_id": 121101,
       "id": "ambrosial_aqua",
       "name": "Meridian-Aufguss: Ambrosia-Aqua",
-      "desc": "Wenn die „Belebung“ endet und die LP des Verbündeten vollständig sind, wird bei ihm zusätzlich <nobr>8</nobr> Pkt. Energie wiederhergestellt."
+      "desc": "Wenn die „Belebung“ endet und die LP des Verbündeten vollständig sind, wird bei ihm zusätzlich <nobr>8</nobr> Pkt. Energie wiederhergestellt.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121102,
       "id": "sylphic_slumber",
       "name": "Topf des schlummernden Drachen",
-      "desc": "Erhöht nach dem Einsatz des Ultimates die bewirkte Heilung von Bailu für <nobr>2</nobr> Rd. um <nobr>15%</nobr>."
+      "desc": "Erhöht nach dem Einsatz des Ultimates die bewirkte Heilung von Bailu für <nobr>2</nobr> Rd. um <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121103,
       "id": "omniscient_opulence",
       "name": "Rätselhaftes Wunder",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121104,
       "id": "evil_excision",
       "name": "Bedrohung ausgetrieben",
-      "desc": "Jede Heilung durch die Fertigkeit erhöht den vom Empfänger verursachten SCH für <nobr>2</nobr> Rd. um <nobr>10%</nobr>. Dieser Effekt ist bis zu <nobr>3</nobr>-mal stapelbar."
+      "desc": "Jede Heilung durch die Fertigkeit erhöht den vom Empfänger verursachten SCH für <nobr>2</nobr> Rd. um <nobr>10%</nobr>. Dieser Effekt ist bis zu <nobr>3</nobr>-mal stapelbar.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121105,
       "id": "waning_worries",
       "name": "Beseitigung irdischer Probleme",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121106,
       "id": "drooling_drop_of_draconic_divinity",
       "name": "Triefender Tropfen drakonischer Göttlichkeit",
-      "desc": "Erhöht die Anzahl der Verbündeten, die durch Bailu in einem einzigen Kampf nach Todesstößen geheilt werden können, um <nobr>1</nobr>."
+      "desc": "Erhöht die Anzahl der Verbündeten, die durch Bailu in einem einzigen Kampf nach Todesstößen geheilt werden können, um <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

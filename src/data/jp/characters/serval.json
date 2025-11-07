@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "セーバル",
+  "description": "ベロブルグの機械工、前職は建創者の技術部門の研究員。\nジェパード・ランドゥーの姉だが、弟とはまったく異なる性格をしている。\n大寒波が訪れる前に存在した「ロック」という古典音楽を熱愛している。",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の雷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,24 @@
       "simpleDesc": "敵単体に雷属性ダメージを与え、隣接する敵に少量の雷属性ダメージを与える。高確率でメインターゲットに感電状態を付与する。",
       "type": "戦闘スキル",
       "tag": "拡散攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "敵全体に雷属性ダメージを与え、敵の感電状態を延長。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "攻撃を行った後、感電状態にあるすべての敵に少量の付加ダメージを与える。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "敵を攻撃。戦闘に入った後、ランダムな敵単体にセーバルの攻撃力#4[i]%分の雷属性ダメージを与え、#1[i]%の基礎確率で敵単体それぞれに感電状態を付与する、#3[i]ターン継続。\n感電状態の敵はターンが回ってくるたびに、セーバルの攻撃力#2[i]%分の雷属性持続ダメージを受ける。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、ランダムな敵単体に少量の雷属性ダメージを与え、高確率で敵それぞれを感電状態にする。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "いつまでも{RUBY_B#な}鳴{RUBY_E#}り{RUBY_B#ひび}響{RUBY_E#}け",
-      "desc": "通常攻撃は指定した敵に隣接するランダムな敵に、通常攻撃ダメージ<nobr>60%</nobr>分の雷属性ダメージを与える。"
+      "desc": "通常攻撃は指定した敵に隣接するランダムな敵に、通常攻撃ダメージ<nobr>60%</nobr>分の雷属性ダメージを与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "アンコール！",
-      "desc": "天賦による<u>付加ダメージ</u>を1回発動するたびに、セーバルはEPを<nobr>4</nobr>回復する。"
+      "desc": "天賦による<u>付加ダメージ</u>を1回発動するたびに、セーバルはEPを<nobr>4</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "{RUBY_B#き}聞{RUBY_E#}け、{RUBY_B#はぐるま}歯車{RUBY_E#}の{RUBY_B#こどう}鼓動{RUBY_E#}を",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "{RUBY_B#そうおん}噪音{RUBY_E#}を{RUBY_B#な}鳴{RUBY_E#}らせ！",
-      "desc": "必殺技を発動した時、<nobr>100%</nobr>の<u>基礎確率</u>で感電状態でない敵を、戦闘スキルが与えるものと同じ感電状態にする。"
+      "desc": "必殺技を発動した時、<nobr>100%</nobr>の<u>基礎確率</u>で感電状態でない敵を、戦闘スキルが与えるものと同じ感電状態にする。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "ベロブルグ{RUBY_B#さいきょうおん}最強音{RUBY_E#}！",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "この{RUBY_B#いっきょく}一曲{RUBY_E#}、\n{RUBY_B#てんきゅう}天穹{RUBY_E#}を{RUBY_B#つらぬ}貫{RUBY_E#}く！",
-      "desc": "感電状態の敵に対するセーバルの与ダメージ+<nobr>30%</nobr>。"
+      "desc": "感電状態の敵に対するセーバルの与ダメージ+<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

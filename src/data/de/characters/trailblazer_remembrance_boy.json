@@ -2,6 +2,7 @@
   "_id": 8007,
   "id": "trailblazer_remembrance_boy",
   "name": "Trailblazer Das Gedenken",
+  "description": "Ein {F#Mädchen}{M#Junge} an Bord des Astralexpresses.\nHat beschlossen, mit dem Astralexpress zu reisen, um der Bedrohung durch das Stellaron Einhalt zu gebieten.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Eis-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Beschwört den Memogeist Memi. Wenn sich Memi bereits auf dem Feld befindet, werden ihre LP wiederhergestellt und sie erhält Aufladung.",
       "type": "Fertigkeit",
       "tag": "Beschwörung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "Beschwört den Memogeist Memi. Memi erhält Aufladung und fügt dann allen Gegnern massiven Eis-SCH zu.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "Jedes Mal, wenn alle Verbündeten eine bestimmte Menge Energie wiederherstellen, erhält Memi Aufladung.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "Erzeugt eine spezielle Dimension, die alle Gegner in ihr anhält. Nach Kampfeintritt mit Gegnern in dieser Dimension wird die Aktion aller Gegner verzögert und ihnen geringen Eis-SCH zugefügt.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Aktion verzögert",
+          "desc": "Verlängert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,42 +1444,599 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Memi",
+    "icon": "SpriteOutput/ServantIconTeam/18007B.png",
+    "hpBase": "#4",
+    "hpInherit": "#2",
+    "hpSkill": 800704,
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1800701,
+        "name": "Bösewichte! Ärger!",
+        "desc": "Fügt insgesamt <nobr>#2[i]</nobr>-mal SCH zu, wobei jedes Mal einem zufälligen Gegner Eis-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> von Memis ANG zufügt. Fügt am Ende allen Gegnern Eis-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> von Memis ANG zu.",
+        "simpleDesc": "Fügt geringen Eis-SCH zu und prallt insgesamt <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>-mal ab. Fügt am Ende allen Gegnern geringen Eis-SCH zu.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Flächenangriff"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              4,
+              0.45
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.216,
+              4,
+              0.54
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.252,
+              4,
+              0.63
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.288,
+              4,
+              0.72
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.324,
+              4,
+              0.81
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.36,
+              4,
+              0.9
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.396,
+              4,
+              0.99
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.432,
+              4,
+              1.08
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.468,
+              4,
+              1.17
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.504,
+              4,
+              1.26
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800703,
+        "name": "Freunde! Zusammen!",
+        "desc": "Erhöht den KRIT-SCH aller Verbündeter in Höhe von <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> von Memis KRIT-SCH plus <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>. \nSolange die Aufladung nicht <nobr>100</nobr> % erreicht hat, wird während der Aktion automatisch „Bösewichte! Ärger!“ eingesetzt. Wenn die Aufladung <nobr>100</nobr> % erreicht, führt Memi sofort eine Aktion aus. In ihrer nächsten Aktion wird ein Verbündeter ausgewählt und „Ich werde! Dir helfen!“ eingesetzt.",
+        "simpleDesc": "Erhöht den KRIT-SCH aller Verbündeten.\nGreift während der Aktion automatisch an. Wenn die Aufladung <nobr>100</nobr> % erreicht, wird sofort eine Aktion ausgeführt und eine neue Fähigkeit eingesetzt: Die Aktion eines Verbündeten wird <span style=\"color:#f29e38ff><u>vorgezogen</u></span> und er kann <span style=\"color:#f29e38ff><u>Tatsächlichen SCH</u></span> verursachen.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Unterstützung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.12
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.144
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.168
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.192
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.216
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.24
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.264
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.288
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.312
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.336
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800705,
+        "name": "Memi, wir schaffen das!",
+        "desc": "Memi erhält sofort nach der Beschwörung <nobr>#1[i]%</nobr> Aufladung.",
+        "simpleDesc": "Erhält sofort nach der Beschwörung Aufladung.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Verstärkung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800706,
+        "name": "Kein ... Bedauern",
+        "desc": "Beim Verschwinden von Memi wird die Aktion {F#der Trailblazerin}{M#des Trailblazers} um <nobr>#1[i]%</nobr> <u>vorgezogen</u>.",
+        "simpleDesc": "Beim Verschwinden wird die Aktion {F#der Trailblazerin}{M#des Trailblazers} <u>vorgezogen</u>.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Verstärkung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Aktion vorziehen",
+            "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1800707,
+        "name": "Ich werde! Dir helfen!",
+        "desc": "Lässt die Aktion eines anvisierten Verbündeten um <nobr>#3[i]%</nobr> <u>vorziehen</u> und verleiht ihm für <nobr>#2[i]</nobr> Rd. „Memis Unterstützung“.\nJedes Mal, wenn ein Ziel mit Memis Unterstützung SCH verursacht, wird zusätzlich 1-mal <u>Tatsächlicher SCH</u> in Höhe von <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> des ursprünglichen SCH verursacht.\nWenn Memi diese Fähigkeit an sich selbst einsetzt, wird der <u>Aktionsvorzug</u> nicht ausgelöst.",
+        "simpleDesc": "Lässt die Aktion eines Verbündeten <span style=\"color:#f29e38ff><u>vorziehen</u></span> und verleiht ihm „Memis Unterstützung“: Fügt nach dem Verursachen von SCH zusätzlich <span style=\"color:#f29e38ff><u>Tatsächlichen SCH</u></span> zu.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Unterstützung"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Aktion vorziehen",
+            "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000017,
+            "name": "Tatsächlicher Schaden",
+            "desc": "SCH ohne Typ, der durch Effekte nicht beeinflusst wird. Dieser SCH wird nicht als 1-mal Angriff gewertet.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.18,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.2,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.22,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.24,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.26,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.28,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.32,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.34,
+              3,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.36,
+              3,
+              1
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 800701,
       "id": "narrator_of_the_present",
       "name": "Erzähler der Gegenwart",
-      "desc": "Erhöht die KRIT-Rate von Verbündeten mit „Memis Unterstützung“ um <nobr>10%</nobr>. Wenn ein Verbündeter Memis Unterstützung besitzt, wirkt der Effekt auch auf den Memogeist/Memomeister des Ziels. Dieser Effekt ist nicht stapelbar."
+      "desc": "Erhöht die KRIT-Rate von Verbündeten mit „Memis Unterstützung“ um <nobr>10%</nobr>. Wenn ein Verbündeter Memis Unterstützung besitzt, wirkt der Effekt auch auf den Memogeist/Memomeister des Ziels. Dieser Effekt ist nicht stapelbar.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800702,
       "id": "gleaner_of_the_past",
       "name": "Sammler des Vergangenen",
-      "desc": "Wenn Memogeister der Verbündeten (außer Memi) eine Aktion ausführen, stellt der Trailblazer <nobr>8</nobr> Pkt. Energie wieder her. Dieser Effekt kann bis zu <nobr>1</nobr>-mal pro Runde ausgelöst werden. Die Auslösungsanzahl wird zu Beginn der Runde des Trailblazers zurückgesetzt."
+      "desc": "Wenn Memogeister der Verbündeten (außer Memi) eine Aktion ausführen, stellt der Trailblazer <nobr>8</nobr> Pkt. Energie wieder her. Dieser Effekt kann bis zu <nobr>1</nobr>-mal pro Runde ausgelöst werden. Die Auslösungsanzahl wird zu Beginn der Runde des Trailblazers zurückgesetzt.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800703,
       "id": "chanter_of_the_future",
       "name": "Kantor der Zukunft",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800704,
       "id": "dancer_of_the_muse",
       "name": "Tanzpartner der Muse",
-      "desc": "Wenn ein Verbündeter mit einer max. Energie von 0 aktiv seine Fähigkeit einsetzt, erhält Memi <nobr>3%</nobr> Aufladung und der Multiplikator für den Tatsächlichen SCH, den das Ziel durch „Memis Unterstützung“ verursacht, wird zusätzlich um <nobr>6%</nobr> erhöht."
+      "desc": "Wenn ein Verbündeter mit einer max. Energie von 0 aktiv seine Fähigkeit einsetzt, erhält Memi <nobr>3%</nobr> Aufladung und der Multiplikator für den Tatsächlichen SCH, den das Ziel durch „Memis Unterstützung“ verursacht, wird zusätzlich um <nobr>6%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800705,
       "id": "seamster_of_the_ode",
       "name": "Schneider der Poesie",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800706,
       "id": "bearer_of_the_revelation",
       "name": "Erbe der göttlichen Offenbarung",
-      "desc": "Die KRIT-Rate von Ultimate ist auf <nobr>100</nobr> % festgelegt."
+      "desc": "Die KRIT-Rate von Ultimate ist auf <nobr>100</nobr> % festgelegt.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +2485,151 @@
       }
     },
     {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Bösewichte! Ärger!",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "Saat der Gedanken",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Instinkt des Diebes",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Bösewichte! Ärger!",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Mana-Spross",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Ehrgeiz der Verzerrung",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Bösewichte! Ärger!",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Mana-Spross",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Ehrgeiz der Verzerrung",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Bösewichte! Ärger!",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Alayawah",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Wille des Eroberers",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Bösewichte! Ärger!",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Alayawah",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Wille des Eroberers",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -1868,151 +2643,6 @@
       }
     },
     {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Bösewichte! Ärger!",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "Saat der Gedanken",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "Instinkt des Diebes",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Bösewichte! Ärger!",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Mana-Spross",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Ehrgeiz der Verzerrung",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Bösewichte! Ärger!",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Mana-Spross",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Ehrgeiz der Verzerrung",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Bösewichte! Ärger!",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Alayawah",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Wille des Eroberers",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8007301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Bösewichte! Ärger!",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Credit",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Alayawah",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Wille des Eroberers",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8007302,
       "type": 4,
       "children": [],
@@ -2153,6 +2783,27 @@
             "id": "conquerors_will",
             "name": "Wille des Eroberers",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8007501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "Unvollendeter Epilog",
+        "desc": "Erhält nach dem Einsatz des Ultimates 1 Stapelung „Epos“, bis zu <nobr>2</nobr> Stapelungen. Wenn sich Memi auf dem Kampffeld befindet und diese Einheit Epos besitzt, wird der Standardangriff zu „Schreiben wir gemeinsam vom Morgen!“ verstärkt.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

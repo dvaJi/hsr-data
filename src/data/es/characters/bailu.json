@@ -2,6 +2,7 @@
   "_id": 1211,
   "id": "bailu",
   "name": "Bailu",
+  "description": "Gran Maestre de los vidyadhara, también conocida como Dama Sanadora en el Luofu de Xianzhou.\nUtiliza sus conocimientos médicos únicos y los tratamientos que solo puede proporcionar la raza dracónica de los vidyadhara para salvar vidas.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Regenera PV a un aliado y después cura a aliados al azar.",
       "type": "Habilidad básica",
       "tag": "Regeneración",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "Regenera PV a todos los aliados y les aplica Vigor o extiende su duración.",
       "type": "Habilidad definitiva",
       "tag": "Regeneración",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,24 @@
       "simpleDesc": "Los aliados con Vigor regeneran PV tras recibir un ataque.\nCuando un aliado recibe un golpe letal, Bailu regenera sus PV inmediatamente. Este efecto se puede activar 1 vez durante la batalla.",
       "type": "Talento",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1491,15 @@
       "simpleDesc": "Tras usar la técnica, al comenzar la siguiente batalla, todos los aliados obtienen Vigor.",
       "type": "Técnica",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1516,79 @@
       "_id": 121101,
       "id": "ambrosial_aqua",
       "name": "Infusión de meridianos: Gotas de ambrosía",
-      "desc": "Cuando termina el efecto de Vigor, si el aliado objetivo tiene todos sus PV, recupera <nobr>8</nobr> pts. de energía adicionales."
+      "desc": "Cuando termina el efecto de Vigor, si el aliado objetivo tiene todos sus PV, recupera <nobr>8</nobr> pts. de energía adicionales.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121102,
       "id": "sylphic_slumber",
       "name": "Tetera del dragón durmiente",
-      "desc": "Tras usar la habilidad definitiva, la curación realizada por Bailu aumenta en un <nobr>15%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Tras usar la habilidad definitiva, la curación realizada por Bailu aumenta en un <nobr>15%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121103,
       "id": "omniscient_opulence",
       "name": "Portento enigmático",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121104,
       "id": "evil_excision",
       "name": "Amenaza exorcizada",
-      "desc": "Cada curación proporcionada por la habilidad básica de Bailu aumenta el daño que inflige el receptor de la curación en un <nobr>10%</nobr>. Se puede acumular hasta <nobr>3</nobr> veces y dura <nobr>2</nobr> turnos."
+      "desc": "Cada curación proporcionada por la habilidad básica de Bailu aumenta el daño que inflige el receptor de la curación en un <nobr>10%</nobr>. Se puede acumular hasta <nobr>3</nobr> veces y dura <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121105,
       "id": "waning_worries",
       "name": "Eliminación de preocupaciones terrenales",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121106,
       "id": "drooling_drop_of_draconic_divinity",
       "name": "Gota de divinidad dracónica",
-      "desc": "La cantidad de veces que Bailu puede curar durante una batalla a aliados que hayan recibido un golpe letal aumenta en <nobr>1</nobr>."
+      "desc": "La cantidad de veces que Bailu puede curar durante una batalla a aliados que hayan recibido un golpe letal aumenta en <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11211,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

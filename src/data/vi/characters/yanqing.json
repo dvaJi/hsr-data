@@ -2,6 +2,7 @@
   "_id": 1209,
   "id": "yanqing",
   "name": "Yanqing",
+  "description": "Thị vệ của tướng quân Jing Yuan, tuy còn trẻ tuổi nhưng đã là một kiếm sĩ tài năng.\nTay lăm lăm thanh kiếm, bất khả chiến bại.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Băng cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Gây Sát Thương Băng cho 1 kẻ địch, kèm thêm cho bản thân Kiếm Khôn Hiểu Lòng Người.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +738,27 @@
       "simpleDesc": "Tăng Tỷ Lệ Bạo Kích cho bản thân và cường hóa Kiếm Khôn Hiểu Lòng Người, gây lượng lớn Sát Thương Băng cho 1 kẻ địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Hiệu Ứng Buff",
+          "desc": "Tất cả trạng thái duy trì có hiệu ứng buff đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1083,48 @@
       "simpleDesc": "Khi trong Kiếm Khôn Hiểu Lòng Người, sẽ giảm xác suất bị tấn công, tăng Tỷ Lệ Bạo Kích và Sát Thương Bạo Kích của bản thân. Sau khi tấn công kẻ địch, có xác suất phát động Đòn Đánh Theo Sau, gây Sát Thương Băng cho kẻ đó và có xác suất khiến kẻ đó Đóng Băng.\nSau khi bản thân chịu sát thương, Kiếm Khôn Hiểu Lòng Người sẽ biến mất.",
       "type": "Thiên Phú",
       "tag": "Đánh Đơn",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Xác Suất Cố Định",
+          "desc": "Xác suất cố định không bị ảnh hưởng bởi bất cứ nhân tố nào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1494,15 @@
       "simpleDesc": "Dùng Bí Kỹ, khi bắt đầu trận kế tiếp, sẽ tăng sát thương mà bản thân gây ra cho kẻ địch có Phần Trăm HP từ 50% trở lên.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1424,37 +1521,106 @@
       "_id": 120901,
       "id": "svelte_saber",
       "name": "Lưỡi Kiếm Đơn Thuần",
-      "desc": "Khi Yanqing tấn công mục tiêu phe địch, nếu mục tiêu đang ở trạng thái Đóng Băng, sẽ lập tức gây cho mục tiêu <u>Sát Thương Kèm Theo</u> thuộc tính Băng bằng <nobr>60%</nobr> Tấn Công của Yanqing."
+      "desc": "Khi Yanqing tấn công mục tiêu phe địch, nếu mục tiêu đang ở trạng thái Đóng Băng, sẽ lập tức gây cho mục tiêu <u>Sát Thương Kèm Theo</u> thuộc tính Băng bằng <nobr>60%</nobr> Tấn Công của Yanqing.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120902,
       "id": "supine_serenade",
       "name": "Ánh Sáng Không Trung",
-      "desc": "Khi ở hiệu ứng Kiếm Khôn Hiểu Lòng Người, tăng thêm <nobr>10%</nobr> hiệu suất hồi năng lượng."
+      "desc": "Khi ở hiệu ứng Kiếm Khôn Hiểu Lòng Người, tăng thêm <nobr>10%</nobr> hiệu suất hồi năng lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120903,
       "id": "sword_savant",
       "name": "Phôi Kiếm",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120904,
       "id": "searing_sting",
       "name": "Sương Lệ",
-      "desc": "Khi Phần Trăm HP hiện tại lớn hơn hoặc bằng <nobr>80%</nobr>, sẽ tăng cho bản thân <nobr>12%</nobr> <u>Xuyên Kháng</u> Băng."
+      "desc": "Khi Phần Trăm HP hiện tại lớn hơn hoặc bằng <nobr>80%</nobr>, sẽ tăng cho bản thân <nobr>12%</nobr> <u>Xuyên Kháng</u> Băng.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120905,
       "id": "surging_strife",
       "name": "Thiên Chất",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120906,
       "id": "swift_swoop",
       "name": "Tự Tại",
-      "desc": "Khi tiêu diệt mục tiêu phe địch, nếu đang có <u>hiệu ứng Buff</u> của Tuyệt Kỹ hoặc \"Kiếm Khôn Hiểu Lòng Người\", thì thời gian duy trì của những <u>hiệu ứng Buff</u> này đều kéo dài thêm 1 hiệp."
+      "desc": "Khi tiêu diệt mục tiêu phe địch, nếu đang có <u>hiệu ứng Buff</u> của Tuyệt Kỹ hoặc \"Kiếm Khôn Hiểu Lòng Người\", thì thời gian duy trì của những <u>hiệu ứng Buff</u> này đều kéo dài thêm 1 hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Hiệu Ứng Buff",
+          "desc": "Tất cả trạng thái duy trì có hiệu ứng buff đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

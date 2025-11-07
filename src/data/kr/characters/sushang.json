@@ -2,6 +2,7 @@
   "_id": 1206,
   "id": "sushang",
   "name": "소상",
+  "description": "선주 「요청(曜青)」출생, 「나부」의 운기군을 찾아가 수련을 받은 신병\n어머니가 주신 가문의 검을 몸에 지니고 앞으로의 미래를 동경하고 있다",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 물리 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "단일 적에게 물리 속성 피해를 주고, 낮은 확률로 [검세]를 발동한다. 적이 약점 격파 상태일 경우 [검세]를 반드시 발동한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000006,
+          "name": "약점 격파 상태",
+          "desc": "적의 강인성이 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 진입한 목표는 행동 게이지가 감소한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +779,18 @@
       "simpleDesc": "단일 적에게 대량의 물리 속성 피해를 가하고, [검세] 효과를 강화하며 즉시 행동한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1124,15 @@
       "simpleDesc": "필드 위 적의 약점이 격파되면 자신의 속도가 증가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1435,15 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 모든 적에게 소상 공격력 #1[i]%만큼의 물리 속성 피해를 준다",
       "simpleDesc": "적을 공격하며, 전투 진입 후 모든 적에게 소량의 물리 속성 피해를 가한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,37 +1460,88 @@
       "_id": 120601,
       "id": "cut_with_ease",
       "name": "여유만만",
-      "desc": "<u>약점 격파 상태</u>의 적에게 전투 스킬 발동 후 전투 스킬 포인트를 1pt 회복한다"
+      "desc": "<u>약점 격파 상태</u>의 적에게 전투 스킬 발동 후 전투 스킬 포인트를 1pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "약점 격파 상태",
+          "desc": "적의 강인성이 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 진입한 목표는 행동 게이지가 감소한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120602,
       "id": "refine_in_toil",
       "name": "단련된 신체",
-      "desc": "[검세] 발동 후 소상이 받는 피해가 <nobr>20%</nobr> 감소한다. 지속 시간: 1턴"
+      "desc": "[검세] 발동 후 소상이 받는 피해가 <nobr>20%</nobr> 감소한다. 지속 시간: 1턴",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120603,
       "id": "rise_from_fame",
       "name": "전설의 검류",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120604,
       "id": "cleave_with_heart",
       "name": "넓은 아량",
-      "desc": "소상의 격파 특수효과가 <nobr>40%</nobr> 증가한다"
+      "desc": "소상의 격파 특수효과가 <nobr>40%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120605,
       "id": "prevail_via_taixu",
       "name": "태공의 신의",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120606,
       "id": "dwell_like_water",
       "name": "상선약수",
-      "desc": "특성의 가속 효과는 최대 2스택 중첩 가능하고 전투 진입 후 소상은 즉시 특성의 가속 효과를 1스택 획득한다"
+      "desc": "특성의 가속 효과는 최대 2스택 중첩 가능하고 전투 진입 후 소상은 즉시 특성의 가속 효과를 1스택 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

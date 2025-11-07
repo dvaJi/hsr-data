@@ -2,6 +2,7 @@
   "_id": 1217,
   "id": "huohuo",
   "name": "藿藿",
+  "description": "仙舟羅浮的十王司見習判官，被歲陽附身的狐人小女孩。\n性格怯懦，弱小可憐，害怕種種怪異之事卻肩負起勾攝邪魔的職責。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量風屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "解除我方單體1個負面效果，並為我方單體及其相鄰目標回復生命值。",
       "type": "戰技",
       "tag": "回復",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "負面效果",
+          "desc": "對戰鬥有負面效果的所有持續狀態，若無特殊說明則可加以解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +807,18 @@
       "simpleDesc": "為除自身以外的隊友恢復能量，並使其攻擊力提高。",
       "type": "終結技",
       "tag": "輔助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "施放戰技後藿藿獲得【禳命】。當藿藿擁有【禳命】時，我方目標回合開始或施放終結技時回復自身生命值，同時對每個生命值較低的我方目標各產生1次回復效果。觸發【禳命】為我方目標提供治療時，解除該目標1個負面效果。",
       "type": "天賦",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "負面效果",
+          "desc": "對戰鬥有負面效果的所有持續狀態，若無特殊說明則可加以解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1545,24 @@
       "simpleDesc": "使周圍的敵人陷入【魄散】狀態。與陷入【魄散】狀態的敵人進入戰鬥後，有高機率使敵方目標攻擊力降低。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1500,37 +1582,88 @@
       "_id": 121701,
       "id": "anchored_to_vessel_specters_nestled",
       "name": "歲陽寄體，妖邪依憑",
-      "desc": "天賦產生的【禳命】持續時間延長<nobr>1</nobr>回合，且當藿藿擁有【禳命】時我方全體提高<nobr>12%</nobr>的速度。"
+      "desc": "天賦產生的【禳命】持續時間延長<nobr>1</nobr>回合，且當藿藿擁有【禳命】時我方全體提高<nobr>12%</nobr>的速度。",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121702,
       "id": "sealed_in_tail_wraith_subdued",
       "name": "判官書符，鎮尾鎖靈",
-      "desc": "當藿藿擁有【禳命】時，若我方目標受到致命攻擊，不會陷入<u>無法戰鬥狀態</u>，並立即回復等同於其自身生命上限<nobr>50%</nobr>的生命值，使【禳命】的持續回合數減1。該效果單場戰鬥中可以觸發<nobr>2</nobr>次。"
+      "desc": "當藿藿擁有【禳命】時，若我方目標受到致命攻擊，不會陷入<u>無法戰鬥狀態</u>，並立即回復等同於其自身生命上限<nobr>50%</nobr>的生命值，使【禳命】的持續回合數減1。該效果單場戰鬥中可以觸發<nobr>2</nobr>次。",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121703,
       "id": "cursed_by_fate_moths_to_flame",
       "name": "貞凶體質，燭火招螢",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121704,
       "id": "tied_in_life_bound_to_strife",
       "name": "坐臥不離，爭拗難寧",
-      "desc": "施放戰技或觸發天賦為我方目標提供治療時，目標的現有生命值越低治療量越高，最多使藿藿提供的治療量提高<nobr>80%</nobr>。"
+      "desc": "施放戰技或觸發天賦為我方目標提供治療時，目標的現有生命值越低治療量越高，最多使藿藿提供的治療量提高<nobr>80%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121705,
       "id": "mandated_by_edict_evils_evicted",
       "name": "降妖捉鬼，十王敕令",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121706,
       "id": "woven_together_cohere_forever",
       "name": "同休共戚，相須而行",
-      "desc": "為我方目標提供治療時，使目標造成的傷害提高<nobr>50%</nobr>，持續<nobr>2</nobr>回合。"
+      "desc": "為我方目標提供治療時，使目標造成的傷害提高<nobr>50%</nobr>，持續<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

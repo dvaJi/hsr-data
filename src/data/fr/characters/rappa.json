@@ -2,6 +2,7 @@
   "_id": 1317,
   "id": "rappa",
   "name": "Rappa",
+  "description": "Une fille étrange qui a surgi à Penacony comme un éclair au milieu de la nuit. Elle se prend pour une ninja et attribue tout ce qui se passe dans le monde au « ninjutsu ».\nElle récite constamment des mantras ninja, dessine des sceaux du ninja éblouissant et étudie des parchemins. La voie du ninja comprend le rap, les graffitis et les mangas. Au travers d'une autodiscipline rigoureuse, elle parcourt les étoiles, faisant respecter la justice et la vertu.\nEn tant que membre des Rangers de la galaxie, elle poursuit sans relâche le méchant connu sous le nom d'Osaru le ninja maléfique, le traquant jusqu'aux limites du cosmos.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi désigné.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inflige des DGT imaginaires à tous les ennemis.",
       "type": "Compétence",
       "tag": "ZdE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Entre dans la forme du sceau, gagne un tour supplémentaire, obtient 3 points d'encre chromatique et augmente l'efficacité de Rupture de faiblesse et l'effet de Rupture.\nLorsque Rappa est dans la forme du sceau, son ATQ normale devient renforcée. Chaque utilisation de l'ATQ normale renforcée consomme 1 point d'encre chromatique. Rappa quitte la forme du sceau lorsqu'elle a utilisé tous les points d'encre chromatique.",
       "type": "Ultime",
       "tag": "Renforcement",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Tour supplémentaire",
+          "desc": "Gagne 1 tour supplémentaire qui n'augmente pas le nombre de tours avant la prochaine action. Durant ce tour supplémentaire, vous ne pouvez pas utiliser d'ultime.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,15 @@
       "simpleDesc": "Rappa obtient 1 point de charge chaque fois qu'une cible ennemie subit une Rupture de faiblesse. Lors du déclenchement de la troisième frappe de Ningu : Lame de pétale d'exorcisme, inflige des DGT de rupture imaginaires supplémentaires à tous les ennemis. Ces DGT ignorent le type de faiblesse pour réduire la robustesse et consomment tous les points de charge pour augmenter le multiplicateur de DGT de rupture et la réduction de robustesse.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        6,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1452,15 @@
       "simpleDesc": "Entre dans l'état Graffiti. Se déplace rapidement vers l'avant sur une distance fixe et attaque tous les ennemis touchés. Après être entré en combat en attaquant des ennemis, réduit la robustesse de toutes les cibles ennemies quels que soient leurs types de faiblesses et inflige des DGT de rupture imaginaires à chaque cible ennemie ainsi qu'aux cibles adjacentes. D'autre part, cette unité régénère des points d'énergie.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1426,37 +1481,79 @@
       "_id": 131701,
       "id": "returned_is_the_revenant_with_no_ferry_toll",
       "name": "Retour à sec",
-      "desc": "Lorsque Rappa entre dans la forme du sceau en utilisant son ultime, les DGT qu'elle inflige ignorent <nobr>15%</nobr> de la DÉF des cibles. D'autre part, Rappa récupère <nobr>20</nobr> points d'énergie lorsqu'elle quitte la forme du sceau."
+      "desc": "Lorsque Rappa entre dans la forme du sceau en utilisant son ultime, les DGT qu'elle inflige ignorent <nobr>15%</nobr> de la DÉF des cibles. D'autre part, Rappa récupère <nobr>20</nobr> points d'énergie lorsqu'elle quitte la forme du sceau.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131702,
       "id": "free_is_the_mind_enlightened_by_haikus",
       "name": "Esprit illuminé par les haikus",
-      "desc": "La réduction de robustesse des deux premières frappes de l'ATQ normale renforcée contre l'ennemi désigné augmente de <nobr>50%</nobr>."
+      "desc": "La réduction de robustesse des deux premières frappes de l'ATQ normale renforcée contre l'ennemi désigné augmente de <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131703,
       "id": "many_are_the_shrines_that_repel_no_hell",
       "name": "Nombreux sont les sanctuaires qui ne repoussent pas l'enfer",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131704,
       "id": "lost_is_the_nind_devoured_by_time",
       "name": "Nindô perdu dévoré par le temps",
-      "desc": "Lorsque Rappa est dans la forme du sceau, la VIT de tous les alliés augmente de <nobr>12%</nobr>."
+      "desc": "Lorsque Rappa est dans la forme du sceau, la VIT de tous les alliés augmente de <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131705,
       "id": "steady_is_the_ranger_with_unerring_arrows",
       "name": "Volonté inébranlable et flèches infaillibles",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131706,
       "id": "righteous_is_the_wrath_that_spares_no_evil",
       "name": "Justice implacable sans merci",
-      "desc": "Augmente le nombre de points de charge initiaux du talent de <nobr>5</nobr> et la limite de points de charge de <nobr>5</nobr>. Obtient <nobr>5</nobr> points de charge après avoir lancé la troisième frappe de Ningu : Lame de pétale d'exorcisme."
+      "desc": "Augmente le nombre de points de charge initiaux du talent de <nobr>5</nobr> et la limite de points de charge de <nobr>5</nobr>. Obtient <nobr>5</nobr> points de charge après avoir lancé la troisième frappe de Ningu : Lame de pétale d'exorcisme.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

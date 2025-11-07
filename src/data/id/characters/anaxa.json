@@ -2,6 +2,7 @@
   "_id": 1405,
   "id": "anaxa",
   "name": "Anaxa",
+  "description": "Grove of Epiphany, akademi yang memupuk ilmu pengetahuan, tempat lahirnya para filsuf.\nTetapi Anaxagoras sang penista dewa, Keturunan Chrysos yang menantang Benih Api Rasionalitas, jawablah pertanyaan ini: Apakah kamu rela memikul nama buruk, menentang ramalan, dan menancapkan cabang keraguan ke dalam Pohon Suci Kebijaksanaan?\n— \"Konyol sekali. Dunia ini penuh dengan kepalsuan, dan hanya akulah yang nyata.\"",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Wind DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Mengakibatkan Wind DMG dalam jumlah kecil pada 1 musuh, total Bounce 5 kali, memprioritaskan untuk Bounce ke target yang belum terserang. Semakin banyak target musuh di medan pertempuran, maka semakin tinggi DMG yang diakibatkan.",
       "type": "Skill",
       "tag": "Bounce",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Menambahkan \"Sublimation\" dan mengakibatkan Wind DMG pada seluruh musuh. Saat berstatus \"Sublimation\", target akan ditambahkan 7 Tipe Weakness sekaligus, serta tidak dapat beraksi jika tidak memiliki Control RES.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1065,15 @@
       "simpleDesc": "Setelah serangan mengenai target musuh, akan menambahkan 1 Weakness acak. Target musuh yang jumlah Weakness-nya mencapai #3[i] akan memasuki status \"Qualitative Disclosure\". DMG yang diakibatkan Anaxa pada target berstatus \"Qualitative Disclosure\" meningkat, dan setelah Anaxa melancarkan Basic Attack atau Skill pada target tersebut, akan melancarkan ekstra 1 kali Skill tanpa mengonsumsi Poin Skill.",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1361,6 +1398,15 @@
       "simpleDesc": "Membuat musuh di sekitar memasuki status Terrified. Menyerang musuh yang berstatus Terrified akan selalu dianggap menyerang Weakness untuk memasuki pertempuran, dan akan menambahkan Weakness yang sesuai dengan Tipe penyerang pada seluruh musuh.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1378,37 +1424,79 @@
       "_id": 140501,
       "id": "magician_isolated_by_stars",
       "name": "Magician, Isolated by Stars",
-      "desc": "Setelah melancarkan Skill untuk pertama kalinya, akan memulihkan <nobr>1</nobr> Poin Skill. Saat Skill mengenai target musuh, akan mengurangi <nobr>16%</nobr> DEF target selama <nobr>2</nobr> giliran."
+      "desc": "Setelah melancarkan Skill untuk pertama kalinya, akan memulihkan <nobr>1</nobr> Poin Skill. Saat Skill mengenai target musuh, akan mengurangi <nobr>16%</nobr> DEF target selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140502,
       "id": "soul_true_to_history",
       "name": "Soul, True to History",
-      "desc": "Saat target musuh memasuki medan pertempuran, akan memicu efek penambahan Weakness dari Talent 1 kali, serta mengurangi <nobr>20%</nobr> RES Seluruh Tipe target tersebut."
+      "desc": "Saat target musuh memasuki medan pertempuran, akan memicu efek penambahan Weakness dari Talent 1 kali, serta mengurangi <nobr>20%</nobr> RES Seluruh Tipe target tersebut.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140503,
       "id": "pupil_etched_into_cosmos",
       "name": "Pupil, Etched into Cosmos",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140504,
       "id": "blaze_plunged_to_canyon",
       "name": "Blaze, Plunged to Canyon",
-      "desc": "Saat melancarkan Skill, ATK akan meningkat <nobr>30%</nobr> selama <nobr>2</nobr> giliran. Efek ini dapat ditumpuk hingga <nobr>2</nobr> lapis."
+      "desc": "Saat melancarkan Skill, ATK akan meningkat <nobr>30%</nobr> selama <nobr>2</nobr> giliran. Efek ini dapat ditumpuk hingga <nobr>2</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140505,
       "id": "embryo_set_beyond_vortex",
       "name": "Embryo, Set Beyond Vortex",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140506,
       "id": "everything_is_in_everything",
       "name": "Everything Is in Everything",
-      "desc": "DMG yang diakibatkan Anaxa adalah <nobr>130%</nobr> dari DMG aslinya. Kedua efek dari Trace \"Imperative Hiatus\" akan langsung terpicu dan tidak lagi bergantung pada jumlah karakter Path \"Erudition\" dalam tim."
+      "desc": "DMG yang diakibatkan Anaxa adalah <nobr>130%</nobr> dari DMG aslinya. Kedua efek dari Trace \"Imperative Hiatus\" akan langsung terpicu dan tidak lagi bergantung pada jumlah karakter Path \"Erudition\" dalam tim.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

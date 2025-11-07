@@ -2,6 +2,7 @@
   "_id": 1414,
   "id": "dan_heng_permansor_terrae",
   "name": "丹恆•騰荒",
+  "description": "吉奧里亞的胸膛，以伏龍的身軀支撐破碎的大地，忍耐千年苦痛。\n無名客丹恆——捍衛「大地」火種的黃金裔——扶八荒之將傾，將地上生靈送往遠方的天地\n。百川歸海，群山合鳴，不朽的道途將綿延萬里。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "對指定敵方單體造成少量物理屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "使指定我方角色成為【同袍】並為我方全體提供可疊加護盾量的護盾。",
       "type": "戰技",
       "tag": "防禦",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,32 @@
       "simpleDesc": "對敵方全體造成大量物理屬性傷害，並為我方全體提供可疊加護盾量的護盾。並強化【龍靈】，【龍靈】行動時發動追加攻擊，對敵方全體造成少量物理屬性傷害和少量【同袍】相應屬性傷害。強化持續【龍靈】#3[i]次行動。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻擊",
+          "desc": "滿足條件時自動觸發的效果，對目標發動1次額外的攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1202,32 @@
       "simpleDesc": "我方角色成為【同袍】時，丹恆•騰荒會為其召喚【龍靈】。\n【龍靈】行動時，解除我方全體1個負面效果並提供可疊加護盾量的護盾。",
       "type": "天賦",
       "tag": "防禦",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "負面效果",
+          "desc": "對戰鬥有負面效果的所有持續狀態，若無特殊說明則可加以解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1597,15 @@
       "simpleDesc": "使一定區域內敵人陷入暈眩狀態，並使當下行動角色獲得【同袍】，下一次戰鬥開始時自動對持有【同袍】的角色施放戰技。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1622,114 @@
       "_id": 141401,
       "id": "shed_scales_of_old",
       "name": "蛻卻舊鱗的荒龍",
-      "desc": "丹恆•騰荒施放終結技時，恢復<nobr>1</nobr>個戰技點，使【同袍】全屬性<u>抗性穿透</u>提高<nobr>18%</nobr>，持續<nobr>3</nobr>回合。"
+      "desc": "丹恆•騰荒施放終結技時，恢復<nobr>1</nobr>個戰技點，使【同袍】全屬性<u>抗性穿透</u>提高<nobr>18%</nobr>，持續<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141402,
       "id": "watch_trails_to_blaze",
       "name": "守望開拓的赤子",
-      "desc": "終結技的強化龍靈行動效果額外增加<nobr>2</nobr>次，丹恆•騰荒施放終結技後【龍靈】<u>行動提前</u><nobr>100%</nobr>。強化【龍靈】行動時，【同袍】造成的<u>附加傷害</u>為原傷害的<nobr>200%</nobr>，且本次提供的護盾量為原護盾量的<nobr>200%</nobr>。"
+      "desc": "終結技的強化龍靈行動效果額外增加<nobr>2</nobr>次，丹恆•騰荒施放終結技後【龍靈】<u>行動提前</u><nobr>100%</nobr>。強化【龍靈】行動時，【同袍】造成的<u>附加傷害</u>為原傷害的<nobr>200%</nobr>，且本次提供的護盾量為原護盾量的<nobr>200%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動提前",
+          "desc": "使目標在下次行動前的等待間隔縮短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141403,
       "id": "bear_weight_of_worlds",
       "name": "日月山河的託付",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141404,
       "id": "by_oath_this_vessel_is_i",
       "name": "金石立誓，此身為舟",
-      "desc": "【同袍】受到的傷害降低<nobr>20%</nobr>。"
+      "desc": "【同袍】受到的傷害降低<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141405,
       "id": "the_path_of_permanence_sweeps_far",
       "name": "不朽之途萬里綿延",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141406,
       "id": "one_dream_to_enfold_all_wilds",
       "name": "草木微塵皆入夢中",
-      "desc": "場上存在【同袍】時，使敵方全體受到的傷害提高<nobr>20%</nobr>，【同袍】造成傷害時，無視敵方目標<nobr>12%</nobr>的防禦力。丹恆•騰荒施放終結技時，【同袍】會對敵方全體造成等同於【同袍】<nobr>330%</nobr>攻擊力的相應屬性<u>附加傷害</u>。"
+      "desc": "場上存在【同袍】時，使敵方全體受到的傷害提高<nobr>20%</nobr>，【同袍】造成傷害時，無視敵方目標<nobr>12%</nobr>的防禦力。丹恆•騰荒施放終結技時，【同袍】會對敵方全體造成等同於【同袍】<nobr>330%</nobr>攻擊力的相應屬性<u>附加傷害</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

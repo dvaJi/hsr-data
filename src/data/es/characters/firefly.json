@@ -2,6 +2,7 @@
   "_id": 1310,
   "id": "firefly",
   "name": "Luciérnaga",
+  "description": "Un miembro de los Cazadores de Estelaron que usa un equipo de armadura mecanizada conocido como \"SAM\". Su personalidad se caracteriza por su determinación y lealtad inquebrantable.\nDiseñada y nacida como un arma contra El Enjambre, crece a una velocidad extremadamente rápida, pero su esperanza de vida es muy corta.\nSe unió a los Cazadores de Estelaron en búsqueda de una oportunidad de \"sobrevivir\" y encontrar la forma de desafiar su destino.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Consume una parte de sus PV para recuperar energía e infligir Daño de Fuego a un enemigo. Su próxima acción se adelanta.",
       "type": "Habilidad básica",
       "tag": "ATQ individual",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,15 @@
       "simpleDesc": "Entra en el estado de Combustión completa y su acción se adelanta un 100%. Su ATQ básico y su habilidad básica se potencian. Su VEL, su eficiencia de la Ruptura de Debilidad, y el Daño de Ruptura que reciben los enemigos aumentan. Dura hasta que termine la cuenta regresiva.",
       "type": "Habilidad definitiva",
       "tag": "Potenciación",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,24 @@
       "simpleDesc": "Cuantos menos PV tenga, menos daño recibe. Mientras esté en el estado de Combustión completa, el efecto de reducción de daño se mantiene al máximo y aumenta su RES a efecto. Al comenzar la batalla, si su energía no llega al #2[i]%, recupera energía hasta alcanzar el #2[i]%. Cuando la energía se recupera al máximo, se disipan todos los estados negativos que tenga.",
       "type": "Talento",
       "tag": "Defensa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Estado negativo",
+          "desc": "Reduce la capacidad de combate por un periodo de tiempo. A menos que se especifique lo contrario, estos estados se pueden eliminar.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1490,15 @@
       "desc": "Salta en el aire y se mueve libremente durante #1[i] s. Puede usar el ataque en picado para terminar antes este vuelo. Cuando termina este movimiento, SAM cae y ataca inmediatamente a todos los enemigos en un área determinada. Al comenzar cada oleada, aplica Debilidad de Fuego a todos los enemigos durante #3[i] turnos, e inflige un #2[i]% del ATQ de SAM como Daño de Fuego a todos los enemigos.",
       "simpleDesc": "Salta en el aire y se mueve libremente. Desciende tras unos segundos para golpear a todos los enemigos en el área de efecto determinada. Al comenzar cada oleada, aplica Debilidad de Fuego a todos los enemigos y les inflige Daño de Fuego.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1517,105 @@
       "_id": 131001,
       "id": "in_reddened_chrysalis_i_once_rest",
       "name": "Dormí plácidamente en la crisálida escarlata",
-      "desc": "La habilidad básica potenciada ignora un <nobr>15%</nobr> de la DEF de los objetivos y no consume pts. de habilidad básica."
+      "desc": "La habilidad básica potenciada ignora un <nobr>15%</nobr> de la DEF de los objetivos y no consume pts. de habilidad básica.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131002,
       "id": "from_shattered_sky_i_free_fall",
       "name": "Me precipito desde el cielo fragmentado",
-      "desc": "Al usar el ATQ básico potenciado o la habilidad básica potenciada en el estado de Combustión completa, si derrota a un enemigo o lo afecta con <u>Ruptura de Debilidad</u>, SAM obtiene inmediatamente 1 <u>turno adicional</u>. Este efecto se puede volver a activar después de <nobr>1</nobr> turno."
+      "desc": "Al usar el ATQ básico potenciado o la habilidad básica potenciada en el estado de Combustión completa, si derrota a un enemigo o lo afecta con <u>Ruptura de Debilidad</u>, SAM obtiene inmediatamente 1 <u>turno adicional</u>. Este efecto se puede volver a activar después de <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Ruptura de Debilidad",
+          "desc": "Cuando la Firmeza del objetivo se reduce a 0, entrará en un estado especial en el que sus acciones se retrasarán.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Turno adicional",
+          "desc": "Obtiene 1 turno adicional que no se resta de la cantidad de turnos. Durante este turno adicional no se puede usar la habilidad definitiva.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131003,
       "id": "amidst_silenced_stars_i_deep_sleep",
       "name": "Me abandono a los sueños en la galaxia silenciosa",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131004,
       "id": "upon_lighted_fyrefly_i_soon_gaze",
       "name": "Veré la luz de las luciérnagas",
-      "desc": "En el estado de Combustión completa, la RES a efecto de SAM aumenta en un <nobr>50%</nobr>."
+      "desc": "En el estado de Combustión completa, la RES a efecto de SAM aumenta en un <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131005,
       "id": "from_undreamt_night_i_thence_shine",
       "name": "Me elevo brillante de la larga noche sin sueños",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131006,
       "id": "in_finalized_morrow_i_full_bloom",
       "name": "Brillo hacia el mañana aun después de florecer",
-      "desc": "Cuando SAM está en el estado de Combustión completa, su <u>PEN de la RES</u> a Fuego aumenta en un <nobr>20%</nobr>. Al usar el ATQ básico potenciado o la habilidad básica potenciada, su eficiencia de la Ruptura de Debilidad aumenta en un <nobr>50%</nobr>."
+      "desc": "Cuando SAM está en el estado de Combustión completa, su <u>PEN de la RES</u> a Fuego aumenta en un <nobr>20%</nobr>. Al usar el ATQ básico potenciado o la habilidad básica potenciada, su eficiencia de la Ruptura de Debilidad aumenta en un <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

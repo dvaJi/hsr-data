@@ -2,6 +2,7 @@
   "_id": 1013,
   "id": "herta",
   "name": "Herta",
+  "description": "Miembro n.º 83 del Círculo de Genios y verdadera dueña de la Estación Espacial.\nUna científica extremadamente inteligente y absolutamente carente de empatía.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a todos los enemigos. Los enemigos con más PV reciben más daño.",
       "type": "Habilidad básica",
       "tag": "ATQ AdE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Inflige Daño de Hielo a todos los enemigos.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,24 @@
       "simpleDesc": "Cuando el ataque de cualquier objetivo aliado reduce el porcentaje de PV actual de un enemigo al #1[i]% o menos, Herta lanza inmediatamente un ataque adicional que inflige una pequeña cantidad de Daño de Hielo a todos los enemigos.",
       "type": "Talento",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1383,15 @@
       "simpleDesc": "Tras usar la técnica, su ATQ aumenta en la siguiente batalla.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1409,88 @@
       "_id": 101301,
       "id": "kick_you_when_youre_down",
       "name": "Me regodeo en tu miseria",
-      "desc": "Al usar el ATQ básico, si el objetivo tiene un porcentaje de PV igual o inferior al <nobr>50%</nobr>, Herta inflige un Daño de Hielo <u>adicional</u> equivalente al <nobr>40%</nobr> de su ATQ."
+      "desc": "Al usar el ATQ básico, si el objetivo tiene un porcentaje de PV igual o inferior al <nobr>50%</nobr>, Herta inflige un Daño de Hielo <u>adicional</u> equivalente al <nobr>40%</nobr> de su ATQ.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101302,
       "id": "keep_the_ball_rolling",
       "name": "Que no pare la fiesta",
-      "desc": "Cada vez que se activa el talento, su Prob. CRIT aumenta en un <nobr>3%</nobr>. Este efecto se puede acumular hasta <nobr>5</nobr> veces."
+      "desc": "Cada vez que se activa el talento, su Prob. CRIT aumenta en un <nobr>3%</nobr>. Este efecto se puede acumular hasta <nobr>5</nobr> veces.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101303,
       "id": "thats_the_kind_of_girl_i_am",
       "name": "Soy de ese tipo de chicas",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101304,
       "id": "hit_where_it_hurts",
       "name": "Donde más duele",
-      "desc": "Cuando el talento se activa, el daño que inflige Herta aumenta en un <nobr>10%</nobr>."
+      "desc": "Cuando el talento se activa, el daño que inflige Herta aumenta en un <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101305,
       "id": "cuss_big_or_cuss_nothing",
       "name": "Insulta a lo grande o no lo hagas",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101306,
       "id": "no_one_can_betray_me",
       "name": "Nadie me puede traicionar",
-      "desc": "Tras usar la habilidad definitiva, su ATQ aumenta en un <nobr>25%</nobr> durante <nobr>1</nobr> turno."
+      "desc": "Tras usar la habilidad definitiva, su ATQ aumenta en un <nobr>25%</nobr> durante <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

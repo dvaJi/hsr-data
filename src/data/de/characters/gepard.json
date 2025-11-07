@@ -2,6 +2,7 @@
   "_id": 1104,
   "id": "gepard",
   "name": "Gepard",
+  "description": "Ein Hauptmann der Silbermähnen-Wachen und ein herausragender Krieger aus Belobog.\nEr ist ein durch und durch penibler und wachsamer Typ, der sich stets selbst treu bleibt.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Eis-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Fügt einem Gegner Eis-SCH zu und verursacht beim Ziel mit einer Chance Gefroren.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +800,18 @@
       "simpleDesc": "Gewährt allen Verbündeten einen Schild.",
       "type": "Ultimate",
       "tag": "Verteidigung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1136,24 @@
       "simpleDesc": "Wenn von einem Todesstoß getroffen, werden die eigenen LP sofort wiederhergestellt, anstatt handlungsunfähig zu werden. Dieser Effekt kann nur 1-mal pro Kampf ausgelöst werden.",
       "type": "Talent",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1448,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik erhalten alle Verbündeten zu Beginn des nächsten Kampfes einen Schild.",
       "type": "Technik",
       "tag": "Verteidigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1475,88 @@
       "_id": 110401,
       "id": "due_diligence",
       "name": "Sorgfaltspflicht",
-      "desc": "Erhöht beim Einsatz der Fertigkeit die <u>Grundchance</u>, das Ziel einzufrieren, um <nobr>35%</nobr>."
+      "desc": "Erhöht beim Einsatz der Fertigkeit die <u>Grundchance</u>, das Ziel einzufrieren, um <nobr>35%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110402,
       "id": "lingering_cold",
       "name": "Hartnäckige Kälte",
-      "desc": "Wenn der durch die Fertigkeit eingefrorene Gegner sich von „Gefroren“ erholt, sinkt seine GES für <nobr>1</nobr> Rd. um <nobr>20%</nobr>."
+      "desc": "Wenn der durch die Fertigkeit eingefrorene Gegner sich von „Gefroren“ erholt, sinkt seine GES für <nobr>1</nobr> Rd. um <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110403,
       "id": "never_surrender",
       "name": "Niemals aufgeben",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110404,
       "id": "faith_moves_mountains",
       "name": "Der Glaube versetzt Berge",
-      "desc": "Erhöht den Effekt-WDS aller Verbündeten um <nobr>20%</nobr>, wenn Gepard mitkämpft."
+      "desc": "Erhöht den Effekt-WDS aller Verbündeten um <nobr>20%</nobr>, wenn Gepard mitkämpft.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110405,
       "id": "cold_iron_fist",
       "name": "Kalte Eisenfaust",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110406,
       "id": "unyielding_resolve",
       "name": "Unnachgiebige Entschlossenheit",
-      "desc": "Bei Auslösung des Talents wird Gepard sofort in Aktion treten und seine LP-Wiederherstellung wird zusätzlich um <nobr>50%</nobr> seiner max. LP erhöht."
+      "desc": "Bei Auslösung des Talents wird Gepard sofort in Aktion treten und seine LP-Wiederherstellung wird zusätzlich um <nobr>50%</nobr> seiner max. LP erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

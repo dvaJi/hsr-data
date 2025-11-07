@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "飞霄",
+  "description": "仙舟「曜青」的天击将军，帝弓七天将之一，为人不拘一格，率直潇洒。\n精通百般武艺，炼化躯体至极致，享有「大捷将军」美名，深受仙舟军民爱戴。\n但身负「月狂」之症，如要在时限内猎尽孽物——飞霄唯一的敌手，便是自己。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量风属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "对敌方单体造成风属性伤害，随后额外发动1次天赋的追加攻击。",
       "type": "战技",
       "tag": "单攻",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "终结技期间可无视弱点属性削减敌方韧性，目标未被击破时飞霄弱点击破效率提高。\n对敌方单体发动#3[i]次【闪裂刃舞】或【钺贯天冲】，最后造成风属性伤害。",
       "type": "终结技",
       "tag": "单攻",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点击破状态",
+          "desc": "当敌方目标的韧性被削减至0时进入的特殊状态，进入该状态的目标行动会被延后。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "【飞黄】达到#3[i]点时可激活终结技，最多累计#4[i]点。我方目标每施放#2[i]次攻击，飞霄获得【飞黄】。\n队友施放攻击后，飞霄对主目标发动追加攻击，造成风属性伤害。该效果每回合最多触发1次，发动此攻击时使自身造成的伤害提高。",
       "type": "天赋",
       "tag": "单攻",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "进入【陷锋】状态，持续牵引敌人且移动速度提高，进战后获得【飞黄】。\n【陷锋】状态下可主动攻击所有牵引的敌人，每个波次开始时对敌方全体造成风属性伤害，该伤害必定暴击。牵引敌人越多，伤害倍率越高。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "镇绥天钧",
-      "desc": "发动【闪裂刃舞】或【钺贯天冲】后，使飞霄造成的终结技伤害额外提高，提高数值等同于原伤害的<nobr>10%</nobr>，最多叠加<nobr>5</nobr>层，持续至终结技行动结束。"
+      "desc": "发动【闪裂刃舞】或【钺贯天冲】后，使飞霄造成的终结技伤害额外提高，提高数值等同于原伤害的<nobr>10%</nobr>，最多叠加<nobr>5</nobr>层，持续至终结技行动结束。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "礼辰祷月",
-      "desc": "天赋效果中，我方目标每施放1次<u>追加攻击</u>即可使飞霄获得1点【飞黄】。该效果每回合最多触发<nobr>6</nobr>次。"
+      "desc": "天赋效果中，我方目标每施放1次<u>追加攻击</u>即可使飞霄获得1点【飞黄】。该效果每回合最多触发<nobr>6</nobr>次。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "景星出宿",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "驱飓听冰",
-      "desc": "天赋的<u>追加攻击</u>的削韧值提高<nobr>100%</nobr>，并且发动时使自身速度提高<nobr>8%</nobr>，持续<nobr>2</nobr>回合。"
+      "desc": "天赋的<u>追加攻击</u>的削韧值提高<nobr>100%</nobr>，并且发动时使自身速度提高<nobr>8%</nobr>，持续<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "擢登霄汉",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "惟首正丘",
-      "desc": "飞霄造成的终结技伤害的全属性<u>抗性穿透</u>提高<nobr>20%</nobr>。天赋的<u>追加攻击</u>伤害同时视为终结技伤害，并且伤害倍率提高<nobr>140%</nobr>。"
+      "desc": "飞霄造成的终结技伤害的全属性<u>抗性穿透</u>提高<nobr>20%</nobr>。天赋的<u>追加攻击</u>伤害同时视为终结技伤害，并且伤害倍率提高<nobr>140%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

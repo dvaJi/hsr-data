@@ -2,6 +2,7 @@
   "_id": 1310,
   "id": "firefly",
   "name": "Firefly",
+  "description": "A member of the Stellaron Hunters, clad in a set of mechanized armor known as \"SAM.\" Her character is marked by unwavering loyalty and steely resolve.\nEngineered as a weapon against the Swarm, she experiences accelerated growth, but a tragically shortened lifespan.\nShe joined the Stellaron Hunters in a quest for a chance at \"life,\" seeking to defy her fated demise.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -244,9 +245,18 @@
       "id": "order_flare_propulsion",
       "name": "Order: Flare Propulsion",
       "desc": "Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Fire DMG to a single enemy.",
+      "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -416,9 +426,27 @@
       "id": "order_aerial_bombardment",
       "name": "Order: Aerial Bombardment",
       "desc": "Consumes HP equal to #2[i]% of this unit's Max HP and regenerates a fixed amount of Energy equal to #3[i]% of this unit's Max Energy. Deals Fire DMG equal to #1[i]% of SAM's ATK to one designated enemy target. If the current HP is not sufficient, reduces SAM's HP to 1 when using this Skill. Advances this unit's next Action by #4[i]%.",
-      "simpleDesc": "Consumes a portion of this unit's own HP to regenerate Energy. Deals Fire DMG to a single enemy. Advances this unit's next Action.",
+      "simpleDesc": "Consumes a portion of this unit's own HP to regenerate Energy. Deals Fire DMG to one enemy. Advances this unit's next Action.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,15 @@
       "simpleDesc": "Enters the Complete Combustion state. Advances this unit's Action by 100%. Gains Enhanced Basic ATK and Enhanced Skill. Increases this unit's SPD, Weakness Break Efficiency, and the Break DMG received by the enemy targets, lasting until the countdown ends.",
       "type": "Ultimate",
       "tag": "Enhance",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,24 @@
       "simpleDesc": "The lower the HP, the less DMG received. During the Complete Combustion state, the DMG Reduction effect remains at its maximum extent and Effect RES is increased. If Energy is lower than #2[i]% when the battle starts, regenerates Energy to #2[i]%. Once Energy is regenerated to its maximum, dispels all debuffs on this unit.",
       "type": "Talent",
       "tag": "Defense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1490,15 @@
       "desc": "Leaps into the air and moves about freely for #1[i] seconds, which can be ended early by launching a plunging attack. When the duration ends, plunges and immediately attacks all enemies within a set area. At the start of each wave, applies a Fire Weakness to all enemies, lasting for #3[i] turn(s). Then, deals Fire DMG equal to #2[i]% of SAM's ATK to all enemies.",
       "simpleDesc": "Leaps into the air and moves about freely. After a few seconds of movement, plunges and attacks all enemies within range. At the start of each wave, applies a Fire Weakness to all enemies and deals Fire DMG to them.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1517,105 @@
       "_id": 131001,
       "id": "in_reddened_chrysalis_i_once_rest",
       "name": "In Reddened Chrysalis, I Once Rest",
-      "desc": "When using the Enhanced Skill, ignores <nobr>15%</nobr> of the target's DEF. The Enhanced Skill does not consume Skill Points."
+      "desc": "When using the Enhanced Skill, ignores <nobr>15%</nobr> of the target's DEF. The Enhanced Skill does not consume Skill Points.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131002,
       "id": "from_shattered_sky_i_free_fall",
       "name": "From Shattered Sky, I Free Fall",
-      "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to <u>Break their Weakness</u> allows SAM to immediately gain 1 <u>extra turn</u>. This effect can trigger again after <nobr>1</nobr> turn(s)."
+      "desc": "While in Complete Combustion, using the Enhanced Basic ATK or the Enhanced Skill to defeat an enemy target or to <u>Break their Weakness</u> allows SAM to immediately gain 1 <u>extra turn</u>. This effect can trigger again after <nobr>1</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Weakness Break State",
+          "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Extra Turn",
+          "desc": "Gain 1 extra turn that won't expend your remaining turns when taking action. During this extra turn, no Ultimate can be used.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131003,
       "id": "amidst_silenced_stars_i_deep_sleep",
       "name": "Amidst Silenced Stars, I Deep Sleep",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131004,
       "id": "upon_lighted_fyrefly_i_soon_gaze",
       "name": "Upon Lighted Fyrefly, I Soon Gaze",
-      "desc": "While in Complete Combustion, increases SAM's Effect RES by <nobr>50%</nobr>."
+      "desc": "While in Complete Combustion, increases SAM's Effect RES by <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131005,
       "id": "from_undreamt_night_i_thence_shine",
       "name": "From Undreamt Night, I Thence Shine",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131006,
       "id": "in_finalized_morrow_i_full_bloom",
       "name": "In Finalized Morrow, I Full Bloom",
-      "desc": "While in Complete Combustion, increases SAM's Fire <u>RES PEN</u> by <nobr>20%</nobr>. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by <nobr>50%</nobr>."
+      "desc": "While in Complete Combustion, increases SAM's Fire <u>RES PEN</u> by <nobr>20%</nobr>. When using the Enhanced Basic ATK or Enhanced Skill, increases Weakness Break Efficiency by <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

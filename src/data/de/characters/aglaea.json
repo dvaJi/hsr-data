@@ -2,6 +2,7 @@
   "_id": 1402,
   "id": "aglaea",
   "name": "Aglaea",
+  "description": "In der heiligen, von der Morgendämmerung geküssten Stadt arbeitet die Weberin behutsam mit dem goldenen Faden und verknüpft Schicksale.\nDie Erbin von Chrysos, Trägerin der Kernflamme der Romantik, ruft Helden aus aller Welt zusammen und führt sie erneut auf eine endlose Reise ...\nUm Götter zu stürzen, das heilige Feuer zurückzuerobern und dem fast zerstörten Amphoreus neues Leben einzuhauchen.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Blitz-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Stellt die LP der Kleidermacherin wieder her. Befindet sich der Memogeist Kleidermacherin nicht auf dem Kampffeld, so wird er beschworen und führt sofort eine Aktion aus.",
       "type": "Fertigkeit",
       "tag": "Beschwörung",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -753,6 +781,32 @@
       "simpleDesc": "Beschwört den Memogeist Kleidermacherin. Aglaea tritt in den Status „Höchste Haltung“ ein, führt sofort eine Aktion aus und erhält den verstärkten Standardangriff.",
       "type": "Ultimate",
       "tag": "Verstärkung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Mengenkontrolle-Debuff",
+          "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1122,6 +1176,24 @@
       "simpleDesc": "Wenn die Kleidermacherin auf dem Kampffeld ist, verursacht Aglaeas Angriff beim Ziel „Nahtstich“. Nach Angriffen auf Gegner mit dem Status Nahtstich wird geringer zusätzlicher Blitz-SCH verursacht.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1490,6 +1562,24 @@
       "desc": "Beschwört den Memogeist Kleidermacherin und startet einen gemeinsamen Angriff nach vorne. Stellt nach Kampfeintritt #2[i] Pkt. Energie wieder her und fügt allen Gegnern Blitz-SCH in Höhe von #1[i]% von Aglaeas ANG zu. Verursacht dann bei einem zufälligen Gegner „Nahtstich“.",
       "simpleDesc": "Beschwört den Memogeist Kleidermacherin und startet einen gemeinsamen Angriff nach vorne. Stellt nach Kampfeintritt Energie wieder her und fügt allen Gegnern geringen Blitz-SCH zu. Verursacht dann bei einem zufälligen Gegner „Nahtstich“.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1502,42 +1592,503 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Kleidermacherin",
+    "icon": "SpriteOutput/ServantIconTeam/11402B.png",
+    "hpBase": "#6",
+    "hpInherit": "#5",
+    "hpSkill": 140204,
+    "speedBase": "0",
+    "speedInherit": "#4",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1140201,
+        "name": "Dornige Falle",
+        "desc": "Fügt einem Gegner Blitz-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> des ANG und angrenzenden Einheiten Blitz-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span> des ANG zu.",
+        "simpleDesc": "Fügt einem Gegner und angrenzenden Einheiten geringen Blitz-SCH zu.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "Blast",
+          "name": "Ausdehnung"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          15
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.55,
+              0.33,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.66,
+              0.396,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.77,
+              0.462,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.88,
+              0.528,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.99,
+              0.594,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1.1,
+              0.66,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1.21,
+              0.726,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1.32,
+              0.792,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1.43,
+              0.858,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1.54,
+              0.924,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140203,
+        "name": "Körper aus Tränen",
+        "desc": "Nachdem Gegner mit dem Status „Nahtstich“ angegriffen wurden, wird die eigene GES um <span style=\"color:#f29e38ff><nobr>#1[i]</nobr></span> Pkt. erhöht. Dieser Effekt ist bis zu <nobr>#3[i]</nobr>-fach stapelbar. Die Kleidermacherin setzt während ihrer Aktion automatisch „Dornige Falle“ ein, wobei Gegner mit Nahtstich vorrangig getroffen werden.",
+        "simpleDesc": "Nachdem Gegner mit dem Status „Nahtstich“ angegriffen wurden, wird die <span style=\"color:#f29e38ff>eigene GES erhöht</span>. Greift während der Aktion automatisch an, wobei Gegner mit Nahtstich vorrangig getroffen werden.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Verstärkung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              44,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              46.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              48.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              50.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              52.8,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              55,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              57.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              59.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              61.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              63.8,
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140205,
+        "name": "Aufsteigender Sommer",
+        "desc": "Wenn die Kleidermacherin beschworen wird, wird ihre <u>Aktion</u> um <nobr>#1[i]%</nobr> <u>vorgezogen</u>.",
+        "simpleDesc": "Wenn diese Einheit beschworen wird, wird ihre <u>Aktion vorgezogen</u>.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Verstärkung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Aktion vorziehen",
+            "desc": "Verringert die Wartezeit des Ziels vor der nächsten Aktion.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140206,
+        "name": "Blüte der trockenen Gräser",
+        "desc": "Wenn die Kleidermacherin verschwindet, stellt Aglaea <nobr>#1[i]</nobr> Pkt. Energie wieder her.",
+        "simpleDesc": "Wenn diese Einheit verschwindet, stellt Aglaea Energie wieder her.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Verstärkung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              20
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "Schwebende Sternformation",
-      "desc": "Erhöht den erlittenen SCH des Gegners mit „Nahtstich“ um <nobr>15%</nobr>. Stellt zusätzlich <nobr>20</nobr> Pkt. Energie wieder her, nachdem Aglaea oder die Kleidermacherin diesen Gegner angegriffen hat."
+      "desc": "Erhöht den erlittenen SCH des Gegners mit „Nahtstich“ um <nobr>15%</nobr>. Stellt zusätzlich <nobr>20</nobr> Pkt. Energie wieder her, nachdem Aglaea oder die Kleidermacherin diesen Gegner angegriffen hat.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "Augenlider des treibenden Schicksals",
-      "desc": "Wenn Aglaea oder die Kleidermacherin eine Aktion ausführt, ignoriert ihr verursachter SCH <nobr>14%</nobr> der VTD des Ziels. Dieser Effekt ist bis zu <nobr>3</nobr>-fach stapelbar und hält an, bis eine andere Einheit als Aglaea oder Kleidermacherin ihre Fähigkeit aktiv einsetzt."
+      "desc": "Wenn Aglaea oder die Kleidermacherin eine Aktion ausführt, ignoriert ihr verursachter SCH <nobr>14%</nobr> der VTD des Ziels. Dieser Effekt ist bis zu <nobr>3</nobr>-fach stapelbar und hält an, bis eine andere Einheit als Aglaea oder Kleidermacherin ihre Fähigkeit aktiv einsetzt.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "Geschenk des perlenden Morgentaus",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "Das Funkeln in der Murmel",
-      "desc": "Erhöht die max. Stapelzahl für die GES-Erhöhung des Memogeist-Talents um <nobr>1</nobr>. Nach Aglaeas Angriff kann die Kleidermacherin ebenfalls die GES-Erhöhung des Memogeist-Talents erhalten."
+      "desc": "Erhöht die max. Stapelzahl für die GES-Erhöhung des Memogeist-Talents um <nobr>1</nobr>. Nach Aglaeas Angriff kann die Kleidermacherin ebenfalls die GES-Erhöhung des Memogeist-Talents erhalten.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "Weberin der pechschwarzen Qualen",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "Goldene Fäden voller Ungewissheit",
-      "desc": "Wenn Aglaea sich im Status „Höchste Haltung“ befindet, wird die <u>Blitz-WDS-DUR</u> von ihr und der Kleidermacherin um <nobr>20%</nobr> erhöht. Wenn die GES von Aglaea oder der Kleidermacherin mehr als <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr> beträgt, wird der durch ihre <u>Kettenangriffe</u> verursachte SCH um <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr> erhöht."
+      "desc": "Wenn Aglaea sich im Status „Höchste Haltung“ befindet, wird die <u>Blitz-WDS-DUR</u> von ihr und der Kleidermacherin um <nobr>20%</nobr> erhöht. Wenn die GES von Aglaea oder der Kleidermacherin mehr als <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr> beträgt, wird der durch ihre <u>Kettenangriffe</u> verursachte SCH um <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000019,
+          "name": "Kettenangriff",
+          "desc": "Mehrere Einheiten führen in einer einzigen Aktion Angriffe auf Gegner aus.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ]
     }
   ],
   "skillTreePoints": [

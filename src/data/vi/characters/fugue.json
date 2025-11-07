@@ -2,6 +2,7 @@
   "_id": 1225,
   "id": "fugue",
   "name": "Fugue",
+  "description": "Thiếu nữ người Hồ Ly khôn khéo nhanh nhẹn, từ tướng mạo, tên tuổi đến cả thân phận đều bị người ta cướp mất.\nVận mệnh chừa lại cho cô một tia hy vọng sống, nhưng dấu ấn khó phai của Hủy Diệt vẫn đang âm thầm rục rịch.\nTrải qua sinh tử, \"người quên trở về\" lại có được cuộc đời mới... không biết khi nào cô ấy mới có thể trở về cố hương đây?",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Khiến 1 đồng đội nhận Khẩn Nguyện Hồ Ly, tăng Tấn Công Kích Phá, đồng thời tấn công kẻ địch không có điểm yếu thuộc tính tương ứng cũng có thể làm giảm Sức Bền.\nKhiến bản thân vào trạng thái Rực Lửa, Tấn Công Thường được cường hóa. Khi đơn vị phe ta có Khẩn Nguyện Hồ Ly tấn công, Fugue có xác suất lớn khiến phòng thủ của mục tiêu phe địch giảm.",
       "type": "Chiến Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,15 @@
       "simpleDesc": "Gây Sát Thương Hỏa cho toàn bộ kẻ địch, lần tấn công này bỏ qua các thuộc tính Điểm Yếu và làm giảm Sức Bền của toàn bộ kẻ địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,32 @@
       "simpleDesc": "Khi Fugue trong trận, mục tiêu phe địch sẽ được gắn thêm Vân Hỏa Chiêu, khi Vân Hỏa Chiêu bị giảm còn 0 sẽ chịu sát thương phá vỡ điểm yếu lần nữa. Sau khi phe ta tấn công mục tiêu phe địch ở trạng thái Phá Vỡ Điểm Yếu sẽ gây thêm Siêu Sát Thương Phá Vỡ.",
       "type": "Thiên Phú",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Siêu Sát Thương Phá Vỡ",
+          "desc": "Tấn Công Kích Phá, điểm Giảm Sức Bền của lần tấn công này và cấp nhân vật càng cao, Siêu Sát Thương Phá Vỡ gây ra càng cao.\nSiêu Sát Thương Phá Vỡ không thể bạo kích, không bị ảnh hưởng bởi hiệu ứng loại Tăng Sát Thương.\nSiêu Sát Thương Phá Vỡ cũng thuộc Sát Thương Phá Vỡ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,32 @@
       "simpleDesc": "Khiến kẻ địch trong khu vực nhất định rơi vào trạng thái Choáng. Tấn công kẻ địch ở trạng thái Choáng để vào chiến đấu, thì Fugue sẽ Ưu Tiên Hành Động đồng thời có xác suất lớn khiến mỗi 1 mục tiêu địch rơi vào trạng thái giảm phòng thủ giống với Chiến Kỹ của Fugue.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1410,37 +1499,88 @@
       "_id": 122501,
       "id": "earthbound_i_was_cloudward_i_be",
       "name": "Hồ Trần Đã Tận, Cưỡi Mây Về Trời",
-      "desc": "Mục tiêu phe ta có Khẩn Nguyện Hồ Ly sẽ tăng <nobr>50%</nobr> Hiệu Suất Phá Vỡ Điểm Yếu."
+      "desc": "Mục tiêu phe ta có Khẩn Nguyện Hồ Ly sẽ tăng <nobr>50%</nobr> Hiệu Suất Phá Vỡ Điểm Yếu.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122502,
       "id": "beatitude_dawns_for_the_worthy",
       "name": "Điềm Lành Trở Lại, Đức Hạnh Sinh Sôi",
-      "desc": "Khi có điểm yếu của mục tiêu phe địch bị phá vỡ, sẽ hồi <nobr>3</nobr> điểm Năng Lượng cho Fugue. Sau khi thi triển Tuyệt Kỹ, toàn bộ phe ta <u>Ưu Tiên Hành Động</u> <nobr>24%</nobr>."
+      "desc": "Khi có điểm yếu của mục tiêu phe địch bị phá vỡ, sẽ hồi <nobr>3</nobr> điểm Năng Lượng cho Fugue. Sau khi thi triển Tuyệt Kỹ, toàn bộ phe ta <u>Ưu Tiên Hành Động</u> <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122503,
       "id": "verity_weaves_thoughts_to_blade",
       "name": "Chân Lý Bao Trùm, Sáng Tạo Thần Ý",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122504,
       "id": "bereft_of_form_which_name_to_bear",
       "name": "Hóa Hình Tiên Biến, Phải Mang Tên Nào",
-      "desc": "Mục tiêu phe ta có Khẩn Nguyện Hồ Ly, Sát Thương Phá Vỡ gây ra sẽ tăng <nobr>20%</nobr>."
+      "desc": "Mục tiêu phe ta có Khẩn Nguyện Hồ Ly, Sát Thương Phá Vỡ gây ra sẽ tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122505,
       "id": "colored_cloud_rains_fortune",
       "name": "Ngũ Sắc Sinh Mây, Vạn Vật Kế Thừa",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122506,
       "id": "clairvoyance_of_boom_and_doom",
       "name": "Tương Lai Đơn Sắc, Vong Thịnh Đan Xen",
-      "desc": "Hiệu suất Phá Vỡ Điểm Yếu của Fugue tăng <nobr>50%</nobr>. Khi Fugue ở trạng thái Rực Lửa, hiệu ứng Khẩn Nguyện Hồ Ly sẽ có hiệu lực với toàn bộ phe ta."
+      "desc": "Hiệu suất Phá Vỡ Điểm Yếu của Fugue tăng <nobr>50%</nobr>. Khi Fugue ở trạng thái Rực Lửa, hiệu ứng Khẩn Nguyện Hồ Ly sẽ có hiệu lực với toàn bộ phe ta.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

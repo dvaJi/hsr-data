@@ -2,6 +2,7 @@
   "_id": 1013,
   "id": "herta",
   "name": "Herta",
+  "description": "Anggota ke-83 \"Genius Society\", pemilik Stasiun Luar Angkasa yang sebenarnya.\nSeorang ilmuwan yang sangat cerdas namun tidak punya rasa simpati.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil pada seluruh musuh, DMG yang diakibatkan akan lebih tinggi pada target yang persentase HP-nya tinggi.",
       "type": "Skill",
       "tag": "AoE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Mengakibatkan Ice DMG pada seluruh musuh.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,24 @@
       "simpleDesc": "Saat rekan tim mana pun melancarkan serangan dan membuat persentase HP target musuh saat ini menjadi kurang dari atau sama dengan #1[i]%, Herta akan segera melancarkan Serangan Lanjutan, mengakibatkan Ice DMG dalam jumlah kecil pada seluruh musuh.",
       "type": "Talent",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1383,15 @@
       "simpleDesc": "Setelah menggunakan Technique, akan meningkatkan ATK diri sendiri saat pertempuran berikutnya dimulai.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1409,88 @@
       "_id": 101301,
       "id": "kick_you_when_youre_down",
       "name": "Kick You When You're Down",
-      "desc": "Saat melancarkan Basic Attack, jika persentase HP musuh yang ditarget kurang dari atau sama dengan <nobr>50%</nobr>, maka akan mengakibatkan Ice <u>DMG Tambahan</u> sebesar <nobr>40%</nobr> ATK Herta."
+      "desc": "Saat melancarkan Basic Attack, jika persentase HP musuh yang ditarget kurang dari atau sama dengan <nobr>50%</nobr>, maka akan mengakibatkan Ice <u>DMG Tambahan</u> sebesar <nobr>40%</nobr> ATK Herta.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101302,
       "id": "keep_the_ball_rolling",
       "name": "Keep the Ball Rolling",
-      "desc": "Setiap kali Talent terpicu, CRIT Rate Herta akan meningkat <nobr>3%</nobr>, efek ini dapat ditumpuk hingga <nobr>5</nobr> lapis."
+      "desc": "Setiap kali Talent terpicu, CRIT Rate Herta akan meningkat <nobr>3%</nobr>, efek ini dapat ditumpuk hingga <nobr>5</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101303,
       "id": "thats_the_kind_of_girl_i_am",
       "name": "That's the Kind of Girl I Am",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101304,
       "id": "hit_where_it_hurts",
       "name": "Hit Where It Hurts",
-      "desc": "Meningkatkan <nobr>10%</nobr> DMG yang diakibatkan saat Talent terpicu."
+      "desc": "Meningkatkan <nobr>10%</nobr> DMG yang diakibatkan saat Talent terpicu.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101305,
       "id": "cuss_big_or_cuss_nothing",
       "name": "Cuss Big or Cuss Nothing",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101306,
       "id": "no_one_can_betray_me",
       "name": "No One Can Betray Me",
-      "desc": "Setelah melancarkan Ultimate, meningkatkan <nobr>25%</nobr> ATK selama <nobr>1</nobr> giliran."
+      "desc": "Setelah melancarkan Ultimate, meningkatkan <nobr>25%</nobr> ATK selama <nobr>1</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

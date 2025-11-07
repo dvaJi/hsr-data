@@ -2,6 +2,7 @@
   "_id": 1309,
   "id": "robin",
   "name": "Robin",
+  "description": "Uma cantora Haloviana, nascida em Penacony, que alcançou fama cósmica. Uma moça elegante e recatada.\nDesta vez, ela foi convidada pela Família para encantar a todos com sua música durante o Festival Carismonia.\nEla pode usar o poder da \"Harmonia\" para transmitir sua música, manifestando \"ressonância\" entre todas as formas de vida, não apenas seus fãs.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Aumenta o Dano causado por todos os aliados.",
       "type": "Perícia",
       "tag": "Suporte",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +747,32 @@
       "simpleDesc": "Entra no estado de Concerto, aumenta o ATQ de todos os aliados e faz com que todos os companheiros de equipe ajam imediatamente. Depois de um ataque, Robin causa Dano Físico Adicional. Enquanto Concerto dura, Robin é imune a penalidades de Controle Negativo. Antes de Concerto terminar, Robin não pode agir nem iniciar sua rodada até o final da contagem regressiva.",
       "type": "Perícia Suprema",
       "tag": "Suporte",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Penal. de Controle Negativo",
+          "desc": "Congelamento, Embaraço, Aprisionamento, Dominação, Injúria, Reverberação Forte, Sonho Alienígena, Arapuca, Em Pânico, Bloqueio de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1142,15 @@
       "simpleDesc": "Aumenta o Dano CRIT de todos os aliados. Após um aliado atacar o inimigo, Robin regenera adicionalmente Energia.",
       "type": "Talento",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1460,15 @@
       "simpleDesc": "Cria uma dimensão especial ao seu redor. Inimigos dentro dessa dimensão não atacarão Robin. Depois de entrar em batalha enquanto a dimensão está ativa, Robin regenera adicionalmente #2[i] de Energia no início de cada onda.",
       "type": "Técnica",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1486,106 @@
       "_id": 130901,
       "id": "land_of_smiles",
       "name": "Terra dos Sorrisos",
-      "desc": "Enquanto estiverem no estado de \"Concerto\", a <u>PEN de RES</u> a Todos os Tipos de todos os aliados aumenta em <nobr>24%</nobr>."
+      "desc": "Enquanto estiverem no estado de \"Concerto\", a <u>PEN de RES</u> a Todos os Tipos de todos os aliados aumenta em <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130902,
       "id": "afternoon_tea_for_two",
       "name": "Chá da Tarde para Dois",
-      "desc": "Enquanto estiver no estado de Concerto, a VEL de todos os aliados aumenta em <nobr>16%</nobr>. O efeito de Regeneração de Energia do Talento aumenta adicionalmente em <nobr>1</nobr>."
+      "desc": "Enquanto estiver no estado de Concerto, a VEL de todos os aliados aumenta em <nobr>16%</nobr>. O efeito de Regeneração de Energia do Talento aumenta adicionalmente em <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130903,
       "id": "inverted_tuning",
       "name": "Afinação Inversa",
-      "desc": "Nv. de Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. de Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. de Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130904,
       "id": "raindrop_key",
       "name": "Chave da Chuva",
-      "desc": "Ao usar sua Perícia Suprema, remove <u>penalidades de Controle Negativo</u> de todos os aliados. Enquanto Robin estiver no estado de \"Concerto\", aumenta a RES a Efeito de todos os aliados em <nobr>50%</nobr>."
+      "desc": "Ao usar sua Perícia Suprema, remove <u>penalidades de Controle Negativo</u> de todos os aliados. Enquanto Robin estiver no estado de \"Concerto\", aumenta a RES a Efeito de todos os aliados em <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Penal. de Controle Negativo",
+          "desc": "Congelamento, Embaraço, Aprisionamento, Dominação, Injúria, Reverberação Forte, Sonho Alienígena, Arapuca, Em Pânico, Bloqueio de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130905,
       "id": "lonestars_lament",
       "name": "Lamento da Estrela Solitária",
-      "desc": "Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130906,
       "id": "moonless_midnight",
       "name": "Meia-Noite Sem Lua",
-      "desc": "Enquanto o estado de \"Concerto\" estiver ativo, o Dano CRIT do <u>Dano Físico Adicional</u> causado pela Perícia Suprema aumenta em <nobr>450%</nobr>. O efeito da \"Meia-Noite Sem Lua\" pode ser ativado até <nobr>8</nobr> vez(es). A contagem de ativação reinicia cada vez que a Perícia Suprema é usada."
+      "desc": "Enquanto o estado de \"Concerto\" estiver ativo, o Dano CRIT do <u>Dano Físico Adicional</u> causado pela Perícia Suprema aumenta em <nobr>450%</nobr>. O efeito da \"Meia-Noite Sem Lua\" pode ser ativado até <nobr>8</nobr> vez(es). A contagem de ativação reinicia cada vez que a Perícia Suprema é usada.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

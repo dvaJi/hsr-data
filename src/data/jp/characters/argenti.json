@@ -2,6 +2,7 @@
   "_id": 1302,
   "id": "argenti",
   "name": "アルジェンティ",
+  "description": "「純美の騎士団」の古典的な騎士。行方不明になっている「純美」の星神イドリラを敬虔に慕っていた。\n正直で、堂々とした性格の人。宇宙を漫遊し、イドリラの名を広めている。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "敵全体に少量の物理属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "全体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +738,18 @@
       "simpleDesc": "EPを#2[i]消費し、敵全体に物理属性ダメージを与える。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1022,6 +1059,15 @@
       "simpleDesc": "通常攻撃、戦闘スキル、または必殺技を発動した時、攻撃が敵1体に命中するごとにアルジェンティのEPを回復し、会心率をアップする。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1392,15 @@
       "simpleDesc": "一定範囲内の敵を目眩状態にする。目眩状態の敵を攻撃して戦闘に入った後、敵全体に少量の物理属性ダメージを与え、アルジェンティのEPを回復する。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1364,37 +1419,79 @@
       "_id": 130201,
       "id": "a_lacuna_in_kingdom_of_aesthetics",
       "name": "{RUBY_B#しんびおうこく}審美王国{RUBY_E#}の{RUBY_B#けっかん}欠陥{RUBY_E#}",
-      "desc": "「栄達」1層につき、さらに会心ダメージ+<nobr>4%</nobr>。"
+      "desc": "「栄達」1層につき、さらに会心ダメージ+<nobr>4%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130202,
       "id": "agates_humility",
       "name": "メノウの{RUBY_B#けんそん}謙遜{RUBY_E#}",
-      "desc": "必殺技を発動した時、フィールド上の敵が<nobr>3</nobr>体以上の場合、攻撃力+<nobr>40%</nobr>、<nobr>1</nobr>ターン継続。"
+      "desc": "必殺技を発動した時、フィールド上の敵が<nobr>3</nobr>体以上の場合、攻撃力+<nobr>40%</nobr>、<nobr>1</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130203,
       "id": "thorny_roads_glory",
       "name": "{RUBY_B#いばら}荊棘{RUBY_E#}の{RUBY_B#みち}道{RUBY_E#}の{RUBY_B#えいこう}栄光{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130204,
       "id": "trumpets_dedication",
       "name": "トランペットの{RUBY_B#ほうけん}奉献{RUBY_E#}",
-      "desc": "戦闘開始時、「栄達」を<nobr>2</nobr>層獲得し、天賦の累積可能層数+<nobr>2</nobr>。"
+      "desc": "戦闘開始時、「栄達」を<nobr>2</nobr>層獲得し、天賦の累積可能層数+<nobr>2</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130205,
       "id": "snow_from_somewhere_in_cosmos",
       "name": "{RUBY_B#うちゅう}宇宙{RUBY_E#}のどこかで{RUBY_B#ふ}降{RUBY_E#}る{RUBY_B#ゆき}雪{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130206,
       "id": "your_resplendence",
       "name": "「{RUBY_B#あなた}貴女{RUBY_E#}」の{RUBY_B#かがや}輝{RUBY_E#}き",
-      "desc": "必殺技を発動した時、敵の防御力を<nobr>30%</nobr>無視する。"
+      "desc": "必殺技を発動した時、敵の防御力を<nobr>30%</nobr>無視する。",
+      "unlockCost": [
+        {
+          "ItemID": 11302,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "히아킨",
+  "description": "구름 속 도시 국가는 세월을 따라 분열되었으나, 놀빛 정원은 다시금 문을 열어 영원한 밤에 희미한 빛을 가져다주었다.\n의사 히아킨티아, 「하늘」의 불씨를 수호하는 황금의 후예. 선조의 의지를 계승하여 찢어진 조석을 메꾼다.\n——무지갯빛이 쏟아져 원한을 녹이고, 여명이 대지에 다시 돌아오기를",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 바람 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "기억 정령 이카를 소환하고 모든 아군의 HP를 회복시킨다",
       "type": "전투 스킬",
       "tag": "회복",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "기억 정령 이카를 소환하고 모든 아군의 HP를 회복한다. [비 온 뒤 맑음] 상태에 진입하며, 히아킨이 해당 상태일 시 모든 아군의 HP 최대치가 증가한다",
       "type": "필살기",
       "tag": "서포트",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "히아킨 또는 이카가 치유 제공 시 이카가 가하는 피해가 증가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "다음 전투 시작 시 모든 아군의 HP를 회복하고 HP 최대치를 증가시킨다",
       "type": "비술",
       "tag": "회복",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "이카",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "먹구름, 저리 가!",
+        "desc": "모든 적에게 이번 전투 중 히아킨과 이카 누적 치유 수치의 <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>만큼 바람 속성 피해를 가하고, 누적 치유 수치의 <nobr>#2[i]%</nobr>를 초기화한다",
+        "simpleDesc": "모든 적에게 바람 속성 피해를 가한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "범위 공격"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "맑은 하늘의 손을 잡고",
+        "desc": "이카의 속도가 0으로 유지되고 <u>디버프 효과</u>에 면역되며, 행동 서열에 나타나지 않는다.\n이카를 제외한 아군의 HP가 감소하면, 이카는 임의 목표의 턴 시작 시 또는 행동 후 자신의 HP 최대치의 <nobr>#1[i]%</nobr>만큼 HP를 소모하고, HP가 감소한 아군의 HP를 히아킨 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>+<span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span>만큼 회복시킨다.\n히아킨이 [비 온 뒤 맑음] 상태일 시 이카는 히아킨이 스킬을 발동한 후 즉시 <u>보너스 턴</u>을 1개 획득하고 자동으로 [먹구름, 저리 가!]를 발동하며, 이카가 특성의 치유 효과 발동 시 추가로 모든 아군의 HP를 히아킨 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>+<span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>만큼 회복시킨다. 이카가 스킬을 발동하면 자신의 모든 <u>지속 효과</u> 지속 턴 수가 1 감소한다",
+        "simpleDesc": "이카를 제외한 아군의 <span style=\"color:#f29e38ff>HP가 감소</span>하면 이카가 자신의 HP를 소모해 해당 목표의 <span style=\"color:#f29e38ff>HP를 회복</span>한다. 히아킨이 [비 온 뒤 맑음] 보유 시 이카는 히아킨이 스킬을 발동한 후 즉시 <u>보너스 턴</u>을 1개 획득하고 자동으로 기억 정령 스킬을 발동하며, 이카가 스킬을 발동하면 자신의 <u>지속 효과</u> 지속 턴 수가 1 감소한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "회복"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "보너스 턴",
+            "desc": "턴 횟수를 소모하지 않는 보너스 턴 1개를 획득한다. 해당 턴에서는 필살기를 발동할 수 없다",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "디버프 효과",
+            "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "지속 효과",
+            "desc": "버프 효과, 디버프 효과와 기타 효과를 포함한다",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "날개를 펼쳐, 태양을 향해",
+        "desc": "소환될 시 히아킨의 에너지를 <nobr>#1[i]</nobr>pt 회복한다. 처음으로 소환될 시 추가로 에너지를 <nobr>#2[i]</nobr>pt 회복한다",
+        "simpleDesc": "소환될 시 히아킨의 에너지를 회복한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "강화"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "추락, 그리고 비상",
+        "desc": "사라질 시 히아킨의 <u>행동 게이지가 <nobr>#1[i]%</nobr> 증가</u>한다",
+        "simpleDesc": "사라질 시 히아킨의 <u>행동 게이지가 증가</u>한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "강화"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "행동 게이지 증가",
+            "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "어두운 밤의 촛불을 지키며",
-      "desc": "히아킨이 [비 온 뒤 맑음] 상태일 시 모든 아군의 HP 최대치가 추가로 <nobr>50%</nobr> 증가하고, 공격 발동 후 즉시 히아킨 HP 최대치의 <nobr>8%</nobr>만큼 HP를 회복한다"
+      "desc": "히아킨이 [비 온 뒤 맑음] 상태일 시 모든 아군의 HP 최대치가 추가로 <nobr>50%</nobr> 증가하고, 공격 발동 후 즉시 히아킨 HP 최대치의 <nobr>8%</nobr>만큼 HP를 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "제 정원에 앉았다 가세요",
-      "desc": "아군의 HP가 감소하면 속도가 <nobr>30%</nobr> 증가한다, 지속 시간: <nobr>2</nobr>턴"
+      "desc": "아군의 HP가 감소하면 속도가 <nobr>30%</nobr> 증가한다, 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "출발! 태양을 향한 모험",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "햇빛 호박을 그대에게",
-      "desc": "행적 [잔잔해진 폭풍]이 강화된다. 속도가 <nobr>1</nobr>pt 초과할 때마다 히아킨과 이카의 치명타 피해가 추가로 <nobr>2%</nobr> 증가한다"
+      "desc": "행적 [잔잔해진 폭풍]이 강화된다. 속도가 <nobr>1</nobr>pt 초과할 때마다 히아킨과 이카의 치명타 피해가 추가로 <nobr>2%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "바다의 뒷면에 비치는 붉은 노을",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "하늘이… 나의 기도에 응답하리",
-      "desc": "이카가 기억 정령 스킬을 발동하고 초기화되는 누적 치유 수치가 <nobr>12%</nobr>로 변경된다. 이카가 필드에 있을 시 모든 아군의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다"
+      "desc": "이카가 기억 정령 스킬을 발동하고 초기화되는 누적 치유 수치가 <nobr>12%</nobr>로 변경된다. 이카가 필드에 있을 시 모든 아군의 모든 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

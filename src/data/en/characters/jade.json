@@ -2,6 +2,7 @@
   "_id": 1314,
   "id": "jade",
   "name": "Jade",
+  "description": "A senior manager in the IPC Strategic Investment Department and one of the Ten Stonehearts, known for her cornerstone \"Jade of Credit.\"\nA beautiful and elegant moneylender, she is skilled in deciphering the depths of people's minds, with a personal hobby called \"Bonajade Exchange.\"\nShe's willing to wait patiently for high-value acquisitions and adept at extracting value from seemingly destitute clients.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -244,9 +245,18 @@
       "id": "lash_of_riches",
       "name": "Lash of Riches",
       "desc": "Deals Quantum DMG equal to #1[i]% of Jade's ATK to one designated enemy target, and Quantum DMG equal to #2[i]% of Jade's ATK to adjacent enemies.",
-      "simpleDesc": "Deals minor Quantum DMG to a single enemy and minor Quantum DMG to enemies adjacent to it.",
+      "simpleDesc": "Deals minor Quantum DMG to one enemy and minor Quantum DMG to enemies adjacent to it.",
       "type": "Basic ATK",
       "tag": "Blast",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Makes a single ally become the Debt Collector and increases their SPD. After the Debt Collector attacks, deals minor Quantum Additional DMG to each enemy target hit and consume the Debt Collector's own HP. When Jade becomes the Debt Collector, she cannot gain the SPD boost effect, and her attacks do not consume her HP.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -768,6 +796,24 @@
       "simpleDesc": "Deals Quantum DMG to all enemy units, and this unit's Talent's Follow-up ATK DMG multiplier increases.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1092,6 +1138,24 @@
       "simpleDesc": "After Jade or the Debt Collector unit attacks, gains 1 point of Charge for each enemy target hit. Upon reaching #3[i] points of Charge, consumes the #3[i] points to launch 1 instance of Follow-up ATK, dealing Quantum DMG to all enemies.\nWhen Jade launches the Follow-up ATK, gains Pawned Asset and increases CRIT DMG, stacking up to #2[i] times.",
       "type": "Talent",
       "tag": "AoE",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1446,6 +1510,15 @@
       "simpleDesc": "Inflicts Blind Fealty on enemies within a set area. Attacking an enemy with Blind Fealty causes all enemies with Blind Fealty to enter combat simultaneously. Upon entering combat, deals minor Quantum DMG to all enemies and immediately gains #3[i] stack(s) of Pawned Asset.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1537,97 @@
       "_id": 131401,
       "id": "altruism_nevertheless_tradable",
       "name": "Altruism? Nevertheless Tradable",
-      "desc": "The <u>Follow-up ATK</u> DMG from Jade's Talent increases by <nobr>32%</nobr>. After the \"Debt Collector\" character attacks and the number of the enemy target(s) hit is either 2 or 1, Jade additionally gains <nobr>1</nobr> or <nobr>2</nobr> point(s) of Charge respectively."
+      "desc": "The <u>Follow-up ATK</u> DMG from Jade's Talent increases by <nobr>32%</nobr>. After the \"Debt Collector\" character attacks and the number of the enemy target(s) hit is either 2 or 1, Jade additionally gains <nobr>1</nobr> or <nobr>2</nobr> point(s) of Charge respectively.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131402,
       "id": "morality_herein_authenticated",
       "name": "Morality? Herein Authenticated",
-      "desc": "When there are <nobr>15</nobr> stacks of Pawned Asset, Jade's CRIT Rate increases by <nobr>18%</nobr>."
+      "desc": "When there are <nobr>15</nobr> stacks of Pawned Asset, Jade's CRIT Rate increases by <nobr>18%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131403,
       "id": "honesty_soon_mortgaged",
       "name": "Honesty? Soon Mortgaged",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131404,
       "id": "sincerity_put_option_only",
       "name": "Sincerity? Put Option Only",
-      "desc": "When using Ultimate, enables the DMG dealt by Jade to ignore <nobr>12%</nobr> of enemy targets' DEF, lasting for <nobr>3</nobr> turn(s)."
+      "desc": "When using Ultimate, enables the DMG dealt by Jade to ignore <nobr>12%</nobr> of enemy targets' DEF, lasting for <nobr>3</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131405,
       "id": "hope_hitherto_forfeited",
       "name": "Hope? Hitherto Forfeited",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131406,
       "id": "equity_pending_sponsorship",
       "name": "Equity? Pending Sponsorship",
-      "desc": "While the \"Debt Collector\" character exists on the field, Jade's Quantum <u>RES PEN</u> increases by <nobr>20%</nobr>, and Jade gains the \"Debt Collector\" state."
+      "desc": "While the \"Debt Collector\" character exists on the field, Jade's Quantum <u>RES PEN</u> increases by <nobr>20%</nobr>, and Jade gains the \"Debt Collector\" state.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

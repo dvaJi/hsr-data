@@ -2,6 +2,7 @@
   "_id": 1106,
   "id": "pela",
   "name": "Pela",
+  "description": "Sĩ quan tình báo Thiết Vệ Bờm Bạc.\nChăm chỉ, được các thành viên của đội thiết vệ vô cùng kính trọng.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Băng cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Giải trừ 1 hiệu ứng BUFF của 1 kẻ địch, gây Sát Thương Băng cho 1 kẻ địch.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Hiệu Ứng Buff",
+          "desc": "Tất cả trạng thái duy trì có hiệu ứng buff đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +756,27 @@
       "simpleDesc": "Có xác suất lớn khiến kẻ địch giảm phòng thủ, và gây lượng nhỏ Sát Thương Băng cho tất cả địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1110,24 @@
       "simpleDesc": "Sau khi tấn công, nếu kẻ địch đang trong Hiệu Ứng Xấu, thì Pela sẽ hồi năng lượng",
       "type": "Thiên Phú",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1415,24 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào chiến đấu, sẽ gây cho 1 kẻ địch ngẫu nhiên Sát Thương Băng tương đương #4[i]% Tấn Công của Pela, đồng thời có #1[i]% xác suất cơ bản khiến Phòng Thủ của mỗi kẻ địch giảm #2[i]%, duy trì #3[i] hiệp.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào trận sẽ gây lượng nhỏ sát thương cho 1 kẻ địch ngẫu nhiên, và có xác suất lớn khiến mỗi kẻ địch giảm Phòng Thủ.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1452,114 @@
       "_id": 110601,
       "id": "victory_report",
       "name": "Báo Cáo Chiến Thắng",
-      "desc": "Khi mục tiêu phe địch bị tiêu diệt, Pela sẽ hồi <nobr>5</nobr> điểm Năng Lượng."
+      "desc": "Khi mục tiêu phe địch bị tiêu diệt, Pela sẽ hồi <nobr>5</nobr> điểm Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110602,
       "id": "adamant_charge",
       "name": "Không Ngừng Đột Kích",
-      "desc": "Khi thi triển Chiến Kỹ giải trừ <u>hiệu ứng buff</u>, Tốc Độ tăng <nobr>10%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi thi triển Chiến Kỹ giải trừ <u>hiệu ứng buff</u>, Tốc Độ tăng <nobr>10%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Hiệu Ứng Buff",
+          "desc": "Tất cả trạng thái duy trì có hiệu ứng buff đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110603,
       "id": "suppressive_force",
       "name": "Tăng Cấp Áp Chế",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110604,
       "id": "full_analysis",
       "name": "Phân Tích Đầy Đủ",
-      "desc": "Khi thi triển Chiến Kỹ, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến Kháng Băng của mục tiêu phe địch giảm <nobr>12%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi thi triển Chiến Kỹ, có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến Kháng Băng của mục tiêu phe địch giảm <nobr>12%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110605,
       "id": "absolute_jeopardy",
       "name": "Quấy Nhiễu Tuyệt Đối",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110606,
       "id": "feeble_pursuit",
       "name": "Truy Kích Yếu Ớt",
-      "desc": "Sau khi thi triển tấn công, nếu mục tiêu phe địch đang trong <u>Hiệu Ứng Xấu</u>, sẽ gây <u>Sát Thương Kèm Theo</u> thuộc tính Băng cho kẻ đó bằng <nobr>40%</nobr> Tấn Công của Pela."
+      "desc": "Sau khi thi triển tấn công, nếu mục tiêu phe địch đang trong <u>Hiệu Ứng Xấu</u>, sẽ gây <u>Sát Thương Kèm Theo</u> thuộc tính Băng cho kẻ đó bằng <nobr>40%</nobr> Tấn Công của Pela.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

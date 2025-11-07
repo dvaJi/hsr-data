@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "Mydei",
+  "description": "Kremnos yang tenggelam dalam kabut, kota kekacauan dan peperangan! Darah pengkhianatan keluarga mengalir dalam garis keturunan kerajaannya, dan dewanya dikenal sebagai malapetaka.\nMydeimos yang abadi, singa yang terpisah dari kawanannya, Keturunan Chrysos yang memburu benih api \"Pertikaian\", harus menanggung ribuan kematian, kembali ke kampung halaman berlumuran darah, memikul takdir jatuh ke dalam kegilaan seorang diri.\nMembunuh raja untuk menjadi raja, membunuh dewa untuk menjadi dewa. Kuku besi peperangan melintasi padang gurun, pada akhirnya akan ternodai oleh darah tanah kelahirannya.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Mengonsumsi HP, mengakibatkan Imaginary DMG pada 1 musuh yang ditargetkan, dan mengakibatkan Imaginary DMG dalam jumlah kecil pada musuh di sekitar target.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Memulihkan HP dan mengakumulasi Charge Talent, mengakibatkan Imaginary DMG dalam jumlah besar pada satu musuh yang ditargetkan, mengakibatkan Imaginary DMG pada musuh di sekitar target, serta membuat target dan musuh di sekitarnya memasuki status Taunt.",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "Memperoleh Charge saat kehilangan HP. Saat Charge mencapai 100, akan memasuki status \"Vendetta\", memulihkan HP, serta mengalami Pendahuluan Aksi. Saat berstatus \"Vendetta\", Max HP saat ini akan meningkat, dan DEF akan menjadi 0 secara tetap. Saat giliran Mydei dimulai, Mydei akan secara otomatis melancarkan \"Kingslayer Be King\".\nSaat Charge mencapai 150 ketika berstatus \"Vendetta\", Mydei akan segera memperoleh 1 giliran tambahan dan secara otomatis melancarkan \"Godslayer Be God\".\nSaat Mydei terkena serangan mematikan, Mydei akan keluar dari status \"Vendetta\".",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Giliran Tambahan",
+          "desc": "Memperoleh 1 giliran tambahan yang tidak akan menghabiskan sisa giliran yang dimiliki. Selama giliran tambahan ini, tidak dapat menggunakan Ultimate apa pun.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Gugur",
+          "desc": "Saat HP berkurang hingga 0, maka karakter tersebut gugur. Karakter yang gugur tidak dapat melanjutkan pertempuran.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "Menarik musuh dalam area tertentu dan membuat musuh memasuki status Daze. Jika menyerang musuh berstatus Daze, setelah memasuki pertempuran, akan mengakibatkan Imaginary DMG dalam jumlah kecil pada seluruh musuh, dan membuat target memasuki status Taunt. Unit ini akan mengakumulasi Charge Talent.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "Frost Hones Spine of Steel",
-      "desc": "DMG Multiplier yang diakibatkan \"Godslayer Be God\" pada target utama meningkat <nobr>30%</nobr>, dan \"Godslayer Be God\" berubah menjadi mengakibatkan Imaginary DMG pada seluruh musuh sebesar DMG Multiplier yang diakibatkan pada target utama."
+      "desc": "DMG Multiplier yang diakibatkan \"Godslayer Be God\" pada target utama meningkat <nobr>30%</nobr>, dan \"Godslayer Be God\" berubah menjadi mengakibatkan Imaginary DMG pada seluruh musuh sebesar DMG Multiplier yang diakibatkan pada target utama.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "Strife Beholds Cry of Dead",
-      "desc": "Saat berstatus \"Vendetta\", DMG yang diakibatkan Mydei akan mengabaikan <nobr>15%</nobr> DEF target musuh, dan setelah menerima pemulihan, <nobr>40%</nobr> dari nilai pemulihan akan dikonversi menjadi Charge. Akumulasi Charge hasil konversi tidak dapat melebihi <nobr>40</nobr> poin. Setelah unit mana pun beraksi, akan mereset Charge yang dapat diakumulasi."
+      "desc": "Saat berstatus \"Vendetta\", DMG yang diakibatkan Mydei akan mengabaikan <nobr>15%</nobr> DEF target musuh, dan setelah menerima pemulihan, <nobr>40%</nobr> dari nilai pemulihan akan dikonversi menjadi Charge. Akumulasi Charge hasil konversi tidak dapat melebihi <nobr>40</nobr> poin. Setelah unit mana pun beraksi, akan mereset Charge yang dapat diakumulasi.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "Honor Exalts Feast of Faith",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "Siren Jolts the Laconic Lion",
-      "desc": "Saat berstatus \"Vendetta\", CRIT DMG meningkat <nobr>30%</nobr> dan setelah diserang target musuh akan memulihkan HP sebesar <nobr>10%</nobr> Max HP diri sendiri."
+      "desc": "Saat berstatus \"Vendetta\", CRIT DMG meningkat <nobr>30%</nobr> dan setelah diserang target musuh akan memulihkan HP sebesar <nobr>10%</nobr> Max HP diri sendiri.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "War Chisels Flesh of Flame",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "Legacy Scales Mound of Blood",
-      "desc": "Saat memasuki pertempuran, akan segera memasuki status \"Vendetta\" dan Charge yang diperlukan untuk \"Godslayer Be God\" berkurang hingga <nobr>100</nobr> poin."
+      "desc": "Saat memasuki pertempuran, akan segera memasuki status \"Vendetta\" dan Charge yang diperlukan untuk \"Godslayer Be God\" berkurang hingga <nobr>100</nobr> poin.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

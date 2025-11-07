@@ -2,6 +2,7 @@
   "_id": 1003,
   "id": "himeko",
   "name": "히메코",
+  "description": "은하열차의 복원가\n광활한 별하늘을 보기 위해 은하열차와 함께하는 것을 택했다\n취미는 핸드메이드 커피 만들기",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 화염 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "단일 적에게 화염 속성 피해를 가하고, 인접한 목표에게 소량의 화염 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 13
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "모든 적에게 화염 속성 피해를 가하고, 적 처치 시 에너지를 회복한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 27
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "전투 시작 및 적의 약점이 격파될 시 충전을 획득한다.\n아군이 공격 후 충전이 최대치가 될 경우 추가 공격을 발동하고, 모든 적에게 화염 속성 피해를 가하며 충전을 모두 소모한다",
       "type": "특성",
       "tag": "범위 공격",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,24 @@
       "simpleDesc": "특수 영역을 만든다. 영역 내의 적과 전투에 진입하면 높은 확률로 적이 받는 화염 속성 피해가 증가한다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1441,79 @@
       "_id": 100301,
       "id": "childhood",
       "name": "어린 시절",
-      "desc": "[기세 몰이] 발동 후 히메코의 속도가 <nobr>20%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "[기세 몰이] 발동 후 히메코의 속도가 <nobr>20%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100302,
       "id": "convergence",
       "name": "우연한 만남",
-      "desc": "현재 HP 백분율이 <nobr>50%</nobr> 이하인 적에게 가하는 피해가 <nobr>15%</nobr> 증가한다"
+      "desc": "현재 HP 백분율이 <nobr>50%</nobr> 이하인 적에게 가하는 피해가 <nobr>15%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100303,
       "id": "poised",
       "name": "자아",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100304,
       "id": "dedication",
       "name": "몰입",
-      "desc": "전투 스킬을 발동하여 적의 약점을 격파할 시 히메코는 추가로 <nobr>1</nobr>pt의 충전을 획득한다"
+      "desc": "전투 스킬을 발동하여 적의 약점을 격파할 시 히메코는 추가로 <nobr>1</nobr>pt의 충전을 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100305,
       "id": "aspiration",
       "name": "몽상",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100306,
       "id": "trailblaze",
       "name": "개척!",
-      "desc": "필살기는 추가로 2회 피해를 주고, 임의의 적에게 각각 기존 피해 <nobr>40%</nobr>만큼의 화염 속성 피해를 준다"
+      "desc": "필살기는 추가로 2회 피해를 주고, 임의의 적에게 각각 기존 피해 <nobr>40%</nobr>만큼의 화염 속성 피해를 준다",
+      "unlockCost": [
+        {
+          "ItemID": 11003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

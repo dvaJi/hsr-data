@@ -2,6 +2,7 @@
   "_id": 1112,
   "id": "topaz_and_numby",
   "name": "Topaz y Conti",
+  "description": "Topaz, la experta del Departamento de Inversiones Estratégicas de la Corporación para la Paz Interastral y líder del equipo especial de fiscalización de deudas.\nEs miembro de los Diez Corazones de Piedra desde muy joven y su piedra angular es el \"topacio de la recaudación de deudas\".\nSu compañero, un Chanchito Dimensional llamado Conti, es capaz de percibir con agudeza dónde hay riquezas, con lo que los trabajos relacionados con seguridad, cobro de deudas y procesos actuariales no suponen ningún problema.\nActualmente, viajan juntos por el cosmos investigando diversas deudas y obligaciones que pueden afectar negativamente al desarrollo de los negocios de la Corporación.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Hace que un enemigo entre en el estado Certificado de deuda y reciba más daño de ataque adicional. Conti inflige Daño de Fuego al objetivo.",
       "type": "Habilidad básica",
       "tag": "ATQ individual",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -728,6 +762,18 @@
       "simpleDesc": "Conti entra en el estado Subida increíble y aumenta su multiplicador de daño y su Daño CRIT.",
       "type": "Habilidad definitiva",
       "tag": "Potenciación",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1113,32 @@
       "simpleDesc": "Invoca a Conti al principio de la batalla. Cuando Conti realiza una acción, lanza un ataque adicional que inflige Daño de Fuego a un objetivo afectado por Certificado de deuda.\nCuando un enemigo afectado por Certificado de deuda recibe un ataque adicional, la acción de Conti se adelanta.",
       "type": "Talento",
       "tag": "ATQ individual",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1463,15 @@
       "simpleDesc": "Invoca a Conti en el mapa para que la siga. Conti busca automáticamente los tesoros normales y Chanchitos de los alrededores. Al usar la técnica, Topaz recupera energía después del primer ataque de Conti en la siguiente batalla.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1489,106 @@
       "_id": 111201,
       "id": "future_market",
       "name": "El mercado del mañana",
-      "desc": "Cuando un enemigo afectado por Certificado de deuda recibe un <u>ataque adicional</u>, entra en el estado de Endeudamiento. Se puede activar 1 vez como máximo por ataque.\nEndeudamiento hace que el Daño CRIT de los <u>ataques adicionales</u> que recibe el objetivo aumente en un <nobr>25%</nobr>. Se puede acumular hasta <nobr>2</nobr> veces. Cuando Certificado de deuda se disipa, Endeudamiento también se elimina."
+      "desc": "Cuando un enemigo afectado por Certificado de deuda recibe un <u>ataque adicional</u>, entra en el estado de Endeudamiento. Se puede activar 1 vez como máximo por ataque.\nEndeudamiento hace que el Daño CRIT de los <u>ataques adicionales</u> que recibe el objetivo aumente en un <nobr>25%</nobr>. Se puede acumular hasta <nobr>2</nobr> veces. Cuando Certificado de deuda se disipa, Endeudamiento también se elimina.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111202,
       "id": "bona_fide_acquisition",
       "name": "Adquisición de buena fe",
-      "desc": "Después de que Conti realice una acción y lance un ataque, Topaz recupera <nobr>5</nobr> pts. de energía."
+      "desc": "Después de que Conti realice una acción y lance un ataque, Topaz recupera <nobr>5</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111203,
       "id": "seize_the_big_and_free_the_small",
       "name": "Toma lo mucho y deja lo poco",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111204,
       "id": "agile_operation",
       "name": "Gestión rápida",
-      "desc": "Cuando comienza el turno de Conti, la acción de Topaz se <u>adelanta</u> un <nobr>20%</nobr>."
+      "desc": "Cuando comienza el turno de Conti, la acción de Topaz se <u>adelanta</u> un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111205,
       "id": "inflationary_demand",
       "name": "Demanda creciente",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111206,
       "id": "incentive_mechanism",
       "name": "Incentivos",
-      "desc": "Cuando Conti está en el estado de Subida increíble, su cantidad de ataques aumenta en <nobr>1</nobr> y, cuando ataca, su <u>PEN de la RES</u> a Fuego aumenta en un <nobr>10%</nobr>."
+      "desc": "Cuando Conti está en el estado de Subida increíble, su cantidad de ataques aumenta en <nobr>1</nobr> y, cuando ataca, su <u>PEN de la RES</u> a Fuego aumenta en un <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1309,
   "id": "robin",
   "name": "知更鳥",
+  "description": "出生於匹諾康尼，聞名銀河的天環族歌者、舉止從容優雅的少女。\n此次受家族宴請回到故鄉，在「諧樂大典」為眾賓獻歌一曲。\n可以依靠「同諧」的力量傳遞歌聲，在歌迷乃至萬界生靈之中展現「共鳴」。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量物理屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "使我方全體傷害提高。",
       "type": "戰技",
       "tag": "輔助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +747,32 @@
       "simpleDesc": "進入【協奏】狀態，使我方全體攻擊力提高，並使隊友立即行動，攻擊後知更鳥額外造成物理屬性附加傷害。【協奏】狀態期間自身免疫控制類負面狀態，狀態結束前不會進入自己回合且無法行動，直至倒數計時結束。",
       "type": "終結技",
       "tag": "輔助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "控制類負面狀態",
+          "desc": "凍結，糾纏，禁錮，支配，怒噪，強烈震盪，異夢，纏禁，恐懼，行動鎖定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1142,15 @@
       "simpleDesc": "使我方全體暴擊傷害提高，且我方目標攻擊敵方後知更鳥額外恢復能量。",
       "type": "天賦",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1460,15 @@
       "simpleDesc": "在自身周圍製造特殊領域。領域內敵人不會攻擊知更鳥。領域展開期間進入戰鬥後，每個波次開始時知更鳥額外恢復#2[i]點能量。",
       "type": "秘技",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1486,106 @@
       "_id": 130901,
       "id": "land_of_smiles",
       "name": "微笑的國度",
-      "desc": "處於【協奏】狀態時，我方全體全屬性<u>抗性穿透</u>提高<nobr>24%</nobr>。"
+      "desc": "處於【協奏】狀態時，我方全體全屬性<u>抗性穿透</u>提高<nobr>24%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130902,
       "id": "afternoon_tea_for_two",
       "name": "兩者的午茶",
-      "desc": "處於【協奏】狀態時，我方全體速度提高<nobr>16%</nobr>。天賦的能量恢復效果額外提高<nobr>1</nobr>點。"
+      "desc": "處於【協奏】狀態時，我方全體速度提高<nobr>16%</nobr>。天賦的能量恢復效果額外提高<nobr>1</nobr>點。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130903,
       "id": "inverted_tuning",
       "name": "倒懸的弦宮",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，終結技等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，終結技等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130904,
       "id": "raindrop_key",
       "name": "雨滴的鑰匙",
-      "desc": "施放終結技時，解除我方全體的<u>控制類負面狀態</u>，使我方全體在知更鳥處於【協奏】狀態期間的效果抗性提高<nobr>50%</nobr>。"
+      "desc": "施放終結技時，解除我方全體的<u>控制類負面狀態</u>，使我方全體在知更鳥處於【協奏】狀態期間的效果抗性提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "控制類負面狀態",
+          "desc": "凍結，糾纏，禁錮，支配，怒噪，強烈震盪，異夢，纏禁，恐懼，行動鎖定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130905,
       "id": "lonestars_lament",
       "name": "孤星的眼淚",
-      "desc": "普通攻擊等級+1，最多不超過<nobr>10</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "普通攻擊等級+1，最多不超過<nobr>10</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130906,
       "id": "moonless_midnight",
       "name": "月隱的午夜",
-      "desc": "處於【協奏】狀態時，終結技造成的物理屬性<u>附加傷害</u>的暴擊傷害額外提高<nobr>450%</nobr>。【月隱的午夜】效果最多觸發<nobr>8</nobr>次，每次施放終結技時重置觸發次數。"
+      "desc": "處於【協奏】狀態時，終結技造成的物理屬性<u>附加傷害</u>的暴擊傷害額外提高<nobr>450%</nobr>。【月隱的午夜】效果最多觸發<nobr>8</nobr>次，每次施放終結技時重置觸發次數。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

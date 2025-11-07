@@ -2,6 +2,7 @@
   "_id": 1009,
   "id": "asta",
   "name": "Asta",
+  "description": "Pesquisadora-chefe da Estação Espacial Herta e dama distinta de uma família renomada.\nAstrônoma cheia de curiosidade e especializada em gerenciar a equipe díspar da Estação Espacial.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Fogo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Causa Dano de Fogo leve a alvos únicos inimigos e é rebatido 5 vezes.",
       "type": "Perícia",
       "tag": "Rebote",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "Aumenta a VEL de todos os aliados.",
       "type": "Perícia Suprema",
       "tag": "Suporte",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,15 @@
       "simpleDesc": "O personagem receberá 1 acúmulo de Carga para cada inimigo diferente que atacar, com um máximo de 5 acúmulos. Cada acúmulo de Carga aumenta o ATQ de todos os aliados. Os acúmulos de Carga são reduzidos no início de cada rodada.",
       "type": "Talento",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1327,6 +1373,15 @@
       "desc": "Ataca o inimigo imediatamente. Depois de entrar na batalha, causa #1[i]% do ATQ de Asta como Dano de Fogo a todos os inimigos.",
       "simpleDesc": "Ataca o inimigo. Depois de entrar em batalha, causa Dano leve a todos os inimigos.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1343,37 +1398,79 @@
       "_id": 100901,
       "id": "star_sings_sans_verses_or_vocals",
       "name": "As Estrelas Cantam Sem Versos ou Vocais",
-      "desc": "Ao usar a Perícia, causa Dano 1 vez a mais a um inimigo aleatório."
+      "desc": "Ao usar a Perícia, causa Dano 1 vez a mais a um inimigo aleatório.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100902,
       "id": "moon_speaks_in_wax_and_wane",
       "name": "A Lua Fala com Uma Voz Inconstante",
-      "desc": "Ao usar sua Perícia Suprema, os acúmulos de Carga de Asta não serão reduzidos na próxima rodada."
+      "desc": "Ao usar sua Perícia Suprema, os acúmulos de Carga de Asta não serão reduzidos na próxima rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100903,
       "id": "meteor_showers_for_wish_and_want",
       "name": "Chuva de Meteoros do Desejo",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100904,
       "id": "aurora_basks_in_beauty_and_bliss",
       "name": "A Aurora Aquece com Beleza e Alegria",
-      "desc": "A Taxa de Regeneração de Energia de Asta aumenta em <nobr>15%</nobr> quando ela tem <nobr>2</nobr> ou mais acúmulos de Carga."
+      "desc": "A Taxa de Regeneração de Energia de Asta aumenta em <nobr>15%</nobr> quando ela tem <nobr>2</nobr> ou mais acúmulos de Carga.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100905,
       "id": "nebula_secludes_in_runes_and_riddles",
       "name": "A Nebulosa se Isola em Runas e Enigmas",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100906,
       "id": "cosmos_dreams_in_calm_and_comfort",
       "name": "Sonhos Cósmicos Tranquilos e Confortáveis",
-      "desc": "A perda de acúmulo(s) de carregamento a cada rodada é diminuída em <nobr>1</nobr>."
+      "desc": "A perda de acúmulo(s) de carregamento a cada rodada é diminuída em <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

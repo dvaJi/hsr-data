@@ -2,6 +2,7 @@
   "_id": 1015,
   "id": "archer",
   "name": "Archer",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner geringen Quanten-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -413,6 +423,15 @@
       "simpleDesc": "Tritt in den Status „Kreisverbindung“ ein. Fügt einem anvisierten Gegner massiven Quanten-SCH zu. Im Status Kreisverbindung endet die aktuelle Runde nach dem Einsatz der Fertigkeit nicht und Archers verursachter SCH durch Fertigkeiten wird erhöht. Wenn nicht genug Fertigkeitspunkte für einen weiteren Einsatz der Fertigkeit vorhanden sind, wird der Status Kreisverbindung entfernt.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": 2,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner massiven Quanten-SCH zu und erhält Aufladung.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1091,6 +1119,24 @@
       "simpleDesc": "Nach dem Angriff eines Teammitglieds verbraucht Archer 1 Pkt. Aufladung und führt einen Folgeangriff auf das Hauptziel aus, der Quanten-SCH verursacht und 1 Fertigkeitspunkt wiederherstellt.",
       "type": "Talent",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1384,6 +1430,15 @@
       "desc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt allen Gegnern Quanten-SCH in Höhe von #1[i]% von Archers ANG zu und erhält #2[i] Pkt. Aufladung.",
       "simpleDesc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt allen Gegnern Quanten-SCH zu und erhält Aufladung.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1401,37 +1456,79 @@
       "_id": 101501,
       "id": "the_unreached_dream",
       "name": "Der unmögliche Traum",
-      "desc": "Nachdem in einer einzelnen Runde <nobr>3</nobr>-mal eine Fertigkeit eingesetzt wurde, werden <nobr>2</nobr> Fertigkeitspunkte für Verbündete wiederhergestellt."
+      "desc": "Nachdem in einer einzelnen Runde <nobr>3</nobr>-mal eine Fertigkeit eingesetzt wurde, werden <nobr>2</nobr> Fertigkeitspunkte für Verbündete wiederhergestellt.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101502,
       "id": "the_unfulfilled_happiness",
       "name": "Das unerfüllte Glück",
-      "desc": "Reduziert den Quanten-WDS des Gegners beim Einsatz des Ultimates um <nobr>20%</nobr> und implantiert ihm Quanten-Schwäche. Dieser Effekt hält für <nobr>2</nobr> Rd. an."
+      "desc": "Reduziert den Quanten-WDS des Gegners beim Einsatz des Ultimates um <nobr>20%</nobr> und implantiert ihm Quanten-Schwäche. Dieser Effekt hält für <nobr>2</nobr> Rd. an.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101503,
       "id": "the_untamed_will",
       "name": "Der ungebändigte Wille",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101504,
       "id": "the_unsung_life",
       "name": "Das unbesungene Leben",
-      "desc": "Erhöht den verursachten Ultimate-SCH um <nobr>150%</nobr>."
+      "desc": "Erhöht den verursachten Ultimate-SCH um <nobr>150%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101505,
       "id": "the_nameless_watch",
       "name": "Der unbekannte, einsame Wächter",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101506,
       "id": "the_endless_pilgrimage",
       "name": "Die endlose Pilgerreise",
-      "desc": "Stellt zu Beginn der Runde 1 Fertigkeitspunkt wieder her. Erhöht die max. Stapelzahl für die SCH-Erhöhung der eigenen Fertigkeit um <nobr>1</nobr>. Der verursachte Fertigkeits-SCH ignoriert <nobr>20%</nobr> der VTD."
+      "desc": "Stellt zu Beginn der Runde 1 Fertigkeitspunkt wieder her. Erhöht die max. Stapelzahl für die SCH-Erhöhung der eigenen Fertigkeit um <nobr>1</nobr>. Der verursachte Fertigkeits-SCH ignoriert <nobr>20%</nobr> der VTD.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

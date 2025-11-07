@@ -2,6 +2,7 @@
   "_id": 1204,
   "id": "jing_yuan",
   "name": "Jing Yuan",
+  "description": "\"Divine Foresight\", salah satu Tujuh Jenderal Arbiter Xianzhou Alliance yang bertugas memimpin Cloud Knight Xianzhou Luofu.\nMurid dari Sang Juara Pedang \"Luofu\" terdahulu, namun tidak terkenal karena kemampuan pedangnya.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah kecil pada satu musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah kecil pada seluruh musuh dan menambah Hits Per Action milik Lightning-Lord.",
       "type": "Skill",
       "tag": "AoE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +750,15 @@
       "simpleDesc": "Mengakibatkan Lightning DMG pada seluruh musuh dan menambah Hits Per Action milik Lightning-Lord.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1033,10 +1064,44 @@
       "_id": 120404,
       "id": "prana_extirpated",
       "name": "Prana Extirpated",
-      "desc": "Memanggil Lightning-Lord saat pertempuran dimulai. Lightning-Lord memiliki #1[i] SPD dasar dan #4[i] Hits Per Action, setiap serangannya dihitung sebagai Serangan Lanjutan. Setiap serangan Lightning-Lord akan mengakibatkan Lightning DMG sebesar #2[i]% ATK Jing Yuan pada 1 musuh secara acak, serta mengakibatkan Lightning DMG pada target di sekitarnya sebesar #5[i]% dari Lightning DMG yang diakibatkan pada target utama.\nMaksimal Hits Per Action milik Lightning-Lord adalah #6[i], dan setiap kali Hits Per Action milik Lightning-Lord bertambah 1, SPD-nya akan meningkat #3[i]. Setelah aksinya berakhir, Hits Per Action dan SPD-nya akan kembali seperti semula.\nSaat Jing Yuan gugur, Lightning-Lord akan menghilang.\nSaat Jing Yuan terkena Crowd Control Debuff, Lightning-Lord juga tidak dapat beraksi.",
-      "simpleDesc": "Memanggil Lightning-Lord saat pertempuran dimulai. Saat \"Lightning-Lord\" beraksi, akan melancarkan Serangan Lanjutan, secara otomatis mengakibatkan Lightning DMG dalam jumlah kecil pada 1 musuh secara acak dan target di sekitarnya.",
+      "desc": "Memanggil \"Lightning-Lord\" saat pertempuran dimulai. \"Lightning-Lord\" memiliki #1[i] SPD dan #4[i] Hits Per Action di awal, dan akan melancarkan Serangan Lanjutan saat beraksi. Setiap Hit serangan \"Lightning-Lord\" mengakibatkan Lightning DMG sebesar #2[i]% ATK Jing Yuan pada 1 musuh acak dan Lightning DMG pada target di sekitarnya sebesar #5[i]% dari Lightning DMG yang diakibatkan pada target utama.\n\"Lightning-Lord\" maksimal mengakumulasi #6[i] Hits Per Action, dan SPD \"Lightning-Lord\" akan meningkat #3[i] setiap kali Hits Per Action bertambah 1. SPD dan Hits Per Action akan kembali seperti semula setelah aksinya berakhir.\nSaat Jing Yuan gugur, \"Lightning-Lord\" akan menghilang.\nSaat Jing Yuan terpengaruh Crowd Control Debuff, \"Lightning-Lord\" juga tidak dapat beraksi.",
+      "simpleDesc": "Memanggil \"Lightning-Lord\" saat pertempuran dimulai. Saat \"Lightning-Lord\" beraksi, akan melancarkan Serangan Lanjutan yang otomatis mengakibatkan Lightning DMG dalam jumlah kecil pada 1 musuh acak dan target di sekitarnya.",
       "type": "Talent",
       "tag": "Bounce",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Gugur",
+          "desc": "Saat HP berkurang hingga 0, maka karakter tersebut gugur. Karakter yang gugur tidak dapat melanjutkan pertempuran.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Crowd Control Debuff",
+          "desc": "Frozen, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Penguncian Aksi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1471,15 @@
       "simpleDesc": "Setelah menggunakan Technique, akan menambah Hits Per Action dari Lightning-Lord saat memasuki pertempuran berikutnya.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1496,79 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "Slash, Seas Split",
-      "desc": "Saat \"Lightning-Lord\" melancarkan serangan, DMG Multiplier pada musuh di sekitar target utama akan meningkat sebesar <nobr>25%</nobr> DMG Multiplier pada target utama."
+      "desc": "Saat \"Lightning-Lord\" melancarkan serangan, DMG Multiplier pada musuh di sekitar target utama akan meningkat sebesar <nobr>25%</nobr> DMG Multiplier pada target utama.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "Swing, Skies Squashed",
-      "desc": "Setelah \"Lightning-Lord\" beraksi, meningkatkan <nobr>20%</nobr> DMG yang diakibatkan Basic Attack, Skill, dan Ultimate Jing Yuan selama <nobr>2</nobr> giliran."
+      "desc": "Setelah \"Lightning-Lord\" beraksi, meningkatkan <nobr>20%</nobr> DMG yang diakibatkan Basic Attack, Skill, dan Ultimate Jing Yuan selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120403,
       "id": "strike_suns_subdued",
       "name": "Strike, Suns Subdued",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120404,
       "id": "spin_stars_sieged",
       "name": "Spin, Stars Sieged",
-      "desc": "Setiap Hit yang dilancarkan Lightning-Lord akan memulihkan <nobr>2</nobr> Energy Jing Yuan."
+      "desc": "Setiap Hit yang dilancarkan Lightning-Lord akan memulihkan <nobr>2</nobr> Energy Jing Yuan.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120405,
       "id": "stride_spoils_seized",
       "name": "Stride, Spoils Seized",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120406,
       "id": "sweep_souls_slain",
       "name": "Sweep, Souls Slain",
-      "desc": "Setiap Hit yang dilancarkan Lightning-Lord akan mengakibatkan target musuh terkena status Vulnerability.\nSaat terkena status Vulnerability, target musuh akan menerima <nobr>12%</nobr> DMG lebih banyak hingga akhir giliran Lightning-Lord saat ini, efek ini dapat ditumpuk hingga <nobr>3</nobr> lapis."
+      "desc": "Setiap Hit yang dilancarkan Lightning-Lord akan mengakibatkan target musuh terkena status Vulnerability.\nSaat terkena status Vulnerability, target musuh akan menerima <nobr>12%</nobr> DMG lebih banyak hingga akhir giliran Lightning-Lord saat ini, efek ini dapat ditumpuk hingga <nobr>3</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

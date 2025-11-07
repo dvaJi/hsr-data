@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "{RUBY_B#ラセツ}羅刹{RUBY_E#}",
+  "description": "棺を肌身離さず持ち歩いている、空の彼方からやってきた殊俗の行商人。\n優れた医療技術を持つ。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の虚数属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "味方単体のHPを回復し、「白花の刻」を1層獲得。",
       "type": "戦闘スキル",
       "tag": "回復",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "敵全体のバフを1つ解除し、敵全体に虚数属性ダメージを与え、「白花の刻」を1層獲得する。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "バフ",
+          "desc": "戦闘に有益な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "「白花の刻」が2層になると結界を展開する。結界が展開されている間、味方は攻撃後にHPを回復する。",
       "type": "天賦",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "戦闘不能状態",
+          "desc": "味方の残りHPが0になるとこの特殊状態に入る。この状態のキャラは戦闘を続けることができない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "秘技を使用、次の戦闘に入った時、即座に天賦の効果を発動。",
       "type": "秘技",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "{RUBY_B#しょうじゃ}生者{RUBY_E#}の{RUBY_B#じょうか}浄化{RUBY_E#}",
-      "desc": "結界が展開されている間、味方全体の攻撃力+<nobr>20%</nobr>。"
+      "desc": "結界が展開されている間、味方全体の攻撃力+<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "{RUBY_B#じゅんてい}純庭{RUBY_E#}の{RUBY_B#れいし}礼賜{RUBY_E#}",
-      "desc": "戦闘スキルの効果が発動された時、指定した味方の残りHPが<nobr>50%</nobr>未満の場合、羅刹の治癒量+<nobr>30%</nobr>。指定した味方の残りHPが<nobr>50%</nobr>以上の場合、その味方に羅刹の攻撃力<nobr>18%</nobr>+<nobr>240</nobr>の耐久値を持つバリアを付与する、<nobr>2</nobr>ターン継続。"
+      "desc": "戦闘スキルの効果が発動された時、指定した味方の残りHPが<nobr>50%</nobr>未満の場合、羅刹の治癒量+<nobr>30%</nobr>。指定した味方の残りHPが<nobr>50%</nobr>以上の場合、その味方に羅刹の攻撃力<nobr>18%</nobr>+<nobr>240</nobr>の耐久値を持つバリアを付与する、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "{RUBY_B#ぐしゃ}愚者{RUBY_E#}の{RUBY_B#もさく}模索{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "{RUBY_B#いばら}荊{RUBY_E#}の{RUBY_B#しんぱん}審判{RUBY_E#}",
-      "desc": "結界が展開されている間、敵を虚弱状態にし、敵の与ダメージ-<nobr>12%</nobr>。"
+      "desc": "結界が展開されている間、敵を虚弱状態にし、敵の与ダメージ-<nobr>12%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "{RUBY_B#じゅなん}受難{RUBY_E#}の{RUBY_B#あと}痕{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "{RUBY_B#みなかいじん}皆灰燼{RUBY_E#}に{RUBY_B#き}帰{RUBY_E#}す",
-      "desc": "必殺技を発動した時、<nobr>100%</nobr>の<u>固定確率</u>で敵全体の全属性耐性-<nobr>20%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "必殺技を発動した時、<nobr>100%</nobr>の<u>固定確率</u>で敵全体の全属性耐性-<nobr>20%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定確率",
+          "desc": "どのような要因にも左右されない、固定された確率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

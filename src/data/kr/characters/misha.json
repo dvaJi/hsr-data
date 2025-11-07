@@ -2,6 +2,7 @@
   "_id": 1312,
   "id": "misha",
   "name": "미샤",
+  "description": "예의바른 페나코니 호텔의 벨보이.\n무명객을 동경하며, 언젠가 자신만의 여행을 떠나는 걸 꿈꾼다",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "단일 적에게 얼음 속성 피해를 가하고, 인접한 목표에게 소량의 얼음 속성 피해를 가한다. 미샤의 다음 필살기 공격 단수가 증가한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +756,32 @@
       "simpleDesc": "단일 적에게 소량의 얼음 속성 피해를 가하고 기본 상태에서 총 #1[i]회 바운스하며, 최대 총 #5[i]회 바운스한다. 단수별 공격 전 낮은 확률로 목표를 빙결시킨다",
       "type": "필살기",
       "tag": "바운스",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1085,6 +1130,15 @@
       "simpleDesc": "모든 아군이 전투 스킬 포인트를 1pt 소모할 때마다 미샤의 다음 필살기 공격 단수가 증가하며, 미샤의 에너지가 회복된다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1442,15 @@
       "simpleDesc": "특수 영역을 만들어 영역 내 적의 행동을 중지한다. 영역 내 적과 전투에 진입하면 미샤의 다음 필살기 공격 단수가 증가한다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1405,37 +1468,88 @@
       "_id": 131201,
       "id": "whimsicality_of_fancy",
       "name": "흔들리는 환영",
-      "desc": "필살기 발동 시 필드 위 적 1명당 해당 필살기 공격 단수가 추가로 <nobr>1</nobr>단 증가하며, 최대 추가로 <nobr>5</nobr>단까지 증가한다"
+      "desc": "필살기 발동 시 필드 위 적 1명당 해당 필살기 공격 단수가 추가로 <nobr>1</nobr>단 증가하며, 최대 추가로 <nobr>5</nobr>단까지 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131202,
       "id": "yearning_of_youth",
       "name": "청춘의 창연한 눈빛",
-      "desc": "필살기의 단수별 공격 전 <nobr>24%</nobr>의 <u>기본 확률</u>로 목표의 방어력을 <nobr>16%</nobr> 감소시킨다. 지속 시간: <nobr>3</nobr>턴"
+      "desc": "필살기의 단수별 공격 전 <nobr>24%</nobr>의 <u>기본 확률</u>로 목표의 방어력을 <nobr>16%</nobr> 감소시킨다. 지속 시간: <nobr>3</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131203,
       "id": "vestige_of_happiness",
       "name": "행복한 세월의 그림자",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131204,
       "id": "visage_of_kinship",
       "name": "다정한 모습",
-      "desc": "필살기의 단수별 공격 피해 배율이 <nobr>6%</nobr> 증가한다"
+      "desc": "필살기의 단수별 공격 피해 배율이 <nobr>6%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131205,
       "id": "genesis_of_first_love",
       "name": "최초의 사랑과 우정",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131206,
       "id": "estrangement_of_dream",
       "name": "오랫동안 잊고 있던 동경",
-      "desc": "필살기 발동 시, 자신이 가하는 피해가 자신의 턴이 종료될 때까지 <nobr>30%</nobr> 증가하며, 다음 전투 스킬 발동 후 아군이 전투 스킬 포인트를 <nobr>1</nobr>pt 회복한다"
+      "desc": "필살기 발동 시, 자신이 가하는 피해가 자신의 턴이 종료될 때까지 <nobr>30%</nobr> 증가하며, 다음 전투 스킬 발동 후 아군이 전투 스킬 포인트를 <nobr>1</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

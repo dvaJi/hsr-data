@@ -2,6 +2,7 @@
   "_id": 1008,
   "id": "arlan",
   "name": "Arlan",
+  "description": "Penanggung jawab Departemen Keamanan Stasiun Luar Angkasa \"Herta\".\nDia tidak pandai bicara, tapi dia bersedia melindungi para peneliti agar mereka bisa menyelesaikan penelitian dengan lancar.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Mengonsumsi sebagian HP diri sendiri dan mengakibatkan Lightning DMG pada 1 musuh.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah besar pada 1 musuh, dan mengakibatkan Lightning DMG pada musuh di sekitar target.",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Meningkatkan DMG berdasarkan persentase HP diri sendiri yang berkurang.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Segera menyerang musuh dan setelah memasuki pertempuran, mengakibatkan Lightning DMG sebesar #1[i]% ATK Arlan pada seluruh musuh.",
       "simpleDesc": "Menyerang musuh dan mengakibatkan Lightning DMG dalam jumlah kecil pada seluruh musuh setelah memasuki pertempuran.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,37 +1383,97 @@
       "_id": 100801,
       "id": "to_the_bitter_end",
       "name": "To the Bitter End",
-      "desc": "Saat persentase HP saat ini kurang dari atau sama dengan <nobr>50%</nobr>, DMG yang diakibatkan Skill meningkat <nobr>10%</nobr>."
+      "desc": "Saat persentase HP saat ini kurang dari atau sama dengan <nobr>50%</nobr>, DMG yang diakibatkan Skill meningkat <nobr>10%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100802,
       "id": "breaking_free",
       "name": "Breaking Free",
-      "desc": "Saat melancarkan Skill atau Ultimate, akan menghapus 1 <u>status Debuff</u> dari karakter ini."
+      "desc": "Saat melancarkan Skill atau Ultimate, akan menghapus 1 <u>status Debuff</u> dari karakter ini.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100803,
       "id": "power_through",
       "name": "Power Through",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100804,
       "id": "turn_the_tables",
       "name": "Turn the Tables",
-      "desc": "Setelah memasuki pertempuran, jika Arlan menerima serangan mematikan, Arlan tidak <u>gugur</u> dan akan segera memulihkan HP sebesar <nobr>25%</nobr> Max HP dirinya. Efek ini akan terhapus otomatis setelah dipicu sekali atau setelah <nobr>2</nobr> giliran berlalu."
+      "desc": "Setelah memasuki pertempuran, jika Arlan menerima serangan mematikan, Arlan tidak <u>gugur</u> dan akan segera memulihkan HP sebesar <nobr>25%</nobr> Max HP dirinya. Efek ini akan terhapus otomatis setelah dipicu sekali atau setelah <nobr>2</nobr> giliran berlalu.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Gugur",
+          "desc": "Saat HP berkurang hingga 0, maka karakter tersebut gugur. Karakter yang gugur tidak dapat melanjutkan pertempuran.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100805,
       "id": "hammer_and_tongs",
       "name": "Hammer and Tongs",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100806,
       "id": "selfsacrifice",
       "name": "Self-Sacrifice",
-      "desc": "Saat persentase HP saat ini kurang dari atau sama dengan <nobr>50%</nobr>, meningkatkan <nobr>20%</nobr> DMG yang diakibatkan Ultimate dan DMG Multiplier pada musuh di sekitar target akan meningkat hingga sebesar DMG Multiplier pada target utama."
+      "desc": "Saat persentase HP saat ini kurang dari atau sama dengan <nobr>50%</nobr>, meningkatkan <nobr>20%</nobr> DMG yang diakibatkan Ultimate dan DMG Multiplier pada musuh di sekitar target akan meningkat hingga sebesar DMG Multiplier pada target utama.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

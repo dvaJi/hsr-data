@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "마이데이",
+  "description": "안개로 뒤덮인 크렘노스, 혼란과 전쟁의 성! 그 왕실에는 친족에게 칼을 겨누는 혈통이 이어지고 있으며, 그곳의 신은 재앙이라고 불린다.\n불사의 마이데이모스, 무리를 떠난 사자이자 「분쟁」의 불씨를 쫓는 황금의 후예. 수많은 죽음을 견디고 피를 뒤집어쓴 채 고향으로 돌아가며, 왕을 죽여 왕이 되고, 신을 죽여 신이 되는 광기의 숙명을 홀로 짊어졌다.\n정벌의 말발굽이 온 황야를 휩쓸었다 해도, 결국엔 고향의 피를 묻힐 것이다",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 허수 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "HP를 소모해 지정된 단일 적에게 허수 속성 피해를 가하고, 인접한 목표에게 소량의 허수 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "HP를 회복하고 특성 충전을 누적한다. 지정된 단일 적에게 대량의 허수 속성 피해를 가하고, 인접한 목표에게 허수 속성 피해를 가하며, 목표 및 인접한 목표를 도발 상태에 빠트린다",
       "type": "필살기",
       "tag": "확산",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "HP를 잃을 시 충전을 누적한다. 충전이 100에 도달하면 [피의 원한] 상태에 진입하며, HP가 회복되고 행동 게이지가 증가한다. [피의 원한] 상태에서는 현재 HP 최대치가 증가하고 방어력이 0으로 유지된다. 자신의 턴 시작 시 [왕을 죽여 왕이 된 자]가 자동으로 발동된다.\n[피의 원한] 상태 동안 충전이 150에 도달하면 마이데이가 즉시 보너스 턴을 1개 획득하고, [신을 죽여 신이 된 자]가 자동으로 발동된다.\n마이데이가 치명적인 공격을 받으면 [피의 원한] 상태가 해제된다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "보너스 턴",
+          "desc": "턴 횟수를 소모하지 않는 보너스 턴 1개를 획득한다. 해당 턴에서는 필살기를 발동할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "전투 불능 상태",
+          "desc": "아군의 현재 HP가 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 있으면 목표는 전투를 계속할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "일정 구역 내의 적을 끌어당기고 현기증 상태에 빠트린다. 현기증 상태인 적을 공격하면 전투 진입 시 모든 적에게 소량의 허수 속성 피해를 가하고, 목표를 도발 상태에 빠트린다. 자신은 특성 충전을 누적한다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "한풍이 조각한 불굴의 의지",
-      "desc": "[신을 죽여 신이 된 자]가 주목표에게 가하는 피해 배율이 <nobr>30%</nobr> 증가하고, 모든 적에게 주목표 피해 배율만큼 허수 속성 피해를 가하는 것으로 변경된다"
+      "desc": "[신을 죽여 신이 된 자]가 주목표에게 가하는 피해 배율이 <nobr>30%</nobr> 증가하고, 모든 적에게 주목표 피해 배율만큼 허수 속성 피해를 가하는 것으로 변경된다",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "유해의 울부짖음을 목격한 분쟁",
-      "desc": "[피의 원한] 상태 동안, 마이데이가 가하는 피해는 적의 방어력을 <nobr>15%</nobr> 무시하며, 치유를 받으면 치유량의 <nobr>40%</nobr>가 충전으로 전환된다. 누적 전환되는 충전은 <nobr>40</nobr>pt를 초과하지 않는다. 임의 유닛 행동 후 누적 가능한 충전이 초기화된다"
+      "desc": "[피의 원한] 상태 동안, 마이데이가 가하는 피해는 적의 방어력을 <nobr>15%</nobr> 무시하며, 치유를 받으면 치유량의 <nobr>40%</nobr>가 충전으로 전환된다. 누적 전환되는 충전은 <nobr>40</nobr>pt를 초과하지 않는다. 임의 유닛 행동 후 누적 가능한 충전이 초기화된다",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "불변의 연회를 비추는 영광",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "침묵하는 사자를 깨우는 호각",
-      "desc": "[피의 원한] 상태 동안 치명타 피해가 <nobr>30%</nobr> 증가하며, 적의 공격을 받으면 자신의 HP 최대치의 <nobr>10%</nobr>만큼 HP를 회복한다"
+      "desc": "[피의 원한] 상태 동안 치명타 피해가 <nobr>30%</nobr> 증가하며, 적의 공격을 받으면 자신의 HP 최대치의 <nobr>10%</nobr>만큼 HP를 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "육체의 화염을 조각하는 병기",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "침적된 혈산을 오르는 과거",
-      "desc": "전투 진입 시 즉시 [피의 원한] 상태에 진입하고, [신을 죽여 신이 된 자]에 필요한 충전치가 <nobr>100</nobr>pt로 감소한다"
+      "desc": "전투 진입 시 즉시 [피의 원한] 상태에 진입하고, [신을 죽여 신이 된 자]에 필요한 충전치가 <nobr>100</nobr>pt로 감소한다",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

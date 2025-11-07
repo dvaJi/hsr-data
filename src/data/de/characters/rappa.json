@@ -2,6 +2,7 @@
   "_id": 1317,
   "id": "rappa",
   "name": "Rappa",
+  "description": "Ein merkwürdiges Mädchen, das in der dunkelsten Stunde der Nacht wie eine Leuchtbombe in Penacony auftaucht, sich als Ninja bezeichnet und alles in der Welt dem „Ninjutsu“ zuschreibt.\nDer Weg des Ninjas, geprägt durch das Rezitieren von Ninja-Mantras, das Erschaffen von blendenden Ninja-Siegeln und das Meistern des Ninja-Kodex – also Rap, Graffiti und Comics – ist ein Weg strenger Selbstdisziplin, auf dem man die Sterne durchstreift und Rechtschaffenheit walten lässt.\nAls Mitglied der Galaxieranger jagt sie unerbittlich den Ninjaschurken Osaru bis an den Rand der Galaxie.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner geringen imaginären SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Fügt allen Gegnern imaginären SCH zu.",
       "type": "Fertigkeit",
       "tag": "Flächenangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Tritt in den Status „Siegelform“ ein und erhält zusätzliche Rd. sowie 3 Pkt. „Chromatische Farben“. Erhöht die Schwächebruch-Effizienz und den Brucheffekt.\nErhält im Status Siegelform den verstärkten Standardangriff. Nach dem Einsatz des verstärkten Standardangriffs wird 1 Pkt. Chromatische Farben verbraucht. Wenn Chromatische Farben vollständig verbraucht ist, tritt diese Einheit aus dem Status Siegelform aus.",
       "type": "Ultimate",
       "tag": "Verstärkung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Zusätzliche Runde",
+          "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,15 @@
       "simpleDesc": "Wenn einem Gegner Schwächebruch zugefügt wird, erhält Rappa 1 Pkt. Aufladung. Beim Einsatz des dritten Treffers von „Ningu: Blüten der Waschung“ wird allen Gegnern zusätzlich imaginärer Bruch-SCH zugefügt. Dieser SCH reduziert den WDS unabhängig vom Schwächetyp und verbraucht alle Aufladungen. Außerdem wird der SCH-Multiplikator und der WDS-Reduzierungswert dieses Bruch-SCH erhöht.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        6,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1452,15 @@
       "simpleDesc": "Tritt in den Status „Graffiti“ ein. Bewegt sich eine bestimmte Strecke schnell vorwärts und greift alle berührten Gegner an. Nachdem durch Angriff auf Gegner ein Kampf eingeleitet wurde, wird jedem Gegner WDS-Reduzierung unabhängig vom Schwächetyp zugefügt. Verursacht außerdem bei ihnen sowie angrenzenden Einheiten imaginären Bruch-SCH. Gleichzeitig stellt diese Einheit Energie wieder her.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1426,37 +1481,79 @@
       "_id": 131701,
       "id": "returned_is_the_revenant_with_no_ferry_toll",
       "name": "Zurückgekehrter Revenant ohne Fährgebühr",
-      "desc": "Im Status „Siegelform“, der durch den Ultimate ausgelöst wird, ignoriert Rappas verursachter SCH <nobr>15%</nobr> der VTD des Ziels. Nachdem Rappa aus dem Status Siegelform ausgetreten ist, stellt sie <nobr>20</nobr> Pkt. Energie wieder her."
+      "desc": "Im Status „Siegelform“, der durch den Ultimate ausgelöst wird, ignoriert Rappas verursachter SCH <nobr>15%</nobr> der VTD des Ziels. Nachdem Rappa aus dem Status Siegelform ausgetreten ist, stellt sie <nobr>20</nobr> Pkt. Energie wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131702,
       "id": "free_is_the_mind_enlightened_by_haikus",
       "name": "Poetischer Scharfsinn ohne Lasten",
-      "desc": "Die WDS-Reduzierung der ersten 2 Treffer des verstärkten Standardangriffs gegen den anvisierten Gegner wird um <nobr>50%</nobr> erhöht."
+      "desc": "Die WDS-Reduzierung der ersten 2 Treffer des verstärkten Standardangriffs gegen den anvisierten Gegner wird um <nobr>50%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131703,
       "id": "many_are_the_shrines_that_repel_no_hell",
       "name": "Heiligtümer des Mappō ohne Stillstand",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131704,
       "id": "lost_is_the_nind_devoured_by_time",
       "name": "Gefallene Rechtschaffenheit ohne Ehre",
-      "desc": "Erhöht im Status „Siegelform“ die GES aller Verbündeten um <nobr>12%</nobr>."
+      "desc": "Erhöht im Status „Siegelform“ die GES aller Verbündeten um <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131705,
       "id": "steady_is_the_ranger_with_unerring_arrows",
       "name": "Unerschütterlich auf dem Pfad ohne Zögern",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131706,
       "id": "righteous_is_the_wrath_that_spares_no_evil",
       "name": "Auslöschung der Bösen ohne Gnade",
-      "desc": "Zu Beginn des Kampfes erhält Rappa <nobr>5</nobr> Pkt. Aufladung des Talents und das Aufladungslimit wird um <nobr>5</nobr> Pkt. erhöht. Nach dem Einsatz des dritten Treffers von „Ningu: Blüten der Waschung“ wird <nobr>5</nobr> Pkt. Aufladung erhalten."
+      "desc": "Zu Beginn des Kampfes erhält Rappa <nobr>5</nobr> Pkt. Aufladung des Talents und das Aufladungslimit wird um <nobr>5</nobr> Pkt. erhöht. Nach dem Einsatz des dritten Treffers von „Ningu: Blüten der Waschung“ wird <nobr>5</nobr> Pkt. Aufladung erhalten.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

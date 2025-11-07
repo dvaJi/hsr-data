@@ -2,6 +2,7 @@
   "_id": 1110,
   "id": "lynx",
   "name": "リンクス",
+  "description": "ベロブルグの雪原探検家、ランドゥー家の末っ子。\n落ち着いた性格で、極めて強い行動力の持ち主。よく単身で雪原を探険する。",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の量子属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "味方単体に「サバイバル反応」を与え、最大HPをアップし、HPを回復する。",
       "type": "戦闘スキル",
       "tag": "回復",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -782,6 +807,27 @@
       "simpleDesc": "味方全体のデバフを1つ解除し、味方全体のHPを回復する。",
       "type": "必殺技",
       "tag": "回復",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1146,18 @@
       "simpleDesc": "戦闘スキルまたは必殺技を発動した時、味方に持続HP回復効果を付与し、その味方が「サバイバル反応」を有している場合、持続回復効果がアップする。",
       "type": "天賦",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1448,6 +1506,15 @@
       "simpleDesc": "秘技を使用、次の戦闘開始時、味方全体に持続治癒効果を付与する。",
       "type": "秘技",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1531,88 @@
       "_id": 111001,
       "id": "morning_of_snow_hike",
       "name": "{RUBY_B#つえ}杖{RUBY_E#}を{RUBY_B#て}手{RUBY_E#}に{RUBY_B#ゆきみち}雪道{RUBY_E#}を{RUBY_B#い}行{RUBY_E#}く{RUBY_B#そうちょう}早朝{RUBY_E#}",
-      "desc": "残りHPが<nobr>50%</nobr>以下の味方に治癒を行う時、リンクスの治癒量+<nobr>20%</nobr>。この効果は持続治癒効果にも有効。"
+      "desc": "残りHPが<nobr>50%</nobr>以下の味方に治癒を行う時、リンクスの治癒量+<nobr>20%</nobr>。この効果は持続治癒効果にも有効。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111002,
       "id": "noon_of_portable_furnace",
       "name": "ストーブの{RUBY_B#そば}傍{RUBY_E#}で{RUBY_B#す}過{RUBY_E#}ごす{RUBY_B#しょうご}正午{RUBY_E#}",
-      "desc": "「サバイバル反応」を持つターゲットは<u>デバフ</u>を付与された時、それを<nobr>1</nobr>回抵抗できる。"
+      "desc": "「サバイバル反応」を持つターゲットは<u>デバフ</u>を付与された時、それを<nobr>1</nobr>回抵抗できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "デバフ",
+          "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111003,
       "id": "afternoon_of_avalanche_beacon",
       "name": "{RUBY_B#なだれ}雪崩{RUBY_E#}ビーコンの{RUBY_B#な}鳴{RUBY_E#}る{RUBY_B#ごご}午後{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111004,
       "id": "dusk_of_warm_campfire",
       "name": "{RUBY_B#やがい}野外{RUBY_E#}で{RUBY_B#かがりび}篝火{RUBY_E#}を{RUBY_B#た}焚{RUBY_E#}く{RUBY_B#ゆうぐ}夕暮{RUBY_E#}れ",
-      "desc": "「サバイバル反応」を獲得した時、ターゲットの攻撃力がリンクスの最大HPの<nobr>#1[f1]%</nobr>分アップする。<nobr>1</nobr>ターン継続。"
+      "desc": "「サバイバル反応」を獲得した時、ターゲットの攻撃力がリンクスの最大HPの<nobr>#1[f1]%</nobr>分アップする。<nobr>1</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111005,
       "id": "night_of_aurora_tea",
       "name": "{RUBY_B#こうちゃ}紅茶{RUBY_E#}とオーロラを{RUBY_B#たの}楽{RUBY_E#}しむ{RUBY_B#よる}夜{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111006,
       "id": "dawn_of_explorers_chart",
       "name": "{RUBY_B#せいずちゅう}製図中{RUBY_E#}に{RUBY_B#むか}迎{RUBY_E#}える{RUBY_B#よあ}夜明{RUBY_E#}け",
-      "desc": "「サバイバル反応」の最大HPアップ効果が、さらにリンクスの最大HPの<nobr>#1[f1]%</nobr>分アップする。「サバイバル反応」を持つ味方の効果抵抗+<nobr>30%</nobr>。"
+      "desc": "「サバイバル反応」の最大HPアップ効果が、さらにリンクスの最大HPの<nobr>#1[f1]%</nobr>分アップする。「サバイバル反応」を持つ味方の効果抵抗+<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

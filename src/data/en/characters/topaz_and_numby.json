@@ -2,6 +2,7 @@
   "_id": 1112,
   "id": "topaz_and_numby",
   "name": "Topaz & Numby",
+  "description": "Topaz is the Leader of the Special Debts Picket Team and high-level manager of the Strategic Investment Department under the Interastral Peace Corporation.\nA member of the \"Ten Stonehearts\" at a young age, Topaz's foundational expertise is \"debt retrieval.\"\nHer partner, the Warp Trotter \"Numby,\" is also capable of keenly perceiving where \"riches\" are located, ensuring that jobs based in security, debt collection, and actuarial varieties are of no great challenge.\nAt presently they are traveling the cosmos together, seeking all manner of liability disputes that might be affecting the stable progression of the IPC's businesses.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,22 @@
       "_id": 111201,
       "id": "deficit",
       "name": "Deficit...",
-      "desc": "Deals Fire DMG equal to #1[i]% of Topaz's ATK to a single enemy.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Topaz's ATK to one designated enemy.",
       "simpleDesc": "Deals minor Fire DMG to an enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Inflicts one enemy with a \"Proof of Debt\" state and causes it to receive increased Follow-up ATK DMG. Numby deals Fire DMG to the target.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -728,6 +762,18 @@
       "simpleDesc": "Numby enters the Windfall Bonanza! state and increases its DMG multiplier and CRIT DMG.",
       "type": "Ultimate",
       "tag": "Enhance",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1063,10 +1109,36 @@
       "_id": 111204,
       "id": "trotter_market",
       "name": "Trotter Market!?",
-      "desc": "Summons Numby at the start of battle. Numby has #1[i] SPD by default. When taking action, Numby launches Follow-up ATKs on a single enemy target afflicted with Proof of Debt, dealing Fire DMG equal to #2[i]% of Topaz's ATK.\nWhen enemies afflicted with Proof of Debt receive an ally's Follow-up ATKs, Numby's action is Advanced Forward by #3[i]%. The action Advance Forward effect cannot be triggered during Numby's own turn.\nWhen Topaz is downed, Numby disappears.",
+      "desc": "Summons Numby at the start of battle. Numby has #1[i] SPD by default. When taking action, Numby launches Follow-up ATKs on one enemy target afflicted with \"Proof of Debt,\" dealing Fire DMG equal to #2[i]% of Topaz's ATK.\nWhen enemies afflicted with \"Proof of Debt\" receive an ally's Follow-up ATKs, Numby's action is Advanced Forward by #3[i]%. The action Advance Forward effect cannot be triggered during Numby's own turn.\nWhen Topaz is downed, Numby disappears.",
       "simpleDesc": "At the start of the battle, summons Numby. When Numby takes action, it launches Follow-up ATK on a target afflicted with \"Proof of Debt\", dealing Fire DMG.\nWhen an enemy afflicted with \"Proof of Debt\" receives Follow-up ATK, Numby's action advances.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1463,15 @@
       "simpleDesc": "Summons Numby to tag along in a map. Numby will automatically search for Basic Treasures and Trotters nearby. Using Technique will regenerate Energy for Topaz after Numby's first attack in the next battle.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1489,106 @@
       "_id": 111201,
       "id": "future_market",
       "name": "Future Market",
-      "desc": "When enemies afflicted with \"Proof of Debt\" receive <u>Follow-up ATKs</u>, they will enter the \"Debtor\" state. This can take effect only once within a single attack.\nThe \"Debtor\" state increases the CRIT DMG of <u>Follow-up ATKs</u> inflicted on the target enemies by <nobr>25%</nobr>, stacking up to <nobr>2</nobr> time(s). When \"Proof of Debt\" is removed, the \"Debtor\" state is also removed."
+      "desc": "When enemies afflicted with \"Proof of Debt\" receive <u>Follow-up ATKs</u>, they will enter the \"Debtor\" state. This can take effect only once within a single attack.\nThe \"Debtor\" state increases the CRIT DMG of <u>Follow-up ATKs</u> inflicted on the target enemies by <nobr>25%</nobr>, stacking up to <nobr>2</nobr> time(s). When \"Proof of Debt\" is removed, the \"Debtor\" state is also removed.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111202,
       "id": "bona_fide_acquisition",
       "name": "Bona Fide Acquisition",
-      "desc": "After Numby takes action and launches an attack, Topaz regenerates <nobr>5</nobr> Energy."
+      "desc": "After Numby takes action and launches an attack, Topaz regenerates <nobr>5</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111203,
       "id": "seize_the_big_and_free_the_small",
       "name": "Seize the Big and Free the Small",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111204,
       "id": "agile_operation",
       "name": "Agile Operation",
-      "desc": "After Numby's turn begins, Topaz's <u>action advances</u> by <nobr>20%</nobr>."
+      "desc": "After Numby's turn begins, Topaz's <u>action advances</u> by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action Advanced",
+          "desc": "Reduces the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111205,
       "id": "inflationary_demand",
       "name": "Inflationary Demand",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111206,
       "id": "incentive_mechanism",
       "name": "Incentive Mechanism",
-      "desc": "Numby's attack count during the \"Windfall Bonanza!\" state increases by <nobr>1</nobr>, and its Fire <u>RES PEN</u> increases by <nobr>10%</nobr> when it attacks."
+      "desc": "Numby's attack count during the \"Windfall Bonanza!\" state increases by <nobr>1</nobr>, and its Fire <u>RES PEN</u> increases by <nobr>10%</nobr> when it attacks.",
+      "unlockCost": [
+        {
+          "ItemID": 11112,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

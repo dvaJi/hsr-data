@@ -2,6 +2,7 @@
   "_id": 1008,
   "id": "arlan",
   "name": "Arlan",
+  "description": "Der Sicherheitschef der Herta-Raumstation.\nDieser Bursche ist zwar nicht gerade wortgewandt, würde aber sein Leben riskieren, um die Forscher bei ihrer Arbeit zu beschützen.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Blitz-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Verbraucht einen Teil von Arlans LP, um einem Gegner Blitz-SCH zuzufügen.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Fügt einem Gegner massiven Blitz-SCH und angrenzenden Zielen Blitz-SCH zu.",
       "type": "Ultimate",
       "tag": "Ausdehnung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "Erhöht den SCH basierend auf dem Prozentsatz der verlorenen LP.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt allen Gegnern Blitz-SCH in Höhe von #1[i]% von Arlans ANG zu.",
       "simpleDesc": "Greift den Gegner an. Fügt nach Kampfeintritt allen Gegnern geringen Blitz-SCH zu.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,37 +1383,97 @@
       "_id": 100801,
       "id": "to_the_bitter_end",
       "name": "Bis zum bitteren Ende",
-      "desc": "Liegt der LP-Prozentsatz bei <nobr>50</nobr> % oder weniger, wird der durch die Fertigkeit verursachte SCH um <nobr>10%</nobr> erhöht."
+      "desc": "Liegt der LP-Prozentsatz bei <nobr>50</nobr> % oder weniger, wird der durch die Fertigkeit verursachte SCH um <nobr>10%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100802,
       "id": "breaking_free",
       "name": "Befreiung",
-      "desc": "Entfernt beim Einsatz der Fertigkeit oder des Ultimates 1 <u>Debuff</u> von dieser Figur."
+      "desc": "Entfernt beim Einsatz der Fertigkeit oder des Ultimates 1 <u>Debuff</u> von dieser Figur.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100803,
       "id": "power_through",
       "name": "Gewaltsamer Durchbruch",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100804,
       "id": "turn_the_tables",
       "name": "Rollentausch",
-      "desc": "Erleidet Arlan nach Kampfeintritt einen Todesstoß, stellt er seine LP sofort auf <nobr>25%</nobr> seiner max. LP wieder her, anstatt <u>handlungsunfähig</u> zu werden. Dieser Effekt wird automatisch nach 1-mal Auslösung oder nach <nobr>2</nobr> Rd. entfernt."
+      "desc": "Erleidet Arlan nach Kampfeintritt einen Todesstoß, stellt er seine LP sofort auf <nobr>25%</nobr> seiner max. LP wieder her, anstatt <u>handlungsunfähig</u> zu werden. Dieser Effekt wird automatisch nach 1-mal Auslösung oder nach <nobr>2</nobr> Rd. entfernt.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100805,
       "id": "hammer_and_tongs",
       "name": "Die Fetzen fliegen",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100806,
       "id": "selfsacrifice",
       "name": "Selbstaufopferung",
-      "desc": "Liegt Arlans LP-Prozentsatz bei <nobr>50</nobr> % oder weniger, verursacht der Ultimate <nobr>20%</nobr> mehr SCH und angrenzende Ziele erhalten denselben SCH-Multiplikator wie der anvisierte Gegner."
+      "desc": "Liegt Arlans LP-Prozentsatz bei <nobr>50</nobr> % oder weniger, verursacht der Ultimate <nobr>20%</nobr> mehr SCH und angrenzende Ziele erhalten denselben SCH-Multiplikator wie der anvisierte Gegner.",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

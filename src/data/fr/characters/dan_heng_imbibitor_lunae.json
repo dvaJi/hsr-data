@@ -2,6 +2,7 @@
   "_id": 1213,
   "id": "dan_heng_imbibitor_lunae",
   "name": "Dan Heng • Imbibitor Lunae",
+  "description": "La forme originelle de Dan Heng, reflet de son héritage vidyadharien, déploie la puissance résiduelle de son incarnation passée : l'Imbibitor Lunae.\nEn acceptant les majestueuses cornes qui habillent son crâne, Dan Heng doit accepter tous les mérites et toutes les fautes attribués à ce pécheur.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -243,10 +244,22 @@
       "_id": 121301,
       "id": "beneficent_lotus",
       "name": "Lotus bénéfique",
-      "desc": "Utilise une attaque qui frappe 2 fois et inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Dan Heng • Imbibitor Lunae à une cible ennemie unique.",
+      "desc": "Utilise une attaque qui frappe 2 fois et inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Dan Heng • Imbibitor Lunae à une cible ennemie désignée.",
       "simpleDesc": "Inflige des DGT imaginaires mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Renforce l'ATQ normale Lotus bénéfique en Transcendance, Lance divine ou Bond fulgurant.",
       "type": "Compétence",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -724,10 +749,22 @@
       "_id": 121303,
       "id": "azures_aqua_ablutes_all",
       "name": "Absolution des eaux azur",
-      "desc": "Utilise une attaque qui frappe 3 fois et inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Dan Heng • Imbibitor Lunae à une cible ennemie unique. D'autre part, inflige des DGT imaginaires équivalents à #2[i]% de l'ATQ de Dan Heng • Imbibitor Lunae aux cibles adjacentes. Puis, obtient #3[i] Écailles sacrées.\nDan Heng • Imbibitor Lunae peut posséder jusqu'à #4[i] Écailles sacrées à la fois. Les Écailles sacrées remplacent les points de compétence. L'utilisation d'Écailles sacrées est considérée comme équivalente à la consommation de points de compétence.",
+      "desc": "Utilise une attaque qui frappe 3 fois et inflige des DGT imaginaires équivalents à #1[i]% de l'ATQ de Dan Heng • Imbibitor Lunae à une cible ennemie désignée. D'autre part, inflige des DGT imaginaires équivalents à #2[i]% de l'ATQ de Dan Heng • Imbibitor Lunae aux cibles adjacentes. Puis, obtient #3[i] Écailles sacrées.\nDan Heng • Imbibitor Lunae peut posséder jusqu'à #4[i] Écailles sacrées à la fois. Les Écailles sacrées remplacent les points de compétence. L'utilisation d'Écailles sacrées est considérée comme équivalente à la consommation de points de compétence.",
       "simpleDesc": "Inflige des DGT imaginaires massifs à un ennemi unique, des DGT imaginaires aux cibles adjacentes, et obtient 2 Écailles sacrées qui remplacent les points de compétence. L'utilisation d'Écailles sacrées est considérée comme équivalente à la consommation de points de compétence.",
       "type": "Ultime",
       "tag": "Propagation",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,18 @@
       "simpleDesc": "Augmente les DGT pour chaque frappe infligée. Cet effet est cumulable et dure jusqu'à la fin du tour du personnage.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1425,15 @@
       "simpleDesc": "Entre dans l'état Dragon bondissant. Dans cet état, lorsque le personnage utilise son attaque, il fonce en avant sur une courte distance et attaque tous les ennemis sur sa route. S'il entre en combat en ayant attaqué un ennemi, il inflige des DGT imaginaires à tous les ennemis et obtient 1 Écaille sacrée.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1452,106 @@
       "_id": 121301,
       "id": "tethered_to_sky",
       "name": "Envoyé du ciel",
-      "desc": "Augmente le nombre de cumuls maximum de Cœur vertueux de <nobr>4</nobr>, et gagne 1 cumul supplémentaire pour chaque frappe lors d'une attaque."
+      "desc": "Augmente le nombre de cumuls maximum de Cœur vertueux de <nobr>4</nobr>, et gagne 1 cumul supplémentaire pour chaque frappe lors d'une attaque.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121302,
       "id": "imperium_on_cloud_nine",
       "name": "Célérité impériale",
-      "desc": "Après avoir utilisé son ultime, Dan Heng • Imbibitor Lunae voit son <u>action avancée</u> de <nobr>100</nobr> % et il gagne 1 Écaille sacrée supplémentaire."
+      "desc": "Après avoir utilisé son ultime, Dan Heng • Imbibitor Lunae voit son <u>action avancée</u> de <nobr>100</nobr> % et il gagne 1 Écaille sacrée supplémentaire.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121303,
       "id": "clothed_in_clouds",
       "name": "Frasques nébulaires",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121304,
       "id": "zephyrs_bliss",
       "name": "Bénédiction du zéphyr",
-      "desc": "L'effet <u>bonus</u> accordé par Rugissement dominateur dure jusqu'à la fin du prochain tour de cette unité."
+      "desc": "L'effet <u>bonus</u> accordé par Rugissement dominateur dure jusqu'à la fin du prochain tour de cette unité.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Bonus",
+          "desc": "Les bonus permettent d'améliorer la capacité de combat pendant un certain temps. Ils peuvent être dissipés, sauf indication contraire.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121305,
       "id": "fall_is_the_pride",
       "name": "Vaine fierté",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121306,
       "id": "reign_returned",
       "name": "Retour du dragon divin",
-      "desc": "Lorsqu'un autre personnage allié utilise son ultime, la <u>PÉN de RÉS</u> imaginaire du prochain Bond fulgurant de Dan Heng • Imbibitor Lunae augmente de <nobr>20%</nobr>. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois."
+      "desc": "Lorsqu'un autre personnage allié utilise son ultime, la <u>PÉN de RÉS</u> imaginaire du prochain Bond fulgurant de Dan Heng • Imbibitor Lunae augmente de <nobr>20%</nobr>. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois.",
+      "unlockCost": [
+        {
+          "ItemID": 11213,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

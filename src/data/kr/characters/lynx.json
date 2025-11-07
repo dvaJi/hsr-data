@@ -2,6 +2,7 @@
   "_id": 1110,
   "id": "lynx",
   "name": "링스",
+  "description": "벨로보그의 설원 탐험가, 랜도 가문의 막내 여동생.\n담담한 성격에 행동력이 매우 강하다. 종종 홀로 설원을 탐험한다",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 양자 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "단일 아군에게 [생존 반응]을 부여하고, 대상의 HP 최대치를 증가시키며 동시에 HP를 회복시킨다",
       "type": "전투 스킬",
       "tag": "회복",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -782,6 +807,27 @@
       "simpleDesc": "모든 아군의 디버프 효과를 1개 해제하고, 모든 아군의 HP를 회복시킨다",
       "type": "필살기",
       "tag": "회복",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "디버프 효과",
+          "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1146,18 @@
       "simpleDesc": "전투 스킬 혹은 필살기 발동 시 아군은 HP 지속 회복 효과를 획득하고, 해당 목표가 [생존 반응]을 보유하고 있으면 HP 지속 회복 효과가 추가로 증가한다",
       "type": "특성",
       "tag": "회복",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1448,6 +1506,15 @@
       "simpleDesc": "비술을 발동하면 다음 전투 시작 시 모든 아군에게 지속 치유 효과를 부여한다",
       "type": "비술",
       "tag": "회복",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1531,88 @@
       "_id": 111001,
       "id": "morning_of_snow_hike",
       "name": "스키 스틱의 아침",
-      "desc": "현재 HP 백분율이 <nobr>50%</nobr> 이하인 아군에게 치유 제공 시 링스의 치유량이 <nobr>20%</nobr> 증가한다. 해당 효과는 지속 치유 효과에도 적용된다"
+      "desc": "현재 HP 백분율이 <nobr>50%</nobr> 이하인 아군에게 치유 제공 시 링스의 치유량이 <nobr>20%</nobr> 증가한다. 해당 효과는 지속 치유 효과에도 적용된다",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111002,
       "id": "noon_of_portable_furnace",
       "name": "휴대용 버너의 정오",
-      "desc": "[생존 반응]을 보유한 목표에게 <u>디버프 효과</u>가 부여될 시 <u>디버프 효과</u>에 <nobr>1</nobr>회 저항할 수 있다"
+      "desc": "[생존 반응]을 보유한 목표에게 <u>디버프 효과</u>가 부여될 시 <u>디버프 효과</u>에 <nobr>1</nobr>회 저항할 수 있다",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "디버프 효과",
+          "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111003,
       "id": "afternoon_of_avalanche_beacon",
       "name": "눈사태 비콘의 오후",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111004,
       "id": "dusk_of_warm_campfire",
       "name": "캠핑 모닥불의 저녁",
-      "desc": "[생존 반응] 획득 시 해당 목표의 공격력이 링스 HP 최대치의 <nobr>#1[f1]%</nobr>만큼 증가한다. 지속 시간: <nobr>1</nobr>턴"
+      "desc": "[생존 반응] 획득 시 해당 목표의 공격력이 링스 HP 최대치의 <nobr>#1[f1]%</nobr>만큼 증가한다. 지속 시간: <nobr>1</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111005,
       "id": "night_of_aurora_tea",
       "name": "오로라 홍차의 밤",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111006,
       "id": "dawn_of_explorers_chart",
       "name": "설계도의 새벽",
-      "desc": "[생존 반응]의 HP 최대치 증가 효과가 링스 HP 최대치의 <nobr>#1[f1]%</nobr>만큼 증가하고, 효과 저항이 <nobr>30%</nobr> 증가한다"
+      "desc": "[생존 반응]의 HP 최대치 증가 효과가 링스 HP 최대치의 <nobr>#1[f1]%</nobr>만큼 증가하고, 효과 저항이 <nobr>30%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

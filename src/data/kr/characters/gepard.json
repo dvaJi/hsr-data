@@ -2,6 +2,7 @@
   "_id": 1104,
   "id": "gepard",
   "name": "게파드",
+  "description": "실버메인 철위대의 방위관, 벨로보그 최고의 전사 중 하나\n겉과 속이 같고 빈틈없이 항상 성실하다",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "단일 적에게 얼음 속성 피해를 가하고 일정 확률로 해당 적에게 빙결 상태를 부여한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +800,18 @@
       "simpleDesc": "모든 아군에게 실드를 제공한다",
       "type": "필살기",
       "tag": "방어",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1136,24 @@
       "simpleDesc": "치명적인 공격을 받아도 전투 불능 상태에 빠지지 않으며 즉시 HP를 회복한다. 단일 전투 중에서 1회만 발동한다",
       "type": "특성",
       "tag": "회복",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "전투 불능 상태",
+          "desc": "아군의 현재 HP가 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 있으면 목표는 전투를 계속할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1448,15 @@
       "simpleDesc": "비술을 발동하고 다음 전투 시작 시 모든 아군이 실드를 획득한다",
       "type": "비술",
       "tag": "방어",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1475,88 @@
       "_id": 110401,
       "id": "due_diligence",
       "name": "근면 성실",
-      "desc": "전투 스킬 발동 시 피격된 적이 빙결 상태에 빠질 <u>기본 확률</u>이 <nobr>35%</nobr> 증가한다"
+      "desc": "전투 스킬 발동 시 피격된 적이 빙결 상태에 빠질 <u>기본 확률</u>이 <nobr>35%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110402,
       "id": "lingering_cold",
       "name": "남은 추위",
-      "desc": "전투 스킬로 적에게 부여한 빙결 상태가 해제된 후 목표의 속도가 <nobr>20%</nobr> 감소한다. 지속 시간: <nobr>1</nobr>턴"
+      "desc": "전투 스킬로 적에게 부여한 빙결 상태가 해제된 후 목표의 속도가 <nobr>20%</nobr> 감소한다. 지속 시간: <nobr>1</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110403,
       "id": "never_surrender",
       "name": "난공불락",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110404,
       "id": "faith_moves_mountains",
       "name": "지성이면 감천",
-      "desc": "게파드가 필드에 있으면 모든 아군의 효과 저항이 <nobr>20%</nobr> 증가한다"
+      "desc": "게파드가 필드에 있으면 모든 아군의 효과 저항이 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110405,
       "id": "cold_iron_fist",
       "name": "강철 같은 주먹",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110406,
       "id": "unyielding_resolve",
       "name": "불굴의 결의",
-      "desc": "특성 발동 시 게파드가 즉시 행동하고, 현재 HP의 회복량이 자신 HP 최대치의 <nobr>50%</nobr>만큼 추가로 증가한다"
+      "desc": "특성 발동 시 게파드가 즉시 행동하고, 현재 HP의 회복량이 자신 HP 최대치의 <nobr>50%</nobr>만큼 추가로 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

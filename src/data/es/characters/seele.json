@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "Seele",
+  "description": "Miembro importante de Llamarada, la organización de resistencia del Bajomundo. Su nombre en clave es Babochka.\nEs muy franca y directa, pero también esconde un lado delicado en su interior.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Cuántico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Inflige Daño Cuántico a un enemigo y aumenta su propia VEL.",
       "type": "Habilidad básica",
       "tag": "ATQ individual",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,18 @@
       "simpleDesc": "Entra en un estado potenciado e inflige una gran cantidad de Daño Cuántico a un enemigo.",
       "type": "Habilidad definitiva",
       "tag": "ATQ individual",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "Al eliminar a un enemigo con el ATQ básico, la habilidad básica o la habilidad definitiva, obtiene un turno adicional y entra en un estado potenciado en el que aumenta el daño que inflige.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Turno adicional",
+          "desc": "Obtiene 1 turno adicional que no se resta de la cantidad de turnos. Durante este turno adicional no se puede usar la habilidad definitiva.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "Entra en el estado de Invisibilidad. Tras atacar a un enemigo y entrar en combate, entra en el estado potenciado.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Corte total",
-      "desc": "Cuando inflige daño a un objetivo que tiene un porcentaje de PV igual o inferior al <nobr>80%</nobr>, la Prob. CRIT aumenta en un <nobr>15%</nobr>."
+      "desc": "Cuando inflige daño a un objetivo que tiene un porcentaje de PV igual o inferior al <nobr>80%</nobr>, la Prob. CRIT aumenta en un <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "Danza de la mariposa",
-      "desc": "El efecto de aumento de VEL de la habilidad básica se puede acumular hasta <nobr>2</nobr> veces."
+      "desc": "El efecto de aumento de VEL de la habilidad básica se puede acumular hasta <nobr>2</nobr> veces.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "Confusión",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Espíritu efímero",
-      "desc": "Cuando Seele elimina a un enemigo, recupera <nobr>15</nobr> pts. de energía."
+      "desc": "Cuando Seele elimina a un enemigo, recupera <nobr>15</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "Fragmentos punzantes",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Caos destructivo",
-      "desc": "Tras usar la habilidad definitiva de Seele, el objetivo entra en el estado de Mariposa desbocada durante <nobr>1</nobr> turno. Cuando un enemigo afectado por Mariposa desbocada es atacado, recibe un Daño Cuántico <u>adicional</u> equivalente al <nobr>15%</nobr> del daño de habilidad definitiva de Seele. Si el enemigo es eliminado por el <u>daño adicional</u> de Mariposa desbocada activado por el ataque de otro aliado, no se activará el talento de Seele.\nCuando Seele sea <u>derrotada</u>, se disipará el estado de Mariposa desbocada infligido a los enemigos."
+      "desc": "Tras usar la habilidad definitiva de Seele, el objetivo entra en el estado de Mariposa desbocada durante <nobr>1</nobr> turno. Cuando un enemigo afectado por Mariposa desbocada es atacado, recibe un Daño Cuántico <u>adicional</u> equivalente al <nobr>15%</nobr> del daño de habilidad definitiva de Seele. Si el enemigo es eliminado por el <u>daño adicional</u> de Mariposa desbocada activado por el ataque de otro aliado, no se activará el talento de Seele.\nCuando Seele sea <u>derrotada</u>, se disipará el estado de Mariposa desbocada infligido a los enemigos.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

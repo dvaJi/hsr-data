@@ -2,6 +2,7 @@
   "_id": 1009,
   "id": "asta",
   "name": "Asta",
+  "description": "Trạm trưởng của Trạm Không Gian Herta, tiểu thư con nhà danh giá.\nNhà nghiên cứu thiên văn ham học hỏi, rất giỏi trong việc quản lý các nhân viên với nhiều tính cách khác nhau ở Trạm Không Gian.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch, tổng cộng Nảy Bật 5 lần.",
       "type": "Chiến Kỹ",
       "tag": "Nảy Bật",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "Tăng tốc cho toàn bộ phe ta.",
       "type": "Tuyệt Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,15 @@
       "simpleDesc": "Cứ đánh trúng 1 kẻ địch khác nhau sẽ nhận 1 tầng Tụ Năng, tối đa cộng dồn 5 tầng. Mỗi tầng Tụ Năng tăng tấn công của toàn bộ phe ta. Khi bắt đầu hiệp của bản thân sẽ giảm số tầng Tụ Năng.",
       "type": "Thiên Phú",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1327,6 +1373,15 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào chiến đấu, gây Sát Thương Hỏa cho toàn bộ kẻ địch tương đương #1[i]% Tấn Công của Asta.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào trận sẽ gây lượng nhỏ sát thương cho toàn bộ địch.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1343,37 +1398,79 @@
       "_id": 100901,
       "id": "star_sings_sans_verses_or_vocals",
       "name": "Bài Ca Không Lời",
-      "desc": "Khi thi triển Chiến Kỹ sẽ gây thêm 1 lần sát thương cho 1 kẻ địch ngẫu nhiên."
+      "desc": "Khi thi triển Chiến Kỹ sẽ gây thêm 1 lần sát thương cho 1 kẻ địch ngẫu nhiên.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100902,
       "id": "moon_speaks_in_wax_and_wane",
       "name": "Vầng Trăng Khi Tròn Khi Khuyết",
-      "desc": "Khi thi triển Tuyệt Kỹ, Asta sẽ không giảm số tầng Tụ Năng vào hiệp sau."
+      "desc": "Khi thi triển Tuyệt Kỹ, Asta sẽ không giảm số tầng Tụ Năng vào hiệp sau.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100903,
       "id": "meteor_showers_for_wish_and_want",
       "name": "Thiên Thạch Biến Hoá",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100904,
       "id": "aurora_basks_in_beauty_and_bliss",
       "name": "Cực Quang Hiển Hiện",
-      "desc": "Khi số tầng Tụ Năng của Thiên Phú từ <nobr>2</nobr> trở lên, hiệu suất hồi Năng Lượng của Asta tăng <nobr>15%</nobr>."
+      "desc": "Khi số tầng Tụ Năng của Thiên Phú từ <nobr>2</nobr> trở lên, hiệu suất hồi Năng Lượng của Asta tăng <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100905,
       "id": "nebula_secludes_in_runes_and_riddles",
       "name": "Bí Ẩn Thiên Không",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100906,
       "id": "cosmos_dreams_in_calm_and_comfort",
       "name": "Ngủ Say Dưới Ngân Hà",
-      "desc": "Số tầng Tụ Năng mất đi trong mỗi hiệp giảm <nobr>1</nobr>."
+      "desc": "Số tầng Tụ Năng mất đi trong mỗi hiệp giảm <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

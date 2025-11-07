@@ -2,6 +2,7 @@
   "_id": 1013,
   "id": "herta",
   "name": "Herta",
+  "description": "Mitglied Nr. 83 der Geniusgesellschaft und die wahre Herrin der Raumstation.\nEine Wissenschaftlerin, die trotz ihrer überragenden Intelligenz wenig Mitgefühl für andere aufbringt.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Eis-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Fügt allen Gegnern geringen Eis-SCH zu. Ziele mit höheren LP erleiden mehr SCH.",
       "type": "Fertigkeit",
       "tag": "Flächenangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Fügt allen Gegnern Eis-SCH zu.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,24 @@
       "simpleDesc": "Wenn der LP-Prozentsatz eines Gegners durch den Angriff eines Verbündeten auf #1[i]% fällt, führt Herta sofort einen Folgeangriff aus, der allen Gegnern geringen Eis-SCH zufügt.",
       "type": "Talent",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1383,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik wird der ANG dieser Einheit zu Beginn des nächsten Kampfes erhöht.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1409,88 @@
       "_id": 101301,
       "id": "kick_you_when_youre_down",
       "name": "Tritt dich, wenn du am Boden liegst",
-      "desc": "Liegt der LP-Prozentsatz des anvisierten Gegners bei <nobr>50%</nobr> oder weniger, verursacht Hertas Standardangriff <u>zusätzlichen Eis-SCH</u> in Höhe von <nobr>40%</nobr> von Hertas ANG."
+      "desc": "Liegt der LP-Prozentsatz des anvisierten Gegners bei <nobr>50%</nobr> oder weniger, verursacht Hertas Standardangriff <u>zusätzlichen Eis-SCH</u> in Höhe von <nobr>40%</nobr> von Hertas ANG.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101302,
       "id": "keep_the_ball_rolling",
       "name": "Triumph und Verfolgung",
-      "desc": "Erhöht für jede Auslösung des Talents die KRIT-Rate von Herta um <nobr>3%</nobr>. Dieser Effekt ist bis zu <nobr>5</nobr>-mal stapelbar."
+      "desc": "Erhöht für jede Auslösung des Talents die KRIT-Rate dieser Einheit um <nobr>3%</nobr>. Dieser Effekt ist bis zu <nobr>5</nobr>-mal stapelbar.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101303,
       "id": "thats_the_kind_of_girl_i_am",
       "name": "So bin ich nun mal",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101304,
       "id": "hit_where_it_hurts",
       "name": "Hinlangen, wo es weh tut",
-      "desc": "Verursacht bei der Auslösung des Talents <nobr>10%</nobr> mehr SCH."
+      "desc": "Verursacht bei der Auslösung des Talents <nobr>10%</nobr> mehr SCH.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101305,
       "id": "cuss_big_or_cuss_nothing",
       "name": "Fluch ordentlich oder lass es bleiben",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101306,
       "id": "no_one_can_betray_me",
       "name": "Keiner kann mich betrügen",
-      "desc": "Erhöht ANG nach dem Einsatz des Ultimates für <nobr>1</nobr> Rd. um <nobr>25%</nobr>."
+      "desc": "Erhöht ANG nach dem Einsatz des Ultimates für <nobr>1</nobr> Rd. um <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

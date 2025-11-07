@@ -2,6 +2,7 @@
   "_id": 1404,
   "id": "mydei",
   "name": "Midei",
+  "description": "Kremnos, ¡la ciudad del caos y la guerra envuelta en la niebla! Su estirpe real está manchada con el parricidio, y su dios lleva el nombre de la catástrofe.\nEl inmortal Mideimos, el león solitario, el Heredero de Crisos que persigue la Yesca del Conflicto. Deberás soportar mil muertes, bañarte en sangre y regresar a tu hogar, llevando sobre tus hombros un destino de locura. \nDeberás asesinar a un rey para convertirte en rey y matar a un dios para convertirte en dios. Las pezuñas de hierro de la guerra recorrerán las tierras desoladas, pero al final, deberás mancharte con la sangre de tu patria.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Imaginario a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Consume PV e inflige Daño Imaginario a un enemigo y una pequeña cantidad de Daño Imaginario a los objetivos adyacentes.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Regenera PV y acumula carga del talento. Inflige una gran cantidad de Daño Imaginario a un enemigo y Daño Imaginario a los objetivos adyacentes, y afecta con Provocación al objetivo y a los objetivos adyacentes.",
       "type": "Habilidad definitiva",
       "tag": "Ráfaga",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,32 @@
       "simpleDesc": "Acumula carga al perder PV. Cuando la carga alcanza 100, entra en el estado de Venganza de sangre, regenera PV y adelanta su acción. En el estado de Venganza de sangre, sus PV máx. actuales aumentan y su DEF se mantiene en 0. Al comenzar su turno, lanza automáticamente Regicidio, ascenso al trono.\nCuando la carga en el estado de Venganza de sangre llega a 150, Midei obtiene inmediatamente 1 turno adicional y lanza automáticamente Deicidio, ascenso divino.\nCuando Midei recibe un golpe letal, sale del estado de Venganza de sangre.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Turno adicional",
+          "desc": "Obtiene 1 turno adicional que no se resta de la cantidad de turnos. Durante este turno adicional no se puede usar la habilidad definitiva.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1505,15 @@
       "simpleDesc": "Atrae a los enemigos de cierta área y los afecta con Mareo. Al atacar a un enemigo mareado y entrar en combate, inflige una pequeña cantidad de Daño Imaginario a todos los enemigos y los afecta con Provocación. Además, acumula carga del talento.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1471,37 +1534,79 @@
       "_id": 140401,
       "id": "frost_hones_spine_of_steel",
       "name": "Espalda por el frío curtida",
-      "desc": "El multiplicador del daño que Deicidio, ascenso divino inflige al objetivo principal aumenta en un <nobr>30%</nobr>. Deicidio, ascenso divino pasa a infligir a todos los enemigos un Daño Imaginario equivalente al multiplicador de daño del objetivo principal."
+      "desc": "El multiplicador del daño que Deicidio, ascenso divino inflige al objetivo principal aumenta en un <nobr>30%</nobr>. Deicidio, ascenso divino pasa a infligir a todos los enemigos un Daño Imaginario equivalente al multiplicador de daño del objetivo principal.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140402,
       "id": "strife_beholds_cry_of_dead",
       "name": "Estertor de los muertos del Conflicto",
-      "desc": "Durante el estado de Venganza de sangre, el daño que inflige Midei ignora un <nobr>15%</nobr> de la DEF de los enemigos. Tras recibir una curación, un <nobr>40%</nobr> de la curación recibida se convierte en carga. La carga convertida acumulada no puede superar <nobr>40</nobr> pts. Después de que cualquier unidad actúe, se restablece la carga que se puede acumular."
+      "desc": "Durante el estado de Venganza de sangre, el daño que inflige Midei ignora un <nobr>15%</nobr> de la DEF de los enemigos. Tras recibir una curación, un <nobr>40%</nobr> de la curación recibida se convierte en carga. La carga convertida acumulada no puede superar <nobr>40</nobr> pts. Después de que cualquier unidad actúe, se restablece la carga que se puede acumular.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140403,
       "id": "honor_exalts_feast_of_faith",
       "name": "Banquete de gloria inmarcesible",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140404,
       "id": "siren_jolts_the_laconic_lion",
       "name": "Cuerno que despierta al león silencioso",
-      "desc": "Durante el estado de Venganza de sangre, el Daño CRIT aumenta en un <nobr>30%</nobr>. Tras recibir un ataque enemigo, regenera un <nobr>10%</nobr> de sus PV máx."
+      "desc": "Durante el estado de Venganza de sangre, el Daño CRIT aumenta en un <nobr>30%</nobr>. Tras recibir un ataque enemigo, regenera un <nobr>10%</nobr> de sus PV máx.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140405,
       "id": "war_chisels_flesh_of_flame",
       "name": "Cuerpo por la guerra esculpido",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140406,
       "id": "legacy_scales_mound_of_blood",
       "name": "Montaña de sangre sedimentada",
-      "desc": "Al entrar en combate, entra inmediatamente en el estado de Venganza de sangre y la carga necesaria para activar Deicidio, ascenso divino se reduce a <nobr>100</nobr> puntos."
+      "desc": "Al entrar en combate, entra inmediatamente en el estado de Venganza de sangre y la carga necesaria para activar Deicidio, ascenso divino se reduce a <nobr>100</nobr> puntos.",
+      "unlockCost": [
+        {
+          "ItemID": 11404,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

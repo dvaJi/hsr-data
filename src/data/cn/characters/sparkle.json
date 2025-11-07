@@ -2,6 +2,7 @@
   "_id": 1306,
   "id": "sparkle",
   "name": "花火",
+  "description": "「假面愚者」的成员之一，难以捉摸，不择手段。\n危险的戏剧大师，沉迷于扮演，身怀千张假面，能化万种面相。\n财富、地位、权力…于花火而言都不重要，能让她出手的，唯有「乐趣」。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量量子属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "使我方单体暴击伤害提高，并使该目标行动提前。",
       "type": "战技",
       "tag": "辅助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "为我方恢复战技点，使触发花火天赋的伤害提高效果额外提高。",
       "type": "终结技",
       "tag": "辅助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "我方的战技点上限提高，我方目标消耗战技点时，使我方全体造成的伤害提高。",
       "type": "天赋",
       "tag": "辅助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1473,15 @@
       "simpleDesc": "使用秘技后，我方全体进入【迷误】状态。【迷误】状态下不会被敌人发现。【迷误】状态期间进入战斗时为我方恢复战技点。",
       "type": "秘技",
       "tag": "辅助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1499,79 @@
       "_id": 130601,
       "id": "suspension_of_disbelief",
       "name": "悬置怀疑",
-      "desc": "终结技施加的【谜诡】的持续时间额外增加1回合，持有【谜诡】的我方目标攻击力提高<nobr>40%</nobr>。"
+      "desc": "终结技施加的【谜诡】的持续时间额外增加1回合，持有【谜诡】的我方目标攻击力提高<nobr>40%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130602,
       "id": "purely_fictitious",
       "name": "虚构无端",
-      "desc": "天赋每层效果额外使我方目标造成伤害时无视目标<nobr>8%</nobr>的防御力。"
+      "desc": "天赋每层效果额外使我方目标造成伤害时无视目标<nobr>8%</nobr>的防御力。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130603,
       "id": "pipedream",
       "name": "梦幻泡影",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130604,
       "id": "life_is_a_gamble",
       "name": "游戏人间",
-      "desc": "终结技可以额外恢复1点战技点，天赋的战技点上限增加效果额外增加1点。"
+      "desc": "终结技可以额外恢复1点战技点，天赋的战技点上限增加效果额外增加1点。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130605,
       "id": "parallax_truth",
       "name": "双面真相",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130606,
       "id": "narrative_polysemy",
       "name": "多重解答",
-      "desc": "战技的暴击伤害提高效果额外提高，提高数值等同于花火暴击伤害的<nobr>30%</nobr>，花火施放战技时，使战技的暴击伤害提高效果对持有【谜诡】的队友都会生效，花火施放终结技时，若我方单体中有目标持有战技的暴击伤害提高效果，使该效果扩散至持有【谜诡】的队友。"
+      "desc": "战技的暴击伤害提高效果额外提高，提高数值等同于花火暴击伤害的<nobr>30%</nobr>，花火施放战技时，使战技的暴击伤害提高效果对持有【谜诡】的队友都会生效，花火施放终结技时，若我方单体中有目标持有战技的暴击伤害提高效果，使该效果扩散至持有【谜诡】的队友。",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

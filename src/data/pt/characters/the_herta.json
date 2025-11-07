@@ -2,6 +2,7 @@
   "_id": 1401,
   "id": "the_herta",
   "name": "A Herta",
+  "description": "Estimada N.º 83 da Sociedade de Gênios: humana, mulher, jovem, adorável, atraente. \nDizem que ela vive nos confins do cosmos, raramente saindo de lá. Parece que sua aparição desta vez...\nDeve ser por algum assunto que exige uma atenção pessoal, né?",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Gelo leve a um inimigo-alvo designado.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -449,6 +459,15 @@
       "simpleDesc": "Causa Dano a um inimigo designado. Causa Dano a alvos atingidos por esta instância da Perícia e aos seus alvos adjacentes, repetindo 2 vezes.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        45,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Rearranja o número de acúmulos de \"Interpretação\" em todos os inimigos, priorizando a transferência de maiores valores de acúmulos de \"Interpretação\" para alvos de Elite ou de raridade superior. Então, causa Dano de Gelo a todos os inimigos. Após o uso, aprimora a Perícia e age imediatamente.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "A Perícia Aprimorada aumenta o Dano causado com base nos acúmulos de \"Interpretação\" do alvo.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1533,24 @@
       "simpleDesc": "Após usar a Técnica, marca várias localizações de Tesouros Básicos, e aumenta o ATQ de A Herta no início da próxima batalha.\nApós entrar em batalha usando a Técnica no Universo Simulado ou no Universo Divergente, causará uma quantidade massiva de Dano Verdadeiro a todos os inimigos no início de cada onda.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "Dano Verdadeiro",
+          "desc": "Dano sem Tipo que não é afetado por nenhum efeito. Esse Dano não é considerado como a utilização de 1 ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1517,37 +1572,88 @@
       "_id": 140101,
       "id": "night_at_shorefall",
       "name": "Noite das Estrelas Fugazes",
-      "desc": "Quando a Perícia Aprimorada calcula a quantidade de acúmulos de \"Interpretação\", conta adicionalmente <nobr>50%</nobr> dos acúmulos de \"Interpretação\" no alvo com os maiores acúmulos entre alvo principal e os alvos adjacentes. Quando a \"Interpretação\" é redefinida ao utilizar uma Perícia Aprimorada, o número de acúmulos é redefinido para <nobr>15</nobr> em seu lugar."
+      "desc": "Quando a Perícia Aprimorada calcula a quantidade de acúmulos de \"Interpretação\", conta adicionalmente <nobr>50%</nobr> dos acúmulos de \"Interpretação\" no alvo com os maiores acúmulos entre alvo principal e os alvos adjacentes. Quando a \"Interpretação\" é redefinida ao utilizar uma Perícia Aprimorada, o número de acúmulos é redefinido para <nobr>15</nobr> em seu lugar.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140102,
       "id": "wind_through_keyhole",
       "name": "Vento Pela Fechadura",
-      "desc": "Após A Herta entrar em combate ou usar sua Perícia Suprema, ela ganha adicionalmente 1 acúmulo de \"Inspiração\". Ao usar a Perícia Aprimorada, a ação subsequente de A Herta é Avançada Adiante em <nobr>35%</nobr>."
+      "desc": "Após A Herta entrar em combate ou usar sua Perícia Suprema, ela ganha adicionalmente 1 acúmulo de \"Inspiração\". Ao usar a Perícia Aprimorada, a ação subsequente de A Herta é Avançada Adiante em <nobr>35%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140103,
       "id": "door_into_summer",
       "name": "A Porta para o Verão",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140104,
       "id": "the_sixteenth_key",
       "name": "A Décima-Sexta Chave",
-      "desc": "Aumenta em <nobr>12%</nobr> a VEL dos personagens que seguem o Caminho da Erudição na equipe."
+      "desc": "Aumenta em <nobr>12%</nobr> a VEL dos personagens que seguem o Caminho da Erudição na equipe.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140105,
       "id": "bitter_pill_of_truth",
       "name": "A Amarga Pílula da Verdade",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140106,
       "id": "sweet_lure_of_answer",
       "name": "A Doce Atração da Resposta",
-      "desc": "A PEN de RES a Gelo de A Herta aumenta em <nobr>20%</nobr>. Quando o número de inimigos-alvo em campo for 3 (ou maior)/2/1, o multiplicador de Dano da Perícia Suprema aumenta em <nobr>140%</nobr>/<nobr>250%</nobr>/<nobr>400%</nobr> respectivamente."
+      "desc": "A PEN de RES a Gelo de A Herta aumenta em <nobr>20%</nobr>. Quando o número de inimigos-alvo em campo for 3 (ou maior)/2/1, o multiplicador de Dano da Perícia Suprema aumenta em <nobr>140%</nobr>/<nobr>250%</nobr>/<nobr>400%</nobr> respectivamente.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

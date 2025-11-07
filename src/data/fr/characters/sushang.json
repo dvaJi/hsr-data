@@ -2,6 +2,7 @@
   "_id": 1206,
   "id": "sushang",
   "name": "Sushang",
+  "description": "Née sur le Yaoqing de Xianzhou, elle a été envoyée chez les Chevaliers des nuages du Luofu pour son entraînement militaire.\nElle manie l'épée de famille que lui a offerte sa mère et espère bien écrire sa propre histoire.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -243,10 +244,22 @@
       "_id": 120601,
       "id": "cloudfencer_art_starshine",
       "name": "Escrime perce-nuages : Étoile brillante",
-      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Sushang à un ennemi unique.",
+      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Sushang à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,39 @@
       "_id": 120602,
       "id": "cloudfencer_art_mountainfall",
       "name": "Escrime perce-nuages : Chute de montagne",
-      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Sushang à un ennemi unique. De plus, il y a #3[i]% de chances de déclencher Posture de l'épée lors du coup final, ce qui inflige à l'ennemi des DGT physiques additionnels équivalents à #2[i]% de l'ATQ de Sushang.\nSi l'ennemi est affecté par une Rupture de faiblesse, le déclenchement de Posture de l'épée est garanti.",
+      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Sushang à un ennemi désigné. De plus, il y a #3[i]% de chances de déclencher Posture de l'épée lors du coup final, ce qui inflige à l'ennemi des DGT physiques additionnels équivalents à #2[i]% de l'ATQ de Sushang.\nSi l'ennemi est affecté par une Rupture de faiblesse, le déclenchement de Posture de l'épée est garanti.",
       "simpleDesc": "Inflige des DGT physiques à un ennemi unique avec une faible chance de déclencher Posture de l'épée. Si l'ennemi est affecté par une Rupture de faiblesse, le déclenchement de Posture de l'épée est garanti.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -733,10 +775,22 @@
       "_id": 120603,
       "id": "shape_of_taixu_dawn_herald",
       "name": "Forme de Taixu : Héraut de l'aube",
-      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Sushang à un ennemi unique et Sushang agit immédiatement à nouveau. De plus, l'ATQ de Sushang augmente de #4[i]% et l'utilisation de sa compétence a 2 chances supplémentaires de déclencher Posture de l'épée pendant #2[i] tours.\nLorsque Posture de l'épée est déclenchée par les chances supplémentaires, elle inflige #3[i]% des DGT initiaux.",
+      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Sushang à un ennemi désigné et Sushang agit immédiatement à nouveau. De plus, l'ATQ de Sushang augmente de #4[i]% et l'utilisation de sa compétence a 2 chances supplémentaires de déclencher Posture de l'épée pendant #2[i] tours.\nLorsque Posture de l'épée est déclenchée par les chances supplémentaires, elle inflige #3[i]% des DGT initiaux.",
       "simpleDesc": "Inflige des DGT physiques massifs à un ennemi unique, renforce l'effet de Posture de l'épée et agit immédiatement.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1124,15 @@
       "simpleDesc": "Lorsqu'un ennemi subit une Rupture de faiblesse, la VIT du personnage augmente.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1435,15 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Sushang inflige des DGT physiques équivalents à #1[i]% de son ATQ à tous les ennemis en entrant en combat.",
       "simpleDesc": "Engage le combat contre les ennemis. Inflige des DGT physiques mineurs à tous les ennemis après être entré en combat.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,37 +1460,88 @@
       "_id": 120601,
       "id": "cut_with_ease",
       "name": "Tranchant aiguisé",
-      "desc": "Régénère 1 point de compétence après avoir utilisé la compétence contre un ennemi <u>en état de Rupture de faiblesse</u>."
+      "desc": "Régénère 1 point de compétence après avoir utilisé la compétence contre un ennemi <u>en état de Rupture de faiblesse</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120602,
       "id": "refine_in_toil",
       "name": "Surentraînée",
-      "desc": "Après avoir déclenché Posture de l'épée, les DGT subis par Sushang sont réduits de <nobr>20%</nobr> pendant 1 tour."
+      "desc": "Après avoir déclenché Posture de l'épée, les DGT subis par Sushang sont réduits de <nobr>20%</nobr> pendant 1 tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120603,
       "id": "rise_from_fame",
       "name": "Née de la célébrité",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120604,
       "id": "cleave_with_heart",
       "name": "Rupture du cœur",
-      "desc": "L'effet de Rupture de Sushang augmente de <nobr>40%</nobr>."
+      "desc": "L'effet de Rupture de Sushang augmente de <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120605,
       "id": "prevail_via_taixu",
       "name": "Victoire du Taixu",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120606,
       "id": "dwell_like_water",
       "name": "Fluide comme l'eau",
-      "desc": "L'augmentation de VIT conférée par le talent devient cumulable jusqu'à 2 fois. De plus, Sushang obtient immédiatement 1 cumul d'augmentation de VIT après avoir rejoint le combat."
+      "desc": "L'augmentation de VIT conférée par le talent devient cumulable jusqu'à 2 fois. De plus, Sushang obtient immédiatement 1 cumul d'augmentation de VIT après avoir rejoint le combat.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

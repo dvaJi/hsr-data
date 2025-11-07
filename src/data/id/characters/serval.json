@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "Serval",
+  "description": "Mekanik Belobog, pernah menjadi peneliti Divisi Teknologi Architect.\nDia adalah kakak perempuan Gepard Landau, tapi sifatnya sangat berbeda dengan adiknya.\nDia sangat menyukai seni musik kuno — \"Rock 'n' Roll\", yang ada sebelum Kebekuan Abadi.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Lightning DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,24 @@
       "simpleDesc": "Mengakibatkan Lightning DMG pada 1 musuh dan Lightning DMG dalam jumlah kecil pada target di sekitarnya. Berpeluang besar untuk menambahkan status Shock pada target.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "Mengakibatkan Lightning DMG pada seluruh musuh dan memperpanjang durasi status Shock musuh.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "Setelah melancarkan serangan, mengakibatkan DMG tambahan dalam jumlah kecil terhadap seluruh target musuh yang berstatus Shock.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, mengakibatkan Lightning DMG sebesar #4[i]% ATK Serval pada musuh secara acak, dan di saat bersamaan memiliki #1[i]% peluang dasar untuk membuat setiap target musuh memasuki status Shock selama #3[i] giliran.\nDalam status Shock, target musuh akan menerima Lightning DoT sebesar #2[i]% ATK Serval setiap gilirannya dimulai.",
       "simpleDesc": "Menyerang musuh. Setelah memasuki pertempuran, mengakibatkan Lightning DMG dalam jumlah kecil pada musuh secara acak, dan berpeluang besar membuat setiap target musuh memasuki status Shock.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "Echo Chamber",
-      "desc": "Basic Attack mengakibatkan Lightning DMG sebesar <nobr>60%</nobr> dari Basic Attack DMG pada 1 musuh di sekitar target secara acak."
+      "desc": "Basic Attack mengakibatkan Lightning DMG sebesar <nobr>60%</nobr> dari Basic Attack DMG pada 1 musuh di sekitar target secara acak.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "Encore!",
-      "desc": "Setiap kali <u>DMG Tambahan</u> dari Talent Serval terpicu, akan memulihkan <nobr>4</nobr> Energy Serval."
+      "desc": "Setiap kali <u>DMG Tambahan</u> dari Talent Serval terpicu, akan memulihkan <nobr>4</nobr> Energy Serval.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "Listen, the Heartbeat of the Gears",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "Make Some Noise!",
-      "desc": "Saat melancarkan Ultimate, ada <nobr>100%</nobr> <u>peluang dasar</u> untuk membuat target musuh yang tidak berstatus Shock memasuki status Shock yang serupa dengan Skill."
+      "desc": "Saat melancarkan Ultimate, ada <nobr>100%</nobr> <u>peluang dasar</u> untuk membuat target musuh yang tidak berstatus Shock memasuki status Shock yang serupa dengan Skill.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "Belobog's Loudest Roar!",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "This Song Rocks to Heaven!",
-      "desc": "Meningkatkan <nobr>30%</nobr> DMG yang diakibatkan Serval pada target musuh yang berstatus Shock."
+      "desc": "Meningkatkan <nobr>30%</nobr> DMG yang diakibatkan Serval pada target musuh yang berstatus Shock.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

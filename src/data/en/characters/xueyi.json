@@ -2,6 +2,7 @@
   "_id": 1214,
   "id": "xueyi",
   "name": "Xueyi",
+  "description": "Judge of the Ten-Lords Commission, which presides over the jurisdiction of life and death on the Luofu.\nFor years after her death, she inhabited a puppet body and returned to the world to fulfill her mission.",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -244,9 +245,21 @@
       "id": "marasunder_awl",
       "name": "Mara-Sunder Awl",
       "desc": "Deals #1[i]% of Xueyi's ATK as Quantum DMG to one designated enemy target.",
-      "simpleDesc": "Deals minor Quantum DMG to a single enemy.",
+      "simpleDesc": "Deals minor Quantum DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 121402,
       "id": "iniquity_obliteration",
       "name": "Iniquity Obliteration",
-      "desc": "Deals Quantum DMG equal to #1[i]% of Xueyi's ATK to a single enemy, and Quantum DMG equal to #2[i]% of Xueyi's ATK to any adjacent enemies.",
-      "simpleDesc": "Deals Quantum DMG to a single enemy and minor Quantum DMG to enemies adjacent to it.",
+      "desc": "Deals Quantum DMG equal to #1[i]% of Xueyi's ATK to one designated enemy, and Quantum DMG equal to #2[i]% of Xueyi's ATK to any adjacent enemies.",
+      "simpleDesc": "Deals Quantum DMG to one enemy and minor Quantum DMG to enemies adjacent to it.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -719,9 +744,21 @@
       "id": "divine_castigation",
       "name": "Divine Castigation",
       "desc": "Deals Quantum DMG equal to #1[i]% of Xueyi's ATK to one designated enemy target. This attack ignores Weakness Types and reduces the enemy's Toughness. When the enemy's Weakness is Broken, the Quantum Weakness Break effect is triggered.\nIn this attack, the more Toughness is reduced, the higher the DMG will be dealt, up to a max of #3[f1]% increase.",
-      "simpleDesc": "Deals massive Quantum DMG to a single enemy. This attack ignores Weakness Types and reduces the target's Toughness. The more Toughness is reduced, the higher the DMG will be dealt.",
+      "simpleDesc": "Deals massive Quantum DMG to one enemy. This attack ignores Weakness Types and reduces the target's Toughness. The more Toughness is reduced, the higher the DMG will be dealt.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        120,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,9 +1074,30 @@
       "id": "karmic_perpetuation",
       "name": "Karmic Perpetuation",
       "desc": "When Xueyi reduces enemy Toughness with attacks, Karma will be stacked. The more Toughness is reduced, the more stacks of Karma are added, up to #1[i] stacks.\nWhen Xueyi's teammates reduce enemy Toughness with attacks, Xueyi gains #3[i] stack(s) of Karma.\nWhen Karma reaches the max number of stacks, consumes all current Karma stacks and immediately launches Follow-up ATK against an enemy target, dealing DMG for 3 times, with each time dealing Quantum DMG equal to #2[i]% of Xueyi's ATK to a single random enemy. This Follow-up ATK will not add Karma stacks.",
-      "simpleDesc": "When Xueyi or her teammates reduce enemy Toughness with attacks, she gains stacks of Karma. When Karma reaches the max number of stacks, immediately launches Follow-up ATK, dealing minor Quantum DMG to a single enemy target, bouncing for 3 times and consuming all Karma.",
+      "simpleDesc": "When Xueyi or her teammates reduce enemy Toughness with attacks, she gains stacks of \"Karma.\" When \"Karma\" reaches the max number of stacks, immediately launches Follow-up ATK, dealing minor Quantum DMG to one enemy target, bouncing for 3 times and consuming all \"Karma.\"",
       "type": "Talent",
       "tag": "Bounce",
+      "spBase": 2,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1415,15 @@
       "desc": "Immediately attacks the enemy. After entering combat, deals #1[i]% of Xueyi's ATK as Quantum DMG to all enemies.",
       "simpleDesc": "Attacks the enemy. After entering battle, deals minor Quantum DMG to all enemies.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,37 +1440,97 @@
       "_id": 121401,
       "id": "dvesha_inhibited",
       "name": "Dvesha, Inhibited",
-      "desc": "Increases the DMG dealt by the Talent's <u>Follow-up ATK</u> by <nobr>40%</nobr>."
+      "desc": "Increases the DMG dealt by the Talent's <u>Follow-up ATK</u> by <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121402,
       "id": "klesha_breached",
       "name": "Klesha, Breached",
-      "desc": "Talent's <u>Follow-up ATK</u> Reduces enemy Toughness regardless of Weakness types. At the same time, restores Xueyi's HP by an amount equal to <nobr>5%</nobr> of her Max HP. When breaking Weakness, triggers the Quantum Break Effect."
+      "desc": "Talent's <u>Follow-up ATK</u> Reduces enemy Toughness regardless of Weakness types. At the same time, restores Xueyi's HP by an amount equal to <nobr>5%</nobr> of her Max HP. When breaking Weakness, triggers the Quantum Break Effect.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121403,
       "id": "dukha_ceased",
       "name": "Duḥkha, Ceased",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121404,
       "id": "karma_severed",
       "name": "Karma, Severed",
-      "desc": "When using Ultimate, increases Break Effect by <nobr>40%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "When using Ultimate, increases Break Effect by <nobr>40%</nobr> for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121405,
       "id": "deva_enthralled",
       "name": "Deva, Enthralled",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121406,
       "id": "sasra_mastered",
       "name": "Saṃsāra, Mastered",
-      "desc": "The max stack limit for Karma decreases to <nobr>6</nobr>."
+      "desc": "The max stack limit for Karma decreases to <nobr>6</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

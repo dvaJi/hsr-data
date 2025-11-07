@@ -2,6 +2,7 @@
   "_id": 1305,
   "id": "dr_ratio",
   "name": "Dr. Wahrheit",
+  "description": "Mitglied der Intelligenzia-Gilde.\nExzentrisches Temperament, scharfzüngig aber mit vornehmem Verhalten.\nDas Gesicht unter der seltsamen Gipsskulptur soll unerwartet hübsch sein.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner geringen imaginären SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner imaginären SCH zu.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Fügt einem anvisierten Gegner imaginären SCH zu und verursacht „Torheit der Weisen“. Wenn Dr. Wahrheits Verbündete mit Torheit der Weisen belegte Gegner angreifen, wird 1-mal ein Folgeangriff auf sie ausgelöst.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1022,6 +1059,32 @@
       "simpleDesc": "Beim Einsatz der Fertigkeit besteht eine Chance, dass 1-mal ein Folgeangriff auf das Ziel ausgelöst wird, der imaginären SCH verursacht.",
       "type": "Talent",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Feste Chance",
+          "desc": "Die feste Chance wird von keinem Faktor beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1409,24 @@
       "simpleDesc": "Erschafft eine Dimension. Gegner in dieser Dimension werden mit Verspotten belegt. Nach Kampfeintritt mit Gegnern in der Dimension besteht eine hohe Chance, dass den Gegnern GES-Reduktion zugefügt wird.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1446,113 @@
       "_id": 130501,
       "id": "pride_comes_before_a_fall",
       "name": "Fluch des Hochmuts",
-      "desc": "Das Stapelungslimit für die Spur „Induktion“ wird um <nobr>4</nobr> erhöht. Gewährt zu Beginn des Kampfes sofort <nobr>4</nobr> Stapelung(en) Induktion. Induktion muss zuerst freigeschaltet sein."
+      "desc": "Das Stapelungslimit für die Spur „Induktion“ wird um <nobr>4</nobr> erhöht. Gewährt zu Beginn des Kampfes sofort <nobr>4</nobr> Stapelung(en) Induktion. Induktion muss zuerst freigeschaltet sein.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130502,
       "id": "the_divine_is_in_the_details",
       "name": "Mikroskopisch doch tiefgründig",
-      "desc": "Wenn Dr. Wahrheit mit einem <u>Folgeangriff</u> seines Talents einen Gegner angreift, fügt er für jeden <u>Debuff</u> des Ziels <u>zusätzlichen imaginären SCH</u> in Höhe von <nobr>20%</nobr> von Dr. Wahrheits ANG zu. Dieser Effekt kann bei jedem Einsatz eines <u>Folgeangriffs</u> bis zu <nobr>4</nobr>-mal ausgelöst werden."
+      "desc": "Wenn Dr. Wahrheit mit einem <u>Folgeangriff</u> seines Talents einen Gegner angreift, fügt er für jeden <u>Debuff</u> des Ziels <u>zusätzlichen imaginären SCH</u> in Höhe von <nobr>20%</nobr> von Dr. Wahrheits ANG zu. Dieser Effekt kann bei jedem Einsatz eines <u>Folgeangriffs</u> bis zu <nobr>4</nobr>-mal ausgelöst werden.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130503,
       "id": "know_thyself",
       "name": "Kenne dich selbst",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130504,
       "id": "ignorance_is_blight",
       "name": "Unwissen zeugt Dummheit",
-      "desc": "Wenn Dr. Wahrheits Talent ausgelöst wird, stellt er zusätzlich <nobr>15</nobr> Pkt. Energie wieder her."
+      "desc": "Wenn Dr. Wahrheits Talent ausgelöst wird, stellt er zusätzlich <nobr>15</nobr> Pkt. Energie wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130505,
       "id": "sic_itur_ad_astra",
       "name": "Ruderlos auf dem Ozean",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130506,
       "id": "vincit_omnia_veritas",
       "name": "Ewige Wahrheit",
-      "desc": "Erhöht die Auslösungsanzahl für „Torheit der Weisen“ um <nobr>1</nobr>. Der durch <u>Folgeangriffe</u> verursachte SCH des Talents wird um <nobr>50%</nobr> erhöht."
+      "desc": "Erhöht die Auslösungsanzahl für „Torheit der Weisen“ um <nobr>1</nobr>. Der durch <u>Folgeangriffe</u> verursachte SCH des Talents wird um <nobr>50%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

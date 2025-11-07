@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "Hyacine",
+  "description": "Thành bang giữa những tầng mây tan rã theo năm tháng, Đình Viện Hoàng Hôn một lần nữa mở rộng cánh cửa, mang đến ánh sáng le lói cho Đêm Vĩnh Hằng.\nThầy Thuốc Hyacinthia, Hậu Duệ Chrysos canh giữ Ngọn Lửa \"Bầu Trời\". Kế thừa ý chí của tổ tiên, vá lại bình minh và hoàng hôn đã nứt vỡ.\n...Mong ánh cầu vồng rọi xuống, xóa tan hận thù, đưa bình minh trở về với mặt đất.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong lên một kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Triệu hồi Linh Hồn Ký Ức Nhóc Ica, hồi HP cho toàn thể phe ta.",
       "type": "Chiến Kỹ",
       "tag": "Hồi Phục",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "Triệu hồi Linh Hồn Ký Ức Nhóc Ica, hồi HP cho toàn thể phe ta. Vào trạng thái \"Sau Cơn Mưa Trời Lại Sáng\", khi Hyacine ở trạng thái này sẽ tăng Giới Hạn HP cho toàn thể phe ta.",
       "type": "Tuyệt Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "Khi Hyacine hoặc Nhóc Ica cung cấp trị liệu, sẽ tăng sát thương do Nhóc Ica gây ra.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "Khi bắt đầu trận kế tiếp, sẽ hồi HP cho toàn thể phe ta và tăng Giới Hạn HP.",
       "type": "Bí Kỹ",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Nhóc Ica",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "Mây Đen Hãy Tan Biến!",
+        "desc": "Gây cho toàn phe địch Sát Thương Phong bằng <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> lượng trị liệu Hyacine và Nhóc Ica tích lũy trong trận này. Đồng thời xóa <nobr>#2[i]%</nobr> lượng trị liệu tích lũy.",
+        "simpleDesc": "Gây Sát Thương Phong cho toàn bộ phe địch.",
+        "type": {
+          "id": "Servant",
+          "name": "Kỹ Năng Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Đánh Lan"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "Bàn Tay Nắm Lấy Trời Xanh",
+        "desc": "Tốc độ của Nhóc Ica duy trì bằng 0, miễn <u>Hiệu Ứng Xấu</u>, đồng thời sẽ không xuất hiện trong thứ tự hành động.\nNếu mục tiêu phe ta ngoại trừ Nhóc Ica bị giảm HP, thì khi bắt đầu hiệp của mục tiêu bất kỳ hoặc sau khi hành động, Nhóc Ica sẽ tiêu hao HP bằng <nobr>#1[i]%</nobr> Giới Hạn HP của bản thân, và giúp mục tiêu bị giảm HP của phe ta hồi HP bằng <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> Giới Hạn HP của Hyacine +<span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span>.\nKhi Hyacine trong trạng thái \"Sau Cơn Mưa Trời Lại Sáng\", sau khi Hyacine thi triển kỹ năng, Nhóc Ica sẽ nhận ngay 1 <u>hiệp tăng thêm</u> và tự động thi triển \"Mây Đen Hãy Tan Biến!\", đồng thời khi Nhóc Ica kích hoạt hiệu ứng trị liệu của Thiên Phú sẽ hồi thêm cho toàn thể mục tiêu phe ta lượng HP bằng <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> Giới Hạn HP của Hyacine +<span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>. Sau khi Nhóc Ica thi triển kỹ năng, sẽ khiến số hiệp duy trì của tất cả <u>hiệu ứng duy trì</u> của bản thân giảm 1.",
+        "simpleDesc": "Nếu mục tiêu phe ta ngoại trừ Nhóc Ica <span style=\"color:#f29e38ff>bị giảm HP</span>, Nhóc Ica sẽ tiêu hao HP của bản thân để <span style=\"color:#f29e38ff>hồi HP</span> cho mục tiêu này. Khi Hyacine có Sau Cơn Mưa Trời Lại Sáng, sau khi Hyacine thi triển kỹ năng, Nhóc Ica sẽ nhận ngay 1 <u>hiệp tăng thêm</u> và tự động thi triển Kỹ Năng Linh Hồn Ký Ức. Sau khi Nhóc Ica thi triển kỹ năng sẽ khiến số hiệp duy trì của <u>hiệu ứng duy trì</u> của bản thân giảm 1.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "Hồi Phục"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "Hiệp Tăng Thêm",
+            "desc": "Nhận 1 hiệp thêm không tiêu hao số hiệp. Trong hiệp này, không thể chen ngang thi triển Tuyệt Kỹ.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "Hiệu Ứng Xấu",
+            "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "Hiệu ứng duy trì",
+            "desc": "Bao gồm hiệu ứng Buff, Hiệu Ứng Xấu và hiệu ứng khác.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "Dang Cánh, Hướng Về Mặt Trời",
+        "desc": "Khi được triệu hồi, hồi phục <nobr>#1[i]</nobr> Năng Lượng cho Hyacine, lần đầu triệu hồi, sẽ hồi phục thêm <nobr>#2[i]</nobr> Năng Lượng.",
+        "simpleDesc": "Khi được triệu hồi, sẽ giúp hồi Năng Lượng cho Hyacine.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Cường Hóa"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "Rơi Xuống Rồi Bay Lên",
+        "desc": "Khi biến mất, sẽ khiến Hyacine <u>Ưu Tiên Hành Động</u> <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Khi biến mất, sẽ khiến Hyacine <u>Ưu Tiên Hành Động</u>.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Cường Hóa"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Ưu Tiên Hành Động",
+            "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "Bảo Vệ Ngọn Nến Trong Đêm Tối",
-      "desc": "Khi Hyacine ở trạng thái Sau Cơn Mưa Trời Lại Sáng, Giới Hạn HP của toàn bộ mục tiêu phe ta tăng <nobr>50%</nobr>, và sau khi thi triển tấn công sẽ hồi ngay HP bằng <nobr>8%</nobr> Giới Hạn HP của Hyacine."
+      "desc": "Khi Hyacine ở trạng thái Sau Cơn Mưa Trời Lại Sáng, Giới Hạn HP của toàn bộ mục tiêu phe ta tăng <nobr>50%</nobr>, và sau khi thi triển tấn công sẽ hồi ngay HP bằng <nobr>8%</nobr> Giới Hạn HP của Hyacine.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "Mời Đến Đình Viện Ngồi Chơi",
-      "desc": "Khi HP của mục tiêu phe ta giảm, Tốc Độ sẽ tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi HP của mục tiêu phe ta giảm, Tốc Độ sẽ tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "Xuất Phát! Hướng Về Mặt Trời",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp Kỹ Năng Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp Kỹ Năng Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "Tặng Bạn Hổ Phách Hoàng Hôn",
-      "desc": "Vết Tích Bão Tố Dừng Lại được cường hóa, mỗi <nobr>1</nobr> điểm Tốc Độ vượt quá, Sát Thương Bạo Kích của Hyacine và Nhóc Ica sẽ tăng thêm <nobr>2%</nobr>."
+      "desc": "Vết Tích Bão Tố Dừng Lại được cường hóa, mỗi <nobr>1</nobr> điểm Tốc Độ vượt quá, Sát Thương Bạo Kích của Hyacine và Nhóc Ica sẽ tăng thêm <nobr>2%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "Ráng Chiều Nhuộm Đỏ Biển Sâu",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "Bầu Trời... Đáp Lời Nguyện Cầu",
-      "desc": "Khi Nhóc Ica thi triển Kỹ Năng Linh Hồn Ký Ức, lượng điểm trị liệu tích lũy xóa bỏ sẽ sửa thành <nobr>12%</nobr>. Khi Nhóc Ica ở trong trận, <u>Xuyên Kháng</u> Toàn Thuộc Tính của toàn bộ mục tiêu phe ta tăng <nobr>20%</nobr>."
+      "desc": "Khi Nhóc Ica thi triển Kỹ Năng Linh Hồn Ký Ức, lượng điểm trị liệu tích lũy xóa bỏ sẽ sửa thành <nobr>12%</nobr>. Khi Nhóc Ica ở trong trận, <u>Xuyên Kháng</u> Toàn Thuộc Tính của toàn bộ mục tiêu phe ta tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

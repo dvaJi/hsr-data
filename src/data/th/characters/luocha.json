@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "Luocha",
+  "description": "พ่อค้าต่างแดนจากโพ้นทะเล ที่พกโลงศพติดตัวอยู่เสมอ\nและยังมีทักษะการแพทย์ชั้นยอด",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG จินตภาพเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "ฟื้นฟู HP ให้กับฝ่ายตัวเองหนึ่งตัว และจะได้รับ \"Abyss Flower\" 1 ชั้น",
       "type": "สกิลต่อสู้",
       "tag": "ฟื้นฟู",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "ลบเอฟเฟกต์ Buff ของฝ่ายศัตรูทั้งหมด 1 เอฟเฟกต์ และสร้าง DMG จินตภาพแก่ศัตรูทั้งหมด พร้อมทั้งได้รับ \"Abyss Flower\" 1 ชั้น",
       "type": "ท่าไม้ตาย",
       "tag": "โจมตีหมู่",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "เอฟเฟกต์ Buff",
+          "desc": "สถานะต่อเนื่องทั้งหมด ที่เป็นเอฟเฟกต์ Buff ในการต่อสู้ หากไม่มีคำอธิบายพิเศษ จะสามารถลบล้างได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "เมื่อมี \"Abyss Flower\" 2 ชั้น จะสร้างเขตแดนขึ้นมา และเมื่อมีเขตแดนอยู่ ฝ่ายเราจะฟื้นฟู HP หลังจากที่ทำการโจมตี",
       "type": "พรสวรรค์",
       "tag": "ฟื้นฟู",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "สถานะหมดสติ",
+          "desc": "เมื่อ HP ปัจจุบัน ของเป้าหมายฝ่ายเราเหลือ 0 จะติดสถานะพิเศษ และเป้าหมายที่ติดสถานะนี้ จะไม่สามารถต่อสู้ได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "เมื่อใช้เทคนิค จะปล่อยเอฟเฟกต์พรสวรรค์ทันที ที่เข้าสู่การต่อสู้ครั้งต่อไป",
       "type": "เทคนิค",
       "tag": "ฟื้นฟู",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Ablution of the Quick",
-      "desc": "เมื่อเขตแดนมีผล ATK ของฝ่ายตัวเองทั้งหมดจะเพิ่มขึ้น <nobr>20%</nobr>"
+      "desc": "เมื่อเขตแดนมีผล ATK ของฝ่ายตัวเองทั้งหมดจะเพิ่มขึ้น <nobr>20%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "Bestowal From the Pure",
-      "desc": "เมื่อปล่อยเอฟเฟกต์สกิลต่อสู้ หากเปอร์เซ็นต์ HP ปัจจุบันของเป้าหมายฝ่ายตัวเองที่กำหนดต่ำกว่า <nobr>50%</nobr> จะทำให้ Luocha มอบการรักษาเพิ่มขึ้น <nobr>30%</nobr> หากเปอร์เซ็นต์ HP ปัจจุบันของเป้าหมายฝ่ายตัวเองที่กำหนด เท่ากับหรือมากกว่า <nobr>50%</nobr> จะมอบโล่ที่ดูดซับ DMG ได้ <nobr>18%</nobr> ของ ATK ของ Luocha +<nobr>240</nobr> ให้กับเป้าหมายดังกล่าว เป็นเวลา <nobr>2</nobr> เทิร์น"
+      "desc": "เมื่อปล่อยเอฟเฟกต์สกิลต่อสู้ หากเปอร์เซ็นต์ HP ปัจจุบันของเป้าหมายฝ่ายตัวเองที่กำหนดต่ำกว่า <nobr>50%</nobr> จะทำให้ Luocha มอบการรักษาเพิ่มขึ้น <nobr>30%</nobr> หากเปอร์เซ็นต์ HP ปัจจุบันของเป้าหมายฝ่ายตัวเองที่กำหนด เท่ากับหรือมากกว่า <nobr>50%</nobr> จะมอบโล่ที่ดูดซับ DMG ได้ <nobr>18%</nobr> ของ ATK ของ Luocha +<nobr>240</nobr> ให้กับเป้าหมายดังกล่าว เป็นเวลา <nobr>2</nobr> เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "Surveyal by the Fool",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "Heavy Lies the Crown",
-      "desc": "เมื่อเขตแดนแสดงผลแล้ว จะทำให้ศัตรูเป้าหมายติดสถานะอ่อนแอ และสร้าง DMG ลดลง <nobr>12%</nobr>"
+      "desc": "เมื่อเขตแดนแสดงผลแล้ว จะทำให้ศัตรูเป้าหมายติดสถานะอ่อนแอ และสร้าง DMG ลดลง <nobr>12%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "Cicatrix 'Neath the Pain",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "Reunion With the Dust",
-      "desc": "เมื่อใช้ท่าไม้ตาย จะมี <u>โอกาสคงที่</u> <nobr>100%</nobr> ที่จะทำให้ความต้านทานทุกประเภท ของศัตรูทั้งหมดลดลง <nobr>20%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น"
+      "desc": "เมื่อใช้ท่าไม้ตาย จะมี <u>โอกาสคงที่</u> <nobr>100%</nobr> ที่จะทำให้ความต้านทานทุกประเภท ของศัตรูทั้งหมดลดลง <nobr>20%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "โอกาสคงที่",
+          "desc": "โอกาสคงที่จะไม่ได้รับผลกระทบจากปัจจัยอื่นๆ",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1312,
   "id": "misha",
   "name": "Misha",
+  "description": "Botones del hotel de Colonipenal. Un chico muy amable y educado.\nSiente gran admiración por los Anónimos y sueña con embarcarse en un viaje algún día.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inflige Daño de Hielo a un enemigo y una pequeña cantidad de Daño de Hielo a los enemigos adyacentes. Aumenta los golpes por acción de la habilidad definitiva de Misha la siguiente vez que la utilice.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +756,32 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo. Por defecto, rebota #1[i] veces entre los enemigos y puede llegar hasta un máximo de #5[i] rebotes. Antes de que cada golpe alcance al objetivo, tiene una pequeña probabilidad de congelarlo.",
       "type": "Habilidad definitiva",
       "tag": "Rebote",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1085,6 +1130,15 @@
       "simpleDesc": "Cada vez que un aliado consuma 1 pt. de habilidad básica, aumentan los golpes por acción de la habilidad definitiva de Misha la siguiente vez que la use. Además, Misha recupera energía.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1442,15 @@
       "simpleDesc": "Crea una zona especial. Los enemigos dentro de la zona especial detienen sus acciones. Cuando entra en combate con un enemigo dentro de la zona especial, aumentan los golpes por acción de la habilidad definitiva de Misha la siguiente vez que la use.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1405,37 +1468,88 @@
       "_id": 131201,
       "id": "whimsicality_of_fancy",
       "name": "Ilusión caprichosa",
-      "desc": "Al usar la habilidad definitiva, el número de golpes por acción aumenta en <nobr>1</nobr> por cada enemigo que haya en el campo de batalla, hasta un máximo de <nobr>5</nobr> golpes más."
+      "desc": "Al usar la habilidad definitiva, el número de golpes por acción aumenta en <nobr>1</nobr> por cada enemigo que haya en el campo de batalla, hasta un máximo de <nobr>5</nobr> golpes más.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131202,
       "id": "yearning_of_youth",
       "name": "Anhelo de juventud",
-      "desc": "Antes de que cada golpe de la habilidad definitiva alcance a su objetivo, hay un <nobr>24%</nobr> de <u>probabilidad base</u> de reducir su DEF en un <nobr>16%</nobr> durante <nobr>3</nobr> turnos."
+      "desc": "Antes de que cada golpe de la habilidad definitiva alcance a su objetivo, hay un <nobr>24%</nobr> de <u>probabilidad base</u> de reducir su DEF en un <nobr>16%</nobr> durante <nobr>3</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131203,
       "id": "vestige_of_happiness",
       "name": "Vestigios de felicidad",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131204,
       "id": "visage_of_kinship",
       "name": "Apariencia familiar",
-      "desc": "Aumenta el multiplicador de daño de cada golpe de la habilidad definitiva en un <nobr>6%</nobr>."
+      "desc": "Aumenta el multiplicador de daño de cada golpe de la habilidad definitiva en un <nobr>6%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131205,
       "id": "genesis_of_first_love",
       "name": "Génesis del amor y la amistad",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131206,
       "id": "estrangement_of_dream",
       "name": "Deseo del pasado",
-      "desc": "Al usar la habilidad definitiva, inflige un <nobr>30%</nobr> más de daño hasta que termine su turno. Además, la siguiente vez que use la habilidad básica, los aliados recuperan <nobr>1</nobr> pt. de habilidad básica."
+      "desc": "Al usar la habilidad definitiva, inflige un <nobr>30%</nobr> más de daño hasta que termine su turno. Además, la siguiente vez que use la habilidad básica, los aliados recuperan <nobr>1</nobr> pt. de habilidad básica.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

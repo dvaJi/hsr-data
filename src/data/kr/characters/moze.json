@@ -2,6 +2,7 @@
   "_id": 1223,
   "id": "moze",
   "name": "맥택",
+  "description": "선주 「요청」의 그림자 호위, 과묵하고 홀로 움직인다.\n정보에 관한 일과 공개적으로 처리할 수 없는 일을 전담하며, 사람들 앞에 모습을 드러내는 일이 드물다. 맥택이 칼끝을 드러내는 순간, 적에게는 죽음의 시간이 임박한 것이다.\n암살 수단이 다양하고, 청결과 정리 정돈에 대해 남다른 집착을 보인다",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 번개 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "단일 적을 [사냥감]으로 만들고, 해당 적에게 번개 속성 피해를 가하며, 충전을 #2[i]pt 획득한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,24 @@
       "simpleDesc": "단일 적에게 번개 속성 피해를 가하고, 특성의 추가 공격을 발동한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,40 @@
       "simpleDesc": "필드 위에 [사냥감]이 있을 시 맥택이 퇴장 상태에 진입한다.\n아군이 [사냥감] 공격 후 맥택이 번개 속성 추가 피해를 가하고, 충전을 1pt 소모한다. 충전을 #2[i]pt 소모할 때마다 맥택이 [사냥감]에게 추가 공격을 발동하고 번개 속성 피해를 가하며, 충전이 0일 시 목표의 [사냥감] 상태를 해제한다",
       "type": "특성",
       "tag": "단일 공격",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000016,
+          "name": "퇴장",
+          "desc": "퇴장 상태인 목표는 스킬 목표가 될 수 없으며, 행동 서열에 나타나지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1399,15 @@
       "simpleDesc": "은신 상태에 진입한다. 은신 상태에서 적을 공격해 전투 진입 시 피해가 증가한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1346,37 +1426,97 @@
       "_id": 122301,
       "id": "oathkeeper",
       "name": "다짐",
-      "desc": "전투 진입 후 맥택은 에너지를 <nobr>20</nobr>pt 회복한다. 특성의 <u>추가 피해</u>를 1회 발동할 때마다 맥택은 에너지를 <nobr>2</nobr>pt 회복한다"
+      "desc": "전투 진입 후 맥택은 에너지를 <nobr>20</nobr>pt 회복한다. 특성의 <u>추가 피해</u>를 1회 발동할 때마다 맥택은 에너지를 <nobr>2</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122302,
       "id": "wrathbearer",
       "name": "정벌",
-      "desc": "모든 아군이 [사냥감]이 된 적에게 피해를 가할 시 치명타 피해가 <nobr>40%</nobr> 증가한다"
+      "desc": "모든 아군이 [사냥감]이 된 적에게 피해를 가할 시 치명타 피해가 <nobr>40%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122303,
       "id": "deathchaser",
       "name": "추격",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122304,
       "id": "heathprowler",
       "name": "은폐",
-      "desc": "필살기 발동 시 맥택이 가하는 피해가 <nobr>#1[f1]%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "필살기 발동 시 맥택이 가하는 피해가 <nobr>#1[f1]%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122305,
       "id": "truthbender",
       "name": "기만",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122306,
       "id": "faithbinder",
       "name": "단심",
-      "desc": "특성의 <u>추가 공격</u> 피해 배율이 <nobr>25%</nobr> 증가한다"
+      "desc": "특성의 <u>추가 공격</u> 피해 배율이 <nobr>25%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11223,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

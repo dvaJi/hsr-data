@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "波提欧",
+  "description": "浪迹银河的改造人牛仔，极度乐观、放荡不羁。\n身为「巡海游侠」的一员，为惩奸除恶，可以无所不用其极——\n高调行事的背后，渴望以此引起复仇对象「星际和平公司」的注意。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量物理属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "开启【绝命对峙】，【绝命对峙】的目标被消灭或弱点被击破后，波提欧获得【优势口袋】并解除【绝命对峙】。使自身获得强化普攻，且本回合不会结束。",
       "type": "战技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "为敌方单体添加物理弱点，并对其造成大量物理属性伤害，使目标行动延后。",
       "type": "终结技",
       "tag": "单攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "行动延后",
+          "desc": "使目标在下次行动前的等待间隔延长。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "【优势口袋】使强化普攻削韧值提高，并对被击破的敌人额外造成物理属性击破伤害。战斗胜利后，将【优势口袋】保留至下一次战斗中。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点击破状态",
+          "desc": "当敌方目标的韧性被削减至0时进入的特殊状态，进入该状态的目标行动会被延后。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "击破伤害",
+          "desc": "击破特攻、目标韧性上限、角色等级越高，造成的击破伤害越高。\n击破伤害无法暴击，不受伤害提高类效果所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "使用秘技，下一次进战首次施放战技为敌方单体添加物理弱点。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "扬尘孤星",
-      "desc": "战斗开始时，获得1层【优势口袋】。波提欧造成伤害时无视敌方目标<nobr>16%</nobr>的防御力。"
+      "desc": "战斗开始时，获得1层【优势口袋】。波提欧造成伤害时无视敌方目标<nobr>16%</nobr>的防御力。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "里程碑贩子",
-      "desc": "处于【绝命对峙】并获得【优势口袋】时，恢复<nobr>1</nobr>个战技点，并且击破特攻提高<nobr>30%</nobr>，持续<nobr>2</nobr>回合。该效果单个回合内不可重复触发，在获得溢出的【优势口袋】时也会触发。"
+      "desc": "处于【绝命对峙】并获得【优势口袋】时，恢复<nobr>1</nobr>个战技点，并且击破特攻提高<nobr>30%</nobr>，持续<nobr>2</nobr>回合。该效果单个回合内不可重复触发，在获得溢出的【优势口袋】时也会触发。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "大理石果园守卫",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "冷肉名厨",
-      "desc": "处于【绝命对峙】的敌方目标受到波提欧攻击时，受到的伤害额外提高<nobr>12%</nobr>。波提欧受到处于【绝命对峙】的敌方目标的攻击时，受到的伤害提高效果降低<nobr>12%</nobr>。"
+      "desc": "处于【绝命对峙】的敌方目标受到波提欧攻击时，受到的伤害额外提高<nobr>12%</nobr>。波提欧受到处于【绝命对峙】的敌方目标的攻击时，受到的伤害提高效果降低<nobr>12%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "树桩演说家",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "撬棍旅馆的浣熊",
-      "desc": "触发天赋造成<u>击破伤害</u>时，对目标额外造成等同于原伤害倍率<nobr>40%</nobr>的<u>击破伤害</u>，对相邻目标额外造成等同于原伤害倍率<nobr>70%</nobr>的<u>击破伤害</u>。"
+      "desc": "触发天赋造成<u>击破伤害</u>时，对目标额外造成等同于原伤害倍率<nobr>40%</nobr>的<u>击破伤害</u>，对相邻目标额外造成等同于原伤害倍率<nobr>70%</nobr>的<u>击破伤害</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "击破伤害",
+          "desc": "击破特攻、目标韧性上限、角色等级越高，造成的击破伤害越高。\n击破伤害无法暴击，不受伤害提高类效果所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

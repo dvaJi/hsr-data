@@ -2,6 +2,7 @@
   "_id": 1221,
   "id": "yunli",
   "name": "Yunli",
+  "description": "Seorang pemburu pedang dari Xianzhou \"Zhuming\" dan cucu perempuan kesayangan \"Flaming Heart\", Jenderal Huaiyan. Memiliki kepribadian yang jujur dan terus terang.\nDia belajar ilmu pedang dan seni menempa dengan Huaiyan sejak kecil, dan adalah ahli pedang jenius yang kedua paling muda di \"Flamewheel Octet\".\nMemiliki kebencian mendalam terhadap pedang-pedang terkutuk yang beredar dari Zhuming, dan bersumpah untuk \"memburu dan melenyapkan semua pedang terkutuk\".",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Physical DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Memulihkan HP diri sendiri dan mengakibatkan Physical DMG pada 1 musuh, serta mengakibatkan Physical DMG dalam jumlah kecil pada target di sekitarnya.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,24 @@
       "simpleDesc": "Memasuki status \"Parry\" dan membuat seluruh musuh memasuki status Taunt. Selama durasi \"Parry\", setelah terkena serangan akan memicu Serangan Balasan yang kuat, mengakibatkan Physical DMG pada penyerang dan target di sekitarnya. Kemudian, akan mengakibatkan Physical DMG dalam jumlah kecil pada 1 musuh, total Bounce sebanyak 6 kali. Jika tidak memicu Serangan Balasan saat status \"Parry\" berlangsung, maka saat status berakhir akan mengakibatkan Physical DMG pada target musuh acak dan musuh di sekitarnya.",
       "type": "Ultimate",
       "tag": "Enhance",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Serangan Balasan",
+          "desc": "Efek yang otomatis terpicu setelah target terkena serangan, yang akan melancarkan 1 kali serangan tambahan pada penyerang.\nSerangan Balasan juga termasuk Serangan Lanjutan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1194,24 @@
       "simpleDesc": "Saat Yunli diserang oleh target musuh, akan memulihkan ekstra Energy dan segera melancarkan Serangan Balasan, mengakibatkan Physical DMG pada penyerang dan Physical DMG dalam jumlah kecil pada target di sekitarnya.",
       "type": "Talent",
       "tag": "Blast",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Serangan Balasan",
+          "desc": "Efek yang otomatis terpicu setelah target terkena serangan, yang akan melancarkan 1 kali serangan tambahan pada penyerang.\nSerangan Balasan juga termasuk Serangan Lanjutan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1536,15 @@
       "simpleDesc": "Membuat diri sendiri memperoleh efek \"Ward\" selama 20 detik. Selama durasi tersebut, setelah menyerang musuh atau terkena serangan untuk memasuki pertempuran, akan segera melancarkan \"Intuit: Cull\" pada musuh acak.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1498,37 +1562,97 @@
       "_id": 122101,
       "id": "weathered_blade_does_not_sully",
       "name": "Weathered Blade Does Not Sully",
-      "desc": "DMG yang diakibatkan \"Intuit: Slash\" dan \"Intuit: Cull\" meningkat <nobr>20%</nobr>, jumlah tambahan DMG dari \"Intuit: Cull\" bertambah <nobr>3</nobr>."
+      "desc": "DMG yang diakibatkan \"Intuit: Slash\" dan \"Intuit: Cull\" meningkat <nobr>20%</nobr>, jumlah tambahan DMG dari \"Intuit: Cull\" bertambah <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122102,
       "id": "first_luster_breaks_dawn",
       "name": "First Luster Breaks Dawn",
-      "desc": "Saat mengakibatkan DMG dengan melancarkan <u>Serangan Balasan</u>, akan mengabaikan <nobr>20%</nobr> DEF target musuh."
+      "desc": "Saat mengakibatkan DMG dengan melancarkan <u>Serangan Balasan</u>, akan mengabaikan <nobr>20%</nobr> DEF target musuh.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Serangan Balasan",
+          "desc": "Efek yang otomatis terpicu setelah target terkena serangan, yang akan melancarkan 1 kali serangan tambahan pada penyerang.\nSerangan Balasan juga termasuk Serangan Lanjutan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122103,
       "id": "mastlength_twirls_mountweight",
       "name": "Mastlength Twirls Mountweight",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122104,
       "id": "artisans_ironsong",
       "name": "Artisan's Ironsong",
-      "desc": "Setelah melancarkan \"Intuit: Slash\" atau \"Intuit: Cull\", akan meningkatkan <nobr>50%</nobr> Effect RES diri sendiri, berlangsung selama <nobr>1</nobr> giliran."
+      "desc": "Setelah melancarkan \"Intuit: Slash\" atau \"Intuit: Cull\", akan meningkatkan <nobr>50%</nobr> Effect RES diri sendiri, berlangsung selama <nobr>1</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122105,
       "id": "blade_of_old_outlasts_all",
       "name": "Blade of Old Outlasts All",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122106,
       "id": "walk_in_blade_talk_in_zither",
       "name": "Walk in Blade, Talk in Zither",
-      "desc": "Selama durasi \"Parry\", saat musuh melancarkan kemampuan secara aktif, \"Intuit: Cull\" akan terpicu dan menghapus efek \"Parry\" tanpa peduli apakah musuh tersebut menyerang Yunli atau tidak. Saat melancarkan \"Intuit: Slash\" atau \"Intuit: Cull\" untuk mengakibatkan DMG, CRIT Rate Yunli akan meningkat <nobr>15%</nobr>, dan Physical <u>RES PEN</u> akan meningkat <nobr>20%</nobr>."
+      "desc": "Selama durasi \"Parry\", saat musuh melancarkan kemampuan secara aktif, \"Intuit: Cull\" akan terpicu dan menghapus efek \"Parry\" tanpa peduli apakah musuh tersebut menyerang Yunli atau tidak. Saat melancarkan \"Intuit: Slash\" atau \"Intuit: Cull\" untuk mengakibatkan DMG, CRIT Rate Yunli akan meningkat <nobr>15%</nobr>, dan Physical <u>RES PEN</u> akan meningkat <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "Feixiao",
+  "description": "Tướng Quân Thiên Kích của Xianzhou Yaoqing, một trong Đế Cung Thất Thiên Tướng, tính cách phóng khoáng, thẳng thắn và hào sảng.\nTinh thông trăm loại võ nghệ, luyện hóa thân thể đến mức tối đa, được mệnh danh là \"Tướng Quân Đại Thắng\", cả quân và dân Xianzhou đều vô cùng yêu mến.\nTuy nhiên, cô lại mang trong mình căn bệnh \"Trăng Cuồng\", nếu muốn tiêu diệt hết mọi Tà Vật trong thời gian có hạn... thì đối thủ duy nhất của Feixiao, chính là bản thân mình.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Gây Sát Thương Phong cho 1 kẻ địch, sau đó kích hoạt thêm 1 lần Đòn Đánh Theo Sau của Thiên Phú.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "Trong thời gian Tuyệt Kỹ, có thể bỏ qua Thuộc Tính Điểm Yếu làm giảm Sức Bền của phe địch, khi mục tiêu chưa bị Phá Vỡ Điểm Yếu, Hiệu Suất Phá Vỡ Điểm Yếu của Feixiao tăng.\nPhát động #3[i] lần Vũ Điệu Lưỡi Đao Chớp Nhoáng hoặc Chém Tách Trời Xanh lên 1 kẻ địch, cuối cùng gây Sát Thương Phong.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "Khi Phi Hoàng đạt #3[i] điểm có thể kích hoạt Tuyệt Kỹ, tối đa tích lũy #4[i] điểm. Mục tiêu phe ta cứ thi triển #2[i] lần tấn công, thì Feixiao sẽ nhận được Phi Hoàng.\nSau khi đồng đội thi triển tấn công, Feixiao sẽ phát động Đòn Đánh Theo Sau lên mục tiêu chính, gây Sát Thương Phong. Hiệu quả này mỗi hiệp tối đa kích hoạt 1 lần, khi phát động đòn tấn công này sẽ khiến sát thương bản thân gây ra tăng.",
       "type": "Thiên Phú",
       "tag": "Đánh Đơn",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "Vào trạng thái Khí Thế Vây Hãm, duy trì lôi kéo kẻ địch và tăng tốc độ di chuyển, sau khi vào chiến đấu sẽ nhận được Phi Hoàng.\nTrong trạng thái Khí Thế Vây Hãm có thể chủ động tấn công tất cả kẻ địch bị lôi kéo, khi bắt đầu mỗi đợt, gây sát thương Phong cho toàn phe địch, sát thương này chắc chắn bạo kích. Lôi kéo càng nhiều kẻ địch, Bội Số Sát Thương càng cao.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "Chinh Phạt Thiên Đỉnh",
-      "desc": "Sau khi phát động Vũ Điệu Lưỡi Đao Chớp Nhoáng hoặc Chém Tách Trời Xanh, sẽ khiến sát thương Tuyệt Kỹ do Feixiao gây ra tăng thêm, mức tăng bằng <nobr>10%</nobr> sát thương gốc, tối đa cộng dồn <nobr>5</nobr> tầng, duy trì đến khi hành động Tuyệt Kỹ kết thúc."
+      "desc": "Sau khi phát động Vũ Điệu Lưỡi Đao Chớp Nhoáng hoặc Chém Tách Trời Xanh, sẽ khiến sát thương Tuyệt Kỹ do Feixiao gây ra tăng thêm, mức tăng bằng <nobr>10%</nobr> sát thương gốc, tối đa cộng dồn <nobr>5</nobr> tầng, duy trì đến khi hành động Tuyệt Kỹ kết thúc.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "Lễ Thần Cầu Nguyệt",
-      "desc": "Trong hiệu ứng Thiên Phú, mục tiêu phe ta mỗi khi thi triển 1 lần <u>Đòn Đánh Theo Sau</u> sẽ có thể khiến Feixiao nhận 1 điểm Phi Hoàng. Hiệu ứng này mỗi hiệp tối đa kích hoạt <nobr>6</nobr> lần."
+      "desc": "Trong hiệu ứng Thiên Phú, mục tiêu phe ta mỗi khi thi triển 1 lần <u>Đòn Đánh Theo Sau</u> sẽ có thể khiến Feixiao nhận 1 điểm Phi Hoàng. Hiệu ứng này mỗi hiệp tối đa kích hoạt <nobr>6</nobr> lần.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "Cảnh Tinh Xuất Thế",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "Cẩn Trọng Phong Ba",
-      "desc": "Điểm Giảm Sức Bền của <u>Đòn Đánh Theo Sau</u> từ Thiên Phú tăng <nobr>100%</nobr>, đồng thời khi phát động, sẽ khiến Tốc Độ của bản thân tăng <nobr>8%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Điểm Giảm Sức Bền của <u>Đòn Đánh Theo Sau</u> từ Thiên Phú tăng <nobr>100%</nobr>, đồng thời khi phát động, sẽ khiến Tốc Độ của bản thân tăng <nobr>8%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "Phi Thăng Thiên Hà",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "Nhìn Về Cố Hương",
-      "desc": "<u>Xuyên Kháng</u> Toàn Thuộc Tính của sát thương Tuyệt Kỹ do Feixiao gây ra tăng <nobr>20%</nobr>. Sát thương <u>Đòn Đánh Theo Sau</u> của Thiên Phú đồng thời được xem là sát thương Tuyệt Kỹ, và Bội Số Sát Thương tăng <nobr>140%</nobr>."
+      "desc": "<u>Xuyên Kháng</u> Toàn Thuộc Tính của sát thương Tuyệt Kỹ do Feixiao gây ra tăng <nobr>20%</nobr>. Sát thương <u>Đòn Đánh Theo Sau</u> của Thiên Phú đồng thời được xem là sát thương Tuyệt Kỹ, và Bội Số Sát Thương tăng <nobr>140%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

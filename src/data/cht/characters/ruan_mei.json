@@ -2,6 +2,7 @@
   "_id": 1303,
   "id": "ruan_mei",
   "name": "阮•梅",
+  "description": "天才俱樂部會員，生命科學領域專家，與黑塔等人聯手研發模擬宇宙。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量冰屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "施放戰技後阮•梅獲得【弦外音】。當阮•梅擁有【弦外音】時，提高我方全體的傷害和弱點擊破效率。",
       "type": "戰技",
       "tag": "輔助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,43 @@
       "simpleDesc": "使我方全體全屬性抗性穿透提高，且攻擊後對敵方目標施加【殘梅綻】。",
       "type": "終結技",
       "tag": "輔助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱點擊破狀態",
+          "desc": "敵方目標的韌性被削減至0時進入的特殊狀態，進入該狀態的目標行動會延後。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "行動延後",
+          "desc": "使目標在下次行動前的等待間隔延長。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "擊破傷害",
+          "desc": "擊破特攻、目標韌性上限、角色等級越高，造成的擊破傷害越高。\n擊破傷害無法暴擊，不受傷害提高類效果所影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1159,24 @@
       "simpleDesc": "使除自身以外的隊友速度提高，擊破敵方目標弱點時對其額外造成冰屬性擊破傷害。",
       "type": "天賦",
       "tag": "輔助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "擊破傷害",
+          "desc": "擊破特攻、目標韌性上限、角色等級越高，造成的擊破傷害越高。\n擊破傷害無法暴擊，不受傷害提高類效果所影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1486,15 @@
       "simpleDesc": "下一次進入戰鬥後自動觸發#1[i]次戰技。使用秘技後，我方攻擊模擬宇宙、差分宇宙的敵人總視為弱點進入戰鬥，且無視弱點屬性削減韌性。每擁有1個祝福，削韌值提高且擊破時額外造成擊破傷害。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1425,37 +1514,97 @@
       "_id": 130301,
       "id": "neuronic_embroidery",
       "name": "神經仿繡圖",
-      "desc": "終結技展開結界期間，我方全體造成傷害時無視目標<nobr>20%</nobr>的防禦力。"
+      "desc": "終結技展開結界期間，我方全體造成傷害時無視目標<nobr>20%</nobr>的防禦力。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130302,
       "id": "reedside_promenade",
       "name": "蘆前漫步",
-      "desc": "阮•梅在場時，我方全體對處於<u>弱點擊破狀態</u>的敵方目標造成傷害時，攻擊力提高<nobr>40%</nobr>。"
+      "desc": "阮•梅在場時，我方全體對處於<u>弱點擊破狀態</u>的敵方目標造成傷害時，攻擊力提高<nobr>40%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱點擊破狀態",
+          "desc": "敵方目標的韌性被削減至0時進入的特殊狀態，進入該狀態的目標行動會延後。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130303,
       "id": "viridescent_pirouette",
       "name": "彩緞煙衫綠婆娑",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130304,
       "id": "chatoyant_clat",
       "name": "尋神銅鏡前",
-      "desc": "當敵方目標的弱點被擊破時，阮•梅自身擊破特攻提高<nobr>100%</nobr>，持續<nobr>3</nobr>回合。"
+      "desc": "當敵方目標的弱點被擊破時，阮•梅自身擊破特攻提高<nobr>100%</nobr>，持續<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130305,
       "id": "languid_barrette",
       "name": "手弄慵鬟玲瓏釵",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130306,
       "id": "sash_cascade",
       "name": "半脫紗巾落團扇",
-      "desc": "終結技展開的結界持續時間延長<nobr>1</nobr>回合。天賦造成的<u>擊破傷害</u>倍率額外提高<nobr>200%</nobr>。"
+      "desc": "終結技展開的結界持續時間延長<nobr>1</nobr>回合。天賦造成的<u>擊破傷害</u>倍率額外提高<nobr>200%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "擊破傷害",
+          "desc": "擊破特攻、目標韌性上限、角色等級越高，造成的擊破傷害越高。\n擊破傷害無法暴擊，不受傷害提高類效果所影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

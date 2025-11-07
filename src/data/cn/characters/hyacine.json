@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "风堇",
+  "description": "云间城邦随岁月离析，昏光庭院再度敞开门扉，为永夜捎来微光。\n医师雅辛忒丝，守望「天空」火种的黄金裔。继承先祖的意志，缝补破裂的晨昏\n——愿虹光洒落，仇怨消融，黎明重回大地。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量风属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "召唤忆灵小伊卡，并为我方全体回复生命值。",
       "type": "战技",
       "tag": "回复",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "召唤忆灵小伊卡，并为我方全体回复生命值。进入【雨过天晴】状态，风堇处于该状态时使我方全体生命上限提高。",
       "type": "终结技",
       "tag": "辅助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "风堇或小伊卡提供治疗时，小伊卡造成的伤害提高。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "下一次战斗开始时，为我方全体回复生命值并使生命上限提高。",
       "type": "秘技",
       "tag": "回复",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "小伊卡",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "乌云乌云快走开！",
+        "desc": "对敌方全体造成等同于本场战斗风堇与小伊卡累计治疗数值<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>的风属性伤害并清空累计治疗数值的<nobr>#2[i]%</nobr>。",
+        "simpleDesc": "对敌方全体造成风属性伤害。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "群攻"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "牵起晴空的手",
+        "desc": "小伊卡的速度保持为0，免疫<u>负面效果</u>，并且不会出现在行动序列上。\n若除小伊卡外的我方目标生命值降低，小伊卡会在任意目标回合开始时或行动后，消耗自身<nobr>#1[i]%</nobr>生命上限的生命值，并为我方生命值降低的目标回复等同于风堇<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>生命上限+<span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span>的生命值。\n风堇处于【雨过天晴】状态时，小伊卡会在风堇施放技能后立即获得1个<u>额外回合</u>并自动施放【乌云乌云快走开！】，并且小伊卡触发天赋的治疗效果时，额外为我方全体目标回复等同于风堇<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>生命上限+<span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>的生命值，小伊卡施放技能后使自身所有<u>持续效果</u>持续回合数减1。",
+        "simpleDesc": "若除小伊卡外的我方目标<span style=\"color:#f29e38ff>生命值降低</span>，小伊卡会消耗自身生命值，为该目标<span style=\"color:#f29e38ff>回复生命值</span>。风堇持有【雨过天晴】时，小伊卡会在风堇施放技能后立即获得1个<u>额外回合</u>并自动施放忆灵技，小伊卡施放技能后使自身<u>持续效果</u>持续回合数减1。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "回复"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "额外回合",
+            "desc": "获得1个不消耗回合数的额外回合，在此回合中无法插入施放终结技。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "负面效果",
+            "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "持续效果",
+            "desc": "包含增益效果、负面效果和其他效果。",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "展翼，奔向日辉",
+        "desc": "被召唤时，为风堇恢复<nobr>#1[i]</nobr>点能量，首次被召唤时，额外恢复<nobr>#2[i]</nobr>点能量。",
+        "simpleDesc": "被召唤时，为风堇恢复能量。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "强化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "坠落，然后飞翔",
+        "desc": "消失时，使风堇<u>行动提前</u><nobr>#1[i]%</nobr>。",
+        "simpleDesc": "消失时，使风堇<u>行动提前</u>。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "强化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "行动提前",
+            "desc": "使目标在下次行动前的等待间隔缩短。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "呵护黑夜中的烛火",
-      "desc": "风堇处于【雨过天晴】状态时，我方全体目标生命上限额外提高<nobr>50%</nobr>，并且施放攻击后立即回复等同于风堇<nobr>8%</nobr>生命上限的生命值。"
+      "desc": "风堇处于【雨过天晴】状态时，我方全体目标生命上限额外提高<nobr>50%</nobr>，并且施放攻击后立即回复等同于风堇<nobr>8%</nobr>生命上限的生命值。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "请来我的庭院坐坐",
-      "desc": "我方目标生命值降低时，速度提高<nobr>30%</nobr>，持续<nobr>2</nobr>回合。"
+      "desc": "我方目标生命值降低时，速度提高<nobr>30%</nobr>，持续<nobr>2</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "出发！向阳的历险",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "送你一颗橙晖琥珀",
-      "desc": "行迹【暴风停歇】获得强化，每超过<nobr>1</nobr>点速度，风堇和小伊卡的暴击伤害额外提高<nobr>2%</nobr>。"
+      "desc": "行迹【暴风停歇】获得强化，每超过<nobr>1</nobr>点速度，风堇和小伊卡的暴击伤害额外提高<nobr>2%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "红霞映入海的背面",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "天空…应我的祈愿",
-      "desc": "小伊卡施放忆灵技清空累计治疗数值改为<nobr>12%</nobr>，小伊卡在场时，我方全体目标的全属性<u>抗性穿透</u>提高<nobr>20%</nobr>。"
+      "desc": "小伊卡施放忆灵技清空累计治疗数值改为<nobr>12%</nobr>，小伊卡在场时，我方全体目标的全属性<u>抗性穿透</u>提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

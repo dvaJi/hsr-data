@@ -2,6 +2,7 @@
   "_id": 8005,
   "id": "trailblazer_harmony_boy",
   "name": "Trailblazer Harmony",
+  "description": "A {F#girl}{M#boy} who boarded the Astral Express.\n{F#She}{M#He} chose to travel with the Astral Express to eliminate the dangers posed by the Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -244,9 +245,18 @@
       "id": "swing_dance_etiquette",
       "name": "Swing Dance Etiquette",
       "desc": "Deals Imaginary DMG equal to #1[i]% of the Trailblazer's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Imaginary DMG to a single enemy.",
+      "simpleDesc": "Deals minor Imaginary DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Deals minor Imaginary DMG to single enemy targets with 5 Bounces in total.",
       "type": "Skill",
       "tag": "Bounce",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "Grants all allies the Backup Dancer effect. Allies with Backup Dancer have their Break Effect increased and additionally deal Super Break DMG 1 time when they attack enemy targets that are Weakness Broken.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Weakness Break State",
+          "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Super Break DMG",
+          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\nSuper Break DMG is also considered Break DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "The Trailblazer regenerates Energy when an enemy target's Weakness is Broken.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "At the start of the next battle, increases all allies' Break Effect.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800501,
       "id": "best_seat_in_the_house",
       "name": "Best Seat in the House",
-      "desc": "After using Skill for the first time, immediately recovers <nobr>1</nobr> Skill Point(s)."
+      "desc": "After using Skill for the first time, immediately recovers <nobr>1</nobr> Skill Point(s).",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800502,
       "id": "jailbreaking_rainbowwalk",
       "name": "Jailbreaking Rainbowwalk",
-      "desc": "When the battle starts, the Trailblazer's Energy Regeneration Rate increases by <nobr>25%</nobr>, lasting for <nobr>3</nobr> turn(s)."
+      "desc": "When the battle starts, the Trailblazer's Energy Regeneration Rate increases by <nobr>25%</nobr>, lasting for <nobr>3</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800503,
       "id": "sanatorium_for_rest_notes",
       "name": "Sanatorium for Rest Notes",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800504,
       "id": "dove_in_tophat",
       "name": "Dove in Tophat",
-      "desc": "While the Trailblazer is on the field, increases the Break Effect of all teammates (excluding the Trailblazer), by an amount equal to <nobr>15%</nobr> of the Trailblazer's Break Effect."
+      "desc": "While the Trailblazer is on the field, increases the Break Effect of all teammates (excluding the Trailblazer), by an amount equal to <nobr>15%</nobr> of the Trailblazer's Break Effect.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800505,
       "id": "poem_favors_rhythms_of_old",
       "name": "Poem Favors Rhythms of Old",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800506,
       "id": "tomorrow_rest_in_spotlight",
       "name": "Tomorrow, Rest in Spotlight",
-      "desc": "The number of additional DMG applications by the Skill increases by <nobr>2</nobr>."
+      "desc": "The number of additional DMG applications by the Skill increases by <nobr>2</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

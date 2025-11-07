@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "Le Fossoyeur",
+  "description": "Un cow-boy cyborg qui erre parmi les étoiles. Extrêmement optimiste et sans retenue.\nMembre des Rangers de la galaxie, il s'est juré de punir par tous les moyens ceux qui ont enfreint la loi.\nDerrière ses coups d'éclat et son audace se cache le désir d'attirer l'attention de la Corporation pour la Paix Interastrale, véritable cible de sa vengeance.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Initie une Confrontation. Lorsque la cible de la Confrontation est éliminée ou subit une Rupture de faiblesse, le Fossoyeur bénéficie d'Avantage en poche et dissipe Confrontation. Le Fossoyeur utilise désormais son ATQ normale renforcée et le tour ne se termine pas.",
       "type": "Compétence",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "Applique une Faiblesse physique à un ennemi et lui inflige une quantité massive de DGT physiques, tout en retardant son action.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Action retardée",
+          "desc": "Augmente le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "Avantage en poche accentue la réduction de robustesse de l'ATQ normale renforcée et inflige des DGT de rupture physiques supplémentaires si la cible est en état de Rupture de faiblesse. En cas de victoire, Avantage en poche est conservé pour le prochain combat.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "DGT de rupture",
+          "desc": "Les DGT de rupture augmentent avec l'effet de Rupture, la robustesse max de la cible et le niveau du personnage.\nLes DGT de rupture ne peuvent pas infliger de coup critique et ne sont pas affectés par les effets d'augmentation de DGT.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "Après utilisation de la technique, applique une Faiblesse physique à un ennemi lors de la première utilisation de la compétence au cours du prochain combat.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "Sillage de l'étoile solitaire",
-      "desc": "Obtient 1 cumul d'Avantage en poche en début de combat. Lorsque le Fossoyeur inflige des DGT, il ignore <nobr>16%</nobr> de la DÉF de la cible ennemie."
+      "desc": "Obtient 1 cumul d'Avantage en poche en début de combat. Lorsque le Fossoyeur inflige des DGT, il ignore <nobr>16%</nobr> de la DÉF de la cible ennemie.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "Baroudeur",
-      "desc": "Lorsque le Fossoyeur gagne Avantage en poche dans l'état Confrontation, il récupère <nobr>1</nobr> point de compétence et son effet de Rupture augmente de <nobr>30%</nobr> pour une durée de <nobr>2</nobr> tours. Cet effet peut également se déclencher lors de l'obtention de cumuls d'Avantage en poche qui dépassent le maximum, mais ne peut pas se déclencher plusieurs fois dans un même tour."
+      "desc": "Lorsque le Fossoyeur gagne Avantage en poche dans l'état Confrontation, il récupère <nobr>1</nobr> point de compétence et son effet de Rupture augmente de <nobr>30%</nobr> pour une durée de <nobr>2</nobr> tours. Cet effet peut également se déclencher lors de l'obtention de cumuls d'Avantage en poche qui dépassent le maximum, mais ne peut pas se déclencher plusieurs fois dans un même tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "Gardien du verger de marbre",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "Spécialiste de la viande froide",
-      "desc": "Lorsque la cible ennemie en état de Confrontation est attaquée par le Fossoyeur, l'augmentation des DGT subis est majorée de <nobr>12%</nobr>. Lorsque le Fossoyeur est attaqué par la cible ennemie en état de Confrontation, l'augmentation des DGT subis est réduite de <nobr>12%</nobr>."
+      "desc": "Lorsque la cible ennemie en état de Confrontation est attaquée par le Fossoyeur, l'augmentation des DGT subis est majorée de <nobr>12%</nobr>. Lorsque le Fossoyeur est attaqué par la cible ennemie en état de Confrontation, l'augmentation des DGT subis est réduite de <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "Discours de la souche",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "Raton laveur du Motel Pied-de-biche",
-      "desc": "Lorsque le talent du Fossoyeur inflige des <u>DGT de rupture</u>, il inflige des <u>DGT de rupture</u> supplémentaires équivalents à <nobr>40%</nobr> du multiplicateur des DGT initiaux à la cible et des <u>DGT de rupture</u> supplémentaires équivalents à <nobr>70%</nobr> du multiplicateur des DGT initiaux aux cibles adjacentes."
+      "desc": "Lorsque le talent du Fossoyeur inflige des <u>DGT de rupture</u>, il inflige des <u>DGT de rupture</u> supplémentaires équivalents à <nobr>40%</nobr> du multiplicateur des DGT initiaux à la cible et des <u>DGT de rupture</u> supplémentaires équivalents à <nobr>70%</nobr> du multiplicateur des DGT initiaux aux cibles adjacentes.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "DGT de rupture",
+          "desc": "Les DGT de rupture augmentent avec l'effet de Rupture, la robustesse max de la cible et le niveau du personnage.\nLes DGT de rupture ne peuvent pas infliger de coup critique et ne sont pas affectés par les effets d'augmentation de DGT.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

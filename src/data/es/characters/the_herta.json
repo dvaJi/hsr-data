@@ -2,6 +2,7 @@
   "_id": 1401,
   "id": "the_herta",
   "name": "Sra. Herta",
+  "description": "Estimada miembro n.º 83 del Círculo de Genios, humana, mujer, joven, hermosa y adorable.\nSe dice que vive en los confines del cosmos y que casi nunca sale de allí. Parece que su aparición esta vez...\nDebe ser para tratar un asunto que tiene que resolver ella misma, ¿no?",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -449,6 +459,15 @@
       "simpleDesc": "Inflige daño a un enemigo. Inflige daño al objetivo de la habilidad básica y a los objetivos adyacentes, y este efecto se repite 2 veces.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        45,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Reordena las acumulaciones de Interpretación de todos los enemigos y prioriza transferir la mayor cantidad de acumulaciones de Interpretación a los enemigos de élite o de nivel superior. Después inflige Daño de Hielo a todos los enemigos. Tras lanzar esta habilidad, obtiene una habilidad básica potenciada y actúa inmediatamente.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "El daño que inflige la habilidad básica potenciada aumenta en función de la cantidad de acumulaciones de Interpretación del objetivo.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": 30,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1533,24 @@
       "simpleDesc": "Tras usar la técnica, se marcan las ubicaciones de cierto número de tesoros normales. Además, al comenzar la siguiente batalla, el ATQ de la Sra. Herta aumenta.\nAl entrar en combate en el Universo Simulado o en el Universo Diferenciado tras haber usado la técnica, se inflige una gran cantidad de Daño verdadero a todos los enemigos al comienzo de cada oleada.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "Daño verdadero",
+          "desc": "Daño sin tipo que no se ve influido por ningún efecto. No se considera como un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1517,37 +1572,88 @@
       "_id": 140101,
       "id": "night_at_shorefall",
       "name": "Noche de estrellas fugaces",
-      "desc": "Cuando la habilidad básica potenciada calcula las acumulaciones de Interpretación, se calculan adicionalmente un <nobr>50%</nobr> de las acumulaciones de Interpretación del objetivo que más acumulaciones tenga de entre el objetivo principal y los objetivos adyacentes. Cuando se restablecen las acumulaciones de Interpretación al lanzar la habilidad básica potenciada, estas acumulaciones se restablecen a <nobr>15</nobr> en su lugar."
+      "desc": "Cuando la habilidad básica potenciada calcula las acumulaciones de Interpretación, se calculan adicionalmente un <nobr>50%</nobr> de las acumulaciones de Interpretación del objetivo que más acumulaciones tenga de entre el objetivo principal y los objetivos adyacentes. Cuando se restablecen las acumulaciones de Interpretación al lanzar la habilidad básica potenciada, estas acumulaciones se restablecen a <nobr>15</nobr> en su lugar.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140102,
       "id": "wind_through_keyhole",
       "name": "El viento por la cerradura",
-      "desc": "Al entrar en combate y tras lanzar la habilidad definitiva, la Sra. Herta obtiene 1 acumulación adicional de Inspiración. Tras lanzar la habilidad básica potenciada, la siguiente acción de la Sra. Herta <u>se adelanta</u> un <nobr>35%</nobr>."
+      "desc": "Al entrar en combate y tras lanzar la habilidad definitiva, la Sra. Herta obtiene 1 acumulación adicional de Inspiración. Tras lanzar la habilidad básica potenciada, la siguiente acción de la Sra. Herta <u>se adelanta</u> un <nobr>35%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140103,
       "id": "door_into_summer",
       "name": "Puerta al verano",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140104,
       "id": "the_sixteenth_key",
       "name": "La decimosexta llave",
-      "desc": "Aumenta en un <nobr>12%</nobr> la VEL de los personajes del equipo que siguen la Vía de la Erudición."
+      "desc": "Aumenta en un <nobr>12%</nobr> la VEL de los personajes del equipo que siguen la Vía de la Erudición.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140105,
       "id": "bitter_pill_of_truth",
       "name": "Las verdades duelen",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140106,
       "id": "sweet_lure_of_answer",
       "name": "El embrujo de las respuestas",
-      "desc": "La PEN de la RES a Hielo de la Sra. Herta aumenta en un <nobr>20%</nobr>. Si hay 3 (o más)/2/1 enemigos en el campo de batalla, el multiplicador de daño de la habilidad definitiva aumenta en un <nobr>140%</nobr>/<nobr>250%</nobr>/<nobr>400%</nobr>."
+      "desc": "La PEN de la RES a Hielo de la Sra. Herta aumenta en un <nobr>20%</nobr>. Si hay 3 (o más)/2/1 enemigos en el campo de batalla, el multiplicador de daño de la habilidad definitiva aumenta en un <nobr>140%</nobr>/<nobr>250%</nobr>/<nobr>400%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11401,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

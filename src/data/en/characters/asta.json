@@ -2,6 +2,7 @@
   "_id": 1009,
   "id": "asta",
   "name": "Asta",
+  "description": "The lead researcher of Herta Space Station and a lady from a renowned family.\nShe's an astronomer overflowing with curiosity, and excels at managing the disparate staff of the space station.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,22 @@
       "_id": 100901,
       "id": "spectrum_beam",
       "name": "Spectrum Beam",
-      "desc": "Deals Fire DMG equal to #1[i]% of Asta's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Fire DMG to a single enemy.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Asta's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 100902,
       "id": "meteor_storm",
       "name": "Meteor Storm",
-      "desc": "Deals Fire DMG equal to #1[i]% of Asta's ATK to a single enemy and further deals DMG for 4 extra times, with each time dealing Fire DMG equal to #1[i]% of Asta's ATK to a random enemy.",
+      "desc": "Deals Fire DMG equal to #1[i]% of Asta's ATK to one designated enemy and further deals DMG for 4 extra times, with each time dealing Fire DMG equal to #1[i]% of Asta's ATK to a random enemy.",
       "simpleDesc": "Deals minor Fire DMG to single enemy targets with 5 Bounces in total.",
       "type": "Skill",
       "tag": "Bounce",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "Increases SPD for all allies.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,15 @@
       "simpleDesc": "The character will receive 1 stack of Charging for every different enemy they hit, for a maximum of 5 stacks. Every stack of Charging increases ATK for all allies. At the beginning of their turn, reduce Charging stacks.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1327,6 +1373,15 @@
       "desc": "Immediately attacks the enemy. After entering battle, deals Fire DMG equal to #1[i]% of Asta's ATK to all enemies.",
       "simpleDesc": "Attacks the enemy. After entering battle, deals minor DMG to all enemies.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1343,37 +1398,79 @@
       "_id": 100901,
       "id": "star_sings_sans_verses_or_vocals",
       "name": "Star Sings Sans Verses or Vocals",
-      "desc": "When using Skill, deals DMG for 1 extra time to a random enemy."
+      "desc": "When using Skill, deals DMG for 1 extra time to a random enemy.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100902,
       "id": "moon_speaks_in_wax_and_wane",
       "name": "Moon Speaks in Wax and Wane",
-      "desc": "After using her Ultimate, Asta's Charging stacks will not be reduced in the next turn."
+      "desc": "After using her Ultimate, Asta's Charging stacks will not be reduced in the next turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100903,
       "id": "meteor_showers_for_wish_and_want",
       "name": "Meteor Showers for Wish and Want",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100904,
       "id": "aurora_basks_in_beauty_and_bliss",
       "name": "Aurora Basks in Beauty and Bliss",
-      "desc": "Asta's Energy Regeneration Rate increases by <nobr>15%</nobr> when she has <nobr>2</nobr> or more Charging stacks."
+      "desc": "Asta's Energy Regeneration Rate increases by <nobr>15%</nobr> when she has <nobr>2</nobr> or more Charging stacks.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100905,
       "id": "nebula_secludes_in_runes_and_riddles",
       "name": "Nebula Secludes in Runes and Riddles",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100906,
       "id": "cosmos_dreams_in_calm_and_comfort",
       "name": "Cosmos Dreams in Calm and Comfort",
-      "desc": "Charging stack(s) lost in each turn is reduced by <nobr>1</nobr>."
+      "desc": "Charging stack(s) lost in each turn is reduced by <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1101,
   "id": "bronya",
   "name": "Bronya",
+  "description": "Héritière de la Gardienne suprême de Belobog.\nAltière comme toute princesse qui se respecte, elle possède aussi la détermination et l'intégrité d'un soldat.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -243,10 +244,22 @@
       "_id": 110101,
       "id": "windrider_bullet",
       "name": "Tir du mistral",
-      "desc": "Inflige des DGT de vent équivalents à #1[i]% de l'ATQ de Bronya à un ennemi unique.",
+      "desc": "Inflige des DGT de vent équivalents à #1[i]% de l'ATQ de Bronya à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Dissipe 1 malus subi par un allié unique, augmente les DGT qu'il inflige, et lui permet d'agir immédiatement.",
       "type": "Compétence",
       "tag": "Soutien",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Malus",
+          "desc": "Les malus sont des effets de statut négatifs qui affaiblissent les unités. Sauf indication contraire, les malus peuvent être dissipés.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,18 @@
       "simpleDesc": "Augmente l'ATQ et les DGT critiques de tous les alliés.",
       "type": "Ultime",
       "tag": "Soutien",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "Après avoir lancée l'ATQ normale, la prochaine action est avancée.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1455,15 @@
       "simpleDesc": "Après utilisation de la technique, l'ATQ de tous les alliés augmente au début du combat suivant.",
       "type": "Technique",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1481,97 @@
       "_id": 110101,
       "id": "hone_your_strength",
       "name": "Regain de force",
-      "desc": "Lors de l'utilisation de la compétence, il y a <nobr>50%</nobr> de <u>chances fixes</u> de récupérer 1 point de compétence. Cet effet a un temps de recharge d'1 tour."
+      "desc": "Lors de l'utilisation de la compétence, il y a <nobr>50%</nobr> de <u>chances fixes</u> de récupérer 1 point de compétence. Cet effet a un temps de recharge d'1 tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chances fixes",
+          "desc": "Probabilité fixe qui n'est affectée par aucun facteur.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110102,
       "id": "quick_march",
       "name": "Marche forcée",
-      "desc": "Lors de l'utilisation de la compétence, la VIT de la cible alliée augmente de <nobr>30%</nobr> pour 1 tour après avoir agi."
+      "desc": "Lors de l'utilisation de la compétence, la VIT de la cible alliée augmente de <nobr>30%</nobr> pour 1 tour après avoir agi.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110103,
       "id": "bombardment",
       "name": "Bombardement",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110104,
       "id": "take_by_surprise",
       "name": "Embuscade",
-      "desc": "Lorsqu'un personnage allié autre que Bronya utilise son ATQ normale sur un ennemi qui a une Faiblesse au vent, Bronya lance immédiatement 1 instance d'<u>ATQ de suivi</u> qui inflige des DGT de vent équivalents à <nobr>80%</nobr> des DGT d'ATQ normale de Bronya. Cet effet ne peut être déclenché qu'1 fois par tour."
+      "desc": "Lorsqu'un personnage allié autre que Bronya utilise son ATQ normale sur un ennemi qui a une Faiblesse au vent, Bronya lance immédiatement 1 instance d'<u>ATQ de suivi</u> qui inflige des DGT de vent équivalents à <nobr>80%</nobr> des DGT d'ATQ normale de Bronya. Cet effet ne peut être déclenché qu'1 fois par tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110105,
       "id": "unstoppable",
       "name": "Inarrêtable",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110106,
       "id": "piercing_rainbow",
       "name": "Au-delà de l'arc-en-ciel",
-      "desc": "La durée de l'effet d'augmentation de DGT qu'accorde la compétence à une cible alliée est prolongée d'<nobr>1</nobr> tour."
+      "desc": "La durée de l'effet d'augmentation de DGT qu'accorde la compétence à une cible alliée est prolongée d'<nobr>1</nobr> tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

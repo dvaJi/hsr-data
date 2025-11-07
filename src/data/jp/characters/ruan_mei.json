@@ -2,6 +2,7 @@
   "_id": 1303,
   "id": "ruan_mei",
   "name": "ルアン・メェイ",
+  "description": "天才クラブのメンバー、生命科学の専門家。ヘルタたちと協力して模擬宇宙を開発した。",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の氷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "戦闘スキルを発動した後に「弦外の音」を獲得する。ルアン・メェイに「弦外の音」がある時、味方全体の与ダメージと弱点撃破効率をアップする。",
       "type": "戦闘スキル",
       "tag": "サポート",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,43 @@
       "simpleDesc": "味方全体の全属性耐性貫通をアップし、味方が攻撃を行った後、敵に「残梅」を付与する。",
       "type": "必殺技",
       "tag": "サポート",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点撃破状態",
+          "desc": "敵の靭性が0まで削られた時に入る特殊状態。この状態になった敵は行動順が遅延する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "行動遅延",
+          "desc": "対象の次の行動までの間隔が長くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "弱点撃破ダメージ",
+          "desc": "撃破特効、ターゲットの最大靭性またはキャラクターのレベルが高いほど、与える弱点撃破ダメージがアップする。\n弱点撃破ダメージは会心が発生せず、ダメージアップ系効果の影響を受けない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1159,24 @@
       "simpleDesc": "自身以外の味方の速度をアップする。味方が敵を弱点撃破した時、さらに氷属性弱点撃破ダメージを与える。",
       "type": "天賦",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "弱点撃破ダメージ",
+          "desc": "撃破特効、ターゲットの最大靭性またはキャラクターのレベルが高いほど、与える弱点撃破ダメージがアップする。\n弱点撃破ダメージは会心が発生せず、ダメージアップ系効果の影響を受けない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1486,15 @@
       "simpleDesc": "次の戦闘開始後、自動で戦闘スキルを#1[i]回発動する。秘技を使用した後、味方が模擬宇宙、階差宇宙内の敵を先制攻撃して戦闘に入る場合、弱点属性を攻撃して戦闘に入ったと見なされ、弱点属性を無視して靭性を削る。所持する祝福1つにつき、削靭値がアップし、弱点撃破した時に追加で弱点撃破ダメージを与える。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1425,37 +1514,97 @@
       "_id": 130301,
       "id": "neuronic_embroidery",
       "name": "{RUBY_B#しんけいししゅうず}神経刺繍図{RUBY_E#}",
-      "desc": "必殺技の結界が展開されている間、味方全体がダメージを与える時、敵の防御力を<nobr>20%</nobr>無視する。"
+      "desc": "必殺技の結界が展開されている間、味方全体がダメージを与える時、敵の防御力を<nobr>20%</nobr>無視する。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130302,
       "id": "reedside_promenade",
       "name": "{RUBY_B#とお}通{RUBY_E#}りし{RUBY_B#すすき}芒{RUBY_E#}の{RUBY_B#みち}道{RUBY_E#}",
-      "desc": "ルアン・メェイがフィールド上にいる場合、<u>弱点撃破状態</u>の敵に対する味方全体の攻撃力+<nobr>40%</nobr>。"
+      "desc": "ルアン・メェイがフィールド上にいる場合、<u>弱点撃破状態</u>の敵に対する味方全体の攻撃力+<nobr>40%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点撃破状態",
+          "desc": "敵の靭性が0まで削られた時に入る特殊状態。この状態になった敵は行動順が遅延する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130303,
       "id": "viridescent_pirouette",
       "name": "{RUBY_B#えんさん}煙衫{RUBY_E#}を{RUBY_B#あやど}綾取{RUBY_E#}る{RUBY_B#りょくい}緑意{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130304,
       "id": "chatoyant_clat",
       "name": "{RUBY_B#どうきょうまえ}銅鏡前{RUBY_E#}にて{RUBY_B#かみ}神{RUBY_E#}を{RUBY_B#さが}探{RUBY_E#}す",
-      "desc": "敵が弱点撃破された時、ルアン・メェイの撃破特効+<nobr>100%</nobr>、<nobr>3</nobr>ターン継続。"
+      "desc": "敵が弱点撃破された時、ルアン・メェイの撃破特効+<nobr>100%</nobr>、<nobr>3</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130305,
       "id": "languid_barrette",
       "name": "{RUBY_B#けだる}気怠{RUBY_E#}く{RUBY_B#いじ}弄{RUBY_E#}る{RUBY_B#れいろうさい}玲瓏釵{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130306,
       "id": "sash_cascade",
       "name": "{RUBY_B#さきんぬ}紗巾脱{RUBY_E#}ぎかけ\n{RUBY_B#うちわ}団扇{RUBY_E#}に{RUBY_B#お}落{RUBY_E#}ちる",
-      "desc": "必殺技を発動して展開する結界の継続時間+<nobr>1</nobr>ターン。天賦による<u>弱点撃破ダメージ</u>倍率+<nobr>200%</nobr>。"
+      "desc": "必殺技を発動して展開する結界の継続時間+<nobr>1</nobr>ターン。天賦による<u>弱点撃破ダメージ</u>倍率+<nobr>200%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "弱点撃破ダメージ",
+          "desc": "撃破特効、ターゲットの最大靭性またはキャラクターのレベルが高いほど、与える弱点撃破ダメージがアップする。\n弱点撃破ダメージは会心が発生せず、ダメージアップ系効果の影響を受けない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

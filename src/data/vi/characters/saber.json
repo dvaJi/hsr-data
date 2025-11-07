@@ -2,6 +2,7 @@
   "_id": 1014,
   "id": "saber",
   "name": "Saber",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong cho 1 kẻ địch chỉ định.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Gây Sát Thương Phong cho 1 kẻ địch chỉ định, gây lượng nhỏ Sát Thương Phong cho mục tiêu lân cận. Nếu sau khi tấn công có thể hồi đầy Năng Lượng bằng việc tiêu hao \"Cộng Hưởng Lõi Trung Tâm\", thì sẽ căn cứ theo \"Cộng Hưởng Lõi Trung Tâm\" để tăng Bội Số Sát Thương Chiến Kỹ lần này và sau khi tấn công sẽ tiêu hao tất cả \"Cộng Hưởng Lõi Trung Tâm\", nếu không sẽ nhận #3[i] điểm \"Cộng Hưởng Lõi Trung Tâm\".",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Gây lượng lớn Sát Thương Phong cho toàn bộ kẻ địch. Gây thêm lượng nhỏ Sát Thương Phong cho 1 kẻ địch ngẫu nhiên, tổng cộng Nảy Bật #3[i] lần, và cường hóa đòn Tấn Công Thường tiếp theo.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        120,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1110,15 @@
       "simpleDesc": "Khi vào chiến đấu, nhận #8[i] điểm Cộng Hưởng Lõi Trung Tâm. Khi mục tiêu bất kỳ của phe ta thi triển Tuyệt Kỹ, sẽ tăng sát thương Saber gây ra, đồng thời nhận #1[i] điểm Cộng Hưởng Lõi Trung Tâm. Tiêu hao \"Cộng Hưởng Lõi Trung Tâm\" có thể hồi Năng Lượng cho Saber.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1518,15 @@
       "simpleDesc": "Sau khi dùng Bí Kỹ, khi bắt đầu lần chiến đấu tiếp theo, sẽ nhận được #3[i] điểm \"Cộng Hưởng Lõi Trung Tâm\" và tăng Tấn Công.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1499,37 +1545,97 @@
       "_id": 101401,
       "id": "the_lost_white_walls",
       "name": "Bức Tường Phấn Trắng Thất Lạc",
-      "desc": "Sát Thương Tuyệt Kỹ <nobr>Saber</nobr> gây ra tăng <nobr>60%</nobr>. Sau khi <nobr>Saber</nobr> thi triển Tấn Công Thường hoặc Chiến Kỹ, sẽ nhận <nobr>1</nobr> điểm \"Cộng Hưởng Lõi Trung Tâm\"."
+      "desc": "Sát Thương Tuyệt Kỹ <nobr>Saber</nobr> gây ra tăng <nobr>60%</nobr>. Sau khi <nobr>Saber</nobr> thi triển Tấn Công Thường hoặc Chiến Kỹ, sẽ nhận <nobr>1</nobr> điểm \"Cộng Hưởng Lõi Trung Tâm\".",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101402,
       "id": "the_lost_oath_of_the_round_table",
       "name": "Lời Thề Bàn Tròn Phủ Bụi",
-      "desc": "Trong trận đấu mỗi khi nhận 1 điểm Cộng Hưởng Lõi Trung Tâm sẽ khiến sát thương <nobr>Saber</nobr> gây ra bỏ qua <nobr>#2[f1]%</nobr> Phòng Thủ của mục tiêu, hiệu ứng này tối đa cộng dồn <nobr>15</nobr> tầng. Khi kích hoạt hiệu ứng tăng Bội Số Chiến Kỹ của Cộng Hưởng Lõi Trung Tâm, mỗi điểm Cộng Hưởng Lõi Trung Tâm sẽ khiến Bội Số Sát Thương của Chiến Kỹ lần này tăng thêm <nobr>7%</nobr>."
+      "desc": "Trong trận đấu mỗi khi nhận 1 điểm Cộng Hưởng Lõi Trung Tâm sẽ khiến sát thương <nobr>Saber</nobr> gây ra bỏ qua <nobr>#2[f1]%</nobr> Phòng Thủ của mục tiêu, hiệu ứng này tối đa cộng dồn <nobr>15</nobr> tầng. Khi kích hoạt hiệu ứng tăng Bội Số Chiến Kỹ của Cộng Hưởng Lõi Trung Tâm, mỗi điểm Cộng Hưởng Lõi Trung Tâm sẽ khiến Bội Số Sát Thương của Chiến Kỹ lần này tăng thêm <nobr>7%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101403,
       "id": "a_wish_across_fifteen_centuries",
       "name": "Ước Nguyện Suốt 15 Thế Kỷ",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101404,
       "id": "the_saga_of_sixteen_winter_days",
       "name": "Kỳ Ngộ 16 Ngày Đông",
-      "desc": "<u>Xuyên Kháng</u> Phong của <nobr>Saber</nobr> tăng <nobr>8%</nobr>. Sau khi thi triển Tuyệt Kỹ, <u>Xuyên Kháng</u> Phong của <nobr>Saber</nobr> tăng <nobr>4%</nobr>, hiệu ứng này tối đa cộng dồn <nobr>3</nobr> tầng."
+      "desc": "<u>Xuyên Kháng</u> Phong của <nobr>Saber</nobr> tăng <nobr>8%</nobr>. Sau khi thi triển Tuyệt Kỹ, <u>Xuyên Kháng</u> Phong của <nobr>Saber</nobr> tăng <nobr>4%</nobr>, hiệu ứng này tối đa cộng dồn <nobr>3</nobr> tầng.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101405,
       "id": "the_dreamed_utopian_dawn",
       "name": "Khi Chạm Đến Bình Minh Lý Tưởng",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101406,
       "id": "the_long_fated_night",
       "name": "Đêm Dài Bảo Vệ Vận Mệnh",
-      "desc": "<u>Xuyên Kháng</u> Phong của Sát Thương Tuyệt Kỹ <nobr>Saber</nobr> gây ra tăng <nobr>20%</nobr>, Năng Lượng vượt mức mà Vết Tích \"Phước Lành Hồ Thiêng\" có thể tích lũy tăng đến <nobr>200</nobr> điểm. Sau khi vào chiến đấu, lần đầu thi triển Tuyệt Kỹ sẽ cố định hồi cho <nobr>Saber</nobr> <nobr>300</nobr> điểm Năng Lượng. Hiệu ứng này mỗi khi thi triển thêm <nobr>3</nobr> lần Tuyệt Kỹ có thể kích hoạt 1 lần."
+      "desc": "<u>Xuyên Kháng</u> Phong của Sát Thương Tuyệt Kỹ <nobr>Saber</nobr> gây ra tăng <nobr>20%</nobr>, Năng Lượng vượt mức mà Vết Tích \"Phước Lành Hồ Thiêng\" có thể tích lũy tăng đến <nobr>200</nobr> điểm. Sau khi vào chiến đấu, lần đầu thi triển Tuyệt Kỹ sẽ cố định hồi cho <nobr>Saber</nobr> <nobr>300</nobr> điểm Năng Lượng. Hiệu ứng này mỗi khi thi triển thêm <nobr>3</nobr> lần Tuyệt Kỹ có thể kích hoạt 1 lần.",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

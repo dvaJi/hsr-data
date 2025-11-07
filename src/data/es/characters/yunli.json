@@ -2,6 +2,7 @@
   "_id": 1221,
   "id": "yunli",
   "name": "Yunli",
+  "description": "Una cazadora de espadas del Zhuming de Xianzhou y la nieta predilecta del general Huaiyan, \"el Corazón Llameante\". Franca y directa.\nPracticó la espada y la forja de Huaiyan desde joven, por lo que es la segunda maestra de la espada prodigio más joven del Octeto del Disco Llameante.\nImpulsada por una intensa aversión a las espadas malditas surgidas del Zhuming, juró \"cazar y aniquilar todas las espadas malditas\".",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Físico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Regenera sus propios PV e inflige Daño Físico a un enemigo y una pequeña cantidad de Daño Físico a los objetivos adyacentes.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,24 @@
       "simpleDesc": "Entra en el estado de Bloqueo y todos los enemigos son afectados con Provocación. Tras recibir un ataque durante este periodo, lanza un poderoso contraataque e inflige Daño Físico al atacante y a los objetivos adyacentes. A continuación, inflige una pequeña cantidad de Daño Físico a un enemigo; se dispara 6 veces. Si durante el estado de Bloqueo no ha activado ningún contraataque, inflige Daño Físico a un enemigo al azar y a los objetivos adyacentes cuando termina el estado de Bloqueo.",
       "type": "Habilidad definitiva",
       "tag": "Potenciación",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contraataque",
+          "desc": "Cuando un objetivo recibe un ataque, lanza automáticamente un ataque contra el atacante.\nEl contraataque también se considera un ataque adicional.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1194,24 @@
       "simpleDesc": "Cuando Yunli recibe un ataque enemigo, recupera pts. de energía adicionales y lanza inmediatamente un contraataque que inflige Daño Físico al atacante y una pequeña cantidad de Daño Físico a los objetivos adyacentes.",
       "type": "Talento",
       "tag": "Ráfaga",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contraataque",
+          "desc": "Cuando un objetivo recibe un ataque, lanza automáticamente un ataque contra el atacante.\nEl contraataque también se considera un ataque adicional.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1536,15 @@
       "simpleDesc": "Obtiene el efecto de Resistencia durante 20 s. Si en este tiempo entra en combate tras atacar a un enemigo o recibir un ataque, lanza inmediatamente Capción: Exterminio a un enemigo al azar.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1498,37 +1562,97 @@
       "_id": 122101,
       "id": "weathered_blade_does_not_sully",
       "name": "Espada curtida libre de mácula",
-      "desc": "El daño que infligen Capción: Sajadura y Capción: Exterminio aumenta en un <nobr>20%</nobr>, y las veces adicionales que Capción: Exterminio inflige daño aumentan en <nobr>3</nobr>."
+      "desc": "El daño que infligen Capción: Sajadura y Capción: Exterminio aumenta en un <nobr>20%</nobr>, y las veces adicionales que Capción: Exterminio inflige daño aumentan en <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122102,
       "id": "first_luster_breaks_dawn",
       "name": "Primer lustre al romper el alba",
-      "desc": "Cuando inflige daño con un <u>contraataque</u>, ignora un <nobr>20%</nobr> de la DEF del enemigo."
+      "desc": "Cuando inflige daño con un <u>contraataque</u>, ignora un <nobr>20%</nobr> de la DEF del enemigo.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contraataque",
+          "desc": "Cuando un objetivo recibe un ataque, lanza automáticamente un ataque contra el atacante.\nEl contraataque también se considera un ataque adicional.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122103,
       "id": "mastlength_twirls_mountweight",
       "name": "Diez palmos de maestría",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122104,
       "id": "artisans_ironsong",
       "name": "Tintineo del maestro herrero",
-      "desc": "Después de lanzar Capción: Sajadura o Capción: Exterminio, su RES a efecto aumenta en un <nobr>50%</nobr> durante <nobr>1</nobr> turno."
+      "desc": "Después de lanzar Capción: Sajadura o Capción: Exterminio, su RES a efecto aumenta en un <nobr>50%</nobr> durante <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122105,
       "id": "blade_of_old_outlasts_all",
       "name": "Vieja amiga para siempre",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122106,
       "id": "walk_in_blade_talk_in_zither",
       "name": "Temple de acero, corazón de coplero",
-      "desc": "Si el enemigo lanza una habilidad por iniciativa propia mientras dura el estado de Bloqueo, Capción: Exterminio se activa independientemente de si ataca a Yunli o no, y el efecto de Bloqueo se disipa. Cuando inflige daño al lanzar Capción: Exterminio o Capción: Sajadura, su Prob. CRIT aumenta en un <nobr>15%</nobr> y su <u>PEN de la RES</u> a Físico aumenta en un <nobr>20%</nobr>."
+      "desc": "Si el enemigo lanza una habilidad por iniciativa propia mientras dura el estado de Bloqueo, Capción: Exterminio se activa independientemente de si ataca a Yunli o no, y el efecto de Bloqueo se disipa. Cuando inflige daño al lanzar Capción: Exterminio o Capción: Sajadura, su Prob. CRIT aumenta en un <nobr>15%</nobr> y su <u>PEN de la RES</u> a Físico aumenta en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "Luocha",
+  "description": "Carrying a coffin wherever he goes, he is a foreign trader who came from beyond the stellar seas.\nHas excellent medical skills.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -243,10 +244,22 @@
       "_id": 120301,
       "id": "thorns_of_the_abyss",
       "name": "Thorns of the Abyss",
-      "desc": "Deals Imaginary DMG equal to #1[i]% of Luocha's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Imaginary DMG to a single enemy.",
+      "desc": "Deals Imaginary DMG equal to #1[i]% of Luocha's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Imaginary DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Restores a single ally's HP and gains 1 stack of Abyss Flower.",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "Removes 1 buff from all enemies, deals Imaginary DMG to all enemies, and gains 1 stack of Abyss Flower.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "Deploys a Zone when Abyss Flower reaches 2 stacks. While the Zone is active, allies will restore HP after they attack.",
       "type": "Talent",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "After the Technique is used, immediately trigger the effect of the Talent at the start of the next battle.",
       "type": "Technique",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Ablution of the Quick",
-      "desc": "While the Zone is active, ATK of all allies increases by <nobr>20%</nobr>."
+      "desc": "While the Zone is active, ATK of all allies increases by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "Bestowal From the Pure",
-      "desc": "When his Skill is triggered, if the target ally's HP percentage is lower than <nobr>50%</nobr>, Luocha's Outgoing Healing increases by <nobr>30%</nobr>. If the target ally's HP percentage is at <nobr>50%</nobr> or higher, the ally receives a Shield that can absorb DMG equal to <nobr>18%</nobr> of Luocha's ATK plus <nobr>240</nobr>, lasting for <nobr>2</nobr> turns."
+      "desc": "When his Skill is triggered, if the target ally's HP percentage is lower than <nobr>50%</nobr>, Luocha's Outgoing Healing increases by <nobr>30%</nobr>. If the target ally's HP percentage is at <nobr>50%</nobr> or higher, the ally receives a Shield that can absorb DMG equal to <nobr>18%</nobr> of Luocha's ATK plus <nobr>240</nobr>, lasting for <nobr>2</nobr> turns.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "Surveyal by the Fool",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "Heavy Lies the Crown",
-      "desc": "When Luocha's Zone is active, enemies become Weakened and deal <nobr>12%</nobr> less DMG."
+      "desc": "When Luocha's Zone is active, enemies become Weakened and deal <nobr>12%</nobr> less DMG.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "Cicatrix 'Neath the Pain",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "Reunion With the Dust",
-      "desc": "When Ultimate is used, there is a <nobr>100%</nobr> <u>fixed chance</u> to reduce all enemies' All-Type RES by <nobr>20%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "When Ultimate is used, there is a <nobr>100%</nobr> <u>fixed chance</u> to reduce all enemies' All-Type RES by <nobr>20%</nobr> for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Fixed Chance",
+          "desc": "Fixed chance will not be affected by any factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1204,
   "id": "jing_yuan",
   "name": "Jing Yuan",
+  "description": "A Presciência Divina, um dos Sete Árbitros-Generais da Aliança Xianzhou, comanda os Cavaleiros das Nuvens do Luofu do Xianzhou.\nPupilo do último Campeão da Espada do Luofu, mas não é exatamente conhecido por suas proezas marciais.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Raio leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Causa Dano de Raio leve a todos os inimigos e aumenta os Golpes por Ação do Senhor dos Raios.",
       "type": "Perícia",
       "tag": "Área",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +750,15 @@
       "simpleDesc": "Causa Dano de Raio a todos os inimigos e aumenta os Golpes por Ação do Senhor dos Raios.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1068,40 @@
       "simpleDesc": "No início da batalha, invoca o \"Senhor dos Raios\". Quando o \"Senhor dos Raios\" age, realiza Ataques Extra para automaticamente causar Dano de Raio leve a uma unidade inimiga aleatória e aos alvos adjacentes.",
       "type": "Talento",
       "tag": "Rebote",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Penal. de Controle Negativo",
+          "desc": "Congelamento, Embaraço, Aprisionamento, Dominação, Injúria, Reverberação Forte, Sonho Alienígena, Arapuca, Em Pânico, Bloqueio de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1471,15 @@
       "simpleDesc": "Após usar a Técnica, na próxima batalha, aumenta os Golpes por Ação do Senhor dos Raios.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1496,79 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "Corte, Mares Partidos",
-      "desc": "Quando o Senhor dos Raios ataca, o multiplicador de Dano nos inimigos adjacentes ao inimigo-alvo aumenta em uma quantidade extra igual a <nobr>25%</nobr> do multiplicador de Dano contra o inimigo-alvo principal."
+      "desc": "Quando o Senhor dos Raios ataca, o multiplicador de Dano nos inimigos adjacentes ao inimigo-alvo aumenta em uma quantidade extra igual a <nobr>25%</nobr> do multiplicador de Dano contra o inimigo-alvo principal.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "Golpe, Céus Esmagados",
-      "desc": "Depois que o Senhor dos Raios age, o Dano causado pelo ATQ Básico, pela Perícia e pela Perícia Suprema de Jing Yuan aumenta em <nobr>20%</nobr> por <nobr>2</nobr> rodada(s)."
+      "desc": "Depois que o Senhor dos Raios age, o Dano causado pelo ATQ Básico, pela Perícia e pela Perícia Suprema de Jing Yuan aumenta em <nobr>20%</nobr> por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120403,
       "id": "strike_suns_subdued",
       "name": "Ataque, Sóis Subjulgados",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120404,
       "id": "spin_stars_sieged",
       "name": "Giro, Estrelas Cercadas",
-      "desc": "A cada golpe do Senhor dos Raios quando ele age, Jing Yuan regenera <nobr>2</nobr> de Energia."
+      "desc": "A cada golpe do Senhor dos Raios quando ele age, Jing Yuan regenera <nobr>2</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120405,
       "id": "stride_spoils_seized",
       "name": "Marcha, Bens Saqueados",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120406,
       "id": "sweep_souls_slain",
       "name": "Varrer, Almas Ceifadas",
-      "desc": "Cada golpe lançado pelo Senhor dos Raios ao agir tornará o inimigo-alvo Vulnerável.\nQuando Vulneráveis, inimigos recebem <nobr>12%</nobr> a mais de Dano até o final da rodada atual do Senhor dos Raios, acumulando em até <nobr>3</nobr> vez(es)."
+      "desc": "Cada golpe lançado pelo Senhor dos Raios ao agir tornará o inimigo-alvo Vulnerável.\nQuando Vulneráveis, inimigos recebem <nobr>12%</nobr> a mais de Dano até o final da rodada atual do Senhor dos Raios, acumulando em até <nobr>3</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

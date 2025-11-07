@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "서벌",
+  "description": "축성가 기술 부서의 연구원이었던 벨로보그의 엔지니어\n게파드•랜도의 누나지만 남동생과 전혀 다른 성격을 가졌다\n한파 이전에 있던 「로큰롤」이라는 고대 음악에 빠져있다",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 번개 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,24 @@
       "simpleDesc": "단일 적에게 번개 속성 피해를 가하고, 인접한 목표에게 소량의 번개 속성 피해를 가한다. 높은 확률로 목표에게 감전 상태를 부여한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "모든 적에게 번개 속성 피해를 가하고 감전 상태 지속 시간이 증가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "공격 발동 후, 감전 상태의 모든 적에게 소량의 추가 피해를 가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 랜덤 단일 적에게 서벌 공격력 #4[i]%만큼의 번개 속성 피해를 가하고, #1[i]%의 기본 확률로 각 단일 적을 감전 상태에 빠트린다. 지속 시간: #3[i]턴\n감전 상태의 적은 새로운 턴이 시작될 때마다 서벌 공격력 #2[i]%만큼의 번개 속성 지속 피해를 받는다",
       "simpleDesc": "적을 공격하며, 전투 진입 후 임의의 단일 적에게 소량의 번개 속성 피해를 가하고, 높은 확률로 각 단일 적을 감전 상태에 빠트린다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "귓가에 맴도는 소리",
-      "desc": "일반 공격이 지정된 적에 인접한 임의의 적 1기에게 일반 공격 피해 <nobr>60%</nobr>만큼의 번개 속성 피해를 가한다"
+      "desc": "일반 공격이 지정된 적에 인접한 임의의 적 1기에게 일반 공격 피해 <nobr>60%</nobr>만큼의 번개 속성 피해를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "앵콜!",
-      "desc": "특성의 <u>추가 피해</u>를 1회 발동할 때마다 서벌은 에너지를 <nobr>4</nobr>pt 회복한다"
+      "desc": "특성의 <u>추가 피해</u>를 1회 발동할 때마다 서벌은 에너지를 <nobr>4</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "톱니바퀴의 심장 소리를 들어봐",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "소리 질러!",
-      "desc": "필살기 발동 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 비감전 상태의 적을 전투 스킬과 동일한 감전 상태에 빠트린다"
+      "desc": "필살기 발동 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 비감전 상태의 적을 전투 스킬과 동일한 감전 상태에 빠트린다",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "벨로보그 가수다!",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "천공을 가르는 노래!",
-      "desc": "서벌이 감전 상태의 적에게 가하는 피해가 <nobr>30%</nobr> 증가한다"
+      "desc": "서벌이 감전 상태의 적에게 가하는 피해가 <nobr>30%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

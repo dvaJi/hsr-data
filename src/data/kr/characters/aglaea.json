@@ -2,6 +2,7 @@
   "_id": 1402,
   "id": "aglaea",
   "name": "아글라이아",
+  "description": "여명이 비추는 거룩한 도시에서 방직공은 금실을 어루만지며 운명을 잇는다.\n「낭만」의 불씨를 짊어진 황금의 후예는 세간의 영웅들을 불러 모아 그들을 이끌고 다시 기나긴 여정에 올랐다.\n——신들을 쓰러뜨리고 신의 불을 반환하여 멸망에 다다른 앰포리어스에 신생을 부여하기 위해",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 번개 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "의상공의 HP를 회복한다. 의상공이 필드에 없을 시 기억 정령 의상공을 소환하고 자신이 즉시 행동한다",
       "type": "전투 스킬",
       "tag": "소환",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -753,6 +781,32 @@
       "simpleDesc": "기억 정령 의상공을 소환한다. 아글라이아는 [지고의 자태] 상태에 진입하고 즉시 행동하며, 강화된 일반 공격을 획득한다",
       "type": "필살기",
       "tag": "강화",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "제어류 디버프 상태",
+          "desc": "빙결, 얽힘, 속박, 지배, 노발대발, 강렬한 진탕, 이몽, 감금, 공포, 행동 고정",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1122,6 +1176,24 @@
       "simpleDesc": "의상공이 필드에 있을 시 아글라이아가 공격을 발동하면 목표를 [틈새를 메우는 실] 상태에 빠트린다. [틈새를 메우는 실] 상태의 적을 공격하면 소량의 번개 속성 추가 피해를 가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1490,6 +1562,24 @@
       "desc": "기억 정령 의상공을 소환하고 함께 전방을 향해 공격한다. 전투 진입 후 에너지를 #2[i]pt 회복하고 모든 적에게 아글라이아 공격력의 #1[i]%만큼 번개 속성 피해를 가하며, 이후 랜덤 적을 [틈새를 메우는 실] 상태에 빠트린다",
       "simpleDesc": "기억 정령 의상공을 소환하고 함께 전방을 향해 공격한다. 전투 진입 후 에너지를 회복하고 모든 적에게 소량의 번개 속성 피해를 가하며, 이후 랜덤 적을 [틈새를 메우는 실] 상태에 빠트린다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1502,42 +1592,503 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "의상공",
+    "icon": "SpriteOutput/ServantIconTeam/11402B.png",
+    "hpBase": "#6",
+    "hpInherit": "#5",
+    "hpSkill": 140204,
+    "speedBase": "0",
+    "speedInherit": "#4",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1140201,
+        "name": "정곡을 찌르는 함정",
+        "desc": "단일 적에게 공격력의 <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>만큼 번개 속성 피해를 가하고, 대상과 인접한 목표에게 공격력의 <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span>만큼 번개 속성 피해를 가한다",
+        "simpleDesc": "단일 적 및 인접한 목표에게 소량의 번개 속성 피해를 가한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "Blast",
+          "name": "확산"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          15
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.55,
+              0.33,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.66,
+              0.396,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.77,
+              0.462,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.88,
+              0.528,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.99,
+              0.594,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1.1,
+              0.66,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1.21,
+              0.726,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1.32,
+              0.792,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1.43,
+              0.858,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1.54,
+              0.924,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140203,
+        "name": "눈물로 단조한 장인의 몸",
+        "desc": "[틈새를 메우는 실] 상태의 적 공격 후 자신의 속도가 <span style=\"color:#f29e38ff><nobr>#1[i]</nobr></span>pt 증가한다, 해당 효과 최대 중첩수: <nobr>#3[i]</nobr>스택. 의상공 행동 시 자동으로 [정곡을 찌르는 함정]을 발동하고, [틈새를 메우는 실] 상태의 적을 우선 공격한다",
+        "simpleDesc": "[틈새를 메우는 실] 상태의 적을 공격하면 <span style=\"color:#f29e38ff>자신의 속도가 증가</span>한다. 행동 시 자동으로 공격을 발동하고, [틈새를 메우는 실] 상태의 적을 우선 공격한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "강화"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              44,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              46.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              48.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              50.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              52.8,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              55,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              57.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              59.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              61.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              63.8,
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140205,
+        "name": "질주의 여름",
+        "desc": "의상공이 소환될 시 자신의 <u>행동 게이지가 <nobr>#1[i]%</nobr> 증가</u>한다",
+        "simpleDesc": "소환될 시 자신의 <u>행동 게이지가 증가</u>한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "강화"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "행동 게이지 증가",
+            "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140206,
+        "name": "메마른 풀의 풍성함",
+        "desc": "의상공이 사라질 시 아글라이아의 에너지가 <nobr>#1[i]</nobr>pt 회복된다",
+        "simpleDesc": "사라질 시 아글라이아의 에너지가 회복된다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "강화"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              20
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "흔들리는 금성의 행렬",
-      "desc": "[틈새를 메우는 실] 상태의 적이 받는 피해가 <nobr>15%</nobr> 증가한다. 아글라이아 또는 의상공이 해당 목표를 공격하면 추가로 에너지를 <nobr>20</nobr>pt 회복한다"
+      "desc": "[틈새를 메우는 실] 상태의 적이 받는 피해가 <nobr>15%</nobr> 증가한다. 아글라이아 또는 의상공이 해당 목표를 공격하면 추가로 에너지를 <nobr>20</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "운명의 눈꺼풀을 지나는 나룻배",
-      "desc": "아글라이아 또는 의상공이 행동 시 아글라이아와 의상공이 가하는 피해가 목표의 방어력을 <nobr>14%</nobr> 무시한다. 해당 효과는 최대 <nobr>3</nobr>스택 중첩되며, 자신과 의상공을 제외한 임의의 유닛이 직접 스킬을 발동할 때까지 지속된다"
+      "desc": "아글라이아 또는 의상공이 행동 시 아글라이아와 의상공이 가하는 피해가 목표의 방어력을 <nobr>14%</nobr> 무시한다. 해당 효과는 최대 <nobr>3</nobr>스택 중첩되며, 자신과 의상공을 제외한 임의의 유닛이 직접 스킬을 발동할 때까지 지속된다",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "화려한 이슬의 선물",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "대리석 속 반짝임",
-      "desc": "기억 정령 특성의 속도 증가 효과 스택 수 상한이 <nobr>1</nobr>스택 증가한다. 아글라이아가 공격 발동 후에도 의상공이 기억 정령 특성의 속도 증가 효과를 획득할 수 있다"
+      "desc": "기억 정령 특성의 속도 증가 효과 스택 수 상한이 <nobr>1</nobr>스택 증가한다. 아글라이아가 공격 발동 후에도 의상공이 기억 정령 특성의 속도 증가 효과를 획득할 수 있다",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "칠흑의 고난을 엮는 자",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "변화무상한 금실",
-      "desc": "아글라이아가 [지고의 자태] 상태일 시 자신과 의상공의 번개 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 아글라이아 또는 의상공의 속도가 <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>pt를 초과할 시 가하는 <u>연계 공격</u> 피해가 <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr> 증가한다"
+      "desc": "아글라이아가 [지고의 자태] 상태일 시 자신과 의상공의 번개 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 아글라이아 또는 의상공의 속도가 <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>pt를 초과할 시 가하는 <u>연계 공격</u> 피해가 <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000019,
+          "name": "연계 공격",
+          "desc": "여러 목표가 한 번의 행동에서 각각 적에게 공격을 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ]
     }
   ],
   "skillTreePoints": [

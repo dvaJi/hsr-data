@@ -2,6 +2,7 @@
   "_id": 1009,
   "id": "asta",
   "name": "Asta",
+  "description": "Investigadora jefa de la Estación Espacial Herta. Una joven aristocrática procedente de una familia muy conocida.\nUna astrónoma que siente curiosidad por todo y es experta a la hora de gestionar los diversos empleados de la Estación Espacial.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo. Se dispara 5 veces.",
       "type": "Habilidad básica",
       "tag": "Rebote",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "Aumenta la VEL de todos los aliados.",
       "type": "Habilidad definitiva",
       "tag": "Apoyo",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,15 @@
       "simpleDesc": "Obtiene una acumulación de Recarga por cada objetivo distinto golpeado, hasta un máximo de 5 acumulaciones. Cada acumulación aumenta el ATQ de todos los aliados. Las acumulaciones de Recarga se reducen al comenzar su turno.",
       "type": "Talento",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1327,6 +1373,15 @@
       "desc": "Ataca inmediatamente al enemigo y entra en combate. Inflige un #1[i]% del ATQ de Asta como Daño de Fuego a todos los enemigos.",
       "simpleDesc": "Ataca al enemigo y entra en combate. Inflige una pequeña cantidad de daño a todos los enemigos.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1343,37 +1398,79 @@
       "_id": 100901,
       "id": "star_sings_sans_verses_or_vocals",
       "name": "Canción estelar sin letra",
-      "desc": "Al usar la habilidad básica, inflige daño a un enemigo al azar una vez más."
+      "desc": "Al usar la habilidad básica, inflige daño a un enemigo al azar una vez más.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100902,
       "id": "moon_speaks_in_wax_and_wane",
       "name": "La luna entiende sus ciclos",
-      "desc": "Al usar su habilidad definitiva, Asta no consumirá ninguna acumulación de Recarga en el siguiente turno."
+      "desc": "Al usar su habilidad definitiva, Asta no consumirá ninguna acumulación de Recarga en el siguiente turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100903,
       "id": "meteor_showers_for_wish_and_want",
       "name": "Cambio en el meteorito eclíptico",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100904,
       "id": "aurora_basks_in_beauty_and_bliss",
       "name": "Manifestación de la aurora",
-      "desc": "Cuando hay <nobr>2</nobr> o más acumulaciones de Recarga del talento, la recuperación de energía de Asta aumenta en un <nobr>15%</nobr>."
+      "desc": "Cuando hay <nobr>2</nobr> o más acumulaciones de Recarga del talento, la recuperación de energía de Asta aumenta en un <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100905,
       "id": "nebula_secludes_in_runes_and_riddles",
       "name": "Misterio de los objetos del espacio profundo",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100906,
       "id": "cosmos_dreams_in_calm_and_comfort",
       "name": "Sueño bajo la Vía Láctea",
-      "desc": "Asta pierde <nobr>1</nobr> acumulación de Recarga menos en cada turno."
+      "desc": "Asta pierde <nobr>1</nobr> acumulación de Recarga menos en cada turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

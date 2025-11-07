@@ -2,6 +2,7 @@
   "_id": 1004,
   "id": "welt",
   "name": "Welt",
+  "description": "Ein führendes Besatzungsmitglied.\nEr sehnt sich aus ganzem Herzen nach einem neuen langen und schönen Abenteuer.\nHin und wieder hält er seine Erlebnisse als Zeichnungen in seinem Skizzenbuch fest.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 100402,
       "id": "edge_of_the_void",
       "name": "Rand der Leere",
-      "desc": "Fügt einem anvisierten Gegner imaginären SCH in Höhe von #1[i]% von Welts ANG zu und verursacht 2-mal zusätzlichen SCH. Jeder zusätzlicher Treffer fügt zufälligen Gegnern imaginären SCH in Höhe von #1[i]% von Welts ANG zu. Jeder Treffer hat eine Grundchance von #2[i]%, die GES des Ziels für #4[i] Rd. um #3[i]% zu verringern.",
+      "desc": "Fügt einem anvisierten Gegner imaginären SCH in Höhe von #1[i]% von Welts ANG zu und verursacht zusätzlich 2-mal SCH. Jedes Mal wird einem zufälligen Gegner imaginärer SCH in Höhe von #1[i]% von Welts ANG zugefügt. Beim Treffen hat eine Grundchance von #2[i]%, die GES des getroffenen Ziels für #4[i] Rd. um #3[i]% zu reduzieren.",
       "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu. Dieser Angriff kann 3-mal abprallen und hat eine Chance, betroffene Ziele zu verlangsamen.",
       "type": "Fertigkeit",
       "tag": "Abpraller",
+      "spBase": 10,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,32 @@
       "simpleDesc": "Fügt allen Gegnern imaginären SCH zu und verursacht mit hoher Chance Gefangenschaft.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Aktion verzögert",
+          "desc": "Verlängert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1157,27 @@
       "simpleDesc": "Fügt einem verlangsamten Gegner zusätzlich geringen imaginären SCH zu.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1472,32 @@
       "simpleDesc": "Erschafft eine Dimension. Gegner in dieser Dimension haben reduzierte Bewegungs-GES. Wenn du mit Gegnern in der Dimension kämpfst, besteht eine hohe Chance, dass sie in Gefangenschaft geraten.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Aktion verzögert",
+          "desc": "Verlängert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1411,37 +1518,97 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "Nachlass der Ehre",
-      "desc": "Nach dem Einsatz des Ultimates wird Welt verstärkt. Die nächsten <nobr>2</nobr> Einsätze seines Standardangriffs oder seiner Fertigkeit fügen dem Gegner 1-mal <u>zusätzlichen SCH</u> in Höhe von <nobr>50%</nobr> des SCH-Multiplikators seines Standardangriffs bzw. <nobr>80%</nobr> des SCH-Multiplikators seiner Fertigkeit zu."
+      "desc": "Nach dem Einsatz des Ultimates wird Welt verstärkt. Die nächsten <nobr>2</nobr> Einsätze seines Standardangriffs oder seiner Fertigkeit fügen dem Gegner 1-mal <u>zusätzlichen SCH</u> in Höhe von <nobr>50%</nobr> des SCH-Multiplikators seines Standardangriffs bzw. <nobr>80%</nobr> des SCH-Multiplikators seiner Fertigkeit zu.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100402,
       "id": "conflux_of_stars",
       "name": "Sternenzufluss",
-      "desc": "Bei Auslösung des Talents erhält Welt <nobr>3</nobr> Pkt. Energie zurück."
+      "desc": "Bei Auslösung des Talents erhält Welt <nobr>3</nobr> Pkt. Energie zurück.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100403,
       "id": "prayer_of_peace",
       "name": "Friedensgebet",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100404,
       "id": "appellation_of_justice",
       "name": "Anruf der Gerechtigkeit",
-      "desc": "Erhöht die <u>Grundchance</u>, einen angegriffenen Gegner beim Einsatz der Fertigkeit zu verlangsamen, um <nobr>35%</nobr>."
+      "desc": "Erhöht die <u>Grundchance</u>, einen angegriffenen Gegner beim Einsatz der Fertigkeit zu verlangsamen, um <nobr>35%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100405,
       "id": "power_of_kindness",
       "name": "Macht der Güte",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "Glänzende Aussichten",
-      "desc": "Fügt einem zufälligen Gegner beim Einsatz der Fertigkeit 1-mal zusätzlichen SCH zu."
+      "desc": "Fügt einem zufälligen Gegner beim Einsatz der Fertigkeit 1-mal zusätzlichen SCH zu.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

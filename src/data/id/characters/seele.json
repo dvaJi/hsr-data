@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "Seele",
+  "description": "Tulang punggung kelompok pemberontak bawah tanah \"Wildfire\" yang punya nama alias \"Babochka\".\nSifatnya blak-blakan, tapi memiliki hati yang sensitif dan peka.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Mengakibatkan Quantum DMG pada 1 musuh dan meningkatkan SPD diri sendiri.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,18 @@
       "simpleDesc": "Memasuki status Amplifikasi dan mengakibatkan Quantum DMG dalam jumlah besar pada 1 musuh.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "Saat mengalahkan target musuh dengan melancarkan Basic Attack, Skill, atau Ultimate, akan memperoleh giliran tambahan dan memasuki status Amplifikasi. DMG yang diakibatkan dalam status Amplifikasi akan meningkat.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Giliran Tambahan",
+          "desc": "Memperoleh 1 giliran tambahan yang tidak akan menghabiskan sisa giliran yang dimiliki. Selama giliran tambahan ini, tidak dapat menggunakan Ultimate apa pun.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "Memasuki status Stealth. Setelah menyerang musuh dan memasuki pertempuran, akan langsung memasuki status Amplifikasi.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Extirpating Slash",
-      "desc": "Saat mengakibatkan DMG pada target musuh dengan persentase HP saat ini kurang dari atau sama dengan <nobr>80%</nobr>, CRIT Rate meningkat <nobr>15%</nobr>."
+      "desc": "Saat mengakibatkan DMG pada target musuh dengan persentase HP saat ini kurang dari atau sama dengan <nobr>80%</nobr>, CRIT Rate meningkat <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "Dancing Butterfly",
-      "desc": "Efek peningkatan SPD pada Skill dapat ditumpuk hingga <nobr>2</nobr> lapis."
+      "desc": "Efek peningkatan SPD pada Skill dapat ditumpuk hingga <nobr>2</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "Dazzling Tumult",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Flitting Phantasm",
-      "desc": "Saat Seele mengalahkan target musuh, dia akan memulihkan <nobr>15</nobr> Energy."
+      "desc": "Saat Seele mengalahkan target musuh, dia akan memulihkan <nobr>15</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "Piercing Shards",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Shattering Shambles",
-      "desc": "Setelah melancarkan Ultimate, musuh yang diserang akan memasuki status \"Butterfly Flurry\" selama <nobr>1</nobr> giliran. Target musuh yang berada dalam status \"Butterfly Flurry\" akan menerima Quantum <u>DMG tambahan</u> sebesar <nobr>15%</nobr> dari Ultimate DMG Seele setiap kali terkena serangan. Jika target tersebut gugur akibat <u>DMG Tambahan</u> dari \"Butterfly Flurry\" yang dipicu oleh rekan lain, maka Talent Seele tidak akan terpicu.\nJika Seele <u>gugur</u>, maka status \"Butterfly Flurry\" yang ada pada musuh akan dihapus."
+      "desc": "Setelah melancarkan Ultimate, musuh yang diserang akan memasuki status \"Butterfly Flurry\" selama <nobr>1</nobr> giliran. Target musuh yang berada dalam status \"Butterfly Flurry\" akan menerima Quantum <u>DMG tambahan</u> sebesar <nobr>15%</nobr> dari Ultimate DMG Seele setiap kali terkena serangan. Jika target tersebut gugur akibat <u>DMG Tambahan</u> dari \"Butterfly Flurry\" yang dipicu oleh rekan lain, maka Talent Seele tidak akan terpicu.\nJika Seele <u>gugur</u>, maka status \"Butterfly Flurry\" yang ada pada musuh akan dihapus.",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Gugur",
+          "desc": "Saat HP berkurang hingga 0, maka karakter tersebut gugur. Karakter yang gugur tidak dapat melanjutkan pertempuran.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

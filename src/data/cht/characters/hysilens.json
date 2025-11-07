@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "海瑟音",
+  "description": "斯緹科西亞，醉與夢的海濱之城，舊日的歌聲仍在浮浪間迴盪。\n大海的女兒海列屈拉，清洗「海洋」火種的黃金裔，驅散汙濁的暗流，為天外的英雄奏響不醉不歸的盛宴\n——散場之時未到，縱然希望如泡沫般易碎，浪花也將一往無前。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量物理屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "高機率使敵方全體受到的傷害提高，並對其造成物理屬性傷害。",
       "type": "戰技",
       "tag": "群體攻擊",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "展開結界使敵方全體攻擊力、防禦力降低，並對其造成物理屬性傷害。結界存在時，敵方目標每受到1次持續傷害，對其造成1次物理屬性持續傷害。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "我方目標攻擊時，海瑟音有高機率使被命中的敵方目標陷入風化/裂傷/灼燒/觸電其中1種狀態。",
       "type": "天賦",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "製造特殊領域。領域內敵人不會攻擊我方目標。與領域內敵人進入戰鬥後，高機率使敵方每個單體目標陷入風化/裂傷/灼燒/觸電其中#3[i]種狀態。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "你問我心為何悲傷",
-      "desc": "海瑟音在場時，我方目標造成的持續傷害為原傷害的<nobr>116%</nobr>，當海瑟音藉由天賦使敵人陷入風化/裂傷/灼燒/觸電狀態時，有<nobr>100%</nobr>的<u>基礎機率</u>額外使其陷入一次與原天賦效果相同，且可同時存在的風化/裂傷/灼燒/觸電狀態。"
+      "desc": "海瑟音在場時，我方目標造成的持續傷害為原傷害的<nobr>116%</nobr>，當海瑟音藉由天賦使敵人陷入風化/裂傷/灼燒/觸電狀態時，有<nobr>100%</nobr>的<u>基礎機率</u>額外使其陷入一次與原天賦效果相同，且可同時存在的風化/裂傷/灼燒/觸電狀態。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "你說浪花為何喧響",
-      "desc": "結界持續期間，行跡【珍珠的琴弦】的造成傷害提高效果對我方全體生效。"
+      "desc": "結界持續期間，行跡【珍珠的琴弦】的造成傷害提高效果對我方全體生效。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "可知燈火為何遺忘",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "看呀，時間為何流淌",
-      "desc": "結界持續期間，使敵方全體全屬性抗性降低<nobr>20%</nobr>。"
+      "desc": "結界持續期間，使敵方全體全屬性抗性降低<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "於梳洗中，我輕吟淺唱",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "沉沒的你，何日返鄉",
-      "desc": "結界持續期間，每回合開始時或我方目標單次攻擊後，觸發海瑟音物理持續傷害效果的次數上限提高至<nobr>12</nobr>次，且造成的傷害倍率提高<nobr>20%</nobr>。"
+      "desc": "結界持續期間，每回合開始時或我方目標單次攻擊後，觸發海瑟音物理持續傷害效果的次數上限提高至<nobr>12</nobr>次，且造成的傷害倍率提高<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

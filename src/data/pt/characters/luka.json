@@ -2,6 +2,7 @@
   "_id": 1111,
   "id": "luka",
   "name": "Luka",
+  "description": "O campeão de boxe do Mundo de Baixo de Belobog e um dos lutadores mais habilidosos da Fogo Vivo.\nO campeão consecutivo do Clube da Luta, seu entusiasmo inspira as crianças do Mundo de Baixo a sonhar alto.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Causa Dano Físico a um único inimigo, com uma alta chance de causar Sangramento.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,27 @@
       "simpleDesc": "Recebe #5[i] acúmulo(s) de Desejo de Lutar, com uma alta chance de aumentar o Dano recebido pelo inimigo, e causa Dano Físico massivo ao alvo.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1115,6 +1170,18 @@
       "simpleDesc": "Após usar seu ATQ Básico \"Punho Certeiro\" ou sua Perícia \"Punho Lacerante\", recebe 1 acúmulo de Desejo de Lutar. Quando 2 ou mais acúmulos de Desejo de Lutar estão presentes, o ATQ Básico se torna Aprimorado.\nSe o inimigo estiver com Sangramento, o ATQ Básico Aprimorado causa Dano extra de Sangramento 1 vez.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1417,6 +1484,24 @@
       "desc": "Ataca imediatamente o inimigo. Ao entrar em batalha, Luka causa Dano Físico igual a #1[i]% de seu ATQ a um único inimigo aleatório, com #2[i]% de chance-base de infligir o efeito de Sangramento da sua Perícia no alvo. Depois, Luka ganha 1 acúmulo adicional de Desejo de Lutar.",
       "simpleDesc": "Ataca o inimigo. Depois de entrar em batalha, causa Dano Físico leve a um único inimigo aleatório, com uma alta chance de infligir Sangramento ao alvo. Depois, ganha 1 acúmulo de Desejo de Lutar.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1434,37 +1519,79 @@
       "_id": 111101,
       "id": "fighting_endlessly",
       "name": "Lutando Infinitamente",
-      "desc": "Quando Luka age, se o inimigo-alvo estiver com Sangramento, aumenta o Dano causado por Luka em <nobr>15%</nobr> por <nobr>2</nobr> rodada(s)."
+      "desc": "Quando Luka age, se o inimigo-alvo estiver com Sangramento, aumenta o Dano causado por Luka em <nobr>15%</nobr> por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111102,
       "id": "the_enemy_is_weak_i_am_strong",
       "name": "O Inimigo é Fraco, Eu Sou Forte",
-      "desc": "Se a Perícia atingir um inimigo-alvo com Fraqueza contra Físico, ganha <nobr>1</nobr> acúmulo(s) de Desejo de Lutar."
+      "desc": "Se a Perícia atingir um inimigo-alvo com Fraqueza contra Físico, ganha <nobr>1</nobr> acúmulo(s) de Desejo de Lutar.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111103,
       "id": "born_for_the_ring",
       "name": "Nascido Para o Ringue",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111104,
       "id": "never_turning_back",
       "name": "Nunca Recuar",
-      "desc": "Para cada acúmulo de Desejo de Lutar obtido, aumenta o ATQ em <nobr>5%</nobr>, acumulando até <nobr>4</nobr> vez(es)."
+      "desc": "Para cada acúmulo de Desejo de Lutar obtido, aumenta o ATQ em <nobr>5%</nobr>, acumulando até <nobr>4</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111105,
       "id": "the_spirit_of_wildfire",
       "name": "O Espírito da Fogo Vivo",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111106,
       "id": "a_champions_applause",
       "name": "Aplausos de um Campeão",
-      "desc": "Depois que o \"Gancho Ascendente\" do ATQ Básico Aprimorado atinge um inimigo-alvo com Sangramento, o status de Sangramento imediatamente causará Dano 1 vez. O Dano causado é igual a <nobr>8%</nobr> do Dano original para cada golpe de Punho Certeiro já usado pelo ATQ Básico Aprimorado atual."
+      "desc": "Depois que o \"Gancho Ascendente\" do ATQ Básico Aprimorado atinge um inimigo-alvo com Sangramento, o status de Sangramento imediatamente causará Dano 1 vez. O Dano causado é igual a <nobr>8%</nobr> do Dano original para cada golpe de Punho Certeiro já usado pelo ATQ Básico Aprimorado atual.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

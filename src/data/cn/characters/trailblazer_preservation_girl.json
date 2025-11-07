@@ -2,6 +2,7 @@
   "_id": 8004,
   "id": "trailblazer_preservation_girl",
   "name": "开拓者 存护",
+  "description": "登上星穹列车的{F#少女}{M#少年}。\n为了消除星核带来的危机，选择与星穹列车同行。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量火属性伤害，获得【灼热意志】。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "降低自身受到的伤害，并获得【灼热意志】，大概率使敌方全体陷入嘲讽状态。",
       "type": "战技",
       "tag": "防御",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +771,18 @@
       "simpleDesc": "对敌方全体造成火属性伤害，强化下一次的普攻。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,15 @@
       "simpleDesc": "被攻击时叠加【灼热意志】，【灼热意志】不低于4层时，普攻获得强化。施放普攻、战技、终结技后，为我方全体提供护盾。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,6 +1428,15 @@
       "simpleDesc": "使用秘技后，下一次战斗开始时给自身提供护盾。",
       "type": "秘技",
       "tag": "防御",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1455,79 @@
       "_id": 800401,
       "id": "earthshaking_resonance",
       "name": "大地芯髓的鸣动",
-      "desc": "施放普攻时，额外造成等同于开拓者<nobr>25%</nobr>防御力的火属性伤害；施放强化普攻时，额外造成等同于开拓者<nobr>50%</nobr>防御力的火属性伤害。"
+      "desc": "施放普攻时，额外造成等同于开拓者<nobr>25%</nobr>防御力的火属性伤害；施放强化普攻时，额外造成等同于开拓者<nobr>50%</nobr>防御力的火属性伤害。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800402,
       "id": "timedefying_tenacity",
       "name": "古老寒铁的坚守",
-      "desc": "触发天赋时，为我方全体提供的护盾能够额外抵消等同于开拓者防御力<nobr>2%</nobr>+<nobr>27</nobr>的伤害。"
+      "desc": "触发天赋时，为我方全体提供的护盾能够额外抵消等同于开拓者防御力<nobr>2%</nobr>+<nobr>27</nobr>的伤害。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800403,
       "id": "trailblazing_blueprint",
       "name": "砌造未来的蓝图",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800404,
       "id": "nationbuilding_oath",
       "name": "驻留文明的誓言",
-      "desc": "战斗开始时，立即获得<nobr>4</nobr>层【灼热意志】。"
+      "desc": "战斗开始时，立即获得<nobr>4</nobr>层【灼热意志】。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800405,
       "id": "spiritwarming_flame",
       "name": "点燃光焰的勇气",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800406,
       "id": "cityforging_bulwarks",
       "name": "永屹城垣的壁垒",
-      "desc": "施放强化普攻或终结技后，开拓者的防御力提高<nobr>10%</nobr>，最多叠加<nobr>3</nobr>层。"
+      "desc": "施放强化普攻或终结技后，开拓者的防御力提高<nobr>10%</nobr>，最多叠加<nobr>3</nobr>层。",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

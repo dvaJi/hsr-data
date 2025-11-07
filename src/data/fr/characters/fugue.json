@@ -2,6 +2,7 @@
   "_id": 1225,
   "id": "fugue",
   "name": "Pérégrine",
+  "description": "Une jeune Foxienne pleine de tact, dont l'apparence, le nom et l'identité ont été volés.\nLe destin lui a laissé un mince espoir de survie, mais la marque de la Destruction est toujours présente en elle.\nAprès avoir traversé la mort et retrouvé une nouvelle vie, celle qui pérégrine pourra-t-elle enfin rentrer chez elle ?",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Accorde Prière foxienne à un allié, ce qui augmente son effet de Rupture et permet aux attaques de réduire la robustesse des ennemis qui n'ont pas le type de faiblesse correspondant.\nFait entrer Pérégrine dans l'état Brûlure ardente, ce qui renforce son ATQ normale. Pérégrine a de fortes chances de réduire la DÉF de la cible ennemie lorsque l'unité alliée qui bénéficie de Prière foxienne attaque.",
       "type": "Compétence",
       "tag": "Soutien",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,15 @@
       "simpleDesc": "Inflige des DGT de feu à tous les ennemis. Cette attaque ignore les types de faiblesse et réduit la robustesse de tous les ennemis.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,32 @@
       "simpleDesc": "Lorsque Pérégrine est sur le champ de bataille, les cibles ennemies se voient appliquer l'effet supplémentaire Marque de feu des nuages. Lorsque la Marque de feu des nuages tombe à 0, l'ennemi subit à nouveau des DGT de rupture de faiblesse. Lorsque des alliés attaquent une cible ennemie en état de Rupture de faiblesse, ils lui infligent également des DGT de rupture extrême.",
       "type": "Talent",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "DGT de rupture extrême",
+          "desc": "Les DGT de rupture extrême augmentent avec l'effet de Rupture, la réduction de robustesse de l'attaque et le niveau du personnage.\nLes DGT de rupture extrême ne peuvent pas infliger de coup critique et ne sont pas affectés par les effets d'augmentation de DGT.\nLes DGT de rupture extrême sont aussi considérés comme étant des DGT de rupture.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,32 @@
       "simpleDesc": "Inflige Hébété aux ennemis dans une zone définie. Lorsque vous entrez en combat en attaquant des ennemis hébétés, l'action de Pérégrine est avancée et elle a de fortes chances d'infliger la même réduction de DÉF que celle appliquée par sa compétence à chaque cible ennemie.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1410,37 +1499,88 @@
       "_id": 122501,
       "id": "earthbound_i_was_cloudward_i_be",
       "name": "Mortalité envolée et départ annoncé",
-      "desc": "Augmente de <nobr>50%</nobr> l'efficacité de Rupture de faiblesse de la cible alliée qui bénéficie de Prière foxienne."
+      "desc": "Augmente de <nobr>50%</nobr> l'efficacité de Rupture de faiblesse de la cible alliée qui bénéficie de Prière foxienne.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122502,
       "id": "beatitude_dawns_for_the_worthy",
       "name": "Présage synonyme de vertu",
-      "desc": "Pérégrine régénère <nobr>3</nobr> points d'énergie lorsqu'une cible ennemie subit une Rupture de faiblesse. Après utilisation de son ultime, les actions de tous les alliés sont <u>avancées</u> de <nobr>24%</nobr>."
+      "desc": "Pérégrine régénère <nobr>3</nobr> points d'énergie lorsqu'une cible ennemie subit une Rupture de faiblesse. Après utilisation de son ultime, les actions de tous les alliés sont <u>avancées</u> de <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122503,
       "id": "verity_weaves_thoughts_to_blade",
       "name": "Esprit protégé par la vérité",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122504,
       "id": "bereft_of_form_which_name_to_bear",
       "name": "Transcendance de l'enveloppe charnelle",
-      "desc": "Augmente de <nobr>20%</nobr> les DGT de rupture de la cible alliée qui bénéficie de Prière foxienne."
+      "desc": "Augmente de <nobr>20%</nobr> les DGT de rupture de la cible alliée qui bénéficie de Prière foxienne.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122505,
       "id": "colored_cloud_rains_fortune",
       "name": "Nuages colorés annonciateurs de fortune",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122506,
       "id": "clairvoyance_of_boom_and_doom",
       "name": "Vision prophétique de la prospérité et du déclin",
-      "desc": "L'efficacité de Rupture de faiblesse de Pérégrine augmente de <nobr>50%</nobr>. Lorsque Pérégrine est dans l'état Brûlure ardente, Prière foxienne s'applique à tous les alliés."
+      "desc": "L'efficacité de Rupture de faiblesse de Pérégrine augmente de <nobr>50%</nobr>. Lorsque Pérégrine est dans l'état Brûlure ardente, Prière foxienne s'applique à tous les alliés.",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

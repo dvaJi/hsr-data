@@ -2,6 +2,7 @@
   "_id": 1217,
   "id": "huohuo",
   "name": "Huohuo",
+  "description": "A trainee Ten-Lords Commission Judge of the Xianzhou Luofu, she is a young foxian girl possessed by a heliobus.\nShe is a timid and weak girl who is afraid of all kinds of strange things, but is responsible for luring and subduing evil spirits.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -244,9 +245,21 @@
       "id": "banner_stormcaller",
       "name": "Banner: Stormcaller",
       "desc": "Deals Wind DMG equal to #1[i]% of Huohuo's Max HP to a target enemy.",
-      "simpleDesc": "Deals minor Wind DMG to a single enemy.",
+      "simpleDesc": "Deals minor Wind DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Dispels 1 debuff from an ally and restore HP to that ally and their adjacent allies.",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +807,18 @@
       "simpleDesc": "Regenerates Energy for all teammates (i.e., excluding this unit) and increases their ATK.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "Huohuo gains Divine Provision after using her Skill. If Huohuo possesses Divine Provision when an ally's turn starts or when an ally uses Ultimate, restores the ally's HP. At the same time, every ally with low HP receives healing once. When Divine Provision is triggered to heal an ally, dispel 1 debuff from that ally.",
       "type": "Talent",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1545,24 @@
       "simpleDesc": "Causes surrounding enemies to become Horror-Struck. After entering battle with enemies afflicted with Horror-Struck, there is a high chance of reducing the ATK of the enemy targets.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1500,37 +1582,88 @@
       "_id": 121701,
       "id": "anchored_to_vessel_specters_nestled",
       "name": "Anchored to Vessel, Specters Nestled",
-      "desc": "The duration of Divine Provision produced by the Talent is extended by <nobr>1</nobr> turn(s). When Huohuo possesses Divine Provision, all allies' SPD increases by <nobr>12%</nobr>."
+      "desc": "The duration of Divine Provision produced by the Talent is extended by <nobr>1</nobr> turn(s). When Huohuo possesses Divine Provision, all allies' SPD increases by <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121702,
       "id": "sealed_in_tail_wraith_subdued",
       "name": "Sealed in Tail, Wraith Subdued",
-      "desc": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be <u>knocked down</u> and their HP will immediately be restored by an amount equal to <nobr>50%</nobr> of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. This effect can only be triggered <nobr>2</nobr> time(s) per battle."
+      "desc": "If Huohuo possesses \"Divine Provision\" when an ally target is struck by a killing blow, the ally will not be <u>knocked down</u> and their HP will immediately be restored by an amount equal to <nobr>50%</nobr> of their Max HP. This reduces the duration of \"Divine Provision\" by 1 turn. This effect can only be triggered <nobr>2</nobr> time(s) per battle.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Downed State",
+          "desc": "An ally will be incapacitated once their HP is reduced to 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121703,
       "id": "cursed_by_fate_moths_to_flame",
       "name": "Cursed by Fate, Moths to Flame",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121704,
       "id": "tied_in_life_bound_to_strife",
       "name": "Tied in Life, Bound to Strife",
-      "desc": "When healing a target ally via Skill or Talent, the less HP the target ally currently has, the higher the amount of healing they will receive. The maximum increase in healing provided by Huohuo is <nobr>80%</nobr>."
+      "desc": "When healing a target ally via Skill or Talent, the less HP the target ally currently has, the higher the amount of healing they will receive. The maximum increase in healing provided by Huohuo is <nobr>80%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121705,
       "id": "mandated_by_edict_evils_evicted",
       "name": "Mandated by Edict, Evils Evicted",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121706,
       "id": "woven_together_cohere_forever",
       "name": "Woven Together, Cohere Forever",
-      "desc": "When healing a target ally, increases the target ally's DMG dealt by <nobr>50%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "When healing a target ally, increases the target ally's DMG dealt by <nobr>50%</nobr> for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1110,
   "id": "lynx",
   "name": "Lynx",
+  "description": "Penjelajah dataran salju dari Belobog, adik terkecil dari Landau bersaudara.\nTenang dan sangat berenergi. Sering pergi menjelajahi dataran salju sendirian.",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Memberikan \"Survival Response\" pada 1 rekan tim, meningkatkan Max HP-nya, dan di saat yang bersamaan juga memulihkan HP-nya.",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -782,6 +807,27 @@
       "simpleDesc": "Menghapus masing-masing 1 efek Debuff dari seluruh rekan tim, serta memulihkan HP seluruh rekan tim.",
       "type": "Ultimate",
       "tag": "Restore",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1146,18 @@
       "simpleDesc": "Saat Lynx melancarkan Skill atau Ultimate, rekan tim yang dijadikan target Skill atau Ultimate Lynx akan mendapatkan efek pemulihan berkelanjutan. Jika target memiliki \"Survival Response\", maka efek pemulihan berkelanjutan akan meningkat.",
       "type": "Talent",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1448,6 +1506,15 @@
       "simpleDesc": "Setelah menggunakan Technique, seluruh rekan tim akan mendapatkan efek pemulihan berkelanjutan saat pertempuran berikutnya dimulai.",
       "type": "Technique",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1531,88 @@
       "_id": 111001,
       "id": "morning_of_snow_hike",
       "name": "Morning of Snow Hike",
-      "desc": "Saat memberi pemulihan pada rekan tim dengan persentase HP kurang dari atau sama dengan <nobr>50%</nobr>, Outgoing Healing Lynx akan meningkat <nobr>20%</nobr>. Efek ini juga berlaku untuk pemulihan berkelanjutan."
+      "desc": "Saat memberi pemulihan pada rekan tim dengan persentase HP kurang dari atau sama dengan <nobr>50%</nobr>, Outgoing Healing Lynx akan meningkat <nobr>20%</nobr>. Efek ini juga berlaku untuk pemulihan berkelanjutan.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111002,
       "id": "noon_of_portable_furnace",
       "name": "Noon of Portable Furnace",
-      "desc": "Target yang memiliki \"Survival Response\" dapat menahan <nobr>1</nobr> kali <u>efek Debuff</u> yang dilancarkan padanya."
+      "desc": "Target yang memiliki \"Survival Response\" dapat menahan <nobr>1</nobr> kali <u>efek Debuff</u> yang dilancarkan padanya.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111003,
       "id": "afternoon_of_avalanche_beacon",
       "name": "Afternoon of Avalanche Beacon",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111004,
       "id": "dusk_of_warm_campfire",
       "name": "Dusk of Warm Campfire",
-      "desc": "Saat target mendapatkan \"Survival Response\", ATK target tersebut akan meningkat sebesar <nobr>#1[f1]%</nobr> Max HP Lynx selama <nobr>1</nobr> giliran."
+      "desc": "Saat target mendapatkan \"Survival Response\", ATK target tersebut akan meningkat sebesar <nobr>#1[f1]%</nobr> Max HP Lynx selama <nobr>1</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111005,
       "id": "night_of_aurora_tea",
       "name": "Night of Aurora Tea",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111006,
       "id": "dawn_of_explorers_chart",
       "name": "Dawn of Explorers' Chart",
-      "desc": "Peningkatan Max HP dari \"Survival Response\" akan meningkat lagi sebesar <nobr>#1[f1]%</nobr> Max HP Lynx, serta meningkatkan Effect RES sebesar <nobr>30%</nobr>."
+      "desc": "Peningkatan Max HP dari \"Survival Response\" akan meningkat lagi sebesar <nobr>#1[f1]%</nobr> Max HP Lynx, serta meningkatkan Effect RES sebesar <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

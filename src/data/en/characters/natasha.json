@@ -2,6 +2,7 @@
   "_id": 1105,
   "id": "natasha",
   "name": "Natasha",
+  "description": "A doctor from the Underworld and a caregiver of children.\nAlongside her kindness and caring, she also has a hidden dangerous side.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -243,10 +244,22 @@
       "_id": 110501,
       "id": "behind_the_kindness",
       "name": "Behind the Kindness",
-      "desc": "Deals Physical DMG equal to #1[i]% of Natasha's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Physical DMG to a single enemy.",
+      "desc": "Deals Physical DMG equal to #1[i]% of Natasha's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Physical DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Restores HP for a single ally and provides Healing Over Time to them.",
       "type": "Skill",
       "tag": "Restore",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +789,15 @@
       "simpleDesc": "Restores HP for all allies.",
       "type": "Ultimate",
       "tag": "Restore",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1101,15 @@
       "simpleDesc": "When healing allies with low HP percentage, increases Outgoing Healing. This effect also works on continuous healing.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1412,24 @@
       "desc": "Immediately attacks the enemy. After entering battle, deals Physical DMG equal to #4[i]% of Natasha's ATK to a random enemy, with a #1[i]% base chance to Weaken all enemies.\nWhile Weakened, enemies deal #2[i]% less DMG to allies for #3[i] turn(s).",
       "simpleDesc": "Attacks the enemy. After entering battle, deals minor Physical DMG to a random single enemy, with a high chance to inflict Weaken to all enemy targets.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1449,79 @@
       "_id": 110501,
       "id": "pharmacology_expertise",
       "name": "Pharmacology Expertise",
-      "desc": "After being attacked, if the current HP percentage is <nobr>30%</nobr> or lower, heals self for 1 time to restore HP by an amount equal to <nobr>15%</nobr> of Max HP plus <nobr>400</nobr>. This effect can only be triggered 1 time per battle."
+      "desc": "After being attacked, if the current HP percentage is <nobr>30%</nobr> or lower, heals self for 1 time to restore HP by an amount equal to <nobr>15%</nobr> of Max HP plus <nobr>400</nobr>. This effect can only be triggered 1 time per battle.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110502,
       "id": "clinical_research",
       "name": "Clinical Research",
-      "desc": "When Natasha uses her Ultimate, grant continuous healing for <nobr>1</nobr> turn(s) to allies whose HP percentage is at <nobr>30%</nobr> or lower. And at the beginning of their turn, their HP is restored by an amount equal to <nobr>6%</nobr> of Natasha's Max HP plus <nobr>160</nobr>."
+      "desc": "When Natasha uses her Ultimate, grant continuous healing for <nobr>1</nobr> turn(s) to allies whose HP percentage is at <nobr>30%</nobr> or lower. And at the beginning of their turn, their HP is restored by an amount equal to <nobr>6%</nobr> of Natasha's Max HP plus <nobr>160</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110503,
       "id": "the_right_cure",
       "name": "The Right Cure",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110504,
       "id": "miracle_cure",
       "name": "Miracle Cure",
-      "desc": "After being attacked, regenerates <nobr>5</nobr> extra Energy."
+      "desc": "After being attacked, regenerates <nobr>5</nobr> extra Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110505,
       "id": "preventive_treatment",
       "name": "Preventive Treatment",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110506,
       "id": "doctors_grace",
       "name": "Doctor's Grace",
-      "desc": "Natasha's Basic ATK additionally deals Physical DMG equal to <nobr>40%</nobr> of her Max HP."
+      "desc": "Natasha's Basic ATK additionally deals Physical DMG equal to <nobr>40%</nobr> of her Max HP.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

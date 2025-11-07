@@ -2,6 +2,7 @@
   "_id": 1305,
   "id": "dr_ratio",
   "name": "Dr. 레이시오",
+  "description": "지식학회 학자.\n성정이 괴팍하고 언사가 야박하지만 품위가 있다.\n기이한 석고 마스크 아래의 용모는 의외로 준수하다",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "지정된 단일 적에게 소량의 허수 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "지정된 단일 적에게 허수 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "지정된 단일 적에게 허수 속성 피해를 가하고, [현자의 짧은 생각]을 부여한다. Dr. 레이시오의 동료가 [현자의 짧은 생각]을 보유한 목표를 공격하면 Dr. 레이시오는 해당 목표에게 추가 공격을 1회 발동한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1022,6 +1059,32 @@
       "simpleDesc": "전투 스킬 발동 시 일정 확률로 해당 목표에게 추가 공격을 1회 발동하여 허수 속성 피해를 가한다",
       "type": "특성",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "고정 확률",
+          "desc": "어떤 요인에도 영향을 받지 않는 고정 확률이다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1409,24 @@
       "simpleDesc": "특수 영역을 전개하여 적을 도발한다. 영역 내에서 적과 전투에 진입하면 높은 확률로 적의 속도를 감소시킨다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1446,113 @@
       "_id": 130501,
       "id": "pride_comes_before_a_fall",
       "name": "교만은 재앙을 낳는다",
-      "desc": "행적 [귀납]의 중첩 스택 수 상한이 <nobr>4</nobr>스택 증가한다. 전투 시작 시 [귀납] <nobr>4</nobr>스택을 즉시 획득한다. 먼저 행적 [귀납]을 개방해야 한다"
+      "desc": "행적 [귀납]의 중첩 스택 수 상한이 <nobr>4</nobr>스택 증가한다. 전투 시작 시 [귀납] <nobr>4</nobr>스택을 즉시 획득한다. 먼저 행적 [귀납]을 개방해야 한다",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130502,
       "id": "the_divine_is_in_the_details",
       "name": "작은 것에 숨겨진 진리",
-      "desc": "특성의 <u>추가 공격</u>이 목표를 명중할 시, 목표가 <u>디버프 효과</u>를 1개 보유할 때마다 추가로 Dr. 레이시오 공격력의 <nobr>20%</nobr>만큼 허수 속성 <u>추가 피해</u>를 가한다. 해당 효과는 <u>추가 공격</u>을 할 때마다 최대 <nobr>4</nobr>회 발동된다"
+      "desc": "특성의 <u>추가 공격</u>이 목표를 명중할 시, 목표가 <u>디버프 효과</u>를 1개 보유할 때마다 추가로 Dr. 레이시오 공격력의 <nobr>20%</nobr>만큼 허수 속성 <u>추가 피해</u>를 가한다. 해당 효과는 <u>추가 공격</u>을 할 때마다 최대 <nobr>4</nobr>회 발동된다",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "디버프 효과",
+          "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130503,
       "id": "know_thyself",
       "name": "너 자신을 알라",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130504,
       "id": "ignorance_is_blight",
       "name": "맹목은 미련을 낳는다",
-      "desc": "특성 발동 시 Dr. 레이시오가 추가로 에너지를 <nobr>15</nobr>pt 회복한다"
+      "desc": "특성 발동 시 Dr. 레이시오가 추가로 에너지를 <nobr>15</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130505,
       "id": "sic_itur_ad_astra",
       "name": "노 없는 배는 바다를 건널 수 없다",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130506,
       "id": "vincit_omnia_veritas",
       "name": "영원한 것은 진리뿐",
-      "desc": "[현자의 짧은 생각]의 발동 효과가 추가로 <nobr>1</nobr>회 증가하고, 특성의 <u>추가 공격</u>으로 가하는 피해가 <nobr>50%</nobr> 증가한다"
+      "desc": "[현자의 짧은 생각]의 발동 효과가 추가로 <nobr>1</nobr>회 증가하고, 특성의 <u>추가 공격</u>으로 가하는 피해가 <nobr>50%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

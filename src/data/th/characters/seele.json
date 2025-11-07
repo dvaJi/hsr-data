@@ -2,6 +2,7 @@
   "_id": 1102,
   "id": "seele",
   "name": "Seele",
+  "description": "กำลังสำคัญของ \"Wildfire\" กลุ่มต่อต้านแห่ง Underworld ผู้มีฉายาว่า \"ผีเสื้อ\"\nนิสัยตรงไปตรงมา แต่ก็ยังมีด้านที่ละเอียดอ่อน ซ่อนเร้นอยู่ในจิตใจ",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG ควอนตัม เล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "สร้าง DMG ควอนตัมแก่ฝ่ายศัตรูหนึ่งตัว และทำให้ความเร็วของตัวเองเพิ่มขึ้น",
       "type": "สกิลต่อสู้",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,18 @@
       "simpleDesc": "ติดสถานะ Buff และสร้าง DMG ควอนตัมอย่างรุนแรงแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "ท่าไม้ตาย",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,27 @@
       "simpleDesc": "เมื่อปล่อยการโจมตีปกติ สกิลต่อสู้ และท่าไม้ตาย เพื่อกำจัดศัตรูเป้าหมาย จะได้รับ เทิร์นเพิ่มเติม และติดสถานะ Buff โดยขณะที่ติดสถานะ Buff ตัวเองจะสร้าง DMG เพิ่มขึ้น",
       "type": "พรสวรรค์",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "เทิร์นเพิ่มเติม",
+          "desc": "ได้รับเทิร์นเพิ่ม 1 เทิร์น โดยไม่เสียจำนวนเทิร์นที่มีอยู่ และไม่สามารถใช้ท่าไม้ตายได้ เมื่ออยู่ในเทิร์นดังกล่าว",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1404,15 @@
       "simpleDesc": "เมื่อเข้าสู่สถานะซ่อนตัว หลังจากโจมตีศัตรูและเข้าสู่การต่อสู้ จะติดสถานะ Buff ทันที",
       "type": "เทคนิค",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1362,37 +1429,96 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Extirpating Slash",
-      "desc": "เมื่อสร้าง DMG แก่ศัตรูเป้าหมายที่มีเปอร์เซ็นต์ HP ปัจจุบันเท่ากับหรือน้อยกว่า <nobr>80%</nobr> อัตราคริติคอลจะเพิ่มขึ้น <nobr>15%</nobr>"
+      "desc": "เมื่อสร้าง DMG แก่ศัตรูเป้าหมายที่มีเปอร์เซ็นต์ HP ปัจจุบันเท่ากับหรือน้อยกว่า <nobr>80%</nobr> อัตราคริติคอลจะเพิ่มขึ้น <nobr>15%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "Dancing Butterfly",
-      "desc": "เอฟเฟกต์เพิ่มความเร็วของสกิลต่อสู้ สามารถซ้อนทับได้ โดยจะซ้อนทับได้มากสุด <nobr>2</nobr> ชั้น"
+      "desc": "เอฟเฟกต์เพิ่มความเร็วของสกิลต่อสู้ สามารถซ้อนทับได้ โดยจะซ้อนทับได้มากสุด <nobr>2</nobr> ชั้น",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "Dazzling Tumult",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Flitting Phantasm",
-      "desc": "เมื่อ Seele กำจัดศัตรูเป้าหมายได้ จะฟื้นฟูพลังงานของตัวเอง <nobr>15</nobr> หน่วย"
+      "desc": "เมื่อ Seele กำจัดศัตรูเป้าหมายได้ จะฟื้นฟูพลังงานของตัวเอง <nobr>15</nobr> หน่วย",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110205,
       "id": "piercing_shards",
       "name": "Piercing Shards",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Shattering Shambles",
-      "desc": "หลังจากใช้ท่าไม้ตาย จะทำให้ศัตรูหนึ่งตัวที่ถูกโจมตีติดสถานะ \"Butterfly Flurry\" เป็นเวลา <nobr>1</nobr> เทิร์น หลังจากศัตรูเป้าหมายที่ติดสถานะ \"Butterfly Flurry\" ถูกโจมตีแล้ว ศัตรูจะได้รับ <u>DMG ควอนตัมเพิ่มเติม</u> <nobr>15%</nobr> ของ DMG ท่าไม้ตายของ Seele อีกหนึ่งครั้ง หากเป้าหมายนั้น ถูกกำจัดโดยเป้าหมายอื่นในฝ่ายเรา ด้วยการใช้ <u>DMG เพิ่มเติม</u> จากสถานะ \"Butterfly Flurry\" พรสวรรค์ของ Seele จะไม่ถูกปล่อย\nเมื่อ Seele <u>หมดสติ</u> สถานะ \"Butterfly Flurry\" ของศัตรูเป้าหมายจะถูกลบ"
+      "desc": "หลังจากใช้ท่าไม้ตาย จะทำให้ศัตรูหนึ่งตัวที่ถูกโจมตีติดสถานะ \"Butterfly Flurry\" เป็นเวลา <nobr>1</nobr> เทิร์น หลังจากศัตรูเป้าหมายที่ติดสถานะ \"Butterfly Flurry\" ถูกโจมตีแล้ว ศัตรูจะได้รับ <u>DMG ควอนตัมเพิ่มเติม</u> <nobr>15%</nobr> ของ DMG ท่าไม้ตายของ Seele อีกหนึ่งครั้ง หากเป้าหมายนั้น ถูกกำจัดโดยเป้าหมายอื่นในฝ่ายเรา ด้วยการใช้ <u>DMG เพิ่มเติม</u> จากสถานะ \"Butterfly Flurry\" พรสวรรค์ของ Seele จะไม่ถูกปล่อย\nเมื่อ Seele <u>หมดสติ</u> สถานะ \"Butterfly Flurry\" ของศัตรูเป้าหมายจะถูกลบ",
+      "unlockCost": [
+        {
+          "ItemID": 11102,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG เพิ่มเติม",
+          "desc": "ทำให้ผู้ที่ถูกโจมตีได้รับ DMG เพิ่มเติม 1 ครั้ง โดยการโจมตีครั้งนี้ จะไม่ถือเป็นการโจมตี 1 ครั้ง",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "สถานะหมดสติ",
+          "desc": "เมื่อ HP ปัจจุบัน ของเป้าหมายฝ่ายเราเหลือ 0 จะติดสถานะพิเศษ และเป้าหมายที่ติดสถานะนี้ จะไม่สามารถต่อสู้ได้",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

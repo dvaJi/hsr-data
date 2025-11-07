@@ -2,6 +2,7 @@
   "_id": 1217,
   "id": "huohuo",
   "name": "Huohuo",
+  "description": "Juge en formation de la Commission des dix seigneurs du Luofu possédée par un Héliobe.\nJeune Foxienne timide et craintive, elle assume la responsabilité difficile de capturer les mauvais esprits malgré sa peur des phénomènes étranges.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Dissipe 1 malus d'un allié et restaure des PV à cet allié et aux alliés adjacents.",
       "type": "Compétence",
       "tag": "Restauration",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Malus",
+          "desc": "Les malus sont des effets de statut négatifs qui affaiblissent les unités. Sauf indication contraire, les malus peuvent être dissipés.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +807,18 @@
       "simpleDesc": "Régénère des points d'énergie pour tous les coéquipiers, hormis Huohuo, et augmente leur ATQ.",
       "type": "Ultime",
       "tag": "Soutien",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "Huohuo obtient Intervention divine après avoir utilisé sa compétence. Si Huohuo bénéficie d'Intervention divine au début du tour d'un allié ou lorsqu'un allié utilise un ultime, restaure les PV de cet allié. Aussi, soigne une fois tous les alliés dont les PV sont bas. Lorsqu'Intervention divine se déclenche pour soigner un allié, dissipe 1 malus dont souffre cet allié.",
       "type": "Talent",
       "tag": "Restauration",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Malus",
+          "desc": "Les malus sont des effets de statut négatifs qui affaiblissent les unités. Sauf indication contraire, les malus peuvent être dissipés.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1545,24 @@
       "simpleDesc": "Plonge les ennemis à proximité dans l'état Frappé par l'horreur. Il y a de fortes chances d'appliquer une réduction d'ATQ aux cibles ennemies après être entré en combat avec des ennemis frappés par l'horreur.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1500,37 +1582,88 @@
       "_id": 121701,
       "id": "anchored_to_vessel_specters_nestled",
       "name": "Abri maudit possédé",
-      "desc": "Augmente de <nobr>1</nobr> tour la durée de l'effet Intervention divine du talent. Lorsque Huohuo bénéficie d'Intervention divine, la VIT de tous les alliés augmente de <nobr>12%</nobr>."
+      "desc": "Augmente de <nobr>1</nobr> tour la durée de l'effet Intervention divine du talent. Lorsque Huohuo bénéficie d'Intervention divine, la VIT de tous les alliés augmente de <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121702,
       "id": "sealed_in_tail_wraith_subdued",
       "name": "Queue de l'esprit scellée",
-      "desc": "Si Huohuo bénéficie d'Intervention divine pendant qu'une cible alliée subit un coup fatal, l'allié ne tombe pas <u>à terre</u>, et restaure immédiatement des PV à hauteur de <nobr>50%</nobr> de ses PV max, ce qui réduit la durée d'Intervention divine de 1 tour. Cet effet ne peut être déclenché que <nobr>2</nobr> fois par combat."
+      "desc": "Si Huohuo bénéficie d'Intervention divine pendant qu'une cible alliée subit un coup fatal, l'allié ne tombe pas <u>à terre</u>, et restaure immédiatement des PV à hauteur de <nobr>50%</nobr> de ses PV max, ce qui réduit la durée d'Intervention divine de 1 tour. Cet effet ne peut être déclenché que <nobr>2</nobr> fois par combat.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "À terre",
+          "desc": "État d'un allié dont les PV ont été réduits à 0 dans lequel il ne peut pas continuer à se battre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121703,
       "id": "cursed_by_fate_moths_to_flame",
       "name": "Malédiction à laquelle les papillons ont cédé",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121704,
       "id": "tied_in_life_bound_to_strife",
       "name": "Cœurs qui s'emballent mais pourtant liés",
-      "desc": "Les soins prodigués à une cible alliée par la compétence ou le talent de Huohuo gagnent en efficacité plus les PV de la cible sont bas. L'augmentation maximale de l'efficacité des soins prodigués par Huohuo est de <nobr>80%</nobr>."
+      "desc": "Les soins prodigués à une cible alliée par la compétence ou le talent de Huohuo gagnent en efficacité plus les PV de la cible sont bas. L'augmentation maximale de l'efficacité des soins prodigués par Huohuo est de <nobr>80%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121705,
       "id": "mandated_by_edict_evils_evicted",
       "name": "Mandatée par décret, maux évincés",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121706,
       "id": "woven_together_cohere_forever",
       "name": "Destins en osmose à jamais",
-      "desc": "Lorsque Huohuo soigne une cible alliée, les DGT de la cible alliée augmentent de <nobr>50%</nobr> pendant <nobr>2</nobr> tours."
+      "desc": "Lorsque Huohuo soigne une cible alliée, les DGT de la cible alliée augmentent de <nobr>50%</nobr> pendant <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11217,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

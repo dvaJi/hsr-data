@@ -2,6 +2,7 @@
   "_id": 1215,
   "id": "hanya",
   "name": "한아",
+  "description": "선주 「나부」 시왕사의 판관.\n시왕의 명을 받아 명참천필을 관장하고 여러 가지 죄업을 판독하고 업보를 판결한다",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 물리 속성 피해를 준다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "단일 적에게 물리 속성 피해를 주고 [부담] 상태에 빠트린다. 아군이 [부담] 상태의 적에게 일반 공격, 전투 스킬, 필살기를 2회 발동할 때마다 전투 스킬 포인트를 1pt 회복한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 17
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "단일 아군의 속도와 공격력을 증가시킨다",
       "type": "필살기",
       "tag": "강화",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "아군이 [부담] 상태에 빠진 적에게 일반 공격, 전투 스킬, 필살기 발동 시 가하는 피해가 증가한다",
       "type": "특성",
       "tag": "서포트",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1388,15 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 랜덤 단일 적에게 전투 스킬 효과와 동일한 [부담]을 부여한다",
       "simpleDesc": "적을 공격하고, 전투 진입 후 랜덤 단일 적에게 전투 스킬 효과와 동일한 [부담]을 부여한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1356,37 +1411,88 @@
       "_id": 121501,
       "id": "one_heart",
       "name": "일심(一心)",
-      "desc": "필살기 효과를 보유한 아군이 적 처치 시, 한아의 <u>행동 게이지가 <nobr>15%</nobr> 증가</u>한다. 해당 효과는 턴마다 <nobr>1</nobr>회만 발동한다"
+      "desc": "필살기 효과를 보유한 아군이 적 처치 시, 한아의 <u>행동 게이지가 <nobr>15%</nobr> 증가</u>한다. 해당 효과는 턴마다 <nobr>1</nobr>회만 발동한다",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121502,
       "id": "two_views",
       "name": "이관(二觀)",
-      "desc": "전투 스킬 발동 후 속도가 <nobr>20%</nobr> 증가한다. 지속 시간: <nobr>1</nobr>턴"
+      "desc": "전투 스킬 발동 후 속도가 <nobr>20%</nobr> 증가한다. 지속 시간: <nobr>1</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121503,
       "id": "three_temptations",
       "name": "삼진(三塵)",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121504,
       "id": "four_truths",
       "name": "사제(四諦)",
-      "desc": "필살기 지속 시간이 추가로 <nobr>1</nobr>턴 증가한다"
+      "desc": "필살기 지속 시간이 추가로 <nobr>1</nobr>턴 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121505,
       "id": "five_skandhas",
       "name": "오음(五陰)",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121506,
       "id": "six_reverences",
       "name": "육정(六正)",
-      "desc": "특성의 피해 증가 효과가 추가로 <nobr>10%</nobr> 증가한다"
+      "desc": "특성의 피해 증가 효과가 추가로 <nobr>10%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

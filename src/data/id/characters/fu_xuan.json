@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "Fu Xuan",
+  "description": "Kepala Divination Commission Xianzhou \"Luofu\".\nOrang yang menggunakan mata ketiga dan Matrix of Prescience untuk meramalkan rute Xianzhou serta hasil dari berbagai peristiwa.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Mengaktifkan \"Matrix of Prescience\", membagi sebagian DMG yang diterima seluruh rekan tim Fu Xuan kepada Fu Xuan. Selain itu juga akan meningkatkan Max HP dan CRIT Rate seluruh rekan tim.",
       "type": "Skill",
       "tag": "Defense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "Pembagian",
+          "desc": "Sebelum DMG dikalkulasi, sebagian DMG dari penyerang akan dibagikan pada 1 target lainnya (atau beberapa target lainnya), sehingga target penerima hanya akan menerima sisa DMG tersebut. DMG yang dibagi ke target lain tidak akan bisa dibagi lagi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Gugur",
+          "desc": "Saat HP berkurang hingga 0, maka karakter tersebut gugur. Karakter yang gugur tidak dapat melanjutkan pertempuran.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "Mengakibatkan Quantum DMG pada seluruh musuh dan menambah jumlah kesempatan terpicunya Talent Fu Xuan.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "Saat Fu Xuan berada dalam kondisi siap bertempur (tidak gugur), DMG yang diterima seluruh rekan tim akan berkurang.\nSaat persentase HP Fu Xuan rendah, secara otomatis memulihkan HP dirinya berdasarkan persentase HP dirinya yang sudah berkurang. Efek ini maksimal dapat menyimpan 2 kali jumlah kesempatan terpicu.",
       "type": "Talent",
       "tag": "Restore",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "Mengaktifkan Barrier yang akan mencegahmu memasuki pertempuran saat diserang musuh. Memasuki pertempuran akan otomatis mengaktifkan \"Matrix of Prescience\".",
       "type": "Technique",
       "tag": "Defense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "Dominus Pacis",
-      "desc": "\"Knowledge\" meningkatkan <nobr>30%</nobr> CRIT DMG."
+      "desc": "\"Knowledge\" meningkatkan <nobr>30%</nobr> CRIT DMG.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "Optimus Felix",
-      "desc": "Saat \"Matrix of Prescience\" aktif, jika ada rekan tim yang menerima DMG mematikan, maka seluruh rekan tim yang menerima DMG mematikan pada aksi kali ini tidak akan <u>gugur</u>, dan akan segera memulihkan HP-nya sebesar <nobr>70%</nobr> Max HP masing-masing. Efek ini dapat dipicu sekali dalam 1 pertempuran."
+      "desc": "Saat \"Matrix of Prescience\" aktif, jika ada rekan tim yang menerima DMG mematikan, maka seluruh rekan tim yang menerima DMG mematikan pada aksi kali ini tidak akan <u>gugur</u>, dan akan segera memulihkan HP-nya sebesar <nobr>70%</nobr> Max HP masing-masing. Efek ini dapat dipicu sekali dalam 1 pertempuran.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Gugur",
+          "desc": "Saat HP berkurang hingga 0, maka karakter tersebut gugur. Karakter yang gugur tidak dapat melanjutkan pertempuran.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "Apex Nexus",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "Fortuna Stellaris",
-      "desc": "Setelah rekan tim lain yang berada dalam efek \"Matrix of Prescience\" terkena serangan, Fu Xuan akan memulihkan <nobr>5</nobr> Energy."
+      "desc": "Setelah rekan tim lain yang berada dalam efek \"Matrix of Prescience\" terkena serangan, Fu Xuan akan memulihkan <nobr>5</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "Arbiter Primus",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "Omnia Vita",
-      "desc": "Saat \"Matrix of Prescience\" aktif, ia akan menghitung akumulasi jumlah HP yang berkurang dari seluruh rekan tim dalam pertempuran kali ini. DMG yang diakibatkan Ultimate Fu Xuan akan meningkat sebesar <nobr>200%</nobr> dari perhitungan akumulasi jumlah HP seluruh rekan tim yang berkurang di pertempuran kali ini.\nJumlah perhitungan akumulasi HP yang berkurang dari seluruh rekan tim tidak dapat melebihi <nobr>120%</nobr> Max HP Fu Xuan. Setelah melancarkan Ultimate, perhitungan jumlah akumulasi akan direset ulang dan diakumulasi kembali."
+      "desc": "Saat \"Matrix of Prescience\" aktif, ia akan menghitung akumulasi jumlah HP yang berkurang dari seluruh rekan tim dalam pertempuran kali ini. DMG yang diakibatkan Ultimate Fu Xuan akan meningkat sebesar <nobr>200%</nobr> dari perhitungan akumulasi jumlah HP seluruh rekan tim yang berkurang di pertempuran kali ini.\nJumlah perhitungan akumulasi HP yang berkurang dari seluruh rekan tim tidak dapat melebihi <nobr>120%</nobr> Max HP Fu Xuan. Setelah melancarkan Ultimate, perhitungan jumlah akumulasi akan direset ulang dan diakumulasi kembali.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

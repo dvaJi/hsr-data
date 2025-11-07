@@ -2,6 +2,7 @@
   "_id": 1408,
   "id": "phainon",
   "name": "Phainon",
+  "description": "Aedes Elysiae, um vilarejo fronteiriço isolado do mundo, vivia apenas em lendas obscuras.\nO Herói Inominado, █████, o Herdeiro de Chrysos, que carregava a Chama Primordial do \"Sustenta-Mundo\", memorizou os ideais de todo o mundo, carregou o destino de milhões e trouxe a primeira luz da aurora ao novo mundo.\n\"Mas se a aurora nunca tivesse existido, que as chamas da fúria queimem esse corpo até as cinzas e se transformem no sol ardente do amanhã!\"",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Ganha #3[i] ponto(s) de \"Chama Primordial\", causando Dano Físico massivo a um inimigo e Dano Físico aos alvos adjacentes.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Transforma-se em Khaslana e implanta um Território: aliados partem e não podem agir, e todos os inimigos ganham Fraquezas contra Físico.\nKhaslana não entra em sua própria rodada, mas possui #4[i] rodada(s) extra(s) de Khaslana. Na rodada final, desfere um golpe final e causa Dano Físico massivo distribuído igualmente entre todos os inimigos.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000020,
+          "name": "Território",
+          "desc": "Os efeitos de \"Território\" são únicos na batalha. Enquanto ele existir, outras habilidades com efeitos de \"Território\" não poderão ser usadas.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000016,
+          "name": "Partida",
+          "desc": "Nenhum alvo no estado de \"Partida\" pode ser escolhida como alvo de habilidades e não aparecerá na Ordem de Ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014082,
+          "name": "Rodada Extra de Khaslana",
+          "desc": "Quando Phainon se transforma em Khaslana, uma contagem regressiva aparecerá na Ordem de Ação. Quando a contagem começar, Khaslana receberá 1 rodada extra. Quando a última rodada da contagem se iniciar, transforma-se em Khaslana e desfere um Golpe Final antes de encerrar a transformação.\nO valor de ação inicial da contagem será definido entre 0% e <nobr>100%</nobr>. O valor de ação não será reiniciado no início de cada onda.\nQuando Khaslana estiver sob o efeito de Avançar Adiante de ação, a ação da primeira contagem é que será avançada.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,15 @@
       "simpleDesc": "Talento de Phainon. Quando \"Chama Primordial\" atinge #4[i] ponto(s), pode ativar a Perícia Suprema.\nQuando Phainon é alvo de habilidades de outros alvos, ganha \"Chama Primordial\". Quando é alvo de uma habilidade de um aliado, aumenta o Dano CRIT.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1482,24 @@
       "desc": "Quando Phainon está na equipe, aumenta os Pontos de Técnica Máximos em 3.\nAo usar ativamente esta Técnica, consome 2 Pontos de Técnica e ataca imediatamente todos os inimigos dentro de um certo alcance. Ao entrar em combate, regenera #3[i] de Energia para os aliados e obtém #2[i] ponto(s) de \"Flagelo\" e #4[i] Ponto(s) de Perícia. Causa Dano Físico igual a #1[i]% do ATQ de Phainon a todos os inimigos no início de cada onda.\nAo atacar um inimigo normal, derrota-o imediatamente sem iniciar o combate. Nenhum Ponto de Técnica é consumido se nenhum inimigo for atingido.",
       "simpleDesc": "Aumenta os Pontos de Técnica máximos em 3. Quando usar ativamente esta Técnica, consome 2 Pontos de Técnica para atacar todos os inimigos dentro de um certo alcance. Ao entrar em combate, regenera Energia para os aliados, recupera Pontos de Perícia e concede \"Flagelo.\" Causa Dano Físico a todos os inimigos no início de cada onda.\nAo atacar um inimigo normal, derrota-o imediatamente sem iniciar um combate. Caso nenhum inimigo seja atingido, nenhum Ponto de Técnica é consumido.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10014081,
+          "name": "Flagelo",
+          "desc": "Carga exclusiva de Khaslana, com carga máxima de 7. Será mantida mesmo antes da Transformação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1439,37 +1519,122 @@
       "_id": 140801,
       "id": "fire_and_light_bind_virtue_and_vice",
       "name": "Fogo e Luz Atam a Virtude e o Vício",
-      "desc": "A taxa-base de herança de VEL da rodada extra de Khaslana aumenta para <nobr>66%</nobr>. Para cada inimigo-alvo derrotado em uma batalha, aumenta em mais <nobr>#1[f1]%</nobr>, até <nobr>84%</nobr>.\nAo usar a Perícia Suprema, o Dano CRIT aumenta em <nobr>50%</nobr>, durando por <nobr>3</nobr> rodada(s)."
+      "desc": "A taxa-base de herança de VEL da rodada extra de Khaslana aumenta para <nobr>66%</nobr>. Para cada inimigo-alvo derrotado em uma batalha, aumenta em mais <nobr>#1[f1]%</nobr>, até <nobr>84%</nobr>.\nAo usar a Perícia Suprema, o Dano CRIT aumenta em <nobr>50%</nobr>, durando por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10014082,
+          "name": "Rodada Extra de Khaslana",
+          "desc": "Quando Phainon se transforma em Khaslana, uma contagem regressiva aparecerá na Ordem de Ação. Quando a contagem começar, Khaslana receberá 1 rodada extra. Quando a última rodada da contagem se iniciar, transforma-se em Khaslana e desfere um Golpe Final antes de encerrar a transformação.\nO valor de ação inicial da contagem será definido entre 0% e <nobr>100%</nobr>. O valor de ação não será reiniciado no início de cada onda.\nQuando Khaslana estiver sob o efeito de Avançar Adiante de ação, a ação da primeira contagem é que será avançada.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140802,
       "id": "sky_and_earth_churn_mortal_froth",
       "name": "Céu e Terra Remexem a Espuma Mortal",
-      "desc": "A PEN de RES a Físico de Khaslana aumenta em <nobr>20%</nobr>. Ao consumir <nobr>4</nobr> ponto(s) de \"Flagelo\" em um uso de \"Fundação: Julgamento Estelar\", ganha 1 rodada extra."
+      "desc": "A PEN de RES a Físico de Khaslana aumenta em <nobr>20%</nobr>. Ao consumir <nobr>4</nobr> ponto(s) de \"Flagelo\" em um uso de \"Fundação: Julgamento Estelar\", ganha 1 rodada extra.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014081,
+          "name": "Flagelo",
+          "desc": "Carga exclusiva de Khaslana, com carga máxima de 7. Será mantida mesmo antes da Transformação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "Rodada Extra",
+          "desc": "Ganha 1 rodada extra que não gastará suas rodadas restantes ao tomar uma ação. Nessa rodada extra, não é possível usar nenhuma Perícia Suprema.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140803,
       "id": "depths_of_quiet_entombed_in_ruin",
       "name": "Nas Profundezas do Silêncio, Sepultado na Ruína",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140804,
       "id": "faces_of_titans_blurred_by_time",
       "name": "Rostos dos Titãs, Ofuscados pelo Tempo",
-      "desc": "Ao utilizar \"Calamidade: Decreto da Alma Ardente\", ganha adicionalmente <nobr>4</nobr> acúmulo(s) de \"Alma Ardente\"."
+      "desc": "Ao utilizar \"Calamidade: Decreto da Alma Ardente\", ganha adicionalmente <nobr>4</nobr> acúmulo(s) de \"Alma Ardente\".",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140805,
       "id": "the_wheel_spins_forevermore",
       "name": "A Roda Gira Eternamente",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140806,
       "id": "embers_of_old_rise_still",
       "name": "As Chamas do Passado Ainda Queimam",
-      "desc": "O número de pontos excedentes da \"Chama Primordial\" não possui mais um limite máximo. No início do combate, obtém <nobr>6</nobr> \"Chama(s) Primordial(is)\".\nApós usar o ataque de \"Fundação: Julgamento Estelar\", causa adicionalmente <u>Dano Verdadeiro</u> igual a <nobr>36%</nobr> do Dano total causado nesse ataque ao inimigo com maior quantidade de PV."
+      "desc": "O número de pontos excedentes da \"Chama Primordial\" não possui mais um limite máximo. No início do combate, obtém <nobr>6</nobr> \"Chama(s) Primordial(is)\".\nApós usar o ataque de \"Fundação: Julgamento Estelar\", causa adicionalmente <u>Dano Verdadeiro</u> igual a <nobr>36%</nobr> do Dano total causado nesse ataque ao inimigo com maior quantidade de PV.",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "Dano Verdadeiro",
+          "desc": "Dano sem Tipo que não é afetado por nenhum efeito. Esse Dano não é considerado como a utilização de 1 ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

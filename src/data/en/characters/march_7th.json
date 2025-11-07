@@ -2,6 +2,7 @@
   "_id": 1001,
   "id": "march_7th",
   "name": "March 7th",
+  "description": "A girl who once slumbered in eternal ice and knows nothing about her past.\nTo find out the truth about her origins, she decided to travel with the Astral Express.\nAs of right now, she has prepared about 67 different versions of her life story for herself.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -243,10 +244,19 @@
       "_id": 100101,
       "id": "frigid_cold_arrow",
       "name": "Frigid Cold Arrow",
-      "desc": "Deals Ice DMG equal to #1[i]% of March 7th's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Ice DMG to a single enemy.",
+      "desc": "Deals Ice DMG equal to #1[i]% of March 7th's ATK to one enemy.",
+      "simpleDesc": "Deals minor Ice DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Applies a Shield on a single ally.",
       "type": "Skill",
       "tag": "Defense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,32 @@
       "simpleDesc": "Deals Ice DMG to all enemies, with a chance of Freezing them.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1145,24 @@
       "simpleDesc": "After a Shielded ally is attacked by an enemy, March 7th immediately launches a Counter against the attacker, dealing minor Ice DMG.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Counter",
+          "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\nCounter is also considered a Follow-up ATK.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1402,6 +1465,32 @@
       "desc": "Immediately attacks the enemy. After entering battle, there is a #1[i]% base chance to Freeze a random enemy for #2[i] turn(s).\nWhile Frozen, the enemy cannot take action and will take Ice Additional DMG equal to #3[i]% of March 7th's ATK at the beginning of each turn.",
       "simpleDesc": "Attacks the enemy. After entering battle, there is a high chance of inflicting Freeze on a random enemy.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1509,88 @@
       "_id": 100101,
       "id": "memory_of_you",
       "name": "Memory of You",
-      "desc": "Every time March 7th's Ultimate Freezes a target, she regenerates <nobr>6</nobr> Energy."
+      "desc": "Every time March 7th's Ultimate Freezes a target, she regenerates <nobr>6</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100102,
       "id": "memory_of_it",
       "name": "Memory of It",
-      "desc": "Upon entering battle, grants a Shield equal to <nobr>24%</nobr> of March 7th's DEF plus <nobr>320</nobr> to the ally with the lowest HP percentage, lasting for <nobr>3</nobr> turn(s)."
+      "desc": "Upon entering battle, grants a Shield equal to <nobr>24%</nobr> of March 7th's DEF plus <nobr>320</nobr> to the ally with the lowest HP percentage, lasting for <nobr>3</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100103,
       "id": "memory_of_everything",
       "name": "Memory of Everything",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100104,
       "id": "never_forfeit_again",
       "name": "Never Forfeit Again",
-      "desc": "The Talent's <u>Counter</u> effect can be triggered 1 more time in each turn. The DMG dealt by <u>Counter</u> increases by an amount that is equal to <nobr>30%</nobr> of March 7th's DEF."
+      "desc": "The Talent's <u>Counter</u> effect can be triggered 1 more time in each turn. The DMG dealt by <u>Counter</u> increases by an amount that is equal to <nobr>30%</nobr> of March 7th's DEF.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Counter",
+          "desc": "An effect that automatically triggers when the target is attacked, which unleashes an extra attack on the attacker.\nCounter is also considered a Follow-up ATK.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100105,
       "id": "never_forget_again",
       "name": "Never Forget Again",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100106,
       "id": "just_like_this_always",
       "name": "Just Like This, Always...",
-      "desc": "Allies under the protection of the Shield granted by the Skill restore HP equal to <nobr>4%</nobr> of their Max HP plus <nobr>106</nobr> at the beginning of each turn."
+      "desc": "Allies under the protection of the Shield granted by the Skill restore HP equal to <nobr>4%</nobr> of their Max HP plus <nobr>106</nobr> at the beginning of each turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

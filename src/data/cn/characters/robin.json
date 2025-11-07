@@ -2,6 +2,7 @@
   "_id": 1309,
   "id": "robin",
   "name": "知更鸟",
+  "description": "出生于匹诺康尼，闻名银河的天环族歌者，举止从容优雅的少女。\n此次受家族宴请回到故乡，在「谐乐大典」为众宾献歌一曲。\n可以依靠「同谐」的力量传递歌声，在歌迷乃至万界生灵之中展现「共鸣」。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体造成少量物理属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "使我方全体伤害提高。",
       "type": "战技",
       "tag": "辅助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +747,32 @@
       "simpleDesc": "进入【协奏】状态，使我方全体攻击力提高，并使队友立即行动，攻击后知更鸟额外造成物理属性附加伤害。【协奏】状态期间自身免疫控制类负面状态，状态结束前不会进入自己回合且无法行动，直至倒计时结束。",
       "type": "终结技",
       "tag": "辅助",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "控制类负面状态",
+          "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1142,15 @@
       "simpleDesc": "使我方全体暴击伤害提高，且我方目标攻击敌方后知更鸟额外恢复能量。",
       "type": "天赋",
       "tag": "辅助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1460,15 @@
       "simpleDesc": "在自身周围制造特殊领域。领域内敌人不会攻击知更鸟。领域展开期间进入战斗后，每个波次开始时知更鸟额外恢复#2[i]点能量。",
       "type": "秘技",
       "tag": "辅助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1486,106 @@
       "_id": 130901,
       "id": "land_of_smiles",
       "name": "微笑的国度",
-      "desc": "处于【协奏】状态时，我方全体全属性<u>抗性穿透</u>提高<nobr>24%</nobr>。"
+      "desc": "处于【协奏】状态时，我方全体全属性<u>抗性穿透</u>提高<nobr>24%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130902,
       "id": "afternoon_tea_for_two",
       "name": "两者的午茶",
-      "desc": "处于【协奏】状态时，我方全体速度提高<nobr>16%</nobr>。天赋的能量恢复效果额外提高<nobr>1</nobr>点。"
+      "desc": "处于【协奏】状态时，我方全体速度提高<nobr>16%</nobr>。天赋的能量恢复效果额外提高<nobr>1</nobr>点。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130903,
       "id": "inverted_tuning",
       "name": "倒悬的弦宫",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，终结技等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，终结技等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130904,
       "id": "raindrop_key",
       "name": "雨滴的钥匙",
-      "desc": "施放终结技时，解除我方全体的<u>控制类负面状态</u>，使我方全体在知更鸟处于【协奏】状态期间的效果抵抗提高<nobr>50%</nobr>。"
+      "desc": "施放终结技时，解除我方全体的<u>控制类负面状态</u>，使我方全体在知更鸟处于【协奏】状态期间的效果抵抗提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "控制类负面状态",
+          "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130905,
       "id": "lonestars_lament",
       "name": "孤星的眼泪",
-      "desc": "普攻等级+1，最多不超过<nobr>10</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "普攻等级+1，最多不超过<nobr>10</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130906,
       "id": "moonless_midnight",
       "name": "月隐的午夜",
-      "desc": "处于【协奏】状态时，终结技造成的物理属性<u>附加伤害</u>的暴击伤害额外提高<nobr>450%</nobr>。【月隐的午夜】效果最多触发<nobr>8</nobr>次，每次施放终结技时重置触发次数。"
+      "desc": "处于【协奏】状态时，终结技造成的物理属性<u>附加伤害</u>的暴击伤害额外提高<nobr>450%</nobr>。【月隐的午夜】效果最多触发<nobr>8</nobr>次，每次施放终结技时重置触发次数。",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

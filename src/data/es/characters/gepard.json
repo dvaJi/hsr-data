@@ -2,6 +2,7 @@
   "_id": 1104,
   "id": "gepard",
   "name": "Gepard",
+  "description": "Capitán de la Guardia Crinargenta y guerrero notorio de Belobog.\nEs tal y como aparenta ser, muy meticuloso y dedicado.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Inflige Daño de Hielo a un enemigo y tiene una probabilidad de causarle Congelación.",
       "type": "Habilidad básica",
       "tag": "ATQ individual",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +800,18 @@
       "simpleDesc": "Otorga escudos a todos los aliados.",
       "type": "Habilidad definitiva",
       "tag": "Defensa",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1136,24 @@
       "simpleDesc": "Al recibir un golpe letal, en vez de caer derrotado, regenera inmediatamente PV. Solo se puede activar 1 vez por batalla.",
       "type": "Talento",
       "tag": "Regeneración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Derrotado",
+          "desc": "Cuando los PV de un aliado se reducen a 0, entra en un estado especial en el que no puede seguir luchando.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,6 +1448,15 @@
       "simpleDesc": "Tras usar la técnica, todos los aliados obtienen un escudo al comenzar la siguiente batalla.",
       "type": "Técnica",
       "tag": "Defensa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1394,37 +1475,88 @@
       "_id": 110401,
       "id": "due_diligence",
       "name": "Diligencia debida",
-      "desc": "Al usar la habilidad básica, la <u>probabilidad base</u> de afectar con Congelación al enemigo aumenta en un <nobr>35%</nobr>."
+      "desc": "Al usar la habilidad básica, la <u>probabilidad base</u> de afectar con Congelación al enemigo aumenta en un <nobr>35%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110402,
       "id": "lingering_cold",
       "name": "Frío persistente",
-      "desc": "Cuando se disipa el estado de Congelación causado a un enemigo por la habilidad básica de Gepard, la VEL de ese enemigo se reduce en un <nobr>20%</nobr> durante <nobr>1</nobr> turno."
+      "desc": "Cuando se disipa el estado de Congelación causado a un enemigo por la habilidad básica de Gepard, la VEL de ese enemigo se reduce en un <nobr>20%</nobr> durante <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110403,
       "id": "never_surrender",
       "name": "Nunca me rendiré",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110404,
       "id": "faith_moves_mountains",
       "name": "La fe mueve montañas",
-      "desc": "Cuando Gepard está en la batalla, la RES a efecto de todos los aliados aumenta en un <nobr>20%</nobr>."
+      "desc": "Cuando Gepard está en la batalla, la RES a efecto de todos los aliados aumenta en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110405,
       "id": "cold_iron_fist",
       "name": "Férreo puño frío",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110406,
       "id": "unyielding_resolve",
       "name": "Determinación inquebrantable",
-      "desc": "Cuando se activa el talento, Gepard actúa inmediatamente y regenera una cantidad de PV adicional equivalente al <nobr>50%</nobr> de sus PV máx."
+      "desc": "Cuando se activa el talento, Gepard actúa inmediatamente y regenera una cantidad de PV adicional equivalente al <nobr>50%</nobr> de sus PV máx.",
+      "unlockCost": [
+        {
+          "ItemID": 11104,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

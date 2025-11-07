@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "Feixiao",
+  "description": "Serre du griffon du Yaoqing de Xianzhou et l'un des sept généraux célestes. Elle est indépendante et franche, élégante et directe.\nElle est douée dans tous les types d'arts martiaux et s'est formée pour devenir une arme suprême à elle toute seule. Elle est adorée par les soldats et les civils de Xianzhou, qui la surnomment la « générale victorieuse ».\nCependant, elle porte le fardeau de la Folie lunaire. Si Feixiao veut traquer toutes les abominations de son vivant... elle est sa seule ennemie.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Inflige des DGT de vent à un ennemi, et déclenche l'ATQ de suivi du talent 1 fois.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "L'ultime permet d'ignorer les types de faiblesses de l'ennemi pour réduire sa robustesse. Si la cible n'est pas en état de Rupture de faiblesse, l'efficacité de Rupture de faiblesse de Feixiao augmente. \nLance Éclair tonitruant des étoiles ou Hache de guerre céleste sur un ennemi unique #3[i] fois et inflige des DGT de vent à la fin.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "Feixiao peut activer son ultime à partir de #3[i] points de Chimère volante, le cumul maximum de points étant de #4[i]. Feixiao obtient Chimère volante toutes les #2[i] attaques par des cibles alliées.\nFeixiao lance une ATQ de suivi sur la cible principale après l'attaque d'un coéquipier, infligeant des DGT de vent. Cet effet ne peut être déclenché qu'une fois par tour et les DGT infligés par Feixiao augmentent lorsqu'elle utilise cette attaque.",
       "type": "Talent",
       "tag": "Cible unique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "Entre en état de Charge intrépide. Attire les ennemis en continu et augmente la vitesse de déplacement. Obtient Chimère volante après être entré en combat.\nLe personnage peut attaquer activement tous les ennemis attirés lorsqu'il est en état de Charge intrépide. Inflige des DGT de vent qui sont garantis d'être des DGT critiques à tous les ennemis au début de chaque vague. Plus il y a d'ennemis attirés, plus le multiplicateur de DGT est élevé.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "Apaisement des cieux",
-      "desc": "Après avoir lancé Éclair tonitruant des étoiles ou Hache de guerre céleste, les DGT d'ultime infligés par Feixiao augmentent d'un montant équivalent à <nobr>10%</nobr> des DGT initiaux. Cet effet est cumulable jusqu'à <nobr>5</nobr> fois et dure jusqu'à la fin de l'action de l'ultime."
+      "desc": "Après avoir lancé Éclair tonitruant des étoiles ou Hache de guerre céleste, les DGT d'ultime infligés par Feixiao augmentent d'un montant équivalent à <nobr>10%</nobr> des DGT initiaux. Cet effet est cumulable jusqu'à <nobr>5</nobr> fois et dure jusqu'à la fin de l'action de l'ultime.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "Prière à la Lune",
-      "desc": "Dans l'effet du talent, chaque fois qu'une cible alliée déclenche 1 instance de l'<u>ATQ de suivi</u>, Feixiao obtient 1 point de Chimère volante. Cet effet peut se déclencher jusqu'à <nobr>6</nobr> fois par tour."
+      "desc": "Dans l'effet du talent, chaque fois qu'une cible alliée déclenche 1 instance de l'<u>ATQ de suivi</u>, Feixiao obtient 1 point de Chimère volante. Cet effet peut se déclencher jusqu'à <nobr>6</nobr> fois par tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "Étoile de prospérité",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "Chant de la tempête",
-      "desc": "La réduction de robustesse de l'<u>ATQ de suivi</u> du talent augmente de <nobr>100%</nobr>, et la VIT du personnage augmente de <nobr>8%</nobr> pendant <nobr>2</nobr> tours lorsqu'elle se déclenche."
+      "desc": "La réduction de robustesse de l'<u>ATQ de suivi</u> du talent augmente de <nobr>100%</nobr>, et la VIT du personnage augmente de <nobr>8%</nobr> pendant <nobr>2</nobr> tours lorsqu'elle se déclenche.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "Ascension céleste",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "Retour à la terre ancestrale",
-      "desc": "Augmente la <u>PÉN de RÉS</u> à tous les types des DGT d'ultime infligés par Feixiao de <nobr>20%</nobr>. Les DGT de l'<u>ATQ de suivi</u> du talent sont également considérés comme des DGT d'ultime, et son multiplicateur de DGT augmente de <nobr>140%</nobr>."
+      "desc": "Augmente la <u>PÉN de RÉS</u> à tous les types des DGT d'ultime infligés par Feixiao de <nobr>20%</nobr>. Les DGT de l'<u>ATQ de suivi</u> du talent sont également considérés comme des DGT d'ultime, et son multiplicateur de DGT augmente de <nobr>140%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

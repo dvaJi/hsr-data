@@ -2,6 +2,7 @@
   "_id": 1221,
   "id": "yunli",
   "name": "{RUBY_B#ウンリ}雲璃{RUBY_E#}",
+  "description": "仙舟「朱明」の猟剣士。素直な性格で、「燭淵将軍」懐炎の孫娘。彼の寵愛を一身に受けている。\n幼い頃から懐炎より剣術と鍛造技術を学び、「焔輪八葉」の中で2番目に若い天才剣士。\n朱明から流出した魔剣を心底嫌悪しており、「魔剣を狩り尽くす」と誓いを立てている。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "自身のHPを回復し、敵単体に物理属性ダメージを与え、隣接する敵に少量の物理属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "拡散攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,24 @@
       "simpleDesc": "「構え」状態に入り敵全体を挑発する。「構え」状態の継続期間中に攻撃を受けると、強力なカウンターを発動し、攻撃者と隣接する敵に物理属性ダメージを与える。その後、敵単体に少量の物理属性ダメージを与える。計6回バウンドする。「構え」状態の継続期間中にカウンターが発動しなかった場合、状態が終了する時にランダムな敵と隣接する敵に物理属性ダメージを与える。",
       "type": "必殺技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "カウンター",
+          "desc": "対象が攻撃を受けた後に自動で効果を発動する。攻撃者に対し、さらに攻撃を1回行う。\nカウンターも追加攻撃と見なされる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1194,24 @@
       "simpleDesc": "雲璃が敵の攻撃を受けた時、さらにEPを回復してカウンターを発動し、攻撃者に物理属性ダメージを与え、隣接する敵に少量の物理属性ダメージを与える。",
       "type": "天賦",
       "tag": "拡散攻撃",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "カウンター",
+          "desc": "対象が攻撃を受けた後に自動で効果を発動する。攻撃者に対し、さらに攻撃を1回行う。\nカウンターも追加攻撃と見なされる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1536,15 @@
       "simpleDesc": "自身に「迎撃」状態を付与する、20秒継続。効果期間中、敵を先制攻撃、または攻撃を受けて戦闘に入った後、即座にランダムな敵単体に「看破・滅」を発動する。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1498,37 +1562,97 @@
       "_id": 122101,
       "id": "weathered_blade_does_not_sully",
       "name": "{RUBY_B#むく}無垢{RUBY_E#}なる{RUBY_B#れきじん}歴刃{RUBY_E#}",
-      "desc": "「看破・斬」の与ダメージと「看破・滅」の与ダメージ+<nobr>20%</nobr>。「看破・滅」の追加のヒット数+<nobr>3</nobr>。"
+      "desc": "「看破・斬」の与ダメージと「看破・滅」の与ダメージ+<nobr>20%</nobr>。「看破・滅」の追加のヒット数+<nobr>3</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122102,
       "id": "first_luster_breaks_dawn",
       "name": "{RUBY_B#あら}新{RUBY_E#}たに{RUBY_B#う}生{RUBY_E#}まれた{RUBY_B#ひかり}光{RUBY_E#}",
-      "desc": "<u>カウンター</u>を発動してダメージを与える時、敵の防御力を<nobr>20%</nobr>無視する。"
+      "desc": "<u>カウンター</u>を発動してダメージを与える時、敵の防御力を<nobr>20%</nobr>無視する。",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "カウンター",
+          "desc": "対象が攻撃を受けた後に自動で効果を発動する。攻撃者に対し、さらに攻撃を1回行う。\nカウンターも追加攻撃と見なされる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122103,
       "id": "mastlength_twirls_mountweight",
       "name": "{RUBY_B#きゅうしゃくうんきん}九尺運斤{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122104,
       "id": "artisans_ironsong",
       "name": "{RUBY_B#たいしょうげきちん}大匠撃砧{RUBY_E#}",
-      "desc": "「看破・斬」または「看破・滅」を発動した後、自身の効果抵抗+<nobr>50%</nobr>、<nobr>1</nobr>ターン継続。"
+      "desc": "「看破・斬」または「看破・滅」を発動した後、自身の効果抵抗+<nobr>50%</nobr>、<nobr>1</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122105,
       "id": "blade_of_old_outlasts_all",
       "name": "{RUBY_B#わ}我{RUBY_E#}が{RUBY_B#つるぎ}剣{RUBY_E#}、{RUBY_B#いし}石{RUBY_E#}に{RUBY_B#あら}匪{RUBY_E#}ず",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122106,
       "id": "walk_in_blade_talk_in_zither",
       "name": "{RUBY_B#きんしんけんたん}琴心剣胆{RUBY_E#}",
-      "desc": "「構え」状態の間、敵が能動的にスキルを発動する時、雲璃を攻撃していなくても雲璃は「看破・滅」を発動し、「構え」状態を解除する。「看破・斬」または「看破・滅」を発動してダメージを与える時、会心率+<nobr>15%</nobr>、物理属性<u>耐性貫通</u>+<nobr>20%</nobr>。"
+      "desc": "「構え」状態の間、敵が能動的にスキルを発動する時、雲璃を攻撃していなくても雲璃は「看破・滅」を発動し、「構え」状態を解除する。「看破・斬」または「看破・滅」を発動してダメージを与える時、会心率+<nobr>15%</nobr>、物理属性<u>耐性貫通</u>+<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

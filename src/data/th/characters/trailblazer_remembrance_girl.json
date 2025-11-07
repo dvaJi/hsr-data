@@ -2,6 +2,7 @@
   "_id": 8008,
   "id": "trailblazer_remembrance_girl",
   "name": "ผู้บุกเบิก ความทรงจำ",
+  "description": "{F#เด็กสาว}{M#เด็กหนุ่ม}ที่ขึ้นรถไฟ Astral Express มา\nเพื่อกำจัดวิกฤตที่เกิดจาก Stellaron จึงเลือกเดินทางไปกับ Astral Express",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "สร้าง DMG น้ำแข็งเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "อัญเชิญภูตความทรงจำ Mem หาก Mem อยู่ในการต่อสู้อยู่แล้ว จะฟื้นฟู HP ให้ Mem และทำให้ Mem ได้รับการชาร์จพลัง",
       "type": "สกิลต่อสู้",
       "tag": "อัญเชิญ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "อัญเชิญภูตความทรงจำ",
+          "desc": "อัญเชิญภูตความทรงจำเข้ามาในการต่อสู้ ทั้งนี้หากภูตความทรงจำ อยู่ในการต่อสู้อยู่แล้ว ก็จะลบล้างสถานะ Debuff ประเภทควบคุมทั้งหมด ที่ภูตความทรงจำติดอยู่",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "อัญเชิญภูตความทรงจำ Mem ทำให้ Mem ได้รับการชาร์จพลัง และจากนั้นจะทำให้ Mem สร้าง DMG น้ำแข็งอย่างรุนแรง แก่ศัตรูทั้งหมด",
       "type": "ท่าไม้ตาย",
       "tag": "โจมตีหมู่",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "อัญเชิญภูตความทรงจำ",
+          "desc": "อัญเชิญภูตความทรงจำเข้ามาในการต่อสู้ ทั้งนี้หากภูตความทรงจำ อยู่ในการต่อสู้อยู่แล้ว ก็จะลบล้างสถานะ Debuff ประเภทควบคุมทั้งหมด ที่ภูตความทรงจำติดอยู่",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "ทุกครั้งที่ฝ่ายเราทั้งหมด ฟื้นฟูพลังงานจำนวนหนึ่งแล้ว Mem จะได้รับการชาร์จพลัง",
       "type": "พรสวรรค์",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "สร้างพื้นที่พิเศษขึ้นมา โดยศัตรูที่อยู่ในพื้นที่จะหยุดการเคลื่อนไหว หลังจากเข้าสู่การต่อสู้ กับศัตรูที่อยู่ในพื้นที่ก็จะ หน่วงแอ็กชัน ของศัตรูทั้งหมด และสร้าง DMG น้ำแข็งแก่ศัตรูทั้งหมดเล็กน้อย",
       "type": "เทคนิค",
       "tag": "สกัดกั้น",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "หน่วงแอ็กชัน",
+          "desc": "ขยายช่วงเวลารอคอยของเป้าหมาย ก่อนที่จะแอ็กชันครั้งต่อไป",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1449,79 @@
       "_id": 800801,
       "id": "narrator_of_the_present",
       "name": "Narrator of the Present",
-      "desc": "อัตราคริติคอลของเป้าหมายฝ่ายเราที่มี \"การสนับสนุนจาก Mem\" เพิ่มขึ้น <nobr>10%</nobr> และเมื่อเป้าหมายฝ่ายเรามี \"การสนับสนุนจาก Mem\" เอฟเฟกต์ของ \"การสนับสนุนจาก Mem\" ก็จะมีผลกับภูตความทรงจำ/ ปรมาจารย์ความทรงจำ ของเป้าหมายดังกล่าวด้วย โดยเอฟเฟกต์นี้จะไม่สามารถซ้อนทับได้"
+      "desc": "อัตราคริติคอลของเป้าหมายฝ่ายเราที่มี \"การสนับสนุนจาก Mem\" เพิ่มขึ้น <nobr>10%</nobr> และเมื่อเป้าหมายฝ่ายเรามี \"การสนับสนุนจาก Mem\" เอฟเฟกต์ของ \"การสนับสนุนจาก Mem\" ก็จะมีผลกับภูตความทรงจำ/ ปรมาจารย์ความทรงจำ ของเป้าหมายดังกล่าวด้วย โดยเอฟเฟกต์นี้จะไม่สามารถซ้อนทับได้",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800802,
       "id": "gleaner_of_the_past",
       "name": "Gleaner of the Past",
-      "desc": "เมื่อภูตความทรงจำของฝ่ายเราแอ็กชัน (ยกเว้น Mem) ผู้บุกเบิกจะฟื้นฟูพลังงาน <nobr>8</nobr> หน่วย โดยในแต่ละเทิร์น เอฟเฟกต์นี้จะเกิดได้มากสุด <nobr>1</nobr> ครั้ง และจะรีเซ็ตจำนวนการเกิด เมื่อเริ่มต้นเทิร์นของผู้บุกเบิก"
+      "desc": "เมื่อภูตความทรงจำของฝ่ายเราแอ็กชัน (ยกเว้น Mem) ผู้บุกเบิกจะฟื้นฟูพลังงาน <nobr>8</nobr> หน่วย โดยในแต่ละเทิร์น เอฟเฟกต์นี้จะเกิดได้มากสุด <nobr>1</nobr> ครั้ง และจะรีเซ็ตจำนวนการเกิด เมื่อเริ่มต้นเทิร์นของผู้บุกเบิก",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800803,
       "id": "chanter_of_the_future",
       "name": "Chanter of the Future",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> เลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ภูตความทรงจำ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> เลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ภูตความทรงจำ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800804,
       "id": "dancer_of_the_muse",
       "name": "Dancer of the Muse",
-      "desc": "เมื่อเป้าหมายฝ่ายเรา ที่มีพลังงานสูงสุดเหลือ 0 เป็นฝ่ายปล่อยสกิลก่อน Mem จะได้รับการชาร์จพลัง <nobr>3%</nobr> อีกทั้งเป้าหมายดังกล่าว จะสร้างตัวคูณ DMG จริงผ่าน \"การสนับสนุนจาก Mem\" เพิ่มขึ้นอีก <nobr>6%</nobr>"
+      "desc": "เมื่อเป้าหมายฝ่ายเรา ที่มีพลังงานสูงสุดเหลือ 0 เป็นฝ่ายปล่อยสกิลก่อน Mem จะได้รับการชาร์จพลัง <nobr>3%</nobr> อีกทั้งเป้าหมายดังกล่าว จะสร้างตัวคูณ DMG จริงผ่าน \"การสนับสนุนจาก Mem\" เพิ่มขึ้นอีก <nobr>6%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800805,
       "id": "seamster_of_the_ode",
       "name": "Seamster of the Ode",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> เลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน\nLv.<nobr>10</nobr> และเลเวลทักษะภูตความทรงจำ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> เลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน\nLv.<nobr>10</nobr> และเลเวลทักษะภูตความทรงจำ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800806,
       "id": "bearer_of_the_revelation",
       "name": "Bearer of the Revelation",
-      "desc": "อัตราคริติคอลคงที่ ของท่าไม้ตายอยู่ที่ <nobr>100%</nobr>"
+      "desc": "อัตราคริติคอลคงที่ ของท่าไม้ตายอยู่ที่ <nobr>100%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +1970,151 @@
       }
     },
     {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "เครดิต",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "Bīja of Consciousness",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Thief's Instinct",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "เครดิต",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Seedling of Manas",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Usurper's Scheme",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "เครดิต",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Seedling of Manas",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Usurper's Scheme",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "เครดิต",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Flower of Ālaya",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Conqueror's Will",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Baddies! Trouble!",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "เครดิต",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Flower of Ālaya",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Conqueror's Will",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8008302,
       "type": 4,
       "children": [],
@@ -1868,151 +2128,6 @@
       }
     },
     {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "เครดิต",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "Bīja of Consciousness",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "Thief's Instinct",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "เครดิต",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Seedling of Manas",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Usurper's Scheme",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "เครดิต",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Seedling of Manas",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Usurper's Scheme",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "เครดิต",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Flower of Ālaya",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Conqueror's Will",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Baddies! Trouble!",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "เครดิต",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Flower of Ālaya",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Conqueror's Will",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8008302,
       "type": 4,
       "children": [],
@@ -2153,6 +2268,27 @@
             "id": "conquerors_will",
             "name": "Conqueror's Will",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "Unfinished Epilogue",
+        "desc": "หลังจากปล่อยท่าไม้ตาย จะได้รับ \"มหากาพย์\" 1 ชั้น ซึ่งจะมีได้สูงสุด <nobr>2</nobr> ชั้น เมื่อมี \"มหากาพย์\" และ Mem อยู่ในสนาม การโจมตีปกติจะเสริมพลังเป็น \"Together, We Script Tomorrow!\"",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

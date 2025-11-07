@@ -2,6 +2,7 @@
   "_id": 1308,
   "id": "acheron",
   "name": "Acheron",
+  "description": "Uma viajante que diz ser uma Vigia da Galáxia. O nome verdadeiro dela é desconhecido.\nEla caminha pelo cosmos sozinha, carregando consigo uma espada longa.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Raio leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Ganha #3[i] ponto(s) de Sonho Retalhado. Inflige #3[i] acúmulo(s) de Nó Rubro a um único inimigo e causa Dano de Raio a ele, assim como Dano de Raio leve a alvos adjacentes.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Causa 3 golpes de Dano de Raio Leve a um único inimigo. Se Nó Rubro for removido do alvo, então causa Dano de Raio leve a todos os inimigos. Finalmente, causa 1 golpe de Dano de Raio a todos os inimigos e remove Nó Rubro.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1155,15 @@
       "simpleDesc": "Quando Sonho Retalhado chega ao seu máximo, a Perícia Suprema pode ser utilizada. Durante a Perícia Suprema, exaure a Tenacidade dos inimigos independentemente dos Tipos de Fraqueza e reduz a RES a Todos os Tipos de todos os inimigos.\nQuando qualquer unidade inflige penalidades em um inimigo-alvo enquanto usa uma habilidade, Acheron ganha Sonho Retalhado e inflige Nó Rubro no inimigo-alvo.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1472,15 @@
       "desc": "Imediatamente ataca o inimigo. No início de cada onda, ganha Ascendência Quadrivalente, causando Dano de Raio igual a #1[i]% do ATQ de Acheron a todos os inimigos e reduzindo a Tenacidade te todos os inimigos independentemente dos Tipos de Fraqueza. Ao infligir Quebra de Fraqueza, aciona o efeito de Quebra de Fraqueza de Raio.\nAscendência Quadrivalente: depois de usar sua Perícia Suprema, Acheron ganha #2[i] ponto(s) de Sonho Retalhado e inflige #2[i] acúmulo(s) de Nó Rubro em um único inimigo aleatório.\nSe o ataque for realizado contra um inimigo normal, ele é derrotado imediatamente sem entrar em combate. Nenhum Ponto de Técnica será consumido caso nenhum inimigo seja atingido.",
       "simpleDesc": "Ataca o inimigo. Recebe Ascendência Quadrivalente no início de cada onda, causando Dano de Raio a todos os inimigos e reduzindo sua Tenacidade independentemente dos Tipos de Fraqueza.\nSe estiver atacando um inimigo comum, imediatamente o derrota sem entrar em combate. O Ponto de Técnica não é gasto se o ataque não atingir um inimigo.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1498,97 @@
       "_id": 130801,
       "id": "silenced_sky_spake_sooth",
       "name": "Verdadeiras Palavras do Céu",
-      "desc": "Ao causar Dano a inimigos com <u>penalidade</u>, aumenta a Chance de CRIT em <nobr>18%</nobr>."
+      "desc": "Ao causar Dano a inimigos com <u>penalidade</u>, aumenta a Chance de CRIT em <nobr>18%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130802,
       "id": "mute_thunder_in_still_tempest",
       "name": "Trovões Mudos na Tempestade Amainada",
-      "desc": "O número de personagens no Caminho da Inexistência necessário para alcançar o maior efeito possível do Rastro \"O Abismo\" é reduzido por 1. No início da rodada desta unidade, ganha 1 ponto de Sonho Retalhado e inflige 1 acúmulo de Nó Rubro a um inimigo com mais acúmulos de Nó Rubro."
+      "desc": "O número de personagens no Caminho da Inexistência necessário para alcançar o maior efeito possível do Rastro \"O Abismo\" é reduzido por 1. No início da rodada desta unidade, ganha 1 ponto de Sonho Retalhado e inflige 1 acúmulo de Nó Rubro a um inimigo com mais acúmulos de Nó Rubro.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130803,
       "id": "frost_bites_in_death",
       "name": "Mordidas Gélidas na Morte",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130804,
       "id": "shrined_fire_for_mirrored_soul",
       "name": "Fogo Sagrado da Alma Refletida",
-      "desc": "Quando o inimigo-alvo entra em combate, inflige a ele Vulnerabilidade a Dano da Perícia Suprema, aumentando a quantidade de Dano da Perícia Suprema recebido em <nobr>8%</nobr>."
+      "desc": "Quando o inimigo-alvo entra em combate, inflige a ele Vulnerabilidade a Dano da Perícia Suprema, aumentando a quantidade de Dano da Perícia Suprema recebido em <nobr>8%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130805,
       "id": "strewn_souls_on_erased_earths",
       "name": "Almas Espalhadas em Terras Apagadas",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130806,
       "id": "apocalypse_the_emancipator",
       "name": "Apocalipse, o Emancipador",
-      "desc": "Aumenta a <u>PEN de RES</u> a Todos os Tipos do Dano de Perícia Suprema causado por Acheron em <nobr>20%</nobr>. O Dano causado pelo ATQ Básico e pela Perícia também será considerado Dano de Perícia Suprema e pode reduzir a Tenacidade do inimigo independentemente dos Tipos de Fraqueza. Ao aplicar Quebra de Fraqueza, ativa o efeito de Quebra de Fraqueza contra Raio."
+      "desc": "Aumenta a <u>PEN de RES</u> a Todos os Tipos do Dano de Perícia Suprema causado por Acheron em <nobr>20%</nobr>. O Dano causado pelo ATQ Básico e pela Perícia também será considerado Dano de Perícia Suprema e pode reduzir a Tenacidade do inimigo independentemente dos Tipos de Fraqueza. Ao aplicar Quebra de Fraqueza, ativa o efeito de Quebra de Fraqueza contra Raio.",
+      "unlockCost": [
+        {
+          "ItemID": 11308,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

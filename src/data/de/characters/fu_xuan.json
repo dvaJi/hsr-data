@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "Fu Xuan",
+  "description": "Leiterin der Wahrsagekommission auf der Luofu.\nSie verwendet das dritte Auge und die Matrix der Voraussicht, um die Route Xianzhous und den Ausgang von Ereignissen vorherzusagen.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Quanten-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Aktiviert die „Matrix der Voraussicht“, wodurch der erlittene SCH von Verbündeten mit Fu Xuan geteilt wird. Erhöht die KRIT-Rate und die max. LP aller Verbündeten.",
       "type": "Fertigkeit",
       "tag": "Verteidigung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "Teilen",
+          "desc": "Bevor der Schaden verrechnet wird, wird ein Teil des Schadens der angreifenden Einheit einem oder mehreren Zielen geteilt, wobei dem vom Angriff getroffenen Ziel der Rest des Schadens zugefügt wird. Der an andere Ziele verteilte SCH kann nicht erneut verteilt werden.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "Fügt allen Gegnern Quanten-SCH zu und erhöht die Auslösungsanzahl von Fu Xuans Talent.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "Solange Fu Xuan kampffähig ist, wird der von allen Verbündeten erlittene SCH reduziert.\nWenn die LP niedrig sind, werden automatisch LP anhand des Prozentsatzes der verlorenen LP wiederhergestellt. Dieser Effekt kann höchstens 2-mal ausgelöst werden.",
       "type": "Talent",
       "tag": "Wiederherstellung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "Aktiviert eine Barriere. Verbündete treten nicht in den Kampf ein, wenn sie von Gegnern angegriffen werden. Beim Kampfeintritt wird die „Matrix der Voraussicht“ automatisch aktiviert.",
       "type": "Technik",
       "tag": "Verteidigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "Zyklus von Leben und Tod",
-      "desc": "„Wissen“ erhöht KRIT-SCH um <nobr>30%</nobr>."
+      "desc": "„Wissen“ erhöht KRIT-SCH um <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "Verheißungsvolles Omen",
-      "desc": "Wenn ein Verbündeter von einem Todesstoß getroffen wird, während die Matrix der Voraussicht aktiv ist, bleiben alle Verbündeten, die während dieser Aktion von einem Todesstoß getroffen wurden, davon nicht <u>handlungsunfähig</u> und <nobr>70%</nobr> ihrer max. LP werden sofort wiederhergestellt. Dieser Effekt kann 1-mal pro Kampf ausgelöst werden."
+      "desc": "Wenn ein Verbündeter von einem Todesstoß getroffen wird, während die Matrix der Voraussicht aktiv ist, bleiben alle Verbündeten, die während dieser Aktion von einem Todesstoß getroffen wurden, davon nicht <u>handlungsunfähig</u> und <nobr>70%</nobr> ihrer max. LP werden sofort wiederhergestellt. Dieser Effekt kann 1-mal pro Kampf ausgelöst werden.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "Gottheit der Pflicht",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "Gunstvoller Stern",
-      "desc": "Wenn andere Verbündete unter „Matrix der Vorraussicht“ angegriffen werden, stellt Fu Xuan <nobr>5</nobr> Pkt. Energie wieder her."
+      "desc": "Wenn andere Verbündete unter „Matrix der Vorraussicht“ angegriffen werden, stellt Fu Xuan <nobr>5</nobr> Pkt. Energie wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "Wahre Wahrsagerin",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "Wiederaufleben",
-      "desc": "Sobald die „Matrix der Voraussicht“ aktiviert ist, werden die gesamten LP, die alle Verbündeten im aktuellen Kampf verloren haben, addiert. Der durch Ultimate von Fu Xuan verursachte SCH erhöht sich um <nobr>200%</nobr> der gesamten LP, die alle Verbündeten im aktuellen Kampf verloren haben.\nDie von allen Verbündeten im aktuellen Kampf verlorenen LP sind auf <nobr>120%</nobr> der max. LP von Fu Xuan begrenzt. Dieser Wert wird zurückgesetzt und neu angesammelt, nachdem Fu Xuans Ultimate eingesetzt wurde."
+      "desc": "Sobald die „Matrix der Voraussicht“ aktiviert ist, werden die gesamten LP, die alle Verbündeten im aktuellen Kampf verloren haben, addiert. Der durch Ultimate von Fu Xuan verursachte SCH erhöht sich um <nobr>200%</nobr> der gesamten LP, die alle Verbündeten im aktuellen Kampf verloren haben.\nDie von allen Verbündeten im aktuellen Kampf verlorenen LP sind auf <nobr>120%</nobr> der max. LP von Fu Xuan begrenzt. Dieser Wert wird zurückgesetzt und neu angesammelt, nachdem Fu Xuans Ultimate eingesetzt wurde.",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1004,
   "id": "welt",
   "name": "웰트",
+  "description": "의젓하고 진중한 열차팀의 선배\n오랜만의 모험을 즐기자 가슴 깊은 곳의 뜨거운 피가 다시금 끓어오른다\n가끔 공책에 모험 여정을 그린다",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 허수 속성 피해를 준다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "단일 적에게 소량의 허수 속성 피해를 가하고 총 3회 바운스한다. 일정 확률로 해당 적에게 감속 상태를 부여한다",
       "type": "전투 스킬",
       "tag": "바운스",
+      "spBase": 10,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,32 @@
       "simpleDesc": "모든 적에게 허수 속성 피해를 가하고 높은 확률로 속박 효과를 부여한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "행동 게이지 감소",
+          "desc": "목표의 다음 행동 전 대기 간격을 연장한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1157,27 @@
       "simpleDesc": "감속 상태의 적 명중 시 소량의 허수 속성 추가 피해를 추가로 가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1472,32 @@
       "simpleDesc": "특수 영역을 만든다. 영역 내의 적은 이동 속도가 감소한다. 영역 내의 적과 전투에 진입하면 높은 확률로 적을 속박 상태에 빠트린다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "행동 게이지 감소",
+          "desc": "목표의 다음 행동 전 대기 간격을 연장한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1411,37 +1518,97 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "명성의 계승",
-      "desc": "필살기 발동 후 웰트는 강화를 획득하며 다음 <nobr>2</nobr>번의 일반 공격 혹은 전투 스킬 발동 시 적에게 1회 <u>추가 피해</u>를 가한다. 일반 공격 발동 시의 <u>추가 피해</u>는 일반 공격 피해 배율의 <nobr>50%</nobr>이고, 전투 스킬 발동 시의 <u>추가 피해</u>는 전투 스킬 피해 배율의 <nobr>80%</nobr>이다"
+      "desc": "필살기 발동 후 웰트는 강화를 획득하며 다음 <nobr>2</nobr>번의 일반 공격 혹은 전투 스킬 발동 시 적에게 1회 <u>추가 피해</u>를 가한다. 일반 공격 발동 시의 <u>추가 피해</u>는 일반 공격 피해 배율의 <nobr>50%</nobr>이고, 전투 스킬 발동 시의 <u>추가 피해</u>는 전투 스킬 피해 배율의 <nobr>80%</nobr>이다",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100402,
       "id": "conflux_of_stars",
       "name": "별의 응집",
-      "desc": "특성 발동 시 웰트가 에너지를 <nobr>3</nobr>pt 회복한다"
+      "desc": "특성 발동 시 웰트가 에너지를 <nobr>3</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100403,
       "id": "prayer_of_peace",
       "name": "평화의 기도",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100404,
       "id": "appellation_of_justice",
       "name": "정의의 이름으로",
-      "desc": "전투 스킬 발동 시 피격된 적의 속도가 감소하는 <u>기본 확률</u>이 <nobr>35%</nobr> 증가한다"
+      "desc": "전투 스킬 발동 시 피격된 적의 속도가 감소하는 <u>기본 확률</u>이 <nobr>35%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100405,
       "id": "power_of_kindness",
       "name": "선의 힘",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "찬란한 미래",
-      "desc": "전투 스킬 발동 시 임의의 단일 적에게 추가로 1회 피해를 가한다"
+      "desc": "전투 스킬 발동 시 임의의 단일 적에게 추가로 1회 피해를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

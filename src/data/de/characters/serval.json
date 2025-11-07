@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "Serval",
+  "description": "Eine Belobog-Mechanikerin, die früher als Forscherin für die Technologieabteilung der Architekten tätig war.\nGepard Landau und seine ältere Schwester könnten unterschiedlicher nicht sein.\nSie ist ein Fan einer uralten Musikrichtung namens „Rock ’n’ Roll“, die vor dem Ewigen Frost populär war.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Blitz-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,24 @@
       "simpleDesc": "Fügt einem Gegner Blitz-SCH und angrenzenden Einheiten geringen Blitz-SCH zu. Verursacht bei den Zielen mit hoher Chance Schock.",
       "type": "Fertigkeit",
       "tag": "Ausdehnung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "Fügt allen Gegnern Blitz-SCH zu und verlängert die Dauer von Schock.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "Fügt nach dem Angriff allen geschockten Gegnern geringen zusätzlichen SCH zu.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "Greift den Gegner unmittelbar an. Fügt nach Kampfeintritt einem zufälligen Gegner Blitz-SCH in Höhe von #4[i]% von Servals ANG zu. Verursacht gleichzeitig bei allen Gegner mit einer Grundchance von #1[i]% für #3[i] Rd. Schock.\nGeschockte Gegner erleiden zu Beginn jeder Runde Blitz-DoT in Höhe von #2[i]% von Servals ANG.",
       "simpleDesc": "Greift den Gegner an. Fügt nach Kampfeintritt einem zufälligen Gegner geringen Blitz-SCH zu und hat eine hohe Chance, jedem Gegner Schock zuzufügen.",
       "type": "Technik",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "Kraftvoll und durchschlagend",
-      "desc": "Der Standardangriff fügt einem zufälligen angrenzenden Gegner Blitz-SCH in Höhe von <nobr>60%</nobr> des Standardangriff-SCH von Serval zu."
+      "desc": "Der Standardangriff fügt einem zufälligen angrenzenden Gegner Blitz-SCH in Höhe von <nobr>60%</nobr> des Standardangriff-SCH von Serval zu.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "Zugabe!",
-      "desc": "Jedes Mal, wenn ihr Talent <u>zusätzlichen SCH</u> verursacht, erhält Serval <nobr>4</nobr> Pkt. Energie zurück."
+      "desc": "Jedes Mal, wenn ihr Talent <u>zusätzlichen SCH</u> verursacht, erhält Serval <nobr>4</nobr> Pkt. Energie zurück.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "Dem Herzschlag der Zahnräder lauschen",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "Etwas Lärm, bitte!",
-      "desc": "Beim Einsatz des Ultimates besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, bei nicht geschockten Gegnern denselben Status Schock wie die Fertigkeit zu verursachen."
+      "desc": "Beim Einsatz des Ultimates besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, bei nicht geschockten Gegnern denselben Status Schock wie die Fertigkeit zu verursachen.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "Belobogs lautestes Dröhnen!",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "Dieses Lied hallt durch den Himmel!",
-      "desc": "Serval fügt geschockten Gegnern <nobr>30%</nobr> mehr SCH zu."
+      "desc": "Serval fügt geschockten Gegnern <nobr>30%</nobr> mehr SCH zu.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

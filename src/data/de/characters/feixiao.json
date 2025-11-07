@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "Feixiao",
+  "description": "Die Merlinskralle der Xianzhou Yaoqing und eine der sieben himmlischen Generäle des Herrscherbogens. Ihre Persönlichkeit ist ungehemmt und aufrichtig, schneidig und geradlinig.\nSie beherrscht alle Arten von Kampfkünsten und hat sich selbst zu einer überragenden Waffe entwickelt. Von den Soldaten und Zivilisten in Xianzhou wird sie als „Große Generalin“ verehrt.\nAllerdings trägt sie die Last des Mondwahnsinns in sich. Wenn sie in ihrer begrenzten Lebenszeit alle Ausgeburten zur Strecke bringen würde – dann wäre der einzige Gegner, den Feixiao hat, sie selbst.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Wind-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Fügt einem Gegner Wind-SCH zu und startet zusätzlich 1-mal den Folgeangriff des Talents.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "Während des Ultimates wird der WDS des Gegners unabhängig vom Schwächetyp reduziert. Solange das Ziel sich nicht im Schwächebruch befindet, wird Feixiaos Schwächebruch-Effizienz erhöht.\nSetzt gegen einen Gegner #3[i]-mal „Schneidender Blitz im Tanz“ oder „Spaltender Hieb gen Himmel“ ein und verursacht schließlich Wind-SCH.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Schwächebruch",
+          "desc": "Wenn der Widerstand gegnerischer Ziele auf 0 sinkt, treten sie in den Zustand Schwächebruch ein, was ihre Aktionen verzögert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "Wenn „Fliegender Aureus“ #3[i] Pkt. erreicht, kann der Ultimate aktiviert werden, bis zu #4[i] Pkt. Feixiao erhält Fliegender Aureus nach je #2[i] Angriffen von Verbündeten.\nNachdem ihre Teammitglieder angegriffen haben, startet Feixiao einen Folgeangriff auf das Hauptziel, der Wind-SCH verursacht. Dieser Effekt kann nur 1-mal pro Runde ausgelöst werden. Beim Einsatz dieses Angriffs wird Feixiaos verursachter SCH erhöht.",
       "type": "Talent",
       "tag": "Einzelangriff",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "Tritt in den Status „Angestürmt“ ein, was Gegner fortlaufend mitzieht und die eigene Bewegungs-GES erhöht. Erhält nach Kampfeintritt „Fliegender Aureus“.\nIm Status Angestürmt können alle mitgezogenen Gegner angegriffen werden. Zu Beginn jeder Kampfwelle wird allen Gegnern Wind-SCH zugefügt. Dieser SCH ist garantiert ein Kritischer Treffer. Je mehr Gegner mitgezogen werden, desto höher ist der SCH-Multiplikator.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "Gipfelbezwinger",
-      "desc": "Nach dem Einsatz von „Schneidender Blitz im Tanz“ oder „Spaltender Hieb gen Himmel“ wird Feixiaos verursachter Ultimate-SCH zusätzlich erhöht. Die Erhöhung entspricht <nobr>10%</nobr> des ursprünglichen SCH. Dieser Effekt ist bis zu <nobr>5</nobr>-fach stapelbar und hält bis zum Ende der Aktion des Ultimates an."
+      "desc": "Nach dem Einsatz von „Schneidender Blitz im Tanz“ oder „Spaltender Hieb gen Himmel“ wird Feixiaos verursachter Ultimate-SCH zusätzlich erhöht. Die Erhöhung entspricht <nobr>10%</nobr> des ursprünglichen SCH. Dieser Effekt ist bis zu <nobr>5</nobr>-fach stapelbar und hält bis zum Ende der Aktion des Ultimates an.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "Mondritual",
-      "desc": "Beim Talenteffekt erhält Feixiao jedes Mal, wenn ein Verbündeter 1 <u>Folgeangriff</u> ausgeführt hat, 1 Pkt. „Fliegender Aureus“. Dieser Effekt kann bis zu <nobr>6</nobr>-mal pro Runde ausgelöst werden."
+      "desc": "Beim Talenteffekt erhält Feixiao jedes Mal, wenn ein Verbündeter 1 <u>Folgeangriff</u> ausgeführt hat, 1 Pkt. „Fliegender Aureus“. Dieser Effekt kann bis zu <nobr>6</nobr>-mal pro Runde ausgelöst werden.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "Erscheinen des Glückssterns",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "Wachsamkeit des Sturms",
-      "desc": "Erhöht den WDS-Reduzierungswert der <u>Folgeangriffe</u> des Talents um <nobr>100%</nobr>. Beim Auslösen der Folgeangriffe wird die GES dieser Einheit für <nobr>2</nobr> Rd. um <nobr>8%</nobr> erhöht."
+      "desc": "Erhöht den WDS-Reduzierungswert der <u>Folgeangriffe</u> des Talents um <nobr>100%</nobr>. Beim Auslösen der Folgeangriffe wird die GES dieser Einheit für <nobr>2</nobr> Rd. um <nobr>8%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "Auf den Zenit",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "Heimwärts immerdar",
-      "desc": "Erhöht die <u>WDS-DUR</u> aller Typen von Feixiaos verursachtem Ultimate-SCH um <nobr>20%</nobr>. Der <u>Folgeangriff-SCH</u> des Talents wird als Ultimate-SCH betrachtet und sein SCH-Multiplikator um <nobr>140%</nobr> erhöht."
+      "desc": "Erhöht die <u>WDS-DUR</u> aller Typen von Feixiaos verursachtem Ultimate-SCH um <nobr>20%</nobr>. Der <u>Folgeangriff-SCH</u> des Talents wird als Ultimate-SCH betrachtet und sein SCH-Multiplikator um <nobr>140%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1402,
   "id": "aglaea",
   "name": "Aglaé",
+  "description": "Au cœur de la ville sainte baignée par la lumière de l'aube, la tisseuse caresse les fils d'or et relie les destins.\nL'Héritière chryséenne qui porte la flamme divine de la Romance a convoqué les héros de ce monde et les guidera une fois de plus au cours d'une longue odyssée.\nLeur mission : renverser les dieux, récupérer leurs flammes divines et offrir une renaissance éclatante à une Amphoreus au bord de l'anéantissement.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de foudre mineurs à un ennemi.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Restaure des PV à la Costumière. Si la Costumière est absente, invoque le mnémesprit de la Costumière et lui permet d'agir immédiatement.",
       "type": "Compétence",
       "tag": "Invocation",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -753,6 +781,32 @@
       "simpleDesc": "Invoque le mnémesprit de la Costumière, ce qui permet à Aglaé d'entrer dans l'état Posture de suprématie, d'agir immédiatement et de bénéficier de l'ATQ normale renforcée.",
       "type": "Ultime",
       "tag": "Renforcement",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Malus de contrôle",
+          "desc": "Gelé, Enchevêtrement, Emprisonnement, Dominé, Indignation, Forte réverbération, Rêve étrange, Emprisonnement enchevêtré, Terrifié et Immobilité.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1122,6 +1176,24 @@
       "simpleDesc": "Lorsque la Costumière est sur le champ de bataille, les attaques d'Aglaé appliquent Point de couture à sa cible. Après avoir attaqué l'ennemi dans l'état Point de couture, inflige des DGT additionnels mineurs de foudre.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1490,6 +1562,24 @@
       "desc": "Invoque le mnémesprit de la Costumière et lance une ATQ conjointe vers l'avant. Après être entré en combat, régénère #2[i] points d'énergie, inflige des DGT de foudre équivalents à #1[i]% de l'ATQ d'Aglaé à toutes les cibles ennemies, puis applique Point de couture à une cible ennemie aléatoire.",
       "simpleDesc": "Invoque le mnémesprit de la Costumière et lance une ATQ conjointe vers l'avant. Après être entré en combat, régénère de l'énergie, inflige des DGT de foudre mineurs à tous les ennemis, puis applique Point de couture à une cible ennemie aléatoire.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1502,42 +1592,503 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "La Costumière",
+    "icon": "SpriteOutput/ServantIconTeam/11402B.png",
+    "hpBase": "#6",
+    "hpInherit": "#5",
+    "hpSkill": 140204,
+    "speedBase": "0",
+    "speedInherit": "#4",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1140201,
+        "name": "Piège de couture",
+        "desc": "Inflige des DGT de foudre équivalents à <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> de l'ATQ à un ennemi et des DGT de foudre équivalents à <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span> de l'ATQ aux cibles adjacentes.",
+        "simpleDesc": "Inflige des DGT de foudre mineurs à une cible ennemie et aux cibles adjacentes.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "Blast",
+          "name": "Propagation"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          15
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.55,
+              0.33,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.66,
+              0.396,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.77,
+              0.462,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.88,
+              0.528,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.99,
+              0.594,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1.1,
+              0.66,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1.21,
+              0.726,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1.32,
+              0.792,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1.43,
+              0.858,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1.54,
+              0.924,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140203,
+        "name": "Corps forgé par les larmes",
+        "desc": "Augmente la VIT de cette unité de <span style=\"color:#f29e38ff><nobr>#1[i]</nobr></span> après avoir attaqué l'ennemi affecté par Point de couture, cumulable jusqu'à <nobr>#3[i]</nobr> fois. La Costumière lance automatiquement Piège de couture au cours de son tour, en donnant la priorité à l'ennemi affecté par Point de couture.",
+        "simpleDesc": "<span style=\"color:#f29e38ff>La VIT de cette unité augmente</span> après avoir attaqué l'ennemi affecté par Point de couture. Lance automatiquement une attaque au cours de son tour, en donnant la priorité aux ennemis affectés par Point de couture.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Renforcement"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              44,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              46.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              48.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              50.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              52.8,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              55,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              57.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              59.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              61.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              63.8,
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140205,
+        "name": "Été fulgurant",
+        "desc": "L'action de la Costumière est <u>avancée</u> de <nobr>#1[i]%</nobr> lors de son invocation.",
+        "simpleDesc": "L'action de cette unité est <u>avancée</u> lors de son invocation.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Renforcement"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Action avancée",
+            "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140206,
+        "name": "Floraison de l'herbe fanée",
+        "desc": "La Costumière régénère <nobr>#1[i]</nobr> points d'énergie pour Aglaé après sa disparition.",
+        "simpleDesc": "Régénère de l'énergie pour Aglaé après sa disparition.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Renforcement"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              20
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "Aléas de la trajectoire de Vénus",
-      "desc": "Augmente les DGT subis par l'ennemi affecté par Point de couture de <nobr>15%</nobr>. Lorsqu'Aglaé ou la Costumière attaque cette cible, Aglaé régénère <nobr>20</nobr> points d'énergie supplémentaires."
+      "desc": "Augmente les DGT subis par l'ennemi affecté par Point de couture de <nobr>15%</nobr>. Lorsqu'Aglaé ou la Costumière attaque cette cible, Aglaé régénère <nobr>20</nobr> points d'énergie supplémentaires.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "Naviguer sur le radeau des yeux",
-      "desc": "Lorsqu'Aglaé ou la Costumière agit, les DGT qu'elles infligent ignorent <nobr>14%</nobr> de la DÉF des cibles. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois. Dure jusqu'à ce qu'une autre unité qu'Aglaé ou la Costumière utilise activement une capacité."
+      "desc": "Lorsqu'Aglaé ou la Costumière agit, les DGT qu'elles infligent ignorent <nobr>14%</nobr> de la DÉF des cibles. Cet effet peut être cumulé jusqu'à <nobr>3</nobr> fois. Dure jusqu'à ce qu'une autre unité qu'Aglaé ou la Costumière utilise activement une capacité.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "Offrande de la perle figée",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "Scintillement sous la surface de la bille",
-      "desc": "La limite de cumuls de l'effet d'augmentation de VIT accordé par le talent du mnémesprit augmente de <nobr>1</nobr>. Lorsqu'Aglaé utilise une attaque, la Costumière peut également bénéficier de l'effet d'augmentation de VIT accordé par le talent du mnémesprit."
+      "desc": "La limite de cumuls de l'effet d'augmentation de VIT accordé par le talent du mnémesprit augmente de <nobr>1</nobr>. Lorsqu'Aglaé utilise une attaque, la Costumière peut également bénéficier de l'effet d'augmentation de VIT accordé par le talent du mnémesprit.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "Tissage sous le linceul du malheur",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "Fluctuations de la tapisserie du destin",
-      "desc": "Augmente la <u>PÉN de RÉS</u> à la foudre d'Aglaé et de la Costumière de <nobr>20%</nobr> lorsqu'Aglaé est dans l'état Posture de suprématie. Lorsque la VIT d'Aglaé ou de la Costumière est supérieure à <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, les DGT infligés par leur <u>ATQ conjointe</u> augmentent de <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>."
+      "desc": "Augmente la <u>PÉN de RÉS</u> à la foudre d'Aglaé et de la Costumière de <nobr>20%</nobr> lorsqu'Aglaé est dans l'état Posture de suprématie. Lorsque la VIT d'Aglaé ou de la Costumière est supérieure à <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr>, les DGT infligés par leur <u>ATQ conjointe</u> augmentent de <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000019,
+          "name": "ATQ conjointe",
+          "desc": "Plusieurs cibles effectuent une attaque sur des cibles ennemies au cours d'une même action.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ]
     }
   ],
   "skillTreePoints": [

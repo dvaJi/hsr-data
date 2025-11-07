@@ -2,6 +2,7 @@
   "_id": 1214,
   "id": "xueyi",
   "name": "설의",
+  "description": "선주 「나부」의 생사를 감찰하는 기관 「시왕사」의 판관.\n이미 죽은 지 오래지만, 인형의 몸을 빌려 「환생」하여 사명을 이행한다",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 양자 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "단일 적에게 양자 속성 피해를 가하고, 인접한 목표에게 소량의 양자 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "단일 적에게 대량의 양자 속성 피해를 가한다. 이번 공격은 약점 속성을 무시하고 단일 적의 강인성을 소모시킨다. 소모된 강인성이 많을수록 가하는 피해가 증가한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        120,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,27 @@
       "simpleDesc": "설의 또는 설의의 동료가 공격을 발동하여 적의 강인성을 소모하면 설의의 [업보]가 중첩된다. [업보]가 최대치까지 중첩되면 즉시 추가 공격을 발동해 단일 적에게 소량의 양자 속성 피해를 가한다. 총 3회 바운스하고 모든 [업보]를 소모한다",
       "type": "특성",
       "tag": "바운스",
+      "spBase": 2,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1415,15 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 모든 적에게 설의 공격력의 #1[i]%만큼 양자 속성 피해를 준다",
       "simpleDesc": "적을 공격하며, 전투 진입 후 모든 적에게 소량의 양자 속성 피해를 준다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,37 +1440,97 @@
       "_id": 121401,
       "id": "dvesha_inhibited",
       "name": "심마 속박",
-      "desc": "특성의 <u>추가 공격</u>으로 가하는 피해가 <nobr>40%</nobr> 증가한다"
+      "desc": "특성의 <u>추가 공격</u>으로 가하는 피해가 <nobr>40%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121402,
       "id": "klesha_breached",
       "name": "오진(五塵) 극복",
-      "desc": "특성의 <u>추가 공격</u>이 약점 속성을 무시하고 적의 강인성을 소모시키며, 동시에 설의 HP 최대치의 <nobr>5%</nobr>만큼 HP를 회복한다. 약점 격파 시 양자 속성의 약점 격파 효과가 발동된다"
+      "desc": "특성의 <u>추가 공격</u>이 약점 속성을 무시하고 적의 강인성을 소모시키며, 동시에 설의 HP 최대치의 <nobr>5%</nobr>만큼 HP를 회복한다. 약점 격파 시 양자 속성의 약점 격파 효과가 발동된다",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121403,
       "id": "dukha_ceased",
       "name": "고제(苦諦) 알절",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121404,
       "id": "karma_severed",
       "name": "악업 단절",
-      "desc": "필살기 발동 시 격파 특수효과가 <nobr>40%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "필살기 발동 시 격파 특수효과가 <nobr>40%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121405,
       "id": "deva_enthralled",
       "name": "영신(靈神) 인도",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121406,
       "id": "sasra_mastered",
       "name": "생사 주관",
-      "desc": "[업보]의 스택 수 상한이 <nobr>6</nobr>스택으로 감소한다"
+      "desc": "[업보]의 스택 수 상한이 <nobr>6</nobr>스택으로 감소한다",
+      "unlockCost": [
+        {
+          "ItemID": 11214,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1210,
   "id": "guinaifen",
   "name": "Guinaifen",
+  "description": "Seorang seniman pertunjukan yang tinggal di Xianzhou \"Luofu\" — atau lebih tepatnya, seniman jalanan.\nSelain makan tiga kali sehari, ia juga mengejar kehidupan baru di Luofu.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Fire DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Mengakibatkan Fire DMG pada 1 musuh, dan mengakibatkan Fire DMG dalam jumlah kecil pada musuh di sekitar target. Berpeluang besar untuk menambahkan status Burn.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,18 @@
       "simpleDesc": "Mengakibatkan Fire DMG dalam jumlah kecil pada seluruh musuh.\nJika target musuh berstatus Burn, maka status Burn tersebut akan mengakibatkan 1 kali DMG tambahan.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "Setelah status Burn yang diterima musuh memicu DMG, berpeluang besar untuk memberikan status \"Firekiss\".",
       "type": "Talent",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1432,6 +1496,24 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, mengakibatkan #2[i] kali DMG yang masing-masing mengakibatkan Fire DMG sebesar #1[i]% ATK Guinaifen pada musuh secara acak, serta memiliki #3[i]% Peluang Dasar untuk membuat target memasuki status \"Firekiss\".",
       "simpleDesc": "Setelah menyerang musuh dan memasuki pertempuran, mengakibatkan Fire DMG dalam jumlah kecil pada 1 musuh, dan berpeluang besar memberikan status \"Firekiss\". Total Bounce 4 kali.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1450,37 +1532,88 @@
       "_id": 121001,
       "id": "slurping_noodles_during_handstand",
       "name": "Slurping Noodles During Handstand",
-      "desc": "Saat melancarkan Skill, memiliki <nobr>100%</nobr> <u>peluang dasar</u> untuk mengurangi <nobr>10%</nobr> Effect RES target musuh yang terkena serangan, berlangsung selama <nobr>2</nobr> giliran."
+      "desc": "Saat melancarkan Skill, memiliki <nobr>100%</nobr> <u>peluang dasar</u> untuk mengurangi <nobr>10%</nobr> Effect RES target musuh yang terkena serangan, berlangsung selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121002,
       "id": "brushing_teeth_while_whistling",
       "name": "Brushing Teeth While Whistling",
-      "desc": "Saat target musuh berstatus Burn, Basic Attack dan Skill Guinaifen akan mengakibatkan DMG Multiplier status Burn yang ditambahkan Guinaifen pada target musuh tersebut meningkat <nobr>40%</nobr>."
+      "desc": "Saat target musuh berstatus Burn, Basic Attack dan Skill Guinaifen akan mengakibatkan DMG Multiplier status Burn yang ditambahkan Guinaifen pada target musuh tersebut meningkat <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121003,
       "id": "smashing_boulder_on_chest",
       "name": "Smashing Boulder on Chest",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121004,
       "id": "blocking_pike_with_neck",
       "name": "Blocking Pike with Neck",
-      "desc": "Setiap kali status Burn yang diberikan Guinaifen memicu DMG, Guinaifen akan memulihkan <nobr>2</nobr> Energy."
+      "desc": "Setiap kali status Burn yang diberikan Guinaifen memicu DMG, Guinaifen akan memulihkan <nobr>2</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121005,
       "id": "swallowing_sword_to_stomach",
       "name": "Swallowing Sword to Stomach",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121006,
       "id": "catching_bullet_with_hands",
       "name": "Catching Bullet with Hands",
-      "desc": "Meningkatkan jumlah batas maksimal lapisan \"Firekiss\" sebanyak <nobr>1</nobr> lapis."
+      "desc": "Meningkatkan jumlah batas maksimal lapisan \"Firekiss\" sebanyak <nobr>1</nobr> lapis.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1414,
   "id": "dan_heng_permansor_terrae",
   "name": "Dan Heng - Permansor Terrae",
+  "description": "O peito de Georios, o corpo do dragão caído sustentando a terra estilhaçada, suportando milênios de dor.\nDan Heng, o Inominado e o Herdeiro de Chrysos que guarda a Chama Primordial da Terra, estabiliza o mundo antes que ele desabe, e guia toda a vida pela terra para um novo lar além.\n— Rios fluem para o mar, montanhas ecoam em harmonia, o caminho eterno se estende por dez mil quilômetros.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo designado.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Designa um personagem aliado como \"Companheiro de Vínculo\" e concede um Escudo com efeito de Escudo acumulável a todos os aliados.",
       "type": "Perícia",
       "tag": "Defesa",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,32 @@
       "simpleDesc": "Causa Dano Físico massivo a todos os inimigos e concede um Escudo com efeito de Escudo acumulável a todos os aliados. Aprimora \"Alma de Dragão\". Quando \"Alma de Dragão\" age, realiza um Ataque Extra que causa Dano Físico leve e Dano leve do Tipo do \"Companheiro de Vínculo\" a todos os inimigos. O aprimoramento dura por #3[i] ação(ões) de \"Alma de Dragão\".",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1202,32 @@
       "simpleDesc": "Quando um personagem aliado se torna um \"Companheiro de Vínculo\", Dan Heng - Permansor Terrae invoca \"Alma de Dragão\" para ele.\nQuando \"Alma de Dragão\" age, dissipa 1 penalidade de todos os aliados e concede um Escudo com efeito de Escudo acumulável.",
       "type": "Talento",
       "tag": "Defesa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1597,15 @@
       "simpleDesc": "Inflige \"Confusão\" nos inimigos em uma determinada área e concede o status de \"Companheiro de Vínculo\" ao personagem ativo atual. No início do próximo combate, usa automaticamente a Perícia no personagem que possui o status de \"Companheiro de Vínculo\".",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1622,114 @@
       "_id": 141401,
       "id": "shed_scales_of_old",
       "name": "O Descamar das Escamas Antigas",
-      "desc": "Quando Dan Heng - Permansor Terrae usa sua Perícia Suprema, recupera <nobr>1</nobr> Ponto(s) de Perícia e aumenta a PEN de RES a todos os Tipos do \"Companheiro de Vínculo\" em <nobr>18%</nobr>, durando por <nobr>3</nobr> rodada(s)."
+      "desc": "Quando Dan Heng - Permansor Terrae usa sua Perícia Suprema, recupera <nobr>1</nobr> Ponto(s) de Perícia e aumenta a PEN de RES a todos os Tipos do \"Companheiro de Vínculo\" em <nobr>18%</nobr>, durando por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141402,
       "id": "watch_trails_to_blaze",
       "name": "Desbravador Guardião",
-      "desc": "Aumenta adicionalmente o número de ações de Alma de Dragão aprimorado da Perícia Suprema em <nobr>2</nobr>. Após Dan Heng - Permansor Terrae usar a Perícia Suprema, Alma de Dragão Avança Adiante a ação em <nobr>100%</nobr>. Quando \"Alma de Dragão\" aprimorada age, o Dano Adicional causado pelo \"Companheiro de Vínculo\" se torna <nobr>200%</nobr> do seu Dano original, e o Efeito de <u>Escudo</u> concedido nesta instância se torna <nobr>200%</nobr> do seu Efeito de <u>Escudo</u> original."
+      "desc": "Aumenta adicionalmente o número de ações de \"Alma de Dragão\" aprimorado da Perícia Suprema em <nobr>2</nobr>. Após Dan Heng - Permansor Terrae usar a Perícia Suprema, Alma de Dragão Avança Adiante a ação em <nobr>100%</nobr>. Quando \"Alma de Dragão\" aprimorada age, o Dano Adicional causado pelo \"Companheiro de Vínculo\" se torna <nobr>200%</nobr> do seu Dano original, e o Efeito de <u>Escudo</u> concedido nesta instância se torna <nobr>200%</nobr> do seu Efeito de <u>Escudo</u> original.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141403,
       "id": "bear_weight_of_worlds",
       "name": "Suporte o Peso dos Mundos",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141404,
       "id": "by_oath_this_vessel_is_i",
       "name": "Pelo Juramento, Este Receptáculo Sou Eu",
-      "desc": "Reduz o Dano recebido pelo \"Companheiro de Vínculo\" em <nobr>20%</nobr>."
+      "desc": "Reduz o Dano recebido pelo \"Companheiro de Vínculo\" em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141405,
       "id": "the_path_of_permanence_sweeps_far",
       "name": "O Caminho da Permanência se Estende Longe",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141406,
       "id": "one_dream_to_enfold_all_wilds",
       "name": "Um Sonho para Abranger Todas as Terras Selvagens",
-      "desc": "Quando houver um \"Companheiro de Vínculo\" no campo, aumenta o Dano recebido por todos os inimigos em <nobr>20%</nobr>. Quando o \"Companheiro de Vínculo\" causa Dano, ignora <nobr>12%</nobr> da DEF dos inimigos-alvo. Quando Dan Heng - Permansor Terrae usa sua Perícia Suprema, o \"Companheiro de Vínculo\" causará Dano Adicional de seu Tipo correspondente a todos os inimigos igual a <nobr>330%</nobr> do ATQ do \"Companheiro de Vínculo\"."
+      "desc": "Quando houver um \"Companheiro de Vínculo\" no campo, aumenta o Dano recebido por todos os inimigos em <nobr>20%</nobr>. Quando o \"Companheiro de Vínculo\" causa Dano, ignora <nobr>12%</nobr> da DEF dos inimigos-alvo. Quando Dan Heng - Permansor Terrae usa sua Perícia Suprema, o \"Companheiro de Vínculo\" causará Dano Adicional de seu Tipo correspondente a todos os inimigos igual a <nobr>330%</nobr> do ATQ do \"Companheiro de Vínculo\".",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

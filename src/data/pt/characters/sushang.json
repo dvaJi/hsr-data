@@ -2,6 +2,7 @@
   "_id": 1206,
   "id": "sushang",
   "name": "Sushang",
+  "description": "Nascida no Yaoqing do Xianzhou, enviada para os Cavaleiros das Nuvens do Luofu para treinamento militar.\nEmpunhando a espada da família, um presente de sua mãe, ela anseia pelo futuro que vai escrever.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Físico leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "Causa Dano Físico a um inimigo, com poucas chances de ativar Postura da Espada. Se o inimigo tiver Quebra de Fraqueza, a ativação da Postura da Espada é garantida.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +779,18 @@
       "simpleDesc": "Causa Dano Físico massivo a um único inimigo, aprimora o efeito da Postura da Espada e realiza uma ação imediatamente.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1124,15 @@
       "simpleDesc": "Quando um inimigo no campo tem sua Fraqueza Quebrada, a VEL desta personagem aumenta.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1435,15 @@
       "desc": "Ataca o inimigo imediatamente. Ao entrar na batalha, Sushang causa Dano Físico igual a #1[i]% do ATQ dela a todos os inimigos.",
       "simpleDesc": "Ataca o inimigo. Depois de entrar em batalha, causa Dano Físico leve a todos os inimigos.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,37 +1460,88 @@
       "_id": 120601,
       "id": "cut_with_ease",
       "name": "Cortar Facilmente",
-      "desc": "Após usar a Perícia contra um inimigo com Quebra de Fraqueza, regenera 1 Ponto de Perícia."
+      "desc": "Após usar a Perícia contra um inimigo com Quebra de Fraqueza, regenera 1 Ponto de Perícia.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120602,
       "id": "refine_in_toil",
       "name": "Refino pela Labuta",
-      "desc": "Depois que a Postura da Espada é ativada, o Dano recebido por Sushang é reduzido em <nobr>20%</nobr> por 1 rodada."
+      "desc": "Depois que a Postura da Espada é ativada, o Dano recebido por Sushang é reduzido em <nobr>20%</nobr> por 1 rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120603,
       "id": "rise_from_fame",
       "name": "Surgir da Fama",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120604,
       "id": "cleave_with_heart",
       "name": "Golpeie com o Coração",
-      "desc": "Aumenta em <nobr>40%</nobr> o Efeito de Quebra de Sushang."
+      "desc": "Aumenta em <nobr>40%</nobr> o Efeito de Quebra de Sushang.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120605,
       "id": "prevail_via_taixu",
       "name": "Prevalecer por Taixu",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120606,
       "id": "dwell_like_water",
       "name": "Permanecer Como Água",
-      "desc": "O Bônus de VEL do Talento é acumulável e pode acumular até 2 vezes. Adicionalmente, após entrar em batalha, Sushang imediatamente ganha 1 acúmulo do Bônus de VEL do seu Talento."
+      "desc": "O Bônus de VEL do Talento é acumulável e pode acumular até 2 vezes. Adicionalmente, após entrar em batalha, Sushang imediatamente ganha 1 acúmulo do Bônus de VEL do seu Talento.",
+      "unlockCost": [
+        {
+          "ItemID": 11206,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

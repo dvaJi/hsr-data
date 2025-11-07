@@ -2,6 +2,7 @@
   "_id": 1310,
   "id": "firefly",
   "name": "流螢",
+  "description": "星核獵手成員，身著機械裝甲「薩姆」戰鬥。忠於任務，性格堅強。\n以戰勝蟲群的兵器的身分誕生，其生長速度異於常人，但生命非常短暫。\n為了找尋「生」的機會而加入星核獵手，找尋違抗命運的方式。",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量火屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "消耗自身部分生命值恢復能量，對敵方單體造成火屬性傷害。使自身下一次行動提前。",
       "type": "戰技",
       "tag": "單體攻擊",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "行動提前",
+          "desc": "使目標在下次行動前的等待間隔縮短。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,15 @@
       "simpleDesc": "進入「完全燃燒」狀態，使自身行動提前100%，獲得強化普通攻擊和強化戰技，並提高自身速度、弱點擊破效率和敵方目標受到的擊破傷害，直至倒數計時結束。",
       "type": "終結技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,24 @@
       "simpleDesc": "生命值越低，受到的傷害越低。「完全燃燒」狀態下，減傷效果維持最大值、效果抗性提高。戰鬥開始時若能量不足#2[i]%，則使其恢復至#2[i]%。當能量恢復至上限時，解除自身所有負面效果。",
       "type": "天賦",
       "tag": "防禦",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "負面效果",
+          "desc": "對戰鬥有負面效果的所有持續狀態，若無特殊說明則可加以解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1490,15 @@
       "desc": "跳躍至空中並自由移動，持續#1[i]秒，此時發動下落攻擊可以提前結束持續時間。持續時間結束後，下落並立即攻擊一定範圍內的所有敵人。每一波開始時向敵方全體附加火屬性弱點，持續#3[i]回合，此後對敵方全體造成等同於裝甲「薩姆」#2[i]%攻擊力的火屬性傷害。",
       "simpleDesc": "跳躍至空中並自由移動，移動數秒後下落並攻擊範圍內的所有敵人。每一波開始時向敵方全體附加火屬性弱點，並對敵方全體造成火屬性傷害。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1517,105 @@
       "_id": 131001,
       "id": "in_reddened_chrysalis_i_once_rest",
       "name": "我曾安眠，赤染之繭",
-      "desc": "施放強化戰技時無視目標<nobr>15%</nobr>的防禦，且強化戰技不消耗戰技點。"
+      "desc": "施放強化戰技時無視目標<nobr>15%</nobr>的防禦，且強化戰技不消耗戰技點。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131002,
       "id": "from_shattered_sky_i_free_fall",
       "name": "自破碎的天空墜落",
-      "desc": "「完全燃燒」狀態下發動強化普通攻擊、強化戰技消滅敵方目標或使目標陷入<u>弱點擊破狀態</u>時，裝甲「薩姆」立即獲得1個<u>額外回合</u>。該效果在<nobr>1</nobr>回合後可再次觸發。"
+      "desc": "「完全燃燒」狀態下發動強化普通攻擊、強化戰技消滅敵方目標或使目標陷入<u>弱點擊破狀態</u>時，裝甲「薩姆」立即獲得1個<u>額外回合</u>。該效果在<nobr>1</nobr>回合後可再次觸發。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱點擊破狀態",
+          "desc": "敵方目標的韌性被削減至0時進入的特殊狀態，進入該狀態的目標行動會延後。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "額外回合",
+          "desc": "獲得1個不消耗回合數的額外回合，在此回合中無法插入施放終結技。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131003,
       "id": "amidst_silenced_stars_i_deep_sleep",
       "name": "沉睡在靜默的星河",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131004,
       "id": "upon_lighted_fyrefly_i_soon_gaze",
       "name": "我會看見，飛螢之火",
-      "desc": "「完全燃燒」狀態下，裝甲「薩姆」的效果抗性提高<nobr>50%</nobr>。"
+      "desc": "「完全燃燒」狀態下，裝甲「薩姆」的效果抗性提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131005,
       "id": "from_undreamt_night_i_thence_shine",
       "name": "自無夢的長夜亮起",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131006,
       "id": "in_finalized_morrow_i_full_bloom",
       "name": "綻放在終竟的明天",
-      "desc": "「完全燃燒」狀態下裝甲「薩姆」的火屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。發動強化普通攻擊、強化戰技時弱點擊破效率提高<nobr>50%</nobr>。"
+      "desc": "「完全燃燒」狀態下裝甲「薩姆」的火屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。發動強化普通攻擊、強化戰技時弱點擊破效率提高<nobr>50%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11310,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

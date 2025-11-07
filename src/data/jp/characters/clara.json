@@ -2,6 +2,7 @@
   "_id": 1107,
   "id": "clara",
   "name": "クラーラ",
+  "description": "機械と一緒に暮らしている流浪の少女。\n内向的で優しく、純粋な心を持っている。\n下層部の人々が互いの「家族」になることを願っている。",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の物理属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "敵全体に物理属性ダメージを与え、「反撃の印」がある敵にはさらに物理属性ダメージを与える。",
       "type": "戦闘スキル",
       "tag": "全体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,27 @@
       "simpleDesc": "自身の受けるダメージダウン、攻撃される確率アップ、カウンターを強化。",
       "type": "必殺技",
       "tag": "強化",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "カウンター",
+          "desc": "対象が攻撃を受けた後に自動で効果を発動する。攻撃者に対し、さらに攻撃を1回行う。\nカウンターも追加攻撃と見なされる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1128,27 @@
       "simpleDesc": "自身の受けるダメージがダウンする。攻撃者は「反撃の印」を付与され、スヴァローグのカウンターを受け、物理属性ダメージを受ける。",
       "type": "天賦",
       "tag": "単体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 25
+      },
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "カウンター",
+          "desc": "対象が攻撃を受けた後に自動で効果を発動する。攻撃者に対し、さらに攻撃を1回行う。\nカウンターも追加攻撃と見なされる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1405,6 +1472,15 @@
       "desc": "敵を攻撃。戦闘に入った後、クラーラが敵に攻撃される確率がアップする、#1[i]ターン継続。",
       "simpleDesc": "敵を攻撃。戦闘に入った後、敵に攻撃される確率がアップする。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1498,96 @@
       "_id": 110701,
       "id": "a_tall_figure",
       "name": "{RUBY_B#おお}大{RUBY_E#}きな{RUBY_B#うし}後{RUBY_E#}ろ{RUBY_B#すがた}姿{RUBY_E#}",
-      "desc": "戦闘スキルを発動した後、敵に付与した「反撃の印」が失効しなくなる。"
+      "desc": "戦闘スキルを発動した後、敵に付与した「反撃の印」が失効しなくなる。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110702,
       "id": "a_tight_embrace",
       "name": "ぎゅっとした{RUBY_B#ほうよう}抱擁{RUBY_E#}",
-      "desc": "必殺技を発動した後、攻撃力+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "必殺技を発動した後、攻撃力+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110703,
       "id": "cold_steel_armor",
       "name": "{RUBY_B#れいてつ}冷徹{RUBY_E#}な{RUBY_B#てっこう}鉄甲{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110704,
       "id": "familys_warmth",
       "name": "{RUBY_B#かぞく}家族{RUBY_E#}の{RUBY_B#あたた}温{RUBY_E#}かさ",
-      "desc": "攻撃を受けた後、クラーラの受けるダメージ-<nobr>30%</nobr>、次のターンが回ってくるまで継続。"
+      "desc": "攻撃を受けた後、クラーラの受けるダメージ-<nobr>30%</nobr>、次のターンが回ってくるまで継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110705,
       "id": "a_small_promise",
       "name": "{RUBY_B#ちい}小{RUBY_E#}さな{RUBY_B#やくそく}約束{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110706,
       "id": "long_company",
       "name": "{RUBY_B#なが}長{RUBY_E#}い{RUBY_B#あいだ}間{RUBY_E#}の{RUBY_B#つ}付{RUBY_E#}き{RUBY_B#そ}添{RUBY_E#}い",
-      "desc": "他の味方が攻撃された後も、スヴァローグは<nobr>50%</nobr>の<u>固定確率</u>で攻撃者に<u>カウンター</u>を行い、その敵に「反撃の印」を付与する。必殺技を発動した時、さらに強化反撃の回数+<nobr>1</nobr>。"
+      "desc": "他の味方が攻撃された後も、スヴァローグは<nobr>50%</nobr>の<u>固定確率</u>で攻撃者に<u>カウンター</u>を行い、その敵に「反撃の印」を付与する。必殺技を発動した時、さらに強化反撃の回数+<nobr>1</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11107,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "固定確率",
+          "desc": "どのような要因にも左右されない、固定された確率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000003,
+          "name": "カウンター",
+          "desc": "対象が攻撃を受けた後に自動で効果を発動する。攻撃者に対し、さらに攻撃を1回行う。\nカウンターも追加攻撃と見なされる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

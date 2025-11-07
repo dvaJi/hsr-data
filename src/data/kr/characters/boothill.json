@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "부트힐",
+  "description": "은하를 떠도는 개조 인간 카우보이. 극도로 낙관적이고 자유분방하다.\n「갤럭시 레인저」의 일원으로, 악을 처단하기 위해서라면 무슨 짓이든 할 수 있다——\n그의 대담한 행동은 복수의 대상인 「스타피스 컴퍼니」의 이목을 끌기 위함이다",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 물리 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "[목숨 건 대치]를 활성화한다. [목숨 건 대치]의 목표가 처치되거나 약점이 격파되면, 부트힐은 [포켓 어드벤티지]를 획득하고 [목숨 건 대치]를 해제한다. 자신의 일반 공격이 강화되며, 이번 턴은 종료되지 않는다",
       "type": "전투 스킬",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "단일 적에게 물리 약점을 부여하며 대량의 물리 속성 피해를 가하고, 목표의 행동 게이지를 감소시킨다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "행동 게이지 감소",
+          "desc": "목표의 다음 행동 전 대기 간격을 연장한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "[포켓 어드벤티지]는 강화된 일반 공격의 강인성 감소 수치를 증가시키고, 격파된 적에게 추가로 물리 속성 격파 피해를 가한다. 전투 승리 후, [포켓 어드벤티지]는 다음 전투까지 유지된다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "약점 격파 상태",
+          "desc": "적의 강인성이 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 진입한 목표는 행동 게이지가 감소한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "격파 피해",
+          "desc": "격파 특수효과, 목표의 강인성 최대치, 캐릭터 레벨이 높을수록 가하는 격파 피해가 증가한다.\n격파 피해는 치명타가 발동하지 않으며, 피해 증가류 효과의 영향을 받지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "비술 사용 후 다음 전투 진입 시 처음으로 발동하는 전투 스킬은 단일 적에게 물리 약점을 부여한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "황야의 론스타",
-      "desc": "전투 시작 시 [포켓 어드벤티지]를 1스택 획득한다. 부트힐이 피해를 가할 시 적의 방어력을 <nobr>16%</nobr> 무시한다"
+      "desc": "전투 시작 시 [포켓 어드벤티지]를 1스택 획득한다. 부트힐이 피해를 가할 시 적의 방어력을 <nobr>16%</nobr> 무시한다",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "마일스톤 딜러",
-      "desc": "[목숨 건 대치] 상태에서 [포켓 어드벤티지] 획득 시, 전투 스킬 포인트를 <nobr>1</nobr>개 회복하고 격파 특수효과가 <nobr>30%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴. 해당 효과는 1턴 내에 중복 발동할 수 없으며, [포켓 어드벤티지]를 초과해 획득할 때도 발동된다"
+      "desc": "[목숨 건 대치] 상태에서 [포켓 어드벤티지] 획득 시, 전투 스킬 포인트를 <nobr>1</nobr>개 회복하고 격파 특수효과가 <nobr>30%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴. 해당 효과는 1턴 내에 중복 발동할 수 없으며, [포켓 어드벤티지]를 초과해 획득할 때도 발동된다",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "대리석 과수원의 파수꾼",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "냉육 주방장",
-      "desc": "[목숨 건 대치] 상태의 적이 부트힐에게 피격 시 받는 피해가 추가로 <nobr>12%</nobr> 증가한다. 부트힐이 [목숨 건 대치] 상태의 적에게 피격 시 받는 피해 증가 효과가 <nobr>12%</nobr> 감소한다"
+      "desc": "[목숨 건 대치] 상태의 적이 부트힐에게 피격 시 받는 피해가 추가로 <nobr>12%</nobr> 증가한다. 부트힐이 [목숨 건 대치] 상태의 적에게 피격 시 받는 피해 증가 효과가 <nobr>12%</nobr> 감소한다",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "그루터기 연설가",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "쇠창살 여관의 라쿤",
-      "desc": "특성을 발동하여 <u>격파 피해</u>를 가할 시, 목표에게 추가로 기존 피해 배율의 <nobr>40%</nobr>만큼 <u>격파 피해</u>를 가하고, 인접한 목표에게 추가로 기존 피해 배율의 <nobr>70%</nobr>만큼 <u>격파 피해</u>를 가한다"
+      "desc": "특성을 발동하여 <u>격파 피해</u>를 가할 시, 목표에게 추가로 기존 피해 배율의 <nobr>40%</nobr>만큼 <u>격파 피해</u>를 가하고, 인접한 목표에게 추가로 기존 피해 배율의 <nobr>70%</nobr>만큼 <u>격파 피해</u>를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "격파 피해",
+          "desc": "격파 특수효과, 목표의 강인성 최대치, 캐릭터 레벨이 높을수록 가하는 격파 피해가 증가한다.\n격파 피해는 치명타가 발동하지 않으며, 피해 증가류 효과의 영향을 받지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

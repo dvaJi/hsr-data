@@ -2,6 +2,7 @@
   "_id": 1215,
   "id": "hanya",
   "name": "Hanya",
+  "description": "Una de las juezas de la Comisión de los Diez Líderes del Luofu de Xianzhou.\nFue nombrada por los Diez Líderes y ostenta la autoridad del pincel del oráculo. Los pecados y las transgresiones deben listarse y conocerse, y la rueda del karma tiene que dictar los castigos",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Físico a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Inflige Daño Físico a un enemigo y lo afecta con Lastre. Cuando un aliado ataque 2 veces con un ATQ básico, una habilidad básica o una habilidad definitiva a un objetivo afectado por Lastre, se recupera 1 pt. de habilidad básica.",
       "type": "Habilidad básica",
       "tag": "ATQ individual",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 17
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Aumenta la VEL y el ATQ de un aliado.",
       "type": "Habilidad definitiva",
       "tag": "Potenciación",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "Cuando un aliado usa el ATQ básico, la habilidad básica o la habilidad definitiva contra un enemigo afectado por Lastre, el daño que inflige aumenta.",
       "type": "Talento",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1388,15 @@
       "desc": "Ataca al enemigo y entra en combate. Aplica un Lastre equivalente al aplicado por la habilidad básica a un enemigo al azar.",
       "simpleDesc": "Ataca al enemigo y entra en combate. Aplica un Lastre equivalente al aplicado por la habilidad básica a un enemigo al azar.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1356,37 +1411,88 @@
       "_id": 121501,
       "id": "one_heart",
       "name": "Un corazón",
-      "desc": "Cuando un aliado con el efecto de la habilidad definitiva de Hanya derrota a un enemigo, la acción de Hanya se <u>adelanta</u> un <nobr>15%</nobr>. Este efecto solo puede activarse <nobr>1</nobr> vez por turno."
+      "desc": "Cuando un aliado con el efecto de la habilidad definitiva de Hanya derrota a un enemigo, la acción de Hanya se <u>adelanta</u> un <nobr>15%</nobr>. Este efecto solo puede activarse <nobr>1</nobr> vez por turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Acción adelantada",
+          "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121502,
       "id": "two_views",
       "name": "Dos vistas",
-      "desc": "Tras usar su habilidad básica, su VEL aumenta en un <nobr>20%</nobr> durante <nobr>1</nobr> turno."
+      "desc": "Tras usar su habilidad básica, su VEL aumenta en un <nobr>20%</nobr> durante <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121503,
       "id": "three_temptations",
       "name": "Tres tentaciones",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121504,
       "id": "four_truths",
       "name": "Cuatro verdades",
-      "desc": "La duración de la habilidad definitiva aumenta en <nobr>1</nobr> turno."
+      "desc": "La duración de la habilidad definitiva aumenta en <nobr>1</nobr> turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121505,
       "id": "five_skandhas",
       "name": "Cinco agregados",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121506,
       "id": "six_reverences",
       "name": "Seis reverencias",
-      "desc": "El efecto de aumento de daño del talento aumenta en un <nobr>10%</nobr> adicional."
+      "desc": "El efecto de aumento de daño del talento aumenta en un <nobr>10%</nobr> adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

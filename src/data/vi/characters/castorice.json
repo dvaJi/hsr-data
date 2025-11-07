@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "Castorice",
+  "description": "Aidonia - vương quốc tuyết phủ quanh năm tôn thờ cái chết, nay đã chìm vào giấc ngủ ngọt ngào.\nHỡi Castorice, người con gái của sông Styx, Hậu Duệ Chrysos tìm kiếm Ngọn Lửa \"Tử Vong\", hãy lên đường. Hãy che chở tiếng than khóc của những linh hồn trên thế gian này và ôm lấy nỗi cô đơn của vận mệnh.\n— Sống chết đều là hành trình. Khi cánh bướm đậu trên nhành cây cũng là lúc sự tàn úa rồi sẽ tái sinh.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lượng Tử cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Tiêu hao HP của toàn phe ta, gây Sát Thương Lượng Tử cho 1 kẻ địch, đồng thời gây lượng nhỏ Sát Thương Lượng Tử cho mục tiêu lân cận.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Triệu hồi Linh Hồn Ký Ức Rồng Tử Vong và khiến nó ưu tiên hành động 100%, đồng thời mở ra Vùng Lãnh Thổ làm giảm Kháng Toàn Thuộc Tính của toàn bộ kẻ địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Triệu Hồi",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Vùng Lãnh Thổ",
+          "desc": "Hiệu ứng Vùng Lãnh Thổ là duy nhất trên toàn trận, trong thời gian duy trì không thể sử dụng kỹ năng Vùng Lãnh Thổ khác.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1094,9 +1147,18 @@
       "id": "desolation_across_palms",
       "name": "Cõi Hoang Vu Trong Lòng Bàn Tay",
       "desc": "Giới hạn \"Nhụy Hoa\" có liên quan đến cấp của toàn bộ nhân vật trong trận. Toàn phe ta mỗi khi mất đi 1 điểm HP, Castorice sẽ nhận được 1 điểm Nhụy Hoa, khi Nhụy Hoa đạt giới hạn có thể kích hoạt Tuyệt Kỹ. Khi phe ta mất HP, sát thương của Castorice và Rồng Tử Vong gây ra sẽ tăng #2[i]%, hiệu ứng này tối đa cộng dồn #3[i] tầng, duy trì #4[i] hiệp.\nKhi Rồng Tử Vong trong trận sẽ không thể nhận \"Nhụy Hoa\" thông qua Thiên Phú. Ngoại trừ Rồng Tử Vong, mỗi 1 điểm HP toàn phe ta mất đi sẽ chuyển hóa thành HP tương đương cho Rồng Tử Vong.",
-      "simpleDesc": "Khi phe ta tổn thất HP, Castorice sẽ nhận Nhụy Hoa, đồng thời tăng sát thương gây ra bởi Castorice và Rồng Tử Vong. Khi Nhụy Hoa đạt giới hạn có thể kích hoạt Tuyệt Kỹ. Khi Rồng Tử Vong ở trong trận, ngoài Rồng Tử Vong ra, điểm HP tổn thất của phe ta sẽ chuyển hóa thành điểm HP tương đương cho Rồng Tử Vong.",
+      "simpleDesc": "Khi phe ta tổn thất HP, Castorice sẽ nhận Nhụy Hoa, đồng thời tăng sát thương do Castorice và Rồng Tử Vong gây ra. Khi Nhụy Hoa đạt giới hạn có thể kích hoạt Tuyệt Kỹ. Khi Rồng Tử Vong ở trong trận, ngoài Rồng Tử Vong ra, điểm HP tổn thất của phe ta sẽ chuyển hóa thành HP tương đương cho Rồng Tử Vong.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "Sau khi dùng Bí Kỹ, sẽ vào trạng thái \"U Ám\" trong #3[i] giây. Kẻ địch ở trạng thái \"U Ám\" không thể chủ động áp sát Castorice.\nỞ trạng thái \"U Ám\", chủ động tấn công sẽ khiến tất cả kẻ địch trong phạm vi vào chiến đấu, đồng thời triệu hồi Linh Hồn Ký Ức Rồng Tử Vong và khiến nó ưu tiên hành động 100%, cũng như triển khai Vùng Lãnh Thổ \"Tử Địa Bị Lãng Quên\", Rồng Tử Vong có HP hiện tại bằng #2[i]% giới hạn Nhụy Hoa. Sau khi vào chiến đấu, sẽ tiêu hao #1[i]% HP hiện tại của toàn thể phe ta ngoại trừ Rồng Tử Vong.\nSau khi vào chiến đấu và trước khi triệu hồi Rồng Tử Vong, thì Castorice sẽ nhận Nhụy Hoa bằng #4[i]% điểm giới hạn Nhụy Hoa.",
       "simpleDesc": "Vào trạng thái U Ám, kẻ địch không thể chủ động áp sát Castorice.\nỞ trạng thái U Ám, tấn công sẽ khiến tất cả địch trong phạm vi vào chiến đấu, đồng thời triệu hồi Linh Hồn Ký Ức Rồng Tử Vong và khiến nó ưu tiên hành động 100%. Khi vào chiến đấu, tiêu hao HP của toàn bộ phe ta ngoại trừ Rồng Tử Vong.\nSau khi vào chiến đấu và trước khi triệu hồi Rồng Tử Vong, Castorice sẽ hồi Nhụy Hoa bằng #4[i]% điểm giới hạn của Nhụy Hoa.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Vùng Lãnh Thổ",
+          "desc": "Hiệu ứng Vùng Lãnh Thổ là duy nhất trên toàn trận, trong thời gian duy trì không thể sử dụng kỹ năng Vùng Lãnh Thổ khác.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Rồng Tử Vong - Pollux",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "Móng Vuốt Xé Toạc U Minh",
+        "desc": "Gây sát thương Lượng Tử cho toàn bộ phe địch, tương đương <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> Giới Hạn HP của Castorice.",
+        "simpleDesc": "Gây lượng nhỏ Sát Thương Lượng Tử cho toàn bộ phe địch.",
+        "type": {
+          "id": "Servant",
+          "name": "Kỹ Năng Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Đánh Lan"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "Ngọn Lửa Thiêu Rụi Bóng Tối",
+        "desc": "Phát động \"Ngọn Lửa Thiêu Rụi Bóng Tối\" sẽ tiêu hao HP tương đương với <nobr>#1[i]%</nobr> Giới Hạn HP của Rồng Tử Vong, gây cho toàn bộ kẻ địch Sát Thương Lượng Tử tương đương với <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> Giới Hạn HP của Castorice.\nMột lần đánh trúng có thể phát động lại \"Ngọn Lửa Thiêu Rụi Bóng Tối\", khi phát động lại, Bội Số Sát Thương lần lượt tăng đến <span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span>/<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>, sau khi đạt đến <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> sẽ không tăng nữa, hiệu ứng tăng Bội Số Sát Thương sẽ không bị giảm trước khi Rồng Tử Vong biến mất.\nKhi HP hiện tại của Rồng Tử Vong nhỏ hơn hoặc bằng <nobr>#5[i]%</nobr> Giới Hạn HP của bản thân, sau khi phát động kỹ năng này sẽ chủ động giảm HP đến 1 điểm, kích hoạt hiệu ứng kỹ năng tương đương với Thiên Phú \"Đôi Cánh Càn Quét Phế Tích\".",
+        "simpleDesc": "Tiêu hao HP bản thân, gây Sát Thương Lượng Tử cho toàn phe địch, và hiệp này sẽ không kết thúc. Khi thi triển kỹ năng trùng lặp, kỹ năng tối đa được cường hóa 3 lần. Khi HP nhỏ hơn hoặc bằng <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, thi triển kỹ năng này sẽ chủ động kích hoạt hiệu ứng kỹ năng Thiên Phú Linh Hồn Ký Ức \"Đôi Cánh Càn Quét Phế Tích\".",
+        "type": {
+          "id": "Servant",
+          "name": "Kỹ Năng Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Đánh Lan"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "Hình Hài Được Kén Nguyệt Che Giấu",
+        "desc": "Khi Rồng Tử Vong trong trận, nó đóng vai trò <u>hỗ trợ</u> cho phe ta, nếu phe ta chịu sát thương hoặc tiêu hao HP, thì HP hiện tại tối đa sẽ giảm đến 1 điểm, sau đó sẽ do Rồng Tử Vong gánh chịu, nhưng Rồng Tử Vong sẽ tiêu hao HP bằng <nobr>#1[i]%</nobr> giá trị gốc, duy trì đến lúc Rồng Tử Vong biến mất.",
+        "simpleDesc": "Khi Rồng Tử Vong trong trận, nó đóng vai trò <u>hỗ trợ</u> cho phe ta. HP hiện tại của phe ta tối đa giảm xuống đến 1 điểm, sau đó sát thương phải chịu hoặc HP tiêu hao sẽ do Rồng Tử Vong gánh chịu.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Hỗ Trợ"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "Hỗ Trợ",
+            "desc": "Kẻ địch không thể chủ động chọn đơn vị hỗ trợ. Các kỹ năng thuộc loại Khuếch Tán của phe ta không thể lan truyền đến đơn vị hỗ trợ.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "Tiếng Gầm Rung Chuyển Tịnh Địa",
+        "desc": "Khi triệu hồi Rồng Tử Vong, sát thương toàn bộ phe ta gây ra tăng <nobr>#1[i]%</nobr>, duy trì <nobr>#2[i]</nobr> hiệp.",
+        "simpleDesc": "Khi được triệu hồi, tăng sát thương của toàn phe ta gây ra.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Hỗ Trợ"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "Đôi Cánh Càn Quét Phế Tích",
+        "desc": "Khi Rồng Tử Vong biến mất, sẽ gây <nobr>#2[i]</nobr> lần sát thương, mỗi lần sát thương sẽ gây ra sát thương Lượng Tử bằng <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> Giới Hạn HP của Castorice lên một kẻ địch ngẫu nhiên, đồng thời hồi cho toàn bộ phe ta HP bằng <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> Giới Hạn HP của Castorice +<span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>.",
+        "simpleDesc": "Khi biến mất, gây lượng nhỏ Sát Thương Lượng Tử cho một kẻ địch, tổng cộng nảy bật <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> lần, đồng thời hồi HP cho toàn bộ phe ta.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Nảy Bật"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "Ngọn Lửa Thiêu Rụi Bóng Tối",
+        "desc": "",
+        "simpleDesc": "Tiêu hao HP bản thân, gây Sát Thương Lượng Tử cho toàn phe địch, và hiệp này sẽ không kết thúc. Khi thi triển kỹ năng trùng lặp, kỹ năng tối đa được cường hóa 3 lần. Khi HP nhỏ hơn hoặc bằng <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, thi triển kỹ năng này sẽ chủ động kích hoạt hiệu ứng kỹ năng Thiên Phú Linh Hồn Ký Ức \"Đôi Cánh Càn Quét Phế Tích\".",
+        "type": {
+          "id": "Servant",
+          "name": "Kỹ Năng Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Đánh Lan"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "Ngọn Lửa Thiêu Rụi Bóng Tối",
+        "desc": "",
+        "simpleDesc": "Tiêu hao HP bản thân, gây Sát Thương Lượng Tử cho toàn phe địch, và hiệp này sẽ không kết thúc. Khi thi triển kỹ năng trùng lặp, kỹ năng tối đa được cường hóa 3 lần. Khi HP nhỏ hơn hoặc bằng <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, thi triển kỹ năng này sẽ chủ động kích hoạt hiệu ứng kỹ năng Thiên Phú Linh Hồn Ký Ức \"Đôi Cánh Càn Quét Phế Tích\".",
+        "type": {
+          "id": "Servant",
+          "name": "Kỹ Năng Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Đánh Lan"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "Đôi Cánh Càn Quét Phế Tích",
+        "desc": "Tiêu hao toàn bộ HP, gây <nobr>#2[i]</nobr> lần sát thương, mỗi lần sát thương sẽ gây ra sát thương Lượng Tử bằng <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> Giới Hạn HP của Castorice lên một kẻ địch ngẫu nhiên, đồng thời hồi cho toàn bộ phe ta HP bằng <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> Giới Hạn HP của Castorice +<span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>.",
+        "simpleDesc": "Tiêu hao toàn bộ HP, gây lượng nhỏ Sát Thương Lượng Tử cho một kẻ địch, tổng cộng nảy bật <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> lần, đồng thời hồi HP cho toàn bộ phe ta.",
+        "type": {
+          "id": "Servant",
+          "name": "Kỹ Năng Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Nảy Bật"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "Thánh Nữ Trong Tuyết, Nhập Liệm Ký Ức",
-      "desc": "Khi HP hiện tại của mục tiêu phe địch nhỏ hơn hoặc bằng <nobr>80%</nobr>/<nobr>50%</nobr> Giới Hạn HP của bản thân, sát thương \"Móng Vuốt, Vòng Tay Của Rồng Tử Vong\", \"Móng Vuốt Xé Toạc U Minh\", \"Ngọn Lửa Thiêu Rụi Bóng Tối\", \"Đôi Cánh Càn Quét Phế Tích\" gây ra cho kẻ đó sẽ bằng <nobr>120%</nobr>/<nobr>140%</nobr> sát thương gốc."
+      "desc": "Khi HP hiện tại của mục tiêu phe địch nhỏ hơn hoặc bằng <nobr>80%</nobr>/<nobr>50%</nobr> Giới Hạn HP của bản thân, sát thương \"Móng Vuốt, Vòng Tay Của Rồng Tử Vong\", \"Móng Vuốt Xé Toạc U Minh\", \"Ngọn Lửa Thiêu Rụi Bóng Tối\", \"Đôi Cánh Càn Quét Phế Tích\" gây ra cho kẻ đó sẽ bằng <nobr>120%</nobr>/<nobr>140%</nobr> sát thương gốc.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "Vương Miện Nở Rộ Nơi Cánh Bướm",
-      "desc": "Sau khi triệu hồi Linh Hồn Ký Ức Rồng Tử Vong, Castorice nhận <nobr>2</nobr> tầng \"Ý Chí Rực Lửa\", \"Ý Chí Rực Lửa\" tối đa đạt <nobr>2</nobr> tầng, có thể dùng để khấu trừ HP tiêu hao của Kỹ Năng Linh Hồn Ký Ức Rồng Tử Vong \"Ngọn Lửa Thiêu Rụi Bóng Tối\", đồng thời khiến Castorice <u>Ưu Tiên Hành Động</u> <nobr>100%</nobr>, lần sau thi triển Chiến Kỹ Cường Hóa, Castorice sẽ nhận Nhụy Hoa bằng <nobr>30%</nobr> điểm giới hạn của Nhụy Hoa."
+      "desc": "Sau khi triệu hồi Linh Hồn Ký Ức Rồng Tử Vong, Castorice nhận <nobr>2</nobr> tầng \"Ý Chí Rực Lửa\", \"Ý Chí Rực Lửa\" tối đa đạt <nobr>2</nobr> tầng, có thể dùng để khấu trừ HP tiêu hao của Kỹ Năng Linh Hồn Ký Ức Rồng Tử Vong \"Ngọn Lửa Thiêu Rụi Bóng Tối\", đồng thời khiến Castorice <u>Ưu Tiên Hành Động</u> <nobr>100%</nobr>, lần sau thi triển Chiến Kỹ Cường Hóa, Castorice sẽ nhận Nhụy Hoa bằng <nobr>30%</nobr> điểm giới hạn của Nhụy Hoa.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "Lữ Khách Cung Kính, Nhẹ Lướt Vào Cõi Chết",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không vượt quá cấp <nobr>10</nobr>; Cấp Thiên Phú của Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không vượt quá cấp <nobr>10</nobr>; Cấp Thiên Phú của Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "An Giấc Trong Khúc Bi Ca Sâu Lắng",
-      "desc": "Khi có Castorice trong trận, lượng hồi phục khi trị liệu cho toàn phe ta sẽ tăng <nobr>20%</nobr>."
+      "desc": "Khi có Castorice trong trận, lượng hồi phục khi trị liệu cho toàn phe ta sẽ tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "Trang Giấy Nguyên Sơ, Điểm Xuyết Lời Tiên Tri",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Kỹ Năng Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không vượt quá cấp <nobr>15</nobr>; Cấp Kỹ Năng Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "Chờ Đợi Tháng Năm Thoát Kén Tuôn Trào",
-      "desc": "Khi Castorice và Rồng Tử Vong gây sát thương, tăng <nobr>20%</nobr> <u>Xuyên Kháng</u> Lượng Tử. Trong thời gian Rồng Tử Vong tấn công có thể bỏ qua thuộc tính Điểm Yếu và làm giảm Sức Bền phe địch, khi phá vỡ điểm yếu, sẽ kích hoạt hiệu ứng Phá Vỡ Điểm Yếu Lượng Tử, số lần nảy bật khi Rồng Tử Vong kích hoạt Thiên Phú Đôi Cánh Càn Quét Phế Tích tăng thêm <nobr>3</nobr> lần."
+      "desc": "Khi Castorice và Rồng Tử Vong gây sát thương, tăng <nobr>20%</nobr> <u>Xuyên Kháng</u> Lượng Tử. Trong thời gian Rồng Tử Vong tấn công có thể bỏ qua thuộc tính Điểm Yếu và làm giảm Sức Bền phe địch, khi phá vỡ điểm yếu, sẽ kích hoạt hiệu ứng Phá Vỡ Điểm Yếu Lượng Tử, số lần nảy bật khi Rồng Tử Vong kích hoạt Thiên Phú Đôi Cánh Càn Quét Phế Tích tăng thêm <nobr>3</nobr> lần.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

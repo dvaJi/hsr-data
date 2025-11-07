@@ -2,6 +2,7 @@
   "_id": 8008,
   "id": "trailblazer_remembrance_girl",
   "name": "Trazacaminos Reminiscencia",
+  "description": "{F#Una}{M#Un} joven que embarcó en el Expreso Astral.\nDecidió viajar con el Expreso Astral para eliminar las amenazas provocadas por el Estelaron.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Invoca al mnemoduende Mem. Si Mem ya está en el campo de batalla, Mem regenera PV y obtiene carga.",
       "type": "Habilidad básica",
       "tag": "Invocación",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "Invoca al mnemoduende Mem. Mem obtiene carga e inflige una gran cantidad de Daño de Hielo a todos los enemigos.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "Cada vez que todos los aliados recuperan cierta cantidad de energía, Mem obtiene carga.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "Crea una zona especial. Los enemigos que estén en la zona no pueden moverse. Tras entrar en combate con los enemigos de la zona, retrasa la acción de todos los enemigos e inflige una pequeña cantidad de Daño de Hielo a todos los enemigos.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Acción retrasada",
+          "desc": "Incrementa el intervalo de espera del objetivo antes de la siguiente acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1449,79 @@
       "_id": 800801,
       "id": "narrator_of_the_present",
       "name": "Narradora del presente",
-      "desc": "La Prob. CRIT del aliado con Apoyo de Mem aumenta en un <nobr>10%</nobr>. Cuando un aliado tiene Apoyo de Mem, el efecto de Apoyo de Mem también se aplica a su mnemoduende o mnemomédium (según corresponda). Este efecto no se puede acumular."
+      "desc": "La Prob. CRIT del aliado con Apoyo de Mem aumenta en un <nobr>10%</nobr>. Cuando un aliado tiene Apoyo de Mem, el efecto de Apoyo de Mem también se aplica a su mnemoduende o mnemomédium (según corresponda). Este efecto no se puede acumular.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800802,
       "id": "gleaner_of_the_past",
       "name": "Recolectora del pasado",
-      "desc": "Cuando un mnemoduende aliado (que no sea Mem) actúa, la Trazacaminos recupera <nobr>8</nobr> pts. de energía. Este efecto se puede activar <nobr>1</nobr> vez como máximo en cada turno. El contador de activaciones se reinicia cuando comienza el turno de la Trazacaminos."
+      "desc": "Cuando un mnemoduende aliado (que no sea Mem) actúa, la Trazacaminos recupera <nobr>8</nobr> pts. de energía. Este efecto se puede activar <nobr>1</nobr> vez como máximo en cada turno. El contador de activaciones se reinicia cuando comienza el turno de la Trazacaminos.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800803,
       "id": "chanter_of_the_future",
       "name": "Rapsoda del futuro",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800804,
       "id": "dancer_of_the_muse",
       "name": "Bailarina de las musas",
-      "desc": "Cuando un aliado cuya energía máxima sea 0 lanza una habilidad de forma proactiva, Mem también obtiene un <nobr>3%</nobr> de carga y el multiplicador del Daño verdadero que ese objetivo inflige gracias a Apoyo de Mem aumenta en un <nobr>6%</nobr> adicional."
+      "desc": "Cuando un aliado cuya energía máxima sea 0 lanza una habilidad de forma proactiva, Mem también obtiene un <nobr>3%</nobr> de carga y el multiplicador del Daño verdadero que ese objetivo inflige gracias a Apoyo de Mem aumenta en un <nobr>6%</nobr> adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800805,
       "id": "seamster_of_the_ode",
       "name": "Costurera de la poesía",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de habilidad del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de habilidad de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800806,
       "id": "bearer_of_the_revelation",
       "name": "Portadora de la revelación divina",
-      "desc": "La Prob. CRIT de la habilidad definitiva se fija en el <nobr>100%</nobr>."
+      "desc": "La Prob. CRIT de la habilidad definitiva se fija en el <nobr>100%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +1970,151 @@
       }
     },
     {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "¡Malos! ¡Problemas!",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "Semilla de la reflexión",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Instinto del ladrón",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "¡Malos! ¡Problemas!",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Brote de manas",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Ambición distorsionada",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "¡Malos! ¡Problemas!",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Brote de manas",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Ambición distorsionada",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "¡Malos! ¡Problemas!",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Alayawah",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Voluntad de conquista",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "¡Malos! ¡Problemas!",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Alayawah",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Voluntad de conquista",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8008302,
       "type": 4,
       "children": [],
@@ -1868,151 +2128,6 @@
       }
     },
     {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "¡Malos! ¡Problemas!",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "Semilla de la reflexión",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "Instinto del ladrón",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "¡Malos! ¡Problemas!",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Brote de manas",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Ambición distorsionada",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "¡Malos! ¡Problemas!",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Brote de manas",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Ambición distorsionada",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "¡Malos! ¡Problemas!",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Alayawah",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Voluntad de conquista",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "¡Malos! ¡Problemas!",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Crédito",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Alayawah",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Voluntad de conquista",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8008302,
       "type": 4,
       "children": [],
@@ -2153,6 +2268,27 @@
             "id": "conquerors_will",
             "name": "Voluntad de conquista",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "Epílogo inacabado",
+        "desc": "Después de lanzar la habilidad definitiva, obtiene 1 acumulación de Epopeya, hasta un máximo de <nobr>2</nobr> acumulaciones. Cuando tenga Epopeya y Mem esté en el campo de batalla, el ATQ básico se potencia a \"¡Escribamos el mañana!\".",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

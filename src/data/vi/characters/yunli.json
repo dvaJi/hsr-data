@@ -2,6 +2,7 @@
   "_id": 1221,
   "id": "yunli",
   "name": "Yunli",
+  "description": "Kiếm sĩ săn kiếm của Xianzhou Zhuming, cháu gái cưng được \"Tướng Quân Chúc Uyên\" Huaiyan yêu thương, tính tình thẳng thắn.\nTừ nhỏ đã đi theo Huaiyan học kiếm thuật và kỹ năng rèn đúc, là kiếm sĩ thiên tài trẻ tuổi thứ hai trong \"Diệm Luân Bát Diệp\".\nCăm phẫn tột độ với Kiếm Ma do Zhuming tạo ra, thề sẽ \"săn lùng Kiếm Ma, tiêu diệt tất cả\".",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Hồi HP cho bản thân, đồng thời gây Sát Thương Vật Lý cho 1 kẻ địch, gây lượng nhỏ Sát Thương Vật Lý cho mục tiêu lân cận.",
       "type": "Chiến Kỹ",
       "tag": "Khuếch Tán",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,24 @@
       "simpleDesc": "Vào Chống Đỡ và khiêu khích toàn bộ kẻ địch, trong thời gian này, sau khi bị tấn công sẽ kích hoạt Phản Kích mạnh mẽ, gây Sát Thương Vật Lý cho người tấn công và mục tiêu lân cận người đó, sau đó gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch, tổng cộng Nảy Bật 6 lần. Nếu trong thời gian trạng thái Chống Đỡ không kích hoạt Phản Kích, thì khi kết thúc trạng thái sẽ gây Sát Thương Vật Lý cho kẻ địch ngẫu nhiên và mục tiêu lân cận kẻ đó.",
       "type": "Tuyệt Kỹ",
       "tag": "Cường Hóa",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Phản Kích",
+          "desc": "Hiệu ứng này tự động kích hoạt sau khi mục tiêu bị tấn công, thi triển thêm 1 lần tấn công lên người tấn công.\nPhản kích cũng thuộc Đòn Đánh Theo Sau.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1194,24 @@
       "simpleDesc": "Khi Yunli bị mục tiêu phe địch tấn công sẽ hồi thêm năng lượng và phản kích ngay, gây Sát Thương Vật Lý cho người tấn công, gây lượng nhỏ Sát Thương Vật Lý cho mục tiêu lân cận.",
       "type": "Thiên Phú",
       "tag": "Khuếch Tán",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Phản Kích",
+          "desc": "Hiệu ứng này tự động kích hoạt sau khi mục tiêu bị tấn công, thi triển thêm 1 lần tấn công lên người tấn công.\nPhản kích cũng thuộc Đòn Đánh Theo Sau.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1536,15 @@
       "simpleDesc": "Khiến bản thân nhận hiệu ứng Ứng Phó, duy trì 20 giây, trong thời gian này tấn công kẻ địch hoặc bị tấn công và vào chiến đấu, sẽ lập tức thi triển Nhìn Thấu - Diệt cho 1 kẻ địch ngẫu nhiên.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1498,37 +1562,97 @@
       "_id": 122101,
       "id": "weathered_blade_does_not_sully",
       "name": "Không Vướng Bụi Trần",
-      "desc": "Sát thương Nhìn Thấu - Chém và Nhìn Thấu - Diệt gây ra tăng <nobr>20%</nobr>, số lần sát thương thêm của Nhìn Thấu - Diệt tăng <nobr>3</nobr>."
+      "desc": "Sát thương Nhìn Thấu - Chém và Nhìn Thấu - Diệt gây ra tăng <nobr>20%</nobr>, số lần sát thương thêm của Nhìn Thấu - Diệt tăng <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122102,
       "id": "first_luster_breaks_dawn",
       "name": "Mầm Sống Nảy Nở",
-      "desc": "Khi phát động <u>Phản Kích</u> gây sát thương, sẽ bỏ qua <nobr>20%</nobr> Phòng Thủ của mục tiêu phe địch."
+      "desc": "Khi phát động <u>Phản Kích</u> gây sát thương, sẽ bỏ qua <nobr>20%</nobr> Phòng Thủ của mục tiêu phe địch.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Phản Kích",
+          "desc": "Hiệu ứng này tự động kích hoạt sau khi mục tiêu bị tấn công, thi triển thêm 1 lần tấn công lên người tấn công.\nPhản kích cũng thuộc Đòn Đánh Theo Sau.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122103,
       "id": "mastlength_twirls_mountweight",
       "name": "Cửu Xích Vận Cân",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122104,
       "id": "artisans_ironsong",
       "name": "Thợ Giỏi Rèn Kiếm Sắc",
-      "desc": "Sau khi phát động Nhìn Thấu - Chém hoặc Nhìn Thấu - Diệt sẽ khiến Kháng Hiệu Ứng của bản thân tăng <nobr>50%</nobr>, duy trì <nobr>1</nobr> hiệp."
+      "desc": "Sau khi phát động Nhìn Thấu - Chém hoặc Nhìn Thấu - Diệt sẽ khiến Kháng Hiệu Ứng của bản thân tăng <nobr>50%</nobr>, duy trì <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122105,
       "id": "blade_of_old_outlasts_all",
       "name": "Binh Khí Vĩnh Hằng, Lòng Dạ Kiên Định",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122106,
       "id": "walk_in_blade_talk_in_zither",
       "name": "Đánh Đàn Múa Kiếm, Can Đảm Uyển Chuyển",
-      "desc": "Trong thời gian Chống Đỡ, khi phe địch chủ động thi triển kỹ năng, cho dù có tấn công Yunli hay không đều sẽ kích hoạt Nhìn Thấu - Diệt đồng thời xóa hiệu ứng Chống Đỡ, khi phát động Nhìn Thấu - Chém hoặc Nhìn Thấu - Diệt gây sát thương, Tỷ Lệ Bạo Kích sẽ tăng <nobr>15%</nobr>, <u>Xuyên Kháng</u> Vật Lý tăng <nobr>20%</nobr>."
+      "desc": "Trong thời gian Chống Đỡ, khi phe địch chủ động thi triển kỹ năng, cho dù có tấn công Yunli hay không đều sẽ kích hoạt Nhìn Thấu - Diệt đồng thời xóa hiệu ứng Chống Đỡ, khi phát động Nhìn Thấu - Chém hoặc Nhìn Thấu - Diệt gây sát thương, Tỷ Lệ Bạo Kích sẽ tăng <nobr>15%</nobr>, <u>Xuyên Kháng</u> Vật Lý tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11221,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 8006,
   "id": "trailblazer_harmony_girl",
   "name": "Trailblazer Harmony",
+  "description": "Anak muda yang naik ke Astral Express.\nDia memilih untuk bertualang dengan Astral Express demi menghilangkan krisis yang disebabkan Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Mengakibatkan Imaginary DMG dalam jumlah kecil pada 1 musuh, total Bounce 5 kali.",
       "type": "Skill",
       "tag": "Bounce",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "Menambahkan efek \"Backup Dancer\" pada seluruh rekan tim. Break Effect rekan tim yang memiliki \"Backup Dancer\" akan meningkat, dan setelah menyerang target musuh berstatus Weakness Break, akan mengakibatkan 1 kali Super Break DMG tambahan.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Status Weakness Break",
+          "desc": "Saat Toughness target musuh berkurang menjadi 0, akan memasuki status Weakness Break, yang dapat menunda aksi musuh.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Super Break DMG",
+          "desc": "Semakin tinggi Break Effect, level karakter, dan pengurangan nilai Toughness dari serangan kali ini, maka Super Break DMG yang diakibatkan akan semakin tinggi.\nSuper Break DMG tidak dapat CRIT Hit, dan tidak akan terkena pengaruh efek peningkatan DMG.\nSuper Break DMG juga termasuk Break DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "Saat ada target musuh yang terkena Weakness Break, Trailblazer akan memulihkan Energy.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "Meningkatkan Break Effect seluruh rekan tim saat pertempuran berikutnya dimulai.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800601,
       "id": "best_seat_in_the_house",
       "name": "Best Seat in the House",
-      "desc": "Memulihkan <nobr>1</nobr> Poin Skill setelah melancarkan Skill untuk pertama kalinya dalam pertempuran."
+      "desc": "Memulihkan <nobr>1</nobr> Poin Skill setelah melancarkan Skill untuk pertama kalinya dalam pertempuran.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800602,
       "id": "jailbreaking_rainbowwalk",
       "name": "Jailbreaking Rainbowwalk",
-      "desc": "Saat pertempuran dimulai, Energy Regeneration Rate Trailblazer akan meningkat <nobr>25%</nobr>, berlangsung selama <nobr>3</nobr> giliran."
+      "desc": "Saat pertempuran dimulai, Energy Regeneration Rate Trailblazer akan meningkat <nobr>25%</nobr>, berlangsung selama <nobr>3</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800603,
       "id": "sanatorium_for_rest_notes",
       "name": "Sanatorium for Rest Notes",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800604,
       "id": "dove_in_tophat",
       "name": "Dove in Tophat",
-      "desc": "Saat Trailblazer berada di medan pertempuran, meningkatkan Break Effect seluruh rekan tim selain Trailblazer, peningkatannya sebesar <nobr>15%</nobr> dari Break Effect Trailblazer."
+      "desc": "Saat Trailblazer berada di medan pertempuran, meningkatkan Break Effect seluruh rekan tim selain Trailblazer, peningkatannya sebesar <nobr>15%</nobr> dari Break Effect Trailblazer.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800605,
       "id": "poem_favors_rhythms_of_old",
       "name": "Poem Favors Rhythms of Old",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800606,
       "id": "tomorrow_rest_in_spotlight",
       "name": "Tomorrow, Rest in Spotlight",
-      "desc": "DMG Tambahan dari Skill bertambah <nobr>2</nobr> kali."
+      "desc": "DMG Tambahan dari Skill bertambah <nobr>2</nobr> kali.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "Luocha",
+  "description": "Lúc nào cũng mang bên mình một chiếc quan tài, là một thương nhân đến từ một nơi xa xôi bên ngoài biển lớn.\nY thuật cao siêu.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Số Ảo cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Giúp 1 đồng đội hồi HP, nhận 1 tầng \"Khoảnh Khắc Hoa Trắng\".",
       "type": "Chiến Kỹ",
       "tag": "Hồi Phục",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "Giải trừ 1 hiệu ứng buff của toàn bộ phe địch, và gây Sát Thương Số Ảo cho chúng, nhận 1 tầng Khoảnh Khắc Hoa Trắng.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Hiệu Ứng Buff",
+          "desc": "Tất cả trạng thái duy trì có hiệu ứng buff đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "Khi Khoảnh Khắc Hoa Trắng đạt tầng 2 sẽ mở kết giới. Khi kết giới còn tồn tại, sẽ hồi HP sau khi phe ta tấn công.",
       "type": "Thiên Phú",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "Dùng Bí Kỹ, lần sau vào trận sẽ kích hoạt ngay hiệu ứng Thiên Phú.",
       "type": "Bí Kỹ",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Người Sống Rửa Tội",
-      "desc": "Khi kết giới có hiệu lực, tấn công của toàn bộ phe ta tăng <nobr>20%</nobr>."
+      "desc": "Khi kết giới có hiệu lực, tấn công của toàn bộ phe ta tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "Tịnh Đình Tặng Lễ",
-      "desc": "Khi kích hoạt hiệu ứng Chiến Kỹ, nếu phần trăm HP hiện tại của mục tiêu chỉ định của phe ta dưới <nobr>50%</nobr>, thì lượng trị liệu mà Luocha cung cấp sẽ tăng <nobr>30%</nobr>; nếu phần trăm HP hiện tại của mục tiêu chỉ định của phe ta từ <nobr>50%</nobr> trở lên, sẽ cung cấp cho mục tiêu đó một tấm Khiên có thể triệt tiêu sát thương bằng <nobr>18%</nobr> Tấn Công của Luocha +<nobr>240</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi kích hoạt hiệu ứng Chiến Kỹ, nếu phần trăm HP hiện tại của mục tiêu chỉ định của phe ta dưới <nobr>50%</nobr>, thì lượng trị liệu mà Luocha cung cấp sẽ tăng <nobr>30%</nobr>; nếu phần trăm HP hiện tại của mục tiêu chỉ định của phe ta từ <nobr>50%</nobr> trở lên, sẽ cung cấp cho mục tiêu đó một tấm Khiên có thể triệt tiêu sát thương bằng <nobr>18%</nobr> Tấn Công của Luocha +<nobr>240</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "Kẻ Ngốc Dò Thám",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "Mũ Gai Xét Xử",
-      "desc": "Khi Kết Giới có hiệu lực sẽ khiến kẻ địch rơi vào trạng thái Suy Yếu, sát thương gây ra giảm <nobr>12%</nobr>."
+      "desc": "Khi Kết Giới có hiệu lực sẽ khiến kẻ địch rơi vào trạng thái Suy Yếu, sát thương gây ra giảm <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "Dấu Vết Gặp Nạn",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "Trở Về Cát Bụi",
-      "desc": "Khi thi triển Tuyệt Kỹ, có <nobr>100%</nobr> <u>xác suất cố định</u> khiến Kháng Toàn Thuộc Tính của toàn bộ phe địch giảm <nobr>20%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi thi triển Tuyệt Kỹ, có <nobr>100%</nobr> <u>xác suất cố định</u> khiến Kháng Toàn Thuộc Tính của toàn bộ phe địch giảm <nobr>20%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Xác Suất Cố Định",
+          "desc": "Xác suất cố định không bị ảnh hưởng bởi bất cứ nhân tố nào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

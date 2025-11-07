@@ -2,6 +2,7 @@
   "_id": 1106,
   "id": "pela",
   "name": "Pela",
+  "description": "Petugas intelijen Silvermane Guard.\nDia memiliki kepribadian yang serius dan dihormati oleh para anggota Silvermane Guard lainnya.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Menghapus 1 efek Buff dari 1 musuh, dan mengakibatkan Ice DMG pada target tersebut.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Buff memperkuat kemampuan tempur target untuk jangka waktu tertentu. Jika tidak ada ketentuan khusus, maka Buff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +756,27 @@
       "simpleDesc": "Berpeluang besar untuk mengurangi DEF target musuh, serta mengakibatkan Ice DMG dalam jumlah kecil pada seluruh musuh.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1110,24 @@
       "simpleDesc": "Setelah melancarkan serangan, jika target musuh memasuki status Debuff, Energy Pela akan dipulihkan.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1415,24 @@
       "desc": "Segera menyerang musuh. Setelah memasuki pertempuran, mengakibatkan Ice DMG sebesar #4[i]% ATK Pela pada musuh secara acak, dan di saat bersamaan seluruh target musuh memiliki #1[i]% peluang dasar untuk mengalami #2[i]% penurunan DEF selama #3[i] giliran.",
       "simpleDesc": "Setelah menyerang musuh dan memasuki pertempuran, akan mengakibatkan DMG dalam jumlah kecil pada musuh secara acak dan berpeluang besar mengurangi DEF setiap target musuh.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1452,114 @@
       "_id": 110601,
       "id": "victory_report",
       "name": "Victory Report",
-      "desc": "Saat ada target musuh yang dikalahkan, Pela akan memulihkan <nobr>5</nobr> Energy."
+      "desc": "Saat ada target musuh yang dikalahkan, Pela akan memulihkan <nobr>5</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110602,
       "id": "adamant_charge",
       "name": "Adamant Charge",
-      "desc": "Setelah melancarkan Skill untuk menghapus <u>efek Buff</u>, SPD akan meningkat <nobr>10%</nobr> selama <nobr>2</nobr> giliran."
+      "desc": "Setelah melancarkan Skill untuk menghapus <u>efek Buff</u>, SPD akan meningkat <nobr>10%</nobr> selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Buff memperkuat kemampuan tempur target untuk jangka waktu tertentu. Jika tidak ada ketentuan khusus, maka Buff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110603,
       "id": "suppressive_force",
       "name": "Suppressive Force",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110604,
       "id": "full_analysis",
       "name": "Full Analysis",
-      "desc": "Saat melancarkan Skill, memiliki <nobr>100%</nobr> <u>peluang dasar</u> untuk mengurangi <nobr>12%</nobr> Ice RES target musuh selama <nobr>2</nobr> giliran."
+      "desc": "Saat melancarkan Skill, memiliki <nobr>100%</nobr> <u>peluang dasar</u> untuk mengurangi <nobr>12%</nobr> Ice RES target musuh selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110605,
       "id": "absolute_jeopardy",
       "name": "Absolute Jeopardy",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110606,
       "id": "feeble_pursuit",
       "name": "Feeble Pursuit",
-      "desc": "Jika Pela melancarkan serangan pada target musuh yang terkena <u>efek Debuff</u>, Pela akan mengakibatkan Ice <u>DMG Tambahan</u> sebesar <nobr>40%</nobr> ATK Pela."
+      "desc": "Jika Pela melancarkan serangan pada target musuh yang terkena <u>efek Debuff</u>, Pela akan mengakibatkan Ice <u>DMG Tambahan</u> sebesar <nobr>40%</nobr> ATK Pela.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuff melemahkan kemampuan tempur target untuk jangka waktu tertentu. Kecuali ada ketentuan lain, Debuff dapat dihilangkan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

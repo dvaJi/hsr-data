@@ -2,6 +2,7 @@
   "_id": 1004,
   "id": "welt",
   "name": "Welt",
+  "description": "Tiền bối dày dạn kinh nghiệm của Đội Tàu Astral.\nSự nhiệt huyết tận sâu trong đáy lòng lại một lần nữa được thổi bùng để tận hưởng cuộc phiêu lưu đã từ lâu chưa dấn thân.\nThỉnh thoảng sẽ vẽ lại hành trình phiêu lưu của mình vào một quyển sổ.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Số Ảo cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Gây một lượng nhỏ Sát Thương Số Ảo cho 1 kẻ địch, tổng cộng Nảy Bật 3 lần, có xác suất thi triển trạng thái Giảm Tốc cho mục tiêu.",
       "type": "Chiến Kỹ",
       "tag": "Nảy Bật",
+      "spBase": 10,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,32 @@
       "simpleDesc": "Gây Sát Thương Số Ảo cho toàn phe địch, có xác suất lớn thi triển hiệu ứng Giam Cầm.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Trì Hoãn Hành Động",
+          "desc": "Kéo dài khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1157,27 @@
       "simpleDesc": "Khi đánh trúng kẻ địch ở trạng thái Giảm Tốc sẽ gây thêm một lượng nhỏ Sát Thương Số Ảo kèm theo.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1472,32 @@
       "simpleDesc": "Tạo một khu vực đặc biệt. Giảm tốc độ di chuyển của kẻ địch trong khu vực. Sau khi vào chiến đấu với kẻ địch trong khu vực, sẽ có xác suất lớn khiến kẻ địch rơi vào trạng thái Giam Cầm.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Trì Hoãn Hành Động",
+          "desc": "Kéo dài khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1411,37 +1518,97 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "Kế Thừa Danh Hiệu",
-      "desc": "Sau khi thi triển Tuyệt Kỹ, Welt được cường hóa, <nobr>2</nobr> lần Tấn Công Thường hoặc Chiến Kỹ tiếp theo sẽ gây thêm 1 lần <u>Sát Thương Kèm Theo</u> cho mục tiêu phe địch. <u>Sát Thương Kèm Theo</u> gây ra bởi Tấn Công Thường bằng <nobr>50%</nobr> Bội Số Sát Thương Tấn Công Thường, <u>Sát Thương Kèm Theo</u> gây ra bởi Chiến Kỹ bằng <nobr>80%</nobr> Bội Số Sát Thương Chiến Kỹ."
+      "desc": "Sau khi thi triển Tuyệt Kỹ, Welt được cường hóa, <nobr>2</nobr> lần Tấn Công Thường hoặc Chiến Kỹ tiếp theo sẽ gây thêm 1 lần <u>Sát Thương Kèm Theo</u> cho mục tiêu phe địch. <u>Sát Thương Kèm Theo</u> gây ra bởi Tấn Công Thường bằng <nobr>50%</nobr> Bội Số Sát Thương Tấn Công Thường, <u>Sát Thương Kèm Theo</u> gây ra bởi Chiến Kỹ bằng <nobr>80%</nobr> Bội Số Sát Thương Chiến Kỹ.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100402,
       "id": "conflux_of_stars",
       "name": "Hội Tụ Ngôi Sao",
-      "desc": "Khi kích hoạt Thiên Phú, Welt hồi <nobr>3</nobr> Năng Lượng."
+      "desc": "Khi kích hoạt Thiên Phú, Welt hồi <nobr>3</nobr> Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100403,
       "id": "prayer_of_peace",
       "name": "Cầu Nguyện Hoà Bình",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100404,
       "id": "appellation_of_justice",
       "name": "Danh Hiệu Chính Nghĩa",
-      "desc": "Khi thi triển Chiến Kỹ sẽ tăng <nobr>35%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu phe địch bị tấn công giảm tốc."
+      "desc": "Khi thi triển Chiến Kỹ sẽ tăng <nobr>35%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu phe địch bị tấn công giảm tốc.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100405,
       "id": "power_of_kindness",
       "name": "Sức Mạnh Thiện Lương",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "Tương Lai Tươi Sáng",
-      "desc": "Khi thi triển Chiến Kỹ sẽ gây thêm 1 lần sát thương cho 1 kẻ địch ngẫu nhiên."
+      "desc": "Khi thi triển Chiến Kỹ sẽ gây thêm 1 lần sát thương cho 1 kẻ địch ngẫu nhiên.",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

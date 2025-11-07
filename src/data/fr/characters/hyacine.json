@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "Hyacine",
+  "description": "Alors que la cité-État des nuages s'éteint au fil du temps, la Cour du crépuscule ouvre à nouveau ses portes et offre un rayon d'espoir dans l'Éternuitée.\nToi, Hyacinthia la guérisseuse, Héritière chryséenne qui garde la flamme divine du Ciel, tu portes désormais le flambeau de tes ancêtres et dois réparer le tissu déchiré entre l'aube et le crépuscule.\nPuisse la lumière de l'arc-en-ciel se déverser, effacer les anciennes rancœurs et faire renaître l'aube sur ces terres.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Invoque le mnémesprit Ica, et restaure les PV de tous les alliés.",
       "type": "Compétence",
       "tag": "Restauration",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "Invoque le mnémesprit Ica, et restaure les PV de tous les alliés. Entre dans l'état Pétrichor. Lorsque Hyacine est dans cet état, les PV max de tous les alliés augmentent.",
       "type": "Ultime",
       "tag": "Soutien",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "Augmente les DGT infligés par Ica lorsque Hyacine ou Ica prodiguent des soins.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "Restaure les PV de tous les alliés et augmente leurs PV max au début du prochain combat.",
       "type": "Technique",
       "tag": "Restauration",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Ica",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "Fuyez pauvres nuages !",
+        "desc": "Inflige à tous les ennemis des DGT de vent équivalents à <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> du total des soins prodigués par Hyacine et Ica au cours du combat, et réduit de <nobr>#2[i]%</nobr> le compteur des soins prodigués.",
+        "simpleDesc": "Inflige des DGT de vent à tous les ennemis.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ZdE"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "Garde-ciel",
+        "desc": "La VIT d'Ica est toujours de 0. Il est immunisé aux <u>malus</u> et n'apparaît pas dans l'ordre d'action.\nSi les PV d'une cible alliée (à l'exception d'Ica) sont réduits, au début du tour d'une cible ou après avoir agi, Ica consomme <nobr>#1[i]%</nobr> de ses propres PV pour restaurer des PV équivalents à <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> des PV max de Hyacine + <span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span> à la cible aux PV réduits.\nLorsque Hyacine est dans l'état Pétrichor, Ica obtient immédiatement 1 <u>tour supplémentaire</u> et utilise automatiquement Fuyez pauvres nuages ! après que Hyacine utilise une capacité. De plus, lorsqu'Ica déclenche l'effet de soin du talent, il restaure des PV supplémentaires pour tous les alliés d'un montant équivalent à <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> des PV max de Hyacine + <span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>. Après qu'Ica lance une capacité, la durée de tous les <u>effets continus</u> d'Ica est réduite d'un tour.",
+        "simpleDesc": "Si les PV d'une cible alliée (à l'exception d'Ica) <span style=\"color:#f29e38ff>sont réduits</span>, Ica consomme ses propres PV et <span style=\"color:#f29e38ff>restaure les PV</span> de cette cible. Lorsque Hyacine bénéficie de Pétrichor, Ica obtient immédiatement 1 <u>tour supplémentaire</u> et lance automatiquement la compétence du mnémesprit après que Hyacine utilise une capacité. Après qu'Ica lance une capacité, la durée de tous les <u>effets continus</u> d'Ica est réduite d'un tour.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "Restauration"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "Tour supplémentaire",
+            "desc": "Gagne 1 tour supplémentaire qui n'augmente pas le nombre de tours avant la prochaine action. Durant ce tour supplémentaire, vous ne pouvez pas utiliser d'ultime.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "Malus",
+            "desc": "Les malus sont des effets de statut négatifs qui affaiblissent les unités. Sauf indication contraire, les malus peuvent être dissipés.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "Effet continu",
+            "desc": "Comprend les bonus, les malus et d'autres effets.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "Envol solaire",
+        "desc": "Hyacine régénère <nobr>#1[i]</nobr> points d'énergie lorsqu'Ica est invoqué. Lors de la première invocation, régénère <nobr>#2[i]</nobr> points d'énergie supplémentaires.",
+        "simpleDesc": "Lorsque cette unité est invoquée, Hyacine régénère des points d'énergie.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Renforcement"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "Piqué avant ascension",
+        "desc": "<u>Avance l'action</u> de Hyacine de <nobr>#1[i]%</nobr> après sa disparition.",
+        "simpleDesc": "<u>Avance l'action</u> de Hyacine après sa disparition.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Renforcement"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Action avancée",
+            "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "Protectrice de la flamme nocturne",
-      "desc": "Lorsque Hyacine est dans l'état Pétrichor, augmente les PV max de tous les alliés de <nobr>50%</nobr> supplémentaires, et restaure immédiatement un montant de PV équivalents à <nobr>8%</nobr> des PV max de Hyacine après avoir attaqué."
+      "desc": "Lorsque Hyacine est dans l'état Pétrichor, augmente les PV max de tous les alliés de <nobr>50%</nobr> supplémentaires, et restaure immédiatement un montant de PV équivalents à <nobr>8%</nobr> des PV max de Hyacine après avoir attaqué.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "Assieds-toi dans ma cour",
-      "desc": "Lorsque les PV d'une cible alliée diminuent, la VIT de cette unité augmente de <nobr>30%</nobr> pendant <nobr>2</nobr> tours."
+      "desc": "Lorsque les PV d'une cible alliée diminuent, la VIT de cette unité augmente de <nobr>30%</nobr> pendant <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "Partons vers le soleil !",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "Je te donne cette ambre éclatante",
-      "desc": "Renforce la Trace « Arrêt tempétueux ». Augmente les DGT critiques de Hyacine et d'Ica de <nobr>2%</nobr> supplémentaires pour chaque <nobr>1</nobr> point de VIT en excédent."
+      "desc": "Renforce la Trace « Arrêt tempétueux ». Augmente les DGT critiques de Hyacine et d'Ica de <nobr>2%</nobr> supplémentaires pour chaque <nobr>1</nobr> point de VIT en excédent.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "Satin crépusculaire des marées",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "Ciel, entends mes prières",
-      "desc": "La valeur des soins cumulés supprimée lorsqu'Ica lance la compétence de mnémesprit passe à <nobr>12%</nobr>. Lorsqu'Ica est sur le champ de bataille, la <u>PÉN de RÉS</u> à tous les types de toutes les cibles alliées augmente de <nobr>20%</nobr>."
+      "desc": "La valeur des soins cumulés supprimée lorsqu'Ica lance la compétence de mnémesprit passe à <nobr>12%</nobr>. Lorsqu'Ica est sur le champ de bataille, la <u>PÉN de RÉS</u> à tous les types de toutes les cibles alliées augmente de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

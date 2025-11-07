@@ -2,6 +2,7 @@
   "_id": 1408,
   "id": "phainon",
   "name": "파이논",
+  "description": "세상과 동떨어진 변방 마을 엘리사이 에데스는 오늘날 안개에 싸인 전설로만 남아 있다.\n이름 없는 영웅 █████, 「부세」의 불씨를 담은 황금의 후예여, 세상의 이상을 기억하고 모든 이의 운명을 짊어지며, 신세계에 첫 번째 서광을 가져와라.\n——「그러나 여명이 처음부터 존재하지 않았다면, 분노의 불길로 이 몸을 불태워 내일의 뜨거운 태양이 되리라!」",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 물리 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "[불씨]를 #3[i]pt 획득하고, 단일 적에게 대량의 물리 속성 피해를 가하며, 인접한 목표에게 물리 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "카오스라나로 변신하고 경계를 펼친다. 해당 경계에서는 동료가 퇴장하고 행동할 수 없으며, 모든 적은 물리 속성 약점을 보유한다.\n카오스라나는 자신의 턴에 진입하지 않는 대신 카오스라나의 보너스 턴을 #4[i]개 보유하며, 마지막 턴에 마지막 일격을 발동해 모든 적이 균등 분담하는 대량의 물리 속성 피해를 가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000020,
+          "name": "경계",
+          "desc": "경계 효과는 필드 전체에 하나만 존재 가능하며, 지속 시간 동안 다른 경계 효과 스킬을 발동할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000016,
+          "name": "퇴장",
+          "desc": "퇴장 상태인 목표는 스킬 목표가 될 수 없으며, 행동 서열에 나타나지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014082,
+          "name": "카오스라나의 보너스 턴",
+          "desc": "파이논이 카오스라나로 변신 시 행동 서열에 나타나는 카운트다운. 카운트다운 턴 시작 시 카오스라나는 보너스 턴을 1개 획득하며, 마지막 카운트다운 턴 시작 시 카오스라나가 마지막 일격을 가하고 변신을 종료하는 것으로 변경된다.\n카운트다운의 초기 행동 수치는 평균 0~<nobr>100%</nobr> 사이로 설정되며, 각 웨이브 시작 시 행동 수치가 초기화되지 않는다.\n카오스라나가 행동 게이지 증가 효과를 받으면 첫 카운트다운 행동 게이지가 증가하는 것으로 변경된다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,15 @@
       "simpleDesc": "파이논의 특성. [불씨]가 #4[i]pt에 도달하면 필살기를 활성화할 수 있다.\n파이논이 다른 목표의 스킬 목표가 될 시 [불씨]를 획득한다. 파티원의 스킬 목표가 될 시 치명타 피해가 증가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1482,24 @@
       "desc": "파이논이 파티에 있을 시 비술 포인트 최대치가 3pt 증가한다.\n비술을 직접 발동하면 비술 포인트를 2pt 소모하고 즉시 일정 범위 내의 모든 적을 공격한다. 전투 진입 후 아군의 에너지를 #3[i]pt 회복하고, [훼멸] #2[i]pt와 전투 스킬 포인트 #4[i]pt를 획득하며, 웨이브가 시작될 때마다 모든 적에게 파이논 공격력의 #1[i]%만큼 물리 속성 피해를 가한다.\n일반 적을 공격하면 대상을 즉시 처치하며 전투에 진입하지 않는다. 적을 명중하지 못하면 비술 포인트를 소모하지 않는다",
       "simpleDesc": "비술 포인트 최대치가 3pt 증가한다. 직접 발동 시 비술 포인트를 2pt 소모하고 일정 범위 내의 모든 적을 공격한다. 전투 진입 후 아군의 에너지, 전투 스킬 포인트, [훼멸]을 회복하고 웨이브가 시작될 때마다 모든 적에게 물리 속성 피해를 가한다.\n일반 적을 공격하면 대상을 즉시 처치하며 전투에 진입하지 않는다. 적을 명중하지 못하면 비술 포인트를 소모하지 않는다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10014081,
+          "name": "훼멸",
+          "desc": "카오스라나 전용 충전, 최대치: 7pt. 변신하지 않을 때도 유지된다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1439,37 +1519,122 @@
       "_id": 140801,
       "id": "fire_and_light_bind_virtue_and_vice",
       "name": "불과 빛, 선악의 화신",
-      "desc": "<u>카오스라나의 보너스 턴</u>의 기본 속도 계승 비율이 <nobr>66%</nobr>로 증가한다. 단일 전투에서 적이 1기 처치될 때마다 추가로 <nobr>#1[f1]%</nobr> 증가하고, 최대 <nobr>84%</nobr>까지 증가한다.\n필살기 발동 시 치명타 피해가 <nobr>50%</nobr> 증가한다, 지속 시간: <nobr>3</nobr>턴"
+      "desc": "<u>카오스라나의 보너스 턴</u>의 기본 속도 계승 비율이 <nobr>66%</nobr>로 증가한다. 단일 전투에서 적이 1기 처치될 때마다 추가로 <nobr>#1[f1]%</nobr> 증가하고, 최대 <nobr>84%</nobr>까지 증가한다.\n필살기 발동 시 치명타 피해가 <nobr>50%</nobr> 증가한다, 지속 시간: <nobr>3</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10014082,
+          "name": "카오스라나의 보너스 턴",
+          "desc": "파이논이 카오스라나로 변신 시 행동 서열에 나타나는 카운트다운. 카운트다운 턴 시작 시 카오스라나는 보너스 턴을 1개 획득하며, 마지막 카운트다운 턴 시작 시 카오스라나가 마지막 일격을 가하고 변신을 종료하는 것으로 변경된다.\n카운트다운의 초기 행동 수치는 평균 0~<nobr>100%</nobr> 사이로 설정되며, 각 웨이브 시작 시 행동 수치가 초기화되지 않는다.\n카오스라나가 행동 게이지 증가 효과를 받으면 첫 카운트다운 행동 게이지가 증가하는 것으로 변경된다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140802,
       "id": "sky_and_earth_churn_mortal_froth",
       "name": "하늘과 땅, 세상의 포영",
-      "desc": "카오스라나의 물리 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. [기둥•죽음의 별의 심판] 1회 발동으로 소모하는 <u>[훼멸]</u> 포인트가 <nobr>4</nobr>pt 도달 시 <u>보너스 턴</u>을 1개 획득한다"
+      "desc": "카오스라나의 물리 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. [기둥•죽음의 별의 심판] 1회 발동으로 소모하는 <u>[훼멸]</u> 포인트가 <nobr>4</nobr>pt 도달 시 <u>보너스 턴</u>을 1개 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014081,
+          "name": "훼멸",
+          "desc": "카오스라나 전용 충전, 최대치: 7pt. 변신하지 않을 때도 유지된다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "보너스 턴",
+          "desc": "턴 횟수를 소모하지 않는 보너스 턴 1개를 획득한다. 해당 턴에서는 필살기를 발동할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140803,
       "id": "depths_of_quiet_entombed_in_ruin",
       "name": "무수한 고요함은 귀허에 묻혔고",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140804,
       "id": "faces_of_titans_blurred_by_time",
       "name": "수없는 티탄의 얼굴이 흐릿해졌네",
-      "desc": "[재앙•영혼과 천명의 소멸] 발동 시 [영혼을 파쇄하는 불길]을 추가로 <nobr>4</nobr>스택 획득한다"
+      "desc": "[재앙•영혼과 천명의 소멸] 발동 시 [영혼을 파쇄하는 불길]을 추가로 <nobr>4</nobr>스택 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140805,
       "id": "the_wheel_spins_forevermore",
       "name": "영겁의 시곗바늘, 삼천만 번의 회전",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140806,
       "id": "embers_of_old_rise_still",
       "name": "이지러진 석양, 영원토록 떠오르리",
-      "desc": "[불씨]의 초과 가능 포인트에 상한이 없어진다. 전투 시작 시 [불씨]를 <nobr>6</nobr>pt 획득한다.\n[기둥•죽음의 별의 심판]의 공격 발동 후 HP가 가장 높은 적에게 추가로 이번 공격 총 피해량의 <nobr>36%</nobr>만큼 <u>확정 피해</u>를 가한다"
+      "desc": "[불씨]의 초과 가능 포인트에 상한이 없어진다. 전투 시작 시 [불씨]를 <nobr>6</nobr>pt 획득한다.\n[기둥•죽음의 별의 심판]의 공격 발동 후 HP가 가장 높은 적에게 추가로 이번 공격 총 피해량의 <nobr>36%</nobr>만큼 <u>확정 피해</u>를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "확정 피해",
+          "desc": "어떤 효과에도 영향을 받지 않는 무속성 피해, 이번 피해는 공격을 1회 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

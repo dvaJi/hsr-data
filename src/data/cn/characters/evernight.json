@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "长夜月",
+  "description": "与世相隔的忆域，烛火映出过往，于迷雾中悄然熄去。\n自那影中而来的记忆之子长夜月，隐匿「岁月」火种的黄金裔，掀起「忘却」的浪潮，守护镜中人的心愿\n——「别担心，我会为你看护『开拓』的前路…不惜任何代价♭」",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "对指定敌方单体造成少量冰属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "消耗自身生命值召唤忆灵「长夜」，并使我方全体忆灵的暴击伤害提高。若忆灵「长夜」已在场，为其回复生命值。施放时，获得#3[i]点【忆质】，若处于【至暗之谜】状态，额外获得#5[i]点【忆质】。",
       "type": "战技",
       "tag": "召唤",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "对敌方全体造成冰属性伤害，召唤忆灵「长夜」并使长夜月进入【至暗之谜】状态，期间敌方受到的伤害提高，长夜月和忆灵造成的伤害提高，免疫控制类负面状态。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "控制类负面状态",
+          "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "进入战斗时召唤忆灵「长夜」。自身或忆灵「长夜」每次生命降低时，使自身和忆灵「长夜」的暴击伤害提高，并获得【忆质】。\n当长夜月持有的【忆质】数量大于等于#6[i]点时，使忆灵「长夜」立即行动。",
       "type": "天赋",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "召唤忆灵",
+          "desc": "将忆灵召唤到场上。若忆灵已在场，解除忆灵陷入的所有控制类负面状态。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "控制类负面状态",
+          "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "下一次战斗开始时，获得与战技相同的提高忆灵暴击伤害的效果，并额外获得【忆质】。",
       "type": "秘技",
       "tag": "辅助",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "长夜",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "追忆，蹁跹，如雨",
+        "desc": "该技能自动选择目标施放，优先攻击长夜月上次攻击的敌方目标。对敌方单体造成等同于「长夜」<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>生命上限的冰属性伤害，长夜月当前每有<nobr>#3[i]</nobr>点【忆质】，则额外造成等同于「长夜」<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>生命上限的冰属性伤害。施放后获得<nobr>#4[i]</nobr>点【忆质】。",
+        "simpleDesc": "对敌方单体造成少量冰属性伤害，并根据【忆质】数量额外造成少量冰属性伤害。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "单攻"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "孤独，浮游，漆黑",
+        "desc": "「长夜」免疫<u>控制类负面状态</u>，被攻击的概率提高。「长夜」在场时，长夜月和「长夜」造成的伤害提高<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>。",
+        "simpleDesc": "忆灵「长夜」免疫<u>控制类负面状态</u>，被攻击的概率提高。在场时，自身和长夜月造成的伤害提高。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "辅助"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "控制类负面状态",
+            "desc": "冻结，纠缠，禁锢，支配，怒噪，强烈震荡，异梦，缠禁，恐惧，行动锁定。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "与夜，形影，不离",
+        "desc": "被召唤时，使自身立即行动。",
+        "simpleDesc": "被召唤时，使自身立即行动。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "强化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "与你，再见，无期",
+        "desc": "消失时，使长夜月的速度提高<nobr>#1[i]%</nobr>，若因施放【迷梦，流失，如露】消失，本次攻击每消耗了1点【忆质】额外使长夜月的速度提高<nobr>#2[i]%</nobr>，最多计算<nobr>#3[i]</nobr>点【忆质】。加速效果无法叠加，长夜月下个回合开始时移除。",
+        "simpleDesc": "消失时，使长夜月的速度提高。",
+        "type": {
+          "name": "忆灵天赋"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "强化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "迷梦，流失，如露",
+        "desc": "长夜月的【忆质】大于等于<nobr>#3[i]</nobr>点，且长夜月不处于控制状态时施放，当前每持有1点【忆质】对主目标造成等同于「长夜」<span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>生命上限的冰属性伤害，对其他敌方目标造成等同于「长夜」<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>生命上限的冰属性伤害，施放后，消耗全部【忆质】和生命值，并使「长夜」消失。",
+        "simpleDesc": "<span style=\"color:#f29e38ff>根据【忆质】数量</span>，对主目标造成大量冰属性伤害，对其他敌方目标造成冰属性伤害。施放后，<span style=\"color:#f29e38ff>消耗全部【忆质】和生命值，并使「长夜」消失</span>。",
+        "type": {
+          "id": "Servant",
+          "name": "忆灵技"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "群攻"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "睡吧，长夜有所梦",
-      "desc": "长夜月在场时，场上敌方目标数量等于4或以上/3/2/1名时，我方忆灵造成的伤害为原伤害的<nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr>。"
+      "desc": "长夜月在场时，场上敌方目标数量等于4或以上/3/2/1名时，我方忆灵造成的伤害为原伤害的<nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "听，沉眠中的呓语",
-      "desc": "长夜月和忆灵「长夜」的暴击伤害提高<nobr>40%</nobr>，每当长夜月获得【忆质】时，使获得的【忆质】数量提高<nobr>2</nobr>点。施放终结技时，额外获得<nobr>2</nobr>点【至暗之谜】的充能。"
+      "desc": "长夜月和忆灵「长夜」的暴击伤害提高<nobr>40%</nobr>，每当长夜月获得【忆质】时，使获得的【忆质】数量提高<nobr>2</nobr>点。施放终结技时，额外获得<nobr>2</nobr>点【至暗之谜】的充能。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "别怕，噩梦已成过去",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级；忆灵天赋等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "醒来，便是你的明天",
-      "desc": "长夜月在场时，我方忆灵的弱点击破效率提高<nobr>25%</nobr>，忆灵「长夜」的弱点击破效率额外提高<nobr>25%</nobr>。"
+      "desc": "长夜月在场时，我方忆灵的弱点击破效率提高<nobr>25%</nobr>，忆灵「长夜」的弱点击破效率额外提高<nobr>25%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "忘却，记忆中的「我」",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级；忆灵技等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "就这样，一直",
-      "desc": "长夜月在场时，我方全体目标的全属性<u>抗性穿透</u>提高<nobr>20%</nobr>。忆灵「长夜」施放【迷梦，流失，如露】后，长夜月获得本次攻击消耗【忆质】数量的<nobr>30%</nobr>。"
+      "desc": "长夜月在场时，我方全体目标的全属性<u>抗性穿透</u>提高<nobr>20%</nobr>。忆灵「长夜」施放【迷梦，流失，如露】后，长夜月获得本次攻击消耗【忆质】数量的<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1402,
   "id": "aglaea",
   "name": "Aglaea",
+  "description": "En la ciudad sagrada, iluminada por el amanecer, la tejedora trabaja con delicadeza el hilo dorado, cosiendo destinos entrelazados.\nUna de los Herederos de Crisos, que porta la Yesca del Romance, convocará a los héroes de este mundo y los guiará una vez más en la extensa travesía...\nPara derrocar a los dioses, devolver el fuego sagrado y otorgar una nueva vida a un Amphoreus casi destruido.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Regenera los PV del Sastre. Cuando el Sastre no está en la batalla, invoca al mnemoduende Sastre y vuelve a actuar inmediatamente.",
       "type": "Habilidad básica",
       "tag": "Invocación",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -749,10 +777,36 @@
       "_id": 140203,
       "id": "dance_destined_weaveress",
       "name": "Bailemos, sastre del destino",
-      "desc": "Invoca al mnemoduende Sastre. Si el Sastre ya está en el campo de batalla, sus PV se regeneran al máximo. Aglaea entra en el estado de Disposición suprema y vuelve a actuar inmediatamente.\nEn el estado de Disposición suprema, Aglaea obtiene las acumulaciones de aumento de VEL del talento del mnemoduende Sastre. Cada acumulación aumenta su VEL en un #1[f1]%. El ataque básico se convierte en Mil besos afilados y no puede lanzar su habilidad básica. El Sastre es inmune a los estados negativos de Control.\nEn el orden de acción aparece una cuenta regresiva con una VEL fija de #4[i]. Mientras está la cuenta regresiva, lanzar de nuevo la habilidad definitiva restablece dicha cuenta, y cuando comienza su turno, el Sastre se autodestruye. Cuando el Sastre desaparece, se disipa el estado de Disposición suprema de Aglaea.",
+      "desc": "Invoca al mnemoduende Sastre. Si el Sastre ya está en el campo de batalla, sus PV se regeneran al máximo. Aglaea entra en el estado de Disposición suprema y vuelve a actuar inmediatamente.\nEn el estado de Disposición suprema, Aglaea obtiene las acumulaciones de aumento de VEL del talento de mnemoduende del Sastre. Cada acumulación aumenta su VEL en un #1[f1]%. El ataque básico se convierte en Mil besos afilados y no puede lanzar su habilidad básica. El Sastre es inmune a los estados negativos de Control.\nEn el orden de acción aparece una cuenta regresiva con una VEL fija de #4[i]. Mientras está la cuenta regresiva, lanzar de nuevo la habilidad definitiva restablece dicha cuenta, y cuando comienza su turno, el Sastre se autodestruye. Cuando el Sastre desaparece, se disipa el estado de Disposición suprema de Aglaea.",
       "simpleDesc": "Invoca al mnemoduende Sastre. Aglaea entra en el estado Disposición suprema y actúa inmediatamente. Además, obtiene un ATQ básico potenciado.",
       "type": "Habilidad definitiva",
       "tag": "Potenciación",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Estados negativos de control",
+          "desc": "Congelación, Enredo, Prisión, Dominación, Cólera, Reverberación potente, Sueño extraño, Enredo-Prisión, Aterrorizado y Bloqueo de acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1122,6 +1176,24 @@
       "simpleDesc": "Cuando Aglaea ataca mientras el Sastre está en la batalla, afecta con Hilván al objetivo. Tras atacar a un objetivo en el estado de Hilván, inflige una pequeña cantidad de Daño de Rayo adicional.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1490,6 +1562,24 @@
       "desc": "Invoca al mnemoduende Sastre y ambos atacan a la vez hacia adelante. Tras entrar en combate, recupera #2[i] pts. de energía, inflige un #1[i]% del ATQ de Aglaea como Daño de Rayo a todos los enemigos y afecta con Hilván a un enemigo al azar.",
       "simpleDesc": "Invoca al mnemoduende Sastre y ambos atacan a la vez hacia delante. Tras entrar en combate, recupera energía, inflige una pequeña cantidad de Daño de Rayo a todos los enemigos y afecta con Hilván a un enemigo al azar.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1502,42 +1592,503 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Sastre",
+    "icon": "SpriteOutput/ServantIconTeam/11402B.png",
+    "hpBase": "#6",
+    "hpInherit": "#5",
+    "hpSkill": 140204,
+    "speedBase": "0",
+    "speedInherit": "#4",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1140201,
+        "name": "Trampa punzante",
+        "desc": "Inflige un <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> de su ATQ como Daño de Rayo a un enemigo y un <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span> de su ATQ como Daño de Rayo a los objetivos adyacentes.",
+        "simpleDesc": "Inflige una pequeña cantidad de Daño de Rayo a un enemigo y a los objetivos adyacentes.",
+        "type": {
+          "id": "Servant",
+          "name": "Habilidad de mnemoduende"
+        },
+        "tag": {
+          "id": "Blast",
+          "name": "Ráfaga"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          15
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.55,
+              0.33,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.66,
+              0.396,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.77,
+              0.462,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.88,
+              0.528,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.99,
+              0.594,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1.1,
+              0.66,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1.21,
+              0.726,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1.32,
+              0.792,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1.43,
+              0.858,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1.54,
+              0.924,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140203,
+        "name": "Cuerpo forjado de lágrimas",
+        "desc": "Tras atacar a un enemigo en el estado de Hilván, su VEL aumenta en <span style=\"color:#f29e38ff><nobr>#1[i]</nobr></span> pts. Este efecto puede acumularse hasta <nobr>#3[i]</nobr> veces. Cuando el Sastre actúa, lanza automáticamente Trampa punzante, priorizando al enemigo en el estado de Hilván.",
+        "simpleDesc": "Tras atacar a un enemigo en el estado de Hilván, <span style=\"color:#f29e38ff>su VEL aumenta</span>. Cuando actúa, ataca automáticamente priorizando al enemigo en el estado de Hilván.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Potenciación"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              44,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              46.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              48.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              50.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              52.8,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              55,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              57.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              59.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              61.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              63.8,
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140205,
+        "name": "Estío fugaz",
+        "desc": "Cuando el Sastre es invocado, su <u>acción se adelanta</u> un <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Cuando es invocado, su <u>acción se adelanta</u>.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Potenciación"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Acción adelantada",
+            "desc": "Reduce el intervalo de espera del objetivo antes de la siguiente acción.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140206,
+        "name": "Profusión de hierbas secas",
+        "desc": "Cuando el Sastre desaparece, Aglaea recupera <nobr>#1[i]</nobr> pts. de energía.",
+        "simpleDesc": "Cuando desaparece, Aglaea recupera energía.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Potenciación"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              20
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "Deriva caprichosa de Venus",
-      "desc": "El daño que recibe el enemigo afectado con Hilván aumenta en un <nobr>15%</nobr>. Cuando Aglaea o el Sastre atacan a ese objetivo, recuperan <nobr>20</nobr> pts. de energía adicionales."
+      "desc": "El daño que recibe el enemigo afectado con Hilván aumenta en un <nobr>15%</nobr>. Cuando Aglaea o el Sastre atacan a ese objetivo, recuperan <nobr>20</nobr> pts. de energía adicionales.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "Párpados que navegan el destino",
-      "desc": "Cuando Aglaea o el Sastre actúan, el daño que infligen Aglaea y el Sastre ignora un <nobr>14%</nobr> de la DEF del objetivo. Este efecto se puede acumular hasta <nobr>3</nobr> veces y dura hasta que cualquier unidad que no sea el Sastre o Aglaea lance una habilidad de forma proactiva."
+      "desc": "Cuando Aglaea o el Sastre actúan, el daño que infligen Aglaea y el Sastre ignora un <nobr>14%</nobr> de la DEF del objetivo. Este efecto se puede acumular hasta <nobr>3</nobr> veces y dura hasta que cualquier unidad que no sea el Sastre o Aglaea lance una habilidad de forma proactiva.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "Don del rocío bello",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de talento del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de talento de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "Destello bajo el mármol",
-      "desc": "El límite de acumulaciones del efecto de aumento de VEL del talento del mnemoduende aumenta en <nobr>1</nobr>. Después de que Aglaea lance un ataque, el Sastre también obtiene el aumento de VEL del talento del mnemoduende."
+      "desc": "El límite de acumulaciones del efecto de aumento de VEL del talento de mnemoduende aumenta en <nobr>1</nobr>. Después de que Aglaea lance un ataque, el Sastre también obtiene el aumento de VEL del talento de mnemoduende.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "Tejedora del infortunio",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de habilidad del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de habilidad de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "Fluctuación en el tapiz del destino",
-      "desc": "Cuando Aglaea está en el estado de Disposición suprema, su <u>PEN de la RES</u> a Rayo y la del Sastre aumentan en un <nobr>20%</nobr>. Cuando la VEL de Aglaea o el Sastre es superior a <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr> pts., su daño de <u>ataque combinado</u> aumenta en un <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr> respectivamente."
+      "desc": "Cuando Aglaea está en el estado de Disposición suprema, su <u>PEN de la RES</u> a Rayo y la del Sastre aumentan en un <nobr>20%</nobr>. Cuando la VEL de Aglaea o el Sastre es superior a <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr> pts., su daño de <u>ataque combinado</u> aumenta en un <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr> respectivamente.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000019,
+          "name": "Ataque combinado",
+          "desc": "Varios objetivos atacan respectivamente a enemigos en una sola acción.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ]
     }
   ],
   "skillTreePoints": [
@@ -1724,7 +2275,7 @@
       "embedBonusSkill": {
         "id": "last_thread_of_fate",
         "name": "Último hilo del destino",
-        "desc": "Cuando el Sastre desaparece, se conserva un máximo de <nobr>1</nobr> acumulación del efecto de aumento de VEL del talento del mnemoduende. Cuando se vuelve a invocar al Sastre, se obtienen las acumulaciones correspondientes del efecto de aumento de VEL.",
+        "desc": "Cuando el Sastre desaparece, se conserva un máximo de <nobr>1</nobr> acumulación del efecto de aumento de VEL del talento de mnemoduende. Cuando se vuelve a invocar al Sastre, se obtienen las acumulaciones correspondientes del efecto de aumento de VEL.",
         "type": "",
         "tag": "",
         "levels": [

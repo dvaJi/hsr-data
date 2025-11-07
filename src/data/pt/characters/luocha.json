@@ -2,6 +2,7 @@
   "_id": 1203,
   "id": "luocha",
   "name": "Luocha",
+  "description": "Comerciante estrangeiro vindo do além-mar que sempre carrega um caixão para onde for.\nTem excelentes habilidades medicinais.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano Imaginário leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Restaura PV de um único aliado e ganha 1 acúmulo de Flor do Abismo.",
       "type": "Perícia",
       "tag": "Restauração",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,24 @@
       "simpleDesc": "Remove 1 melhoria de todos os inimigos, causa Dano Imaginário a todos os inimigos, e ganha 1 acúmulo de Flor do Abismo.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Melhoria",
+          "desc": "Pode fornecer melhorias à habilidade de combate por um período de tempo, que podem ser removidas, a menos que esteja especificado de outra forma.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1110,24 @@
       "simpleDesc": "Cria um Campo ao obter 2 acúmulos de Flor do Abismo. Enquanto o Campo estiver ativo, os aliados restauram PV após atacar.",
       "type": "Talento",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1467,15 @@
       "simpleDesc": "Após a Técnica ser utilizada, ativa imediatamente o efeito do Talento no início da próxima batalha.",
       "type": "Técnica",
       "tag": "Restauração",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1490,88 @@
       "_id": 120301,
       "id": "ablution_of_the_quick",
       "name": "Ablução da Rapidez",
-      "desc": "Enquanto o Campo estiver ativo, o ATQ de todos os aliados aumenta em <nobr>20%</nobr>."
+      "desc": "Enquanto o Campo estiver ativo, o ATQ de todos os aliados aumenta em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120302,
       "id": "bestowal_from_the_pure",
       "name": "Concessão da Pureza",
-      "desc": "Quando sua Perícia é ativada, se a porcentagem dos PV do aliado-alvo forem inferiores a <nobr>50%</nobr>, a Cura Realizada por Luocha aumenta em <nobr>30%</nobr>. Se o aliado-alvo tiver <nobr>50%</nobr> ou mais de PV, o aliado recebe um Escudo que pode absorver Dano igual a <nobr>18%</nobr> do ATQ de Luocha + <nobr>240</nobr>, que dura por <nobr>2</nobr> rodadas."
+      "desc": "Quando sua Perícia é ativada, se a porcentagem dos PV do aliado-alvo forem inferiores a <nobr>50%</nobr>, a Cura Realizada por Luocha aumenta em <nobr>30%</nobr>. Se o aliado-alvo tiver <nobr>50%</nobr> ou mais de PV, o aliado recebe um Escudo que pode absorver Dano igual a <nobr>18%</nobr> do ATQ de Luocha + <nobr>240</nobr>, que dura por <nobr>2</nobr> rodadas.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120303,
       "id": "surveyal_by_the_fool",
       "name": "Questionamento pelos Tolos",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120304,
       "id": "heavy_lies_the_crown",
       "name": "O Peso da Coroa",
-      "desc": "Quando o Campo de Luocha está ativo, inimigos recebem Enfraquecimento e causam <nobr>12%</nobr> a menos de Dano."
+      "desc": "Quando o Campo de Luocha está ativo, inimigos recebem Enfraquecimento e causam <nobr>12%</nobr> a menos de Dano.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120305,
       "id": "cicatrix_neath_the_pain",
       "name": "Cicatriz Abaixo da Dor",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120306,
       "id": "reunion_with_the_dust",
       "name": "De Volta ao Pó",
-      "desc": "Ao usar a Perícia Suprema, há uma <u>chance fixa</u> de <nobr>100%</nobr> de reduzir a RES a Todos os Tipos de todos os inimigos em <nobr>20%</nobr> por <nobr>2</nobr> rodada(s)."
+      "desc": "Ao usar a Perícia Suprema, há uma <u>chance fixa</u> de <nobr>100%</nobr> de reduzir a RES a Todos os Tipos de todos os inimigos em <nobr>20%</nobr> por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11203,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chance fixa",
+          "desc": "Chance fixa não será afetada por nenhum fator.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

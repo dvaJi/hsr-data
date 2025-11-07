@@ -2,6 +2,7 @@
   "_id": 8003,
   "id": "trailblazer_preservation_boy",
   "name": "Trazacaminos Conservación",
+  "description": "{F#Una}{M#Un} joven que embarcó en el Expreso Astral.\nDecidió viajar con el Expreso Astral para eliminar las amenazas provocadas por el Estelaron.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Fuego a un enemigo y obtiene Voluntad magmática.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Reduce el daño recibido y obtiene Voluntad magmática. Gran probabilidad de afectar con Provocación a todos los enemigos.",
       "type": "Habilidad básica",
       "tag": "Defensa",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +765,15 @@
       "simpleDesc": "Inflige Daño de Fuego a todos los enemigos y potencia su siguiente ATQ básico.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "Al recibir un ataque, obtiene acumulaciones de Voluntad magmática. Al tener al menos 4 acumulaciones de Voluntad magmática, el ATQ básico se potencia. Tras lanzar el ATQ básico, la habilidad básica o la habilidad definitiva, otorga un escudo a todos los aliados.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,6 +1419,15 @@
       "simpleDesc": "Tras usar la técnica, otorga un escudo para sí mismo al inicio de la siguiente batalla.",
       "type": "Técnica",
       "tag": "Defensa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1446,79 @@
       "_id": 800301,
       "id": "earthshaking_resonance",
       "name": "Resonancia con el núcleo terrestre",
-      "desc": "Cuando el Trazacaminos usa su ATQ básico, inflige un Daño de Fuego extra equivalente al <nobr>25%</nobr> de su DEF. Cuando usa su ATQ básico potenciado, inflige un Daño de Fuego extra equivalente al <nobr>50%</nobr> de su DEF."
+      "desc": "Cuando el Trazacaminos usa su ATQ básico, inflige un Daño de Fuego extra equivalente al <nobr>25%</nobr> de su DEF. Cuando usa su ATQ básico potenciado, inflige un Daño de Fuego extra equivalente al <nobr>50%</nobr> de su DEF.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800302,
       "id": "timedefying_tenacity",
       "name": "Perseverancia del hierro cósmico",
-      "desc": "Cuando se activa el talento, el escudo que reciben todos los aliados puede absorber un daño extra equivalente al <nobr>2%</nobr> de la DEF del Trazacaminos + <nobr>27</nobr>."
+      "desc": "Cuando se activa el talento, el escudo que reciben todos los aliados puede absorber un daño extra equivalente al <nobr>2%</nobr> de la DEF del Trazacaminos + <nobr>27</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800303,
       "id": "trailblazing_blueprint",
       "name": "Planos para el futuro",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800304,
       "id": "nationbuilding_oath",
       "name": "Juramento de la civilización superviviente",
-      "desc": "Al comenzar la batalla, el Trazacaminos obtiene inmediatamente <nobr>4</nobr> acumulaciones de Voluntad magmática."
+      "desc": "Al comenzar la batalla, el Trazacaminos obtiene inmediatamente <nobr>4</nobr> acumulaciones de Voluntad magmática.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800305,
       "id": "spiritwarming_flame",
       "name": "Coraje para prender la llama",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800306,
       "id": "cityforging_bulwarks",
       "name": "Baluarte de la Ciudad Eterna",
-      "desc": "Tras usar su ATQ básico potenciado o su habilidad definitiva, la DEF del Trazacaminos aumenta en un <nobr>10%</nobr>. Se acumula hasta <nobr>3</nobr> veces."
+      "desc": "Tras usar su ATQ básico potenciado o su habilidad definitiva, la DEF del Trazacaminos aumenta en un <nobr>10%</nobr>. Se acumula hasta <nobr>3</nobr> veces.",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

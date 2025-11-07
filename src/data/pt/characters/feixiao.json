@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "Feixiao",
+  "description": "A Garra de Merlin do Yaoqing do Xianzhou e uma das Sete Árbitros-Generais. Insólita e direta, ela exala um charme natural.\nEla é habilidosa em todas as formas de artes marciais, e aprimorou seu corpo em uma arma suprema. Ela é adorada por todos os soldados, assim como pelos civis Xianzhouitas, conhecida como \"A General Vitoriosa.\"\nNo entanto, ela carrega o peso da aflição da Raiva Lunar. Se ela fosse caçar todas as abominações durante seu tempo de vida limitado, então o único inimigo que Feixiao teria seria ela mesma.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Vento leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Causa Dano de Vento a um inimigo, e utiliza adicionalmente o Ataque Extra do Talento 1 vez.",
       "type": "Perícia",
       "tag": "Alvo Único",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "Durante a Perícia Suprema, pode ignorar o Tipo de Fraqueza para reduzir a Tenacidade do inimigo. Quando o alvo não estiver infligido com Quebra de Fraqueza, a Eficiência de Quebra de Fraqueza de Feixiao aumenta.\nUtiliza Trovão Descendente ou Fissura do Machado Celestial em um único inimigo #3[i] vez(es). Causa Dano de Vento no final.",
       "type": "Perícia Suprema",
       "tag": "Alvo Único",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1052,6 +1098,24 @@
       "simpleDesc": "A Perícia Suprema pode ser ativada quando \"Aureus Voador\" atingir #3[i] pontos, acumulando até um máximo de #4[i] pontos. Para cada #2[i] ataques utilizados considerando todos os aliados-alvo, Feixiao ganha \"Aureus Voador\".\nDepois que companheiros de equipe usarem um ataque, Feixiao desfere um Ataque Extra contra o alvo principal, causando Dano de Vento. Este efeito pode ser ativado 1 vez por rodada. Ao utilizar esse ataque, aumenta o Dano causado por esta unidade.",
       "type": "Talento",
       "tag": "Alvo Único",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "Entra no estado de \"Investida\". Puxa continuamente inimigos e aumenta a velocidade de movimento. Ganha \"Aureus Voador\" depois de entrar em batalha.\nEnquanto estiver em \"Investida\", pode atacar ativamente todos os inimigos puxados. No início de cada onda, causa Dano de Vento a todos os inimigos. Este Dano tem CRIT garantido. Quanto mais inimigos forem puxados, maior será o Multiplicador de Dano.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "Aos Céus eu Amaino",
-      "desc": "Após usar Trovão Descendente ou Fissura do Machado Celestial, o Dano de Perícia Suprema causado por Feixiao aumenta adicionalmente em uma quantidade igual a <nobr>10%</nobr> do Dano original, acumulando até <nobr>5</nobr> vez(es) e durando até o final da ação da Perícia Suprema."
+      "desc": "Após usar Trovão Descendente ou Fissura do Machado Celestial, o Dano de Perícia Suprema causado por Feixiao aumenta adicionalmente em uma quantidade igual a <nobr>10%</nobr> do Dano original, acumulando até <nobr>5</nobr> vez(es) e durando até o final da ação da Perícia Suprema.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "À Lua Eu Desejo",
-      "desc": "No efeito do Talento, cada vez que um aliado desfere 1 <u>Ataque Extra</u>, Feixiao ganha 1 ponto de \"Aureus Voador\". Esse efeito pode ser ativado até <nobr>6</nobr> vez(es) por rodada."
+      "desc": "No efeito do Talento, cada vez que um aliado desfere 1 <u>Ataque Extra</u>, Feixiao ganha 1 ponto de \"Aureus Voador\". Esse efeito pode ser ativado até <nobr>6</nobr> vez(es) por rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "Às Estrelas Eu Prevejo",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "À Tempestade Eu Ouço",
-      "desc": "A Redução de Tenacidade do <u>Ataque Extra</u> do Talento aumenta em <nobr>100%</nobr> e, quando ativado, aumenta a VEL desta unidade em <nobr>8%</nobr>, durando por <nobr>2</nobr> rodada(s)."
+      "desc": "A Redução de Tenacidade do <u>Ataque Extra</u> do Talento aumenta em <nobr>100%</nobr> e, quando ativado, aumenta a VEL desta unidade em <nobr>8%</nobr>, durando por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "Ao Paraíso Eu Salto",
-      "desc": "Nv. da Perícia + 2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia + 2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "Do Lar Me Aproximo",
-      "desc": "Aumenta a <u>PEN de RES</u> a todos os Tipos do Dano de Perícia Suprema causado por Feixiao em <nobr>20%</nobr>. O Dano do <u>Ataque Extra</u> do Talento é simultaneamente considerado como Dano de Perícia Suprema, e aumenta seu multiplicador de Dano em <nobr>140%</nobr>."
+      "desc": "Aumenta a <u>PEN de RES</u> a todos os Tipos do Dano de Perícia Suprema causado por Feixiao em <nobr>20%</nobr>. O Dano do <u>Ataque Extra</u> do Talento é simultaneamente considerado como Dano de Perícia Suprema, e aumenta seu multiplicador de Dano em <nobr>140%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

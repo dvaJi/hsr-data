@@ -2,6 +2,7 @@
   "_id": 1301,
   "id": "gallagher",
   "name": "Gallagher",
+  "description": "Cảnh Sát Trưởng của Gia Tộc Bloodhound Penacony, tiếp đãi những vị khách đến thăm rất chu đáo, nhưng luôn có sự đề phòng. Dường như có rất nhiều chuyện đã xảy ra trong quá khứ nhưng lại chưa bao giờ chủ động nhắc đến.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Lập tức hồi phục HP cho 1 đồng đội phe ta.",
       "type": "Chiến Kỹ",
       "tag": "Hồi Phục",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +726,15 @@
       "simpleDesc": "Khiến toàn bộ kẻ địch rơi vào trạng thái \"Say Mèm\", đồng thời gây Sát Thương Hỏa cho toàn bộ kẻ địch. Tấn Công Thường lần sau cường hóa thành \"Hoa Rượu Tuôn Trào\".",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1038,24 @@
       "simpleDesc": "\"Say Mèm\" sẽ tăng Sát Thương Phá Vỡ mà mục tiêu phải chịu, sau mỗi lần mục tiêu bị nhân vật phe ta tấn công, người tấn công sẽ hồi HP.",
       "type": "Thiên Phú",
       "tag": "Hồi Phục",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Sát Thương Phá Vỡ",
+          "desc": "Tấn Công Kích Phá, Giới Hạn Sức Bền của mục tiêu, cấp nhân vật càng cao, Sát Thương Phá Vỡ gây ra càng cao.\nSát Thương Phá Vỡ không thể bạo kích, không chịu ảnh hưởng bởi hiệu ứng loại Tăng Sát Thương.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "Lập tức tấn công kẻ địch, sau khi vào chiến đấu khiến toàn thể phe địch rơi vào trạng thái Say Mèm, duy trì #1[i] hiệp, đồng thời gây Sát Thương Hỏa lên toàn bộ phe địch bằng #2[i]% Tấn Công của Gallagher.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào chiến đấu sẽ khiến toàn bộ phe địch rơi vào trạng thái \"Say Mèm\", và gây lượng nhỏ Sát Thương Hỏa lên toàn bộ phe địch.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,88 @@
       "_id": 130101,
       "id": "salty_dog",
       "name": "Salty Dog",
-      "desc": "Sau khi Gallagher vào chiến đấu sẽ hồi <nobr>20</nobr> Năng Lượng, Kháng Hiệu Ứng tăng <nobr>50%</nobr>."
+      "desc": "Sau khi Gallagher vào chiến đấu sẽ hồi <nobr>20</nobr> Năng Lượng, Kháng Hiệu Ứng tăng <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130102,
       "id": "lions_tail",
       "name": "Lion's Tail",
-      "desc": "Khi thi triển Chiến Kỹ, giải trừ <nobr>1</nobr> <u>Hiệu Ứng Xấu</u> của 1 đồng đội chỉ định, đồng thời khiến Kháng Hiệu Ứng của đồng đội đó tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi thi triển Chiến Kỹ, giải trừ <nobr>1</nobr> <u>Hiệu Ứng Xấu</u> của 1 đồng đội chỉ định, đồng thời khiến Kháng Hiệu Ứng của đồng đội đó tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130103,
       "id": "corpse_reviver",
       "name": "Corpse Reviver",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130104,
       "id": "last_word",
       "name": "Last Word",
-      "desc": "Thời gian duy trì trạng thái \"Say Mèm\" do Tuyệt Kỹ của Gallagher gây ra kéo dài <nobr>1</nobr> hiệp."
+      "desc": "Thời gian duy trì trạng thái \"Say Mèm\" do Tuyệt Kỹ của Gallagher gây ra kéo dài <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130105,
       "id": "death_in_the_afternoon",
       "name": "Death In The Afternoon",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130106,
       "id": "blood_and_sand",
       "name": "Blood And Sand",
-      "desc": "Tấn Công Kích Phá của Gallagher tăng <nobr>20%</nobr>, hiệu suất Phá Vỡ Điểm Yếu tăng <nobr>20%</nobr>."
+      "desc": "Tấn Công Kích Phá của Gallagher tăng <nobr>20%</nobr>, hiệu suất Phá Vỡ Điểm Yếu tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11301,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

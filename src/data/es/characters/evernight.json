@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "Larganoche",
+  "description": "En la Zona de los Recuerdos aislada del mundo, las velas reflejan el pasado y se extinguen silenciosamente en la niebla.\nLarganoche, la hija de la Reminiscencia venida de aquellas sombras, la Heredera de Crisos que oculta la Yesca del Tiempo, desata las olas del Olvido para proteger los deseos de quien se refleja en el espejo.\n...♭ \"No te preocupes, vigilaré por ti la senda trazacaminos... Cueste lo que cueste\". ♭",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Consume sus PV para invocar al mnemoduende Nox y aumenta el Daño CRIT de todos los mnemoduendes aliados. Si Nox ya está en el campo de batalla, regenera sus PV. Al lanzar esta habilidad, obtiene #3[i] pts. de Memoria. Si está en el estado de Adivinanza oscura, obtiene #5[i] pts. adicionales de Memoria.",
       "type": "Habilidad básica",
       "tag": "Invocación",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "Inflige Daño de Hielo a todos los enemigos, invoca al mnemoduende Nox y hace que Larganoche entre en el estado de Adivinanza oscura. Durante este estado, aumenta el daño que reciben los enemigos, aumenta el daño que infligen Larganoche y su mnemoduende, y ambas obtienen inmunidad a estados negativos de Control.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Estados negativos de control",
+          "desc": "Congelación, Enredo, Prisión, Dominación, Cólera, Reverberación potente, Sueño extraño, Enredo-Prisión, Aterrorizado y Bloqueo de acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "Al entrar en combate invoca al mnemoduende Nox. Cada vez que se reducen sus PV o los de Nox, aumenta su Daño CRIT y el de Nox, y obtiene Memoria.\nCuando Larganoche tiene #6[i] o más pts. de Memoria, Nox actúa inmediatamente.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocación de mnemoduende",
+          "desc": "Invoca al mnemoduende al campo de batalla. Si el mnemoduende ya está en el campo de batalla, disipa todos los estados negativos de Control con los que esté afectado el mnemoduende.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Estados negativos de control",
+          "desc": "Congelación, Enredo, Prisión, Dominación, Cólera, Reverberación potente, Sueño extraño, Enredo-Prisión, Aterrorizado y Bloqueo de acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "Al comenzar la siguiente batalla, obtiene un efecto de aumento del Daño CRIT de todos los mnemoduendes aliados equivalente al de la habilidad básica, y consigue Memoria adicional.",
       "type": "Técnica",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Nox",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "Recuerdos que caen como la lluvia",
+        "desc": "Esta habilidad selecciona automáticamente a su objetivo y se lanza priorizando atacar al último enemigo atacado por Larganoche. Inflige a un enemigo un Daño de Hielo equivalente al <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> de los PV máx. de Nox. Por cada <nobr>#3[i]</nobr> puntos de Memoria que tenga Larganoche, inflige un Daño de Hielo equivalente al <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> de los PV máx. de Nox de forma adicional. Tras lanzarse la habilidad, Larganoche obtiene <nobr>#4[i]</nobr> pt. de Memoria.",
+        "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo, e inflige una pequeña cantidad de Daño de Hielo extra según la cantidad de Memoria.",
+        "type": {
+          "id": "Servant",
+          "name": "Habilidad de mnemoduende"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "ATQ individual"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "Soledad que flota en la oscuridad",
+        "desc": "Nox es inmune a los <u>estados negativos de Control</u> y aumenta su probabilidad de recibir ataques. Mientras Nox está en la batalla, el daño que infligen Larganoche y Nox aumenta en un <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>.",
+        "simpleDesc": "El mnemoduende Nox es inmune a los <u>estados negativos de Control</u> y aumenta su probabilidad de recibir ataques. Mientras está en la batalla, aumenta el daño que infligen Nox y Larganoche.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Apoyo"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "Estados negativos de control",
+            "desc": "Congelación, Enredo, Prisión, Dominación, Cólera, Reverberación potente, Sueño extraño, Enredo-Prisión, Aterrorizado y Bloqueo de acción.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "Siempre junto a la noche",
+        "desc": "Cuando es invocado, actúa inmediatamente.",
+        "simpleDesc": "Cuando es invocado, actúa inmediatamente.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Potenciación"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "Despedida sin fin",
+        "desc": "Al desaparecer, la VEL de Larganoche aumenta en un <nobr>#1[i]%</nobr>. Si desaparece por haber lanzado Sueños que desaparecen como el rocío, la VEL de Larganoche aumenta en un <nobr>#2[i]%</nobr> adicional por cada punto de Memoria consumido en este ataque, hasta un máximo de <nobr>#3[i]</nobr> puntos de Memoria. El efecto de aumento de VEL no puede acumularse y se disipa cuando Larganoche comienza su siguiente turno.",
+        "simpleDesc": "Cuando desaparece, la VEL de Larganoche aumenta.",
+        "type": {
+          "name": "Talento de mnemoduende"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Potenciación"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "Sueños que desaparecen como el rocío",
+        "desc": "Si Larganoche tiene <nobr>#3[i]</nobr> pts. o más de Memoria y no está afectada con ningún estado de Control al lanzarse esta habilidad, por cada punto de Memoria que tenga, Nox inflige un <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> y un <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> de sus PV máx. como Daño de Hielo al objetivo principal y a los demás enemigos respectivamente. Tras lanzar la habilidad, consume toda la Memoria y PV, y Nox desaparece.",
+        "simpleDesc": "Inflige una gran cantidad de Daño de Hielo al objetivo principal y Daño de Hielo a los demás enemigos <span style=\"color:#f29e38ff>según la cantidad de Memoria</span>. Tras lanzar esta habilidad, <span style=\"color:#f29e38ff>consume toda la Memoria y PV, y Nox desaparece</span>.",
+        "type": {
+          "id": "Servant",
+          "name": "Habilidad de mnemoduende"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ATQ AdE"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "Duerme en el sueño de la larga noche",
-      "desc": "Cuando Larganoche está en la batalla y hay 4 o más/3/2/1 enemigos en el campo de batalla, el daño que infligen los mnemoduendes aliados es un <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> del daño original."
+      "desc": "Cuando Larganoche está en la batalla y hay 4 o más/3/2/1 enemigos en el campo de batalla, el daño que infligen los mnemoduendes aliados es un <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> del daño original.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "Escucha los susurros adormilados",
-      "desc": "El Daño CRIT de Larganoche y el mnemoduende Nox aumenta en un <nobr>40%</nobr>. Cada vez que Larganoche obtiene Memoria, la cantidad de Memoria obtenida aumenta en <nobr>2</nobr> pts. Al lanzar la habilidad definitiva, obtiene <nobr>2</nobr> pts. de carga adicionales de Adivinanza oscura."
+      "desc": "El Daño CRIT de Larganoche y el mnemoduende Nox aumenta en un <nobr>40%</nobr>. Cada vez que Larganoche obtiene Memoria, la cantidad de Memoria obtenida aumenta en <nobr>2</nobr> pts. Al lanzar la habilidad definitiva, obtiene <nobr>2</nobr> pts. de carga adicionales de Adivinanza oscura.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "No temas, atrás queda la pesadilla",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de talento del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>). Niv. de talento de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "Despierta, el mañana es tuyo",
-      "desc": "Cuando Larganoche está en la batalla, la eficiencia de la Ruptura de Debilidad de los mnemoduendes aliados aumenta en un <nobr>25%</nobr>. La eficiencia de la Ruptura de Debilidad del mnemoduende Nox aumenta en un <nobr>25%</nobr> adicional."
+      "desc": "Cuando Larganoche está en la batalla, la eficiencia de la Ruptura de Debilidad de los mnemoduendes aliados aumenta en un <nobr>25%</nobr>. La eficiencia de la Ruptura de Debilidad del mnemoduende Nox aumenta en un <nobr>25%</nobr> adicional.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "Olvida el yo de los recuerdos",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de habilidad del mnemoduende +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>). Niv. de habilidad de mnemoduende +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "Así, siempre",
-      "desc": "Cuando Larganoche está en la batalla, la <u>PEN de la RES</u> a todos los tipos de todos los aliados aumenta en un <nobr>20%</nobr>. Después de que el mnemoduende Nox lance Sueños que desaparecen como el rocío, Larganoche obtiene el <nobr>30%</nobr> de la Memoria consumida en este ataque."
+      "desc": "Cuando Larganoche está en la batalla, la <u>PEN de la RES</u> a todos los tipos de todos los aliados aumenta en un <nobr>20%</nobr>. Después de que el mnemoduende Nox lance Sueños que desaparecen como el rocío, Larganoche obtiene el <nobr>30%</nobr> de la Memoria consumida en este ataque.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

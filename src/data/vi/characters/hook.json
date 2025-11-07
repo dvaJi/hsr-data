@@ -2,6 +2,7 @@
   "_id": 1109,
   "id": "hook",
   "name": "Hook",
+  "description": "Sếp của đội thám hiểm \"Băng Chuột Chũi\" dưới lòng đất (tự phong).\nYêu tự do, xem cuộc sống là cuộc phiêu lưu dài tập.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Gây Sát Thương Hỏa cho 1 kẻ địch, xác suất lớn gây trạng thái Thiêu Đốt cho mục tiêu.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Gây lượng lớn Sát Thương Hỏa cho 1 kẻ địch, và cường hóa Chiến Kỹ của bản thân ở lần sau.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,27 @@
       "simpleDesc": "Khi tấn công kẻ địch ở trạng thái Thiêu Đốt, gây lượng nhỏ Sát Thương Hỏa Kèm Theo và hồi thêm năng lượng.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1409,24 @@
       "desc": "Tấn công kẻ địch ngay lập tức, sau khi vào chiến đấu, sẽ gây Sát Thương Hỏa cho 1 kẻ địch ngẫu nhiên bằng #4[i]% Tấn Công của Hook, đồng thời có #1[i]% xác suất cơ bản khiến mỗi kẻ địch rơi vào trạng thái Thiêu Đốt, duy trì #3[i] hiệp.\nTrong trạng thái Thiêu Đốt, kẻ địch mỗi khi bắt đầu hiệp sẽ chịu Sát Thương Hỏa duy trì tương đương #2[i]% Tấn Công của Hook.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào trận sẽ gây lượng nhỏ Sát Thương Hỏa cho 1 kẻ địch ngẫu nhiên, và có xác suất lớn khiến mỗi một kẻ địch rơi vào trạng thái Thiêu Đốt.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1446,88 @@
       "_id": 110901,
       "id": "early_to_bed_early_to_rise",
       "name": "Ngủ Sớm Dậy Sớm Rất Lành Mạnh",
-      "desc": "Sau khi cường hóa Chiến Kỹ, sát thương gây ra tăng <nobr>20%</nobr>."
+      "desc": "Sau khi cường hóa Chiến Kỹ, sát thương gây ra tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110902,
       "id": "happy_tummy_happy_body",
       "name": "Hay Ăn Chóng Lớn",
-      "desc": "Chiến Kỹ khiến thời gian duy trì trạng thái Thiêu Đốt của mục tiêu địch tăng <nobr>1</nobr> hiệp."
+      "desc": "Chiến Kỹ khiến thời gian duy trì trạng thái Thiêu Đốt của mục tiêu địch tăng <nobr>1</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110903,
       "id": "dont_be_picky_nothings_icky",
       "name": "Không Cần Chọn, Đều Lấy Hết",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110904,
       "id": "its_okay_to_not_know",
       "name": "Bối Rối Do Dự Chẳng Hề Chi",
-      "desc": "Khi kích hoạt Thiên Phú sẽ có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu lân cận với mục tiêu phe địch chỉ định cũng rơi vào trạng thái Thiêu Đốt giống với Chiến Kỹ."
+      "desc": "Khi kích hoạt Thiên Phú sẽ có <nobr>100%</nobr> <u>xác suất cơ bản</u> khiến mục tiêu lân cận với mục tiêu phe địch chỉ định cũng rơi vào trạng thái Thiêu Đốt giống với Chiến Kỹ.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110905,
       "id": "let_the_moles_deeds_be_known",
       "name": "Việc Tốt Lưu Danh",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110906,
       "id": "always_ready_to_punch_and_kick",
       "name": "Sẵn Sàng Đánh Kẻ Xấu",
-      "desc": "Sát thương Hook gây cho mục tiêu địch ở trạng thái Thiêu Đốt tăng <nobr>20%</nobr>."
+      "desc": "Sát thương Hook gây cho mục tiêu địch ở trạng thái Thiêu Đốt tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11109,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

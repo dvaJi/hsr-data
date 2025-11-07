@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "Cerydra",
+  "description": "Kekaisaran Utara, dinasti yang hilang, tanah beku yang mengobarkan ambisi penaklukan.\nPenguasa Cerydra, Keturunan Chrysos yang memegang Benih Api \"Hukum\", susunlah bidak dan strategi, tantanglah para dewa, dan adililah para pendosa yang menyimpang, demi meletakkan fondasi pengejaran api bagi dunia ini.\n— \"Ini bukanlah akhir. Perjalanan Amphoreus akan menyala melintasi bintang-bintang!\"",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Wind DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "Memberikan \"Military Merit\" pada karakter tim dan membuat Cerydra memperoleh Charge. Saat Charge mencapai #4[i] poin, akan otomatis meningkatkan \"Military Merit\" milik karakter menjadi \"Peerage\". CRIT DMG dan RES PEN Seluruh Tipe dari Skill DMG yang diakibatkan oleh karakter yang memiliki \"Peerage\" meningkat, dan karakter tersebut dapat memicu Serangan Kejutan.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Crowd Control Debuff",
+          "desc": "Frozen, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Penguncian Aksi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "Serangan Kejutan",
+          "desc": "Menyalin kemampuan yang akan dilancarkan 1 kali dan melancarkan lebih awal, lalu melancarkan kemampuan aslinya.\nSerangan Kejutan tidak akan memicu Serangan Kejutan lagi.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "Memperoleh Charge. Mengakibatkan Wind DMG pada seluruh musuh.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "ATK karakter yang memiliki \"Military Merit\" meningkat. Saat karakter tersebut melancarkan Basic Attack atau Skill, Cerydra akan memperoleh Charge. Setelah karakter yang memiliki \"Military Merit\" melancarkan serangan, Cerydra akan mengakibatkan Wind DMG Tambahan dalam jumlah kecil.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "Serangan Kejutan",
+          "desc": "Menyalin kemampuan yang akan dilancarkan 1 kali dan melancarkan lebih awal, lalu melancarkan kemampuan aslinya.\nSerangan Kejutan tidak akan memicu Serangan Kejutan lagi.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "Memberikan \"Military Merit\" pada karakter yang sedang beraksi. Otomatis melancarkan Skill pada karakter yang memiliki \"Military Merit\" saat pertempuran berikutnya dimulai.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "Seize the Crowns of All",
-      "desc": "Karakter yang memiliki \"Military Merit\" akan mengabaikan <nobr>16%</nobr> DEF target saat mengakibatkan DMG. Jika \"Military Merit\" saat ini telah ditingkatkan menjadi \"Peerage\", akan mengabaikan ekstra <nobr>20%</nobr> DEF target saat karakter tersebut mengakibatkan Skill DMG. Saat Cerydra melancarkan Skill, akan memulihkan <nobr>2</nobr> Energy rekan tim yang ditargetkan."
+      "desc": "Karakter yang memiliki \"Military Merit\" akan mengabaikan <nobr>16%</nobr> DEF target saat mengakibatkan DMG. Jika \"Military Merit\" saat ini telah ditingkatkan menjadi \"Peerage\", akan mengabaikan ekstra <nobr>20%</nobr> DEF target saat karakter tersebut mengakibatkan Skill DMG. Saat Cerydra melancarkan Skill, akan memulihkan <nobr>2</nobr> Energy rekan tim yang ditargetkan.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "Forge the Dreams of Many",
-      "desc": "DMG yang diakibatkan oleh karakter yang memiliki \"Military Merit\" meningkat <nobr>40%</nobr>. Saat ada rekan Cerydra yang memiliki \"Military Merit\" di medan pertempuran, DMG yang diakibatkan Cerydra meningkat <nobr>160%</nobr>."
+      "desc": "DMG yang diakibatkan oleh karakter yang memiliki \"Military Merit\" meningkat <nobr>40%</nobr>. Saat ada rekan Cerydra yang memiliki \"Military Merit\" di medan pertempuran, DMG yang diakibatkan Cerydra meningkat <nobr>160%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "Torch the Laws of Old",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "Remake the Realms of Men",
-      "desc": "DMG Multiplier dari Ultimate meningkat <nobr>240%</nobr>."
+      "desc": "DMG Multiplier dari Ultimate meningkat <nobr>240%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "Help and Hurt Repaid in Full",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "A Journey Set Starward",
-      "desc": "<u>RES PEN</u> Seluruh Tipe dari karakter yang memiliki \"Military Merit\" meningkat <nobr>20%</nobr>, dan Multiplier dari <u>DMG Tambahan</u> yang dipicu \"Military Merit\" meningkat <nobr>300%</nobr>. Saat ada rekan Cerydra yang memiliki \"Military Merit\" di medan pertempuran, <u>RES PEN</u> Seluruh Tipe dari Cerydra meningkat <nobr>20%</nobr>."
+      "desc": "<u>RES PEN</u> Seluruh Tipe dari karakter yang memiliki \"Military Merit\" meningkat <nobr>20%</nobr>, dan Multiplier dari <u>DMG Tambahan</u> yang dipicu \"Military Merit\" meningkat <nobr>300%</nobr>. Saat ada rekan Cerydra yang memiliki \"Military Merit\" di medan pertempuran, <u>RES PEN</u> Seluruh Tipe dari Cerydra meningkat <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

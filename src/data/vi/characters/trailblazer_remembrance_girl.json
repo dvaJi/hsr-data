@@ -2,6 +2,7 @@
   "_id": 8008,
   "id": "trailblazer_remembrance_girl",
   "name": "Nhà Khai Phá Ký Ức",
+  "description": "{F#Thiếu nữ}{M#Thiếu niên} lên Đội Tàu Astral.\nĐể diệt trừ hiểm họa mà Stellaron mang đến, đã quyết định đồng hành cùng đội tàu.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Băng cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Triệu hồi Linh Hồn Ký Ức Mem. Nếu Mem đã xuất hiện trong trận, sẽ hồi HP cho Mem, và khiến Mem nhận Nạp Năng Lượng.",
       "type": "Chiến Kỹ",
       "tag": "Triệu Hồi",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +750,24 @@
       "simpleDesc": "Triệu hồi Linh Hồn Ký Ức Mem. Khiến Mem nhận Nạp Năng Lượng, sau đó khiến Mem gây lượng lớn sát thương Băng lên toàn phe địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1071,15 @@
       "simpleDesc": "Toàn bộ phe ta mỗi khi hồi Năng Lượng nhất định, Mem đều sẽ nhận được Nạp Năng Lượng.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1413,24 @@
       "simpleDesc": "Tạo vùng đặc biệt. Kẻ địch trong khu vực sẽ dừng hành động. Sau khi vào chiến đấu với kẻ địch trong khu vực, khiến toàn bộ phe địch Trì Hoãn Hành Động, và gây lượng nhỏ Sát Thương Băng cho toàn bộ phe địch.",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Trì Hoãn Hành Động",
+          "desc": "Kéo dài khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1449,79 @@
       "_id": 800801,
       "id": "narrator_of_the_present",
       "name": "Người Kể Chuyện Hiện Tại",
-      "desc": "Tỷ Lệ Bạo Kích của mục tiêu phe ta có Mem Cổ Vũ sẽ tăng <nobr>10%</nobr>. Khi mục tiêu phe ta có Mem Cổ Vũ, hiệu ứng của Mem Cổ Vũ cũng có hiệu lực với Linh Hồn Ký Ức/Bậc Thầy Ký Ức của mục tiêu này, hiệu ứng này không thể cộng dồn."
+      "desc": "Tỷ Lệ Bạo Kích của mục tiêu phe ta có Mem Cổ Vũ sẽ tăng <nobr>10%</nobr>. Khi mục tiêu phe ta có Mem Cổ Vũ, hiệu ứng của Mem Cổ Vũ cũng có hiệu lực với Linh Hồn Ký Ức/Bậc Thầy Ký Ức của mục tiêu này, hiệu ứng này không thể cộng dồn.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800802,
       "id": "gleaner_of_the_past",
       "name": "Người Nhặt Nhạnh Quá Khứ",
-      "desc": "Khi Linh Hồn Ký Ức phe ta hành động (ngoại trừ Mem), Nhà Khai Phá sẽ hồi <nobr>8</nobr> điểm Năng Lượng. Hiệu ứng này mỗi hiệp tối đa kích hoạt <nobr>1</nobr> lần, khi bắt đầu hiệp của Nhà Khai Phá sẽ làm mới số lần có thể kích hoạt."
+      "desc": "Khi Linh Hồn Ký Ức phe ta hành động (ngoại trừ Mem), Nhà Khai Phá sẽ hồi <nobr>8</nobr> điểm Năng Lượng. Hiệu ứng này mỗi hiệp tối đa kích hoạt <nobr>1</nobr> lần, khi bắt đầu hiệp của Nhà Khai Phá sẽ làm mới số lần có thể kích hoạt.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800803,
       "id": "chanter_of_the_future",
       "name": "Người Ngâm Tụng Tương Lai",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800804,
       "id": "dancer_of_the_muse",
       "name": "Bạn Nhảy Mới Của Muse",
-      "desc": "Khiến khi mục tiêu phe ta có giới hạn Năng Lượng bằng 0 chủ động thi triển kỹ năng, Mem cũng có thể nhận <nobr>3%</nobr> Nạp Năng Lượng, và Bội Số Sát Thương Chuẩn mà mục tiêu này gây ra thông qua \"Mem Cổ Vũ\" tăng thêm <nobr>6%</nobr>."
+      "desc": "Khiến khi mục tiêu phe ta có giới hạn Năng Lượng bằng 0 chủ động thi triển kỹ năng, Mem cũng có thể nhận <nobr>3%</nobr> Nạp Năng Lượng, và Bội Số Sát Thương Chuẩn mà mục tiêu này gây ra thông qua \"Mem Cổ Vũ\" tăng thêm <nobr>6%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800805,
       "id": "seamster_of_the_ode",
       "name": "Người May Vá Thơ Ca",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp kỹ năng của Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp kỹ năng của Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800806,
       "id": "bearer_of_the_revelation",
       "name": "Người Gánh Vác Thần Khởi",
-      "desc": "Tỷ lệ Bạo Kích của Tuyệt Kỹ được cố định là <nobr>100%</nobr>."
+      "desc": "Tỷ lệ Bạo Kích của Tuyệt Kỹ được cố định là <nobr>100%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18007,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [
@@ -1855,6 +1970,151 @@
       }
     },
     {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Kẻ Xấu! Rắc Rối!",
+        "levelReq": 0,
+        "promotionReq": 2,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Điểm Tín Dụng",
+            "amount": 2800
+          },
+          {
+            "id": "bja_of_consciousness",
+            "name": "Hạt Giống Suy Tưởng",
+            "amount": 1
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Bản Năng Tranh Đoạt",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Kẻ Xấu! Rắc Rối!",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Điểm Tín Dụng",
+            "amount": 5600
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Mầm Cây Mana",
+            "amount": 1
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Dã Tâm Xuyên Tạc",
+            "amount": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Kẻ Xấu! Rắc Rối!",
+        "levelReq": 0,
+        "promotionReq": 4,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Điểm Tín Dụng",
+            "amount": 12800
+          },
+          {
+            "id": "seedling_of_manas",
+            "name": "Mầm Cây Mana",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Dã Tâm Xuyên Tạc",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Kẻ Xấu! Rắc Rối!",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Điểm Tín Dụng",
+            "amount": 28000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Alayawah",
+            "amount": 2
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Ý Chí Giẫm Đạp",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008301,
+      "type": 4,
+      "children": [],
+      "embedBuff": {
+        "id": "baddies_trouble",
+        "name": "Kẻ Xấu! Rắc Rối!",
+        "levelReq": 0,
+        "promotionReq": 6,
+        "statusList": [],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Điểm Tín Dụng",
+            "amount": 112000
+          },
+          {
+            "id": "flower_of_laya",
+            "name": "Alayawah",
+            "amount": 5
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Ý Chí Giẫm Đạp",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
       "id": 8008302,
       "type": 4,
       "children": [],
@@ -1868,151 +2128,6 @@
       }
     },
     {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Kẻ Xấu! Rắc Rối!",
-        "levelReq": 0,
-        "promotionReq": 2,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Điểm Tín Dụng",
-            "amount": 2800
-          },
-          {
-            "id": "bja_of_consciousness",
-            "name": "Hạt Giống Suy Tưởng",
-            "amount": 1
-          },
-          {
-            "id": "thiefs_instinct",
-            "name": "Bản Năng Tranh Đoạt",
-            "amount": 3
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Kẻ Xấu! Rắc Rối!",
-        "levelReq": 0,
-        "promotionReq": 3,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Điểm Tín Dụng",
-            "amount": 5600
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Mầm Cây Mana",
-            "amount": 1
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Dã Tâm Xuyên Tạc",
-            "amount": 1
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Kẻ Xấu! Rắc Rối!",
-        "levelReq": 0,
-        "promotionReq": 4,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Điểm Tín Dụng",
-            "amount": 12800
-          },
-          {
-            "id": "seedling_of_manas",
-            "name": "Mầm Cây Mana",
-            "amount": 3
-          },
-          {
-            "id": "usurpers_scheme",
-            "name": "Dã Tâm Xuyên Tạc",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Kẻ Xấu! Rắc Rối!",
-        "levelReq": 0,
-        "promotionReq": 5,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Điểm Tín Dụng",
-            "amount": 28000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Alayawah",
-            "amount": 2
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Ý Chí Giẫm Đạp",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 8008301,
-      "type": 4,
-      "children": [],
-      "embedBuff": {
-        "id": "baddies_trouble",
-        "name": "Kẻ Xấu! Rắc Rối!",
-        "levelReq": 0,
-        "promotionReq": 6,
-        "statusList": [],
-        "materials": [
-          {
-            "id": "credit",
-            "name": "Điểm Tín Dụng",
-            "amount": 112000
-          },
-          {
-            "id": "flower_of_laya",
-            "name": "Alayawah",
-            "amount": 5
-          },
-          {
-            "id": "conquerors_will",
-            "name": "Ý Chí Giẫm Đạp",
-            "amount": 2
-          }
-        ]
-      }
-    },
-    {
       "id": 8008302,
       "type": 4,
       "children": [],
@@ -2153,6 +2268,27 @@
             "id": "conquerors_will",
             "name": "Ý Chí Giẫm Đạp",
             "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 8008501,
+      "type": 5,
+      "children": [],
+      "embedBonusSkill": {
+        "id": "unfinished_epilogue",
+        "name": "Hồi Kết Chưa Hoàn Thành",
+        "desc": "Sau khi thi triển Tuyệt Kỹ, nhận 1 tầng \"Sử Thi\", tối đa có <nobr>2</nobr> tầng. Khi có \"Sử Thi\" và khi Mem trong trận, Tấn Công Thường sẽ cường hóa thành \"Cùng Nhau Viết Nên Ngày Mai Nhé!\".",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              2
+            ],
+            "materials": []
           }
         ]
       }

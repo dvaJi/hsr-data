@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "符玄",
+  "description": "仙舟「罗浮」太卜司之首。\n凭借第三眼与穷观阵为仙舟占算航路，预卜事务吉凶。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量量子属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "开启【穷观阵】，队友所受伤害分摊给符玄。并使我方全体生命上限、暴击率提高。",
       "type": "战技",
       "tag": "防御",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "分摊",
+          "desc": "在伤害结算之前将攻击方的一部分伤害分给其他单个或多个目标，受击方承担剩余部分。分摊给其他目标的伤害无法再次被分摊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "无法战斗状态",
+          "desc": "当我方目标的当前生命值被削减至0时进入的特殊状态，处于该状态的目标无法继续战斗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "对敌方全体造成量子属性伤害，增加符玄天赋的触发次数。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "当符玄处于可战斗状态时，我方全体受到的伤害降低。\n生命值较低时自动按已损失生命值百分比回复自身生命。该效果最多拥有2次触发次数。",
       "type": "天赋",
       "tag": "回复",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "开启屏障，受到敌人攻击时不会进入战斗。进战后自动开启【穷观阵】。",
       "type": "秘技",
       "tag": "防御",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "司危",
-      "desc": "【鉴知】使暴击伤害提高<nobr>30%</nobr>。"
+      "desc": "【鉴知】使暴击伤害提高<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "柔兆",
-      "desc": "【穷观阵】开启时，若我方目标受到致命伤害，则本次行动中所有受到致命伤害的我方目标都不会陷入<u>无法战斗状态</u>，并立即回复等同于其自身生命上限<nobr>70%</nobr>的生命值。该效果单场战斗中可以触发1次。"
+      "desc": "【穷观阵】开启时，若我方目标受到致命伤害，则本次行动中所有受到致命伤害的我方目标都不会陷入<u>无法战斗状态</u>，并立即回复等同于其自身生命上限<nobr>70%</nobr>的生命值。该效果单场战斗中可以触发1次。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "无法战斗状态",
+          "desc": "当我方目标的当前生命值被削减至0时进入的特殊状态，处于该状态的目标无法继续战斗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "直符",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "格泽",
-      "desc": "当处于【穷观阵】的我方其他目标受到攻击后，符玄恢复<nobr>5</nobr>点能量。"
+      "desc": "当处于【穷观阵】的我方其他目标受到攻击后，符玄恢复<nobr>5</nobr>点能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "计神",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "种陵",
-      "desc": "【穷观阵】开启时，会累计我方全体本场战斗中的已损失生命值。符玄施放终结技造成的伤害提高，提高数值等同于本场战斗中累计已损失生命值的<nobr>200%</nobr>。\n本场战斗中累计已损失生命值最高不超过符玄生命上限的<nobr>120%</nobr>，施放终结技后会清空并进行重新累计。"
+      "desc": "【穷观阵】开启时，会累计我方全体本场战斗中的已损失生命值。符玄施放终结技造成的伤害提高，提高数值等同于本场战斗中累计已损失生命值的<nobr>200%</nobr>。\n本场战斗中累计已损失生命值最高不超过符玄生命上限的<nobr>120%</nobr>，施放终结技后会清空并进行重新累计。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

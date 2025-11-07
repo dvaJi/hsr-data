@@ -2,6 +2,7 @@
   "_id": 1303,
   "id": "ruan_mei",
   "name": "Ruan Mei",
+  "description": "Une membre de la Société des génies experte en sciences de la vie. Elle a collaboré avec Herta et d'autres génies pour développer l'Univers simulé.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Inflige des DGT de glace mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Ruan Mei gagne Tonalité après avoir utilisé sa compétence. Les DGT et l'efficacité de Rupture de faiblesse de tous les alliés augmentent quand Ruan Mei bénéficie de cet effet.",
       "type": "Compétence",
       "tag": "Soutien",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,43 @@
       "simpleDesc": "Augmente la PÉN de RÉS à tous les types pour tous les alliés. Leurs attaques appliquent Floraison incomplète aux ennemis touchés.",
       "type": "Ultime",
       "tag": "Soutien",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Action retardée",
+          "desc": "Augmente le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "DGT de rupture",
+          "desc": "Les DGT de rupture augmentent avec l'effet de Rupture, la robustesse max de la cible et le niveau du personnage.\nLes DGT de rupture ne peuvent pas infliger de coup critique et ne sont pas affectés par les effets d'augmentation de DGT.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1159,24 @@
       "simpleDesc": "Augmente la VIT de tous les coéquipiers (à l'exception de cette unité). Infliger une Rupture de faiblesse à une cible ennemie lui inflige des DGT de rupture de glace supplémentaires.",
       "type": "Talent",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "DGT de rupture",
+          "desc": "Les DGT de rupture augmentent avec l'effet de Rupture, la robustesse max de la cible et le niveau du personnage.\nLes DGT de rupture ne peuvent pas infliger de coup critique et ne sont pas affectés par les effets d'augmentation de DGT.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1486,15 @@
       "simpleDesc": "Déclenche automatiquement la compétence de ce personnage #1[i] fois la prochaine fois qu'il entre en combat. Après avoir utilisé la technique, les alliés qui attaquent des ennemis dans l'Univers simulé ou parallèle sont toujours considérés comme entrant en combat après avoir attaqué la Faiblesse des ennemis, et la robustesse des ennemis est réduite quel que soit leur type de faiblesse. Augmente la réduction de robustesse et les DGT de rupture infligés en cas de Rupture de faiblesse pour chaque bénédiction possédée.",
       "type": "Technique",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1425,37 +1514,97 @@
       "_id": 130301,
       "id": "neuronic_embroidery",
       "name": "Schéma neuronal",
-      "desc": "Lorsque que la zone générée par l'ultime est déployée, les DGT infligés par tous les alliés ignorent <nobr>20%</nobr> de la DÉF des cibles."
+      "desc": "Lorsque que la zone générée par l'ultime est déployée, les DGT infligés par tous les alliés ignorent <nobr>20%</nobr> de la DÉF des cibles.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130302,
       "id": "reedside_promenade",
       "name": "Promenade au bord des roseaux",
-      "desc": "Lorsque Ruan Mei est sur le champ de bataille, l'ATQ de tous les alliés augmente de <nobr>40%</nobr> lorsqu'ils infligent des DGT à des ennemis <u>en état de Rupture de faiblesse</u>."
+      "desc": "Lorsque Ruan Mei est sur le champ de bataille, l'ATQ de tous les alliés augmente de <nobr>40%</nobr> lorsqu'ils infligent des DGT à des ennemis <u>en état de Rupture de faiblesse</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Rupture de faiblesse",
+          "desc": "État dans lequel entrent les cibles ennemies lorsque leur robustesse est réduite à 0 et qui retarde leurs actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130303,
       "id": "viridescent_pirouette",
       "name": "Virevolte viridescente",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130304,
       "id": "chatoyant_clat",
       "name": "Éclat chatoyant",
-      "desc": "L'effet de Rupture de Ruan Mei augmente de <nobr>100%</nobr> pendant <nobr>3</nobr> tours en cas de Rupture de faiblesse d'une cible ennemie."
+      "desc": "L'effet de Rupture de Ruan Mei augmente de <nobr>100%</nobr> pendant <nobr>3</nobr> tours en cas de Rupture de faiblesse d'une cible ennemie.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130305,
       "id": "languid_barrette",
       "name": "Barrette de languissement",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130306,
       "id": "sash_cascade",
       "name": "Cascade de rubans",
-      "desc": "Prolonge la durée de la zone générée par l'ultime de <nobr>1</nobr> tour. D'autre part, le multiplicateur des <u>DGT de rupture</u> du talent augmente de <nobr>200%</nobr>."
+      "desc": "Prolonge la durée de la zone générée par l'ultime de <nobr>1</nobr> tour. D'autre part, le multiplicateur des <u>DGT de rupture</u> du talent augmente de <nobr>200%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "DGT de rupture",
+          "desc": "Les DGT de rupture augmentent avec l'effet de Rupture, la robustesse max de la cible et le niveau du personnage.\nLes DGT de rupture ne peuvent pas infliger de coup critique et ne sont pas affectés par les effets d'augmentation de DGT.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

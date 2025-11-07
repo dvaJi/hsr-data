@@ -2,6 +2,7 @@
   "_id": 1405,
   "id": "anaxa",
   "name": "Anaxa",
+  "description": "Der Hain der Erleuchtung, eine Wiege des Wissens, in der Philosophen heranwachsen.\nDoch hier steht Anaxagoras, der Frevler, ein Erbe von Chrysos, der die Kernflamme der Vernunft infrage stellt: Würdest du wahrhaftig den schlechten Ruf auf dich nehmen, um die Prophezeiung zu brechen und die Zweige des Zweifels in den Heiligen Baum der Weisheit zu treiben?\n„Lächerlich. Diese Welt ist voller Lügen – nur ich bin die Wahrheit.“",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Wind-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Fügt einem Gegner geringen Wind-SCH zu und prallt insgesamt 5-mal ab, wobei noch nicht getroffene Ziele priorisiert werden. Je mehr Gegner sich auf dem Kampffeld befinden, desto mehr SCH wird verursacht.",
       "type": "Fertigkeit",
       "tag": "Abpraller",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Belegt alle Gegner mit „Sublimation“ und fügt ihnen Wind-SCH zu. Gegner im Status Sublimation werden gleichzeitig mit 7 Typen von Schwächen belegt und können keine Aktion ausführen, wenn sie keinen Kontrolle-WDS haben.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1065,15 @@
       "simpleDesc": "Nachdem ein Gegner getroffen wurde, wird ihm 1 zufällige Schwäche implantiert. Gegner mit #3[i] Schwächen werden mit „Qualitative Offenlegung“ belegt. Anaxa fügt Gegnern in diesem Status mehr SCH zu. Nachdem er Standardangriff oder Fertigkeit gegen Ziele mit Qualitative Offenlegung eingesetzt hat, setzt er zusätzlich 1-mal seine Fertigkeit ein, ohne Fertigkeitspunkte zu verbrauchen.",
       "type": "Talent",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1361,6 +1398,15 @@
       "simpleDesc": "Angrenzende Gegner treten in den Status Angst ein. Angriffe auf einen Gegner mit Angst gelten immer als Kampfeintritt mit Angriff auf die Schwäche des Gegners und implantieren allen Gegnern die Schwäche des Typs des Angreifers.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1378,37 +1424,79 @@
       "_id": 140501,
       "id": "magician_isolated_by_stars",
       "name": "Magier, der die Sterne verhüllt",
-      "desc": "Stellt nach dem ersten Einsatz der Fertigkeit <nobr>1</nobr> Fertigkeitspunkt wieder her. Wenn die Fertigkeit Gegner trifft, wird die VTD des Ziels für <nobr>2</nobr> Rd. um <nobr>16%</nobr> reduziert."
+      "desc": "Stellt nach dem ersten Einsatz der Fertigkeit <nobr>1</nobr> Fertigkeitspunkt wieder her. Wenn die Fertigkeit Gegner trifft, wird die VTD des Ziels für <nobr>2</nobr> Rd. um <nobr>16%</nobr> reduziert.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140502,
       "id": "soul_true_to_history",
       "name": "Seele, die der Geschichte treu bleibt",
-      "desc": "Wenn Gegner den Kampf betreten, wird das Schwäche-Implantat des Talents 1-mal ausgelöst und ihr WDS aller Typen um <nobr>20%</nobr> reduziert."
+      "desc": "Wenn Gegner den Kampf betreten, wird das Schwäche-Implantat des Talents 1-mal ausgelöst und ihr WDS aller Typen um <nobr>20%</nobr> reduziert.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140503,
       "id": "pupil_etched_into_cosmos",
       "name": "Pupille, die ins Weltall gemeißelt ist",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140504,
       "id": "blaze_plunged_to_canyon",
       "name": "Glut, die in die Schlucht stürzt",
-      "desc": "Erhöht beim Einsatz der Fertigkeit den ANG für <nobr>2</nobr> Rd. um <nobr>30%</nobr>. Dieser Effekt ist bis zu <nobr>2</nobr>-fach stapelbar."
+      "desc": "Erhöht beim Einsatz der Fertigkeit den ANG für <nobr>2</nobr> Rd. um <nobr>30%</nobr>. Dieser Effekt ist bis zu <nobr>2</nobr>-fach stapelbar.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140505,
       "id": "embryo_set_beyond_vortex",
       "name": "Embryo jenseits des Wirbels",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140506,
       "id": "everything_is_in_everything",
       "name": "Alles ist in allem",
-      "desc": "Der von Anaxa verursachte SCH ist <nobr>130%</nobr> des ursprünglichen SCH. Die 2 Effekte der Spur „Notwendige Lücke“ werden direkt ausgelöst und hängen nicht mehr von der Anzahl der Figuren auf dem Pfad der Gelehrsamkeit im Team ab."
+      "desc": "Der von Anaxa verursachte SCH ist <nobr>130%</nobr> des ursprünglichen SCH. Die 2 Effekte der Spur „Notwendige Lücke“ werden direkt ausgelöst und hängen nicht mehr von der Anzahl der Figuren auf dem Pfad der Gelehrsamkeit im Team ab.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

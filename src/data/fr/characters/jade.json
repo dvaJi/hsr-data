@@ -2,6 +2,7 @@
   "_id": 1314,
   "id": "jade",
   "name": "Jade",
+  "description": "Cadre du Département des investissements stratégiques de la CPI et membre des Dix cœurs de pierre, connue pour sa pierre angulaire, le « Jade du Crédit ».\nPrêteuse sur gage gracieuse et élégante, elle est douée pour déchiffrer la complexité du for intérieur de ses interlocuteurs, et exerce son passe-temps personnel à la Boutique Bonajade.\nElle est prête à attendre patiemment pour obtenir des acquisitions de grande valeur et excelle dans l'art de soutirer les biens des clients les plus démunis.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT quantiques mineurs à un ennemi unique et des DGT quantiques mineurs aux ennemis adjacents.",
       "type": "ATQ normale",
       "tag": "Propagation",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Transforme un allié en Agent de recouvrement de dettes et augmente sa VIT. Lorsque l'Agent de recouvrement de dettes attaque, il inflige des DGT quantiques additionnels mineurs à chaque cible ennemie touchée et il consomme ses propres PV. Lorsque Jade devient Agent de recouvrement de dettes, elle ne bénéficie pas de l'effet d'augmentation de VIT, et ses attaques ne consomment pas de PV.",
       "type": "Compétence",
       "tag": "Soutien",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -768,6 +796,24 @@
       "simpleDesc": "Inflige des DGT quantiques à toutes les unités ennemies et le multiplicateur de DGT de l'ATQ de suivi du talent de cette unité augmente.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1092,6 +1138,24 @@
       "simpleDesc": "Jade gagne 1 point de charge à chaque fois qu'une cible ennemie est touchée par une de ses attaques ou une attaque de l'Agent de recouvrement de dettes. À #3[i] points de charge, Jade consomme les #3[i] points pour déclencher 1 ATQ de suivi qui inflige des DGT quantiques à tous les ennemis.\nJade gagne des cumuls de Bien hypothéqué lorsqu'elle déclenche l'ATQ de suivi, ce qui augmente ses DGT critiques. Cet effet peut se cumuler jusqu'à #2[i] fois.",
       "type": "Talent",
       "tag": "ZdE",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1446,6 +1510,15 @@
       "simpleDesc": "Inflige Obéissance aveugle aux ennemis dans une zone définie. Tous les ennemis avec Obéissance aveugle entrent en combat simultanément en cas d'attaque sur un ennemi avec Obéissance aveugle. Inflige des DGT quantiques mineurs à tous les ennemis et Jade gagne immédiatement #3[i] cumuls de Bien hypothéqué en entrant en combat.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1537,97 @@
       "_id": 131401,
       "id": "altruism_nevertheless_tradable",
       "name": "Altruisme négociable",
-      "desc": "Les DGT d'<u>ATQ de suivi</u> du talent de Jade augmentent de <nobr>32%</nobr>. Lorsque le personnage qui bénéficie de l'effet Agent de recouvrement de dettes attaque et touche 1 ou 2 cible(s) ennemie(s), Jade obtient respectivement <nobr>1</nobr> ou <nobr>2</nobr> points de charge supplémentaires."
+      "desc": "Les DGT d'<u>ATQ de suivi</u> du talent de Jade augmentent de <nobr>32%</nobr>. Lorsque le personnage qui bénéficie de l'effet Agent de recouvrement de dettes attaque et touche 1 ou 2 cible(s) ennemie(s), Jade obtient respectivement <nobr>1</nobr> ou <nobr>2</nobr> points de charge supplémentaires.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131402,
       "id": "morality_herein_authenticated",
       "name": "Moralité sous caution",
-      "desc": "Augmente de <nobr>18%</nobr> les chances de coup critique de Jade à <nobr>15</nobr> cumuls de Bien hypothéqué."
+      "desc": "Augmente de <nobr>18%</nobr> les chances de coup critique de Jade à <nobr>15</nobr> cumuls de Bien hypothéqué.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131403,
       "id": "honesty_soon_mortgaged",
       "name": "Honnêteté hypothéquée",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131404,
       "id": "sincerity_put_option_only",
       "name": "Acompte décisif",
-      "desc": "Les DGT infligés par Jade ignorent <nobr>12%</nobr> de la DÉF des cibles ennemies pendant <nobr>3</nobr> tours lors de l'utilisation de l'ultime."
+      "desc": "Les DGT infligés par Jade ignorent <nobr>12%</nobr> de la DÉF des cibles ennemies pendant <nobr>3</nobr> tours lors de l'utilisation de l'ultime.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131405,
       "id": "hope_hitherto_forfeited",
       "name": "Abolition de l'espoir",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131406,
       "id": "equity_pending_sponsorship",
       "name": "Équité sous condition",
-      "desc": "La <u>PÉN de RÉS</u> quantique de Jade augmente de <nobr>20%</nobr> lorsqu'il y a un Agent de recouvrement de dettes sur le champ de bataille, et elle bénéficie également elle-même de l'effet Agent de recouvrement de dettes."
+      "desc": "La <u>PÉN de RÉS</u> quantique de Jade augmente de <nobr>20%</nobr> lorsqu'il y a un Agent de recouvrement de dettes sur le champ de bataille, et elle bénéficie également elle-même de l'effet Agent de recouvrement de dettes.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "Céridra",
+  "description": "El Imperio del Norte, una dinastía perdida, tierras gélidas que arden con ambiciones de conquista.\nMonarca Céridra, Heredera de Crisos que empuña la Yesca de la Ley, deberás preparar tus piezas en el tablero para desafiar a los dioses. Juzgarás a los prisioneros desleales y establecerás en este mundo los cimientos buscallamas.\n\"¡Este no es el final, el camino de Amphoreus se extiende hasta las estrellas del cosmos!\".",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "Otorga Mérito militar a un personaje aliado y Céridra obtiene una carga. Cuando la carga alcanza #4[i] puntos, el Mérito militar del personaje aliado mejora automáticamente a Título nobiliario. El personaje con Título nobiliario aumenta el Daño CRIT y la PEN de la RES a todos los tipos de su daño de habilidad básica y puede activar Ataque sorpresa.",
       "type": "Habilidad básica",
       "tag": "Apoyo",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Estados negativos de control",
+          "desc": "Congelación, Enredo, Prisión, Dominación, Cólera, Reverberación potente, Sueño extraño, Enredo-Prisión, Aterrorizado y Bloqueo de acción.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "Ataque sorpresa",
+          "desc": "Copia y lanza anticipadamente la habilidad que está a punto de ser lanzada, y después lanza la habilidad original.\nAtaque sorpresa no puede volver a activar Ataque sorpresa.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "Obtiene carga e inflige Daño de Viento a todos los enemigos.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "Aumenta el ATQ del personaje con Mérito militar. Cuando este lanza el ATQ básico o la habilidad básica, Céridra obtiene carga. Después de que el personaje con Mérito militar ataque, Céridra inflige además una pequeña cantidad de Daño de Viento adicional.",
       "type": "Talento",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "Ataque sorpresa",
+          "desc": "Copia y lanza anticipadamente la habilidad que está a punto de ser lanzada, y después lanza la habilidad original.\nAtaque sorpresa no puede volver a activar Ataque sorpresa.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "Otorga Mérito militar al personaje activo en ese momento. Al comenzar la siguiente batalla, lanza automáticamente la habilidad básica sobre el personaje que tenga Mérito militar.",
       "type": "Técnica",
       "tag": "Apoyo",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "Me haré con todas las coronas",
-      "desc": "Cuando el personaje con Mérito militar inflige daño, ignora el <nobr>16%</nobr> de la DEF de cada objetivo. Si Mérito militar ya ha mejorado a Título nobiliario, el daño de habilidad básica que inflige ese personaje ignora un <nobr>20%</nobr> adicional de la DEF de cada objetivo. Cuando Céridra lanza la habilidad básica, el aliado recupera <nobr>2</nobr> pts. de energía."
+      "desc": "Cuando el personaje con Mérito militar inflige daño, ignora el <nobr>16%</nobr> de la DEF de cada objetivo. Si Mérito militar ya ha mejorado a Título nobiliario, el daño de habilidad básica que inflige ese personaje ignora un <nobr>20%</nobr> adicional de la DEF de cada objetivo. Cuando Céridra lanza la habilidad básica, el aliado recupera <nobr>2</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "Forjaré los deseos de todos",
-      "desc": "El daño que inflige el personaje con Mérito militar aumenta en un <nobr>40%</nobr>. Cuando hay un compañero de equipo con Mérito militar en el campo de batalla, el daño que inflige Céridra aumenta en un <nobr>160%</nobr>."
+      "desc": "El daño que inflige el personaje con Mérito militar aumenta en un <nobr>40%</nobr>. Cuando hay un compañero de equipo con Mérito militar en el campo de batalla, el daño que inflige Céridra aumenta en un <nobr>160%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "Quemaré las leyes antiguas",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "Reharé los reinos mortales",
-      "desc": "El multiplicador de daño de la habilidad definitiva aumenta en un <nobr>240%</nobr>."
+      "desc": "El multiplicador de daño de la habilidad definitiva aumenta en un <nobr>240%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "Retribuiré favores y afrentas",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "Viajaremos al mar de estrellas",
-      "desc": "La <u>PEN de la RES</u> a todos los tipos del personaje con Mérito militar aumenta en un <nobr>20%</nobr>, y el multiplicador del <u>daño adicional</u> activado por Mérito militar aumenta en un <nobr>300%</nobr>. Cuando hay un compañero de equipo con Mérito militar en el campo de batalla, la <u>PEN de la RES</u> a todos los tipos de Céridra aumenta en un <nobr>20%</nobr>."
+      "desc": "La <u>PEN de la RES</u> a todos los tipos del personaje con Mérito militar aumenta en un <nobr>20%</nobr>, y el multiplicador del <u>daño adicional</u> activado por Mérito militar aumenta en un <nobr>300%</nobr>. Cuando hay un compañero de equipo con Mérito militar en el campo de batalla, la <u>PEN de la RES</u> a todos los tipos de Céridra aumenta en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

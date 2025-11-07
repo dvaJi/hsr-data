@@ -2,6 +2,7 @@
   "_id": 1314,
   "id": "jade",
   "name": "Jade",
+  "description": "Gerente sênior do Departamento de Investimento Estratégico da CPI e uma dos Dez Corações de Pedra, conhecida pelo seu Alicerce, \"Jade do Crédito\".\nUma bela e elegante agiota, ela é habilidosa em decifrar as profundezas da mente das pessoas, e tem um hobby pessoal com nome de \"Loja de Penhores Bonajade\".\nEla tem a disposição de esperar pacientemente por aquisições de alto valor e é perita em extrair valor de clientes aparentemente destituídos.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Quântico leve a um único inimigo e Dano Quântico leve a inimigos adjacentes a ele.",
       "type": "ATQ Básico",
       "tag": "Explosão",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Faz com que um único aliado se torne o Coletor de Dívidas e aumente sua VEL. Após um Coletor de Dívidas atacar, ele causa Dano Quântico leve Adicional a cada inimigo-alvo atingido e consome seus próprios PV. Quando Jade se torna a Coletora de Dívidas, ela não pode ganhar o efeito de bônus de VEL, e seus ataques não consomem PV.",
       "type": "Perícia",
       "tag": "Suporte",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -768,6 +796,24 @@
       "simpleDesc": "Causa Dano Quântico a todas as unidades inimigas e o Multiplicador de Dano de Ataque Extra do Talento desta unidade aumenta.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1092,6 +1138,24 @@
       "simpleDesc": "Depois que Jade ou uma unidade com Coletor de Dívidas ataca, Jade ganha 1 ponto de Carga para cada inimigo-alvo atingido. Quando a Carga atinge #3[i] pontos, consome #3[i] ponto(s) para realizar 1 Ataque Extra, causando Dano Quântico a todos os inimigos.\nQuando Jade realiza o Ataque Extra, ganha Ativo Penhorado e aumenta o Dano CRIT, acumulando até #2[i] vezes.",
       "type": "Talento",
       "tag": "Área",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1446,6 +1510,15 @@
       "simpleDesc": "Inflige Fidelidade Cega a todos os inimigos dentro de uma área definida. Atacar um inimigo com Fidelidade Cega faz com que todos os inimigos com Fidelidade Cega entrem em combate simultaneamente. Ao entrar em combate, causa Dano Quântico leve a todos os inimigos e ganha imediatamente #3[i] acúmulo(s) de Ativo Penhorado.",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1537,97 @@
       "_id": 131401,
       "id": "altruism_nevertheless_tradable",
       "name": "Altruísmo? Algo Vendável",
-      "desc": "O Dano do <u>Ataque Extra</u> do Talento de Jade aumenta em <nobr>32%</nobr>. Após um personagem no estado de \"Coletor de Dívidas\" atacar e a quantidade de inimigos-alvo atingidos for 2 ou 1, Jade ganha adicionalmente <nobr>1</nobr> ou <nobr>2</nobr> ponto(s) de Carga respectivamente."
+      "desc": "O Dano do <u>Ataque Extra</u> do Talento de Jade aumenta em <nobr>32%</nobr>. Após um personagem no estado de \"Coletor de Dívidas\" atacar e a quantidade de inimigos-alvo atingidos for 2 ou 1, Jade ganha adicionalmente <nobr>1</nobr> ou <nobr>2</nobr> ponto(s) de Carga respectivamente.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131402,
       "id": "morality_herein_authenticated",
       "name": "Moralidade? Eis Aqui Autenticada",
-      "desc": "Quando houver <nobr>15</nobr> acúmulo(s) de Ativo Penhorado, a Chance de CRIT de Jade aumenta em <nobr>18%</nobr>."
+      "desc": "Quando houver <nobr>15</nobr> acúmulo(s) de Ativo Penhorado, a Chance de CRIT de Jade aumenta em <nobr>18%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131403,
       "id": "honesty_soon_mortgaged",
       "name": "Honestidade? Em Breve Hipotecada",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131404,
       "id": "sincerity_put_option_only",
       "name": "Sinceridade? Apenas Opcional",
-      "desc": "Ao usar a Perícia Suprema, permite que o Dano causado por Jade ignore <nobr>12%</nobr> da DEF do inimigo-alvo, durando por <nobr>3</nobr> rodada(s)."
+      "desc": "Ao usar a Perícia Suprema, permite que o Dano causado por Jade ignore <nobr>12%</nobr> da DEF do inimigo-alvo, durando por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131405,
       "id": "hope_hitherto_forfeited",
       "name": "Esperança? Doravante Abdicada",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131406,
       "id": "equity_pending_sponsorship",
       "name": "Equidade? Patrocínio Pendente",
-      "desc": "Enquanto há personagens com \"Coletor de Dívidas\" em campo, a <u>PEN de RES a Quântico</u> de Jade aumenta em <nobr>20%</nobr>, e Jade ganha o estado \"Coletor de Dívidas\"."
+      "desc": "Enquanto há personagens com \"Coletor de Dívidas\" em campo, a <u>PEN de RES a Quântico</u> de Jade aumenta em <nobr>20%</nobr>, e Jade ganha o estado \"Coletor de Dívidas\".",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de RES",
+          "desc": "Ao causar Dano, ignora parte da resistência do inimigo-alvo ao tipo de dano correspondente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

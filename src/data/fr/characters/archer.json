@@ -2,6 +2,7 @@
   "_id": 1015,
   "id": "archer",
   "name": "Archer",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT quantiques mineurs à un ennemi désigné.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -413,6 +423,15 @@
       "simpleDesc": "Entre dans l'état Connexion de circuits. Inflige des DGT quantiques massifs à un ennemi désigné. Dans l'état Connexion de circuits, le tour ne prend pas fin après l'utilisation de la compétence et les DGT de la compétence d'Archer augmentent. Si les points de compétence sont insuffisants pour utiliser à nouveau la compétence, quitte l'état Connexion de circuits.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 2,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,15 @@
       "simpleDesc": "Inflige des DGT quantiques massifs à un ennemi désigné et gagne de la charge.",
       "type": "Ultime",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1091,6 +1119,24 @@
       "simpleDesc": "Lorsqu'un coéquipier utilise une attaque, Archer consomme 1 point de charge et lance une ATQ de suivi sur la cible principale, infligeant des DGT quantiques et récupérant 1 point de compétence.",
       "type": "Talent",
       "tag": "Cible unique",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "ATQ de suivi",
+          "desc": "Effet qui se déclenche automatiquement lorsque les conditions sont remplies et qui inflige une attaque supplémentaire à une cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1384,6 +1430,15 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Inflige des DGT quantiques équivalents à #1[i]% de l'ATQ d'Archer à tous les ennemis et gagne #2[i] charge après être entré en combat.",
       "simpleDesc": "Engage immédiatement le combat contre les ennemis. Inflige des DGT quantiques à tous les ennemis et gagne de la charge après être entré en combat.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1401,37 +1456,79 @@
       "_id": 101501,
       "id": "the_unreached_dream",
       "name": "Idéal jamais effleuré",
-      "desc": "Les alliés récupèrent <nobr>2</nobr> points de compétence si la compétence est utilisée <nobr>3</nobr> fois en un seul tour."
+      "desc": "Les alliés récupèrent <nobr>2</nobr> points de compétence si la compétence est utilisée <nobr>3</nobr> fois en un seul tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101502,
       "id": "the_unfulfilled_happiness",
       "name": "Bonheur inassouvi",
-      "desc": "Lancer l'ultime réduit la RÉS quantique de la cible ennemie de <nobr>20%</nobr>, et lui applique une Faiblesse quantique pendant <nobr>2</nobr> tours."
+      "desc": "Lancer l'ultime réduit la RÉS quantique de la cible ennemie de <nobr>20%</nobr>, et lui applique une Faiblesse quantique pendant <nobr>2</nobr> tours.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101503,
       "id": "the_untamed_will",
       "name": "Volonté sauvage",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101504,
       "id": "the_unsung_life",
       "name": "Héroïsme ambigu",
-      "desc": "Augmente les DGT d'ultime infligés de <nobr>150%</nobr>."
+      "desc": "Augmente les DGT d'ultime infligés de <nobr>150%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101505,
       "id": "the_nameless_watch",
       "name": "Gardien inconnu",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101506,
       "id": "the_endless_pilgrimage",
       "name": "Pèlerinage sans fin",
-      "desc": "Récupère 1 point de compétence en début de tour. La limite de cumuls du bonus de DGT accordé par la compétence augmente de <nobr>1</nobr>. Les DGT infligés par la compétence ignorent <nobr>20%</nobr> de la DÉF."
+      "desc": "Récupère 1 point de compétence en début de tour. La limite de cumuls du bonus de DGT accordé par la compétence augmente de <nobr>1</nobr>. Les DGT infligés par la compétence ignorent <nobr>20%</nobr> de la DÉF.",
+      "unlockCost": [
+        {
+          "ItemID": 11015,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

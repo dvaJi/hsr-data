@@ -2,6 +2,7 @@
   "_id": 1204,
   "id": "jing_yuan",
   "name": "Jing Yuan",
+  "description": "Der General der göttlichen Vorsehung, einer der sieben himmlischen Generäle des Herrscherbogens der Xianzhou-Allianz, führt die Wolkenritter der Luofu.\nEr ist zwar ein Schüler des früheren Luofu-Schwertmeisters, aber nicht unbedingt für seine Kampffähigkeiten bekannt.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Blitz-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Fügt allen Gegnern geringen Blitz-SCH zu und erhöht die Trefferzahl des Blitz-Lords.",
       "type": "Fertigkeit",
       "tag": "Flächenangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +750,15 @@
       "simpleDesc": "Fügt allen Gegnern Blitz-SCH zu und erhöht die Trefferzahl des Blitz-Lords.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1033,10 +1064,44 @@
       "_id": 120404,
       "id": "prana_extirpated",
       "name": "Prana ausgemerzt",
-      "desc": "Beschwört den Blitz-Lord beim Kampfeintritt. Er hat eine GES von #1[i] und eine Trefferzahl von #4[i]. Seine Angriffe werden als Folgeangriffe gewertet. Jeder Treffer des Blitz-Lords fügt einem zufälligen Gegner Blitz-SCH in Höhe von #2[i]% von Jing Yuans ANG zu und fügt angrenzenden Zielen Blitz-SCH in Höhe von #5[i]% des am anvisierten Ziel verursachten SCH zu.\nDie Trefferzahl des Blitz-Lords ist bis zu max. #6[i] stapelbar und die GES des Blitz-Lords erhöht sich um #3[i] für jeden zusätzlichen Treffer. Nach dem Ende der Aktion werden die GES und die Trefferzahl des Blitz-Lords zurückgesetzt.\nIst Jing Yuan handlungsunfähig, verschwindet der Blitz-Lord.\nSteht Jing Yuan unter dem Einfluss von Mengenkontrolle-Debuffs, kann der Blitz-Lord auch keine Aktion ausführen.",
+      "desc": "Beschwört zu Beginn des Kampfes Blitz-Lord. Er hat anfänglich eine GES von #1[i] und eine Trefferzahl von #4[i]. Bei der Aktion führt er Folgeangriffe aus, wobei jeder Treffer einem zufälligen Gegner Blitz-SCH in Höhe von #2[i]% von Jing Yuans ANG und angrenzenden Einheiten Blitz-SCH in Höhe von #5[i]% des am Hauptziel verursachten SCH zufügt.\nDie Trefferzahl des Blitz-Lords ist bis zu #6[i] stapelbar und seine GES wird für jeden zusätzlichen Treffer um #3[i] erhöht. Nach dem Ende der Aktion werden die GES und die Trefferzahl des Blitz-Lords zurückgesetzt.\nIst Jing Yuan handlungsunfähig, verschwindet der Blitz-Lord.\nSteht Jing Yuan unter dem Einfluss von Mengenkontrolle-Debuffs, kann der Blitz-Lord auch keine Aktion ausführen.",
       "simpleDesc": "Beschwört Blitz-Lord zu Beginn des Kampfes. Wenn Blitz-Lord eine Aktion ausführt, startet er einen Folgeangriff und fügt automatisch einem zufälligen Gegner und angrenzenden Einheiten geringen Blitz-SCH zu.",
       "type": "Talent",
       "tag": "Abpraller",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Mengenkontrolle-Debuff",
+          "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1471,15 @@
       "simpleDesc": "Erhöht nach dem Einsatz der Technik die Trefferzahl des Blitz-Lords zu Beginn des nächsten Kampfs.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1422,37 +1496,79 @@
       "_id": 120401,
       "id": "slash_seas_split",
       "name": "Blitz, gespaltene Klippen",
-      "desc": "Erhöht beim Angriff des Blitz-Lords den SCH-Multiplikator für angrenzende Ziele um einen zusätzlichen Wert in Höhe von <nobr>25%</nobr> des SCH-Multiplikators für den anvisierten Gegner."
+      "desc": "Erhöht beim Angriff des Blitz-Lords den SCH-Multiplikator für angrenzende Ziele um einen zusätzlichen Wert in Höhe von <nobr>25%</nobr> des SCH-Multiplikators für den anvisierten Gegner.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120402,
       "id": "swing_skies_squashed",
       "name": "Phalanx, blockierte Sonnen",
-      "desc": "Nach der Aktion des Blitz-Lords verursachen Jing Yuans Standardangriff, Fertigkeit und Ultimate für <nobr>2</nobr> Rd. <nobr>20%</nobr> mehr SCH."
+      "desc": "Nach der Aktion des Blitz-Lords verursachen Jing Yuans Standardangriff, Fertigkeit und Ultimate für <nobr>2</nobr> Rd. <nobr>20%</nobr> mehr SCH.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120403,
       "id": "strike_suns_subdued",
       "name": "Schlag, zerbrochenes Licht",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120404,
       "id": "spin_stars_sieged",
       "name": "Klinge, gefällte Sterne",
-      "desc": "Jing Yuan erhält bei jedem Treffer des Blitz-Lords <nobr>2</nobr> Pkt. Energie zurück."
+      "desc": "Jing Yuan erhält bei jedem Treffer des Blitz-Lords <nobr>2</nobr> Pkt. Energie zurück.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120405,
       "id": "stride_spoils_seized",
       "name": "Veteran, besiegter Tod",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120406,
       "id": "sweep_souls_slain",
       "name": "Zauber, bezwungene Feinde",
-      "desc": "Jeder Treffer des Blitz-Lords verursacht bei den Gegnern zusätzlich Anfälligkeit.\nAnfällige Ziele erleiden bis zum Ende dieses Angriffs des Blitz-Lords <nobr>12%</nobr> mehr SCH. Dieser Effekt ist bis zu <nobr>3</nobr>-mal stapelbar."
+      "desc": "Jeder Treffer des Blitz-Lords verursacht bei den Gegnern zusätzlich Anfälligkeit.\nAnfällige Ziele erleiden bis zum Ende dieses Angriffs des Blitz-Lords <nobr>12%</nobr> mehr SCH. Dieser Effekt ist bis zu <nobr>3</nobr>-mal stapelbar.",
+      "unlockCost": [
+        {
+          "ItemID": 11204,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

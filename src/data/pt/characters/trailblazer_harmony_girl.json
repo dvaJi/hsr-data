@@ -2,6 +2,7 @@
   "_id": 8006,
   "id": "trailblazer_harmony_girl",
   "name": "Desbravadora A Harmonia",
+  "description": "{F#Uma garota}{M#Um garoto} que embarcou no Expresso Astral.\n{M#Ele}{F#Ela} escolheu viajar com o Expresso Astral para eliminar os perigos apresentados pelo Stellaron.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Imaginário leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Causa Dano Imaginário leve a inimigos-alvo únicos e é Rebatido 5 vezes.",
       "type": "Perícia",
       "tag": "Rebote",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "Concede a todos os aliados o efeito de Dançarino de Apoio. Aliados com Dançarino de Apoio têm seus Efeitos de Quebra aumentados e causam adicionalmente Super Dano de Quebra 1 vez quando atacam inimigos-alvo que estão com Quebra de Fraqueza.",
       "type": "Perícia Suprema",
       "tag": "Suporte",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Super Dano de Quebra",
+          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.\nO Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.\nSuper Dano de Quebra também é considerado Dano de Quebra.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "A Desbravadora regenera Energia quando um inimigo-alvo tem sua Fraqueza Quebrada.",
       "type": "Talento",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "No início da próxima batalha, aumenta o Efeito de Quebra de todos os aliados.",
       "type": "Técnica",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800601,
       "id": "best_seat_in_the_house",
       "name": "Melhor Assento da Casa",
-      "desc": "Recupera <nobr>1</nobr> Ponto(s) de Perícia depois de usar a Perícia pela primeira vez."
+      "desc": "Recupera <nobr>1</nobr> Ponto(s) de Perícia depois de usar a Perícia pela primeira vez.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800602,
       "id": "jailbreaking_rainbowwalk",
       "name": "Marcha Arco-Íris da Libertação",
-      "desc": "No início da batalha, aumenta em <span style=\"color:#f29e38ff><nobr>25%</nobr></span> a Taxa de Regeneração de Energia da Desbravadora por <nobr>3</nobr> rodada(s)."
+      "desc": "No início da batalha, aumenta em <span style=\"color:#f29e38ff><nobr>25%</nobr></span> a Taxa de Regeneração de Energia da Desbravadora por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800603,
       "id": "sanatorium_for_rest_notes",
       "name": "Sanatório do Descanso",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800604,
       "id": "dove_in_tophat",
       "name": "Pomba na Cartola",
-      "desc": "Enquanto a Desbravadora está em campo, aumenta o Efeito de Quebra de todos os aliados exceto o da Desbravadora. O aumento é igual a <nobr>15%</nobr> do Efeito de Quebra da Desbravadora."
+      "desc": "Enquanto a Desbravadora está em campo, aumenta o Efeito de Quebra de todos os aliados exceto o da Desbravadora. O aumento é igual a <nobr>15%</nobr> do Efeito de Quebra da Desbravadora.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800605,
       "id": "poem_favors_rhythms_of_old",
       "name": "Os Poemas Favorecem os Ritmos do Passado",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800606,
       "id": "tomorrow_rest_in_spotlight",
       "name": "Amanhã, Descanse no Holofote",
-      "desc": "O número de aplicações adicionais de Dano pela Perícia aumenta em <nobr>2</nobr>."
+      "desc": "O número de aplicações adicionais de Dano pela Perícia aumenta em <nobr>2</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

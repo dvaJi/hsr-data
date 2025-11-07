@@ -2,6 +2,7 @@
   "_id": 1208,
   "id": "fu_xuan",
   "name": "符玄",
+  "description": "仙舟「羅浮」太卜司之首。\n憑藉第三眼與窮觀陣為仙舟占算航路，預卜事務吉凶。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "對敵方單體造成少量量子屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,35 @@
       "simpleDesc": "開啟【窮觀陣】，隊友所受傷害分攤給符玄。並使我方全體生命上限、暴擊率提高。",
       "type": "戰技",
       "tag": "防禦",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000013,
+          "name": "分攤",
+          "desc": "在傷害結算之前將攻擊方的一部分傷害分給其他單個或多個目標，受擊方承擔剩餘部分。分攤給其他目標的傷害無法再次分攤。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +815,18 @@
       "simpleDesc": "對敵方全體造成量子屬性傷害，增加符玄天賦的觸發次數。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1121,15 @@
       "simpleDesc": "當符玄處於可戰鬥狀態時，我方全體受到的傷害降低。\n生命值較低時自動按已損失生命值百分比回復自身生命。該效果最多擁有2次觸發次數。",
       "type": "天賦",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,15 @@
       "simpleDesc": "開啟屏障，受到敵人攻擊時不會進入戰鬥。進入戰鬥後自動開啟【窮觀陣】。",
       "type": "秘技",
       "tag": "防禦",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1480,88 @@
       "_id": 120801,
       "id": "dominus_pacis",
       "name": "司危",
-      "desc": "【鑑知】使暴擊傷害提高<nobr>30%</nobr>。"
+      "desc": "【鑑知】使暴擊傷害提高<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120802,
       "id": "optimus_felix",
       "name": "柔兆",
-      "desc": "【窮觀陣】開啟時，若我方目標受到致命傷害，則本次行動中所有受到致命傷害的我方目標都不會陷入<u>無法戰鬥狀態</u>，並立即回復等同於其自身生命上限<nobr>70%</nobr>的生命值。該效果單場戰鬥中可以觸發1次。"
+      "desc": "【窮觀陣】開啟時，若我方目標受到致命傷害，則本次行動中所有受到致命傷害的我方目標都不會陷入<u>無法戰鬥狀態</u>，並立即回復等同於其自身生命上限<nobr>70%</nobr>的生命值。該效果單場戰鬥中可以觸發1次。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "無法戰鬥狀態",
+          "desc": "我方目標的現有生命值被削減至0時進入的特殊狀態，處於該狀態的目標無法繼續戰鬥。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120803,
       "id": "apex_nexus",
       "name": "直符",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120804,
       "id": "fortuna_stellaris",
       "name": "格澤",
-      "desc": "當處於【窮觀陣】的我方其他目標受到攻擊後，符玄恢復<nobr>5</nobr>點能量。"
+      "desc": "當處於【窮觀陣】的我方其他目標受到攻擊後，符玄恢復<nobr>5</nobr>點能量。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120805,
       "id": "arbiter_primus",
       "name": "計神",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120806,
       "id": "omnia_vita",
       "name": "種陵",
-      "desc": "【窮觀陣】開啟時，會累積我方全體本場戰鬥中的已損失生命值。符玄施放終結技造成的傷害提高，增幅數值等同於本場戰鬥中累積已損失生命值的<nobr>200%</nobr>。\n本場戰鬥中累積已損失生命值最高不超過符玄生命上限的<nobr>120%</nobr>，施放終結技後會歸零並重新開始累積。"
+      "desc": "【窮觀陣】開啟時，會累積我方全體本場戰鬥中的已損失生命值。符玄施放終結技造成的傷害提高，增幅數值等同於本場戰鬥中累積已損失生命值的<nobr>200%</nobr>。\n本場戰鬥中累積已損失生命值最高不超過符玄生命上限的<nobr>120%</nobr>，施放終結技後會歸零並重新開始累積。",
+      "unlockCost": [
+        {
+          "ItemID": 11208,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

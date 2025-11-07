@@ -2,6 +2,7 @@
   "_id": 1304,
   "id": "aventurine",
   "name": "Aventurine",
+  "description": "A high-ranking executive of the IPC's Strategic Investment Department.\nA risk-taker, his constant smile makes it difficult for people to discern his true feelings.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Deals minor Imaginary DMG to one designated enemy target.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Provides all allies with a Fortified Wager shield, whose Shield Effect is stackable.",
       "type": "Skill",
       "tag": "Defense",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "Gains a random amount of \"Blind Bet\" points and inflicts \"Unnerved \"on one enemy, dealing Imaginary DMG. When an ally target hits an \"Unnerved\" enemy, the CRIT DMG dealt increases.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1093,10 +1130,36 @@
       "_id": 130404,
       "id": "shot_loaded_right",
       "name": "Shot Loaded Right",
-      "desc": "For any single ally with Fortified Wager, their Effect RES increases by #4[f1]%, and when they get attacked, Aventurine gains 1 point of Blind Bet. When Aventurine has Fortified Wager, he can resist Crowd Control debuffs. This effect can trigger again after #5[i] turn(s). Aventurine additionally gains #1[i] point(s) of Blind Bet after getting attacked. Upon reaching 7 points of Blind Bet, Aventurine consumes the 7 points to launch a #2[i]-hit Follow-up ATK, with each hit dealing Imaginary DMG equal to #3[i]% of Aventurine's DEF to a single random enemy. Blind Bet is capped at 10 points.",
+      "desc": "For any single ally with \"Fortified Wager,\" their Effect RES increases by #4[f1]%, and when they get attacked, Aventurine gains 1 point of \"Blind Bet.\" When Aventurine has \"Fortified Wager,\" he can resist Crowd Control debuffs. This effect can trigger again after #5[i] turn(s). Aventurine additionally gains #1[i] point(s) of \"Blind Bet\" after getting attacked. Upon reaching 7 points of \"Blind Bet,\" Aventurine consumes the 7 points to launch a #2[i]-hit Follow-up ATK, with each hit dealing Imaginary DMG equal to #3[i]% of Aventurine's DEF to one random enemy. \"Blind Bet\" is capped at 10 points.",
       "simpleDesc": "For any single ally with Fortified Wager, their Effect RES increases, and when they get attacked, Aventurine accumulates Blind Bet. When Aventurine has Fortified Wager, he can resist Crowd Control debuffs. Upon reaching 7 points of Blind Bet, Aventurine consumes the 7 points to launch a Follow-up ATK that deals minor Imaginary DMG to random single enemy targets, bouncing a total of 7 times.",
       "type": "Talent",
       "tag": "Bounce",
+      "spBase": 1,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        10,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Crowd Control debuff",
+          "desc": "Freeze, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Action Lock.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1514,15 @@
       "simpleDesc": "Using the Technique randomly grants one out of the three DEF Boost effects with different buff values. After entering the next battle, increases all allies' DEF by the corresponding value.",
       "type": "Technique",
       "tag": "Defense",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1470,37 +1542,88 @@
       "_id": 130401,
       "id": "prisoners_dilemma",
       "name": "Prisoner's Dilemma",
-      "desc": "Increases CRIT DMG by <nobr>20%</nobr> for ally targets with Fortified Wager. After using the Ultimate, provides all allies with a Fortified Wager shield, whose Shield Effect is equal to <nobr>100%</nobr> of the one provided by the Skill, lasting for <nobr>3</nobr> turn(s)."
+      "desc": "Increases CRIT DMG by <nobr>20%</nobr> for ally targets with Fortified Wager. After using the Ultimate, provides all allies with a Fortified Wager shield, whose Shield Effect is equal to <nobr>100%</nobr> of the one provided by the Skill, lasting for <nobr>3</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130402,
       "id": "bounded_rationality",
       "name": "Bounded Rationality",
-      "desc": "When using the Basic ATK, reduces the target's All-Type RES by <nobr>12%</nobr> for <nobr>3</nobr> turn(s)."
+      "desc": "When using the Basic ATK, reduces the target's All-Type RES by <nobr>12%</nobr> for <nobr>3</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130403,
       "id": "droprate_maxing",
       "name": "Droprate Maxing",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130404,
       "id": "unexpected_hanging_paradox",
       "name": "Unexpected Hanging Paradox",
-      "desc": "When triggering his Talent's <u>Follow-up ATK</u>, first increases Aventurine's DEF by <nobr>40%</nobr> for <nobr>2</nobr> turn(s), and additionally increases the Hits Per Action for his talent's <u>Follow-up ATK</u> by <nobr>3</nobr>."
+      "desc": "When triggering his Talent's <u>Follow-up ATK</u>, first increases Aventurine's DEF by <nobr>40%</nobr> for <nobr>2</nobr> turn(s), and additionally increases the Hits Per Action for his talent's <u>Follow-up ATK</u> by <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130405,
       "id": "ambiguity_aversion",
       "name": "Ambiguity Aversion",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130406,
       "id": "stag_hunt_game",
       "name": "Stag Hunt Game",
-      "desc": "For every teammate that holds a Shield, the DMG dealt by Aventurine increases by <nobr>50%</nobr>, up to a maximum of <nobr>150%</nobr>."
+      "desc": "For every teammate that holds a Shield, the DMG dealt by Aventurine increases by <nobr>50%</nobr>, up to a maximum of <nobr>150%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

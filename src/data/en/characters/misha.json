@@ -2,6 +2,7 @@
   "_id": 1312,
   "id": "misha",
   "name": "Misha",
+  "description": "A well-behaved young man serving as a hotel bellboy in Penacony.\nMisha has a great longing for the Nameless and dreams of one day embarking on a journey of his own.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -244,9 +245,18 @@
       "id": "eexcuse_me_please",
       "name": "E—Excuse Me, Please!",
       "desc": "Deals Ice DMG equal to #1[i]% of Misha's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Ice DMG to a single enemy.",
+      "simpleDesc": "Deals minor Ice DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Deals Ice DMG to an enemy and minor Ice DMG to enemies adjacent to them. In addition, increases Misha's next Ultimate's Hits Per Action.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -733,10 +752,36 @@
       "_id": 131203,
       "id": "ggonna_be_late",
       "name": "G—Gonna Be Late!",
-      "desc": "Has #1[i] Hits Per Action by default. First, uses 1 hit to deal Ice DMG equal to #2[i]% of Misha's ATK to one designated enemy target. Then, the rest of the hits each deals Ice DMG equal to #2[i]% of Misha's ATK to a single random enemy. Just before each hit lands, there is a #3[f1]% base chance to Freeze the target, lasting for 1 turn.\nWhile Frozen, enemy targets cannot take any actions, and at the start of their turn, they receive Ice Additional DMG equal to #4[i]% of Misha's ATK.\nThis Ultimate can possess up to #5[i] Hits Per Action. After the Ultimate is used, its Hits Per Action will be reset to the default level.",
+      "desc": "Has #1[i] Hits Per Action by default. First, uses 1 hit to deal Ice DMG equal to #2[i]% of Misha's ATK to one designated enemy target. Then, the rest of the hits each deals Ice DMG equal to #2[i]% of Misha's ATK to one random enemy. Just before each hit lands, there is a #3[f1]% base chance to Freeze the target, lasting for 1 turn.\nWhile Frozen, enemy targets cannot take any actions, and at the start of their turn, they receive Ice Additional DMG equal to #4[i]% of Misha's ATK.\nThis Ultimate can possess up to #5[i] Hits Per Action. After the Ultimate is used, its Hits Per Action will be reset to the default level.",
       "simpleDesc": "Deals minor Ice DMG to single enemies. The attack bounces #1[i] times by default and up to a maximum of #5[i] times. Before each hit lands, there is a minor chance to Freeze the target.",
       "type": "Ultimate",
       "tag": "Bounce",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1085,6 +1130,15 @@
       "simpleDesc": "For every 1 Skill Point allies consume, Misha's next Ultimate delivers more Hits Per Action, and Misha regenerates his Energy.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1442,15 @@
       "simpleDesc": "Creates a Special Dimension that stops all enemies within. Upon entering battle against enemies within the dimension, Misha's next Ultimate deals more Hits Per Action.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1405,37 +1468,88 @@
       "_id": 131201,
       "id": "whimsicality_of_fancy",
       "name": "Whimsicality of Fancy",
-      "desc": "When using the Ultimate, for every enemy on the field, additionally increases the Hits Per Action for the current Ultimate by <nobr>1</nobr> hit(s), up to a maximum increase of <nobr>5</nobr> hit(s)."
+      "desc": "When using the Ultimate, for every enemy on the field, additionally increases the Hits Per Action for the current Ultimate by <nobr>1</nobr> hit(s), up to a maximum increase of <nobr>5</nobr> hit(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131202,
       "id": "yearning_of_youth",
       "name": "Yearning of Youth",
-      "desc": "Before each hit of the Ultimate lands, there is a <nobr>24%</nobr> <u>base chance</u> of reducing the target's DEF by <nobr>16%</nobr> for <nobr>3</nobr> turn(s)."
+      "desc": "Before each hit of the Ultimate lands, there is a <nobr>24%</nobr> <u>base chance</u> of reducing the target's DEF by <nobr>16%</nobr> for <nobr>3</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131203,
       "id": "vestige_of_happiness",
       "name": "Vestige of Happiness",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131204,
       "id": "visage_of_kinship",
       "name": "Visage of Kinship",
-      "desc": "Increases the DMG multiplier for each hit of the Ultimate by <nobr>6%</nobr>."
+      "desc": "Increases the DMG multiplier for each hit of the Ultimate by <nobr>6%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131205,
       "id": "genesis_of_first_love",
       "name": "Genesis of First Love",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131206,
       "id": "estrangement_of_dream",
       "name": "Estrangement of Dream",
-      "desc": "When using the Ultimate, increases own DMG by <nobr>30%</nobr>, lasting until the end of the turn. In addition, the next time the Skill is used, recovers <nobr>1</nobr> Skill Point(s) for the team."
+      "desc": "When using the Ultimate, increases own DMG by <nobr>30%</nobr>, lasting until the end of the turn. In addition, the next time the Skill is used, recovers <nobr>1</nobr> Skill Point(s) for the team.",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

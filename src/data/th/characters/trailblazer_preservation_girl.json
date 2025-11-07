@@ -2,6 +2,7 @@
   "_id": 8004,
   "id": "trailblazer_preservation_girl",
   "name": "ผู้บุกเบิก อนุรักษ์",
+  "description": "{F#เด็กสาว}{M#เด็กหนุ่ม}ที่ขึ้นรถไฟ Astral Express มา\nเลือกเดินทางด้วย Astral Express เพื่อกำจัดวิกฤตที่เกิดจาก Stellaron",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG ไฟเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว และจะได้รับ \"Magma Will\"",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "DMG ที่ตนได้รับลดลง และได้รับ \"Magma Will\" ซึ่งมีโอกาสอย่างมากที่จะทำให้ฝ่ายศัตรูทั้งหมดติดสถานะยั่วยุ",
       "type": "สกิลต่อสู้",
       "tag": "ป้องกัน",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "โอกาสพื้นฐาน",
+          "desc": "โอกาสพื้นฐานที่จะเกิดเอฟเฟกต์ Debuff ให้กับผู้ที่ถูกโจมตี\nโดยอัตราสร้างสถานะของผู้โจมตี และการต้านทานสถานะของศัตรูเป้าหมาย จะส่งผลต่อโอกาสในขั้นสุดท้าย",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -737,6 +771,18 @@
       "simpleDesc": "สร้าง DMG ไฟแก่ฝ่ายศัตรูทั้งหมด และจะเสริมพลังการโจมตีปกติ ในครั้งถัดไป",
       "type": "ท่าไม้ตาย",
       "tag": "โจมตีหมู่",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1086,15 @@
       "simpleDesc": "เมื่อถูกโจมตีจะซ้อนทับ \"Magma Will\" และเมื่อมี \"Magma Will\" ไม่น้อยกว่า 4 ชั้นแล้ว การโจมตีปกติจะได้รับการเสริมพลัง หลังจากปล่อยการโจมตีปกติ สกิลต่อสู้ และท่าไม้ตายแล้ว จะมอบโล่ให้กับฝ่ายเราทั้งหมด",
       "type": "พรสวรรค์",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1373,6 +1428,15 @@
       "simpleDesc": "หลังจากใช้เทคนิคแล้ว เมื่อเริ่มการต่อสู้ครั้งถัดไป จะมอบโล่ให้กับตัวเอง",
       "type": "เทคนิค",
       "tag": "ป้องกัน",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1455,79 @@
       "_id": 800401,
       "id": "earthshaking_resonance",
       "name": "Earth-Shaking Resonance",
-      "desc": "เมื่อใช้การโจมตีปกติ จะสร้าง DMG ไฟเพิ่มเติม <nobr>25%</nobr> ของ DEF ของผู้บุกเบิก และเมื่อใช้การโจมตีปกติแบบเสริมพลัง จะสร้าง DMG ไฟเพิ่มเติม <nobr>50%</nobr> ของ DEF ของผู้บุกเบิก"
+      "desc": "เมื่อใช้การโจมตีปกติ จะสร้าง DMG ไฟเพิ่มเติม <nobr>25%</nobr> ของ DEF ของผู้บุกเบิก และเมื่อใช้การโจมตีปกติแบบเสริมพลัง จะสร้าง DMG ไฟเพิ่มเติม <nobr>50%</nobr> ของ DEF ของผู้บุกเบิก",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800402,
       "id": "timedefying_tenacity",
       "name": "Time-Defying Tenacity",
-      "desc": "เมื่อใช้พรสวรรค์ จะทำให้โล่ที่ฝ่ายตัวเองทั้งหมดได้รับ สามารถลบล้าง DMG เพิ่มเติมได้ <nobr>2%</nobr> ของ DEF ของผู้บุกเบิก +<nobr>27</nobr>"
+      "desc": "เมื่อใช้พรสวรรค์ จะทำให้โล่ที่ฝ่ายตัวเองทั้งหมดได้รับ สามารถลบล้าง DMG เพิ่มเติมได้ <nobr>2%</nobr> ของ DEF ของผู้บุกเบิก +<nobr>27</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800403,
       "id": "trailblazing_blueprint",
       "name": "Trail-Blazing Blueprint",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800404,
       "id": "nationbuilding_oath",
       "name": "Nation-Building Oath",
-      "desc": "เมื่อเริ่มต้นการต่อสู้ จะได้รับ \"Magma Will\" <nobr>4</nobr> ชั้น โดยทันที"
+      "desc": "เมื่อเริ่มต้นการต่อสู้ จะได้รับ \"Magma Will\" <nobr>4</nobr> ชั้น โดยทันที",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800405,
       "id": "spiritwarming_flame",
       "name": "Spirit-Warming Flame",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800406,
       "id": "cityforging_bulwarks",
       "name": "City-Forging Bulwarks",
-      "desc": "หลังจากใช้การโจมตีปกติแบบเสริมพลังหรือท่าไม้ตายแล้ว DEF ของผู้บุกเบิกจะเพิ่มขึ้น <nobr>10%</nobr> และสามารถซ้อนทับได้สูงสุด <nobr>3</nobr> ชั้น"
+      "desc": "หลังจากใช้การโจมตีปกติแบบเสริมพลังหรือท่าไม้ตายแล้ว DEF ของผู้บุกเบิกจะเพิ่มขึ้น <nobr>10%</nobr> และสามารถซ้อนทับได้สูงสุด <nobr>3</nobr> ชั้น",
+      "unlockCost": [
+        {
+          "ItemID": 18003,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1405,
   "id": "anaxa",
   "name": "Anaxa",
+  "description": "El Soto de las Musas, una academia que nutre el conocimiento y la cuna donde nacen los filósofos.\nPero aquí está el hereje Anaxágoras, el Heredero de Crisos que cuestiona la Yesca de la Razón, recibiendo la pregunta: ¿Estás dispuesto a desafiar la profecía, aunque tengas que cargar con una mala reputación, e insistes en clavar las espinas de la duda en el árbol sagrado de la sabiduría?\n\"Qué absurdo. Este mundo está lleno de falsedades; solo yo soy la verdad\".",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo. Se dispara 5 veces en total, priorizando objetivos que no hayan sido golpeados. Cuantos más enemigos haya en el campo de batalla, más daño inflige.",
       "type": "Habilidad básica",
       "tag": "Rebote",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,15 @@
       "simpleDesc": "Aplica Sublimación a todos los enemigos y les inflige Daño de Viento. A los objetivos en el estado de Sublimación se les implantan simultáneamente 7 tipos de Debilidad y no pueden actuar si no tienen RES a Control.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1065,15 @@
       "simpleDesc": "Tras golpear a un enemigo, le implanta 1 Debilidad al azar. Cuando un enemigo alcanza #3[i] Debilidades, entra en el estado de Desvelación cualitativa. El daño que inflige Anaxa a los enemigos afectados con Desvelación cualitativa aumenta. Además, tras lanzarles el ATQ básico o la habilidad básica, lanza 1 vez más la habilidad básica sin consumir pts. de habilidad básica.",
       "type": "Talento",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1361,6 +1398,15 @@
       "simpleDesc": "Afecta a los enemigos cercanos con Aterrorizado. Al atacar a un enemigo aterrorizado, se considera que se entra en combate atacando su Debilidad y se implanta a todos los enemigos una Debilidad del mismo tipo que el atacante.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1378,37 +1424,79 @@
       "_id": 140501,
       "id": "magician_isolated_by_stars",
       "name": "Mago aislado por las estrellas",
-      "desc": "Recupera <nobr>1</nobr> pt. de habilidad básica tras lanzar la habilidad básica por primera vez. Cuando golpea a un enemigo con la habilidad básica, reduce la DEF del objetivo en un <nobr>16%</nobr> durante <nobr>2</nobr> turnos."
+      "desc": "Recupera <nobr>1</nobr> pt. de habilidad básica tras lanzar la habilidad básica por primera vez. Cuando golpea a un enemigo con la habilidad básica, reduce la DEF del objetivo en un <nobr>16%</nobr> durante <nobr>2</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140502,
       "id": "soul_true_to_history",
       "name": "Persona de la historia real",
-      "desc": "Cuando un enemigo entra en la batalla, se activa 1 vez el efecto de implantación de Debilidad del talento y la RES a todos los tipos de ese enemigo se reduce en un <nobr>20%</nobr>."
+      "desc": "Cuando un enemigo entra en la batalla, se activa 1 vez el efecto de implantación de Debilidad del talento y la RES a todos los tipos de ese enemigo se reduce en un <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140503,
       "id": "pupil_etched_into_cosmos",
       "name": "Pupilas clavadas en el cosmos",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140504,
       "id": "blaze_plunged_to_canyon",
       "name": "Incandescencia despeñada",
-      "desc": "Al lanzar la habilidad básica, el ATQ aumenta en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos. Este efecto se puede acumular hasta <nobr>2</nobr> veces."
+      "desc": "Al lanzar la habilidad básica, el ATQ aumenta en un <nobr>30%</nobr> durante <nobr>2</nobr> turnos. Este efecto se puede acumular hasta <nobr>2</nobr> veces.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140505,
       "id": "embryo_set_beyond_vortex",
       "name": "Simiente fuera del vórtice",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140506,
       "id": "everything_is_in_everything",
       "name": "El todo alberga el todo",
-      "desc": "El daño que inflige Anaxa es el <nobr>130%</nobr> del daño original. Los dos efectos del Rastro \"Vacío necesario\" se activan directamente y ya no dependen de la cantidad de personajes de la Vía de la Erudición que haya en el equipo aliado."
+      "desc": "El daño que inflige Anaxa es el <nobr>130%</nobr> del daño original. Los dos efectos del Rastro \"Vacío necesario\" se activan directamente y ya no dependen de la cantidad de personajes de la Vía de la Erudición que haya en el equipo aliado.",
+      "unlockCost": [
+        {
+          "ItemID": 11405,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

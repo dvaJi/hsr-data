@@ -2,6 +2,7 @@
   "_id": 1225,
   "id": "fugue",
   "name": "망귀인",
+  "description": "처세술에 능한 여우족 소녀. 외모, 이름, 신분을 모두 빼앗겼다.\n운명은 그녀에게 한 가닥의 삶의 기회를 남겼지만, 「파멸」의 낙인은 여전히 꿈틀거리고 있다.\n삶과 죽음을 경험하고 새로운 삶을 다시 얻은 망귀인, 그녀는 언제쯤 고향으로 돌아갈 수 있을까?",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 화염 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "단일 아군이 [여우의 기도]를 획득하고, 격파 특수효과가 증가하며, 대응하는 약점 속성을 보유하지 않은 적을 공격해도 강인성을 감소시킬 수 있다.\n자신이 [염화] 상태에 진입하며, 일반 공격이 강화된다. [여우의 기도]를 보유한 아군 유닛이 공격 시 망귀인이 높은 확률로 적의 방어력을 감소시킨다",
       "type": "전투 스킬",
       "tag": "서포트",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,15 @@
       "simpleDesc": "모든 적에게 화염 속성 피해를 가하며, 이번 공격은 약점 속성을 무시하고 모든 적의 강인성을 감소시킨다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1119,32 @@
       "simpleDesc": "망귀인이 필드에 있을 시 적에게 추가로 [서조의 불빛]이 부여된다. [서조의 불빛]이 소진되면 또다시 약점 격파 피해를 받는다. 아군이 약점 격파 상태의 적을 공격하면 추가로 슈퍼 격파 피해를 가한다",
       "type": "특성",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "약점 격파 상태",
+          "desc": "적의 강인성이 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 진입한 목표는 행동 게이지가 감소한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "슈퍼 격파 피해",
+          "desc": "격파 특수효과, 이번 공격의 강인성 감소 수치, 캐릭터 레벨이 높을수록 가하는 슈퍼 격파 피해가 증가한다.\n슈퍼 격파 피해는 치명타를 발동하지 않으며, 피해 증가류 효과의 영향을 받지 않는다.\n슈퍼 격파 피해 역시 격파 피해에 속한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1454,32 @@
       "simpleDesc": "일정 구역 내의 적을 현기증 상태에 빠트린다. 현기증 상태에 빠진 적을 공격하면 전투 진입 후 망귀인의 행동 게이지가 증가하며, 높은 확률로 각 단일 적을 망귀인의 전투 스킬과 동일한 방어력 감소 상태에 빠트린다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1410,37 +1499,88 @@
       "_id": 122501,
       "id": "earthbound_i_was_cloudward_i_be",
       "name": "떠나간 여우의 삶, 기약된 운거",
-      "desc": "[여우의 기도]를 보유한 아군의 약점 격파 효율이 <nobr>50%</nobr> 증가한다"
+      "desc": "[여우의 기도]를 보유한 아군의 약점 격파 효율이 <nobr>50%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122502,
       "id": "beatitude_dawns_for_the_worthy",
       "name": "서응의 도래, 알려진 현인",
-      "desc": "적의 약점이 격파될 시 망귀인이 에너지를 <nobr>3</nobr>pt 회복한다. 필살기 발동 후 모든 아군의 <u>행동 게이지가 <nobr>24%</nobr> 증가</u>한다"
+      "desc": "적의 약점이 격파될 시 망귀인이 에너지를 <nobr>3</nobr>pt 회복한다. 필살기 발동 후 모든 아군의 <u>행동 게이지가 <nobr>24%</nobr> 증가</u>한다",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122503,
       "id": "verity_weaves_thoughts_to_blade",
       "name": "가려진 실체, 드러낸 진상",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122504,
       "id": "bereft_of_form_which_name_to_bear",
       "name": "떠나보낸 형체, 짊어져 온 이름",
-      "desc": "[여우의 기도]를 보유한 아군이 가하는 격파 피해가 <nobr>20%</nobr> 증가한다"
+      "desc": "[여우의 기도]를 보유한 아군이 가하는 격파 피해가 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122505,
       "id": "colored_cloud_rains_fortune",
       "name": "오색구름의 탄생, 천명을 짊어질 결심",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122506,
       "id": "clairvoyance_of_boom_and_doom",
       "name": "예지된 미래, 밝혀진 성쇠",
-      "desc": "망귀인의 약점 격파 효율이 <nobr>50%</nobr> 증가한다. 망귀인이 [염화] 상태일 시 [여우의 기도] 효과가 모든 아군에게 적용된다"
+      "desc": "망귀인의 약점 격파 효율이 <nobr>50%</nobr> 증가한다. 망귀인이 [염화] 상태일 시 [여우의 기도] 효과가 모든 아군에게 적용된다",
+      "unlockCost": [
+        {
+          "ItemID": 11225,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

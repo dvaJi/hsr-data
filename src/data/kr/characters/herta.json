@@ -2,6 +2,7 @@
   "_id": 1013,
   "id": "herta",
   "name": "헤르타",
+  "description": "「지니어스 클럽」 #83 회원, 우주정거장의 진짜 주인.\n지혜롭지만 공감 능력이 전혀 없는 과학자다",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "모든 적에게 소량의 얼음 속성 피해를 가하고, HP가 비교적 높은 적에게 가하는 피해가 증가한다",
       "type": "전투 스킬",
       "tag": "범위 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "모든 적에게 얼음 속성 피해를 가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,24 @@
       "simpleDesc": "임의의 아군의 공격으로 적의 현재 HP 백분율이 #1[i]% 이하일 시, 헤르타가 즉시 추가 공격을 발동하고 모든 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "특성",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1383,15 @@
       "simpleDesc": "비술을 발동하고 다음 전투 시작 시 자신의 공격력이 증가한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1409,88 @@
       "_id": 101301,
       "id": "kick_you_when_youre_down",
       "name": "엎친 데 덮친 격",
-      "desc": "일반 공격 발동 시 지정된 단일 적의 HP 백분율이 <nobr>50%</nobr> 이하일 경우 추가로 헤르타 공격력의 <nobr>40%</nobr>만큼 얼음 속성 <u>추가 피해</u>를 가한다"
+      "desc": "일반 공격 발동 시 지정된 단일 적의 HP 백분율이 <nobr>50%</nobr> 이하일 경우 추가로 헤르타 공격력의 <nobr>40%</nobr>만큼 얼음 속성 <u>추가 피해</u>를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101302,
       "id": "keep_the_ball_rolling",
       "name": "승리를 위한 추격",
-      "desc": "특성을 1회 발동할 때마다 자신의 치명타 확률이 <nobr>3%</nobr> 증가한다. 해당 효과 최대 중첩수: <nobr>5</nobr>스택"
+      "desc": "특성을 1회 발동할 때마다 자신의 치명타 확률이 <nobr>3%</nobr> 증가한다. 해당 효과 최대 중첩수: <nobr>5</nobr>스택",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101303,
       "id": "thats_the_kind_of_girl_i_am",
       "name": "나 이런 여자야",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101304,
       "id": "hit_where_it_hurts",
       "name": "때리려면 뺨을",
-      "desc": "특성이 발동될 시 가하는 피해가 <nobr>10%</nobr> 증가한다"
+      "desc": "특성이 발동될 시 가하는 피해가 <nobr>10%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101305,
       "id": "cuss_big_or_cuss_nothing",
       "name": "폭언멸구",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101306,
       "id": "no_one_can_betray_me",
       "name": "누구도 날 저버리지 못해",
-      "desc": "필살기 발동 후 공격력이 <nobr>25%</nobr> 증가한다. 지속 시간: <nobr>1</nobr>턴"
+      "desc": "필살기 발동 후 공격력이 <nobr>25%</nobr> 증가한다. 지속 시간: <nobr>1</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

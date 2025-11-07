@@ -2,6 +2,7 @@
   "_id": 1001,
   "id": "march_7th",
   "name": "Siete de Marzo",
+  "description": "Una muchacha que dormía en el hielo sin fin y que no sabe nada sobre su pasado.\nDecidió viajar con el Expreso Astral para descubrir la verdad sobre sus orígenes.\nPor el momento ha preparado para sí misma 67 versiones distintas de la historia de su vida.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Hielo a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Otorga un escudo a un aliado.",
       "type": "Habilidad básica",
       "tag": "Defensa",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +786,32 @@
       "simpleDesc": "Inflige Daño de Hielo a todos los enemigos y hay una probabilidad de congelarlos.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1145,24 @@
       "simpleDesc": "Cuando un aliado con un escudo recibe un ataque enemigo, Siete de Marzo contraataca inmediatamente e inflige una pequeña cantidad de Daño de Hielo al atacante.",
       "type": "Talento",
       "tag": "ATQ individual",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contraataque",
+          "desc": "Cuando un objetivo recibe un ataque, lanza automáticamente un ataque contra el atacante.\nEl contraataque también se considera un ataque adicional.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1402,6 +1465,32 @@
       "desc": "Ataca inmediatamente al enemigo y entra en combate. Tiene un #1[i]% de probabilidad base de afectar con Congelación a un enemigo al azar durante #2[i] turno.\nLos enemigos congelados no pueden actuar, y al principio de cada turno reciben un #3[i]% del ATQ de Siete de Marzo como Daño de Hielo adicional.",
       "simpleDesc": "Ataca al enemigo y entra en combate. Gran probabilidad de afectar con Congelación a un enemigo al azar.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,37 +1509,88 @@
       "_id": 100101,
       "id": "memory_of_you",
       "name": "Tu imagen en el recuerdo",
-      "desc": "Cada vez que la habilidad definitiva congela a un objetivo, Siete de Marzo recupera <nobr>6</nobr> pts. de energía."
+      "desc": "Cada vez que la habilidad definitiva congela a un objetivo, Siete de Marzo recupera <nobr>6</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100102,
       "id": "memory_of_it",
       "name": "Su imagen en el recuerdo",
-      "desc": "Al entrar en combate, el aliado con menor porcentaje de PV obtiene un escudo equivalente al <nobr>24%</nobr> de la DEF de Siete de Marzo + <nobr>320</nobr> durante <nobr>3</nobr> turnos."
+      "desc": "Al entrar en combate, el aliado con menor porcentaje de PV obtiene un escudo equivalente al <nobr>24%</nobr> de la DEF de Siete de Marzo + <nobr>320</nobr> durante <nobr>3</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100103,
       "id": "memory_of_everything",
       "name": "Todo en el recuerdo",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100104,
       "id": "never_forfeit_again",
       "name": "No quiero perder",
-      "desc": "El efecto de <u>contraataque</u> del talento puede activarse una vez más en cada turno. Además, la cantidad de daño que inflige el <u>contraataque</u> aumenta en el equivalente al <nobr>30%</nobr> de la DEF de Siete de Marzo."
+      "desc": "El efecto de <u>contraataque</u> del talento puede activarse una vez más en cada turno. Además, la cantidad de daño que inflige el <u>contraataque</u> aumenta en el equivalente al <nobr>30%</nobr> de la DEF de Siete de Marzo.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000003,
+          "name": "Contraataque",
+          "desc": "Cuando un objetivo recibe un ataque, lanza automáticamente un ataque contra el atacante.\nEl contraataque también se considera un ataque adicional.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100105,
       "id": "never_forget_again",
       "name": "No quiero olvidar",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100106,
       "id": "just_like_this_always",
       "name": "Así, siempre...",
-      "desc": "Los aliados protegidos por el escudo de la habilidad básica regeneran un <nobr>4%</nobr> de sus PV máx. + <nobr>106</nobr> PV al principio de cada turno."
+      "desc": "Los aliados protegidos por el escudo de la habilidad básica regeneran un <nobr>4%</nobr> de sus PV máx. + <nobr>106</nobr> PV al principio de cada turno.",
+      "unlockCost": [
+        {
+          "ItemID": 11001,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

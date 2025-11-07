@@ -2,6 +2,7 @@
   "_id": 1210,
   "id": "guinaifen",
   "name": "Guinaifen",
+  "description": "Une artiste qui fait des spectacles, plus exactement une artiste de rue, en visite à bord du Luofu de Xianzhou.\nElle cherche à se construire une nouvelle vie à bord du Luofu, lorsqu'elle n'a pas des problèmes pour trouver de la nourriture ou se loger.",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -243,10 +244,22 @@
       "_id": 121001,
       "id": "standing_ovation",
       "name": "Ovation du public",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Guinaifen à un ennemi unique.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Guinaifen à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de feu mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 121002,
       "id": "blazing_welcome",
       "name": "Accueil enflammé",
-      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Guinaifen à un ennemi unique et des DGT de feu équivalents à #2[i]% de l'ATQ de Guinaifen aux enemis adjacents, avec #3[i]% de chances de base d'infliger Brûlure à la cible et aux cibles adjacentes. Les ennemis brûlés subissent des dégâts de feu sur la durée équivalents à #4[i]% de l'ATQ de Guinaifen au début de chaque tour pendant #5[i] tours.",
+      "desc": "Inflige des DGT de feu équivalents à #1[i]% de l'ATQ de Guinaifen à un ennemi désigné et des DGT de feu équivalents à #2[i]% de l'ATQ de Guinaifen aux enemis adjacents, avec #3[i]% de chances de base d'infliger Brûlure à la cible et aux cibles adjacentes. Les ennemis brûlés subissent des dégâts de feu sur la durée équivalents à #4[i]% de l'ATQ de Guinaifen au début de chaque tour pendant #5[i] tours.",
       "simpleDesc": "Inflige des DGT de feu à un ennemi unique et des DGT de feu mineurs aux ennemis adjacents, avec de fortes chances de les brûler.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,18 @@
       "simpleDesc": "Inflige des DGT de feu à tous les ennemis. Si les cibles sont brûlées, l'effet Brûlure inflige des DGT 1 fois supplémentaire.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "Lorsque Brûlure inflige des DGT à un ennemi, il y a de fortes chances de lui appliquer Baiser enflammé.",
       "type": "Talent",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1432,6 +1496,24 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Inflige #2[i] fois des DGT de feu équivalents à #1[i]% de l'ATQ de Guinaifen à une cible ennemie aléatoire à chaque fois, avec #3[i]% de chances de base d'infliger Baiser enflammé.",
       "simpleDesc": "Engage le combat contre les ennemis. Inflige des DGT de feu mineurs à une cible ennemie en entrant en combat, avec de fortes chances d'appliquer Baiser enflammé pour un total de 4 rebonds.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1450,37 +1532,88 @@
       "_id": 121001,
       "id": "slurping_noodles_during_handstand",
       "name": "Manger des nouilles en équilibre",
-      "desc": "Il y a <nobr>100%</nobr> de <u>chances de base</u> de réduire la RÉS aux effets de la cible ennemie attaquée de <nobr>10%</nobr> pendant <nobr>2</nobr> tours lors de l'utilisation de la compétence."
+      "desc": "Il y a <nobr>100%</nobr> de <u>chances de base</u> de réduire la RÉS aux effets de la cible ennemie attaquée de <nobr>10%</nobr> pendant <nobr>2</nobr> tours lors de l'utilisation de la compétence.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121002,
       "id": "brushing_teeth_while_whistling",
       "name": "Se brosser les dents en sifflant",
-      "desc": "L'ATQ normale et la compétence de Guinaifen peuvent augmenter le multiplicateur de DGT de leur effet de Brûlure de <nobr>40%</nobr> sur les cibles brûlées."
+      "desc": "L'ATQ normale et la compétence de Guinaifen peuvent augmenter le multiplicateur de DGT de leur effet de Brûlure de <nobr>40%</nobr> sur les cibles brûlées.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121003,
       "id": "smashing_boulder_on_chest",
       "name": "Casser des briques sur son torse",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121004,
       "id": "blocking_pike_with_neck",
       "name": "Bloquer des projectiles avec la tête",
-      "desc": "Guinaifen régénère <nobr>2</nobr> points d'énergie à chaque fois que ses effets de Brûlure infligent des DGT aux ennemis."
+      "desc": "Guinaifen régénère <nobr>2</nobr> points d'énergie à chaque fois que ses effets de Brûlure infligent des DGT aux ennemis.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121005,
       "id": "swallowing_sword_to_stomach",
       "name": "Avaler une épée jusqu'à la garde",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121006,
       "id": "catching_bullet_with_hands",
       "name": "Attraper des balles à mains nues",
-      "desc": "Augmente le nombre de cumuls maximum de Baiser enflammé de <nobr>1</nobr>."
+      "desc": "Augmente le nombre de cumuls maximum de Baiser enflammé de <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

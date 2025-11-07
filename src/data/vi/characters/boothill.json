@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "Boothill",
+  "description": "Anh chàng cao bồi \"người cải tạo\" lang thang trong vũ trụ, cực kỳ lạc quan, không bị ràng buộc.\nLà một thành viên của \"Cảnh Binh Thiên Hà\", có thể làm bất cứ điều gì để trừ gian diệt ác...\nNhững hành động phách lối của anh ta đều nhằm mục đích thu hút sự chú ý của Công Ty Hành Tinh Hòa Bình - mục tiêu trả thù của anh ta.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Mở Đối Đầu Tuyệt Mệnh, mục tiêu trong trạng thái Đối Đầu Tuyệt Mệnh sau khi bị tiêu diệt hoặc Điểm Yếu bị phá vỡ, Boothill sẽ nhận được Cú Lừa Bỏ Túi và giải trừ Đối Đầu Tuyệt Mệnh. Boothill nhận được Tấn Công Thường Cường Hóa đồng thời hiệp này sẽ không kết thúc.",
       "type": "Chiến Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "Thêm Điểm Yếu Vật Lý cho 1 kẻ địch, đồng thời gây lượng lớn Sát Thương Vật Lý cho kẻ đó, khiến mục tiêu Trì Hoãn Hành Động.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Trì Hoãn Hành Động",
+          "desc": "Kéo dài khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "Cú Lừa Bỏ Túi tăng điểm Giảm Sức Bền của Tấn Công Thường Cường Hóa, đồng thời gây thêm Sát Thương Phá Vỡ thuộc tính Vật lý cho kẻ địch bị phá vỡ Điểm yếu. Sau khi chiến thắng, Cú Lừa Bỏ Túi sẽ được bảo lưu cho lần chiến đấu tiếp theo.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Sát Thương Phá Vỡ",
+          "desc": "Tấn Công Kích Phá, Giới Hạn Sức Bền của mục tiêu, cấp nhân vật càng cao, Sát Thương Phá Vỡ gây ra càng cao.\nSát Thương Phá Vỡ không thể bạo kích, không chịu ảnh hưởng bởi hiệu ứng loại Tăng Sát Thương.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "Sau khi dùng Bí Kỹ, lần tiếp theo vào trận, lần đầu thi triển Chiến Kỹ sẽ thêm Điểm Yếu Vật Lý cho 1 kẻ địch.",
       "type": "Bí Kỹ",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "Vì Sao Đơn Độc Dặm Trường",
-      "desc": "Khi bắt đầu chiến đấu, nhận 1 tầng Cú Lừa Bỏ Túi. Khi Boothill gây sát thương sẽ bỏ qua <nobr>16%</nobr> Phòng Thủ của mục tiêu."
+      "desc": "Khi bắt đầu chiến đấu, nhận 1 tầng Cú Lừa Bỏ Túi. Khi Boothill gây sát thương sẽ bỏ qua <nobr>16%</nobr> Phòng Thủ của mục tiêu.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "Kẻ Săn Cột Mốc",
-      "desc": "Khi trong Đối Đầu Tuyệt Mệnh và nhận Cú Lừa Bỏ Túi, hồi <nobr>1</nobr> Điểm Chiến Kỹ, hơn nữa Tấn Công Kích Phá tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp. Hiệu ứng này không thể kích hoạt trùng lặp trong 1 hiệp, khi nhận Cú Lừa Bỏ Túi vượt mức cũng sẽ kích hoạt."
+      "desc": "Khi trong Đối Đầu Tuyệt Mệnh và nhận Cú Lừa Bỏ Túi, hồi <nobr>1</nobr> Điểm Chiến Kỹ, hơn nữa Tấn Công Kích Phá tăng <nobr>30%</nobr>, duy trì <nobr>2</nobr> hiệp. Hiệu ứng này không thể kích hoạt trùng lặp trong 1 hiệp, khi nhận Cú Lừa Bỏ Túi vượt mức cũng sẽ kích hoạt.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "Người Bảo Vệ Vườn Cẩm Thạch",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>, cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "Đầu Bếp Thịt Nguội",
-      "desc": "Kẻ địch trong trạng thái Đối Đầu Tuyệt Mệnh bị Boothill tấn công, sát thương phải chịu sẽ tăng thêm <nobr>12%</nobr>. Khi Boothill bị kẻ địch trong trạng thái Đối Đầu Tuyệt Mệnh tấn công, hiệu ứng Tăng Sát Thương phải chịu sẽ giảm <nobr>12%</nobr>."
+      "desc": "Kẻ địch trong trạng thái Đối Đầu Tuyệt Mệnh bị Boothill tấn công, sát thương phải chịu sẽ tăng thêm <nobr>12%</nobr>. Khi Boothill bị kẻ địch trong trạng thái Đối Đầu Tuyệt Mệnh tấn công, hiệu ứng Tăng Sát Thương phải chịu sẽ giảm <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "Người Diễn Thuyết Tranh Cử",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "Gấu Mèo Ở Khách Sạn Xà Beng",
-      "desc": "Khi kích hoạt Thiên Phú gây <u>Sát Thương Phá Vỡ</u>, sẽ gây thêm cho mục tiêu <u>Sát Thương Phá Vỡ</u> bằng <nobr>40%</nobr> bội số sát thương ban đầu, gây thêm cho mục tiêu lân cận <u>Sát Thương Phá Vỡ</u> bằng <nobr>70%</nobr> bội số sát thương ban đầu."
+      "desc": "Khi kích hoạt Thiên Phú gây <u>Sát Thương Phá Vỡ</u>, sẽ gây thêm cho mục tiêu <u>Sát Thương Phá Vỡ</u> bằng <nobr>40%</nobr> bội số sát thương ban đầu, gây thêm cho mục tiêu lân cận <u>Sát Thương Phá Vỡ</u> bằng <nobr>70%</nobr> bội số sát thương ban đầu.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Sát Thương Phá Vỡ",
+          "desc": "Tấn Công Kích Phá, Giới Hạn Sức Bền của mục tiêu, cấp nhân vật càng cao, Sát Thương Phá Vỡ gây ra càng cao.\nSát Thương Phá Vỡ không thể bạo kích, không chịu ảnh hưởng bởi hiệu ứng loại Tăng Sát Thương.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

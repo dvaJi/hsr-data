@@ -2,6 +2,7 @@
   "_id": 1002,
   "id": "dan_heng",
   "name": "Dan Heng",
+  "description": "A cold and reserved young man who is reticent about his past.\nTo avoid his kin, he decided to travel with the Astral Express.",
   "rarity": 4,
   "combat_type": {
     "id": "wind",
@@ -243,10 +244,22 @@
       "_id": 100201,
       "id": "cloudlancer_art_north_wind",
       "name": "Cloudlancer Art: North Wind",
-      "desc": "Deals Wind DMG equal to #1[i]% of Dan Heng's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Wind DMG to a single enemy.",
+      "desc": "Deals Wind DMG equal to #1[i]% of Dan Heng's ATK to one enemy.",
+      "simpleDesc": "Deals minor Wind DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,31 @@
       "_id": 100202,
       "id": "cloudlancer_art_torrent",
       "name": "Cloudlancer Art: Torrent",
-      "desc": "Deals Wind DMG equal to #1[i]% of Dan Heng's ATK to a single enemy.\nWhen DMG dealt by Skill triggers CRIT Hit, there is a #4[i]% base chance to reduce the target's SPD by #2[i]%, lasting for #3[i] turn(s).",
-      "simpleDesc": "Deals Wind DMG to a single enemy. Upon a CRIT Hit, there is a high chance of Slowing the enemy.",
+      "desc": "Deals Wind DMG equal to #1[i]% of Dan Heng's ATK to one designated enemy.\nWhen DMG dealt by Skill triggers CRIT Hit, there is a #4[i]% base chance to reduce the target's SPD by #2[i]%, lasting for #3[i] turn(s).",
+      "simpleDesc": "Deals Wind DMG to one enemy. Upon a CRIT Hit, there is a high chance of Slowing the enemy.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -749,9 +783,21 @@
       "id": "ethereal_dream",
       "name": "Ethereal Dream",
       "desc": "Deals Wind DMG equal to #1[i]% of Dan Heng's ATK to one designated enemy target. If the attacked enemy is Slowed, the multiplier for the DMG dealt by Ultimate increases by #2[i]%.",
-      "simpleDesc": "Deals massive Wind DMG to a single enemy. If the enemy is Slowed, DMG multiplier dealt will be increased.",
+      "simpleDesc": "Deals massive Wind DMG to one enemy. If the enemy is Slowed, DMG multiplier dealt will be increased.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1101,24 @@
       "simpleDesc": "When this unit becomes the target of an ally's ability, this unit's next attack's Wind RES PEN increases. This effect can be triggered again after 2 turns.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "When dealing DMG, ignore a part of the enemy target's resistance to the corresponding damage type.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "After they use their Technique, their ATK is increased at the start of the next battle.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1375,37 +1448,79 @@
       "_id": 100201,
       "id": "the_higher_you_fly_the_harder_you_fall",
       "name": "The Higher You Fly, the Harder You Fall",
-      "desc": "When the target enemy's current HP percentage is greater than or equal to <nobr>50%</nobr>, CRIT Rate increases by <nobr>12%</nobr>."
+      "desc": "When the target enemy's current HP percentage is greater than or equal to <nobr>50%</nobr>, CRIT Rate increases by <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100202,
       "id": "quell_the_venom_octet_quench_the_vice_oflame",
       "name": "Quell the Venom Octet, Quench the Vice O'Flame",
-      "desc": "Reduces Talent cooldown by 1 turn."
+      "desc": "Reduces Talent cooldown by 1 turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100203,
       "id": "seen_and_unseen",
       "name": "Seen and Unseen",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100204,
       "id": "roaring_dragon_and_soaring_sun",
       "name": "Roaring Dragon and Soaring Sun",
-      "desc": "When Dan Heng uses his Ultimate to defeat an enemy, he will immediately take action again."
+      "desc": "When Dan Heng uses his Ultimate to defeat an enemy, he will immediately take action again.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100205,
       "id": "a_drop_of_rain_feeds_a_torrent",
       "name": "A Drop of Rain Feeds a Torrent",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100206,
       "id": "the_troubled_soul_lies_in_wait",
       "name": "The Troubled Soul Lies in Wait",
-      "desc": "The Slow state triggered by Skill reduces the enemy's SPD by an extra <nobr>8%</nobr>."
+      "desc": "The Slow state triggered by Skill reduces the enemy's SPD by an extra <nobr>8%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11002,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1402,
   "id": "aglaea",
   "name": "Aglaea",
+  "description": "Tại tòa Thánh Thành được bình minh chiếu cố ấy, người thợ dệt vuốt ve tơ vàng, nối kết vận mệnh.\nHậu Duệ Chrysos gánh vác Ngọn Lửa \"Lãng Mạn\", triệu tập anh hùng thế gian, dẫn dắt bọn họ một lần nữa bước lên cuộc hành trình dài\n...Đánh hạ chúng thần, trả lại ngọn lửa thần, giúp cho Amphoreus gần như bị hủy diệt hồi sinh.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lôi cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Hồi HP cho Thợ May. Khi Thợ May không ở trong trận, sẽ Triệu Hồi Linh Hồn Ký Ức Thợ May và khiến bản thân lập tức hành động.",
       "type": "Chiến Kỹ",
       "tag": "Triệu Hồi",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -753,6 +781,32 @@
       "simpleDesc": "Triệu hồi Linh Hồn Ký Ức Thợ May, khiến Aglaea vào trạng thái Tư Thế Tối Cao và khiến bản thân lập tức hành động, nhận Tấn Công Thường Cường Hóa.",
       "type": "Tuyệt Kỹ",
       "tag": "Cường Hóa",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Hiệu Ứng Xấu Loại Khống Chế",
+          "desc": "Đóng Băng, Nhiễu Loạn, Giam Cầm, Chi Phối, Bạo Nộ, Chấn Động Mạnh Mẽ, Dị Mộng, Cầm Tù Quấy Nhiễu, Kinh Hãi, Khóa Hành Động.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1122,6 +1176,24 @@
       "simpleDesc": "Lúc Thợ May ở trong trận, khi Aglaea thi triển tấn công, sẽ khiến mục tiêu rơi vào trạng thái \"Đường Khâu\". Sau khi tấn công kẻ địch trong trạng thái \"Đường Khâu\" sẽ gây lượng nhỏ Sát Thương Kèm Theo thuộc tính Lôi.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1490,6 +1562,24 @@
       "desc": "Triệu hồi Linh Hồn Ký Ức Thợ May và cùng tấn công về phía trước. Sau khi vào chiến đấu, hồi #2[i] điểm Năng Lượng, đồng thời gây Sát Thương Lôi bằng #1[i]% Tấn Công của Aglaea cho toàn bộ mục tiêu phe địch, sau đó khiến mục tiêu ngẫu nhiên của phe địch rơi vào trạng thái \"Đường Khâu\".",
       "simpleDesc": "Triệu hồi Linh Hồn Ký Ức Thợ May và cùng tấn công về phía trước. Sau khi vào chiến đấu sẽ hồi Năng Lượng và gây lượng nhỏ Sát Thương Lôi cho toàn thể phe địch, sau đó khiến mục tiêu ngẫu nhiên của phe địch rơi vào trạng thái \"Đường Khâu\".",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Triệu Hồi Linh Hồn Ký Ức",
+          "desc": "Triệu hồi Linh Hồn Ký Ức vào trận. Nếu Linh Hồn Ký Ức đã ở trong trận, sẽ giải trừ tất cả Hiệu Ứng Xấu loại Khống Chế mà Linh Hồn Ký Ức rơi vào.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1502,42 +1592,503 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Thợ May",
+    "icon": "SpriteOutput/ServantIconTeam/11402B.png",
+    "hpBase": "#6",
+    "hpInherit": "#5",
+    "hpSkill": 140204,
+    "speedBase": "0",
+    "speedInherit": "#4",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1140201,
+        "name": "Bẫy Gai",
+        "desc": "Gây cho 1 kẻ địch Sát Thương Lôi tương đương <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> Tấn Công, gây cho mục tiêu lân cận Sát Thương Lôi tương đương <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span> Tấn Công.",
+        "simpleDesc": "Gây lượng nhỏ Sát Thương Lôi cho 1 kẻ địch và mục tiêu lân cận.",
+        "type": {
+          "id": "Servant",
+          "name": "Kỹ Năng Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Blast",
+          "name": "Khuếch Tán"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          15
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.55,
+              0.33,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.66,
+              0.396,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.77,
+              0.462,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.88,
+              0.528,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.99,
+              0.594,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1.1,
+              0.66,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1.21,
+              0.726,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1.32,
+              0.792,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1.43,
+              0.858,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1.54,
+              0.924,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140203,
+        "name": "Thân Thể Rèn Từ Nước Mắt",
+        "desc": "Sau khi tấn công kẻ địch ở trạng thái Đường Khâu, sẽ khiến Tốc Độ của bản thân tăng <span style=\"color:#f29e38ff><nobr>#1[i]</nobr></span> điểm, hiệu ứng này tối đa cộng dồn <nobr>#3[i]</nobr> tầng. Khi Thợ May hành động sẽ tự động thi triển Bẫy Gai, ưu tiên tấn công kẻ địch ở trạng thái Đường Khâu.",
+        "simpleDesc": "Sau khi tấn công kẻ địch ở trạng thái Đường Khâu, sẽ <span style=\"color:#f29e38ff>tăng tốc độ bản thân</span>. Khi hành động sẽ tự động thi triển tấn công, ưu tiên tấn công kẻ địch ở trạng thái Đường Khâu.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Cường Hóa"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              44,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              46.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              48.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              50.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              52.8,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              55,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              57.2,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              59.4,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              61.6,
+              3,
+              6
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              63.8,
+              3,
+              6
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140205,
+        "name": "Mùa Hè Lao Vun Vút",
+        "desc": "Khi Thợ May được triệu hồi, khiến bản thân <u>Ưu Tiên Hành Động</u> <nobr>#1[i]%</nobr>.",
+        "simpleDesc": "Khi được triệu hồi, khiến bản thân <u>Ưu Tiên Hành Động</u>.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Cường Hóa"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "Ưu Tiên Hành Động",
+            "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140206,
+        "name": "Cỏ Khô Nở Hoa",
+        "desc": "Khi Thợ May biến mất, khiến Aglaea hồi <nobr>#1[i]</nobr> điểm Năng Lượng.",
+        "simpleDesc": "Khi biến mất, khiến Aglaea hồi Năng Lượng.",
+        "type": {
+          "name": "Thiên Phú Linh Hồn Ký Ức"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Cường Hóa"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              20
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              20
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140201,
       "id": "drift_at_the_whim_of_venus",
       "name": "Trôi Dạt Theo Sao Kim",
-      "desc": "Sát thương mà kẻ địch ở trạng thái Đường Khâu phải chịu tăng <nobr>15%</nobr>, Aglaea hoặc Thợ May sau khi tấn công mục tiêu này, sẽ hồi thêm <nobr>20</nobr> điểm Năng Lượng."
+      "desc": "Sát thương mà kẻ địch ở trạng thái Đường Khâu phải chịu tăng <nobr>15%</nobr>, Aglaea hoặc Thợ May sau khi tấn công mục tiêu này, sẽ hồi thêm <nobr>20</nobr> điểm Năng Lượng.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140202,
       "id": "sail_on_the_raft_of_eyelids",
       "name": "Du Hành Trên Mi Mắt Vận Mệnh",
-      "desc": "Khi Aglaea hoặc Thợ May hành động, Sát Thương gây ra của Aglaea và Thợ May sẽ bỏ qua <nobr>14%</nobr> Phòng Thủ của mục tiêu, hiệu ứng này tối đa cộng dồn <nobr>3</nobr> tầng, duy trì đến khi đơn vị bất kỳ ngoại trừ bản thân và Thợ May chủ động thi triển kỹ năng."
+      "desc": "Khi Aglaea hoặc Thợ May hành động, Sát Thương gây ra của Aglaea và Thợ May sẽ bỏ qua <nobr>14%</nobr> Phòng Thủ của mục tiêu, hiệu ứng này tối đa cộng dồn <nobr>3</nobr> tầng, duy trì đến khi đơn vị bất kỳ ngoại trừ bản thân và Thợ May chủ động thi triển kỹ năng.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140203,
       "id": "bequeath_in_the_coalescence_of_dew",
       "name": "Món Quà Sương Đọng",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp Thiên Phú Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp Thiên Phú Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140204,
       "id": "flicker_below_the_surface_of_marble",
       "name": "Sự Lấp Lánh Trong Đá Cẩm Thạch",
-      "desc": "Giới hạn số tầng hiệu ứng tăng Tốc Độ của Thiên Phú Linh Hồn Ký Ức tăng <nobr>1</nobr> tầng. Sau khi Aglaea thi triển tấn công cũng có thể khiến Thợ May nhận được hiệu ứng tăng Tốc Độ của Thiên Phú Linh Hồn Ký Ức."
+      "desc": "Giới hạn số tầng hiệu ứng tăng Tốc Độ của Thiên Phú Linh Hồn Ký Ức tăng <nobr>1</nobr> tầng. Sau khi Aglaea thi triển tấn công cũng có thể khiến Thợ May nhận được hiệu ứng tăng Tốc Độ của Thiên Phú Linh Hồn Ký Ức.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140205,
       "id": "weave_under_the_shroud_of_woe",
       "name": "Thợ Dệt Khổ Nạn Tăm Tối",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>; Cấp kỹ năng của Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>; Cấp kỹ năng của Linh Hồn Ký Ức +1, tối đa không vượt quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140206,
       "id": "fluctuate_in_the_tapestry_of_fates",
       "name": "Tơ Vàng Đầy Khuyết Vô Thường",
-      "desc": "Khi Aglaea ở trạng thái Tư Thế Tối Cao, <u>Xuyên Kháng</u> Lôi của bản thân và Thợ May tăng <nobr>20%</nobr>. Khi Aglaea và Thợ May có tốc độ cao hơn <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr> điểm, sát thương gây ra bởi <u>Tấn Công Phối Hợp</u> sẽ tăng <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>."
+      "desc": "Khi Aglaea ở trạng thái Tư Thế Tối Cao, <u>Xuyên Kháng</u> Lôi của bản thân và Thợ May tăng <nobr>20%</nobr>. Khi Aglaea và Thợ May có tốc độ cao hơn <nobr>160</nobr>/<nobr>240</nobr>/<nobr>320</nobr> điểm, sát thương gây ra bởi <u>Tấn Công Phối Hợp</u> sẽ tăng <nobr>10%</nobr>/<nobr>30%</nobr>/<nobr>60%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11402,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000019,
+          "name": "Tấn Công Phối Hợp",
+          "desc": "Nhiều mục tiêu trong 1 lần hành động sẽ lần lượt tấn công mục tiêu phe địch.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ]
     }
   ],
   "skillTreePoints": [

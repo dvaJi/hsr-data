@@ -2,6 +2,7 @@
   "_id": 1212,
   "id": "jingliu",
   "name": "Jingliu",
+  "description": "Autrefois Championne de l'épée du Luofu, elle est à l'origine des légendes sur la puissance incontestée des Chevaliers des nuages.\nÀ présent, son nom a été effacé des registres, et elle est devenue une traîtresse à Xianzhou évoluant sur la fine frontière qui sépare la raison du mara.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -243,10 +244,22 @@
       "_id": 121201,
       "id": "lucent_moonglow",
       "name": "Lueur sélénite",
-      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Jingliu à un ennemi unique.",
-      "simpleDesc": "Inflige des DGT de glace mineurs à une cible ennemie unique.",
+      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Jingliu à un ennemi désigné.",
+      "simpleDesc": "Inflige des DGT de glace mineurs à une cible ennemie désignée.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,22 @@
       "_id": 121202,
       "id": "transcendent_flash",
       "name": "Éclair transcendant",
-      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Jingliu à un ennemi unique et obtient #2[i] cumul de Syzygie.",
+      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Jingliu à un ennemi désigné et obtient #2[i] cumul de Syzygie.",
       "simpleDesc": "Inflige des DGT de glace à une cible ennemie et obtient 1 cumul de Syzygie.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -724,10 +749,22 @@
       "_id": 121203,
       "id": "florephemeral_dreamflux",
       "name": "Rêves floréphémères",
-      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Jingliu à un ennemi unique et des DGT de glace équivalents à #3[i]% de l'ATQ de Jingliu aux ennemis adjacents. Obtient #2[i] cumul de Syzygie à la fin de l'attaque.",
+      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Jingliu à un ennemi désigné et des DGT de glace équivalents à #3[i]% de l'ATQ de Jingliu aux ennemis adjacents. Obtient #2[i] cumul de Syzygie à la fin de l'attaque.",
       "simpleDesc": "Inflige des DGT de glace massifs à une cible ennemie et inflige des DGT de glace aux cibles adjacentes. Obtient 1 cumul de Syzygie.",
       "type": "Ultime",
       "tag": "Propagation",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,15 @@
       "simpleDesc": "Lorsque Jingliu possède #5[i] cumuls de Syzygie, elle entre en état de Migration spectrale, ce qui avance son action de 100 %, augmente ses chances de coup critique et renforce sa compétence. Utiliser une attaque dans cet état consomme les PV de tous les autres coéquipiers et augmente l'ATQ de Jingliu en fonction du total de PV consommés. Jingliu sort de l'état Migration spectrale lorsque les cumuls de Syzygie tombent à 0.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1497,32 @@
       "simpleDesc": "Crée une dimension spéciale autour de cette unité. Les ennemis qui s'y trouvent sont gelés. Le personnage régénère de l'énergie et obtient 1 cumul de Syzygie avec de fortes chances d'appliquer Gelé aux ennemis lorsque le combat est engagé avec des ennemis de la dimension.",
       "type": "Technique",
       "tag": "Incapacitation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1472,37 +1544,79 @@
       "_id": 121201,
       "id": "moon_crashes_tianguan_gate",
       "name": "Assaut des portes stellaires",
-      "desc": "Les DGT critiques de Jingliu augmentent de <nobr>24%</nobr> pendant <nobr>1</nobr> tour lorsqu'elle utilise son ultime ou sa compétence renforcée. Si elle n'attaque qu'une seule cible ennemie, la cible subit des DGT de glace supplémentaires équivalents à <nobr>100%</nobr> de l'ATQ de Jingliu."
+      "desc": "Les DGT critiques de Jingliu augmentent de <nobr>24%</nobr> pendant <nobr>1</nobr> tour lorsqu'elle utilise son ultime ou sa compétence renforcée. Si elle n'attaque qu'une seule cible ennemie, la cible subit des DGT de glace supplémentaires équivalents à <nobr>100%</nobr> de l'ATQ de Jingliu.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121202,
       "id": "crescent_shadows_qixing_dipper",
       "name": "Ombre du croissant",
-      "desc": "Augmente de <nobr>80%</nobr> les DGT de la prochaine compétence renforcée après avoir utilisé l'ultime."
+      "desc": "Augmente de <nobr>80%</nobr> les DGT de la prochaine compétence renforcée après avoir utilisé l'ultime.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121203,
       "id": "halfmoon_gapes_mercurial_haze",
       "name": "Demi-lune dans la brume",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121204,
       "id": "lunarlance_shines_skyward_dome",
       "name": "Lueur de la lance lunaire",
-      "desc": "Lorsque Jingliu est dans l'état Migration spectrale, l'augmentation d'ATQ obtenue en consommant les PV des coéquipiers est majorée de <nobr>90%</nobr> du total de PV consommés par l'ensemble de l'équipe. La limite d'augmentation de l'ATQ augmente également de <nobr>30%</nobr>."
+      "desc": "Lorsque Jingliu est dans l'état Migration spectrale, l'augmentation d'ATQ obtenue en consommant les PV des coéquipiers est majorée de <nobr>90%</nobr> du total de PV consommés par l'ensemble de l'équipe. La limite d'augmentation de l'ATQ augmente également de <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121205,
       "id": "night_shades_astral_radiance",
       "name": "Éclat nocturne des astres",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121206,
       "id": "eclipse_hollows_corporeal_husk",
       "name": "Vide de l'éclipse",
-      "desc": "Jingliu obtient <nobr>1</nobr> cumul de Syzygie et la limite de cumuls de Syzygie augmente de 1 lorsqu'elle entre dans l'état Migration spectrale. Ses DGT critiques augmentent de <nobr>50%</nobr> lorsqu'elle est dans l'état Migration spectrale."
+      "desc": "Jingliu obtient <nobr>1</nobr> cumul de Syzygie et la limite de cumuls de Syzygie augmente de 1 lorsqu'elle entre dans l'état Migration spectrale. Ses DGT critiques augmentent de <nobr>50%</nobr> lorsqu'elle est dans l'état Migration spectrale.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 8006,
   "id": "trailblazer_harmony_girl",
   "name": "Nhà Khai Phá Hòa Hợp",
+  "description": "{F#Thiếu nữ}{M#Thiếu niên} lên Đội Tàu Astral.\nĐể diệt trừ hiểm họa mà Stellaron mang đến, đã quyết định đồng hành cùng đội tàu.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Số Ảo cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Số Ảo cho 1 kẻ địch, tổng cộng nảy bật 5 lần.",
       "type": "Chiến Kỹ",
       "tag": "Nảy Bật",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "Thi triển hiệu ứng Bạn Nhảy cho toàn bộ phe ta. Mục tiêu phe ta có Bạn Nhảy sẽ tăng Tấn Công Kích Phá, đồng thời, sau khi tấn công kẻ địch trong trạng thái Phá Vỡ Điểm Yếu sẽ gây thêm 1 lần Siêu Sát Thương Phá Vỡ.",
       "type": "Tuyệt Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Trạng Thái Phá Vỡ Điểm Yếu",
+          "desc": "Khi Sức Bền của mục tiêu địch bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này hành động sẽ bị trì hoãn.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "Siêu Sát Thương Phá Vỡ",
+          "desc": "Tấn Công Kích Phá, điểm Giảm Sức Bền của lần tấn công này và cấp nhân vật càng cao, Siêu Sát Thương Phá Vỡ gây ra càng cao.\nSiêu Sát Thương Phá Vỡ không thể bạo kích, không bị ảnh hưởng bởi hiệu ứng loại Tăng Sát Thương.\nSiêu Sát Thương Phá Vỡ cũng thuộc Sát Thương Phá Vỡ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "Khi có điểm yếu của kẻ địch bị phá vỡ, Nhà Khai Phá sẽ hồi Năng Lượng.",
       "type": "Thiên Phú",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "Khi bắt đầu trận kế tiếp sẽ tăng Tấn Công Kích Phá của toàn bộ phe ta.",
       "type": "Bí Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800601,
       "id": "best_seat_in_the_house",
       "name": "Ghế Khán Giả VIP Nhất Của Bạn",
-      "desc": "Sau khi thi triển Chiến Kỹ lần đầu tiên sẽ hồi ngay <nobr>1</nobr> điểm Chiến Kỹ."
+      "desc": "Sau khi thi triển Chiến Kỹ lần đầu tiên sẽ hồi ngay <nobr>1</nobr> điểm Chiến Kỹ.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800602,
       "id": "jailbreaking_rainbowwalk",
       "name": "Bước Chân Cầu Vồng Vượt Ngục",
-      "desc": "Khi trận đấu bắt đầu, hiệu suất hồi Năng Lượng của Nhà Khai Phá tăng <nobr>25%</nobr>, duy trì <nobr>3</nobr> hiệp."
+      "desc": "Khi trận đấu bắt đầu, hiệu suất hồi Năng Lượng của Nhà Khai Phá tăng <nobr>25%</nobr>, duy trì <nobr>3</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800603,
       "id": "sanatorium_for_rest_notes",
       "name": "Viện Điều Dưỡng Của Dấu Lặng",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800604,
       "id": "dove_in_tophat",
       "name": "Vương Miện Bảo Vệ Chim Bồ Câu",
-      "desc": "Khi Nhà Khai Phá trong trận, tăng Tấn Công Kích Phá của đồng đội ngoại trừ bản thân, mức tăng bằng <nobr>15%</nobr> Tấn Công Kích Phá của Nhà Khai Phá."
+      "desc": "Khi Nhà Khai Phá trong trận, tăng Tấn Công Kích Phá của đồng đội ngoại trừ bản thân, mức tăng bằng <nobr>15%</nobr> Tấn Công Kích Phá của Nhà Khai Phá.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800605,
       "id": "poem_favors_rhythms_of_old",
       "name": "Bài Thơ Che Giấu Nhịp Điệu Cổ",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800606,
       "id": "tomorrow_rest_in_spotlight",
       "name": "Ngày Mai, Nghỉ Ngơi Trong Ánh Đèn Sân Khấu",
-      "desc": "Số lần sát thương thêm của Chiến Kỹ tăng <nobr>2</nobr> lần."
+      "desc": "Số lần sát thương thêm của Chiến Kỹ tăng <nobr>2</nobr> lần.",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

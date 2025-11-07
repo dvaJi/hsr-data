@@ -2,6 +2,7 @@
   "_id": 1303,
   "id": "ruan_mei",
   "name": "Ruan Mei",
+  "description": "A member of the Genius Society and an expert in life sciences. She teamed up with Herta and others to develop the Simulated Universe.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -244,9 +245,21 @@
       "id": "threading_fragrance",
       "name": "Threading Fragrance",
       "desc": "Deals Ice DMG equal to #1[i]% of Ruan Mei's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Ice DMG to a single enemy.",
+      "simpleDesc": "Deals minor Ice DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "After using her Skill, Ruan Mei gains Overtone. When Ruan Mei has Overtone, increase all allies' DMG and Weakness Break Efficiency.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,43 @@
       "simpleDesc": "Increases All-Type RES PEN for all allies, and their attacks apply Thanatoplum Rebloom to enemies hit.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Weakness Break State",
+          "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Action Delayed",
+          "desc": "Increases the target's waiting interval before the next action.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1159,24 @@
       "simpleDesc": "Increases SPD for all teammates (i.e., excluding this unit). Breaking an enemy target's Weakness will additionally deal Ice Break DMG.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1486,15 @@
       "simpleDesc": "The next time entering battle, automatically triggers the Skill for #1[i] time(s). After using the Technique, allies attacking enemies in Simulated Universe or Divergent Universe will always be regarded as attacking their Weakness to enter battle, and their Toughness is reduced regardless of Weakness types. For every Blessing in possession, increases Toughness Reduction and additionally deals Break DMG when breaking Weakness.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1425,37 +1514,97 @@
       "_id": 130301,
       "id": "neuronic_embroidery",
       "name": "Neuronic Embroidery",
-      "desc": "While the Ultimate's Zone is deployed, the DMG dealt by all allies ignores <nobr>20%</nobr> of the target's DEF."
+      "desc": "While the Ultimate's Zone is deployed, the DMG dealt by all allies ignores <nobr>20%</nobr> of the target's DEF.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130302,
       "id": "reedside_promenade",
       "name": "Reedside Promenade",
-      "desc": "While Ruan Mei is on the field, all allies increase their ATK by <nobr>40%</nobr> when dealing DMG to enemies that are <u>Weakness Broken</u>."
+      "desc": "While Ruan Mei is on the field, all allies increase their ATK by <nobr>40%</nobr> when dealing DMG to enemies that are <u>Weakness Broken</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Weakness Break State",
+          "desc": "When enemy targets' Toughness is reduced to 0, they will enter the Weakness Break State, which delays their actions.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130303,
       "id": "viridescent_pirouette",
       "name": "Viridescent Pirouette",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130304,
       "id": "chatoyant_clat",
       "name": "Chatoyant Éclat",
-      "desc": "When an enemy target's Weakness is Broken, Ruan Mei's Break Effect increases by <nobr>100%</nobr> for <nobr>3</nobr> turn(s)."
+      "desc": "When an enemy target's Weakness is Broken, Ruan Mei's Break Effect increases by <nobr>100%</nobr> for <nobr>3</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130305,
       "id": "languid_barrette",
       "name": "Languid Barrette",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130306,
       "id": "sash_cascade",
       "name": "Sash Cascade",
-      "desc": "Extends the duration of the Ultimate's Zone by <nobr>1</nobr> turn(s). The Talent's <u>Break DMG</u> multiplier additionally increases by <nobr>200%</nobr>."
+      "desc": "Extends the duration of the Ultimate's Zone by <nobr>1</nobr> turn(s). The Talent's <u>Break DMG</u> multiplier additionally increases by <nobr>200%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Break DMG increases with higher Break Effect, higher target max Toughness, and higher character levels.\nBreak DMG cannot CRIT Hit and is not affected by DMG Boost effects.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

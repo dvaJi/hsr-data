@@ -2,6 +2,7 @@
   "_id": 1306,
   "id": "sparkle",
   "name": "Sparkle",
+  "description": "A member of the Masked Fools. Inscrutable and unscrupulous.\nA dangerous maestro of theatrics, utterly engrossed in the art of performance. Adorned with innumerable masks, she is the hero with a thousand faces.\nWealth, status, power... None of those matters to Sparkle. The only thing that can get her attention is \"amusement.\"",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -244,9 +245,18 @@
       "id": "monodrama",
       "name": "Monodrama",
       "desc": "Deals Quantum DMG equal to #1[i]% of Sparkle's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Quantum DMG to a single enemy.",
+      "simpleDesc": "Deals minor Quantum DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Increases an ally's CRIT DMG and Advances Forward their action.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "Recovers Skill Points for the team, and enables the DMG Boost provided by Sparkle's Talent to be additionally enhanced.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1125,15 @@
       "simpleDesc": "Increases the team's Max Skill Points. Whenever an ally consumes Skill Points, enables all allies to deal more damage.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1473,15 @@
       "simpleDesc": "Using the Technique grants all allies Misdirect. Characters with Misdirect will not be detected by enemies, and entering battle while in Misdirect recovers Skill Points for allies.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1453,37 +1499,79 @@
       "_id": 130601,
       "id": "suspension_of_disbelief",
       "name": "Suspension of Disbelief",
-      "desc": "The Cipher effect granted by the Ultimate lasts for 1 extra turn. All allies with Cipher have their ATK increased by <nobr>40%</nobr>."
+      "desc": "The Cipher effect granted by the Ultimate lasts for 1 extra turn. All allies with Cipher have their ATK increased by <nobr>40%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130602,
       "id": "purely_fictitious",
       "name": "Purely Fictitious",
-      "desc": "Every stack of the Talent's effect allows allies to additionally ignore <nobr>8%</nobr> of the target's DEF when dealing DMG."
+      "desc": "Every stack of the Talent's effect allows allies to additionally ignore <nobr>8%</nobr> of the target's DEF when dealing DMG.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130603,
       "id": "pipedream",
       "name": "Pipedream",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130604,
       "id": "life_is_a_gamble",
       "name": "Life Is a Gamble",
-      "desc": "The Ultimate recovers 1 more Skill Point. The Talent additionally increases the Max Skill Points by 1."
+      "desc": "The Ultimate recovers 1 more Skill Point. The Talent additionally increases the Max Skill Points by 1.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130605,
       "id": "parallax_truth",
       "name": "Parallax Truth",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130606,
       "id": "narrative_polysemy",
       "name": "Narrative Polysemy",
-      "desc": "The CRIT DMG Boost effect provided by the Skill additionally increases by an amount equal to <nobr>30%</nobr> of Sparkle's CRIT DMG. When Sparkle uses Skill, her Skill's CRIT DMG Boost effect will apply to all teammates with Cipher. When Sparkle uses her Ultimate, any single ally who benefits from her Skill's CRIT DMG Boost will spread that effect to teammates with Cipher."
+      "desc": "The CRIT DMG Boost effect provided by the Skill additionally increases by an amount equal to <nobr>30%</nobr> of Sparkle's CRIT DMG. When Sparkle uses Skill, her Skill's CRIT DMG Boost effect will apply to all teammates with Cipher. When Sparkle uses her Ultimate, any single ally who benefits from her Skill's CRIT DMG Boost will spread that effect to teammates with Cipher.",
+      "unlockCost": [
+        {
+          "ItemID": 11306,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

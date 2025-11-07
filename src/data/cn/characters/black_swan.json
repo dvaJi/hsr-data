@@ -2,6 +2,7 @@
   "_id": 1307,
   "id": "black_swan",
   "name": "黑天鹅",
+  "description": "流光忆庭的忆者，慵懒神秘的占卜师。\n耐心聆听他人「记忆」，诸般命运尽在掌握。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,32 @@
       "simpleDesc": "对敌方单体造成少量风属性伤害，有概率对目标施加【奥迹】。攻击陷入风化、裂伤、灼烧、触电状态的目标后，分别有概率额外施加【奥迹】。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奥迹",
+          "desc": "【奥迹】属于持续伤害类负面状态，该状态无法被解除。\n处于【奥迹】状态时，也会被视为陷入了风化状态。【奥迹】状态下，目标每回合开始受到风属性持续伤害。\n施加【奥迹】状态时无视目标的风化抵抗、裂伤抵抗、灼烧抵抗、触电抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -439,6 +466,32 @@
       "simpleDesc": "对敌方单体及其相邻目标造成少量风属性伤害，大概率对目标施加【奥迹】，并有大概率使目标防御力降低。",
       "type": "战技",
       "tag": "扩散",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奥迹",
+          "desc": "【奥迹】属于持续伤害类负面状态，该状态无法被解除。\n处于【奥迹】状态时，也会被视为陷入了风化状态。【奥迹】状态下，目标每回合开始受到风属性持续伤害。\n施加【奥迹】状态时无视目标的风化抵抗、裂伤抵抗、灼烧抵抗、触电抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -793,6 +846,24 @@
       "simpleDesc": "对敌方全体施加【揭露】状态，使目标回合内受到的伤害提高，并将【奥迹】视为风化、裂伤、灼烧、触电状态，此外使【奥迹】下一次回合开始造成伤害后不重置层数。对敌方全体造成风属性伤害。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10013071,
+          "name": "奥迹",
+          "desc": "【奥迹】属于持续伤害类负面状态，该状态无法被解除。\n处于【奥迹】状态时，也会被视为陷入了风化状态。【奥迹】状态下，目标每回合开始受到风属性持续伤害。\n施加【奥迹】状态时无视目标的风化抵抗、裂伤抵抗、灼烧抵抗、触电抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1132,6 +1203,32 @@
       "simpleDesc": "敌方目标每回合开始受到持续伤害时，有概率陷入【奥迹】，在回合开始时受到风属性持续伤害，并且黑天鹅根据【奥迹】层数触发额外效果。",
       "type": "天赋",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奥迹",
+          "desc": "【奥迹】属于持续伤害类负面状态，该状态无法被解除。\n处于【奥迹】状态时，也会被视为陷入了风化状态。【奥迹】状态下，目标每回合开始受到风属性持续伤害。\n施加【奥迹】状态时无视目标的风化抵抗、裂伤抵抗、灼烧抵抗、触电抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1531,6 +1628,32 @@
       "simpleDesc": "使用秘技后，下一次战斗开始时大概率对敌方每个单体目标施加【奥迹】，重复数次直到施加失败。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奥迹",
+          "desc": "【奥迹】属于持续伤害类负面状态，该状态无法被解除。\n处于【奥迹】状态时，也会被视为陷入了风化状态。【奥迹】状态下，目标每回合开始受到风属性持续伤害。\n施加【奥迹】状态时无视目标的风化抵抗、裂伤抵抗、灼烧抵抗、触电抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1548,37 +1671,121 @@
       "_id": 130701,
       "id": "seven_pillars_of_wisdom",
       "name": "三磅石，七阶柱",
-      "desc": "当黑天鹅处于可战斗状态时，处于风化、裂伤、灼烧、触电状态下的敌方目标对应的风、物理、火、雷属性抗性分别降低<nobr>25%</nobr>。"
+      "desc": "当黑天鹅处于可战斗状态时，处于风化、裂伤、灼烧、触电状态下的敌方目标对应的风、物理、火、雷属性抗性分别降低<nobr>25%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130702,
       "id": "weep_not_for_me_my_lamb",
       "name": "羔羊，请勿为我恸哭",
-      "desc": "【<u>奥迹</u>】状态下的敌方目标被消灭时，有<nobr>100%</nobr>的<u>基础概率</u>使相邻目标陷入<nobr>6</nobr>层【<u>奥迹</u>】。"
+      "desc": "【<u>奥迹</u>】状态下的敌方目标被消灭时，有<nobr>100%</nobr>的<u>基础概率</u>使相邻目标陷入<nobr>6</nobr>层【<u>奥迹</u>】。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奥迹",
+          "desc": "【奥迹】属于持续伤害类负面状态，该状态无法被解除。\n处于【奥迹】状态时，也会被视为陷入了风化状态。【奥迹】状态下，目标每回合开始受到风属性持续伤害。\n施加【奥迹】状态时无视目标的风化抵抗、裂伤抵抗、灼烧抵抗、触电抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130703,
       "id": "as_above_so_below",
       "name": "上界如此，下界亦然",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130704,
       "id": "in_tears_we_gift",
       "name": "泪水，亦是礼物",
-      "desc": "【揭露】状态下，敌方目标效果抵抗降低<nobr>10%</nobr>，且每回合开始时或被消灭时使黑天鹅恢复<nobr>8</nobr>点能量。能量恢复效果在【揭露】状态持续时间内最多触发1次，再次陷入【揭露】状态会刷新触发次数。"
+      "desc": "【揭露】状态下，敌方目标效果抵抗降低<nobr>10%</nobr>，且每回合开始时或被消灭时使黑天鹅恢复<nobr>8</nobr>点能量。能量恢复效果在【揭露】状态持续时间内最多触发1次，再次陷入【揭露】状态会刷新触发次数。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130705,
       "id": "linnutee_flyway",
       "name": "候鸟之路",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130706,
       "id": "pantheon_merciful_masses_pitiful",
       "name": "万神皆善，苦役者未知",
-      "desc": "当敌方目标受到黑天鹅的队友的攻击时，黑天鹅有<nobr>65%</nobr>的<u>基础概率</u>使目标陷入1层【<u>奥迹</u>】。\n每当黑天鹅使敌方目标陷入【<u>奥迹</u>】时，有<nobr>50%</nobr>的<u>固定概率</u>使本次叠加的【<u>奥迹</u>】层数额外提高<nobr>1</nobr>层。"
+      "desc": "当敌方目标受到黑天鹅的队友的攻击时，黑天鹅有<nobr>65%</nobr>的<u>基础概率</u>使目标陷入1层【<u>奥迹</u>】。\n每当黑天鹅使敌方目标陷入【<u>奥迹</u>】时，有<nobr>50%</nobr>的<u>固定概率</u>使本次叠加的【<u>奥迹</u>】层数额外提高<nobr>1</nobr>层。",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基础概率",
+          "desc": "给受击者添加负面效果的基础概率。\n最终概率会被攻击者的效果命中和敌方目标的效果抵抗所影响。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "奥迹",
+          "desc": "【奥迹】属于持续伤害类负面状态，该状态无法被解除。\n处于【奥迹】状态时，也会被视为陷入了风化状态。【奥迹】状态下，目标每回合开始受到风属性持续伤害。\n施加【奥迹】状态时无视目标的风化抵抗、裂伤抵抗、灼烧抵抗、触电抵抗。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000002,
+          "name": "固定概率",
+          "desc": "不会被任何因素影响的固定概率。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

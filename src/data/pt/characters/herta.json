@@ -2,6 +2,7 @@
   "_id": 1013,
   "id": "herta",
   "name": "Herta",
+  "description": "Membro n.º 83 da Sociedade de Gênios e verdadeira dona da Estação Espacial.\nUma cientista incrivelmente inteligente, mas não tem muita empatia.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Gelo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Causa Dano de Gelo leve a todos os inimigos. Alvos com mais PV recebem mais Dano.",
       "type": "Perícia",
       "tag": "Área",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Causa Dano de Gelo a todos os inimigos.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,24 @@
       "simpleDesc": "Quando o ataque de qualquer aliado reduz a porcentagem dos PV do inimigo-alvo para #1[i]% ou menos, Herta imediatamente desfere Ataque Extra, causando Dano de Gelo leve a todas as unidades inimigas.",
       "type": "Talento",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1383,15 @@
       "simpleDesc": "Depois de usar a Técnica, aumenta o ATQ desta unidade no início da próxima batalha.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1409,88 @@
       "_id": 101301,
       "id": "kick_you_when_youre_down",
       "name": "Vai Ficar Ainda Pior",
-      "desc": "Ao utilizar um ATQ Básico e se o percentual de PV do inimigo designado for <nobr>50%</nobr> ou menos, o ATQ Básico de Herta também causa <u>Dano de Gelo Adicional</u> igual a <nobr>40%</nobr> do ATQ dela."
+      "desc": "Ao utilizar um ATQ Básico e se o percentual de PV do inimigo designado for <nobr>50%</nobr> ou menos, o ATQ Básico de Herta também causa <u>Dano de Gelo Adicional</u> igual a <nobr>40%</nobr> do ATQ dela.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101302,
       "id": "keep_the_ball_rolling",
       "name": "Dar o Pontapé Inicial",
-      "desc": "Sempre que o Talento for ativado, a chance de CRIT deste personagem aumenta em <nobr>3%</nobr>. Este efeito pode se acumular até <nobr>5</nobr> vez(es)."
+      "desc": "Sempre que o Talento for ativado, a chance de CRIT deste personagem aumenta em <nobr>3%</nobr>. Este efeito pode se acumular até <nobr>5</nobr> vez(es).",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101303,
       "id": "thats_the_kind_of_girl_i_am",
       "name": "Eu Sou Este Tipo de Garota",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101304,
       "id": "hit_where_it_hurts",
       "name": "Dedo na Ferida",
-      "desc": "O Dano aumenta em <nobr>10%</nobr> quando o Talento for ativado."
+      "desc": "O Dano aumenta em <nobr>10%</nobr> quando o Talento for ativado.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101305,
       "id": "cuss_big_or_cuss_nothing",
       "name": "Se For Xingar, Xingue Direito",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101306,
       "id": "no_one_can_betray_me",
       "name": "Ninguém Pode Me Trair",
-      "desc": "Após usar a Perícia Suprema, o ATQ deste personagem aumenta em <nobr>25%</nobr> por <nobr>1</nobr> rodada(s)."
+      "desc": "Após usar a Perícia Suprema, o ATQ deste personagem aumenta em <nobr>25%</nobr> por <nobr>1</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

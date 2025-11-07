@@ -2,6 +2,7 @@
   "_id": 1317,
   "id": "rappa",
   "name": "라파",
+  "description": "축시 삼각의 섬광탄처럼 페나코니에 나타나 자신을 닌자라고 칭하며, 세간의 모든 것을 「인법」으로 귀결하는 기묘한 소녀.\n닌자•진언을 읊고, 요란•닌자 부적을 그리고, 닌자•법첩의 「닌자•도」를 수련하며——즉 랩, 그래피티, 만화——자신의 의지를 갈고닦는 한편, 성간을 누비며 의로운 일을 행하고 있다.\n「갤럭시 레인저」의 일원으로서 줄곧 「원숭이 통치자•사닌」이라고 불리는 악당을 은하의 끝까지 쫓고 있다",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "지정된 단일 적에게 소량의 허수 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "모든 적에게 허수 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "범위 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "[결인] 상태에 진입하고 보너스 턴 및 [채묵]을 3pt 획득하며, 약점 격파 효율과 격파 특수효과가 증가한다.\n[결인] 상태에서 일반 공격 강화를 획득하며, 강화된 일반 공격을 발동하면 [채묵]을 1pt 소모하고 소진 시 [결인] 상태가 종료된다",
       "type": "필살기",
       "tag": "강화",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "보너스 턴",
+          "desc": "턴 횟수를 소모하지 않는 보너스 턴 1개를 획득한다. 해당 턴에서는 필살기를 발동할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,15 @@
       "simpleDesc": "적의 약점이 격파될 시 라파가 충전을 1pt 획득한다. [인구•항마의 꽃잎]의 3번째 공격 발동 시 추가로 모든 적에게 허수 속성 격파 피해를 가한다. 해당 피해는 약점 속성을 무시하고 강인성을 감소시키며, 충전을 모두 소모하여 이번 격파 피해 배율과 강인성 감소 수치를 증가시킨다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        6,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1452,15 @@
       "simpleDesc": "[그래피티] 상태에 진입하며, 빠른 속도로 전방을 향해 일정 거리 이동하고 접촉한 적을 공격한다. 적을 공격하여 전투에 진입하면 각각의 적에게 약점 속성을 무시하는 강인성 감소 효과와 허수 속성 격파 피해를 가하고, 대상의 인접한 목표에게 허수 속성 격파 피해를 가한다. 동시에 자신은 에너지를 획득한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1426,37 +1481,79 @@
       "_id": 131701,
       "id": "returned_is_the_revenant_with_no_ferry_toll",
       "name": "삼도천을 건너려나 육도전 없네",
-      "desc": "필살기를 발동하여 [결인] 상태에 진입하는 동안 라파가 가하는 피해가 목표의 방어력을 <nobr>15%</nobr> 무시하고, [결인] 상태 해제 후 에너지를 <nobr>20</nobr>pt 회복한다"
+      "desc": "필살기를 발동하여 [결인] 상태에 진입하는 동안 라파가 가하는 피해가 목표의 방어력을 <nobr>15%</nobr> 무시하고, [결인] 상태 해제 후 에너지를 <nobr>20</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131702,
       "id": "free_is_the_mind_enlightened_by_haikus",
       "name": "하이쿠를 외우니 근심 걱정 없네",
-      "desc": "강화된 일반 공격의 처음 2단 공격이 지정된 단일 적에게 가하는 강인성 감소 수치가 <nobr>50%</nobr> 증가한다"
+      "desc": "강화된 일반 공격의 처음 2단 공격이 지정된 단일 적에게 가하는 강인성 감소 수치가 <nobr>50%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131703,
       "id": "many_are_the_shrines_that_repel_no_hell",
       "name": "사찰 즐비해도 말법의 무간옥이라네",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131704,
       "id": "lost_is_the_nind_devoured_by_time",
       "name": "시간이 흘러 임협마저 인의를 잃었네",
-      "desc": "[결인] 상태 동안 모든 아군의 속도가 <nobr>12%</nobr> 증가한다"
+      "desc": "[결인] 상태 동안 모든 아군의 속도가 <nobr>12%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131705,
       "id": "steady_is_the_ranger_with_unerring_arrows",
       "name": "일심불란의 화살은 빗나가지 않네",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131706,
       "id": "righteous_is_the_wrath_that_spares_no_evil",
       "name": "파사현정의 응보는 자비가 없네",
-      "desc": "전투 시작 시 라파가 특성 효과의 충전을 <nobr>5</nobr>pt 획득하고, 충전 상한이 <nobr>5</nobr>pt 증가한다. [인구•항마의 꽃잎]의 3번째 공격 발동 후 충전을 <nobr>5</nobr>pt 획득한다"
+      "desc": "전투 시작 시 라파가 특성 효과의 충전을 <nobr>5</nobr>pt 획득하고, 충전 상한이 <nobr>5</nobr>pt 증가한다. [인구•항마의 꽃잎]의 3번째 공격 발동 후 충전을 <nobr>5</nobr>pt 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

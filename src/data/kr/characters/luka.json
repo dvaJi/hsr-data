@@ -2,6 +2,7 @@
   "_id": 1111,
   "id": "luka",
   "name": "루카",
+  "description": "벨로보그 하층 구역의 챔피언 격투선수, 「와일드 파이어」의 실력파 멤버 중 하나.\n격투 클럽의 연속 디펜딩 챔피언, 자신의 열정으로 하층 구역의 꿈이 있는 아이들을 격려한다",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 물리 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "단일 적에게 물리 속성 피해를 가하고, 높은 확률로 목표에게 열상 상태를 부여한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,27 @@
       "simpleDesc": "[투지]를 #5[i]스택 획득한다. 높은 확률로 단일 적이 받는 피해가 증가하고 적에게 대량의 물리 속성 피해를 가한다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1115,6 +1170,18 @@
       "simpleDesc": "일반 공격 [돌격 펀치]와 전투 스킬 [열상 펀치]를 발동하면 [투지]를 1스택 획득한다. 보유한 [투지]가 2스택 이상일 시 일반 공격 강화를 획득한다.\n적이 열상 상태이면 일반 공격 강화로 열상 상태가 피해를 1회 추가로 생성한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1417,6 +1484,24 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 임의의 단일 적에게 루카 공격력 #1[i]%만큼의 물리 속성 피해를 가하고, #2[i]%의 기본 확률로 목표를 전투 스킬과 동일한 열상 상태에 빠트린다. 그 후 루카는 [투지]를 1스택 추가로 획득한다",
       "simpleDesc": "적을 공격하며, 전투 진입 후 임의의 단일 적에게 소량의 물리 속성 피해를 가하고, 높은 확률로 목표를 열상 상태에 빠트린다. 그 후 [투지]를 1스택 추가로 획득한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1434,37 +1519,79 @@
       "_id": 111101,
       "id": "fighting_endlessly",
       "name": "끊임없는 싸움",
-      "desc": "루카 행동 시 지정된 적이 열상 상태이면 루카가 가하는 피해는 <nobr>15%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "루카 행동 시 지정된 적이 열상 상태이면 루카가 가하는 피해는 <nobr>15%</nobr> 증가한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111102,
       "id": "the_enemy_is_weak_i_am_strong",
       "name": "약한 적, 강한 나",
-      "desc": "전투 스킬을 명중한 적의 약점이 물리 속성이면 [투지]를 <nobr>1</nobr>스택 획득한다"
+      "desc": "전투 스킬을 명중한 적의 약점이 물리 속성이면 [투지]를 <nobr>1</nobr>스택 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111103,
       "id": "born_for_the_ring",
       "name": "링을 위해 태어난 자",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111104,
       "id": "never_turning_back",
       "name": "칠전팔기",
-      "desc": "[투지]를 1스택 획득할 때마다 공격력이 <nobr>5%</nobr> 증가한다. 해당 효과 최대 중첩수: <nobr>4</nobr>스택"
+      "desc": "[투지]를 1스택 획득할 때마다 공격력이 <nobr>5%</nobr> 증가한다. 해당 효과 최대 중첩수: <nobr>4</nobr>스택",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111105,
       "id": "the_spirit_of_wildfire",
       "name": "와일드 파이어 스피릿",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111106,
       "id": "a_champions_applause",
       "name": "챔피언의 영광",
-      "desc": "강화된 일반 공격의 [어퍼컷]을 발동해 열상 상태에 빠진 적을 명중하면 이번 강화된 일반 공격에 사용한 [돌격 펀치] 공격 단수마다 적이 현재 받는 열상 상태가 기존 피해 <nobr>8%</nobr>의 피해를 추가로 즉시 1회 생성한다"
+      "desc": "강화된 일반 공격의 [어퍼컷]을 발동해 열상 상태에 빠진 적을 명중하면 이번 강화된 일반 공격에 사용한 [돌격 펀치] 공격 단수마다 적이 현재 받는 열상 상태가 기존 피해 <nobr>8%</nobr>의 피해를 추가로 즉시 1회 생성한다",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

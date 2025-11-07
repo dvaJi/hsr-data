@@ -2,6 +2,7 @@
   "_id": 1309,
   "id": "robin",
   "name": "Robin",
+  "description": "Gadis yang anggun ini adalah penyanyi Halovian yang lahir di Penacony dan terkenal di seluruh penjuru alam semesta.\nKali ini dia diundang oleh Family untuk kembali ke kampung halamannya dan mempersembahkan sebuah lagu di \"Festival Charmony\".\nDia bisa menggunakan kekuatan \"Harmony\" untuk menyebarkan nyanyiannya, dan mewujudkan \"resonansi\" bukan hanya di antara para penggemarnya, tapi bahkan di antara segala makhluk hidup.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Physical DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Meningkatkan DMG seluruh rekan tim.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -724,10 +743,36 @@
       "_id": 130903,
       "id": "vox_harmonique_opus_cosmique",
       "name": "Vox Harmonique, Opus Cosmique",
-      "desc": "Robin memasuki status \"Concerto\", membuat rekan tim selain dirinya segera beraksi.\nSaat berstatus \"Concerto\", meningkatkan ATK seluruh rekan tim, peningkatannya adalah sebesar #1[f1]% ATK Robin + #3[i], dan setiap kali setelah rekan tim melancarkan serangan, Robin akan mengakibatkan 1 kali Physical DMG tambahan sebesar #4[i]% ATK dirinya (serangan ini memiliki CRIT Rate tetap sebesar #5[i]% dan CRIT DMG tetap sebesar #6[i]%).\nSaat berstatus \"Concerto\", Robin kebal terhadap Crowd Control Debuff, dan Robin tidak akan memasuki gilirannya serta tidak dapat beraksi hingga hitung mundur berakhir.\nHitung mundur \"Concerto\" akan muncul di Susunan Aksi. Saat giliran hitung mundur dimulai, Robin akan keluar dari status \"Concerto\" dan segera beraksi. Hitung mundur memiliki SPD tetap sebesar #2[i].",
+      "desc": "Robin memasuki status \"Concerto\" dan membuat rekan tim selain dirinya segera beraksi.\nSaat berstatus \"Concerto\", ATK seluruh rekan tim meningkat sebesar #1[f1]% ATK Robin + #3[i], dan setiap setelah rekan tim melancarkan serangan, Robin akan mengakibatkan 1 kali Physical DMG Tambahan sebesar #4[i]% ATK dirinya (serangan ini memiliki CRIT Rate tetap sebesar #5[i]% dan CRIT DMG tetap sebesar #6[i]%).\nSaat berstatus \"Concerto\", Robin kebal terhadap Crowd Control Debuff, dan Robin tidak akan memasuki gilirannya serta tidak dapat beraksi hingga hitung mundur berakhir.\nHitung mundur \"Concerto\" akan muncul di Susunan Aksi. Saat giliran hitung mundur dimulai, Robin akan keluar dari status \"Concerto\" dan segera beraksi. Hitung mundur memiliki SPD tetap sebesar #2[i].",
       "simpleDesc": "Memasuki status \"Concerto\" dan meningkatkan ATK seluruh rekan tim, serta membuat seluruh rekan tim selain dirinya sendiri segera beraksi. Setelah rekan tim menyerang, Robin akan mengakibatkan Physical DMG Tambahan. Selama berstatus \"Concerto\", Robin kebal terhadap Crowd Control Debuff, dan Robin tidak akan memasuki gilirannya serta tidak dapat beraksi hingga hitung mundur berakhir.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Crowd Control Debuff",
+          "desc": "Frozen, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Penguncian Aksi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1142,15 @@
       "simpleDesc": "Meningkatkan CRIT DMG seluruh rekan tim, dan Robin akan memulihkan Energy tambahan setelah rekan tim menyerang musuh.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1460,15 @@
       "simpleDesc": "Menciptakan dimensi khusus di sekitar Robin. Musuh yang berada dalam dimensi khusus tidak akan menyerang Robin. Setelah memasuki pertempuran dengan musuh saat dimensi khusus aktif, Robin akan memulihkan #2[i] Energy tambahan saat setiap gelombang pertempuran dimulai.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1486,106 @@
       "_id": 130901,
       "id": "land_of_smiles",
       "name": "Land of Smiles",
-      "desc": "Saat berstatus \"Concerto\", <u>RES PEN</u> Seluruh Tipe dari seluruh rekan tim meningkat <nobr>24%</nobr>."
+      "desc": "Saat berstatus \"Concerto\", <u>RES PEN</u> Seluruh Tipe dari seluruh rekan tim meningkat <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130902,
       "id": "afternoon_tea_for_two",
       "name": "Afternoon Tea For Two",
-      "desc": "Saat berstatus \"Concerto\", SPD seluruh rekan tim meningkat <nobr>16%</nobr>. Efek pemulihan Energy dari Talent meningkat <nobr>1</nobr> poin."
+      "desc": "Saat berstatus \"Concerto\", SPD seluruh rekan tim meningkat <nobr>16%</nobr>. Efek pemulihan Energy dari Talent meningkat <nobr>1</nobr> poin.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130903,
       "id": "inverted_tuning",
       "name": "Inverted Tuning",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Ultimate +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Ultimate +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130904,
       "id": "raindrop_key",
       "name": "Raindrop Key",
-      "desc": "Saat Robin melancarkan Ultimate, akan menghapus status <u>Crowd Control Debuff</u> dari seluruh rekan tim. Saat Robin berada dalam status \"Concerto\", Effect RES seluruh rekan tim meningkat <nobr>50%</nobr>."
+      "desc": "Saat Robin melancarkan Ultimate, akan menghapus status <u>Crowd Control Debuff</u> dari seluruh rekan tim. Saat Robin berada dalam status \"Concerto\", Effect RES seluruh rekan tim meningkat <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Crowd Control Debuff",
+          "desc": "Frozen, Entanglement, Imprisonment, Dominated, Outrage, Strong Reverberation, Alien Dream, Snarelock, Terrified, Penguncian Aksi.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130905,
       "id": "lonestars_lament",
       "name": "Lonestar's Lament",
-      "desc": "Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130906,
       "id": "moonless_midnight",
       "name": "Moonless Midnight",
-      "desc": "Saat berstatus \"Concerto\", CRIT DMG dari Physical <u>DMG Tambahan</u> yang diakibatkan Ultimate akan meningkat ekstra <nobr>450%</nobr>. Efek \"Moonless Midnight\" maksimal terpicu <nobr>8</nobr> kali, dan jumlah terpicu akan reset setiap kali melancarkan Ultimate karakter ini."
+      "desc": "Saat berstatus \"Concerto\", CRIT DMG dari Physical <u>DMG Tambahan</u> yang diakibatkan Ultimate akan meningkat ekstra <nobr>450%</nobr>. Efek \"Moonless Midnight\" maksimal terpicu <nobr>8</nobr> kali, dan jumlah terpicu akan reset setiap kali melancarkan Ultimate karakter ini.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

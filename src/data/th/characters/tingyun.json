@@ -2,6 +2,7 @@
   "_id": 1202,
   "id": "tingyun",
   "name": "Tingyun",
+  "description": "ผู้แทนของ Sky-Faring Commission แห่ง Xianzhou \"Luofu\"\nเธอได้เดินทางไปกับกลุ่มตัวแทนการค้า เพื่อสร้างความสัมพันธ์ทางการค้าและเป็นพันธมิตรกับโลกต่างๆ",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG สายฟ้าเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "เพิ่ม ATK ของฝ่ายเราหนึ่งตัว และได้รับการ \"ร่ายพร\" เมื่อทำการโจมตีในขณะที่ติดสถานะ \"ร่ายพร\" จะสร้าง DMG สายฟ้าเพิ่มเติมเล็กน้อย",
       "type": "สกิลต่อสู้",
       "tag": "สนับสนุน",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG เพิ่มเติม",
+          "desc": "ทำให้ผู้ที่ถูกโจมตีได้รับ DMG เพิ่มเติม 1 ครั้ง โดยการโจมตีครั้งนี้ จะไม่ถือเป็นการโจมตี 1 ครั้ง",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "ฟื้นฟูพลังงานให้กับฝ่ายเราหนึ่งตัว และทำให้เป้าหมายดังกล่าวสร้าง DMG เพิ่มขึ้น",
       "type": "ท่าไม้ตาย",
       "tag": "สนับสนุน",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "หลังจากศัตรูถูก Tingyun โจมตี เป้าหมายที่ได้รับการ \"ร่ายพร\" จะสร้าง DMG สายฟ้าเพิ่มเติม เล็กน้อย แก่ศัตรูดังกล่าวทันที",
       "type": "พรสวรรค์",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "DMG เพิ่มเติม",
+          "desc": "ทำให้ผู้ที่ถูกโจมตีได้รับ DMG เพิ่มเติม 1 ครั้ง โดยการโจมตีครั้งนี้ จะไม่ถือเป็นการโจมตี 1 ครั้ง",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "หลังจากใช้เทคนิคแล้ว จะฟื้นฟูพลังงานของตัวเองทันที",
       "type": "เทคนิค",
       "tag": "สนับสนุน",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1374,37 +1447,79 @@
       "_id": 120201,
       "id": "windfall_of_lucky_springs",
       "name": "Windfall of Lucky Springs",
-      "desc": "หลังจากฝ่ายตัวเองหนึ่งตัวที่ได้รับการ \"ร่ายพร\" ใช้ท่าไม้ตาย ความเร็วจะเพิ่มขึ้น <nobr>20%</nobr> เป็นเวลา 1 เทิร์น"
+      "desc": "หลังจากฝ่ายตัวเองหนึ่งตัวที่ได้รับการ \"ร่ายพร\" ใช้ท่าไม้ตาย ความเร็วจะเพิ่มขึ้น <nobr>20%</nobr> เป็นเวลา 1 เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120202,
       "id": "gainfully_gives_givingly_gains",
       "name": "Gainfully Gives, Givingly Gains",
-      "desc": "เมื่อฝ่ายตัวเองหนึ่งตัวที่ได้รับการ \"ร่ายพร\" กำจัดศัตรูเป้าหมายได้ จะฟื้นฟูพลังงาน <nobr>5</nobr> หน่วย เอฟเฟกต์นี้จะปล่อยได้แค่ 1 ครั้งต่อเทิร์น"
+      "desc": "เมื่อฝ่ายตัวเองหนึ่งตัวที่ได้รับการ \"ร่ายพร\" กำจัดศัตรูเป้าหมายได้ จะฟื้นฟูพลังงาน <nobr>5</nobr> หน่วย เอฟเฟกต์นี้จะปล่อยได้แค่ 1 ครั้งต่อเทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120203,
       "id": "halcyon_bequest",
       "name": "Halcyon Bequest",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120204,
       "id": "jovial_versatility",
       "name": "Jovial Versatility",
-      "desc": "ตัวคูณ DMG จากการ \"ร่ายพร\"\nจะเพิ่มขึ้น <nobr>20%</nobr>"
+      "desc": "ตัวคูณ DMG จากการ \"ร่ายพร\"\nจะเพิ่มขึ้น <nobr>20%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120205,
       "id": "sauntering_coquette",
       "name": "Sauntering Coquette",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120206,
       "id": "peace_brings_wealth_to_all",
       "name": "Peace Brings Wealth to All",
-      "desc": "ท่าไม้ตายจะฟื้นฟูพลังงานให้กับเป้าหมายฝ่ายตัวเองเพิ่มขึ้น <nobr>10</nobr> หน่วย"
+      "desc": "ท่าไม้ตายจะฟื้นฟูพลังงานให้กับเป้าหมายฝ่ายตัวเองเพิ่มขึ้น <nobr>10</nobr> หน่วย",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

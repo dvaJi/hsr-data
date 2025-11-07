@@ -2,6 +2,7 @@
   "_id": 1106,
   "id": "pela",
   "name": "Pela",
+  "description": "An intelligence officer for the Silvermane Guards.\nShe has a serious personality and is revered by other members of the Silvermane Guards.",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -244,9 +245,21 @@
       "id": "frost_shot",
       "name": "Frost Shot",
       "desc": "Deals Ice DMG equal to #1[i]% of Pela's ATK to one designated enemy target.",
-      "simpleDesc": "Deals minor Ice DMG to a single enemy.",
+      "simpleDesc": "Deals minor Ice DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -416,9 +429,30 @@
       "id": "frostbite",
       "name": "Frostbite",
       "desc": "Removes #2[i] buff(s) and deals Ice DMG equal to #1[i]% of Pela's ATK to one designated target enemy.",
-      "simpleDesc": "Dispels 1 buff from a single enemy target, and deals Ice DMG to the target enemy.",
+      "simpleDesc": "Dispels 1 buff from one enemy target, and deals Ice DMG to the target enemy.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -722,6 +756,27 @@
       "simpleDesc": "Has a high chance of lowering enemies' DEF and deals minor Ice DMG to all enemies.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1055,6 +1110,24 @@
       "simpleDesc": "After using an attack, if the enemy target is currently inflicted with debuff(s), Pela regenerates Energy.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1415,24 @@
       "desc": "Immediately attacks the enemy. Upon entering battle, Pela deals Ice DMG equal to #4[i]% of her ATK to a random enemy, with a #1[i]% base chance of lowering the DEF of all enemies by #2[i]% for #3[i] turn(s).",
       "simpleDesc": "Attacks the enemy. After entering battle, deals minor DMG to a random single enemy, with a high chance of lowering the DEF of all enemy targets.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1361,37 +1452,114 @@
       "_id": 110601,
       "id": "victory_report",
       "name": "Victory Report",
-      "desc": "When an enemy is defeated, Pela regenerates <nobr>5</nobr> Energy."
+      "desc": "When an enemy is defeated, Pela regenerates <nobr>5</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110602,
       "id": "adamant_charge",
       "name": "Adamant Charge",
-      "desc": "Using Skill to dispel <u>buff(s)</u> increases SPD by <nobr>10%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "Using Skill to dispel <u>buff(s)</u> increases SPD by <nobr>10%</nobr> for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "Buff",
+          "desc": "Can buff combat ability for a period of time, which can be dispelled unless otherwise specified.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110603,
       "id": "suppressive_force",
       "name": "Suppressive Force",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110604,
       "id": "full_analysis",
       "name": "Full Analysis",
-      "desc": "When using Skill, there is a <nobr>100%</nobr> <u>base chance</u> to reduce the target enemy's Ice RES by <nobr>12%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "When using Skill, there is a <nobr>100%</nobr> <u>base chance</u> to reduce the target enemy's Ice RES by <nobr>12%</nobr> for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110605,
       "id": "absolute_jeopardy",
       "name": "Absolute Jeopardy",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110606,
       "id": "feeble_pursuit",
       "name": "Feeble Pursuit",
-      "desc": "After Pela attacks, if the enemy target is <u>debuffed</u>, deals Ice <u>Additional DMG</u> equal to <nobr>40%</nobr> of Pela's ATK to the enemy."
+      "desc": "After Pela attacks, if the enemy target is <u>debuffed</u>, deals Ice <u>Additional DMG</u> equal to <nobr>40%</nobr> of Pela's ATK to the enemy.",
+      "unlockCost": [
+        {
+          "ItemID": 11106,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

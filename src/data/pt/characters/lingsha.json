@@ -2,6 +2,7 @@
   "_id": 1222,
   "id": "lingsha",
   "name": "Lingsha",
+  "description": "A nova mestra do caldeirão da Comissão de Alquimia do Luofu do Xianzhou é uma curandeira Vidyadhara perceptiva e inteligente.\nCom um olfato apurado, ela diagnostica doenças e acalma mentes com aromaterapia.\nHábil em navegar por relações sociais complexas, ela consegue manter uma compostura impecável mesmo quando o tumulto é interno.",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Fogo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Causa Dano de Fogo leve a todos os inimigos e, ao mesmo tempo, restaura PV para todos os aliados. A ação de Fuyuan é Avançada Adiante.",
       "type": "Perícia",
       "tag": "Área",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,32 @@
       "simpleDesc": "Aumenta o Dano de Quebra recebido por todos os inimigos, causa Dano de Fogo a todos os inimigos ao mesmo tempo, restaura os PV de todos os aliados e a ação de Fuyuan é Avançada Adiante.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Dano de Quebra",
+          "desc": "O Dano de Quebra aumenta com um maior Efeito de Quebra, maior Tenacidade máxima de alvo, e maiores níveis de personagens.\nO Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,40 @@
       "simpleDesc": "Usar a Perícia invoca Fuyuan: Ao realizar uma ação, desfere um Ataque Extra e causa Dano de Fogo leve a todos os inimigos. Além disso, causa Dano de Fogo leve a um único inimigo aleatório, priorizando alvos que possuam Tenacidade maior que 0 e Fraqueza contra Fogo. Remove 1 penalidade de todos os aliados e restaura os PV deles.\nUsar a Perícia repetidamente aumentará o contador de ação de Fuyuan.",
       "type": "Talento",
       "tag": "Área",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1614,15 @@
       "simpleDesc": "Após usar a Técnica, invoca Fuyuan imediatamente no começo da próxima batalha e aumenta o Dano de Quebra recebido por todos os inimigos.",
       "type": "Técnica",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1639,79 @@
       "_id": 122201,
       "id": "bloom_on_vileward_bouquet",
       "name": "Floreio no Buquê do Vilarejo",
-      "desc": "A Eficiência de Quebra de Fraqueza de Lingsha aumenta em <nobr>50%</nobr>. Quando uma unidade inimiga é afligida com Quebra de Fraqueza, sua DEF é reduzida em <nobr>20%</nobr>."
+      "desc": "A Eficiência de Quebra de Fraqueza de Lingsha aumenta em <nobr>50%</nobr>. Quando uma unidade inimiga é afligida com Quebra de Fraqueza, sua DEF é reduzida em <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122202,
       "id": "leisure_in_carmine_smokeveil",
       "name": "Lazer Sob o Véu de Fumaça Carmim",
-      "desc": "Ao usar a Perícia Suprema, aumenta o Efeito de Quebra de todos os aliados em <nobr>40%</nobr>, durando por <nobr>3</nobr> rodada(s)."
+      "desc": "Ao usar a Perícia Suprema, aumenta o Efeito de Quebra de todos os aliados em <nobr>40%</nobr>, durando por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122203,
       "id": "shine_of_floral_wick",
       "name": "Brilho do Pavio Floral",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122204,
       "id": "redolence_from_canopied_banquet",
       "name": "Aroma do Banquete Adornado",
-      "desc": "Quando Fuyuan age, restaura PV igual a <nobr>40%</nobr> do ATQ de Lingsha para o aliado-alvo com menos PV no momento."
+      "desc": "Quando Fuyuan age, restaura PV igual a <nobr>40%</nobr> do ATQ de Lingsha para o aliado-alvo com menos PV no momento.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122205,
       "id": "poise_atop_twists_and_turns",
       "name": "Aprumo Diante de Reviravoltas",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122206,
       "id": "arcadia_under_deep_seclusion",
       "name": "Arcádia Sob Profunda Reclusão",
-      "desc": "Enquanto \"Fuyuan\" estiver no campo, reduz a RES a Todos os Tipos de todas as unidades inimigas em <nobr>20%</nobr>. Quando \"Fuyuan\" ataca, desfere adicionalmente <nobr>4</nobr> instância(s) de Dano, com cada instância causando Dano de Fogo igual a <nobr>50%</nobr> do ATQ de Lingsha e uma Redução de Tenacidade de <nobr>5</nobr> a uma unidade inimiga aleatória. Isso prioriza alvos com Tenacidade maior que 0 e Fraqueza contra Fogo."
+      "desc": "Enquanto \"Fuyuan\" estiver no campo, reduz a RES a Todos os Tipos de todas as unidades inimigas em <nobr>20%</nobr>. Quando \"Fuyuan\" ataca, desfere adicionalmente <nobr>4</nobr> instância(s) de Dano, com cada instância causando Dano de Fogo igual a <nobr>50%</nobr> do ATQ de Lingsha e uma Redução de Tenacidade de <nobr>5</nobr> a uma unidade inimiga aleatória. Isso prioriza alvos com Tenacidade maior que 0 e Fraqueza contra Fogo.",
+      "unlockCost": [
+        {
+          "ItemID": 11222,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1207,
   "id": "yukong",
   "name": "Yukong",
+  "description": "Head of the Sky-Faring Commission on the Xianzhou Luofu. Yukong was a seasoned pilot and a deadshot.\nSince heading up the commission, she's been buried under mountains of paperwork.",
   "rarity": 4,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Deals minor Imaginary DMG to an enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Obtains 2 stacks of Roaring Bowstrings. All allies' ATK increases when Roaring Bowstrings is active on this character.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -718,10 +743,19 @@
       "_id": 120703,
       "id": "diving_kestrel",
       "name": "Diving Kestrel",
-      "desc": "If \"Roaring Bowstrings\" is active on Yukong when her Ultimate is used, additionally increases all allies' CRIT Rate by #2[f1]% and CRIT DMG by #3[i]%. At the same time, deals Imaginary DMG equal to #1[i]% of Yukong's ATK to a single enemy.",
-      "simpleDesc": "When Roaring Bowstrings is active on this character, increases the CRIT Rate and CRIT DMG of all allies and deals massive Imaginary DMG to a single enemy.",
+      "desc": "If \"Roaring Bowstrings\" is active on Yukong when her Ultimate is used, additionally increases all allies' CRIT Rate by #2[f1]% and CRIT DMG by #3[i]%. At the same time, deals Imaginary DMG equal to #1[i]% of Yukong's ATK to one designated enemy.",
+      "simpleDesc": "When \"Roaring Bowstrings\" is active on this character, increases the CRIT Rate and CRIT DMG of all allies and deals massive Imaginary DMG to one enemy.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1074,18 @@
       "simpleDesc": "Basic Attack additionally deals minor DMG, and the Toughness Reduction of this Basic Attack is increased. This effect can be triggered again after 1 turn has passed.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1404,15 @@
       "simpleDesc": "This unit's movement speed increases. After attacking an enemy and entering battle, gains 2 stacks of Roaring Bowstrings.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1431,79 @@
       "_id": 120701,
       "id": "aerial_marshal",
       "name": "Aerial Marshal",
-      "desc": "At the start of battle, increases the SPD of all allies by <nobr>10%</nobr> for <nobr>2</nobr> turn(s)."
+      "desc": "At the start of battle, increases the SPD of all allies by <nobr>10%</nobr> for <nobr>2</nobr> turn(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120702,
       "id": "skyward_command",
       "name": "Skyward Command",
-      "desc": "When any ally's current energy is equal to its energy limit, Yukong regenerates an additional <nobr>5</nobr> energy. This effect can only be triggered once for each ally. The trigger count is reset after Yukong uses her Ultimate."
+      "desc": "When any ally's current energy is equal to its energy limit, Yukong regenerates an additional <nobr>5</nobr> energy. This effect can only be triggered once for each ally. The trigger count is reset after Yukong uses her Ultimate.",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120703,
       "id": "torrential_fusillade",
       "name": "Torrential Fusillade",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120704,
       "id": "zephyrean_echoes",
       "name": "Zephyrean Echoes",
-      "desc": "When \"Roaring Bowstrings\" is active, Yukong deals <nobr>30%</nobr> more DMG to enemies."
+      "desc": "When \"Roaring Bowstrings\" is active, Yukong deals <nobr>30%</nobr> more DMG to enemies.",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120705,
       "id": "august_deadshot",
       "name": "August Deadshot",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120706,
       "id": "bowstring_thunderclap",
       "name": "Bowstring Thunderclap",
-      "desc": "When Yukong uses her Ultimate, she immediately gains <nobr>1</nobr> stack(s) of \"Roaring Bowstrings.\""
+      "desc": "When Yukong uses her Ultimate, she immediately gains <nobr>1</nobr> stack(s) of \"Roaring Bowstrings.\"",
+      "unlockCost": [
+        {
+          "ItemID": 11207,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

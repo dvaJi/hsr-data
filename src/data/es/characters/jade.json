@@ -2,6 +2,7 @@
   "_id": 1314,
   "id": "jade",
   "name": "Jade",
+  "description": "Una directiva de alto nivel del Departamento de Inversiones Estratégicas de la Corporación para la Paz Interastral y uno de los Diez Corazones de Piedra. Su piedra angular es el jade del préstamo.\nLa bella y elegante prestamista, experta en descifrar las profundidades de la mente de las personas, posee un pasatiempo personal conocido como Casa de Empeño Bonajade.\nEstá dispuesta a hacer todo lo posible por sentar las bases para adquirir algo de mayor valor y obtener beneficios de clientes aparentemente sin dinero.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Cuántico a un enemigo y a los enemigos adyacentes.",
       "type": "ATQ básico",
       "tag": "Ráfaga",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Convierte a un aliado en Cobrador de deudas y aumenta su VEL. Después de que el Cobrador de deudas ataque, consume PV e inflige una pequeña cantidad de daño adicional de tipo Cuántico a cada enemigo golpeado. Si Jade se convierte en Cobrador de deudas, no recibe el efecto de aumento de VEL ni consume PV tras atacar.",
       "type": "Habilidad básica",
       "tag": "Apoyo",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Daño adicional",
+          "desc": "Hace que el objetivo reciba daño una vez más, pero no se considera un ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -768,6 +796,24 @@
       "simpleDesc": "Inflige Daño Cuántico a todos los enemigos y aumenta el multiplicador del daño de ataque adicional de su talento.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1092,6 +1138,24 @@
       "simpleDesc": "Después de que Jade o un aliado convertido en Cobrador de deudas ataque, Jade obtiene 1 pt. de carga por cada enemigo golpeado. Cuando se alcanzan #3[i] pts. de carga, consume #3[i] pts. de carga y lanza 1 ataque adicional que inflige Daño Cuántico a todos los enemigos.\nJade obtiene Prenda al lanzar el ataque adicional, lo que hace aumentar su Daño CRIT. Puede acumularse hasta #2[i] veces.",
       "type": "Talento",
       "tag": "ATQ AdE",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1446,6 +1510,15 @@
       "simpleDesc": "Afecta con Obediencia ciega a los enemigos en un área determinada. Al atacar a enemigos afectados con Obediencia ciega, todos los enemigos afectados con Obediencia ciega entran a la vez en combate. Tras entrar en combate, inflige una pequeña cantidad de Daño Cuántico a todos los enemigos y Jade obtiene inmediatamente #3[i] acumulaciones de Prenda.",
       "type": "Técnica",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1537,97 @@
       "_id": 131401,
       "id": "altruism_nevertheless_tradable",
       "name": "¿Altruismo? Comerciable, no obstante",
-      "desc": "El daño de <u>ataque adicional</u> del talento de Jade aumenta en un <nobr>32%</nobr>. Si un personaje en el estado de Cobrador de deudas golpea a 2/1 enemigos tras atacar, Jade obtiene <nobr>1</nobr>/<nobr>2</nobr> puntos de carga adicionales respectivamente."
+      "desc": "El daño de <u>ataque adicional</u> del talento de Jade aumenta en un <nobr>32%</nobr>. Si un personaje en el estado de Cobrador de deudas golpea a 2/1 enemigos tras atacar, Jade obtiene <nobr>1</nobr>/<nobr>2</nobr> puntos de carga adicionales respectivamente.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque adicional",
+          "desc": "Lanza un ataque extra contra el objetivo. Este efecto se activa automáticamente cuando se cumplen los requisitos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131402,
       "id": "morality_herein_authenticated",
       "name": "¿Moralidad? Autenticada por la presente",
-      "desc": "Cuando hay <nobr>15</nobr> acumulaciones de Prenda, la Prob. CRIT de Jade aumenta en un <nobr>18%</nobr>."
+      "desc": "Cuando hay <nobr>15</nobr> acumulaciones de Prenda, la Prob. CRIT de Jade aumenta en un <nobr>18%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131403,
       "id": "honesty_soon_mortgaged",
       "name": "¿Franqueza? Pronto será empeñada",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131404,
       "id": "sincerity_put_option_only",
       "name": "¿Sinceridad? Solo con opción de venta",
-      "desc": "Al usar la habilidad definitiva, el daño que inflige Jade ignora un <nobr>12%</nobr> de la DEF del enemigo durante <nobr>3</nobr> turnos."
+      "desc": "Al usar la habilidad definitiva, el daño que inflige Jade ignora un <nobr>12%</nobr> de la DEF del enemigo durante <nobr>3</nobr> turnos.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131405,
       "id": "hope_hitherto_forfeited",
       "name": "¿Esperanza? Dada en pago hace tiempo",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131406,
       "id": "equity_pending_sponsorship",
       "name": "¿Justicia? Pendiente de patrocinio",
-      "desc": "Cuando hay personajes en el estado de Cobrador de deudas en el campo de batalla, la <u>PEN de la RES</u> a Cuántico de Jade aumenta en un <nobr>20%</nobr>, y Jade obtiene el estado de Cobrador de deudas."
+      "desc": "Cuando hay personajes en el estado de Cobrador de deudas en el campo de batalla, la <u>PEN de la RES</u> a Cuántico de Jade aumenta en un <nobr>20%</nobr>, y Jade obtiene el estado de Cobrador de deudas.",
+      "unlockCost": [
+        {
+          "ItemID": 11314,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PEN de la RES",
+          "desc": "Al infligir daño, ignora una parte de la resistencia del enemigo al tipo de daño correspondiente.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

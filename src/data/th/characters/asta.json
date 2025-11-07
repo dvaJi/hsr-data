@@ -2,6 +2,7 @@
   "_id": 1009,
   "id": "asta",
   "name": "Asta",
+  "description": "หัวหน้านักวิจัยของสถานีอวกาศ \"Herta\" คุณหนูสูงศักดิ์ผู้เกิดในตระกูลที่มีชื่อเสียง\nนักวิจัยทางดาราศาสตร์ ผู้มีความอยากรู้อยากเห็น และถนัดเรื่องการจัดการกับเจ้าหน้าที่สถานีอวกาศที่มีความเห็นต่าง",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "สร้าง DMG ไฟเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "สร้าง DMG ไฟเล็กน้อยแก่ฝ่ายศัตรูหนึ่งตัว และจะยิงทั้งหมด 5 ครั้ง",
       "type": "สกิลต่อสู้",
       "tag": "จู่โจม",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -707,6 +732,18 @@
       "simpleDesc": "เพิ่มความเร็วของฝ่ายเราทั้งหมด",
       "type": "ท่าไม้ตาย",
       "tag": "สนับสนุน",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1010,6 +1047,15 @@
       "simpleDesc": "หลังจากทุกครั้งที่โจมตีโดนศัตรู 1 ตัวที่ต่างกัน จะได้รับการชาร์จ 1 ชั้น โดยสามารถซ้อนทับได้สูงสุด 5 ชั้น การชาร์จแต่ละชั้นสามารถทำให้ ATK ของฝ่ายเราทั้งหมดเพิ่มขึ้น และเมื่อเริ่มต้นเทิร์นของตัวเอง จำนวนชั้นการชาร์จจะลดลง",
       "type": "พรสวรรค์",
       "tag": "สนับสนุน",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1327,6 +1373,15 @@
       "desc": "เมื่อโจมตีศัตรูทันทีและเข้าสู่การต่อสู้ จะสร้าง DMG ไฟ #1[i]% ของ ATK ของ Asta แก่ฝ่ายศัตรูทั้งหมด",
       "simpleDesc": "เมื่อโจมตีศัตรูและเข้าสู่การต่อสู้ จะสร้าง DMG เล็กน้อยแก่ฝ่ายศัตรูทั้งหมด",
       "type": "เทคนิค",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1343,37 +1398,79 @@
       "_id": 100901,
       "id": "star_sings_sans_verses_or_vocals",
       "name": "Star Sings Sans Verses or Vocals",
-      "desc": "เมื่อใช้สกิลต่อสู้ จะสุ่มสร้าง DMG เพิ่มเติม 1 ครั้งแก่ฝ่ายศัตรูหนึ่งตัว"
+      "desc": "เมื่อใช้สกิลต่อสู้ จะสุ่มสร้าง DMG เพิ่มเติม 1 ครั้งแก่ฝ่ายศัตรูหนึ่งตัว",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100902,
       "id": "moon_speaks_in_wax_and_wane",
       "name": "Moon Speaks in Wax and Wane",
-      "desc": "เมื่อปล่อยท่าไม้ตาย ในเทิร์นต่อไป Asta จะไม่ลดจำนวนชั้นของการชาร์จ"
+      "desc": "เมื่อปล่อยท่าไม้ตาย ในเทิร์นต่อไป Asta จะไม่ลดจำนวนชั้นของการชาร์จ",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100903,
       "id": "meteor_showers_for_wish_and_want",
       "name": "Meteor Showers for Wish and Want",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100904,
       "id": "aurora_basks_in_beauty_and_bliss",
       "name": "Aurora Basks in Beauty and Bliss",
-      "desc": "เมื่อจำนวนชั้นการชาร์จของพรสวรรค์ มากกว่าหรือเท่ากับ <nobr>2</nobr> ชั้น อัตราการฟื้นฟูพลังงานของ Asta จะเพิ่มขึ้น <nobr>15%</nobr>"
+      "desc": "เมื่อจำนวนชั้นการชาร์จของพรสวรรค์ มากกว่าหรือเท่ากับ <nobr>2</nobr> ชั้น อัตราการฟื้นฟูพลังงานของ Asta จะเพิ่มขึ้น <nobr>15%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100905,
       "id": "nebula_secludes_in_runes_and_riddles",
       "name": "Nebula Secludes in Runes and Riddles",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100906,
       "id": "cosmos_dreams_in_calm_and_comfort",
       "name": "Galaxy Dreams in Calm and Comfort",
-      "desc": "ลดจำนวนชั้นการชาร์จของพรสวรรค์ ในแต่ละเทิร์นลง <nobr>1</nobr> ชั้น"
+      "desc": "ลดจำนวนชั้นการชาร์จของพรสวรรค์ ในแต่ละเทิร์นลง <nobr>1</nobr> ชั้น",
+      "unlockCost": [
+        {
+          "ItemID": 11009,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

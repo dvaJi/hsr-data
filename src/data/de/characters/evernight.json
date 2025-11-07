@@ -2,6 +2,7 @@
   "_id": 1413,
   "id": "evernight",
   "name": "Evernight",
+  "description": "Ein von der Welt abgeschiedener Speicherbereich, wo Kerzenlicht vergangene Zeiten reflektiert und im Nebel still erlischt.\nEvernight, Kind des Gedenkens, entsprungen aus jenem Schatten. Die Erbin von Chrysos, die die Kernflamme der Zeit verbirgt, die Wellen der Vergessenheit entfacht und den Wunsch der Gestalt im Spiegel beschützt.\n„Keine Sorge, ich werde über deinen Weg des Trailblaze wachen ... um jeden Preis. ♭“ ",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem anvisierten Gegner geringen Eis-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Verbraucht eigene LP, um den Memogeist Evey zu beschwören, und erhöht den KRIT-SCH aller verbündeten Memogeister. Falls sich der Memogeist Evey bereits auf dem Kampffeld befindet, werden seine LP wiederhergestellt. Erhält beim Einsatz #3[i] Pkt. „Memoria“. Erhält im Status „Dunkles Rätsel“ zusätzlich #5[i] Pkt. Memoria.",
       "type": "Fertigkeit",
       "tag": "Beschwörung",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,32 @@
       "simpleDesc": "Fügt allen Gegnern Eis-SCH zu, beschwört den Memogeist Evey und versetzt Evernight in den Status „Dunkles Rätsel“. Während diesem werden der von Gegnern erlittene SCH und der von Evernight sowie ihrem Memogeist verursachte SCH erhöht. Außerdem sind sowohl Evernight als auch ihr Memogeist immun gegen Mengenkontrolle-Debuffs.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        90,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Mengenkontrolle-Debuff",
+          "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1181,32 @@
       "simpleDesc": "Beschwört beim Kampfeintritt den Memogeist Evey. Jedes Mal, wenn die LP dieser Einheit oder des Memogeists Evey sinken, wird der KRIT-SCH für beide erhöht und es wird „Memoria“ erhalten.\nWenn Evernight mindestens #6[i] Pkt. Memoria besitzt, führt der Memogeist Evey sofort eine Aktion aus.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Memogeist beschwören",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Mengenkontrolle-Debuff",
+          "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1511,6 +1591,15 @@
       "simpleDesc": "Erhält zu Beginn des nächsten Kampfes die gleiche KRIT-SCH-Erhöhung für Memogeister wie bei der Fertigkeit sowie zusätzliches „Memoria“.",
       "type": "Technik",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1523,42 +1612,601 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Evey",
+    "icon": "SpriteOutput/ServantIconTeam/11413B.png",
+    "hpBase": "0",
+    "hpInherit": "#5",
+    "hpSkill": 141304,
+    "speedBase": "#4",
+    "speedInherit": "0",
+    "aggro": 125,
+    "skills": [
+      {
+        "id": 1141301,
+        "name": "Regenartige Rückerinnerung, tanzend",
+        "desc": "Diese Fähigkeit wählt beim Einsatz automatisch ein Ziel aus, wobei der zuletzt von Evernight angegriffene Gegner vorrangig angegriffen wird. Fügt einem Gegner Eis-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> von Eveys max. LP zu. Für jede <nobr>#3[i]</nobr> Pkt. „Memoria“, die Evernight derzeit besitzt, wird zusätzlich Eis-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> von Eveys max. LP verursacht. Erhält nach dem Einsatz <nobr>#4[i]</nobr> Pkt. Memoria.",
+        "simpleDesc": "Fügt einem Gegner geringen Eis-SCH zu. Verursacht basierend auf der Anzahl von „Memoria“ zusätzlich geringen Eis-SCH.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "SingleAttack",
+          "name": "Einzelangriff"
+        },
+        "spBase": 20,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          30,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.05,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              0.06,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              0.07,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              0.08,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              0.09,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              0.1,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              0.11,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              0.12,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              0.13,
+              4,
+              1
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              0.14,
+              4,
+              1
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141303,
+        "name": "Abgrundtiefe Einsamkeit, treibend",
+        "desc": "Evey ist immun gegen <u>Mengenkontrolle-Debuffs</u> und hat eine höhere Chance, angegriffen zu werden. Während sich Evey auf dem Kampffeld befindet, wird der verursachte SCH von Evernight und Evey um <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> erhöht.",
+        "simpleDesc": "Der Memogeist Evey ist immun gegen <u>Mengenkontrolle-Debuffs</u> und hat eine höhere Chance, angegriffen zu werden. Während er sich auf dem Kampffeld befindet, wird der verursachte SCH von ihm und Evernight erhöht.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Unterstützung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000011,
+            "name": "Mengenkontrolle-Debuff",
+            "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.35,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.4,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.45,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.5,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.55,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.6,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.65,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.7,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141305,
+        "name": "Unzertrennliche Schatten, huschend",
+        "desc": "Wenn diese Einheit beschworen wird, führt sie sofort eine Aktion aus.",
+        "simpleDesc": "Wenn diese Einheit beschworen wird, führt sie sofort eine Aktion aus.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Verstärkung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": []
+          },
+          {
+            "level": 2,
+            "params": []
+          },
+          {
+            "level": 3,
+            "params": []
+          },
+          {
+            "level": 4,
+            "params": []
+          },
+          {
+            "level": 5,
+            "params": []
+          },
+          {
+            "level": 6,
+            "params": []
+          },
+          {
+            "level": 7,
+            "params": []
+          },
+          {
+            "level": 8,
+            "params": []
+          },
+          {
+            "level": 9,
+            "params": []
+          },
+          {
+            "level": 10,
+            "params": []
+          }
+        ]
+      },
+      {
+        "id": 1141306,
+        "name": "Ungewisses Wiedersehen, mit dir",
+        "desc": "Erhöht beim Verschwinden die GES von Evernight um <nobr>#1[i]%</nobr>. Wenn das Verschwinden durch den Einsatz von „Traumartiger Tau, vergehend“ ausgelöst wird, wird die GES von Evernight für jeden verbrauchten Punkt „Memoria“ dieses Angriffs zusätzlich um <nobr>#2[i]%</nobr> erhöht, bis zu <nobr>#3[i]</nobr> Pkt. Memoria. Die GES-Erhöhung ist nicht stapelbar und wird zu Beginn der nächsten Runde von Evernight entfernt.",
+        "simpleDesc": "Beim Verschwinden wird Evernights GES erhöht.",
+        "type": {
+          "name": "Talent von Memogeist"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "Verstärkung"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              0.01,
+              40
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1141307,
+        "name": "Traumartiger Tau, vergehend",
+        "desc": "Wenn „Memoria“ von Evernight mindestens <nobr>#3[i]</nobr> beträgt und sie nicht von einem Kontrolleffekt betroffen ist, wird für jeden Pkt. Memoria dem Hauptziel Eis-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> der max. LP von Evey und allen anderen Gegnern Eis-SCH in Höhe von <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> der max. LP von Evey zugefügt. Nach dem Einsatz werden LP und Memoria komplett verbraucht und Evey verschwindet.",
+        "simpleDesc": "Fügt dem Hauptziel <span style=\"color:#f29e38ff>basierend auf der Anzahl von „Memoria“</span> massiven Eis-SCH und anderen Gegnern Eis-SCH zu. Nach dem Einsatz <span style=\"color:#f29e38ff>werden LP und Memoria komplett verbraucht und Evey verschwindet</span>.",
+        "type": {
+          "id": "Servant",
+          "name": "Technik von Memogeist"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "Flächenangriff"
+        },
+        "spBase": 10,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          90,
+          60,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.06,
+              0.03,
+              16
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.072,
+              0.036,
+              16
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.084,
+              0.042,
+              16
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.096,
+              0.048,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.108,
+              0.054,
+              16
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.12,
+              0.06,
+              16
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.132,
+              0.066,
+              16
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.144,
+              0.072,
+              16
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.156,
+              0.078,
+              16
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.168,
+              0.084,
+              16
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 141301,
       "id": "sleep_tight_the_night_dreams_long",
       "name": "Schlafe, in der langen Nacht kommen Träume",
-      "desc": "Wenn sich Evernight auf dem Kampffeld befindet und 4 oder mehr/3/2/1 Gegner anwesend sind, verursachen verbündete Memogeister jeweils <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> ihres ursprünglichen SCH."
+      "desc": "Wenn sich Evernight auf dem Kampffeld befindet und 4 oder mehr/3/2/1 Gegner anwesend sind, verursachen verbündete Memogeister jeweils <nobr>120%</nobr>/<nobr>125%</nobr>/<nobr>130%</nobr>/<nobr>150%</nobr> ihres ursprünglichen SCH.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141302,
       "id": "listen_up_the_slumber_speaks_soft",
       "name": "Lausche, jemand murmelt im Schlaf",
-      "desc": "Erhöht den KRIT-SCH von Evernight und ihrem Memogeist Evey um <nobr>40%</nobr>. Jedes Mal, wenn Evernight „Memoria“ erhält, wird die erhaltene Menge um <nobr>2</nobr> erhöht. Erhält beim Einsatz des Ultimates zusätzlich <nobr>2</nobr> Pkt. Aufladung für „Dunkles Rätsel“."
+      "desc": "Erhöht den KRIT-SCH von Evernight und ihrem Memogeist Evey um <nobr>40%</nobr>. Jedes Mal, wenn Evernight „Memoria“ erhält, wird die erhaltene Menge um <nobr>2</nobr> erhöht. Erhält beim Einsatz des Ultimates zusätzlich <nobr>2</nobr> Pkt. Aufladung für „Dunkles Rätsel“.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141303,
       "id": "fear_not_the_nightmare_lies_past",
       "name": "Fürchte dich nicht, der Albtraum ist vorbei",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>. Talentstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141304,
       "id": "wake_up_the_tomorrow_is_yours",
       "name": "Erwache, dann beginnt dein Morgen",
-      "desc": "Wenn sich Evernight auf dem Kampffeld befindet, wird die Schwächebruch-Effizienz für verbündete Memogeister um <nobr>25%</nobr> und für den Memogeist Evey zusätzlich um <nobr>25%</nobr> erhöht."
+      "desc": "Wenn sich Evernight auf dem Kampffeld befindet, wird die Schwächebruch-Effizienz für verbündete Memogeister um <nobr>25%</nobr> und für den Memogeist Evey zusätzlich um <nobr>25%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141305,
       "id": "let_go_the_me_in_memories",
       "name": "Vergessen, die Erinnerung an das Ich",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>. Technikstufe des Memogeists +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141306,
       "id": "like_this_always",
       "name": "Immer so weiter",
-      "desc": "Wenn Evernight sich auf dem Kampffeld befindet, wird die <u>WDS-DUR</u> aller Typen für alle Verbündeten um <nobr>20%</nobr> erhöht. Nachdem der Memogeist Evey „Traumartiger Tau, vergehend“ eingesetzt hat, erhält Evernight <nobr>30%</nobr> des bei diesem Angriff verbrauchten „Memoria“."
+      "desc": "Wenn Evernight sich auf dem Kampffeld befindet, wird die <u>WDS-DUR</u> aller Typen für alle Verbündeten um <nobr>20%</nobr> erhöht. Nachdem der Memogeist Evey „Traumartiger Tau, vergehend“ eingesetzt hat, erhält Evernight <nobr>30%</nobr> des bei diesem Angriff verbrauchten „Memoria“.",
+      "unlockCost": [
+        {
+          "ItemID": 11413,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "WDS-DUR",
+          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

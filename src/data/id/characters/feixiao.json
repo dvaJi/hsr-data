@@ -2,6 +2,7 @@
   "_id": 1220,
   "id": "feixiao",
   "name": "Feixiao",
+  "description": "Merlin's Claw dari Xianzhou \"Yaoqing\" dan salah satu dari Tujuh Jenderal Arbiter. Dia adalah individu yang unik dan berjiwa bebas, serta lugas dan menawan.\nDia mahir dalam berbagai seni bela diri dan telah melatih tubuhnya hingga tingkat tertinggi. Dia pun dijuluki sebagai \"Jenderal Hebat\", dan sangat dicintai oleh para prajurit dan warga Xianzhou.\nNamun, dia menderita kondisi \"Moon Rage\". Jika dia ingin memburu semua Abomination dalam masa hidupnya yang terbatas, maka satu-satunya musuh Feixiao adalah dirinya sendiri.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Mengakibatkan Wind DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Mengakibatkan Wind DMG pada 1 musuh, lalu melancarkan 1 kali Serangan Lanjutan dari Talent.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -713,6 +741,24 @@
       "simpleDesc": "Selama Ultimate berlangsung, dapat mengurangi Toughness musuh tanpa memedulikan tipe Weakness-nya. Jika target tidak berstatus Weakness Break, maka Weakness Break Efficiency Feixiao akan meningkat.\nMelancarkan #3[i] kali \"Boltsunder Blitz\" atau \"Waraxe Skyward\" pada 1 musuh, lalu terakhir mengakibatkan Wind DMG.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Status Weakness Break",
+          "desc": "Saat Toughness target musuh berkurang menjadi 0, akan memasuki status Weakness Break, yang dapat menunda aksi musuh.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1048,10 +1094,28 @@
       "_id": 122004,
       "id": "thunderhunt",
       "name": "Thunderhunt",
-      "desc": "Ultimate dapat diaktifkan saat \"Flying Aureus\" mencapai #3[i] poin, maksimal dapat mengakumulasi hingga #4[i] poin. Setiap kali rekan tim melancarkan #2[i] kali serangan, Feixiao akan memperoleh 1 poin \"Flying Aureus\" (serangan dari Ultimate Feixiao tidak dihitung).\nSaat setelah rekan tim Feixiao melancarkan serangan pada target musuh, Feixiao akan segera melancarkan Serangan Lanjutan pada target utama, yang mengakibatkan Wind DMG sebesar #1[i]% ATK Feixiao. Jika tidak ada target utama yang dapat diserang, maka akan menyerang 1 musuh secara acak. Efek ini maksimal dapat terpicu 1 kali di setiap giliran, dan jumlah pemicuan akan direset saat giliran Feixiao dimulai. Saat melancarkan serangan ini, DMG yang diakibatkan diri sendiri akan meningkat #5[i]%, berlangsung selama #6[i] giliran.",
-      "simpleDesc": "Ultimate dapat diaktifkan saat \"Flying Aureus\" mencapai #3[i] poin, maksimal dapat mengakumulasi hingga #4[i] poin. Setiap kali rekan tim melancarkan #2[i] kali serangan, Feixiao akan memperoleh \"Flying Aureus\".\nSetelah rekan tim Feixiao melancarkan serangan, Feixiao akan melancarkan Serangan Lanjutan pada target utama, mengakibatkan Wind DMG. Efek ini maksimal dapat terpicu 1 kali di setiap giliran. Saat melancarkan serangan ini, DMG yang diakibatkan diri sendiri akan meningkat.",
+      "desc": "Ultimate dapat diaktifkan saat \"Flying Aureus\" mencapai #3[i] poin, maksimal mengakumulasi #4[i] poin. Feixiao akan memperoleh 1 poin \"Flying Aureus\" setiap kali rekan tim melancarkan #2[i] kali serangan. Serangan Ultimate Feixiao tidak akan dihitung.\nSaat setelah rekan Feixiao melancarkan serangan pada target musuh, Feixiao akan segera melancarkan Serangan Lanjutan yang mengakibatkan Wind DMG sebesar #1[i]% ATK Feixiao pada target utama. Jika tidak ada target utama yang dapat diserang, maka akan menyerang 1 musuh acak. Efek ini maksimal dapat dipicu 1 kali di setiap giliran, dan jumlah kesempatan pemicuan akan direset saat giliran Feixiao dimulai. Saat melancarkan serangan ini, akan meningkatkan #5[i]% DMG yang diakibatkan diri sendiri selama #6[i] giliran.",
+      "simpleDesc": "Ultimate dapat diaktifkan saat \"Flying Aureus\" mencapai #3[i] poin, maksimal mengakumulasi #4[i] poin. Setiap rekan tim melancarkan #2[i] kali serangan, Feixiao akan memperoleh \"Flying Aureus\".\nSetelah rekan Feixiao melancarkan serangan, Feixiao akan melancarkan Serangan Lanjutan yang mengakibatkan Wind DMG pada target utama. Efek ini maksimal dapat dipicu 1 kali di setiap giliran. Saat melancarkan serangan ini, akan meningkatkan DMG yang diakibatkan diri sendiri.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        15,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1485,15 @@
       "simpleDesc": "Memasuki status \"Onrush\", terus-menerus menarik musuh dan meningkatkan Movement SPD diri sendiri, serta akan memperoleh \"Flying Aureus\" setelah memasuki pertempuran.\nSaat berstatus \"Onrush\", dapat secara aktif menyerang seluruh musuh yang tertarik, serta mengakibatkan Wind DMG yang dijamin akan CRIT Hit pada seluruh musuh saat setiap gelombang pertempuran dimulai. Semakin banyak musuh yang tertarik, maka DMG Multiplier akan semakin tinggi.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1442,37 +1515,114 @@
       "_id": 122001,
       "id": "skyward_i_quell",
       "name": "Skyward I Quell",
-      "desc": "Setelah melancarkan \"Boltsunder Blitz\" atau \"Waraxe Skyward\", Ultimate DMG yang diakibatkan Feixiao akan meningkat ekstra, peningkatannya adalah sebesar <nobr>10%</nobr> dari DMG aslinya. Efek ini maksimal dapat ditumpuk hingga <nobr>5</nobr> lapis, dan berlangsung hingga aksi Ultimate berakhir."
+      "desc": "Setelah melancarkan \"Boltsunder Blitz\" atau \"Waraxe Skyward\", Ultimate DMG yang diakibatkan Feixiao akan meningkat ekstra, peningkatannya adalah sebesar <nobr>10%</nobr> dari DMG aslinya. Efek ini maksimal dapat ditumpuk hingga <nobr>5</nobr> lapis, dan berlangsung hingga aksi Ultimate berakhir.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122002,
       "id": "moonward_i_wish",
       "name": "Moonward I Wish",
-      "desc": "Pada efek Talent, setiap kali rekan tim melancarkan 1 kali <u>Serangan Lanjutan</u>, akan membuat Feixiao memperoleh 1 poin \"Flying Aureus\". Efek ini maksimal dapat dipicu <nobr>6</nobr> kali setiap giliran."
+      "desc": "Pada efek Talent, setiap kali rekan tim melancarkan 1 kali <u>Serangan Lanjutan</u>, akan membuat Feixiao memperoleh 1 poin \"Flying Aureus\". Efek ini maksimal dapat dipicu <nobr>6</nobr> kali setiap giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122003,
       "id": "starward_i_bode",
       "name": "Starward I Bode",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122004,
       "id": "stormward_i_hear",
       "name": "Stormward I Hear",
-      "desc": "Pengurangan Toughness dari <u>Serangan Lanjutan</u> Talent meningkat <nobr>100%</nobr>, dan saat melancarkannya, SPD diri sendiri akan meningkat <nobr>8%</nobr> selama <nobr>2</nobr> giliran."
+      "desc": "Pengurangan Toughness dari <u>Serangan Lanjutan</u> Talent meningkat <nobr>100%</nobr>, dan saat melancarkannya, SPD diri sendiri akan meningkat <nobr>8%</nobr> selama <nobr>2</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122005,
       "id": "heavenward_i_leap",
       "name": "Heavenward I Leap",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122006,
       "id": "homeward_i_near",
       "name": "Homeward I Near",
-      "desc": "<u>RES PEN </u>Seluruh Tipe dari Ultimate DMG yang diakibatkan Feixiao meningkat <nobr>20%</nobr>. DMG <u>Serangan Lanjutan</u> yang diakibatkan Talent akan dianggap sebagai Ultimate DMG, dan DMG Multiplier-nya meningkat <nobr>140%</nobr>."
+      "desc": "<u>RES PEN </u>Seluruh Tipe dari Ultimate DMG yang diakibatkan Feixiao meningkat <nobr>20%</nobr>. DMG <u>Serangan Lanjutan</u> yang diakibatkan Talent akan dianggap sebagai Ultimate DMG, dan DMG Multiplier-nya meningkat <nobr>140%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11220,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "RES PEN",
+          "desc": "Saat mengakibatkan DMG, akan mengabaikan sebagian RES target musuh yang sesuai dengan tipe DMG serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Serangan Lanjutan",
+          "desc": "Melancarkan 1 kali serangan tambahan pada penyerang. Efek ini akan terpicu secara otomatis saat memenuhi syarat.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

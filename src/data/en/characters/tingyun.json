@@ -2,6 +2,7 @@
   "_id": 1202,
   "id": "tingyun",
   "name": "Tingyun",
+  "description": "Amicassador of the Sky-Faring Commission of the Xianzhou Luofu.\nShe travels with business delegates, forging trade relationships and alliances with many worlds.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -243,10 +244,22 @@
       "_id": 120201,
       "id": "dislodged",
       "name": "Dislodged",
-      "desc": "Tingyun deals Lightning DMG equal to #1[i]% of her ATK to a single enemy.",
-      "simpleDesc": "Deals minor Lightning DMG to a single enemy.",
+      "desc": "Tingyun deals Lightning DMG equal to #1[i]% of her ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Lightning DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Increases the ATK of a single ally and grants them Benediction. Ally with Benediction additionally deals minor Lightning Additional DMG when attacking.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Regenerates a target ally's Energy and increases their DMG dealt.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "When an enemy is attacked by Tingyun, the ally with Benediction immediately deals minor Lightning Additional DMG to the same enemy.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "After using this Technique, this character immediately regenerates Energy for themselves.",
       "type": "Technique",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1374,37 +1447,79 @@
       "_id": 120201,
       "id": "windfall_of_lucky_springs",
       "name": "Windfall of Lucky Springs",
-      "desc": "After using their Ultimate, the ally with Benediction gains a <nobr>20%</nobr> increase in SPD for 1 turn."
+      "desc": "After using their Ultimate, the ally with Benediction gains a <nobr>20%</nobr> increase in SPD for 1 turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120202,
       "id": "gainfully_gives_givingly_gains",
       "name": "Gainfully Gives, Givingly Gains",
-      "desc": "The ally with Benediction regenerates <nobr>5</nobr> Energy after defeating an enemy. This effect can only be triggered once per turn."
+      "desc": "The ally with Benediction regenerates <nobr>5</nobr> Energy after defeating an enemy. This effect can only be triggered once per turn.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120203,
       "id": "halcyon_bequest",
       "name": "Halcyon Bequest",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120204,
       "id": "jovial_versatility",
       "name": "Jovial Versatility",
-      "desc": "The DMG multiplier provided by Benediction increases by <nobr>20%</nobr>."
+      "desc": "The DMG multiplier provided by Benediction increases by <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120205,
       "id": "sauntering_coquette",
       "name": "Sauntering Coquette",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120206,
       "id": "peace_brings_wealth_to_all",
       "name": "Peace Brings Wealth to All",
-      "desc": "Ultimate regenerates <nobr>10</nobr> more Energy for the target ally."
+      "desc": "Ultimate regenerates <nobr>10</nobr> more Energy for the target ally.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

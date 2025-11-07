@@ -2,6 +2,7 @@
   "_id": 1215,
   "id": "hanya",
   "name": "Hanya",
+  "description": "L'une des juges de la Commission des dix seigneurs du Luofu de Xianzhou.\nNominée par les Dix seigneurs et porteuse de l'autorité du Pinceau divin, elle lit le flux constant des vices et péchés humains, puis prononce les châtiments et punitions karmiques.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -243,10 +244,22 @@
       "_id": 121501,
       "id": "oracle_brush",
       "name": "Pinceau divin",
-      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Hanya à un ennemi unique.",
+      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Hanya à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Inflige des DGT physiques à un ennemi unique et lui applique Fardeau. Les alliés récupèrent 1 point de compétence chaque fois qu'ils utilisent deux ATQ normales, compétences ou ultimes sur un ennemi affecté par Fardeau.",
       "type": "Compétence",
       "tag": "Cible unique",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 17
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "Augmente la VIT et l'ATQ d'un allié.",
       "type": "Ultime",
       "tag": "Renforcement",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1077,15 @@
       "simpleDesc": "Lorsqu'une cible alliée utilise une ATQ normale, une compétence ou un ultime sur une cible ennemie affectée par Fardeau, les DGT infligés augmentent.",
       "type": "Talent",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1342,6 +1388,15 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Applique le même effet Fardeau que celui de la compétence à un ennemi aléatoire après être entré en combat.",
       "simpleDesc": "Engage le combat contre les ennemis. Applique le même effet Fardeau que celui de la compétence à un ennemi aléatoire après être entré en combat.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1356,37 +1411,88 @@
       "_id": 121501,
       "id": "one_heart",
       "name": "Une seule pensée",
-      "desc": "Lorsqu'une cible alliée qui bénéficie de l'effet de l'ultime de Hanya élimine un ennemi, l'action de Hanya est <u>avancée</u> de <nobr>15%</nobr>. Cet effet ne peut être déclenché que <nobr>1</nobr> fois par tour."
+      "desc": "Lorsqu'une cible alliée qui bénéficie de l'effet de l'ultime de Hanya élimine un ennemi, l'action de Hanya est <u>avancée</u> de <nobr>15%</nobr>. Cet effet ne peut être déclenché que <nobr>1</nobr> fois par tour.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121502,
       "id": "two_views",
       "name": "Deux vérités",
-      "desc": "La VIT du personnage augmente de <nobr>20%</nobr> pendant <nobr>1</nobr> tour après avoir utilisé sa compétence."
+      "desc": "La VIT du personnage augmente de <nobr>20%</nobr> pendant <nobr>1</nobr> tour après avoir utilisé sa compétence.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121503,
       "id": "three_temptations",
       "name": "Trois poussières",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121504,
       "id": "four_truths",
       "name": "Quatre vérités",
-      "desc": "L'ultime dure <nobr>1</nobr> tour supplémentaire."
+      "desc": "L'ultime dure <nobr>1</nobr> tour supplémentaire.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121505,
       "id": "five_skandhas",
       "name": "Cinq skandhas",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121506,
       "id": "six_reverences",
       "name": "Six destinées",
-      "desc": "Améliore l'effet d'augmentation de DGT du talent de <nobr>10%</nobr> supplémentaires."
+      "desc": "Améliore l'effet d'augmentation de DGT du talent de <nobr>10%</nobr> supplémentaires.",
+      "unlockCost": [
+        {
+          "ItemID": 11215,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

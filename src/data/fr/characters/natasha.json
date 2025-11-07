@@ -2,6 +2,7 @@
   "_id": 1105,
   "id": "natasha",
   "name": "Natasha",
+  "description": "Une femme médecin du Souterrain, toujours prête à aider les enfants.\nSous des airs de gentillesse et de douceur, elle possède un côté dangereux qu'elle garde caché.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -243,10 +244,22 @@
       "_id": 110501,
       "id": "behind_the_kindness",
       "name": "Derrière la bonté",
-      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Natasha à un ennemi unique.",
+      "desc": "Inflige des DGT physiques équivalents à #1[i]% de l'ATQ de Natasha à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT physiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Restaure des PV à un allié unique et lui prodigue des soins continus.",
       "type": "Compétence",
       "tag": "Restauration",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -767,6 +789,15 @@
       "simpleDesc": "Restaure des PV à tous les alliés.",
       "type": "Ultime",
       "tag": "Restauration",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1101,15 @@
       "simpleDesc": "Augmente les soins prodigués aux alliés dont le pourcentage de PV est bas. Cet effet affecte également les soins continus.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1372,6 +1412,24 @@
       "desc": "Engage immédiatement le combat contre les ennemis. Inflige des DGT physiques équivalents à #4[i]% de l'ATQ de Natasha à un ennemi aléatoire après être entré en combat, avec #1[i]% de chances de base d'affaiblir tous les ennemis.\nLes ennemis affaiblis infligent #2[i]% de DGT en moins aux alliés pendant #3[i] tour.",
       "simpleDesc": "Engage le combat contre les ennemis. Inflige des DGT physiques mineurs à un ennemi unique aléatoire, avec de fortes chances d'appliquer Affaiblissement à toutes les cibles ennemies après être entré en combat.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chances de base",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,37 +1449,79 @@
       "_id": 110501,
       "id": "pharmacology_expertise",
       "name": "Expertise en pharmacologie",
-      "desc": "Après avoir subi une attaque, si le pourcentage de PV actuel du personnage est inférieur ou égal à <nobr>30%</nobr>, il se soigne 1 fois pour restaurer un montant de PV équivalent à <nobr>15%</nobr> de ses PV max + <nobr>400</nobr>. Cet effet ne peut être déclenché qu'1 fois par combat."
+      "desc": "Après avoir subi une attaque, si le pourcentage de PV actuel du personnage est inférieur ou égal à <nobr>30%</nobr>, il se soigne 1 fois pour restaurer un montant de PV équivalent à <nobr>15%</nobr> de ses PV max + <nobr>400</nobr>. Cet effet ne peut être déclenché qu'1 fois par combat.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110502,
       "id": "clinical_research",
       "name": "Recherche clinique",
-      "desc": "Lorsque Natasha utilise son ultime, accorde des soins continus aux alliés dont le pourcentage de PV est inférieur ou égal à <nobr>30%</nobr> pendant <nobr>1</nobr> tour. Au début de leur tour, ils récupèrent un montant de PV équivalent à <nobr>6%</nobr> des PV max de Natasha + <nobr>160</nobr>."
+      "desc": "Lorsque Natasha utilise son ultime, accorde des soins continus aux alliés dont le pourcentage de PV est inférieur ou égal à <nobr>30%</nobr> pendant <nobr>1</nobr> tour. Au début de leur tour, ils récupèrent un montant de PV équivalent à <nobr>6%</nobr> des PV max de Natasha + <nobr>160</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110503,
       "id": "the_right_cure",
       "name": "Le bon remède",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110504,
       "id": "miracle_cure",
       "name": "Remède miracle",
-      "desc": "Régénère <nobr>5</nobr> points d'énergie supplémentaires après avoir été attaqué."
+      "desc": "Régénère <nobr>5</nobr> points d'énergie supplémentaires après avoir été attaqué.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110505,
       "id": "preventive_treatment",
       "name": "Traitement préventif",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110506,
       "id": "doctors_grace",
       "name": "Grâce du docteur",
-      "desc": "L'ATQ normale de Natasha inflige des DGT physiques supplémentaires équivalents à <nobr>40%</nobr> de ses PV max."
+      "desc": "L'ATQ normale de Natasha inflige des DGT physiques supplémentaires équivalents à <nobr>40%</nobr> de ses PV max.",
+      "unlockCost": [
+        {
+          "ItemID": 11105,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

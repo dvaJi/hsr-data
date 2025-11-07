@@ -2,6 +2,7 @@
   "_id": 1414,
   "id": "dan_heng_permansor_terrae",
   "name": "단항•등황",
+  "description": "지오리오스의 가슴, 복룡의 몸은 부서진 대지를 지탱하며 천년의 고통을 견딘다.\n무명객 단항, 「대지」의 불씨를 수호하는 황금의 후예여, 기울어가는 팔황을 바로잡고, 지상의 생령들을 머나먼 세계로 인도하라.\n——모든 강물이 바다로 흘러 들어가고 뭇산이 함께 화답하니, 불멸의 길이 만 리에 걸쳐 이어지리라",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "지정된 단일 적에게 소량의 물리 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "지정된 아군 캐릭터를 [전우]로 만들고 모든 아군에게 실드량이 중첩 가능한 실드를 제공한다",
       "type": "전투 스킬",
       "tag": "방어",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,32 @@
       "simpleDesc": "모든 적에게 대량의 물리 속성 피해를 가하고, 모든 아군에게 실드량이 중첩 가능한 실드를 제공한다. 또한 [용령]을 강화하고, [용령] 행동 시 추가 공격을 발동하며, 모든 적에게 소량의 물리 속성 피해와 [전우]의 상응하는 속성 피해를 소량 가한다. 강화는 [용령]의 행동 #3[i]회 동안 지속된다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1202,32 @@
       "simpleDesc": "아군 캐릭터가 [전우]가 될 시 단항•등황이 대상에게 [용령]을 소환한다.\n[용령] 행동 시 모든 아군의 디버프 효과를 1개 해제하고 실드량이 중첩 가능한 실드를 제공한다",
       "type": "특성",
       "tag": "방어",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "디버프 효과",
+          "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "전투 불능 상태",
+          "desc": "아군의 현재 HP가 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 있으면 목표는 전투를 계속할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1597,15 @@
       "simpleDesc": "일정 구역 내의 적을 현기증 상태에 빠트리고, 현재 행동 캐릭터가 [전우]를 획득하며, 다음 전투 시작 시 [전우]를 보유한 캐릭터에게 자동으로 전투 스킬을 발동한다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1622,114 @@
       "_id": 141401,
       "id": "shed_scales_of_old",
       "name": "옛 비늘을 벗은 황룡",
-      "desc": "단항•등황이 필살기 발동 시 전투 스킬 포인트를 <nobr>1</nobr>pt 회복하고, [전우]의 모든 속성 <u>저항 관통</u>을 <nobr>18%</nobr> 증가시킨다, 지속 시간: <nobr>3</nobr>턴"
+      "desc": "단항•등황이 필살기 발동 시 전투 스킬 포인트를 <nobr>1</nobr>pt 회복하고, [전우]의 모든 속성 <u>저항 관통</u>을 <nobr>18%</nobr> 증가시킨다, 지속 시간: <nobr>3</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141402,
       "id": "watch_trails_to_blaze",
       "name": "개척을 지키는 순수함",
-      "desc": "필살기의 강화된 용령 행동 효과가 추가로 <nobr>2</nobr>회 증가하고, 단항•등황이 필살기 발동 후 [용령]의 <u>행동 게이지가 <nobr>100%</nobr> 증가</u>한다. 강화된 용령 행동 시 [전우]가 가하는 <u>추가 피해</u>는 기존 피해의 <nobr>200%</nobr>가 되며, 이번에 제공하는 실드량은 기존 실드량의 <nobr>200%</nobr>가 된다"
+      "desc": "필살기의 강화된 용령 행동 효과가 추가로 <nobr>2</nobr>회 증가하고, 단항•등황이 필살기 발동 후 [용령]의 <u>행동 게이지가 <nobr>100%</nobr> 증가</u>한다. 강화된 용령 행동 시 [전우]가 가하는 <u>추가 피해</u>는 기존 피해의 <nobr>200%</nobr>가 되며, 이번에 제공하는 실드량은 기존 실드량의 <nobr>200%</nobr>가 된다",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141403,
       "id": "bear_weight_of_worlds",
       "name": "해와 달, 산과 강의 부탁",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141404,
       "id": "by_oath_this_vessel_is_i",
       "name": "금석의 맹세, 이 몸을 배 삼아",
-      "desc": "[전우]가 받는 피해가 <nobr>20%</nobr> 감소한다"
+      "desc": "[전우]가 받는 피해가 <nobr>20%</nobr> 감소한다",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141405,
       "id": "the_path_of_permanence_sweeps_far",
       "name": "끝없이 이어지는 불멸의 길",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141406,
       "id": "one_dream_to_enfold_all_wilds",
       "name": "초목과 티끌 모두 꿈에 들고",
-      "desc": "필드에 [전우]가 존재할 시 모든 적이 받는 피해가 <nobr>20%</nobr> 증가하고, [전우]가 피해를 가할 시 적의 방어력을 <nobr>12%</nobr> 무시한다. 단항•등황이 필살기 발동 시 [전우]는 모든 적에게 [전우] 공격력의 <nobr>330%</nobr>만큼 상응하는 속성의 <u>추가 피해</u>를 가한다"
+      "desc": "필드에 [전우]가 존재할 시 모든 적이 받는 피해가 <nobr>20%</nobr> 증가하고, [전우]가 피해를 가할 시 적의 방어력을 <nobr>12%</nobr> 무시한다. 단항•등황이 필살기 발동 시 [전우]는 모든 적에게 [전우] 공격력의 <nobr>330%</nobr>만큼 상응하는 속성의 <u>추가 피해</u>를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

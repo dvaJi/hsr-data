@@ -2,6 +2,7 @@
   "_id": 1013,
   "id": "herta",
   "name": "ヘルタ",
+  "description": "「天才クラブ」#83、宇宙ステーションの真の主。\n人に勝る知恵を持つが、まったく共感力がない大科学者。",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の氷属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "敵全体に少量の氷属性ダメージを与える、残りHP割合が高い敵に対する与ダメージがアップする。",
       "type": "戦闘スキル",
       "tag": "全体攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "敵全体に氷属性ダメージを与える。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,24 @@
       "simpleDesc": "任意の味方の攻撃によって敵の残りHPが#1[i]%以下になった時、ヘルタは即座に追加攻撃を行い、敵全体に少量の氷属性ダメージを与える。",
       "type": "天賦",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻撃",
+          "desc": "条件を満たした時に自動で発動し、さらにターゲットに攻撃を1回行う。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1383,15 @@
       "simpleDesc": "秘技を使用、次の戦闘開始時に自身の攻撃力をアップする。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1409,88 @@
       "_id": 101301,
       "id": "kick_you_when_youre_down",
       "name": "{RUBY_B#よわ}弱{RUBY_E#}みは{RUBY_B#つ}付{RUBY_E#}け{RUBY_B#こ}込{RUBY_E#}み",
-      "desc": "通常攻撃を行った時、指定した敵単体の残りHPが<nobr>50%</nobr>以下の場合、さらにヘルタの攻撃力<nobr>40%</nobr>分の氷属性<u>付加ダメージ</u>を与える。"
+      "desc": "通常攻撃を行った時、指定した敵単体の残りHPが<nobr>50%</nobr>以下の場合、さらにヘルタの攻撃力<nobr>40%</nobr>分の氷属性<u>付加ダメージ</u>を与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101302,
       "id": "keep_the_ball_rolling",
       "name": "{RUBY_B#か}勝{RUBY_E#}てば{RUBY_B#お}追{RUBY_E#}い{RUBY_B#う}打{RUBY_E#}ち",
-      "desc": "天賦が1回発動するごとに、自身の会心率+<nobr>3%</nobr>、この効果は最大で<nobr>5</nobr>回累積できる。"
+      "desc": "天賦が1回発動するごとに、自身の会心率+<nobr>3%</nobr>、この効果は最大で<nobr>5</nobr>回累積できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101303,
       "id": "thats_the_kind_of_girl_i_am",
       "name": "{RUBY_B#わたし}私{RUBY_E#}はこういう{RUBY_B#おんな}女{RUBY_E#}なの",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101304,
       "id": "hit_where_it_hurts",
       "name": "{RUBY_B#めんつ}面子{RUBY_E#}は{RUBY_B#てっていてき}徹底的{RUBY_E#}に{RUBY_B#つぶ}潰{RUBY_E#}す",
-      "desc": "天賦発動時の与ダメージ+<nobr>10%</nobr>。"
+      "desc": "天賦発動時の与ダメージ+<nobr>10%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101305,
       "id": "cuss_big_or_cuss_nothing",
       "name": "{RUBY_B#けってん}欠点{RUBY_E#}{RUBY_B#つか}掴{RUBY_E#}んで{RUBY_B#ののし}罵{RUBY_E#}り{RUBY_B#たお}倒{RUBY_E#}す",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101306,
       "id": "no_one_can_betray_me",
       "name": "{RUBY_B#だれ}誰{RUBY_E#}も{RUBY_B#わたし}私{RUBY_E#}を{RUBY_B#うらぎ}裏切{RUBY_E#}れない",
-      "desc": "必殺技を発動した後、攻撃力+<nobr>25%</nobr>、<nobr>1</nobr>ターン継続。"
+      "desc": "必殺技を発動した後、攻撃力+<nobr>25%</nobr>、<nobr>1</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11013,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

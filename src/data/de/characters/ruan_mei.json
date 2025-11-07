@@ -2,6 +2,7 @@
   "_id": 1303,
   "id": "ruan_mei",
   "name": "Ruan Mei",
+  "description": "Ein Mitglied der Geniusgesellschaft und Expertin im Bereich Lebenswissenschaft. Sie hat zusammen mit Herta und den anderen die Universum-Simulation entwickelt.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem Gegner geringen Eis-SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Nachdem Ruan Mei ihre Fertigkeit einsetzt, erhält sie „Oberton“, was SCH und Schwächebruch-Effizienz aller Verbündeten erhöht.",
       "type": "Fertigkeit",
       "tag": "Unterstützung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,43 @@
       "simpleDesc": "Erhöht die WDS-DUR aller Typen der Verbündeten und fügt nach einem Angriff auf ein Ziel „Überreife“ zu.",
       "type": "Ultimate",
       "tag": "Unterstützung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Schwächebruch",
+          "desc": "Wenn der Widerstand gegnerischer Ziele auf 0 sinkt, treten sie in den Zustand Schwächebruch ein, was ihre Aktionen verzögert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Aktion verzögert",
+          "desc": "Verlängert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Bruch-SCH",
+          "desc": "Bruch-SCH wird mit höherem Brucheffekt, höherem max. Widerstand des Ziels und höherer Figurenstufe erhöht.\nBruch-SCH kann keine Kritischen Treffer zufügen und wird nicht von Effekten mit SCH-Erhöhung beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1159,24 @@
       "simpleDesc": "Erhöht die GES aller Verbündeten (außer der Figur selbst). Wird bei einem Gegner Schwächebruch ausgelöst, erleidet er zusätzlich Eis-Bruch-SCH.",
       "type": "Talent",
       "tag": "Unterstützung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Bruch-SCH",
+          "desc": "Bruch-SCH wird mit höherem Brucheffekt, höherem max. Widerstand des Ziels und höherer Figurenstufe erhöht.\nBruch-SCH kann keine Kritischen Treffer zufügen und wird nicht von Effekten mit SCH-Erhöhung beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1486,15 @@
       "simpleDesc": "Beim nächsten Kampfeintritt wird die Fertigkeit #1[i]-mal automatisch ausgelöst. Wenn Verbündete Gegner in der Universum-Simulation oder in Divergentes Universum angreifen, nachdem die Technik angewendet wurde, wird dies als Angriff auf die Schwäche der Gegner betrachtet und unabhängig vom Schwächetyp ihr Widerstand reduziert. Mit jedem Segen im Besitz wird die WDS-Reduzierung erhöht und beim Verursachen von Schwächebruch zusätzlich Bruch-SCH zugefügt.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1425,37 +1514,97 @@
       "_id": 130301,
       "id": "neuronic_embroidery",
       "name": "Neuralstickerei",
-      "desc": "Während das Feld des Ultimates aktiv ist, ignoriert der von Verbündeten verursachte SCH <nobr>20%</nobr> der VTD des Zieles."
+      "desc": "Während das Feld des Ultimates aktiv ist, ignoriert der von Verbündeten verursachte SCH <nobr>20%</nobr> der VTD des Zieles.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130302,
       "id": "reedside_promenade",
       "name": "Schilfspaziergang",
-      "desc": "Wenn Ruan Mei am Kampf teilnimmt, wird der ANG von Verbündeten bei Angriffen auf Gegner mit <u>Schwächebruch</u> um <nobr>40%</nobr> erhöht."
+      "desc": "Wenn Ruan Mei am Kampf teilnimmt, wird der ANG von Verbündeten bei Angriffen auf Gegner mit <u>Schwächebruch</u> um <nobr>40%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Schwächebruch",
+          "desc": "Wenn der Widerstand gegnerischer Ziele auf 0 sinkt, treten sie in den Zustand Schwächebruch ein, was ihre Aktionen verzögert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130303,
       "id": "viridescent_pirouette",
       "name": "Schillernd tanzendes Grün",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130304,
       "id": "chatoyant_clat",
       "name": "Göttliche Suche im bronzenen Spiegel",
-      "desc": "Wird die Schwäche eines Gegners gebrochen, steigt Ruan Meis Brucheffekt für <nobr>3</nobr> Rd. um <nobr>100%</nobr>."
+      "desc": "Wird die Schwäche eines Gegners gebrochen, steigt Ruan Meis Brucheffekt für <nobr>3</nobr> Rd. um <nobr>100%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130305,
       "id": "languid_barrette",
       "name": "Haarnadel des trägen Handwerkers",
-      "desc": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis zu max. St. <nobr>15</nobr>. Standardangriff-Stufe. +1 bis zu max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130306,
       "id": "sash_cascade",
       "name": "Vom Schleier halb bedeckt",
-      "desc": "Verlängert die aktive Dauer des vom Ultimate erzeugten Felds um <nobr>1</nobr> Rd. Der Multiplikator vom <u>Bruch-SCH</u> ihres Talents wird zusätzlich um <nobr>200%</nobr> erhöht."
+      "desc": "Verlängert die aktive Dauer des vom Ultimate erzeugten Felds um <nobr>1</nobr> Rd. Der Multiplikator vom <u>Bruch-SCH</u> ihres Talents wird zusätzlich um <nobr>200%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Bruch-SCH",
+          "desc": "Bruch-SCH wird mit höherem Brucheffekt, höherem max. Widerstand des Ziels und höherer Figurenstufe erhöht.\nBruch-SCH kann keine Kritischen Treffer zufügen und wird nicht von Effekten mit SCH-Erhöhung beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

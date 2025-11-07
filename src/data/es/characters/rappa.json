@@ -2,6 +2,7 @@
   "_id": 1317,
   "id": "rappa",
   "name": "Rappa",
+  "description": "Una misteriosa chica, autoproclamada ninja, que aparece en Colonipenal como un relámpago a medianoche y que atribuye todo al ninjutsu.\nSu vía del ninja consiste en recitar mantras ninja, pintar sellos ninja y estudiar los manuales secretos... Es decir, rap, graffiti y manga. Rappa sigue una rigurosa disciplina y viaja entre las estrellas para defender la justicia.\nComo Vigilante de la Galaxia, persigue a Osaru, el ninja malvado, hasta los confines del cosmos.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño Imaginario a un enemigo.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Inflige Daño Imaginario a todos los enemigos.",
       "type": "Habilidad básica",
       "tag": "ATQ AdE",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Entra en el estado de Forma de sello y obtiene un turno adicional y 3 puntos de Tinta cromática. Además, aumenta su eficiencia de la Ruptura de Debilidad y su efecto de Ruptura.\nEn el estado de Forma de sello, su ATQ básico se potencia. Tras lanzar el ATQ básico potenciado, consume 1 punto de Tinta cromática, y sale del estado de Forma de sello cuando los gasta todos.",
       "type": "Habilidad definitiva",
       "tag": "Potenciación",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000000,
+          "name": "Turno adicional",
+          "desc": "Obtiene 1 turno adicional que no se resta de la cantidad de turnos. Durante este turno adicional no se puede usar la habilidad definitiva.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1074,15 @@
       "simpleDesc": "Cuando se rompe la Debilidad de un enemigo, Rappa obtiene 1 pt. de carga. Cuando lanza el tercer golpe de Instrumento ninja: Estrella matademonios, inflige adicionalmente a todos los enemigos Daño de Ruptura Imaginario que reduce la Firmeza ignorando los tipos de Debilidad. Además, consume todos los pts. de carga, con lo que el multiplicador del Daño de Ruptura y la Reducción de Firmeza de este golpe aumentan.",
       "type": "Talento",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        6,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1452,15 @@
       "simpleDesc": "Entra en el estado de Grafiti, avanza rápidamente una cierta distancia y ataca a los enemigos con los que entra en contacto. Tras atacar al enemigo y entrar en combate, reduce la Firmeza ignorando los tipos de Debilidad a cada enemigo, e inflige Daño de Ruptura Imaginario a los enemigos y a los objetivos adyacentes. Además, recupera energía.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1426,37 +1481,79 @@
       "_id": 131701,
       "id": "returned_is_the_revenant_with_no_ferry_toll",
       "name": "Sin pago para el trasbordo, los difuntos regresan",
-      "desc": "Mientras está en el estado de Forma de sello tras lanzar la habilidad definitiva, el daño que inflige Rappa ignora un <nobr>15%</nobr> de la DEF de los objetivos. Tras salir del estado de Forma de sello, recupera <nobr>20</nobr> pts. de energía."
+      "desc": "Mientras está en el estado de Forma de sello tras lanzar la habilidad definitiva, el daño que inflige Rappa ignora un <nobr>15%</nobr> de la DEF de los objetivos. Tras salir del estado de Forma de sello, recupera <nobr>20</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131702,
       "id": "free_is_the_mind_enlightened_by_haikus",
       "name": "Libre es la mente iluminada por haikus",
-      "desc": "Aumenta en un <nobr>50%</nobr> la Reducción de Firmeza de los 2 primeros golpes del ATQ básico potenciado contra el enemigo designado."
+      "desc": "Aumenta en un <nobr>50%</nobr> la Reducción de Firmeza de los 2 primeros golpes del ATQ básico potenciado contra el enemigo designado.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131703,
       "id": "many_are_the_shrines_that_repel_no_hell",
       "name": "El infierno aguarda por santuarios que haya",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131704,
       "id": "lost_is_the_nind_devoured_by_time",
       "name": "El tiempo devora la vía del ninja",
-      "desc": "Durante el estado de Forma de sello, la VEL de todos los aliados aumenta en un <nobr>12%</nobr>."
+      "desc": "Durante el estado de Forma de sello, la VEL de todos los aliados aumenta en un <nobr>12%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131705,
       "id": "steady_is_the_ranger_with_unerring_arrows",
       "name": "El cazador decidido no yerra sus flechas",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131706,
       "id": "righteous_is_the_wrath_that_spares_no_evil",
       "name": "La justicia nunca se apiada del mal",
-      "desc": "Al comenzar la batalla, Rappa obtiene <nobr>5</nobr> pts. de carga del talento y el límite de carga aumenta en <nobr>5</nobr> pts. Tras lanzar el tercer golpe de Instrumento ninja: Estrella matademonios, obtiene <nobr>5</nobr> pts. de energía."
+      "desc": "Al comenzar la batalla, Rappa obtiene <nobr>5</nobr> pts. de carga del talento y el límite de carga aumenta en <nobr>5</nobr> pts. Tras lanzar el tercer golpe de Instrumento ninja: Estrella matademonios, obtiene <nobr>5</nobr> pts. de energía.",
+      "unlockCost": [
+        {
+          "ItemID": 11317,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

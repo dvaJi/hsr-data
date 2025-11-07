@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "히실렌스",
+  "description": "스틱시아, 취기와 꿈의 해안 도시. 과거의 노랫소리가 여전히 파도 사이에 울려 퍼진다.\n바다의 딸 헬렉트라, 「바다」의 불씨를 정화하는 황금의 후예여, 더러운 암류를 몰아내고 천외의 영웅을 위해 흠뻑 취할 성대한 향연을 연주하라.\n——막이 내리지 않은 지금, 희망은 거품처럼 부서지기 쉬울지라도 파도는 앞으로 나아갈 것이다",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 물리 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "높은 확률로 모든 적이 받는 피해를 증가시키고 대상에게 물리 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "범위 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "결계를 펼쳐 모든 적의 공격력과 방어력을 감소시키고, 대상에게 물리 속성 피해를 가한다. 결계 존재 시 적이 지속 피해를 1회 받을 때마다 대상에게 물리 속성 지속 피해를 1회 가한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "전투 불능 상태",
+          "desc": "아군의 현재 HP가 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 있으면 목표는 전투를 계속할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "아군이 공격 시 히실렌스가 높은 확률로 명중한 적을 풍화/열상/연소/감전 중 1가지 상태에 빠트린다",
       "type": "특성",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "특수 영역을 만든다. 영역 내의 적은 아군을 공격하지 않는다. 영역 내의 적과 전투에 진입하면 높은 확률로 각 단일 적을 풍화/열상/연소/감전 중 #3[i]가지 상태에 빠트린다",
       "type": "비술",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "그대는 내 마음이 슬픈 이유를 물었지",
-      "desc": "히실렌스가 필드에 있을 시 아군이 가하는 지속 피해는 기존 피해의 <nobr>116%</nobr>이며, 히실렌스가 특성으로 적을 풍화/열상/연소/감전 상태에 빠트릴 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 추가로 대상을 기존 특성 효과와 동일하며, 동시에 존재할 수 있는 풍화/열상/연소/감전 상태에 1회 빠트린다"
+      "desc": "히실렌스가 필드에 있을 시 아군이 가하는 지속 피해는 기존 피해의 <nobr>116%</nobr>이며, 히실렌스가 특성으로 적을 풍화/열상/연소/감전 상태에 빠트릴 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 추가로 대상을 기존 특성 효과와 동일하며, 동시에 존재할 수 있는 풍화/열상/연소/감전 상태에 1회 빠트린다",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "그대는 파도가 울부짖는 이유를 말했지",
-      "desc": "결계 지속 시간 동안 행적 [진주의 현]의 가하는 피해 증가 효과가 모든 아군에게 적용된다"
+      "desc": "결계 지속 시간 동안 행적 [진주의 현]의 가하는 피해 증가 효과가 모든 아군에게 적용된다",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "등불이 잊힌 이유를 아는가",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "보라, 시간은 왜 흐르는가",
-      "desc": "결계가 지속되는 동안 모든 적의 모든 속성 저항이 <nobr>20%</nobr> 감소한다"
+      "desc": "결계가 지속되는 동안 모든 적의 모든 속성 저항이 <nobr>20%</nobr> 감소한다",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "씻으며 나는 흥얼거리네",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "침몰한 그대는 언제 돌아올까",
-      "desc": "결계 지속 시간 동안 턴이 시작될 때마다 또는 아군의 단일 공격 후에 히실렌스 물리 지속 피해의 효과 발동 횟수 상한이 <nobr>12</nobr>회로 증가하고, 가하는 피해 배율이 <nobr>20%</nobr> 증가한다"
+      "desc": "결계 지속 시간 동안 턴이 시작될 때마다 또는 아군의 단일 공격 후에 히실렌스 물리 지속 피해의 효과 발동 횟수 상한이 <nobr>12</nobr>회로 증가하고, 가하는 피해 배율이 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

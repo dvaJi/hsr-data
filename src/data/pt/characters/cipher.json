@@ -2,6 +2,7 @@
   "_id": 1406,
   "id": "cipher",
   "name": "Cipher",
+  "description": "Na pólis caída dos bandidos, Dolos, os 300 Renegados correm desenfreados e livres.\nAvance sem hesitação, ágil Estrela Ladra Cífera, Herdeira de Chrysos da Chama Primordial da \"Trapaça\". Que sua teia de mentiras se espalhe com a brisa por todas as terras.\n\"Tentando me enganar? De jeito nenhum!\"",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano Quântico leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Há uma alta chance de diminuir o Dano causado por um inimigo e por alvos adjacentes e aumenta o ATQ de Cipher. Causa Dano Quântico a um inimigo designado e Dano Quântico leve aos alvos adjacentes.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -788,6 +816,24 @@
       "simpleDesc": "Causa Dano Quântico e Dano Verdadeiro iguais a uma porcentagem da contagem atual mantida pelo Talento em um inimigo. Além disso, causa Dano Quântico leve e Dano Verdadeiro leve equivalentes a uma porcentagem da contagem atual mantida pelo Talento a um inimigo e a seus alvos adjacentes. E esse Dano Verdadeiro é distribuído igualmente entre todos os alvos dessa habilidade.",
       "type": "Perícia Suprema",
       "tag": "Explosão",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        60
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "Dano Verdadeiro",
+          "desc": "Dano sem Tipo que não é afetado por nenhum efeito. Esse Dano não é considerado como a utilização de 1 ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1127,6 +1173,32 @@
       "simpleDesc": "Cipher faz com que um inimigo-alvo entre no estado de \"Patrono\". Depois que o alvo nesse estado for atacado por companheiros de equipe, Cipher realiza um Ataque Extra, causando Dano Quântico ao alvo. Isso pode ser ativado #3[i] vez(es) por rodada.\nCipher manterá um registro do Dano causado pelos aliados ao alvo no estado \"Patrono\". Depois de usar a Perícia Suprema, redefine esse registro.",
       "type": "Talento",
       "tag": "Alvo Único",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "Dano Verdadeiro",
+          "desc": "Dano sem Tipo que não é afetado por nenhum efeito. Esse Dano não é considerado como a utilização de 1 ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1466,6 +1538,15 @@
       "simpleDesc": "Ganha a \"Bênção de Zagreus\". Enquanto ela estiver ativa, Cipher não pode ser detectada por inimigos e obtém Consumíveis aleatórios ao se aproximar deles. Ao entrar em batalha, Cipher causa Dano Quântico leve a todos os inimigos.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1485,37 +1566,115 @@
       "_id": 140601,
       "id": "read_the_room_seek_the_glee",
       "name": "Perceba o Clima, Vá Atrás da Diversão",
-      "desc": "O registro de Dano de Cipher é de <nobr>150%</nobr> do seu valor original. Ao usar um <u>Ataque Extra</u> do Talento, aumenta o ATQ de Cipher em <nobr>80%</nobr>, durando por <nobr>2</nobr> rodada(s)."
+      "desc": "O registro de Dano de Cipher é de <nobr>150%</nobr> do seu valor original. Ao usar um <u>Ataque Extra</u> do Talento, aumenta o ATQ de Cipher em <nobr>80%</nobr>, durando por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140602,
       "id": "in_the_fray_nab_on_a_spree",
       "name": "Na Confusão, Pegue sem Perdão",
-      "desc": "Quando a Cipher atinge um inimigo-alvo, há uma chance-base de <nobr>120%</nobr> de aumentar o Dano que ele recebe em <nobr>30%</nobr>, com duração de <nobr>2</nobr> rodada(s)."
+      "desc": "Quando a Cipher atinge um inimigo-alvo, há uma chance-base de <nobr>120%</nobr> de aumentar o Dano que ele recebe em <nobr>30%</nobr>, com duração de <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140603,
       "id": "from_thin_air_hard_to_foresee",
       "name": "O Que os Olhos Não Veem, o Bolso Não Sente",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140604,
       "id": "the_jig_is_up_quick_to_flee",
       "name": "Agora Você me Vê, Agora Não Vê Mais",
-      "desc": "Após o \"Patrono\" ser atacado por um aliado-alvo, Cipher causa Dano Quântico Adicional igual a <nobr>50%</nobr> do ATQ de Cipher."
+      "desc": "Após o \"Patrono\" ser atacado por um aliado-alvo, Cipher causa Dano Quântico Adicional igual a <nobr>50%</nobr> do ATQ de Cipher.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Dano adicional",
+          "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140605,
       "id": "safe_in_numbers_light_as_a_bee",
       "name": "Como Uma Raposa, Rápida e Astuta",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140606,
       "id": "the_thiefs_game_unsung_and_free",
       "name": "A Melhor das Ladras é Anônima e Livre",
-      "desc": "O Dano causado pelo <u>Ataque Extra</u> do Talento de Cipher aumenta em <nobr>350%</nobr>. Durante a contagem, um adicional de <nobr>16%</nobr> do Dano que não for Dano Sobressalente causado por esse ataque é registrado. Depois que a contagem é eliminada com o uso de Perícia Suprema, <nobr>20%</nobr> da contagem eliminada é recuperada."
+      "desc": "O Dano causado pelo <u>Ataque Extra</u> do Talento de Cipher aumenta em <nobr>350%</nobr>. Durante a contagem, um adicional de <nobr>16%</nobr> do Dano que não for Dano Sobressalente causado por esse ataque é registrado. Depois que a contagem é eliminada com o uso de Perícia Suprema, <nobr>20%</nobr> da contagem eliminada é recuperada.",
+      "unlockCost": [
+        {
+          "ItemID": 11406,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

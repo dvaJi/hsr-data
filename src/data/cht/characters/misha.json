@@ -2,6 +2,7 @@
   "_id": 1312,
   "id": "misha",
   "name": "米沙",
+  "description": "匹諾康尼飯店的接待，乖巧懂事的小男孩。\n對無名客抱有極大憧憬，夢想有朝一日自己也能踏上旅途。",
   "rarity": 4,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量冰屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "對敵方單體造成冰屬性傷害、對相鄰目標造成少量冰屬性傷害，增加米沙下一次終結技的攻擊段數。",
       "type": "戰技",
       "tag": "擴散",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +756,32 @@
       "simpleDesc": "對敵方單體造成少量冰屬性傷害，初始共彈射#1[i]次，最多共彈射#5[i]次。每段攻擊前有低機率使目標凍結。",
       "type": "終結技",
       "tag": "彈射",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "附加傷害",
+          "desc": "使受擊者額外受到1次傷害，本次傷害不視為發動過1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1085,6 +1130,15 @@
       "simpleDesc": "我方全體每消耗1個戰技點，增加米沙下一次終結技的攻擊段數，同時米沙恢復能量。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1388,6 +1442,15 @@
       "simpleDesc": "製造特殊領域。領域內敵人行動停止。與領域內敵人進入戰鬥後，增加米沙下一次終結技的攻擊段數。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1405,37 +1468,88 @@
       "_id": 131201,
       "id": "whimsicality_of_fancy",
       "name": "飄忽的幻影",
-      "desc": "施放終結技時，場上每有1個敵方目標，本次終結技的攻擊段數便額外增加<nobr>1</nobr>段，最多額外增加<nobr>5</nobr>段。"
+      "desc": "施放終結技時，場上每有1個敵方目標，本次終結技的攻擊段數便額外增加<nobr>1</nobr>段，最多額外增加<nobr>5</nobr>段。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131202,
       "id": "yearning_of_youth",
       "name": "青春的悵望",
-      "desc": "終結技每段攻擊前，有<nobr>24%</nobr>的<u>基礎機率</u>使目標防禦力降低<nobr>16%</nobr>，持續<nobr>3</nobr>回合。"
+      "desc": "終結技每段攻擊前，有<nobr>24%</nobr>的<u>基礎機率</u>使目標防禦力降低<nobr>16%</nobr>，持續<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎機率",
+          "desc": "向受擊者施加負面效果的基礎機率。\n最終機率會受到攻擊者的效果命中和敵方目標的效果抗性影響。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 131203,
       "id": "vestige_of_happiness",
       "name": "歡樂年光的影子",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級，普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131204,
       "id": "visage_of_kinship",
       "name": "親摯的音容",
-      "desc": "終結技每段攻擊的傷害倍率提高<nobr>6%</nobr>。"
+      "desc": "終結技每段攻擊的傷害倍率提高<nobr>6%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131205,
       "id": "genesis_of_first_love",
       "name": "最初的愛與友誼",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級，天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131206,
       "id": "estrangement_of_dream",
       "name": "久已生疏的憧憬",
-      "desc": "施放終結技時，使自身造成的傷害提高<nobr>30%</nobr>，持續至自身回合結束，且下一次施放戰技後為我方恢復<nobr>1</nobr>個戰技點。"
+      "desc": "施放終結技時，使自身造成的傷害提高<nobr>30%</nobr>，持續至自身回合結束，且下一次施放戰技後為我方恢復<nobr>1</nobr>個戰技點。",
+      "unlockCost": [
+        {
+          "ItemID": 11312,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

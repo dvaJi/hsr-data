@@ -2,6 +2,7 @@
   "_id": 1303,
   "id": "ruan_mei",
   "name": "Ruan Mei",
+  "description": "Seorang anggota Genius Society dan ahli bidang ilmu kehidupan. Dia bekerja sama dengan Herta dan timnya untuk mengembangkan Simulated Universe.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Setelah melancarkan Skill-nya, Ruan Mei akan memperoleh \"Overtone\". Saat Ruan Mei memiliki \"Overtone\", DMG dan Weakness Break Efficiency seluruh rekan tim meningkat.",
       "type": "Skill",
       "tag": "Support",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,43 @@
       "simpleDesc": "Meningkatkan RES PEN Seluruh Tipe dari seluruh rekan tim. Setelah menyerang, akan menambahkan \"Thanatoplum Rebloom\" pada target musuh.",
       "type": "Ultimate",
       "tag": "Support",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Status Weakness Break",
+          "desc": "Saat Toughness target musuh berkurang menjadi 0, akan memasuki status Weakness Break, yang dapat menunda aksi musuh.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Penundaan Aksi",
+          "desc": "Menambah durasi tunggu target sebelum aksi berikutnya.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Semakin tinggi Break Effect, level karakter, dan Max Toughness musuh, maka Break DMG yang diakibatkan akan semakin tinggi.\nBreak DMG tidak dapat CRIT Hit, dan tidak akan terkena pengaruh efek peningkatan DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1159,24 @@
       "simpleDesc": "Meningkatkan SPD seluruh rekan tim selain diri sendiri. Saat mengakibatkan Weakness Break pada target musuh, akan mengakibatkan Ice Break DMG tambahan pada musuh tersebut.",
       "type": "Talent",
       "tag": "Support",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Semakin tinggi Break Effect, level karakter, dan Max Toughness musuh, maka Break DMG yang diakibatkan akan semakin tinggi.\nBreak DMG tidak dapat CRIT Hit, dan tidak akan terkena pengaruh efek peningkatan DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1486,15 @@
       "simpleDesc": "Saat memasuki pertempuran berikutnya, akan otomatis memicu Skill sebanyak #1[i] kali. Setelah melancarkan Technique, saat menyerang musuh di Simulated Universe atau Divergent Universe, akan selalu dianggap menyerang Weakness saat memasuki pertempuran, dan serangan kali ini akan mengurangi Toughness musuh tanpa memedulikan tipe Weakness-nya. Untuk setiap 1 Blessing yang dimiliki, Pengurangan Toughness akan meningkat dan jika serangan ini mengakibatkan Weakness Break, maka akan mengakibatkan Break DMG tambahan.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1425,37 +1514,97 @@
       "_id": 130301,
       "id": "neuronic_embroidery",
       "name": "Neuronic Embroidery",
-      "desc": "Selama area pembatas dari Ultimate berlangsung, DMG yang diakibatkan seluruh rekan tim akan mengabaikan <nobr>20%</nobr> DEF target."
+      "desc": "Selama area pembatas dari Ultimate berlangsung, DMG yang diakibatkan seluruh rekan tim akan mengabaikan <nobr>20%</nobr> DEF target.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130302,
       "id": "reedside_promenade",
       "name": "Reedside Promenade",
-      "desc": "Saat Ruan Mei berada di medan pertempuran, ATK seluruh rekan tim akan meningkat <nobr>40%</nobr> saat mengakibatkan DMG pada target musuh <u>berstatus Weakness Break</u>."
+      "desc": "Saat Ruan Mei berada di medan pertempuran, ATK seluruh rekan tim akan meningkat <nobr>40%</nobr> saat mengakibatkan DMG pada target musuh <u>berstatus Weakness Break</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Status Weakness Break",
+          "desc": "Saat Toughness target musuh berkurang menjadi 0, akan memasuki status Weakness Break, yang dapat menunda aksi musuh.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130303,
       "id": "viridescent_pirouette",
       "name": "Viridescent Pirouette",
-      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimal Lv. <nobr>15</nobr>. Level Talent +2, maksimal Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130304,
       "id": "chatoyant_clat",
       "name": "Chatoyant Éclat",
-      "desc": "Saat target musuh terkena Weakness Break, Break Effect Ruan Mei akan meningkat <nobr>100%</nobr>, berlangsung selama <nobr>3</nobr> giliran."
+      "desc": "Saat target musuh terkena Weakness Break, Break Effect Ruan Mei akan meningkat <nobr>100%</nobr>, berlangsung selama <nobr>3</nobr> giliran.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130305,
       "id": "languid_barrette",
       "name": "Languid Barrette",
-      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimal Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimal Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130306,
       "id": "sash_cascade",
       "name": "Sash Cascade",
-      "desc": "Durasi area pembatas dari Ultimate diperpanjang <nobr>1</nobr> giliran. DMG Multiplier dari <u>Break DMG</u> yang diakibatkan Talent meningkat ekstra <nobr>200%</nobr>."
+      "desc": "Durasi area pembatas dari Ultimate diperpanjang <nobr>1</nobr> giliran. DMG Multiplier dari <u>Break DMG</u> yang diakibatkan Talent meningkat ekstra <nobr>200%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Break DMG",
+          "desc": "Semakin tinggi Break Effect, level karakter, dan Max Toughness musuh, maka Break DMG yang diakibatkan akan semakin tinggi.\nBreak DMG tidak dapat CRIT Hit, dan tidak akan terkena pengaruh efek peningkatan DMG.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

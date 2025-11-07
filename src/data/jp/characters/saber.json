@@ -2,6 +2,7 @@
   "_id": 1014,
   "id": "saber",
   "name": "セイバー",
+  "description": "",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "指定した敵単体に少量の風属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "指定した敵単体に風属性ダメージを与え、隣接する敵に少量の風属性ダメージを与える。攻撃後、「炉心共鳴」を消費してEPを満タンにできる場合、所持する「炉心共鳴」に応じて今回の戦闘スキルのダメージ倍率をアップし、攻撃した後に「炉心共鳴」をすべて消費する。EPを満タンにできない場合、「炉心共鳴」を#3[i]獲得する。",
       "type": "戦闘スキル",
       "tag": "拡散攻撃",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,15 @@
       "simpleDesc": "敵全体に大量の風属性ダメージを与え、さらにランダムな敵単体に少量の風属性ダメージを与える。#3[i]回バウンドし、さらに次の通常攻撃を強化する。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        120,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1110,15 @@
       "simpleDesc": "戦闘に入る時、「炉心共鳴」を#8[i]層獲得する。味方が必殺技を発動する時、セイバーの与ダメージがアップし、「炉心共鳴」を#1[i]層獲得する。「炉心共鳴」を消費すると、セイバーのEPが回復する。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1481,6 +1518,15 @@
       "simpleDesc": "秘技を使用した後、次の戦闘開始時、「炉心共鳴」を#3[i]層獲得し、攻撃力をアップする。",
       "type": "秘技",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1499,37 +1545,97 @@
       "_id": 101401,
       "id": "the_lost_white_walls",
       "name": "{RUBY_B#うしな}失{RUBY_E#}われた{RUBY_B#はくあ}白亜{RUBY_E#}の{RUBY_B#しろ}城{RUBY_E#}",
-      "desc": "<nobr>セイバー</nobr>の必殺技ダメージ+<nobr>60%</nobr>。<nobr>セイバー</nobr>が通常攻撃または戦闘スキルを発動した後、「炉心共鳴」を<nobr>1</nobr>層獲得する。"
+      "desc": "<nobr>セイバー</nobr>の必殺技ダメージ+<nobr>60%</nobr>。<nobr>セイバー</nobr>が通常攻撃または戦闘スキルを発動した後、「炉心共鳴」を<nobr>1</nobr>層獲得する。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101402,
       "id": "the_lost_oath_of_the_round_table",
       "name": "{RUBY_B#ちり}塵{RUBY_E#}に{RUBY_B#う}埋{RUBY_E#}もれた\n{RUBY_B#えんたく}円卓{RUBY_E#}の{RUBY_B#ちか}誓{RUBY_E#}い",
-      "desc": "今回の戦闘で「炉心共鳴」を1層獲得するたびに、<nobr>セイバー</nobr>の与ダメージが敵の防御力を<nobr>#2[f1]%</nobr>無視する。この効果は最大で<nobr>15</nobr>層累積できる。「炉心共鳴」による戦闘スキルのダメージ倍率アップ効果が発動する時、「炉心共鳴」1層につき、その回の戦闘スキルのダメージ倍率がさらに<nobr>7%</nobr>アップする。"
+      "desc": "今回の戦闘で「炉心共鳴」を1層獲得するたびに、<nobr>セイバー</nobr>の与ダメージが敵の防御力を<nobr>#2[f1]%</nobr>無視する。この効果は最大で<nobr>15</nobr>層累積できる。「炉心共鳴」による戦闘スキルのダメージ倍率アップ効果が発動する時、「炉心共鳴」1層につき、その回の戦闘スキルのダメージ倍率がさらに<nobr>7%</nobr>アップする。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101403,
       "id": "a_wish_across_fifteen_centuries",
       "name": "{RUBY_B#じゅうごせいき}十五世紀{RUBY_E#}を{RUBY_B#こ}越{RUBY_E#}えた{RUBY_B#ねが}願{RUBY_E#}い",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101404,
       "id": "the_saga_of_sixteen_winter_days",
       "name": "{RUBY_B#じゅうろく}十六{RUBY_E#}の{RUBY_B#よる}夜{RUBY_E#}にわたる\n{RUBY_B#ふゆ}冬{RUBY_E#}の{RUBY_B#かいこう}邂逅{RUBY_E#}",
-      "desc": "<nobr>セイバー</nobr>の風属性<u>耐性貫通</u>+<nobr>8%</nobr>。必殺技を発動した後、<nobr>セイバー</nobr>の風属性<u>耐性貫通</u>+<nobr>4%</nobr>、この効果は最大で<nobr>3</nobr>層累積できる。"
+      "desc": "<nobr>セイバー</nobr>の風属性<u>耐性貫通</u>+<nobr>8%</nobr>。必殺技を発動した後、<nobr>セイバー</nobr>の風属性<u>耐性貫通</u>+<nobr>4%</nobr>、この効果は最大で<nobr>3</nobr>層累積できる。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 101405,
       "id": "the_dreamed_utopian_dawn",
       "name": "{RUBY_B#りそう}理想{RUBY_E#}に{RUBY_B#たど}辿{RUBY_E#}り{RUBY_B#つ}着{RUBY_E#}いた{RUBY_B#あかつき}暁{RUBY_E#}に",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 101406,
       "id": "the_long_fated_night",
       "name": "{RUBY_B#うんめい}運命{RUBY_E#}の{RUBY_B#よる}夜{RUBY_E#}を{RUBY_B#まも}護{RUBY_E#}る{RUBY_B#もの}者{RUBY_E#}",
-      "desc": "<nobr>セイバー</nobr>の必殺技ダメージの風属性<u>耐性貫通</u>+<nobr>20%</nobr>。軌跡「湖の祝福」で蓄積できる超過分のEPが<nobr>200</nobr>になる。\n戦闘中に初めて必殺技を発動した後、固定で<nobr>セイバー</nobr>のEPを<nobr>300</nobr>回復する。その後、EP回復効果は必殺技を<nobr>3</nobr>回発動するごとに1回発動する。"
+      "desc": "<nobr>セイバー</nobr>の必殺技ダメージの風属性<u>耐性貫通</u>+<nobr>20%</nobr>。軌跡「湖の祝福」で蓄積できる超過分のEPが<nobr>200</nobr>になる。\n戦闘中に初めて必殺技を発動した後、固定で<nobr>セイバー</nobr>のEPを<nobr>300</nobr>回復する。その後、EP回復効果は必殺技を<nobr>3</nobr>回発動するごとに1回発動する。",
+      "unlockCost": [
+        {
+          "ItemID": 11014,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

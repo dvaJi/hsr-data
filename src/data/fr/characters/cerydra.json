@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "Cérydra",
+  "description": "L'Empire du Nord, une dynastie perdue dont les terres glacées s'embrasent d'une ambition de conquête.\nCérydra la souveraine, Héritière chryséenne qui porte la flamme divine de la Loi, dispose tes pièces sur l'échiquier, défie les dieux dans leur propre jeu, juge les coupables aux cœurs rebelles et forge en ce monde les fondements de la Chasse aux flammes.\n« Nous n'en avons pas fini. L'expédition d'Amphoreus s'étend jusqu'aux étoiles du cosmos ! »",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "Accorde Décoration militaire à un personnage allié et Cérydra gagne de la charge. Après avoir atteint #4[i] points de charge, l'état Décoration militaire du personnage allié évolue automatiquement en Noblesse. Le personnage avec Noblesse voit ses DGT critiques de compétence et sa PÉN de RÉS à tous les types augmenter et il peut déclencher un Coup de main.",
       "type": "Compétence",
       "tag": "Soutien",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Malus de contrôle",
+          "desc": "Gelé, Enchevêtrement, Emprisonnement, Dominé, Indignation, Forte réverbération, Rêve étrange, Emprisonnement enchevêtré, Terrifié et Immobilité.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "Coup de main",
+          "desc": "Copie la capacité sur le point d'être lancée et l'utilise immédiatement, puis lance la capacité initiale.\nCoup de main ne peut pas déclencher un autre Coup de main.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "Gagne des points de charge. Inflige des DGT de vent à tous les ennemis.",
       "type": "Ultime",
       "tag": "ZdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "Augmente l'ATQ du personnage avec Décoration militaire. Lorsque le personnage avec Décoration militaire utilise une ATQ normale ou une compétence, Cérydra obtient de la charge. Après que le personnage avec Décoration militaire a utilisé une attaque, Cérydra inflige en plus des DGT de vent mineurs additionnels.",
       "type": "Talent",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "Coup de main",
+          "desc": "Copie la capacité sur le point d'être lancée et l'utilise immédiatement, puis lance la capacité initiale.\nCoup de main ne peut pas déclencher un autre Coup de main.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "Accorde Décoration militaire au personnage actuellement actif. Utilise automatiquement la compétence sur le personnage avec Décoration militaire au début du prochain combat.",
       "type": "Technique",
       "tag": "Soutien",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "Monopole du pouvoir",
-      "desc": "Les DGT infligés par le personnage avec Décoration militaire ignorent <nobr>16%</nobr> de la DÉF des cibles. Si l'état Décoration militaire évolue en Noblesse, les DGT de compétence infligés par le personnage ignorent <nobr>20%</nobr> supplémentaires de la DÉF de la cible. Lorsque Cérydra utilise sa compétence, une cible alliée désignée régénère <nobr>2</nobr> points d'énergie."
+      "desc": "Les DGT infligés par le personnage avec Décoration militaire ignorent <nobr>16%</nobr> de la DÉF des cibles. Si l'état Décoration militaire évolue en Noblesse, les DGT de compétence infligés par le personnage ignorent <nobr>20%</nobr> supplémentaires de la DÉF de la cible. Lorsque Cérydra utilise sa compétence, une cible alliée désignée régénère <nobr>2</nobr> points d'énergie.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "Rêves d'un peuple à forger",
-      "desc": "Le personnage avec Décoration militaire inflige <nobr>40%</nobr> de DGT supplémentaires. Lorsqu'un coéquipier avec Décoration militaire est sur le champ de bataille, les DGT de Cérydra augmentent de <nobr>160%</nobr>."
+      "desc": "Le personnage avec Décoration militaire inflige <nobr>40%</nobr> de DGT supplémentaires. Lorsqu'un coéquipier avec Décoration militaire est sur le champ de bataille, les DGT de Cérydra augmentent de <nobr>160%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "Brûlent les lois du passé",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "Royaumes des mortels reforgés",
-      "desc": "Augmente le multiplicateur de DGT d'ultime de <nobr>240%</nobr>."
+      "desc": "Augmente le multiplicateur de DGT d'ultime de <nobr>240%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "Faveurs et affronts rendus",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "Un voyage nous menant vers les étoiles",
-      "desc": "La <u>PÉN de RÉS</u> à tous les types du personnage avec Décoration militaire augmente de <nobr>20%</nobr>, et le multiplicateur des <u>DGT additionnels</u> déclenchés par Décoration militaire augmente de <nobr>300%</nobr>. Lorsqu'un coéquipier sur le champ de bataille bénéficie de Décoration militaire, la <u>PÉN de RÉS</u> à tous les types de Cérydra augmente de <nobr>20%</nobr>."
+      "desc": "La <u>PÉN de RÉS</u> à tous les types du personnage avec Décoration militaire augmente de <nobr>20%</nobr>, et le multiplicateur des <u>DGT additionnels</u> déclenchés par Décoration militaire augmente de <nobr>300%</nobr>. Lorsqu'un coéquipier sur le champ de bataille bénéficie de Décoration militaire, la <u>PÉN de RÉS</u> à tous les types de Cérydra augmente de <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DGT additionnels",
+          "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

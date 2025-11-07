@@ -2,6 +2,7 @@
   "_id": 1309,
   "id": "robin",
   "name": "Robin",
+  "description": "Sinh ra ở Penacony, ca sĩ Tộc Halovian nổi tiếng vũ trụ, cô gái có phong thái trầm tĩnh và thanh lịch.\nLần này được Gia Tộc mời về cố hương, để hát tặng cho mọi người trong \"Đại Nhạc Hội Hòa Hợp\".\nCó thể dựa vào sức mạnh của \"Hòa Hợp\" để truyền tải giọng hát, thể hiện \"cộng hưởng\" giữa người hâm mộ và cả sinh linh vạn giới.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Tăng sát thương do toàn phe ta gây ra.",
       "type": "Chiến Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +747,32 @@
       "simpleDesc": "Vào trạng thái Hợp Tấu, khiến toàn phe ta tăng Tấn Công, và khiến đồng đội lập tức hành động, sau khi tấn công Robin gây thêm Sát Thương Vật Lý kèm theo. Trong thời gian trạng thái Hợp Tấu, miễn dịch Hiệu Ứng Xấu loại Khống Chế, trước khi kết thúc trạng thái sẽ không vào hiệp của bản thân và không thể hành động cho đến khi kết thúc đếm ngược.",
       "type": "Tuyệt Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Hiệu Ứng Xấu Loại Khống Chế",
+          "desc": "Đóng Băng, Nhiễu Loạn, Giam Cầm, Chi Phối, Bạo Nộ, Chấn Động Mạnh Mẽ, Dị Mộng, Cầm Tù Quấy Nhiễu, Kinh Hãi, Khóa Hành Động.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1142,15 @@
       "simpleDesc": "Tăng Sát Thương Bạo Kích cho toàn phe ta, và sau khi mục tiêu phe ta tấn công phe địch, Robin sẽ hồi thêm Năng Lượng.",
       "type": "Thiên Phú",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1460,15 @@
       "simpleDesc": "Tạo một vùng đặc biệt xung quanh bản thân. Kẻ địch trong vùng này sẽ không tấn công Robin. Sau khi vào chiến đấu trong lúc vùng đặc biệt được kích hoạt, khi bắt đầu mỗi đợt, Robin sẽ hồi thêm #2[i] Năng Lượng.",
       "type": "Bí Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1423,37 +1486,106 @@
       "_id": 130901,
       "id": "land_of_smiles",
       "name": "Đất Nước Của Nụ Cười",
-      "desc": "Khi ở trạng thái Hợp Tấu, <u>Xuyên Kháng</u> Toàn Thuộc Tính của toàn phe ta tăng <nobr>24%</nobr>."
+      "desc": "Khi ở trạng thái Hợp Tấu, <u>Xuyên Kháng</u> Toàn Thuộc Tính của toàn phe ta tăng <nobr>24%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130902,
       "id": "afternoon_tea_for_two",
       "name": "Buổi Trà Chiều Của Hai Người",
-      "desc": "Khi ở trạng thái Hợp Tấu, Tốc Độ của toàn phe ta tăng <nobr>16%</nobr>. Hiệu ứng hồi Năng Lượng của Thiên Phú tăng thêm <nobr>1</nobr> điểm."
+      "desc": "Khi ở trạng thái Hợp Tấu, Tốc Độ của toàn phe ta tăng <nobr>16%</nobr>. Hiệu ứng hồi Năng Lượng của Thiên Phú tăng thêm <nobr>1</nobr> điểm.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130903,
       "id": "inverted_tuning",
       "name": "Huyền Cung Treo Ngược",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130904,
       "id": "raindrop_key",
       "name": "Chìa Khóa Giọt Mưa",
-      "desc": "Khi thi triển Tuyệt Kỹ sẽ giải trừ <u>Hiệu Ứng Xấu dạng Khống Chế</u> cho toàn thể phe ta, khiến toàn thể phe ta trong thời gian Robin có trạng thái Hợp Tấu tăng <nobr>50%</nobr> Kháng Hiệu Ứng."
+      "desc": "Khi thi triển Tuyệt Kỹ sẽ giải trừ <u>Hiệu Ứng Xấu dạng Khống Chế</u> cho toàn thể phe ta, khiến toàn thể phe ta trong thời gian Robin có trạng thái Hợp Tấu tăng <nobr>50%</nobr> Kháng Hiệu Ứng.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Hiệu Ứng Xấu Loại Khống Chế",
+          "desc": "Đóng Băng, Nhiễu Loạn, Giam Cầm, Chi Phối, Bạo Nộ, Chấn Động Mạnh Mẽ, Dị Mộng, Cầm Tù Quấy Nhiễu, Kinh Hãi, Khóa Hành Động.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130905,
       "id": "lonestars_lament",
       "name": "Giọt Nước Mắt Của Ngôi Sao Cô Đơn",
-      "desc": "Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130906,
       "id": "moonless_midnight",
       "name": "Đêm Trăng Vắng Bóng",
-      "desc": "Khi ở trạng thái Hợp Tấu, sát thương bạo kích của <u>Sát Thương Kèm Theo</u> thuộc tính Vật Lý mà Tuyệt Kỹ gây ra tăng thêm <nobr>450%</nobr>. Hiệu quả Đêm Trăng Vắng Bóng tối đa kích hoạt <nobr>8</nobr> lần, mỗi lần thi triển Tuyệt Kỹ sẽ làm mới số lần kích hoạt."
+      "desc": "Khi ở trạng thái Hợp Tấu, sát thương bạo kích của <u>Sát Thương Kèm Theo</u> thuộc tính Vật Lý mà Tuyệt Kỹ gây ra tăng thêm <nobr>450%</nobr>. Hiệu quả Đêm Trăng Vắng Bóng tối đa kích hoạt <nobr>8</nobr> lần, mỗi lần thi triển Tuyệt Kỹ sẽ làm mới số lần kích hoạt.",
+      "unlockCost": [
+        {
+          "ItemID": 11309,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

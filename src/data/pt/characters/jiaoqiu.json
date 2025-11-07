@@ -2,6 +2,7 @@
   "_id": 1218,
   "id": "jiaoqiu",
   "name": "Jiaoqiu",
+  "description": "Um curandeiro Vulpe e conselheiro do Yaoqing do Xianzhou. Frequentemente cumprimenta as pessoas com um sorriso no rosto e um plano no coração.\nNascido em uma família de prestígio da Comissão de Alquimia, uma vez ele se afastou da prática da medicina por conta de um coração partido. No entanto, ele voltou à área para cuidar da \"Garra de Merlin\", a general Feixiao.\nHabilidoso no estudo da prescrição alquímica que enxerga alimentos como medicamento, principalmente os que induzem uma sensação apimentada. Ele inventou uma fórmula medicinal em caldeirões conhecida como \"grade de nove quadrados\".",
   "rarity": 5,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,15 @@
       "simpleDesc": "Causa Dano de Fogo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "Causa Dano de Fogo a um único inimigo e Dano de Fogo leve a alvos adjacentes, com altas chances de infligir 1 acúmulo de Assado Acinzentado ao alvo principal.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -743,6 +771,32 @@
       "simpleDesc": "Define o número de acúmulos de \"Assado Acinzentado\" nos inimigos-alvo para o maior número de acúmulos de \"Assado Acinzentado\" presente no campo de batalha no momento. Então, ativa um Campo e causa Dano de Fogo a todos os inimigos. Enquanto estiverem dentro do Campo, inimigos-alvo recebem mais Dano de Perícia Suprema, com uma chance de serem afligidos com 1 acúmulo de Assado Acinzentado ao agir.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Estado Derrubado",
+          "desc": "Qualquer aliado ficará incapacitado assim que seus PV forem reduzidos a 0.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1151,24 @@
       "simpleDesc": "Ao atacar com um ATQ Básico, Perícia ou Perícia Suprema, há uma chance alta de infligir 1 acúmulo de \"Assado Acinzentado\" no alvo, fazendo com que o inimigo receba Dano aumentado e também seja considerado com efeito de \"Queimadura\" ao mesmo tempo.",
       "type": "Talento",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1466,6 +1538,24 @@
       "simpleDesc": "Cria uma dimensão especial. Depois de iniciar uma batalha contra inimigos nesta dimensão, causa Dano de Fogo leve a todos os inimigos, com uma alta chance de aplicar 1 acúmulo de \"Assado Acinzentado\".",
       "type": "Técnica",
       "tag": "Incapacitação",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1484,37 +1574,79 @@
       "_id": 121801,
       "id": "pentapathic_transference",
       "name": "Transferência Pentapática",
-      "desc": "Aliados causam <nobr>40%</nobr> de Dano a mais aos inimigos-alvo afligidos com Assado Acinzentado. Sempre que infligir Assado Acinzentado em um inimigo-alvo através do acionamento do efeito do Talento, adicionalmente aumenta o número acúmulos de Assado Acinzentado aplicado desta vez em <nobr>1</nobr>."
+      "desc": "Aliados causam <nobr>40%</nobr> de Dano a mais aos inimigos-alvo afligidos com Assado Acinzentado. Sempre que infligir Assado Acinzentado em um inimigo-alvo através do acionamento do efeito do Talento, adicionalmente aumenta o número acúmulos de Assado Acinzentado aplicado desta vez em <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121802,
       "id": "from_savor_comes_suffer",
       "name": "Do Sabor Vem o Sofrimento",
-      "desc": "Quando um inimigo-alvo é infligido com Assado Acinzentado, aumenta o Multiplicador do Dano de Fogo Contínuo causado pelo Assado Acinzentado ao alvo em <nobr>300%</nobr>."
+      "desc": "Quando um inimigo-alvo é infligido com Assado Acinzentado, aumenta o Multiplicador do Dano de Fogo Contínuo causado pelo Assado Acinzentado ao alvo em <nobr>300%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121803,
       "id": "flavored_euphony_reigns_supreme",
       "name": "Eufonia Saborosa Reina Soberana",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121804,
       "id": "leisure_in_luster_out",
       "name": "Tranquilo por Dentro, Brilhante por Fora",
-      "desc": "Enquanto o Campo estiver ativo, reduz o ATQ do inimigo-alvo em <nobr>15%</nobr>."
+      "desc": "Enquanto o Campo estiver ativo, reduz o ATQ do inimigo-alvo em <nobr>15%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121805,
       "id": "duel_in_dawn_dash_in_dusk",
       "name": "Duelo ao Amanhecer, Fuga ao Entardecer",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121806,
       "id": "nonamorphic_pyrobind",
       "name": "Enlace de Fogo Nonamórfico",
-      "desc": "Quando um inimigo-alvo é derrotado, os acúmulos de \"Assado Acinzentado\" dele serão transferidos ao inimigo com o menor número de acúmulos de \"Assado Acinzentado\" no campo de batalha. O limite máximo de acúmulos de Assado Acinzentado aumenta para <nobr>9</nobr>, e cada acúmulo de \"Assado Acinzentado\" reduz a RES a Todos os Tipos do alvo em <nobr>3%</nobr>."
+      "desc": "Quando um inimigo-alvo é derrotado, os acúmulos de \"Assado Acinzentado\" dele serão transferidos ao inimigo com o menor número de acúmulos de \"Assado Acinzentado\" no campo de batalha. O limite máximo de acúmulos de Assado Acinzentado aumenta para <nobr>9</nobr>, e cada acúmulo de \"Assado Acinzentado\" reduz a RES a Todos os Tipos do alvo em <nobr>3%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11218,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

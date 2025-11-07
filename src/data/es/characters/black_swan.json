@@ -2,6 +2,7 @@
   "_id": 1307,
   "id": "black_swan",
   "name": "Cisne Negro",
+  "description": "Guardamemorias del Jardín de los Recuerdos. Es una vidente lánguida y misteriosa.\nEscucha con paciencia los recuerdos de otras personas y tira de los hilos del destino.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,32 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo y tiene una probabilidad de aplicarle Arcano. Tras atacar a objetivos afectados por Intemperie, Sangrado, Quemadura o Electrocución, cada estado tiene una probabilidad de infligir Arcano de forma adicional.",
       "type": "ATQ básico",
       "tag": "ATQ individual",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcano",
+          "desc": "Arcano es un estado negativo de Daño con el tiempo. Este estado no se puede eliminar.\nCuando está afectada por el estado de Arcano, la unidad también se considera como afectada por Intemperie. En el estado de Arcano, el objetivo recibe Daño de Viento con el tiempo al principio de cada turno.\nAl infligir Arcano, se ignora la RES a Intemperie, la RES a Sangrado, la RES a Quemadura y la RES a Electrocución del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -439,6 +466,32 @@
       "simpleDesc": "Inflige una pequeña cantidad de Daño de Viento a un enemigo y a los enemigos adyacentes. Tiene una gran probabilidad de aplicar Arcano y reducir la DEF de los objetivos.",
       "type": "Habilidad básica",
       "tag": "Ráfaga",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcano",
+          "desc": "Arcano es un estado negativo de Daño con el tiempo. Este estado no se puede eliminar.\nCuando está afectada por el estado de Arcano, la unidad también se considera como afectada por Intemperie. En el estado de Arcano, el objetivo recibe Daño de Viento con el tiempo al principio de cada turno.\nAl infligir Arcano, se ignora la RES a Intemperie, la RES a Sangrado, la RES a Quemadura y la RES a Electrocución del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -793,6 +846,24 @@
       "simpleDesc": "Aplica Desvelación a todos los enemigos, que hace que aumente el daño que recibe el objetivo durante su turno, y Arcano se considera equivalente a Intemperie, Sangrado, Quemadura y Electrocución. Además, después de que Arcano inflija daño al principio del siguiente turno, no se restablecen las acumulaciones. Inflige Daño de Viento a todos los enemigos.",
       "type": "Habilidad definitiva",
       "tag": "ATQ AdE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10013071,
+          "name": "Arcano",
+          "desc": "Arcano es un estado negativo de Daño con el tiempo. Este estado no se puede eliminar.\nCuando está afectada por el estado de Arcano, la unidad también se considera como afectada por Intemperie. En el estado de Arcano, el objetivo recibe Daño de Viento con el tiempo al principio de cada turno.\nAl infligir Arcano, se ignora la RES a Intemperie, la RES a Sangrado, la RES a Quemadura y la RES a Electrocución del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1132,6 +1203,32 @@
       "simpleDesc": "Cuando un enemigo recibe Daño con el tiempo al inicio de cada turno, hay una probabilidad de aplicarle Arcano. Al principio del turno, recibe Daño de Viento con el tiempo. Además, según la cantidad de acumulaciones de Arcano, Cisne Negro activa efectos adicionales.",
       "type": "Talento",
       "tag": "Alteración",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcano",
+          "desc": "Arcano es un estado negativo de Daño con el tiempo. Este estado no se puede eliminar.\nCuando está afectada por el estado de Arcano, la unidad también se considera como afectada por Intemperie. En el estado de Arcano, el objetivo recibe Daño de Viento con el tiempo al principio de cada turno.\nAl infligir Arcano, se ignora la RES a Intemperie, la RES a Sangrado, la RES a Quemadura y la RES a Electrocución del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1531,6 +1628,32 @@
       "simpleDesc": "Tras usar la técnica, al comenzar la siguiente batalla, hay una gran probabilidad de aplicar Arcano a cada objetivo repetidamente hasta que no se pueda aplicar.",
       "type": "Técnica",
       "tag": "Potenciación",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcano",
+          "desc": "Arcano es un estado negativo de Daño con el tiempo. Este estado no se puede eliminar.\nCuando está afectada por el estado de Arcano, la unidad también se considera como afectada por Intemperie. En el estado de Arcano, el objetivo recibe Daño de Viento con el tiempo al principio de cada turno.\nAl infligir Arcano, se ignora la RES a Intemperie, la RES a Sangrado, la RES a Quemadura y la RES a Electrocución del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1548,37 +1671,121 @@
       "_id": 130701,
       "id": "seven_pillars_of_wisdom",
       "name": "Siete pilares de sabiduría",
-      "desc": "Cuando Cisne Negro está activa en la batalla, la RES a Viento, Físico, Fuego o Rayo de los enemigos afectados por Intemperie, Sangrado, Quemadura o Electrocución, respectivamente, se reduce en un <nobr>25%</nobr>."
+      "desc": "Cuando Cisne Negro está activa en la batalla, la RES a Viento, Físico, Fuego o Rayo de los enemigos afectados por Intemperie, Sangrado, Quemadura o Electrocución, respectivamente, se reduce en un <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130702,
       "id": "weep_not_for_me_my_lamb",
       "name": "No llores por mí, cordero",
-      "desc": "Cuando se elimina a un enemigo afectado por <u>Arcano</u>, hay una <u>probabilidad base</u> del <nobr>100%</nobr> de aplicar <nobr>6</nobr> acumulaciones de <u>Arcano</u> a los objetivos adyacentes."
+      "desc": "Cuando se elimina a un enemigo afectado por <u>Arcano</u>, hay una <u>probabilidad base</u> del <nobr>100%</nobr> de aplicar <nobr>6</nobr> acumulaciones de <u>Arcano</u> a los objetivos adyacentes.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcano",
+          "desc": "Arcano es un estado negativo de Daño con el tiempo. Este estado no se puede eliminar.\nCuando está afectada por el estado de Arcano, la unidad también se considera como afectada por Intemperie. En el estado de Arcano, el objetivo recibe Daño de Viento con el tiempo al principio de cada turno.\nAl infligir Arcano, se ignora la RES a Intemperie, la RES a Sangrado, la RES a Quemadura y la RES a Electrocución del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130703,
       "id": "as_above_so_below",
       "name": "Como arriba, así es abajo",
-      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>)."
+      "desc": "Niv. de habilidad básica +2 (máximo: nivel <nobr>15</nobr>). Niv. de talento +2 (máximo: nivel <nobr>15</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130704,
       "id": "in_tears_we_gift",
       "name": "Regalo de lágrimas",
-      "desc": "En el estado de Desvelación, la RES a efecto de los objetivos enemigos se reduce en un <nobr>10%</nobr> y Cisne Negro recupera <nobr>8</nobr> pts. de energía al comienzo de cada turno de los enemigos afectados por Desvelación o cuando un enemigo afectado es eliminado. El efecto de recuperación de energía solo se puede activar 1 vez mientras dure Desvelación. El contador de activaciones se actualiza cuando se vuelve a aplicar Desvelación."
+      "desc": "En el estado de Desvelación, la RES a efecto de los objetivos enemigos se reduce en un <nobr>10%</nobr> y Cisne Negro recupera <nobr>8</nobr> pts. de energía al comienzo de cada turno de los enemigos afectados por Desvelación o cuando un enemigo afectado es eliminado. El efecto de recuperación de energía solo se puede activar 1 vez mientras dure Desvelación. El contador de activaciones se actualiza cuando se vuelve a aplicar Desvelación.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130705,
       "id": "linnutee_flyway",
       "name": "Estrellas migratorias",
-      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>)."
+      "desc": "Niv. de habilidad definitiva +2 (máximo: nivel <nobr>15</nobr>). Niv. de ATQ básico +1 (máximo: nivel <nobr>10</nobr>).",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130706,
       "id": "pantheon_merciful_masses_pitiful",
       "name": "Dioses buenos, plebe desgraciada",
-      "desc": "Cuando los compañeros de equipo de Cisne Negro atacan a un enemigo, Cisne Negro tiene una <u>probabilidad base</u> del <nobr>65%</nobr> de aplicar 1 acumulación de <u>Arcano</u> a ese objetivo.\nCada vez que Cisne Negro aplica <u>Arcano</u> a un objetivo, hay una <u>probabilidad fija</u> del <nobr>50%</nobr> de que la cantidad de acumulaciones de <u>Arcano</u> aplicadas esta vez aumente en <nobr>1</nobr>."
+      "desc": "Cuando los compañeros de equipo de Cisne Negro atacan a un enemigo, Cisne Negro tiene una <u>probabilidad base</u> del <nobr>65%</nobr> de aplicar 1 acumulación de <u>Arcano</u> a ese objetivo.\nCada vez que Cisne Negro aplica <u>Arcano</u> a un objetivo, hay una <u>probabilidad fija</u> del <nobr>50%</nobr> de que la cantidad de acumulaciones de <u>Arcano</u> aplicadas esta vez aumente en <nobr>1</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11307,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Probabilidad base",
+          "desc": "La probabilidad base es la probabilidad que tiene el personaje de infligir un estado negativo.\nLa probabilidad final depende del acierto de efecto del atacante y la RES a efecto del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10013071,
+          "name": "Arcano",
+          "desc": "Arcano es un estado negativo de Daño con el tiempo. Este estado no se puede eliminar.\nCuando está afectada por el estado de Arcano, la unidad también se considera como afectada por Intemperie. En el estado de Arcano, el objetivo recibe Daño de Viento con el tiempo al principio de cada turno.\nAl infligir Arcano, se ignora la RES a Intemperie, la RES a Sangrado, la RES a Quemadura y la RES a Electrocución del objetivo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000002,
+          "name": "Probabilidad fija",
+          "desc": "La probabilidad fija no se ve afectada por ningún factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1412,
   "id": "cerydra",
   "name": "Cerydra",
+  "description": "Đế quốc phương Bắc, một vương triều đã lụi tàn, vùng lãnh thổ băng giá vẫn rực cháy tham vọng chinh phạt.\nQuân chủ Cerydra, Hậu Duệ Chrysos nắm giữ Ngọn Lửa \"Luật Pháp\", cô đã sắp đặt thế cờ, đối đầu với các vị thần, phán quyết những kẻ tội đồ mang tâm tư phản nghịch và từ đó đặt nền móng cho đại nghiệp Săn Đuổi Lửa của thế giới này.\n- \"Đây tuyệt đối không phải là điểm kết thúc, hành trình chinh phục của Amphoreus sẽ rực sáng xuyên qua trời sao vũ trụ!\"",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Phong cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,40 @@
       "simpleDesc": "Khiến nhân vật phe ta nhận được Quân Công và khiến Cerydra nhận được Nạp Năng Lượng. Khi Nạp Năng Lượng đạt #4[i] điểm, sẽ tự động khiến Quân Công của nhân vật tăng cấp thành Tước Vị. Tăng sát thương bạo kích của sát thương Chiến Kỹ và Xuyên Kháng Toàn Thuộc Tính mà nhân vật có Tước Vị gây ra, đồng thời có thể kích hoạt Đột Kích.",
       "type": "Chiến Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000011,
+          "name": "Hiệu Ứng Xấu Loại Khống Chế",
+          "desc": "Đóng Băng, Nhiễu Loạn, Giam Cầm, Chi Phối, Bạo Nộ, Chấn Động Mạnh Mẽ, Dị Mộng, Cầm Tù Quấy Nhiễu, Kinh Hãi, Khóa Hành Động.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000023,
+          "name": "Đột Kích",
+          "desc": "Sao chép 1 lần kỹ năng sắp thi triển đồng thời thi triển trước, sau đó thi triển kỹ năng vốn có.\nĐột Kích sẽ không kích hoạt Đột Kích một lần nữa.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -773,6 +817,15 @@
       "simpleDesc": "Nhận Nạp Năng Lượng. Gây Sát Thương Phong cho toàn bộ phe địch.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,32 @@
       "simpleDesc": "Tăng Tấn Công của nhân vật có \"Quân Công\", đồng thời khi thi triển Tấn Công Thường hoặc Chiến Kỹ sẽ khiến Cerydra nhận được Nạp Năng Lượng. Sau khi nhân vật có \"Quân Công\" tấn công, Cerydra sẽ gây thêm lượng nhỏ Sát Thương Phong Kèm Theo.",
       "type": "Thiên Phú",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000023,
+          "name": "Đột Kích",
+          "desc": "Sao chép 1 lần kỹ năng sắp thi triển đồng thời thi triển trước, sau đó thi triển kỹ năng vốn có.\nĐột Kích sẽ không kích hoạt Đột Kích một lần nữa.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1421,6 +1500,15 @@
       "simpleDesc": "Khiến nhân vật đang hành động nhận được \"Quân Công\", khi trận chiến tiếp theo bắt đầu sẽ tự động thi triển Chiến Kỹ lên nhân vật có \"Quân Công\".",
       "type": "Bí Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,37 +1523,96 @@
       "_id": 141201,
       "id": "seize_the_crowns_of_all",
       "name": "Đoạt Lấy Tất Cả Vương Miện",
-      "desc": "Nhân vật có \"Quân Công\" khi gây sát thương sẽ bỏ qua <nobr>16%</nobr> Phòng Thủ của mục tiêu. Nếu \"Quân Công\" hiện tại đã tăng cấp thành \"Tước Vị\", thì nhân vật này khi gây sát thương Chiến Kỹ sẽ bỏ qua thêm <nobr>20%</nobr> Phòng Thủ của mục tiêu. Khi Cerydra thi triển Chiến Kỹ, sẽ hồi <nobr>2</nobr> điểm Năng Lượng cho mục tiêu chỉ định của phe ta."
+      "desc": "Nhân vật có \"Quân Công\" khi gây sát thương sẽ bỏ qua <nobr>16%</nobr> Phòng Thủ của mục tiêu. Nếu \"Quân Công\" hiện tại đã tăng cấp thành \"Tước Vị\", thì nhân vật này khi gây sát thương Chiến Kỹ sẽ bỏ qua thêm <nobr>20%</nobr> Phòng Thủ của mục tiêu. Khi Cerydra thi triển Chiến Kỹ, sẽ hồi <nobr>2</nobr> điểm Năng Lượng cho mục tiêu chỉ định của phe ta.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141202,
       "id": "forge_the_dreams_of_many",
       "name": "Quy Tụ Ý Nguyện Muôn Dân",
-      "desc": "Sát thương do nhân vật có \"Quân Công\" gây ra tăng <nobr>40%</nobr>. Khi trong trận có đồng đội sở hữu \"Quân Công\", Sát Thương Cerydra gây ra tăng <nobr>160%</nobr>."
+      "desc": "Sát thương do nhân vật có \"Quân Công\" gây ra tăng <nobr>40%</nobr>. Khi trong trận có đồng đội sở hữu \"Quân Công\", Sát Thương Cerydra gây ra tăng <nobr>160%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141203,
       "id": "torch_the_laws_of_old",
       "name": "Thiêu Rụi Luật Lệ Cũ",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141204,
       "id": "remake_the_realms_of_men",
       "name": "Tái Tạo Thế Giới",
-      "desc": "Bội Số Sát Thương của Tuyệt Kỹ tăng <nobr>240%</nobr>."
+      "desc": "Bội Số Sát Thương của Tuyệt Kỹ tăng <nobr>240%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141205,
       "id": "help_and_hurt_repaid_in_full",
       "name": "Ân Và Thù, Tất Cả Đều Trả Đủ",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141206,
       "id": "a_journey_set_starward",
       "name": "Hành Trình Chỉ Có Trời Sao Và Biển Cả",
-      "desc": "<u>Xuyên Kháng</u> toàn thuộc tính của nhân vật có \"Quân Công\" tăng <nobr>20%</nobr>, và Bội Số <u>Sát Thương Kèm Theo</u> mà \"Quân Công\" kích hoạt tăng <nobr>300%</nobr>. Khi trong trận có đồng đội sở hữu \"Quân Công\", <u>Xuyên Kháng</u> toàn thuộc tính của Cerydra tăng <nobr>20%</nobr>."
+      "desc": "<u>Xuyên Kháng</u> toàn thuộc tính của nhân vật có \"Quân Công\" tăng <nobr>20%</nobr>, và Bội Số <u>Sát Thương Kèm Theo</u> mà \"Quân Công\" kích hoạt tăng <nobr>300%</nobr>. Khi trong trận có đồng đội sở hữu \"Quân Công\", <u>Xuyên Kháng</u> toàn thuộc tính của Cerydra tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11412,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

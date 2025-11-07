@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "Castorice",
+  "description": "Aidonia, terre de neige qui vénère et révère la mort, s'est déjà laissée glisser dans un doux sommeil.\nÔ Castorice, fille de la Rivière des âmes, Héritière chryséenne en quête de la flamme divine de la « Mort », mets-toi en route ! Protège la lamentation des âmes en ce monde, et embrasse la solitude du destin.\n— La vie comme la mort sont un voyage. Quand un papillon se pose sur cette branche morte, ce qui était fané renaît.",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "Inflige des DGT quantiques mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Consomme une partie des PV de tous les alliés. Inflige des DGT quantiques à un ennemi unique et des DGT quantiques mineurs aux cibles adjacentes.",
       "type": "Compétence",
       "tag": "Propagation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "Invoque le mnémesprit Aile du néant, avance son action de 100 % et déploie un territoire qui diminue toutes les RÉS de type de tous les ennemis.",
       "type": "Ultime",
       "tag": "Invocation",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Territoire",
+          "desc": "Les effets d'un territoire sont uniques sur le champ de bataille. Tant qu'un territoire est actif, les autres capacités avec des effets de territoire ne peuvent pas être utilisées.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1094,9 +1147,18 @@
       "id": "desolation_across_palms",
       "name": "Désolation des paumes",
       "desc": "Le maximum de points de Nouvelle pousse dépend des niveaux de tous les personnages présents sur le champ de bataille. Pour chaque PV perdu par un allié, Castorice obtient 1 point de Nouvelle pousse. Lorsque Nouvelle pousse atteint son nombre de points maximum, l'ultime de Castorice peut être déclenché. Lorsqu'un allié perd des PV, les DGT infligés par Castorice et Aile du néant augmentent de #2[i]%. Cet effet peut être cumulé jusqu'à #3[i] fois et dure #4[i] tours.\nLorsqu'Aile du néant est sur le champ de bataille, Castorice ne peut plus obtenir de points de Nouvelle pousse via son talent et chaque PV perdu par tous les alliés (à l'exception d'Aile du néant) est converti en un montant équivalent de PV pour Aile du néant.",
-      "simpleDesc": "Lorsqu'un allié perd des PV, Castorice obtient des points de Nouvelle pousse, et les DGT infligés par Castorice et Aile du néant augmentent. Lorsque Nouvelle pousse atteint son nombre de points maximum, l'ultime de Castorice peut être déclenché. Lorsqu'Aile du néant est sur le champ de bataille, les PV perdus par les unités alliées (à l'exception d'Aile du néant) sont convertis en un montant équivalent de PV pour Aile du néant.",
+      "simpleDesc": "Lorsque les alliés perdent des PV, Castorice obtient des points de Nouvelle pousse, et les DGT infligés par Castorice et Aile du néant augmentent. Lorsque Nouvelle pousse atteint sa limite maximum, l'ultime peut être déclenché. Lorsqu'Aile du néant est sur le terrain, les PV perdus par les unités alliées (à l'exception d'Aile du néant) sont convertis en un montant équivalent de PV pour Aile du néant.",
       "type": "Talent",
       "tag": "Renforcement",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "Après avoir utilisé la technique, entre dans l'état Brouillard du néant pendant #3[i] secondes. Tant que le Brouillard du néant est actif, les ennemis ne peuvent pas s'approcher activement de Castorice.\nAttaquer volontairement un ennemi dans l'état Brouillard du néant engage le combat contre tous les ennemis à portée, invoque le mnémesprit Aile du néant, avance son action de 100 % et crée le territoire Royaume du néant. Aile du néant commence avec un montant de PV équivalent à #2[i]% du maximum de points de Nouvelle pousse. D'autre part, consomme #1[i]% des PV actuels de tous les alliés en début de combat (à l'exception d'Aile du néant).\nSi Aile du néant n'est pas invoqué après l'entrée en combat, Castorice obtient un montant de points de Nouvelle pousse équivalent à #4[i]% du maximum de points de Nouvelle pousse.",
       "simpleDesc": "Entre dans l'état Brouillard du néant, ce qui empêche les ennemis de s'approcher activement de Castorice.\nAttaquer des ennemis dans l'état Brouillard du néant engage le combat contre tous les ennemis à portée. D'autre part, invoque le mnémesprit Aile du néant et avance son action de 100 %. Consomme une partie des PV de tous les alliés en début de combat (à l'exception d'Aile du néant).\nSi Aile du néant n'est pas invoqué après l'entrée en combat, Castorice obtient un montant de points de Nouvelle pousse équivalent à #4[i]% du maximum de points de Nouvelle pousse.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "Invocation de mnémesprit",
+          "desc": "Invoque le mnémesprit sur le champ de bataille. Si le mnémesprit est déjà sur le champ de bataille, dissipe tous les malus de contrôle dont souffre le mnémesprit.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "Territoire",
+          "desc": "Les effets d'un territoire sont uniques sur le champ de bataille. Tant qu'un territoire est actif, les autres capacités avec des effets de territoire ne peuvent pas être utilisées.",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Pollux, Aile du néant",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "Griffe lacérante de ténèbres",
+        "desc": "Inflige des DGT quantiques équivalents à <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> des PV max de Castorice à tous les ennemis.",
+        "simpleDesc": "Inflige des DGT quantiques mineurs à tous les ennemis.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ZdE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "Souffle des ombres",
+        "desc": "Utiliser Souffle des ombres consomme <nobr>#1[i]%</nobr> des PV max d'Aile du néant et inflige des DGT quantiques équivalents à <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> des PV max de Castorice à tous les ennemis.\nSouffle des ombres peut être utilisé plusieurs fois lors d'une même attaque, auquel cas le multiplicateur de DGT augmente progressivement jusqu'à <span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span> / <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>. Une fois atteint <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>, il n'augmente plus. L'effet d'augmentation du multiplicateur de DGT ne diminue pas avant qu'Aile du néant disparaisse.\nLorsque les PV actuels d'Aile du néant sont inférieurs ou égaux à <nobr>#5[i]%</nobr> de ses PV max, utiliser cette capacité réduit automatiquement les PV à 1 puis déclenche des effets équivalents à ceux du talent Ailes ravageuses de ruines.",
+        "simpleDesc": "Consomme les PV de cette unité pour infliger des DGT quantiques à tous les ennemis, sans mettre fin au tour. Lorsque cette capacité est utilisée de manière répétée, elle est renforcée jusqu'à 3 fois. Lorsque les PV sont inférieurs ou égaux à <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, utiliser cette capacité déclenche les effets du talent du mnémesprit Ailes ravageuses de ruines.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ZdE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "Enveloppe du Cocon lunaire",
+        "desc": "Lorsqu'Aile du néant est sur le champ de bataille, il agit comme une <u>réserve de PV</u> pour les alliés. Lorsque les alliés subissent des DGT ou qu'ils consomment des PV, leurs PV ne peuvent pas descendre en dessous de 1, après quoi les PV consommés sont transférés à Aile du néant à hauteur de <nobr>#1[i]%</nobr> de la valeur initiale, et ce jusqu'à ce qu'Aile du néant disparaisse.",
+        "simpleDesc": "Lorsqu'Aile du néant est sur le champ de bataille, il agit comme une <u>réserve de PV</u> pour les alliés. Les PV actuels des alliés ne peuvent pas descendre en dessous de 1, après quoi les DGT subis ou la consommation de PV sont transférés à Aile du néant.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Soutien"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "Réserve de PV",
+            "desc": "Les unités qui font office de réserve de PV ne peuvent pas être ciblées activement par les ennemis. Les capacités de type propagation des alliés ne peuvent pas se propager aux unités de réserve de PV.",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "Hurlement du royaume de la désolation",
+        "desc": "Augmente les DGT infligés par tous les alliés de <nobr>#1[i]%</nobr> pendant <nobr>#2[i]</nobr> tours lorsqu'Aile du néant est invoqué.",
+        "simpleDesc": "Augmente les DGT infligés par tous les alliés lors de son invocation.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "Soutien"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "Ailes ravageuses de ruines",
+        "desc": "À la disparition d'Aile du néant, inflige <nobr>#2[i]</nobr> instances de DGT, chaque instance infligeant des DGT quantiques équivalents à <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> des PV max de Castorice à une unité ennemie aléatoire. D'autre part, restaure un montant de PV équivalent à <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> des PV max de Castorice + <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span> à tous les alliés.",
+        "simpleDesc": "Inflige <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> instances de DGT quantiques mineurs à une unité ennemie unique en disparaissant, et restaure des PV à tous les alliés.",
+        "type": {
+          "name": "Talent du mnémesprit"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Rebond"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "Souffle des ombres",
+        "desc": "",
+        "simpleDesc": "Consomme les PV de cette unité pour infliger des DGT quantiques à tous les ennemis, sans mettre fin au tour. Lorsque cette capacité est utilisée de manière répétée, elle est renforcée jusqu'à 3 fois. Lorsque les PV sont inférieurs ou égaux à <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, utiliser cette capacité déclenche les effets du talent du mnémesprit Ailes ravageuses de ruines.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ZdE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "Souffle des ombres",
+        "desc": "",
+        "simpleDesc": "Consomme les PV de cette unité pour infliger des DGT quantiques à tous les ennemis, sans mettre fin au tour. Lorsque cette capacité est utilisée de manière répétée, elle est renforcée jusqu'à 3 fois. Lorsque les PV sont inférieurs ou égaux à <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span>, utiliser cette capacité déclenche les effets du talent du mnémesprit Ailes ravageuses de ruines.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "ZdE"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "Ailes ravageuses de ruines",
+        "desc": "Consomme tous les PV pour infliger <nobr>#2[i]</nobr> instances de DGT, chaque instance infligeant des DGT quantiques équivalents à <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> des PV max de Castorice à une unité ennemie aléatoire. D'autre part, restaure un montant de PV équivalent à <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span> des PV max de Castorice + <span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span> à tous les alliés.",
+        "simpleDesc": "Consomme tous les PV pour infliger des DGT quantiques mineurs à une unité ennemie unique qui rebondissent <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span> fois, et restaure des PV à tous les alliés.",
+        "type": {
+          "id": "Servant",
+          "name": "Compétence du mnémesprit"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "Rebond"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "Demoiselle des terres glacées",
-      "desc": "Lorsque les PV actuels de la cible ennemie sont inférieurs ou égaux à <nobr>80%</nobr>/<nobr>50%</nobr> des PV max de cette unité, les DGT infligés par Étreinte du dragon funeste, Griffe lacérante de ténèbres, Souffle des ombres et Ailes ravageuses de ruines sont équivalents à <nobr>120%</nobr>/<nobr>140%</nobr> des DGT initiaux."
+      "desc": "Lorsque les PV actuels de la cible ennemie sont inférieurs ou égaux à <nobr>80%</nobr>/<nobr>50%</nobr> des PV max de cette unité, les DGT infligés par Étreinte du dragon funeste, Griffe lacérante de ténèbres, Souffle des ombres et Ailes ravageuses de ruines sont équivalents à <nobr>120%</nobr>/<nobr>140%</nobr> des DGT initiaux.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "Couronne des ailes battantes",
-      "desc": "Après avoir invoqué le mnémesprit Aile du néant, Castorice obtient <nobr>2</nobr> cumuls d'Ardeur des flammes. Castorice peut bénéficier d'un maximum de <nobr>2</nobr> cumuls d'Ardeur des flammes, et ces cumuls peuvent être utilisés pour compenser la consommation de PV d'Aile du néant lors de l'utilisation de la compétence du mnémesprit Souffle des ombres tout en <u>avançant l'action</u> de Castorice de <nobr>100</nobr> %. Lors de la prochaine utilisation de la compétence renforcée, Castorice obtient un nombre de points de Nouvelle pousse équivalent à <nobr>30%</nobr> des points de Nouvelle pousse maximum."
+      "desc": "Après avoir invoqué le mnémesprit Aile du néant, Castorice obtient <nobr>2</nobr> cumuls d'Ardeur des flammes. Castorice peut bénéficier d'un maximum de <nobr>2</nobr> cumuls d'Ardeur des flammes, et ces cumuls peuvent être utilisés pour compenser la consommation de PV d'Aile du néant lors de l'utilisation de la compétence du mnémesprit Souffle des ombres tout en <u>avançant l'action</u> de Castorice de <nobr>100</nobr> %. Lors de la prochaine utilisation de la compétence renforcée, Castorice obtient un nombre de points de Nouvelle pousse équivalent à <nobr>30%</nobr> des points de Nouvelle pousse maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Action avancée",
+          "desc": "Réduit le temps d'attente avant la prochaine action de la cible.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "Pèlerinage au royaume des morts",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.\nNiv. de talent du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "Repos de l'élégie",
-      "desc": "Lorsque Castorice est sur le champ de bataille, augmente de <nobr>20%</nobr> les PV restaurés par les alliés recevant des soins."
+      "desc": "Lorsque Castorice est sur le champ de bataille, augmente de <nobr>20%</nobr> les PV restaurés par les alliés recevant des soins.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "Nouveau chapitre de la prophétie",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum."
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de compétence du mnémesprit +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "Déferlement du temps",
-      "desc": "Lorsque Castorice ou Aile du néant infligent des DGT, la <u>PÉN de RÉS</u> quantique augmente de <nobr>20%</nobr>. Lorsqu'Aile du néant attaque, il peut ignorer le type de faiblesse et réduire la robustesse des ennemis. Lorsqu'il déclenche une Rupture de faiblesse, l'effet de Rupture de faiblesse quantique s'active, et le nombre de rebonds de son talent Ailes ravageuses de ruines augmente de <nobr>3</nobr>."
+      "desc": "Lorsque Castorice ou Aile du néant infligent des DGT, la <u>PÉN de RÉS</u> quantique augmente de <nobr>20%</nobr>. Lorsqu'Aile du néant attaque, il peut ignorer le type de faiblesse et réduire la robustesse des ennemis. Lorsqu'il déclenche une Rupture de faiblesse, l'effet de Rupture de faiblesse quantique s'active, et le nombre de rebonds de son talent Ailes ravageuses de ruines augmente de <nobr>3</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "PÉN de RÉS",
+          "desc": "Lorsque vous infligez des DGT, ignore une partie de la résistance de la cible ennemie correspondant au type de dégâts.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

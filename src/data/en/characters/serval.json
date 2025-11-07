@@ -2,6 +2,7 @@
   "_id": 1103,
   "id": "serval",
   "name": "Serval",
+  "description": "A Belobog mechanic who used to be a researcher for the Technology Division of the Architects.\nAs Gepard Landau's elder sister, her personality stands in stark contrast to her brother's.\nShe loves an ancient form of music known as \"rock 'n' roll\" that was popular before the Eternal Freeze.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -243,10 +244,22 @@
       "_id": 110301,
       "id": "roaring_thunderclap",
       "name": "Roaring Thunderclap",
-      "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to a single enemy.",
-      "simpleDesc": "Deals minor Lightning DMG to a single enemy.",
+      "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to one designated enemy.",
+      "simpleDesc": "Deals minor Lightning DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -415,10 +428,28 @@
       "_id": 110302,
       "id": "lightning_flash",
       "name": "Lightning Flash",
-      "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to a single enemy and Lightning DMG equal to #2[i]% of Serval's ATK to enemies adjacent to it, with a #3[i]% base chance for enemies hit to become Shocked for #4[i] turn(s).\nWhile Shocked, enemies take Lightning DoT equal to #5[i]% of Serval's ATK at the beginning of each turn.",
+      "desc": "Deals Lightning DMG equal to #1[i]% of Serval's ATK to one designated enemy and Lightning DMG equal to #2[i]% of Serval's ATK to enemies adjacent to it, with a #3[i]% base chance for enemies hit to become Shocked for #4[i] turn(s).\nWhile Shocked, enemies take Lightning DoT equal to #5[i]% of Serval's ATK at the beginning of each turn.",
       "simpleDesc": "Deals Lightning DMG to one enemy and minor Lightning DMG to adjacent targets, with a high chance of applying Shock on the target.",
       "type": "Skill",
       "tag": "Blast",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +798,18 @@
       "simpleDesc": "Deals Lightning DMG to all enemies and increases the duration of Shock.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 28
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1113,24 @@
       "simpleDesc": "After attacking, deals a minor amount of Additional DMG to all Shocked enemies.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1357,6 +1418,24 @@
       "desc": "Immediately attacks the enemy. After entering battle, deals Lightning DMG equal to #4[i]% of Serval's ATK to a random enemy, with a #1[i]% base chance for all enemies to become Shocked for #3[i] turn(s).\nWhile Shocked, enemies will take Lightning DoT equal to #2[i]% of Serval's ATK at the beginning of each turn.",
       "simpleDesc": "Attacks the enemy. After entering battle, deals minor Lightning DMG to a random single enemy, with a high chance to Shock all enemy targets.",
       "type": "Technique",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1376,37 +1455,97 @@
       "_id": 110301,
       "id": "echo_chamber",
       "name": "Echo Chamber",
-      "desc": "Basic ATK deals Lightning DMG equal to <nobr>60%</nobr> of Basic ATK DMG to a random target adjacent to the target enemy."
+      "desc": "Basic ATK deals Lightning DMG equal to <nobr>60%</nobr> of Basic ATK DMG to a random target adjacent to the target enemy.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110302,
       "id": "encore",
       "name": "Encore!",
-      "desc": "Every time Serval's Talent is triggered to deal <u>Additional DMG</u>, she regenerates <nobr>4</nobr> Energy."
+      "desc": "Every time Serval's Talent is triggered to deal <u>Additional DMG</u>, she regenerates <nobr>4</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110303,
       "id": "listen_the_heartbeat_of_the_gears",
       "name": "Listen, the Heartbeat of the Gears",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110304,
       "id": "make_some_noise",
       "name": "Make Some Noise!",
-      "desc": "Ultimate has a <nobr>100%</nobr> <u>base chance</u> to apply Shock to any enemies not currently Shocked. This Shock has the same effects as the one applied by Skill."
+      "desc": "Ultimate has a <nobr>100%</nobr> <u>base chance</u> to apply Shock to any enemies not currently Shocked. This Shock has the same effects as the one applied by Skill.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110305,
       "id": "belobogs_loudest_roar",
       "name": "Belobog's Loudest Roar!",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110306,
       "id": "this_song_rocks_to_heaven",
       "name": "This Song Rocks to Heaven!",
-      "desc": "Serval deals <nobr>30%</nobr> more DMG to Shocked enemies."
+      "desc": "Serval deals <nobr>30%</nobr> more DMG to Shocked enemies.",
+      "unlockCost": [
+        {
+          "ItemID": 11103,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "Hyacine",
+  "description": "นครกลางเมฆาสลายไปตามกาลเวลา ลานแสงสนธยาเปิดประตูขึ้นอีกครา เพื่อนำแสงริบหรี่มาสู่ราตรีนิรันดร์\nผู้เยียวยา Hyacinthia ผู้สืบสายโลหิตทอง ที่คอยเฝ้ามองเชื้อไฟแห่ง \"ท้องนภา\" จงสืบทอดเจตจำนงแห่งบรรพชน และผสานรอยแตกร้าวของอรุณสนธยา\n...ขอให้แสงรุ้งสาดส่อง ความแค้นเคืองจางหาย และรุ่งอรุณหวนคืนสู่ผืนดินอีกครั้ง",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "สร้าง DMG ลมเล็กน้อย แก่ฝ่ายศัตรูหนึ่งตัว",
       "type": "โจมตีปกติ",
       "tag": "โจมตีเดี่ยว",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "อัญเชิญภูตความทรงจำ \"Ica น้อย\" และฟื้นฟู HP ให้กับฝ่ายเราทั้งหมด",
       "type": "สกิลต่อสู้",
       "tag": "ฟื้นฟู",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "อัญเชิญภูตความทรงจำ",
+          "desc": "อัญเชิญภูตความทรงจำเข้ามาในการต่อสู้ ทั้งนี้หากภูตความทรงจำ อยู่ในการต่อสู้อยู่แล้ว ก็จะลบล้างสถานะ Debuff ประเภทควบคุมทั้งหมด ที่ภูตความทรงจำติดอยู่",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "อัญเชิญภูตความทรงจำ \"Ica น้อย\" และฟื้นฟู HP ให้กับฝ่ายเราทั้งหมด พร้อมทั้งเข้าสู่สถานะ \"ฟ้าหลังฝน\" ซึ่งเมื่อ Hyacine อยู่ในสถานะดังกล่าว จะทำให้ HP สูงสุด ของฝ่ายเราทั้งหมดเพิ่มขึ้น",
       "type": "ท่าไม้ตาย",
       "tag": "สนับสนุน",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "อัญเชิญภูตความทรงจำ",
+          "desc": "อัญเชิญภูตความทรงจำเข้ามาในการต่อสู้ ทั้งนี้หากภูตความทรงจำ อยู่ในการต่อสู้อยู่แล้ว ก็จะลบล้างสถานะ Debuff ประเภทควบคุมทั้งหมด ที่ภูตความทรงจำติดอยู่",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "เมื่อ Hyacine หรือ Ica น้อยมอบการรักษา Ica น้อยจะสร้าง DMG เพิ่มขึ้น",
       "type": "พรสวรรค์",
       "tag": "เสริมพลัง",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "เมื่อเริ่มการต่อสู้ครั้งต่อไป จะฟื้นฟู HP ให้กับฝ่ายเราทั้งหมด และทำให้ HP สูงสุดเพิ่มขึ้น",
       "type": "เทคนิค",
       "tag": "ฟื้นฟู",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "Ica น้อย",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "Rainclouds, Time to Go!",
+        "desc": "สร้าง DMG ลมแก่ศัตรูทั้งหมดเท่ากับ <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span> ของค่าการรักษาสะสมของ Hyacine และ Ica น้อยในการต่อสู้ครั้งนี้ และจะล้างค่าการรักษาสะสม <nobr>#2[i]%</nobr>",
+        "simpleDesc": "สร้าง DMG ลม แก่ศัตรูทั้งหมด",
+        "type": {
+          "id": "Servant",
+          "name": "ทักษะภูต"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "โจมตีหมู่"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "Take Sky in Hand",
+        "desc": "ความเร็วของ Ica น้อยจะคงอยู่ที่ 0 และจะต้านทาน <u>เอฟเฟกต์ Debuff</u> อีกทั้งจะไม่ปรากฏบนลำดับแอ็กชัน\nหากเป้าหมายฝ่ายเรายกเว้น Ica น้อยมี HP ลดลง เมื่อเริ่มต้นเทิร์นของเป้าหมายตัวใดก็ตาม หรือหลังจากตัวดังกล่าวแอ็กชันแล้ว Ica น้อยจะใช้ HP <nobr>#1[i]%</nobr> ของ HP สูงสุดของตัวเอง และฟื้นฟู HP ให้กับเป้าหมายฝ่ายเราที่ HP ลดลง เท่ากับ <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span> ของ HP สูงสุดของ Hyacine +<span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span>\nเมื่อ Hyacine อยู่ในสถานะ \"ฟ้าหลังฝน\" หลังจาก Hyacine ปล่อยสกิลแล้ว Ica น้อยจะได้รับ <u>เทิร์นเพิ่มเติม</u> 1 เทิร์นทันที และปล่อย \"Rainclouds, Time to Go!\" โดยอัตโนมัติ เมื่อ Ica น้อยปล่อยเอฟเฟกต์รักษาของพรสวรรค์ จะฟื้นฟู HP ให้กับเป้าหมายฝ่ายเราทั้งหมดเพิ่มอีก <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span> ของ HP สูงสุดของ Hyacine +<span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span> หลังจาก Ica น้อยปล่อยสกิล จะทำให้จำนวนเทิร์นของ <u>เอฟเฟกต์ต่อเนื่อง</u> ทั้งหมดของตัวเองลดลง 1 เทิร์น",
+        "simpleDesc": "หาก HP ของเป้าหมายฝ่ายเรายกเว้น Ica น้อย<span style=\"color:#f29e38ff> ลดลง</span> Ica น้อยจะใช้ HP ของตัวเอง เพื่อ<span style=\"color:#f29e38ff>ฟื้นฟู HP</span> ให้กับเป้าหมายดังกล่าว เมื่อ Hyacine มี \"ฟ้าหลังฝน\" อยู่ หลังจาก Hyacine ปล่อยสกิลแล้ว Ica น้อย จะได้รับ <u>เทิร์นเพิ่มเติม</u> 1 เทิร์นทันที และปล่อยทักษะภูตความทรงจำโดยอัตโนมัติ หลังจาก Ica น้อยปล่อยสกิล จะทำให้ <u>เอฟเฟกต์ต่อเนื่อง</u> ของตัวเอง ลดจำนวนเทิร์นต่อเนื่องลง 1 เทิร์น",
+        "type": {
+          "name": "พรสวรรค์ภูต"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "ฟื้นฟู"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "เทิร์นเพิ่มเติม",
+            "desc": "ได้รับเทิร์นเพิ่ม 1 เทิร์น โดยไม่เสียจำนวนเทิร์นที่มีอยู่ และไม่สามารถใช้ท่าไม้ตายได้ เมื่ออยู่ในเทิร์นดังกล่าว",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "เอฟเฟกต์ Debuff",
+            "desc": "สถานะต่อเนื่องทั้งหมดที่มีเอฟเฟกต์ Debuff ในการต่อสู้ หากไม่มีคำอธิบายพิเศษ จะสามารถลบล้างได้",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "เอฟเฟกต์ต่อเนื่อง",
+            "desc": "ประกอบด้วยเอฟเฟกต์ Buff, เอฟเฟกต์ Debuff และเอฟเฟกต์อื่นๆ",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "Soar, Unto the Sunlight",
+        "desc": "เมื่อถูกอัญเชิญ จะฟื้นฟูพลังงาน <nobr>#1[i]</nobr> หน่วย ให้กับ Hyacine โดยเมื่อถูกอัญเชิญครั้งแรก จะฟื้นฟูพลังงานเพิ่มอีก <nobr>#2[i]</nobr> หน่วย",
+        "simpleDesc": "เมื่อถูกอัญเชิญ จะฟื้นฟูพลังงานให้กับ Hyacine",
+        "type": {
+          "name": "พรสวรรค์ภูต"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "เสริมพลัง"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "Fall, Then Take Wing",
+        "desc": "เมื่อหายไป จะ<u>เร่งแอ็กชัน</u>ของ Hyacine <nobr>#1[i]%</nobr>",
+        "simpleDesc": "เมื่อหายไป จะ<u>เร่งแอ็กชัน</u>ของ Hyacine",
+        "type": {
+          "name": "พรสวรรค์ภูต"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "เสริมพลัง"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "เร่งแอ็กชัน",
+            "desc": "ลดช่วงเวลารอคอยของเป้าหมาย ก่อนที่จะแอ็กชันครั้งต่อไป",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "Cradle the Candle of Night",
-      "desc": "เมื่อ Hyacine อยู่ในสถานะ \"ฟ้าหลังฝน\" HP สูงสุดของเป้าหมายฝ่ายเราทั้งหมด จะเพิ่มขึ้นอีก <nobr>50%</nobr> และหลังจากทำการโจมตี จะฟื้นฟู HP <nobr>8%</nobr> ของ HP สูงสุดของ Hyacine ทันที"
+      "desc": "เมื่อ Hyacine อยู่ในสถานะ \"ฟ้าหลังฝน\" HP สูงสุดของเป้าหมายฝ่ายเราทั้งหมด จะเพิ่มขึ้นอีก <nobr>50%</nobr> และหลังจากทำการโจมตี จะฟื้นฟู HP <nobr>8%</nobr> ของ HP สูงสุดของ Hyacine ทันที",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "Come Sit in My Courtyard",
-      "desc": "เมื่อ HP ของเป้าหมายฝ่ายเราลดลง ความเร็วจะเพิ่มขึ้น <nobr>30%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น"
+      "desc": "เมื่อ HP ของเป้าหมายฝ่ายเราลดลง ความเร็วจะเพิ่มขึ้น <nobr>30%</nobr> เป็นเวลา <nobr>2</nobr> เทิร์น",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "Depart, Unto the Sun!",
-      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> เลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน\nLv.<nobr>10</nobr> และเลเวลทักษะภูตความทรงจำ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลท่าไม้ตาย +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> เลเวลการโจมตีปกติ +1 สูงสุดไม่เกิน\nLv.<nobr>10</nobr> และเลเวลทักษะภูตความทรงจำ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "Sunlit Amber, Yours to Keep",
-      "desc": "Trace \"Tempestuous Halt\" ได้รับการเสริมพลัง โดยทุกๆ ครั้งที่ความเร็วเกินออกมา <nobr>1</nobr> หน่วย DMG คริติคอลของ Hyacine และ Ica น้อย จะเพิ่มขึ้นอีก <nobr>2%</nobr>"
+      "desc": "Trace \"Tempestuous Halt\" ได้รับการเสริมพลัง โดยทุกๆ ครั้งที่ความเร็วเกินออกมา <nobr>1</nobr> หน่วย DMG คริติคอลของ Hyacine และ Ica น้อย จะเพิ่มขึ้นอีก <nobr>2%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "Twilight Drapes the Tide",
-      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> เลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ภูตความทรงจำ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>"
+      "desc": "เลเวลสกิลต่อสู้ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> เลเวลพรสวรรค์ +2 สูงสุดไม่เกิน Lv.<nobr>15</nobr> และเลเวลพรสวรรค์ภูตความทรงจำ +1 สูงสุดไม่เกิน Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "O Sky, Heed My Plea",
-      "desc": "หลังจากที่ Ica น้อย ปล่อยทักษะภูตความทรงจำ การล้างค่าการรักษาสะสม จะเปลี่ยนเป็น <nobr>12%</nobr> เมื่อ Ica น้อยอยู่ในการต่อสู้ <u>การทะลวงความต้านทาน</u> ทุกประเภทของเป้าหมายฝ่ายเราทั้งหมด จะเพิ่มขึ้น <nobr>20%</nobr>"
+      "desc": "หลังจากที่ Ica น้อย ปล่อยทักษะภูตความทรงจำ การล้างค่าการรักษาสะสม จะเปลี่ยนเป็น <nobr>12%</nobr> เมื่อ Ica น้อยอยู่ในการต่อสู้ <u>การทะลวงความต้านทาน</u> ทุกประเภทของเป้าหมายฝ่ายเราทั้งหมด จะเพิ่มขึ้น <nobr>20%</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "การทะลวงความต้านทาน",
+          "desc": "เมื่อสร้าง DMG ส่วนหนึ่งของค่าความต้านทาน ต่อประเภท DMG ที่เกี่ยวข้อง ของศัตรูเป้าหมายจะไม่มีผล",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

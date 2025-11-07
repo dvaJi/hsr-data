@@ -2,6 +2,7 @@
   "_id": 1210,
   "id": "guinaifen",
   "name": "계네빈",
+  "description": "선주 「나부」에 방문한 행위 예술가——혹은 길거리 예술가\n삼시세끼가 보장된 상황에서 자신의 새로운 삶을 나부에서 추구하고 있다",
   "rarity": 4,
   "combat_type": {
     "id": "fire",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 화염 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "단일 적에게 화염 속성 피해를 주고 인접한 적에게 소량의 화염 속성 피해를 주며, 높은 확률로 연소 상태를 부여한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,18 @@
       "simpleDesc": "모든 적에게 화염 속성 피해를 주고, 적이 연소 상태인 경우 연소 상태는 피해를 1회 추가로 생성한다",
       "type": "필살기",
       "tag": "범위 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "적에게 부여된 연소 상태가 피해를 발동하면, 높은 확률로 적에게 [불쇼] 상태를 부여한다",
       "type": "특성",
       "tag": "방해",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1432,6 +1496,24 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 피해를 #2[i]회 준다. 피해를 가할 때마다 임의의 단일 적에게 계네빈 공격력 #1[i]%만큼의 화염 속성 피해를 주고 #3[i]%의 기본 확률로 목표를 [불쇼] 상태에 빠트린다",
       "simpleDesc": "적을 공격하며, 전투 진입 후 단일 적에게 소량의 화염 속성 피해를 가하고 높은 확률로 [불쇼]  상태를 부여한다. 총 4회 바운스한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1450,37 +1532,88 @@
       "_id": 121001,
       "id": "slurping_noodles_during_handstand",
       "name": "거꾸로 서서 국수 먹기",
-      "desc": "전투 스킬 발동 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 피격된 적의 효과 저항이 <nobr>10%</nobr> 감소한다. 지속 시간: <nobr>2</nobr>턴"
+      "desc": "전투 스킬 발동 시 <nobr>100%</nobr>의 <u>기본 확률</u>로 피격된 적의 효과 저항이 <nobr>10%</nobr> 감소한다. 지속 시간: <nobr>2</nobr>턴",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 121002,
       "id": "brushing_teeth_while_whistling",
       "name": "양치질하면서 휘파람 불기",
-      "desc": "적이 연소 상태면 계네빈의 일반 공격과 전투 스킬이 해당 적에게 부여하는 연소 상태의 피해 배율이 <nobr>40%</nobr> 증가한다"
+      "desc": "적이 연소 상태면 계네빈의 일반 공격과 전투 스킬이 해당 적에게 부여하는 연소 상태의 피해 배율이 <nobr>40%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121003,
       "id": "smashing_boulder_on_chest",
       "name": "가슴에 얹은 바위 깨기",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121004,
       "id": "blocking_pike_with_neck",
       "name": "창으로 목 찌르기",
-      "desc": "계네빈이 부여한 연소 상태 피해가 발동할 때마다 자신의 에너지를 <nobr>2</nobr>pt 회복한다"
+      "desc": "계네빈이 부여한 연소 상태 피해가 발동할 때마다 자신의 에너지를 <nobr>2</nobr>pt 회복한다",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121005,
       "id": "swallowing_sword_to_stomach",
       "name": "허리까지 검 삼키기",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121006,
       "id": "catching_bullet_with_hands",
       "name": "맨손으로 총알 받기",
-      "desc": "[불쇼]의 중첩 가능 스택 수가 <nobr>1</nobr>스택 증가한다"
+      "desc": "[불쇼]의 중첩 가능 스택 수가 <nobr>1</nobr>스택 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11210,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

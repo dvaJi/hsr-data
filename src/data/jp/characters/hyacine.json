@@ -2,6 +2,7 @@
   "_id": 1409,
   "id": "hyacine",
   "name": "ヒアンシー",
+  "description": "雲上の都市国家が時の流れと共に崩れゆこうとも、昏光の庭は再びその扉を開き、永夜に微かな光をもたらした。\n医師ヒアシンシア、「天空」の火種を見守る黄金裔。先祖の意志を継ぎ、引き裂かれた晨昏を繕う者である。\n——願わくば虹色の光が降り注ぎ、すべての怨恨を消し去り、この地に再び黎明をもたらさんことを。",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の風属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,24 @@
       "simpleDesc": "記憶の精霊「イカルン」を召喚し、味方全体のHPを回復する。",
       "type": "戦闘スキル",
       "tag": "回復",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "記憶の精霊を召喚",
+          "desc": "記憶の精霊をフィールドに召喚する。記憶の精霊がフィールド上にいる場合、記憶の精霊に付与されているすべての行動制限系デバフを解除する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +786,24 @@
       "simpleDesc": "記憶の精霊「イカルン」を召喚し、味方全体のHPを回復し、「雨上がり」状態に入る。ヒアンシーがこの状態の時、味方全体の最大HPがアップする。",
       "type": "必殺技",
       "tag": "サポート",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "記憶の精霊を召喚",
+          "desc": "記憶の精霊をフィールドに召喚する。記憶の精霊がフィールド上にいる場合、記憶の精霊に付与されているすべての行動制限系デバフを解除する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1142,6 +1188,15 @@
       "simpleDesc": "ヒアンシーまたは「イカルン」が治癒を行う時、イカルンの与ダメージがアップする。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1496,6 +1551,15 @@
       "simpleDesc": "次の戦闘開始時、味方全体のHPを回復する。また、味方それぞれの最大HPをアップする。",
       "type": "秘技",
       "tag": "回復",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1510,42 +1574,540 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "イカルン",
+    "icon": "SpriteOutput/ServantIconTeam/11409B.png",
+    "hpBase": "0",
+    "hpInherit": "#1",
+    "hpSkill": 140904,
+    "speedBase": "0",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140901,
+        "name": "{RUBY_B#こくうんたいさん}黒雲退散{RUBY_E#}！",
+        "desc": "敵全体に、ヒアンシーと「イカルン」の本戦闘における累計治癒量<span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>分の風属性ダメージを与える。その後、<nobr>#2[i]%</nobr>分の累計治癒量がクリアされる。",
+        "simpleDesc": "敵全体に風属性ダメージを与える。",
+        "type": {
+          "id": "Servant",
+          "name": "精霊スキル"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "全体攻撃"
+        },
+        "spBase": 5,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              0.5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.12,
+              0.5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.14,
+              0.5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.16,
+              0.5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.18,
+              0.5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.2,
+              0.5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.22,
+              0.5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.24,
+              0.5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.26,
+              0.5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.28,
+              0.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140903,
+        "name": "{RUBY_B#あおぞら}青空{RUBY_E#}と{RUBY_B#て}手{RUBY_E#}を{RUBY_B#と}取{RUBY_E#}り{RUBY_B#あ}合{RUBY_E#}って",
+        "desc": "「イカルン」の速度は0に固定され、<u>デバフ効果</u>に抵抗でき、アクションバーにも表示されない。\nイカルン以外の味方のHPが減った場合、イカルンはいずれかの敵または味方のターンが回ってきた時、もしくは行動した後に、自身の最大HP<nobr>#1[i]%</nobr>分のHPを消費し、HPが減った味方のHPをヒアンシーの最大HP<span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>+<span style=\"color:#f29e38ff><nobr>#3[i]</nobr></span>回復する。\nヒアンシーが「雨上がり」状態の時、イカルンはヒアンシーがスキルを発動した後に<u>追加ターン</u>を1獲得し、自動で「黒雲退散！」を発動する。また、イカルンが精霊天賦の治癒効果を発動する時、さらに味方全体のHPをヒアンシーの最大HP<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>+<span style=\"color:#f29e38ff><nobr>#5[i]</nobr></span>回復する。イカルンがスキルを発動した後、自身にあるすべての<u>持続効果</u>の継続ターン数-1。",
+        "simpleDesc": "「イカルン」以外の味方の<span style=\"color:#f29e38ff>HPが減った</span>時、イカルンは自身のHPを消費して、その味方の<span style=\"color:#f29e38ff>HPを回復</span>する。ヒアンシーが「雨上がり」状態の時、イカルンはヒアンシーがスキルを発動した後に<u>追加ターン</u>を1獲得し、自動で精霊スキルを発動する。イカルンがスキルを発動後、自身の<u>持続効果</u>の継続時間-1ターン。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Restore",
+          "name": "回復"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000000,
+            "name": "追加ターン",
+            "desc": "ターン数を消費しない追加ターンを1回獲得する。このターンでは、必殺技を発動できない。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000010,
+            "name": "デバフ",
+            "desc": "戦闘に不利な効果をもたらす持続状態。特殊な説明がない限り解除可能。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          },
+          {
+            "id": 10000022,
+            "name": "持続効果",
+            "desc": "バフ、デバフ、その他の効果が含まれる。",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.04,
+              0.01,
+              10,
+              0.01,
+              10
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.04,
+              0.012,
+              12,
+              0.012,
+              12
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.04,
+              0.0139999995,
+              14,
+              0.0139999995,
+              14
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.04,
+              0.015999999,
+              16,
+              0.015999999,
+              16
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.04,
+              0.018,
+              18,
+              0.018,
+              18
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.04,
+              0.02,
+              20,
+              0.02,
+              20
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.04,
+              0.022,
+              22,
+              0.022,
+              22
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.04,
+              0.024,
+              24,
+              0.024,
+              24
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.04,
+              0.026,
+              26,
+              0.026,
+              26
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.04,
+              0.027999999,
+              28,
+              0.027999999,
+              28
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140905,
+        "name": "{RUBY_B#は}羽{RUBY_E#}ばたけ、{RUBY_B#かがや}輝{RUBY_E#}く{RUBY_B#たいよう}太陽{RUBY_E#}へ",
+        "desc": "召喚された時、ヒアンシーのEPを<nobr>#1[i]</nobr>回復する。戦闘中に初めて召喚された時は、さらにEPを<nobr>#2[i]</nobr>回復する。",
+        "simpleDesc": "召喚された時、ヒアンシーのEPを回復する。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              15,
+              30
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              15,
+              30
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140906,
+        "name": "{RUBY_B#お}墜{RUBY_E#}ちてなお、{RUBY_B#てんくう}天空{RUBY_E#}を{RUBY_B#か}翔{RUBY_E#}けよ",
+        "desc": "退場する時、ヒアンシーの<u>行動順</u>を<nobr>#1[i]%</nobr><u>早める</u>。",
+        "simpleDesc": "退場する時、ヒアンシーの<u>行動順を早める</u>。",
+        "type": {
+          "name": "精霊天賦"
+        },
+        "tag": {
+          "id": "Enhance",
+          "name": "強化"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000001,
+            "name": "行動前倒し",
+            "desc": "対象の次の行動までの間隔が短くなる。",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.3
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140901,
       "id": "cradle_the_candle_of_night",
       "name": "{RUBY_B#やみよ}闇夜{RUBY_E#}の{RUBY_B#とうか}灯火{RUBY_E#}を{RUBY_B#まも}守{RUBY_E#}って",
-      "desc": "ヒアンシーが「雨上がり」状態の時、味方それぞれの最大HPアップ効果がさらに<nobr>50%</nobr>アップし、味方が攻撃を行った後、その味方のHPをヒアンシーの最大HP<nobr>8%</nobr>分回復する。"
+      "desc": "ヒアンシーが「雨上がり」状態の時、味方それぞれの最大HPアップ効果がさらに<nobr>50%</nobr>アップし、味方が攻撃を行った後、その味方のHPをヒアンシーの最大HP<nobr>8%</nobr>分回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140902,
       "id": "come_sit_in_my_courtyard",
       "name": "わたしの{RUBY_B#にわ}庭{RUBY_E#}で\nくつろいで",
-      "desc": "味方のHPが減った時、その味方の速度+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。"
+      "desc": "味方のHPが減った時、その味方の速度+<nobr>30%</nobr>、<nobr>2</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140903,
       "id": "depart_unto_the_sun",
       "name": "{RUBY_B#しゅっぱつ}出発{RUBY_E#}！\n{RUBY_B#たいよう}太陽{RUBY_E#}へ{RUBY_B#む}向{RUBY_E#}かう{RUBY_B#ぼうけん}冒険{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。精霊スキルのLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140904,
       "id": "sunlit_amber_yours_to_keep",
       "name": "お{RUBY_B#ひさまいろ}日様色{RUBY_E#}の{RUBY_B#こはく}琥珀{RUBY_E#}を\nあなたに",
-      "desc": "軌跡「凪いだ暴風」が強化される。超過した速度<nobr>1</nobr>につき、さらにヒアンシーと「イカルン」の会心ダメージ+<nobr>2%</nobr>。"
+      "desc": "軌跡「凪いだ暴風」が強化される。超過した速度<nobr>1</nobr>につき、さらにヒアンシーと「イカルン」の会心ダメージ+<nobr>2%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140905,
       "id": "twilight_drapes_the_tide",
       "name": "{RUBY_B#うみ}海{RUBY_E#}に{RUBY_B#ゆ}揺{RUBY_E#}らぐ{RUBY_B#あか}赤{RUBY_E#}い{RUBY_B#かすみ}霞{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。精霊天賦のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140906,
       "id": "o_sky_heed_my_plea",
       "name": "{RUBY_B#てんくう}天空{RUBY_E#}よ…\n{RUBY_B#ねが}願{RUBY_E#}いを{RUBY_B#かな}叶{RUBY_E#}えたまえ",
-      "desc": "「イカルン」が精霊スキルを発動した後、クリアされる累計治癒量の割合が<nobr>12%</nobr>になる。イカルンがフィールド上にいる時、味方全体の全属性<u>耐性貫通</u>+<nobr>20%</nobr>。"
+      "desc": "「イカルン」が精霊スキルを発動した後、クリアされる累計治癒量の割合が<nobr>12%</nobr>になる。イカルンがフィールド上にいる時、味方全体の全属性<u>耐性貫通</u>+<nobr>20%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11409,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "耐性貫通",
+          "desc": "ダメージを与える時、敵の対応属性の耐性値を一部無視できる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

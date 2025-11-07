@@ -2,6 +2,7 @@
   "_id": 1111,
   "id": "luka",
   "name": "Luka",
+  "description": "Võ Sĩ Quyền Anh quán quân khu tầng dưới của Belobog, là một trong những thành viên đắc lực của Lửa Ngầm.\nQuán quân liên tục của Câu Lạc Bộ Đấu Quyền, dùng sự nhiệt huyết của bản thân để khích lệ những đứa trẻ khu tầng dưới thực hiện khát vọng của riêng mình.",
   "rarity": 4,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Gây Sát Thương Vật Lý cho 1 kẻ địch, có xác suất lớn khiến mục tiêu Chảy Máu.",
       "type": "Chiến Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -767,6 +801,27 @@
       "simpleDesc": "Nhận #5[i] tầng Ý Chí Chiến Đấu, xác suất lớn tăng sát thương của 1 kẻ địch phải chịu, đồng thời gây lượng lớn Sát Thương Vật Lý cho kẻ địch này.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Đơn",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1115,6 +1170,18 @@
       "simpleDesc": "Sau khi thi triển Tấn Công Thường là Nắm Đấm Trực Diện và Chiến Kỹ là Nắm Đấm Vỡ Nát, sẽ nhận 1 tầng Ý Chí Chiến Đấu. Khi Ý Chí Chiến Đấu đạt 2 tầng trở lên, sẽ cường hóa Tấn Công Thường.\nNếu kẻ địch ở trạng thái Chảy Máu, thì đòn Tấn Công Thường được cường hóa sẽ khiến trạng thái Chảy Máu sinh ra thêm 1 lần sát thương.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1417,6 +1484,24 @@
       "desc": "Tấn công kẻ địch ngay, sau khi vào chiến đấu sẽ gây Sát Thương Vật Lý bằng #1[i]% Tấn Công của Luka cho 1 kẻ địch ngẫu nhiên, đồng thời có #2[i]% xác suất cơ bản khiến kẻ này rơi vào trạng thái Chảy Máu giống với Chiến Kỹ. Sau đó Luka sẽ nhận thêm 1 tầng Ý Chí Chiến Đấu.",
       "simpleDesc": "Tấn công kẻ địch, sau khi vào trận sẽ gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch ngẫu nhiên, đồng thời có xác suất lớn khiến mục tiêu Chảy Máu, sau đó nhận thêm 1 tầng Ý Chí Chiến Đấu.",
       "type": "Bí Kỹ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Xác Suất Cơ Bản",
+          "desc": "Xác suất cơ bản tăng thêm Hiệu Ứng Xấu cho người bị tấn công.\nTỷ lệ sau cùng sẽ chịu ảnh hưởng bởi Chính Xác Hiệu Ứng của người bị tấn công và Kháng Hiệu Ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1434,37 +1519,79 @@
       "_id": 111101,
       "id": "fighting_endlessly",
       "name": "Chiến Đấu Không Ngừng",
-      "desc": "Khi Luka hành động, nếu kẻ địch chỉ định ở trạng thái Chảy Máu, thì sát thương Luka gây ra sẽ tăng <nobr>15%</nobr>, duy trì <nobr>2</nobr> hiệp."
+      "desc": "Khi Luka hành động, nếu kẻ địch chỉ định ở trạng thái Chảy Máu, thì sát thương Luka gây ra sẽ tăng <nobr>15%</nobr>, duy trì <nobr>2</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111102,
       "id": "the_enemy_is_weak_i_am_strong",
       "name": "Kẻ Địch Yếu, Ta Mạnh",
-      "desc": "Nếu kẻ địch bị Chiến Kỹ đánh trúng có điểm yếu thuộc tính Vật Lý, sẽ nhận <nobr>1</nobr> tầng Ý Chí Chiến Đấu."
+      "desc": "Nếu kẻ địch bị Chiến Kỹ đánh trúng có điểm yếu thuộc tính Vật Lý, sẽ nhận <nobr>1</nobr> tầng Ý Chí Chiến Đấu.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111103,
       "id": "born_for_the_ring",
       "name": "Sinh Ra Vì Võ Đài",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111104,
       "id": "never_turning_back",
       "name": "Kiên Định Không Lùi Bước",
-      "desc": "Mỗi khi nhận 1 tầng Ý Chí Chiến Đấu, sẽ tăng <nobr>5%</nobr> tấn công, hiệu ứng này tối đa cộng dồn <nobr>4</nobr> tầng."
+      "desc": "Mỗi khi nhận 1 tầng Ý Chí Chiến Đấu, sẽ tăng <nobr>5%</nobr> tấn công, hiệu ứng này tối đa cộng dồn <nobr>4</nobr> tầng.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111105,
       "id": "the_spirit_of_wildfire",
       "name": "Linh Hồn Lửa Ngầm",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111106,
       "id": "a_champions_applause",
       "name": "Tràng Vỗ Tay Cho Nhà Vô Địch",
-      "desc": "Sau khi thi triển tấn công thường cường hóa là Nắm Đấm Phá Trời trúng kẻ địch đang ở trạng thái Chảy Máu, sẽ khiến trạng thái Chảy Máu mà kẻ đó đang phải chịu lập tức sinh ra 1 lần sát thương tương đương <nobr>8%</nobr> sát thương ban đầu cho mỗi đòn tấn công của Nắm Đấm Trực Diện được dùng trong tấn công thường cường hóa lần này."
+      "desc": "Sau khi thi triển tấn công thường cường hóa là Nắm Đấm Phá Trời trúng kẻ địch đang ở trạng thái Chảy Máu, sẽ khiến trạng thái Chảy Máu mà kẻ đó đang phải chịu lập tức sinh ra 1 lần sát thương tương đương <nobr>8%</nobr> sát thương ban đầu cho mỗi đòn tấn công của Nắm Đấm Trực Diện được dùng trong tấn công thường cường hóa lần này.",
+      "unlockCost": [
+        {
+          "ItemID": 11111,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

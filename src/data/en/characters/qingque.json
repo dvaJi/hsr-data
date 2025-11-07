@@ -2,6 +2,7 @@
   "_id": 1201,
   "id": "qingque",
   "name": "Qingque",
+  "description": "Diviner of the Divination Commission on the Xianzhou Luofu, and a librarian.\nAlways slacks off and is about to be demoted to a \"door guardian.\"",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -243,10 +244,22 @@
       "_id": 120101,
       "id": "flower_pick",
       "name": "Flower Pick",
-      "desc": "Tosses 1 jade tile from the suit with the fewest tiles in hand to deal Quantum DMG equal to #1[i]% of Qingque's ATK to a single enemy.",
-      "simpleDesc": "Tosses a tile to deal minor Quantum DMG to a single enemy.",
+      "desc": "Tosses 1 jade tile from the suit with the fewest tiles in hand to deal Quantum DMG equal to #1[i]% of Qingque's ATK to one designated enemy.",
+      "simpleDesc": "Tosses a tile to deal minor Quantum DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Draws tiles and increases DMG dealt. This turn does not end after this action.",
       "type": "Skill",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -737,6 +762,18 @@
       "simpleDesc": "Deals Quantum DMG to all enemies, then obtains 4 tiles of the same suit.",
       "type": "Ultimate",
       "tag": "AoE",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "At the start of any ally's turn, draws a tile. At the start of this character's turn, if this character holds 4 tiles from the same suit, remove all tiles in possession and Enhance this Basic ATK while increasing this character's ATK.",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1313,6 +1359,15 @@
       "simpleDesc": "After they use their Technique, draw tile(s) at the start of the next battle.",
       "type": "Technique",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1329,37 +1384,96 @@
       "_id": 120101,
       "id": "rise_through_the_tiles",
       "name": "Rise Through the Tiles",
-      "desc": "Ultimate deals <nobr>10%</nobr> more DMG."
+      "desc": "Ultimate deals <nobr>10%</nobr> more DMG.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120102,
       "id": "sleep_on_the_tiles",
       "name": "Sleep on the Tiles",
-      "desc": "Every time Draw Tile is triggered, Qingque immediately regenerates <nobr>1</nobr> Energy."
+      "desc": "Every time Draw Tile is triggered, Qingque immediately regenerates <nobr>1</nobr> Energy.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120103,
       "id": "read_between_the_tiles",
       "name": "Read Between the Tiles",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120104,
       "id": "right_on_the_tiles",
       "name": "Right on the Tiles",
-      "desc": "After using Skill, there is a <nobr>24%</nobr> <u>fixed chance</u> to gain \"Self-Sufficer,\" lasting until the end of the current turn. \nWhile \"Self-Sufficer\" is active, using Basic ATK or Enhanced Basic ATK immediately launches 1 <u>Follow-up ATK</u> on the same target, dealing Quantum DMG equal to <nobr>100%</nobr> of Basic ATK DMG or Enhanced Basic ATK DMG."
+      "desc": "After using Skill, there is a <nobr>24%</nobr> <u>fixed chance</u> to gain \"Self-Sufficer,\" lasting until the end of the current turn. \nWhile \"Self-Sufficer\" is active, using Basic ATK or Enhanced Basic ATK immediately launches 1 <u>Follow-up ATK</u> on the same target, dealing Quantum DMG equal to <nobr>100%</nobr> of Basic ATK DMG or Enhanced Basic ATK DMG.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Fixed Chance",
+          "desc": "Fixed chance will not be affected by any factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120105,
       "id": "gambit_for_the_tiles",
       "name": "Gambit for the Tiles",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120106,
       "id": "prevail_beyond_the_tiles",
       "name": "Prevail Beyond the Tiles",
-      "desc": "Recovers 1 Skill Point after using Enhanced Basic ATK."
+      "desc": "Recovers 1 Skill Point after using Enhanced Basic ATK.",
+      "unlockCost": [
+        {
+          "ItemID": 11201,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

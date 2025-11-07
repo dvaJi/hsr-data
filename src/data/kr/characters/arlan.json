@@ -2,6 +2,7 @@
   "_id": 1008,
   "id": "arlan",
   "name": "아를란",
+  "description": "우주정거장 「헤르타」 방위과 책임자\n말주변이 없으며, 연구를 사랑하는 사람들이 편히 연구할 수 있도록 보호하고자 한다",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 번개 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "자신의 일부 HP를 소모하고 단일 적에게 번개 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": null,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +747,18 @@
       "simpleDesc": "단일 적에게 대량의 번개 속성 피해를 가하고, 인접한 목표에게 번개 속성 피해를 가한다",
       "type": "필살기",
       "tag": "확산",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1025,6 +1062,15 @@
       "simpleDesc": "자신의 현재 잃은 HP 백분율에 따라 피해가 증가한다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1312,6 +1358,15 @@
       "desc": "적을 바로 공격하며, 전투 진입 후 모든 적에게 아를란 공격력 #1[i]%만큼의 번개 속성 피해를 가한다",
       "simpleDesc": "적을 공격하며, 전투 진입 후 모든 적에게 소량의 번개 속성 피해를 가한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,37 +1383,97 @@
       "_id": 100801,
       "id": "to_the_bitter_end",
       "name": "필사즉생",
-      "desc": "현재 HP 백분율이 <nobr>50%</nobr> 이하일 경우 전투 스킬이 가하는 피해가 <nobr>10%</nobr> 증가한다"
+      "desc": "현재 HP 백분율이 <nobr>50%</nobr> 이하일 경우 전투 스킬이 가하는 피해가 <nobr>10%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100802,
       "id": "breaking_free",
       "name": "구속 해제",
-      "desc": "전투 스킬, 필살기 발동 시 자신의 <u>디버프 효과</u>를 1개 해제한다"
+      "desc": "전투 스킬, 필살기 발동 시 자신의 <u>디버프 효과</u>를 1개 해제한다",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "디버프 효과",
+          "desc": "전투 중 디버프 효과가 있는 모든 지속 상태는 특별 설명이 없다면 해제할 수 있다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100803,
       "id": "power_through",
       "name": "강검 공격",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100804,
       "id": "turn_the_tables",
       "name": "절체절명의 반격",
-      "desc": "전투 진입 후 치명적인 공격을 받아도 아를란은 <u>전투 불능 상태</u>에 빠지지 않으며, 즉시 자신 HP 최대치의 <nobr>25%</nobr>까지 회복한다. 해당 효과는 1회 발동 후 또는 <nobr>2</nobr>턴 지속 후 자동으로 해제된다"
+      "desc": "전투 진입 후 치명적인 공격을 받아도 아를란은 <u>전투 불능 상태</u>에 빠지지 않으며, 즉시 자신 HP 최대치의 <nobr>25%</nobr>까지 회복한다. 해당 효과는 1회 발동 후 또는 <nobr>2</nobr>턴 지속 후 자동으로 해제된다",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "전투 불능 상태",
+          "desc": "아군의 현재 HP가 소모되어 0이 됐을 시 진입하는 특수한 상태. 해당 상태에 있으면 목표는 전투를 계속할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100805,
       "id": "hammer_and_tongs",
       "name": "전력투구",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100806,
       "id": "selfsacrifice",
       "name": "솔선수범",
-      "desc": "현재 HP 백분율이 <nobr>50%</nobr> 이하일 경우 필살기가 가하는 피해가 <nobr>20%</nobr> 증가하며, 인접한 목표에 대한 피해 배율이 주목표와 같은 피해 배율로 증가한다"
+      "desc": "현재 HP 백분율이 <nobr>50%</nobr> 이하일 경우 필살기가 가하는 피해가 <nobr>20%</nobr> 증가하며, 인접한 목표에 대한 피해 배율이 주목표와 같은 피해 배율로 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11008,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

@@ -2,6 +2,7 @@
   "_id": 1004,
   "id": "welt",
   "name": "ヴェルト",
+  "description": "経験豊富で頼れる列車組の先輩。\n久しぶりの冒険を楽しんでいるうちに、心の中の情熱が再燃した。\nたまに冒険で経験したことを絵にしてノートにまとめている。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "敵単体に少量の虚数属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "敵単体に少量の虚数属性ダメージを与える、3回バウンドし、確率で敵に減速状態を付与する。",
       "type": "戦闘スキル",
       "tag": "バウンド",
+      "spBase": 10,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,32 @@
       "simpleDesc": "敵全体に虚数属性ダメージを与え、高確率で禁錮状態にする。",
       "type": "必殺技",
       "tag": "全体攻撃",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "行動遅延",
+          "desc": "対象の次の行動までの間隔が長くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1157,27 @@
       "simpleDesc": "攻撃が減速状態の敵に命中した時、さらに少量の虚数属性付加ダメージを与える。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1472,32 @@
       "simpleDesc": "特殊領域を作り出す。領域内の敵の移動速度をダウンさせる。領域内の敵と戦闘に入った後、高確率で敵を禁錮状態にする。",
       "type": "秘技",
       "tag": "妨害",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "行動遅延",
+          "desc": "対象の次の行動までの間隔が長くなる。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1411,37 +1518,97 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "{RUBY_B#な}名{RUBY_E#}の{RUBY_B#けいしょう}継承{RUBY_E#}",
-      "desc": "必殺技を発動した後、ヴェルトは強化を獲得、以後<nobr>2</nobr>回の通常攻撃/戦闘スキルはさらに敵に<u>付加ダメージ</u>を1回与える。通常攻撃による<u>付加ダメージ</u>は通常攻撃のダメージ倍率の<nobr>50%</nobr>、戦闘スキルによる<u>付加ダメージ</u>は戦闘スキルのダメージ倍率の<nobr>80%</nobr>となる。"
+      "desc": "必殺技を発動した後、ヴェルトは強化を獲得、以後<nobr>2</nobr>回の通常攻撃/戦闘スキルはさらに敵に<u>付加ダメージ</u>を1回与える。通常攻撃による<u>付加ダメージ</u>は通常攻撃のダメージ倍率の<nobr>50%</nobr>、戦闘スキルによる<u>付加ダメージ</u>は戦闘スキルのダメージ倍率の<nobr>80%</nobr>となる。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "付加ダメージ",
+          "desc": "攻撃を受けたターゲットがさらにダメージを1回受ける。このダメージは攻撃とは見なされない。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100402,
       "id": "conflux_of_stars",
       "name": "{RUBY_B#ほし}星{RUBY_E#}の{RUBY_B#ぎょうしゅう}凝集{RUBY_E#}",
-      "desc": "天賦発動時、ヴェルトはEPを<nobr>3</nobr>回復する。"
+      "desc": "天賦発動時、ヴェルトはEPを<nobr>3</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100403,
       "id": "prayer_of_peace",
       "name": "{RUBY_B#へいわ}平和{RUBY_E#}の{RUBY_B#ねが}願{RUBY_E#}い",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100404,
       "id": "appellation_of_justice",
       "name": "{RUBY_B#ぎ}義{RUBY_E#}の{RUBY_B#はたじるし}旗標{RUBY_E#}",
-      "desc": "戦闘スキルを発動した時、攻撃を受けた敵の速度をダウンさせる<u>基礎確率</u>+<nobr>35%</nobr>。"
+      "desc": "戦闘スキルを発動した時、攻撃を受けた敵の速度をダウンさせる<u>基礎確率</u>+<nobr>35%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "基礎確率",
+          "desc": "攻撃を受けたターゲットにデバフを付与できる基礎確率。\n最終的な確率は攻撃者の効果命中と敵の効果抵抗に影響される。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100405,
       "id": "power_of_kindness",
       "name": "{RUBY_B#ぜん}善{RUBY_E#}の{RUBY_B#ちから}力{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "{RUBY_B#ひかり}光{RUBY_E#}ある{RUBY_B#みらい}未来{RUBY_E#}",
-      "desc": "戦闘スキルを発動した時、さらにランダムな敵単体にダメージを1回与える。"
+      "desc": "戦闘スキルを発動した時、さらにランダムな敵単体にダメージを1回与える。",
+      "unlockCost": [
+        {
+          "ItemID": 11004,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

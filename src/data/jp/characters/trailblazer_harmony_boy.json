@@ -2,6 +2,7 @@
   "_id": 8005,
   "id": "trailblazer_harmony_boy",
   "name": "開拓者 {RUBY_B#ちょうわ}調和{RUBY_E#}",
+  "description": "星穹列車に乗車した{F#少女}{M#少年}。\n星核がもたらす危機を回避するため、星穹列車に同行することを選択した。",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "敵単体に少量の虚数属性ダメージを与える。",
       "type": "通常攻撃",
       "tag": "単体攻撃",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "敵単体に少量の虚数属性ダメージを与える、5回バウンドする。",
       "type": "戦闘スキル",
       "tag": "バウンド",
+      "spBase": 6,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -722,6 +741,32 @@
       "simpleDesc": "味方全体に「バックダンス」を付与する。「バックダンス」を持つ味方の撃破特効がアップする。また、弱点撃破状態の敵に攻撃を行った後、さらに超撃破ダメージを1回与える。",
       "type": "必殺技",
       "tag": "サポート",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "弱点撃破状態",
+          "desc": "敵の靭性が0まで削られた時に入る特殊状態。この状態になった敵は行動順が遅延する。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000015,
+          "name": "超撃破ダメージ",
+          "desc": "撃破特効、この回の攻撃の削靭値、またはキャラクターのレベルが高いほど、与える超撃破ダメージがアップする。\n超撃破ダメージは会心が発生せず、ダメージアップ系効果の影響を受けない。\n超撃破ダメージは一種の弱点撃破ダメージ。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1040,6 +1085,15 @@
       "simpleDesc": "敵が弱点撃破された時、開拓者はEPを回復する。",
       "type": "天賦",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1328,6 +1382,15 @@
       "simpleDesc": "次の戦闘開始時、味方全体の撃破特効をアップする。",
       "type": "秘技",
       "tag": "サポート",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1345,37 +1408,79 @@
       "_id": 800501,
       "id": "best_seat_in_the_house",
       "name": "{RUBY_B#さいこう}最高{RUBY_E#}の{RUBY_B#かんきゃくせき}観客席{RUBY_E#}",
-      "desc": "初めて戦闘スキルを発動した後、SPを<nobr>1</nobr>回復する。"
+      "desc": "初めて戦闘スキルを発動した後、SPを<nobr>1</nobr>回復する。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800502,
       "id": "jailbreaking_rainbowwalk",
       "name": "{RUBY_B#ろう}牢{RUBY_E#}を{RUBY_B#う}打{RUBY_E#}ち{RUBY_B#やぶ}破{RUBY_E#}る{RUBY_B#にじ}虹{RUBY_E#}",
-      "desc": "戦闘開始時、開拓者のEP回復効率+<nobr>25%</nobr>、<nobr>3</nobr>ターン継続。"
+      "desc": "戦闘開始時、開拓者のEP回復効率+<nobr>25%</nobr>、<nobr>3</nobr>ターン継続。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800503,
       "id": "sanatorium_for_rest_notes",
       "name": "{RUBY_B#きゅうしふ}休止符{RUBY_E#}の{RUBY_B#りょうよういん}療養院{RUBY_E#}",
-      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。"
+      "desc": "戦闘スキルのLv.+2、最大Lv.<nobr>15</nobr>まで。天賦のLv.+2、最大Lv.<nobr>15</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800504,
       "id": "dove_in_tophat",
       "name": "ハトを{RUBY_B#かく}隠{RUBY_E#}す{RUBY_B#かんむり}冠{RUBY_E#}",
-      "desc": "開拓者がフィールド上にいる時、自身以外の味方の撃破特効を、開拓者の撃破特効<nobr>15%</nobr>分アップする。"
+      "desc": "開拓者がフィールド上にいる時、自身以外の味方の撃破特効を、開拓者の撃破特効<nobr>15%</nobr>分アップする。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800505,
       "id": "poem_favors_rhythms_of_old",
       "name": "{RUBY_B#ふる}古{RUBY_E#}き{RUBY_B#せんりつ}旋律{RUBY_E#}を{RUBY_B#いだ}抱{RUBY_E#}く{RUBY_B#しへん}詩篇{RUBY_E#}",
-      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。"
+      "desc": "必殺技のLv.+2、最大Lv.<nobr>15</nobr>まで。通常攻撃のLv.+1、最大Lv.<nobr>10</nobr>まで。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 800506,
       "id": "tomorrow_rest_in_spotlight",
       "name": "{RUBY_B#あす}明日{RUBY_E#}\nスポットライトの{RUBY_B#した}下{RUBY_E#}で",
-      "desc": "戦闘スキルのヒット数+<nobr>2</nobr>。"
+      "desc": "戦闘スキルのヒット数+<nobr>2</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 18005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

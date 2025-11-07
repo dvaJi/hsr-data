@@ -2,6 +2,7 @@
   "_id": 1101,
   "id": "bronya",
   "name": "Bronya",
+  "description": "Provável herdeira da Guardiã Suprema de Belobog.\nTem o orgulho de uma verdadeira princesa, mas sua determinação e integridade são de um soldado.",
   "rarity": 5,
   "combat_type": {
     "id": "wind",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Vento leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Remove 1 penalidade de um único aliado, aumenta o Dano que ele causa e permite que ele aja imediatamente.",
       "type": "Perícia",
       "tag": "Suporte",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Penalidade",
+          "desc": "Penalidades são status de efeitos negativos que enfraquecem as unidades. A menos que seja especificado, penalidades podem ser removidas.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -758,6 +792,18 @@
       "simpleDesc": "Aumenta o ATQ e o Dano CRIT de todos os aliados.",
       "type": "Perícia Suprema",
       "tag": "Suporte",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 15
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1143,24 @@
       "simpleDesc": "Depois que esta personagem usa o ATQ Básico, a próxima ação dela será Avançada Adiante.",
       "type": "Talento",
       "tag": "Aprimoramento",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ação Avançada Adiante",
+          "desc": "Reduz o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1391,6 +1455,15 @@
       "simpleDesc": "Depois que esta personagem usa a Técnica, aumenta o ATQ de todos os aliados no início da próxima batalha.",
       "type": "Técnica",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1408,37 +1481,97 @@
       "_id": 110101,
       "id": "hone_your_strength",
       "name": "Aprimore Sua Força",
-      "desc": "Ao usar a Perícia, há uma <u>chance fixa</u> de <nobr>50%</nobr> de recuperar 1 Ponto de Perícia. Este efeito tem um tempo de recarga de 1 rodada."
+      "desc": "Ao usar a Perícia, há uma <u>chance fixa</u> de <nobr>50%</nobr> de recuperar 1 Ponto de Perícia. Este efeito tem um tempo de recarga de 1 rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Chance fixa",
+          "desc": "Chance fixa não será afetada por nenhum fator.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110102,
       "id": "quick_march",
       "name": "Marcha Rápida",
-      "desc": "Ao usar a Perícia, a VEL do aliado-alvo aumenta em <nobr>30%</nobr> depois de realizar a ação, e dura 1 rodada."
+      "desc": "Ao usar a Perícia, a VEL do aliado-alvo aumenta em <nobr>30%</nobr> depois de realizar a ação, e dura 1 rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110103,
       "id": "bombardment",
       "name": "Bombardeio",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110104,
       "id": "take_by_surprise",
       "name": "Pegue de Surpresa",
-      "desc": "Após qualquer outro aliado usar um ATQ Básico em um inimigo-alvo com Fraqueza contra Vento, Bronya realiza 1 <u>Ataque Extra</u> imediatamente contra o alvo, causando Dano de Vento equivalente a <nobr>80%</nobr> do Dano do seu ATQ Básico. Este efeito só pode ser ativado 1 vez por rodada."
+      "desc": "Após qualquer outro aliado usar um ATQ Básico em um inimigo-alvo com Fraqueza contra Vento, Bronya realiza 1 <u>Ataque Extra</u> imediatamente contra o alvo, causando Dano de Vento equivalente a <nobr>80%</nobr> do Dano do seu ATQ Básico. Este efeito só pode ser ativado 1 vez por rodada.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 110105,
       "id": "unstoppable",
       "name": "Incontrolável",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 110106,
       "id": "piercing_rainbow",
       "name": "Arco-íris Perfurante",
-      "desc": "A duração do efeito de Bônus de Dano da Perícia no aliado-alvo aumenta em <nobr>1</nobr> rodada(s)."
+      "desc": "A duração do efeito de Bônus de Dano da Perícia no aliado-alvo aumenta em <nobr>1</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11101,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

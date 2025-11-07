@@ -2,6 +2,7 @@
   "_id": 1305,
   "id": "dr_ratio",
   "name": "Dr. Ratio",
+  "description": "Member of the Intelligentsia Guild.\nEccentric temperament, sharp-tongued but with an elegant demeanor.\nThe face under the strange alabaster head sculpture is apparently unexpectedly handsome.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Deals minor Imaginary DMG to one designated enemy target.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -416,9 +426,18 @@
       "id": "intellectual_midwifery",
       "name": "Intellectual Midwifery",
       "desc": "Deals Imaginary DMG equal to #1[i]% of Dr. Ratio's ATK to one designated enemy target.",
-      "simpleDesc": "Deals Imaginary DMG to a single enemy.",
+      "simpleDesc": "Deals Imaginary DMG to one designated enemy.",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +732,24 @@
       "simpleDesc": "Deals Imaginary DMG to one designated enemy target and applies \"Wiseman's Folly.\" When Dr. Ratio's teammates attack a target afflicted with \"Wiseman's Folly,\" Dr. Ratio launches 1 instance of Follow-up ATK on this target.",
       "type": "Ultimate",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1022,6 +1059,32 @@
       "simpleDesc": "When using Skill, there is a chance to launch 1 instance of Follow-up ATK on the target, dealing Imaginary DMG.",
       "type": "Talent",
       "tag": "Single Target",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Fixed Chance",
+          "desc": "Fixed chance will not be affected by any factor.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1346,6 +1409,24 @@
       "simpleDesc": "Creates a Special Dimension. Enemies within the dimension are Taunted. After entering battle with enemies in this dimension, there is a high chance to reduce SPD of enemy targets.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Base Chance",
+          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1365,37 +1446,113 @@
       "_id": 130501,
       "id": "pride_comes_before_a_fall",
       "name": "Pride Comes Before a Fall",
-      "desc": "The maximum stackable count for the Trace \"Summation\" increases by <nobr>4</nobr>. When a battle begins, immediately obtains <nobr>4</nobr> stacks of Summation. Needs to unlock Summation first."
+      "desc": "The maximum stackable count for the Trace \"Summation\" increases by <nobr>4</nobr>. When a battle begins, immediately obtains <nobr>4</nobr> stacks of Summation. Needs to unlock Summation first.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130502,
       "id": "the_divine_is_in_the_details",
       "name": "The Divine Is in the Details",
-      "desc": "When his Talent's <u>Follow-up ATK</u> hits a target, for every <u>debuff</u> the target has, deals Imaginary <u>Additional DMG</u> equal to <nobr>20%</nobr> of Dr. Ratio's ATK. This effect can be triggered for a maximum of <nobr>4</nobr> time(s) during each <u>Follow-up ATK</u>."
+      "desc": "When his Talent's <u>Follow-up ATK</u> hits a target, for every <u>debuff</u> the target has, deals Imaginary <u>Additional DMG</u> equal to <nobr>20%</nobr> of Dr. Ratio's ATK. This effect can be triggered for a maximum of <nobr>4</nobr> time(s) during each <u>Follow-up ATK</u>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000010,
+          "name": "Debuff",
+          "desc": "Debuffs are negative status effects that render units weaker. Unless otherwise specified, debuffs can be dispelled.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Additional DMG",
+          "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130503,
       "id": "know_thyself",
       "name": "Know Thyself",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>."
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130504,
       "id": "ignorance_is_blight",
       "name": "Ignorance Is Blight",
-      "desc": "When triggering the Talent, additionally regenerates <nobr>15</nobr> Energy for Dr. Ratio."
+      "desc": "When triggering the Talent, additionally regenerates <nobr>15</nobr> Energy for Dr. Ratio.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130505,
       "id": "sic_itur_ad_astra",
       "name": "Sic Itur Ad Astra",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>."
+      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130506,
       "id": "vincit_omnia_veritas",
       "name": "Vincit Omnia Veritas",
-      "desc": "Additionally increases the trigger count for \"Wiseman's Folly\" by <nobr>1</nobr>. The DMG dealt by the Talent's <u>Follow-up ATK</u> increases by <nobr>50%</nobr>."
+      "desc": "Additionally increases the trigger count for \"Wiseman's Folly\" by <nobr>1</nobr>. The DMG dealt by the Talent's <u>Follow-up ATK</u> increases by <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11305,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Follow-up ATK",
+          "desc": "Unleashes an extra attack on the target. This effect is triggered automatically when requirements are met.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

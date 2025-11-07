@@ -2,6 +2,7 @@
   "_id": 1212,
   "id": "jingliu",
   "name": "Jingliu",
+  "description": "Sang Juara Pedang Luofu yang terdahulu dan pencipta dari reputasi Cloud Knight yang tak terkalahkan.\nKini namanya telah dihapus dari catatan sejarah, dan menjadi pengkhianat Xianzhou yang berjalan di sepanjang garis tipis di antara kewarasan dan kegilaan Mara.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah kecil pada 1 musuh yang ditargetkan.",
       "type": "Basic ATK",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Mengakibatkan Ice DMG pada 1 musuh yang ditargetkan dan memperoleh 1 lapis \"Syzygy\".",
       "type": "Skill",
       "tag": "Single Target",
+      "spBase": 20,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -728,6 +753,18 @@
       "simpleDesc": "Mengakibatkan Ice DMG dalam jumlah besar pada 1 musuh yang ditargetkan dan Ice DMG pada target di sekitarnya, serta memperoleh 1 lapis \"Syzygy\".",
       "type": "Ultimate",
       "tag": "Blast",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        60
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,15 @@
       "simpleDesc": "Saat memiliki #5[i] lapis \"Syzygy\", Jingliu akan memasuki status \"Spectral Transmigration\", mengalami pendahuluan aksi sebesar 100%, meningkatkan CRIT Rate dirinya, dan memperoleh Enhanced Skill. Saat melancarkan serangan, Jingliu akan mengonsumsi HP rekannya dan meningkatkan ATK dirinya berdasarkan total konsumsi HP. Saat jumlah lapisan \"Syzygy\" mencapai 0, Jingliu akan keluar dari status \"Spectral Transmigration\".",
       "type": "Talent",
       "tag": "Enhance",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1497,32 @@
       "simpleDesc": "Menciptakan dimensi khusus di sekeliling diri sendiri. Musuh yang berada dalam dimensi khusus akan memasuki status Frozen. Setelah memasuki pertempuran dengan musuh dalam dimensi khusus, akan memulihkan Energy diri sendiri, memperoleh 1 lapis \"Syzygy\", serta berpeluang besar membuat target musuh memasuki status Frozen.",
       "type": "Technique",
       "tag": "Impair",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Peluang Dasar",
+          "desc": "Peluang dasar untuk menambahkan efek Debuff ke target musuh.\nPeluang akhir akan dipengaruhi oleh Effect RES target musuh dan Effect Hit Rate penyerang.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "DMG Tambahan",
+          "desc": "Membuat target yang terkena serangan menerima tambahan 1 kali DMG. DMG ini tidak dianggap sebagai mengakibatkan 1 kali serangan.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1472,37 +1544,79 @@
       "_id": 121201,
       "id": "moon_crashes_tianguan_gate",
       "name": "Moon Crashes Tianguan Gate",
-      "desc": "Saat melancarkan Ultimate atau Enhanced Skill, CRIT DMG Jingliu akan meningkat <nobr>24%</nobr> selama <nobr>1</nobr> giliran. Jika hanya menyerang 1 target musuh, maka akan mengakibatkan ekstra 1 kali Ice DMG sebesar <nobr>100%</nobr> ATK Jingliu pada target tersebut."
+      "desc": "Saat melancarkan Ultimate atau Enhanced Skill, CRIT DMG Jingliu akan meningkat <nobr>24%</nobr> selama <nobr>1</nobr> giliran. Jika hanya menyerang 1 target musuh, maka akan mengakibatkan ekstra 1 kali Ice DMG sebesar <nobr>100%</nobr> ATK Jingliu pada target tersebut.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121202,
       "id": "crescent_shadows_qixing_dipper",
       "name": "Crescent Shadows Qixing Dipper",
-      "desc": "Setelah melancarkan Ultimate, DMG dari Enhanced Skill yang berikutnya meningkat <nobr>80%</nobr>."
+      "desc": "Setelah melancarkan Ultimate, DMG dari Enhanced Skill yang berikutnya meningkat <nobr>80%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121203,
       "id": "halfmoon_gapes_mercurial_haze",
       "name": "Halfmoon Gapes Mercurial Haze",
-      "desc": "Level Ultimate +2, maksimum Lv. <nobr>15</nobr>. Level Talent +2, maksimum Lv. <nobr>15</nobr>."
+      "desc": "Level Ultimate +2, maksimum Lv. <nobr>15</nobr>. Level Talent +2, maksimum Lv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121204,
       "id": "lunarlance_shines_skyward_dome",
       "name": "Lunarlance Shines Skyward Dome",
-      "desc": "Saat berstatus \"Spectral Transmigration\", ATK yang diperoleh dari mengonsumsi HP rekan Jingliu meningkat ekstra sebesar <nobr>90%</nobr> dari total konsumsi HP seluruh rekan tim, dan batas maksimum peningkatan ATK yang diperoleh meningkat <nobr>30%</nobr>."
+      "desc": "Saat berstatus \"Spectral Transmigration\", ATK yang diperoleh dari mengonsumsi HP rekan Jingliu meningkat ekstra sebesar <nobr>90%</nobr> dari total konsumsi HP seluruh rekan tim, dan batas maksimum peningkatan ATK yang diperoleh meningkat <nobr>30%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121205,
       "id": "night_shades_astral_radiance",
       "name": "Night Shades Astral Radiance",
-      "desc": "Level Skill +2, maksimum Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimum Lv. <nobr>10</nobr>."
+      "desc": "Level Skill +2, maksimum Lv. <nobr>15</nobr>. Level Basic Attack +1, maksimum Lv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 121206,
       "id": "eclipse_hollows_corporeal_husk",
       "name": "Eclipse Hollows Corporeal Husk",
-      "desc": "Saat Jingliu memasuki status \"Spectral Transmigration\", batas maksimum \"Syzygy\" meningkat 1 lapis dan Jingliu akan memperoleh ekstra <nobr>1</nobr> lapis \"Syzygy\". Saat berstatus \"Spectral Transmigration\", CRIT DMG meningkat <nobr>50%</nobr>."
+      "desc": "Saat Jingliu memasuki status \"Spectral Transmigration\", batas maksimum \"Syzygy\" meningkat 1 lapis dan Jingliu akan memperoleh ekstra <nobr>1</nobr> lapis \"Syzygy\". Saat berstatus \"Spectral Transmigration\", CRIT DMG meningkat <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11212,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

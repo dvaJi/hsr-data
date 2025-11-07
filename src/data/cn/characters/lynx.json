@@ -2,6 +2,7 @@
   "_id": 1110,
   "id": "lynx",
   "name": "玲可",
+  "description": "贝洛伯格的雪原探险家，朗道家的小妹妹。\n性格淡定，行动力极强。常常孤身前往雪原探险。",
   "rarity": 4,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,18 @@
       "simpleDesc": "对敌方单体造成少量量子属性伤害。",
       "type": "普攻",
       "tag": "单攻",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "使我方单体获得【求生反应】，使其生命上限提高，同时为其回复生命值。",
       "type": "战技",
       "tag": "回复",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -782,6 +807,27 @@
       "simpleDesc": "解除我方全体1个负面效果，为我方全体回复生命值。",
       "type": "终结技",
       "tag": "回复",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "负面效果",
+          "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1100,6 +1146,18 @@
       "simpleDesc": "施放战技或终结技时，使我方目标获得持续回复生命值效果，若目标持有【求生反应】持续回复生命值效果额外提高。",
       "type": "天赋",
       "tag": "回复",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1448,6 +1506,15 @@
       "simpleDesc": "使用秘技，下一次战斗开始时为我方全体附上持续治疗效果。",
       "type": "秘技",
       "tag": "回复",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1464,37 +1531,88 @@
       "_id": 111001,
       "id": "morning_of_snow_hike",
       "name": "远行雪杖的清晨",
-      "desc": "为当前生命值百分比小于等于<nobr>50%</nobr>的我方目标提供治疗时，玲可的治疗量提高<nobr>20%</nobr>，该效果对持续治疗效果也会生效。"
+      "desc": "为当前生命值百分比小于等于<nobr>50%</nobr>的我方目标提供治疗时，玲可的治疗量提高<nobr>20%</nobr>，该效果对持续治疗效果也会生效。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111002,
       "id": "noon_of_portable_furnace",
       "name": "便携炉具的正午",
-      "desc": "持有【求生反应】的目标被施加<u>负面效果</u>时可抵抗<nobr>1</nobr>次<u>负面效果</u>。"
+      "desc": "持有【求生反应】的目标被施加<u>负面效果</u>时可抵抗<nobr>1</nobr>次<u>负面效果</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "负面效果",
+          "desc": "对战斗有负面效果的所有持续状态，若无特殊说明则可以被解除。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 111003,
       "id": "afternoon_of_avalanche_beacon",
       "name": "雪崩信标的午后",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级；普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111004,
       "id": "dusk_of_warm_campfire",
       "name": "露营篝火的薄暮",
-      "desc": "获得【求生反应】时，使该目标攻击力提高，提高数值等同于玲可<nobr>#1[f1]%</nobr>生命上限的攻击力，持续<nobr>1</nobr>回合。"
+      "desc": "获得【求生反应】时，使该目标攻击力提高，提高数值等同于玲可<nobr>#1[f1]%</nobr>生命上限的攻击力，持续<nobr>1</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111005,
       "id": "night_of_aurora_tea",
       "name": "极光红茶的新夜",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级；天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 111006,
       "id": "dawn_of_explorers_chart",
       "name": "测绘图纸的黎明",
-      "desc": "【求生反应】的生命上限提高效果额外提高，提高数值等同于玲可<nobr>#1[f1]%</nobr>的生命上限，并使其效果抵抗提高<nobr>30%</nobr>。"
+      "desc": "【求生反应】的生命上限提高效果额外提高，提高数值等同于玲可<nobr>#1[f1]%</nobr>的生命上限，并使其效果抵抗提高<nobr>30%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11110,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

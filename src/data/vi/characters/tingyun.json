@@ -2,6 +2,7 @@
   "_id": 1202,
   "id": "tingyun",
   "name": "Tingyun",
+  "description": "Tiếp Độ Sứ của Sở Thiên Bách Xianzhou Luofu.\nCùng thương đội đi khắp thế giới, liên kết mậu dịch và đồng minh.",
   "rarity": 4,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Lôi cho 1 kẻ địch.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,27 @@
       "simpleDesc": "Tăng tấn công của 1 đồng đội và nhận Ban Phúc. Khi tấn công trong trạng thái Ban Phúc sẽ gây thêm lượng nhỏ Sát Thương Lôi Kèm Theo.",
       "type": "Chiến Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -752,6 +786,18 @@
       "simpleDesc": "Hồi năng lượng cho 1 đồng đội và tăng sát thương đồng đội đó gây ra.",
       "type": "Tuyệt Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1070,6 +1116,24 @@
       "simpleDesc": "Sau khi kẻ địch bị Tingyun tấn công, thì đồng đội nhận Ban Phúc sẽ gây lượng nhỏ Sát Thương Lôi Kèm Theo lên kẻ địch đó.",
       "type": "Thiên Phú",
       "tag": "Cường Hóa",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1358,6 +1422,15 @@
       "simpleDesc": "Sau khi dùng Bí Kỹ sẽ hồi năng lượng cho bản thân.",
       "type": "Bí Kỹ",
       "tag": "Hỗ Trợ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1374,37 +1447,79 @@
       "_id": 120201,
       "id": "windfall_of_lucky_springs",
       "name": "Gió Xuân Đắc Ý",
-      "desc": "Sau khi 1 đồng đội nhận được Ban Phúc thi triển Tuyệt Kỹ, Tốc Độ sẽ tăng <nobr>20%</nobr>, duy trì 1 hiệp."
+      "desc": "Sau khi 1 đồng đội nhận được Ban Phúc thi triển Tuyệt Kỹ, Tốc Độ sẽ tăng <nobr>20%</nobr>, duy trì 1 hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120202,
       "id": "gainfully_gives_givingly_gains",
       "name": "Ân Huệ Quân Tử",
-      "desc": "Khi 1 đồng đội nhận Ban Phúc thực hiện tiêu diệt kẻ địch, sẽ hồi <nobr>5</nobr> điểm Năng Lượng. Hiệu ứng này mỗi hiệp chỉ thi triển 1 lần."
+      "desc": "Khi 1 đồng đội nhận Ban Phúc thực hiện tiêu diệt kẻ địch, sẽ hồi <nobr>5</nobr> điểm Năng Lượng. Hiệu ứng này mỗi hiệp chỉ thi triển 1 lần.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120203,
       "id": "halcyon_bequest",
       "name": "Ơn Trạch Thanh Khâu",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120204,
       "id": "jovial_versatility",
       "name": "Linh Hoạt Vui Vẻ",
-      "desc": "Bội Số Sát Thương kèm theo từ Ban Phúc tăng <nobr>20%</nobr>."
+      "desc": "Bội Số Sát Thương kèm theo từ Ban Phúc tăng <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120205,
       "id": "sauntering_coquette",
       "name": "Hồ Yêu Ma Mị",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120206,
       "id": "peace_brings_wealth_to_all",
       "name": "Tài Khí Tuôn Trào",
-      "desc": "Tăng <nobr>10</nobr> Năng Lượng mà Tuyệt Kỹ hồi phục cho mục tiêu phe ta."
+      "desc": "Tăng <nobr>10</nobr> Năng Lượng mà Tuyệt Kỹ hồi phục cho mục tiêu phe ta.",
+      "unlockCost": [
+        {
+          "ItemID": 11202,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

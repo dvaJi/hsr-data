@@ -2,6 +2,7 @@
   "_id": 1209,
   "id": "yanqing",
   "name": "연경",
+  "description": "경원 장군의 호위무사이다. 어린 나이임에도 불구하고 천재라 불릴 정도로 뛰어난 검술을 지니고 있다.\n검 한 자루만 있으면 누구에게도 지지 않는다.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "단일 적에게 소량의 얼음 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "단일 적에게 얼음 속성 피해를 가하고 자신에게 [신검합일] 효과를 부여한다",
       "type": "전투 스킬",
       "tag": "단일 공격",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 20
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -713,6 +738,27 @@
       "simpleDesc": "자신의 치명타 확률이 증가하고 [신검합일] 효과가 강화된다. 또한 단일 적에게 대량의 얼음 속성 피해를 준다",
       "type": "필살기",
       "tag": "단일 공격",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 30
+      },
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "버프 효과",
+          "desc": "전투에 버프 효과가 있는 모든 지속 상태. 특별 안내가 없다면 해제 가능하다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1037,6 +1083,48 @@
       "simpleDesc": "[신검합일] 상태일 경우 피격될 확률이 감소하고 자신의 치명타 확률과 치명타 피해가 증가한다. 적에게 공격 발동 후, 일정 확률로 추가 공격을 발동해 얼음 속성 피해를 가하고 일정 확률로 대상을 빙결 상태에 빠트린다.\n자신이 피해를 받으면 [신검합일] 효과는 소멸된다",
       "type": "특성",
       "tag": "단일 공격",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "고정 확률",
+          "desc": "어떤 요인에도 영향을 받지 않는 고정 확률이다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000004,
+          "name": "추가 공격",
+          "desc": "조건을 만족하면 자동으로 발동되는 효과. 목표에게 추가로 공격을 1회 발동한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "기본 확률",
+          "desc": "피격자에게 디버프 효과를 부여하는 기본 확률.\n최종 확률은 공격자의 효과 명중과 적의 효과 저항의 영향을 받는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1494,15 @@
       "simpleDesc": "비술을 사용하면 다음 전투 시작 시 자신의 HP 백분율이 50% 이상인 적에게 가하는 피해가 증가한다",
       "type": "비술",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1424,37 +1521,106 @@
       "_id": 120901,
       "id": "svelte_saber",
       "name": "칼날의 섬광",
-      "desc": "연경이 적을 공격할 때, 목표가 빙결 상태일 경우 즉시 목표에게 연경 공격력의 <nobr>60%</nobr>만큼 얼음 속성 <u>추가 피해</u>를 가한다"
+      "desc": "연경이 적 공격 시 목표가 빙결 상태면 즉시 목표에게 연경 공격력의 <nobr>60%</nobr>만큼 얼음 속성 <u>추가 피해</u>를 가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "추가 피해",
+          "desc": "피격자에게 추가로 1회 피해를 가한다. 이번 피해는 1회 공격을 가한 것으로 간주하지 않는다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120902,
       "id": "supine_serenade",
       "name": "공명",
-      "desc": "[신검합일] 효과 상태일 경우 에너지 회복효율이 추가로 <nobr>10%</nobr> 증가한다"
+      "desc": "[신검합일] 효과 상태일 경우 에너지 회복효율이 추가로 <nobr>10%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120903,
       "id": "sword_savant",
       "name": "검술의 극의",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120904,
       "id": "searing_sting",
       "name": "서릿발",
-      "desc": "현재 HP 백분율이 <nobr>80%</nobr> 이상일 경우, 자신의 얼음 속성 <u>저항 관통</u>이 <nobr>12%</nobr> 증가한다"
+      "desc": "현재 HP 백분율이 <nobr>80%</nobr> 이상일 경우, 자신의 얼음 속성 <u>저항 관통</u>이 <nobr>12%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 120905,
       "id": "surging_strife",
       "name": "무골",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 120906,
       "id": "swift_swoop",
       "name": "자유자재",
-      "desc": "적 처치 시 [신검합일] 또는 필살기의 <u>버프 효과</u>를 보유 중일 경우, 해당 <u>버프 효과</u>의 지속 시간이 모두 1턴 연장된다"
+      "desc": "적 처치 시 [신검합일] 또는 필살기의 <u>버프 효과</u>를 보유 중일 경우, 해당 <u>버프 효과</u>의 지속 시간이 모두 1턴 연장된다",
+      "unlockCost": [
+        {
+          "ItemID": 11209,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000009,
+          "name": "버프 효과",
+          "desc": "전투에 버프 효과가 있는 모든 지속 상태. 특별 안내가 없다면 해제 가능하다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

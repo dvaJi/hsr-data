@@ -2,6 +2,7 @@
   "_id": 1315,
   "id": "boothill",
   "name": "Boothill",
+  "description": "Ein Cyborg-Cowboy, der sich zwischen den Sternen treiben lässt. Äußerst optimistisch und hemmungslos.\nAls Mitglied der Galaxieranger hat er geschworen, das Böse mit allen Mitteln auszurotten ...\nMit seinen extravaganten und forschen Aktionen will er die Aufmerksamkeit der Interastralen Friedenskorporation auf sich ziehen – das Ziel seiner Rache.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen physischen SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Aktiviert Tödliche Konfrontation. Nachdem das Ziel von Tödliche Konfrontation besiegt wurde oder Schwächebruch erlitten hat, erhält Boothill „Trumpf in der Tasche“ und Tödliche Konfrontation wird aufgehoben. Boothill erhält einen verstärkten Standardangriff und die aktuelle Runde wird nicht beendet.",
       "type": "Fertigkeit",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,24 @@
       "simpleDesc": "Implantiert einem Gegner eine physische Schwäche, verursacht beim Ziel massiven physischen SCH und verzögert dessen Aktion.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000002,
+          "name": "Aktion verzögert",
+          "desc": "Verlängert die Wartezeit des Ziels vor der nächsten Aktion.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1067,6 +1104,32 @@
       "simpleDesc": "„Trumpf in der Tasche“ erhöht den WDS-Reduzierungswert des verstärkten Standardangriffs und fügt Gegnern mit Schwächebruch zusätzlichen physischen Bruch-SCH zu. Nach einem gewonnenen Kampf wird Trumpf in der Tasche bis zum nächsten Kampf beibehalten.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Schwächebruch",
+          "desc": "Wenn der Widerstand gegnerischer Ziele auf 0 sinkt, treten sie in den Zustand Schwächebruch ein, was ihre Aktionen verzögert.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Bruch-SCH",
+          "desc": "Bruch-SCH wird mit höherem Brucheffekt, höherem max. Widerstand des Ziels und höherer Figurenstufe erhöht.\nBruch-SCH kann keine Kritischen Treffer zufügen und wird nicht von Effekten mit SCH-Erhöhung beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1436,6 +1499,15 @@
       "simpleDesc": "Nach dem Einsatz der Technik wird im nächsten Kampf beim ersten Einsatz der Fertigkeit einem Gegner eine physische Schwäche hinzugefügt.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1452,37 +1524,88 @@
       "_id": 131501,
       "id": "dusty_trails_lone_star",
       "name": "Einsamer Stern im Staub",
-      "desc": "Erhält zu Beginn des Kampfes 1 Stapelung „Trumpf in der Tasche“. Boothill verursacht SCH, der <nobr>16%</nobr> der VTD des gegnerischen Ziels ignoriert."
+      "desc": "Erhält zu Beginn des Kampfes 1 Stapelung „Trumpf in der Tasche“. Boothill verursacht SCH, der <nobr>16%</nobr> der VTD des gegnerischen Ziels ignoriert.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131502,
       "id": "milestonemonger",
       "name": "Meilenstein-Händler",
-      "desc": "Stellt beim Erhalt von „Trumpf in der Tasche“ im Status „Tödliche Konfrontation“ <nobr>1</nobr> Fertigkeitspunkt wieder her und erhöht für <nobr>2</nobr> Rd. den Brucheffekt um <nobr>30%</nobr>. Dieser Effekt kann in einer einzelnen Runde nicht wiederholt ausgelöst werden. Er wird auch ausgelöst, wenn Stapelungen von Trumpf in der Tasche erhalten werden, die die max. Stapelzahl überschreiten."
+      "desc": "Stellt beim Erhalt von „Trumpf in der Tasche“ im Status „Tödliche Konfrontation“ <nobr>1</nobr> Fertigkeitspunkt wieder her und erhöht für <nobr>2</nobr> Rd. den Brucheffekt um <nobr>30%</nobr>. Dieser Effekt kann in einer einzelnen Runde nicht wiederholt ausgelöst werden. Er wird auch ausgelöst, wenn Stapelungen von Trumpf in der Tasche erhalten werden, die die max. Stapelzahl überschreiten.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131503,
       "id": "marble_orchards_guard",
       "name": "Wächter des marmornen Obstgartens",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131504,
       "id": "cold_cuts_chef",
       "name": "Aufschnittskoch",
-      "desc": "Wenn Gegner mit „Tödliche Konfrontation“ von Boothill angegriffen werden, wird der erlittene SCH zusätzlich um <nobr>12%</nobr> erhöht. Wenn Boothill von Gegnern mit Tödliche Konfrontation angegriffen wird, wird der Effekt der erlittenen SCH-Erhöhung um <nobr>12%</nobr> reduziert."
+      "desc": "Wenn Gegner mit „Tödliche Konfrontation“ von Boothill angegriffen werden, wird der erlittene SCH zusätzlich um <nobr>12%</nobr> erhöht. Wenn Boothill von Gegnern mit Tödliche Konfrontation angegriffen wird, wird der Effekt der erlittenen SCH-Erhöhung um <nobr>12%</nobr> reduziert.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131505,
       "id": "stump_speech",
       "name": "Baumstumpfredner",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 131506,
       "id": "crowbar_hotels_raccoon",
       "name": "Waschbär im Hotel Brecheisen",
-      "desc": "Wenn durch das Talent <u>Bruch-SCH</u> verursacht wird, wird dem Ziel zusätzlich <u>Bruch-SCH</u> in Höhe von <nobr>40%</nobr> des ursprünglichen SCH-Multiplikators und angrenzenden Einheiten zusätzlich <u>Bruch-SCH</u> in Höhe von <nobr>70%</nobr> des ursprünglichen SCH-Multiplikators zugefügt."
+      "desc": "Wenn durch das Talent <u>Bruch-SCH</u> verursacht wird, wird dem Ziel zusätzlich <u>Bruch-SCH</u> in Höhe von <nobr>40%</nobr> des ursprünglichen SCH-Multiplikators und angrenzenden Einheiten zusätzlich <u>Bruch-SCH</u> in Höhe von <nobr>70%</nobr> des ursprünglichen SCH-Multiplikators zugefügt.",
+      "unlockCost": [
+        {
+          "ItemID": 11315,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Bruch-SCH",
+          "desc": "Bruch-SCH wird mit höherem Brucheffekt, höherem max. Widerstand des Ziels und höherer Figurenstufe erhöht.\nBruch-SCH kann keine Kritischen Treffer zufügen und wird nicht von Effekten mit SCH-Erhöhung beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

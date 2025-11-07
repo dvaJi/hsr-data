@@ -2,6 +2,7 @@
   "_id": 1407,
   "id": "castorice",
   "name": "카스토리스",
+  "description": "죽음을 경애하는 나라, 종일 눈이 내리는 아이도니아는 오늘날 곤히 단잠에 빠졌다.\n저승의 강의 딸 카스토리스, 「죽음」의 불씨를 찾는 황금의 후예여, 출발하라. 세상의 영혼의 통곡을 감싸고, 운명의 고독을 끌어안아라.\n——죽음과 삶은 모두 여정이요, 나비가 나뭇가지 끝에 내려앉을 때 시들어가던 것이 다시 태어나리니",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "단일 적에게 소량의 양자 속성 피해를 가한다",
       "type": "일반 공격",
       "tag": "단일 공격",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "모든 아군의 HP를 소모하며, 단일 적에게 양자 속성 피해를 가하고, 인접한 목표에게 소량의 양자 속성 피해를 가한다",
       "type": "전투 스킬",
       "tag": "확산",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "기억 정령 죽음의 용을 소환하고 대상의 행동 게이지를 100% 증가시키며, 동시에 경계를 전개하여 모든 적의 모든 속성 저항을 감소시킨다",
       "type": "필살기",
       "tag": "소환",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "경계",
+          "desc": "경계 효과는 필드 전체에 하나만 존재 가능하며, 지속 시간 동안 다른 경계 효과 스킬을 발동할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1150,15 @@
       "simpleDesc": "아군이 HP를 잃을 시 카스토리스는 [새로운 꽃술]을 획득하고, 동시에 카스토리스와 죽음의 용이 가하는 피해가 증가한다. [새로운 꽃술]이 최대치에 도달하면 필살기를 활성화할 수 있다. 죽음의 용이 필드에 있을 시, 죽음의 용을 제외한 아군이 HP를 잃으면 같은 양의 죽음의 용 HP로 전환된다",
       "type": "특성",
       "tag": "강화",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1435,6 +1497,40 @@
       "desc": "비술 사용 후 #3[i]초 동안 [아득한 어둠] 상태에 진입한다. [아득한 어둠] 상태의 적은 카스토리스에게 직접 다가올 수 없다.\n[아득한 어둠] 상태에서 선공하면 범위 내 모든 적을 전투에 진입시키고, 동시에 기억 정령 죽음의 용을 소환하고 행동 게이지를 100% 증가시키며, 경계 [세상을 잊은 저승]을 펼친다. 또한, 죽음의 용은 [새로운 꽃술] 최대치의 #2[i]%만큼 현재 HP를 보유한다. 전투 진입 후, 죽음의 용을 제외한 모든 아군의 현재 HP를 #1[i]% 소모한다.\n전투 진입 후 죽음의 용이 소환되지 않을 시 카스토리스는 [새로운 꽃술]을 [새로운 꽃술] 최대치의 #4[i]%만큼 획득한다",
       "simpleDesc": "[아득한 어둠] 상태에 진입하며, 적은 카스토리스에게 직접 다가올 수 없다.\n[아득한 어둠] 상태에서 공격 시 범위 내 모든 적을 전투에 진입시키고, 동시에 기억 정령 죽음의 용을 소환하고 행동 게이지를 100% 증가시킨다. 전투 진입 시, 죽음의 용을 제외한 모든 아군의 HP를 소모한다.\n전투 진입 후 죽음의 용이 소환되지 않을 시 카스토리스는 [새로운 꽃술]을 [새로운 꽃술] 최대치의 #4[i]%만큼 회복한다",
       "type": "비술",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000018,
+          "name": "기억 정령 소환",
+          "desc": "기억 정령을 필드 위에 소환한다. 기억 정령이 필드 위에 있을 시, 기억 정령이 받은 모든 제어류 디버프 상태를 해제한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000020,
+          "name": "경계",
+          "desc": "경계 효과는 필드 전체에 하나만 존재 가능하며, 지속 시간 동안 다른 경계 효과 스킬을 발동할 수 없다",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1449,42 +1545,920 @@
       ]
     }
   ],
+  "memosprite": {
+    "name": "죽음의 용•폴룩스",
+    "icon": "SpriteOutput/ServantIconTeam/11407B.png",
+    "hpBase": "0",
+    "hpInherit": "0",
+    "speedBase": "#1",
+    "speedInherit": "0",
+    "aggro": 100,
+    "skills": [
+      {
+        "id": 1140701,
+        "name": "어둠을 찢는 발톱",
+        "desc": "모든 적에게 카스토리스 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>만큼 양자 속성 피해를 가한다",
+        "simpleDesc": "모든 적에게 소량의 양자 속성 피해를 가한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "범위 공격"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140702,
+        "name": "암흑을 불태우는 화염의 숨결",
+        "desc": "[암흑을 불태우는 화염의 숨결]을 발동하면 죽음의 용의 HP를 HP 최대치의 <nobr>#1[i]%</nobr>만큼 소모하고, 모든 적에게 카스토리스 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#2[f1]%</nobr></span>만큼 양자 속성 피해를 가한다.\n1회의 공격 동안 [암흑을 불태우는 화염의 숨결]을 중복 발동할 수 있으며, 중복 발동 시 피해 배율이 순차대로 <span style=\"color:#f29e38ff><nobr>#3[f1]%</nobr></span>/<span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>로 증가하며, <span style=\"color:#f29e38ff><nobr>#4[f1]%</nobr></span>에 도달하면 더 이상 증가하지 않는다. 피해 배율 증가 효과는 죽음의 용이 사라지기 전까지 감소하지 않는다.\n죽음의 용의 현재 HP가 자신의 HP 최대치의 <nobr>#5[i]%</nobr> 이하일 시 해당 스킬을 발동하면 HP가 1pt로 감소하고, 특성 [묘지를 불사르는 어둠의 날개]와 동일한 스킬 효과를 발동한다",
+        "simpleDesc": "자신의 HP를 소모하고 모든 적에게 양자 속성 피해를 가하며, 이번 턴은 종료되지 않는다. 스킬 중복 발동 시 스킬은 최대 3회 강화된다. HP가 <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> 이하일 시 해당 스킬을 발동하면 기억 정령 특성 [묘지를 불사르는 어둠의 날개]의 스킬 효과를 직접 발동한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "범위 공격"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25,
+              0.12,
+              0.14,
+              0.17,
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25,
+              0.144,
+              0.168,
+              0.204,
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25,
+              0.168,
+              0.196,
+              0.238,
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25,
+              0.192,
+              0.224,
+              0.272,
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25,
+              0.216,
+              0.252,
+              0.306,
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25,
+              0.24,
+              0.28,
+              0.34,
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25,
+              0.264,
+              0.308,
+              0.374,
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25,
+              0.288,
+              0.336,
+              0.408,
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25,
+              0.312,
+              0.364,
+              0.442,
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25,
+              0.336,
+              0.392,
+              0.476,
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140703,
+        "name": "달의 고치에 가려진 몸체",
+        "desc": "죽음의 용이 필드에 있을 시 아군을 <u>후방 지원</u>하며, 아군이 피해를 받거나 HP를 소모할 시 현재 HP가 최대 1pt까지 감소하고, 이후에는 죽음의 용이 대신 감당하나 죽음의 용이 기존 수치의 <nobr>#1[i]%</nobr>만큼 HP를 소모한다. 해당 효과는 죽음의 용이 사라질 때까지 지속된다",
+        "simpleDesc": "죽음의 용이 필드에 있을 시 아군을 <u>후방 지원</u>하며, 아군의 현재 HP는 최대 1pt까지 감소하고, 이후 받은 피해 또는 소모된 HP는 죽음의 용이 대신 감당한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "서포트"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [
+          {
+            "id": 10000021,
+            "name": "후방 지원",
+            "desc": "적은 후방 지원 유닛을 직접 선택할 수 없으며, 아군 [확산] 유형 스킬은 후방 지원 유닛에게 확산되지 않는다",
+            "params": [],
+            "type": 2,
+            "icon": ""
+          }
+        ],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              5
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              5
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140705,
+        "name": "적막한 땅을 뒤흔드는 포효",
+        "desc": "죽음의 용이 소환될 시, 모든 아군이 가하는 피해가 <nobr>#1[i]%</nobr> 증가한다, 지속 시간: <nobr>#2[i]</nobr>턴",
+        "simpleDesc": "소환될 시, 모든 아군이 가하는 피해가 증가한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Support",
+          "name": "서포트"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.1,
+              3
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.1,
+              3
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140706,
+        "name": "묘지를 불사르는 어둠의 날개",
+        "desc": "죽음의 용이 사라질 시 피해를 <nobr>#2[i]</nobr>회 가하며, 피해당 랜덤 단일 적에게 카스토리스 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>만큼 양자 속성 피해를 가하고, 모든 아군의 HP를 카스토리스 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>+<span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>pt만큼 회복한다",
+        "simpleDesc": "사라질 시, 단일 적에게 소량의 양자 속성 피해를 가하고 총 <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>회 바운스한다. 동시에 모든 아군의 HP를 회복한다",
+        "type": {
+          "name": "기억 정령 특성"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "바운스"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140710,
+        "name": "암흑을 불태우는 화염의 숨결",
+        "desc": "",
+        "simpleDesc": "자신의 HP를 소모하고 모든 적에게 양자 속성 피해를 가하며, 이번 턴은 종료되지 않는다. 스킬 중복 발동 시 스킬은 최대 3회 강화된다. HP가 <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> 이하일 시 해당 스킬을 발동하면 기억 정령 특성 [묘지를 불사르는 어둠의 날개]의 스킬 효과를 직접 발동한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "범위 공격"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140711,
+        "name": "암흑을 불태우는 화염의 숨결",
+        "desc": "",
+        "simpleDesc": "자신의 HP를 소모하고 모든 적에게 양자 속성 피해를 가하며, 이번 턴은 종료되지 않는다. 스킬 중복 발동 시 스킬은 최대 3회 강화된다. HP가 <span style=\"color:#f29e38ff><nobr>#5[i]%</nobr></span> 이하일 시 해당 스킬을 발동하면 기억 정령 특성 [묘지를 불사르는 어둠의 날개]의 스킬 효과를 직접 발동한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "AoEAttack",
+          "name": "범위 공격"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          0,
+          30,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.25
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.25
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1140712,
+        "name": "묘지를 불사르는 어둠의 날개",
+        "desc": "모든 HP를 소모하고 피해를 <nobr>#2[i]</nobr>회 가하며, 피해당 랜덤 단일 적에게 카스토리스 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>만큼 양자 속성 피해를 가하고, 모든 아군의 HP를 카스토리스 HP 최대치의 <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>+<span style=\"color:#f29e38ff><nobr>#4[i]</nobr></span>pt만큼 회복한다",
+        "simpleDesc": "모든 HP를 소모하며, 단일 적에게 소량의 양자 속성 피해를 가하고 총 <span style=\"color:#f29e38ff><nobr>#2[i]</nobr></span>회 바운스한다. 동시에 모든 아군의 HP를 회복한다",
+        "type": {
+          "id": "Servant",
+          "name": "기억 정령 스킬"
+        },
+        "tag": {
+          "id": "Bounce",
+          "name": "바운스"
+        },
+        "spBase": null,
+        "bpNeed": -1,
+        "spMultipleRatio": 0.5,
+        "delayRatio": 1,
+        "showStanceList": [
+          15,
+          0,
+          0
+        ],
+        "hideInUI": true,
+        "extra": [],
+        "level": [
+          {
+            "level": 1,
+            "params": [
+              0.2,
+              6,
+              0.03,
+              400
+            ]
+          },
+          {
+            "level": 2,
+            "params": [
+              0.24,
+              6,
+              0.036,
+              480
+            ]
+          },
+          {
+            "level": 3,
+            "params": [
+              0.28,
+              6,
+              0.042,
+              560
+            ]
+          },
+          {
+            "level": 4,
+            "params": [
+              0.32,
+              6,
+              0.048,
+              640
+            ]
+          },
+          {
+            "level": 5,
+            "params": [
+              0.36,
+              6,
+              0.054,
+              720
+            ]
+          },
+          {
+            "level": 6,
+            "params": [
+              0.4,
+              6,
+              0.06,
+              800
+            ]
+          },
+          {
+            "level": 7,
+            "params": [
+              0.44,
+              6,
+              0.066,
+              880
+            ]
+          },
+          {
+            "level": 8,
+            "params": [
+              0.48,
+              6,
+              0.072,
+              960
+            ]
+          },
+          {
+            "level": 9,
+            "params": [
+              0.52,
+              6,
+              0.078,
+              1040
+            ]
+          },
+          {
+            "level": 10,
+            "params": [
+              0.56,
+              6,
+              0.084,
+              1120
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "eidolons": [
     {
       "_id": 140701,
       "id": "snowbound_maiden_memory_to_tomb",
       "name": "기억을 대가로 납관하는 설원의 성녀",
-      "desc": "적의 현재 HP가 자신의 HP 최대치의 <nobr>80%</nobr>/<nobr>50%</nobr> 이하일 시, [뼈의 발톱, 저승 용의 포옹], [어둠을 찢는 발톱], [암흑을 불태우는 화염의 숨결], [묘지를 불사르는 어둠의 날개]가 대상에게 가하는 피해가 기존 피해의 <nobr>120%</nobr>/<nobr>140%</nobr>가 된다"
+      "desc": "적의 현재 HP가 자신의 HP 최대치의 <nobr>80%</nobr>/<nobr>50%</nobr> 이하일 시, [뼈의 발톱, 저승 용의 포옹], [어둠을 찢는 발톱], [암흑을 불태우는 화염의 숨결], [묘지를 불사르는 어둠의 날개]가 대상에게 가하는 피해가 기존 피해의 <nobr>120%</nobr>/<nobr>140%</nobr>가 된다",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140702,
       "id": "crown_on_wings_of_bloom",
       "name": "날갯짓하는 꽃으로 왕관을 씌우리",
-      "desc": "기억 정령 죽음의 용을 소환한 후, 카스토리스는 [타오르는 의지]를 <nobr>2</nobr>스택 획득한다. [타오르는 의지]는 최대 <nobr>2</nobr>스택 보유할 수 있으며, 죽음의 용 기억 정령 스킬 [암흑을 불태우는 화염의 숨결]의 HP 소모를 대체할 수 있다. 또한, 카스토리스의 <u>행동 게이지가 <nobr>100%</nobr> 증가</u>하며, 다음번 강화된 전투 스킬 발동 시 카스토리스가 [새로운 꽃술] 최대치의 <nobr>30%</nobr>만큼 [새로운 꽃술] 포인트를 획득한다"
+      "desc": "기억 정령 죽음의 용을 소환한 후, 카스토리스는 [타오르는 의지]를 <nobr>2</nobr>스택 획득한다. [타오르는 의지]는 최대 <nobr>2</nobr>스택 보유할 수 있으며, 죽음의 용 기억 정령 스킬 [암흑을 불태우는 화염의 숨결]의 HP 소모를 대체할 수 있다. 또한, 카스토리스의 <u>행동 게이지가 <nobr>100%</nobr> 증가</u>하며, 다음번 강화된 전투 스킬 발동 시 카스토리스가 [새로운 꽃술] 최대치의 <nobr>30%</nobr>만큼 [새로운 꽃술] 포인트를 획득한다",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "행동 게이지 증가",
+          "desc": "목표의 다음 행동 전 대기 간격을 줄인다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140703,
       "id": "pious_pilgrim_dance_in_doom",
       "name": "사경에서 춤추는 경건한 나그네",
-      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "필살기 레벨+2, 최대 Lv.<nobr>15</nobr>. 일반 공격 레벨+1, 최대 Lv.<nobr>10</nobr>. 기억 정령 특성 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140704,
       "id": "rest_in_songs_of_gloom",
       "name": "슬픔을 안고 애가 속에 잠드니",
-      "desc": "카스토리스가 필드에 있을 시, 모든 아군이 치유를 받을 시의 회복량이 <nobr>20%</nobr> 증가한다"
+      "desc": "카스토리스가 필드에 있을 시, 모든 아군이 치유를 받을 시의 회복량이 <nobr>20%</nobr> 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140705,
       "id": "pristine_pages_prophecy_as_plume",
       "name": "예언으로 장식한 순백의 새로운 장",
-      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>"
+      "desc": "전투 스킬 레벨+2, 최대 Lv.<nobr>15</nobr>. 특성 레벨+2, 최대 Lv.<nobr>15</nobr>. 기억 정령 스킬 레벨+1, 최대 Lv.<nobr>10</nobr>",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140706,
       "id": "await_for_years_to_loom",
       "name": "세월이 고치를 깨길 기다리네",
-      "desc": "카스토리스와 죽음의 용이 피해를 가할 시 양자 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 죽음의 용은 공격 중에 약점 속성을 무시하고 적의 강인성을 감소시킬 수 있으며, 약점 격파 시 양자 속성의 약점 격파 효과를 발동하고, 특성 [묘지를 불사르는 어둠의 날개]의 바운스 발동 횟수가 추가로 <nobr>3</nobr>회 증가한다"
+      "desc": "카스토리스와 죽음의 용이 피해를 가할 시 양자 속성 <u>저항 관통</u>이 <nobr>20%</nobr> 증가한다. 죽음의 용은 공격 중에 약점 속성을 무시하고 적의 강인성을 감소시킬 수 있으며, 약점 격파 시 양자 속성의 약점 격파 효과를 발동하고, 특성 [묘지를 불사르는 어둠의 날개]의 바운스 발동 횟수가 추가로 <nobr>3</nobr>회 증가한다",
+      "unlockCost": [
+        {
+          "ItemID": 11407,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "저항 관통",
+          "desc": "피해를 가할 시 적의 일부 대응 피해 속성의 저항 수치를 무시한다",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

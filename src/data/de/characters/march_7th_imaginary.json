@@ -2,6 +2,7 @@
   "_id": 1224,
   "id": "march_7th_imaginary",
   "name": "7. März • Imaginär",
+  "description": "7. März gekleidet im Stil der Xianzhou. Eine schwertschwingende Kampfkünstlerin.\nSie lernte von Yunli und Yanqing den Umgang mit dem Schwert und ist begierig darauf, noch mehr schöne Erinnerungen an die Xianzhou zu schaffen.",
   "rarity": 4,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu. Erhält #2[i] Pkt. Aufladung.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "Lässt einen Verbündeten zum „Meister“ werden. Wenn er seinen Standardangriff einsetzt oder SCH durch einen verstärkten Standardangriff verursacht, wird basierend auf dem Pfad des Meisters der entsprechende Effekt ausgelöst.\nDie Gelehrsamkeit, Die Zerstörung, Die Jagd, Das Gedenken: Verursacht basierend auf dem Typ des Meisters zusätzlichen SCH.\nDie Harmonie, Die Nichtigkeit, Die Bewahrung, Der Überfluss: Erhöht WDS-Reduzierungswert.",
       "type": "Fertigkeit",
       "tag": "Unterstützung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Zusätzlicher SCH",
+          "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -747,6 +775,24 @@
       "simpleDesc": "Fügt einem Gegner imaginären SCH zu und erhöht die Trefferzahl und die Chance auf SCH des nächsten verstärkten Standardangriffs.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000002,
+          "name": "Feste Chance",
+          "desc": "Die feste Chance wird von keinem Faktor beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1065,6 +1111,15 @@
       "simpleDesc": "Nachdem der Meister einen Angriff oder seinen Ultimate eingesetzt hat, erhält 7. März eine Aufladung. Wenn die Aufladung #1[i] Pkt. erreicht, führt 7. März sofort eine Aktion aus, wobei ihr verursachter SCH erhöht und ihr Standardangriff verstärkt wird.",
       "type": "Talent",
       "tag": "Verstärkung",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1383,6 +1438,15 @@
       "simpleDesc": "Jedes Mal, wenn ein Teammitglied seine Technik einsetzt, erhält 7. März beim nächsten Kampfeintritt Aufladung. Nach Einsatz der Technik stellt sie beim nächsten Kampfeintritt Energie wieder her.",
       "type": "Technik",
       "tag": "Verstärkung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1400,37 +1464,88 @@
       "_id": 122401,
       "id": "my_sword_stirs_starlight",
       "name": "Mein Schwert rührt das Sternenlicht",
-      "desc": "Wenn sich der „Meister“ auf dem Kampffeld befindet, wird 7. März’ GES um <nobr>10%</nobr> erhöht."
+      "desc": "Wenn sich der „Meister“ auf dem Kampffeld befindet, wird 7. März’ GES um <nobr>10%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122402,
       "id": "blade_dances_on_waves_fight",
       "name": "Klingentanz im Schnee",
-      "desc": "Jedes Mal, wenn der „Meister“ einen Standardangriff oder eine Fertigkeit gegen einen Gegner einsetzt, startet 7. März sofort einen <u>Folgeangriff</u>, der dem Hauptziel dieses Angriffs imaginären SCH in Höhe von <nobr>60%</nobr> von 7. März’ ANG zufügt und den entsprechenden Effekt basierend auf dem Pfad des Meisters auslöst. 7. März erhält danach <nobr>1</nobr> Pkt. Aufladung. Greift bei nicht vorhandenem Hauptziel einen zufälligen Gegner an. Dieser Effekt kann nur 1-mal pro Runde ausgelöst werden."
+      "desc": "Jedes Mal, wenn der „Meister“ einen Standardangriff oder eine Fertigkeit gegen einen Gegner einsetzt, startet 7. März sofort einen <u>Folgeangriff</u>, der dem Hauptziel dieses Angriffs imaginären SCH in Höhe von <nobr>60%</nobr> von 7. März’ ANG zufügt und den entsprechenden Effekt basierend auf dem Pfad des Meisters auslöst. 7. März erhält danach <nobr>1</nobr> Pkt. Aufladung. Greift bei nicht vorhandenem Hauptziel einen zufälligen Gegner an. Dieser Effekt kann nur 1-mal pro Runde ausgelöst werden.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 122403,
       "id": "sharp_wit_in_martial_might",
       "name": "Kluge Köpfe und starke Fähigkeiten",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122404,
       "id": "being_fabulous_never_frights",
       "name": "Auch Drachen können süß sein",
-      "desc": "Stellt zu Beginn der Runde <nobr>5</nobr> Pkt. Energie wieder her."
+      "desc": "Stellt zu Beginn der Runde <nobr>5</nobr> Pkt. Energie wieder her.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122405,
       "id": "sword_delights_sugar_blights",
       "name": "Mehr Kampfkunst, weniger Süßigkeiten",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 122406,
       "id": "me_the_best_girl_in_sight",
       "name": "Das beste Mädchen der Welt",
-      "desc": "Erhöht nach dem Einsatz des Ultimates den verursachten KRIT-SCH des nächsten verstärkten Standardangriffs um <nobr>50%</nobr>."
+      "desc": "Erhöht nach dem Einsatz des Ultimates den verursachten KRIT-SCH des nächsten verstärkten Standardangriffs um <nobr>50%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11224,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

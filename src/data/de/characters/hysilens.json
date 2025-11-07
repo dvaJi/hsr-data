@@ -2,6 +2,7 @@
   "_id": 1410,
   "id": "hysilens",
   "name": "Hysilens",
+  "description": "Styxia, die Küstenstadt der Trunkenheit und Träume, wo alte Lieder noch immer zwischen den Wellen widerhallen.\nHelektra, Tochter des Ozeans, Erbin von Chrysos, die die Kernflamme des Meeres reinigt. Sie vertreibt die Unterströmung des Schmutzes und lässt für die Helden von hinter dem Himmel ein berauschendes Fest erklingen.\nDas Leben muss weitergehen. Auch wenn die Hoffnung so zerbrechlich ist wie Seifenblasen, werden die Wellen weiterrollen.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Fügt einem Gegner geringen physischen SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -439,6 +449,24 @@
       "simpleDesc": "Erhöht mit einer hohen Chance den erlittenen SCH aller Gegner und fügt ihnen physischen SCH zu.",
       "type": "Fertigkeit",
       "tag": "Flächenangriff",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        30,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -778,6 +806,24 @@
       "simpleDesc": "Erzeugt ein Feld, das den ANG und die VTD aller Gegner reduziert und ihnen physischen SCH zufügt. Solange das Feld aktiv ist, wird den Gegnern für jeden erlittenen DoT ein physischer DoT zugefügt.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000007,
+          "name": "Handlungsunfähig",
+          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1147,6 +1193,24 @@
       "simpleDesc": "Beim Angriff eines Verbündeten besteht eine hohe Chance, dass Hysilens dem getroffenen Gegner einen der folgenden Status zufügt: Windscherung/Bluten/Brennen/Schock.",
       "type": "Talent",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1501,6 +1565,24 @@
       "simpleDesc": "Erzeugt eine spezielle Dimension. Gegner innerhalb dieser Dimension greifen Verbündeten nicht an. Nach Kampfeintritt mit Gegnern in der Dimension besteht eine hohe Chance, dass jeder einzelne Gegner von #3[i] der folgenden Status betroffen wird: Windscherung/Bluten/Brennen/Schock.",
       "type": "Technik",
       "tag": "Beeinträchtigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1519,37 +1601,88 @@
       "_id": 141001,
       "id": "you_ask_why_hearts_cry",
       "name": "Du fragst, warum mein Herz so trauert",
-      "desc": "Wenn sich Hysilens auf dem Kampffeld befindet, verursachen Verbündete DoT in Höhe von <nobr>116%</nobr> des ursprünglichen SCH. Wenn Hysilens durch das Talent Gegner mit Windscherung/Bluten/Brennen/Schock belegt, besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, sie zusätzlich mit einem Status desselben Typs zu belegen, der dem Talenteffekt entspricht und gleichzeitig bestehen kann."
+      "desc": "Wenn sich Hysilens auf dem Kampffeld befindet, verursachen Verbündete DoT in Höhe von <nobr>116%</nobr> des ursprünglichen SCH. Wenn Hysilens durch das Talent Gegner mit Windscherung/Bluten/Brennen/Schock belegt, besteht eine <u>Grundchance</u> von <nobr>100%</nobr>, sie zusätzlich mit einem Status desselben Typs zu belegen, der dem Talenteffekt entspricht und gleichzeitig bestehen kann.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Grundchance",
+          "desc": "Die Grundchance getroffenen Zielen Debuffs zuzufügen.\nDie endgültige Wahrscheinlichkeit wird von der Effekt-Trefferrate des Angreifers und dem Effekt-WDS der gegnerischen Ziele beeinflusst.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141002,
       "id": "tell_me_why_waves_roar_high",
       "name": "Du willst wissen, warum die Wellen so rauschen",
-      "desc": "Während das Feld aktiv ist, wirkt die SCH-Erhöhung der Spur „Saiten der Perlen“ auf alle Verbündeten."
+      "desc": "Während das Feld aktiv ist, wirkt die SCH-Erhöhung der Spur „Saiten der Perlen“ auf alle Verbündeten.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141003,
       "id": "why_do_lights_bid_goodbye",
       "name": "Weißt du, warum die Lichter vergessen",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141004,
       "id": "lo_how_time_flows_by",
       "name": "Sieh nur, warum die Zeit dahinfließt",
-      "desc": "Während das Feld aktiv ist, wird der WDS aller Typen aller Gegner um <nobr>20%</nobr> reduziert."
+      "desc": "Während das Feld aktiv ist, wird der WDS aller Typen aller Gegner um <nobr>20%</nobr> reduziert.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141005,
       "id": "in_ablution_i_hum_and_sigh",
       "name": "Leise singe ich bei meiner Waschung",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141006,
       "id": "when_to_return_from_where_you_lie",
       "name": "Versunkene, wann kehrst du zurück",
-      "desc": "Während das Feld aktiv ist, wird zu Beginn jeder Runde oder nach einem Einzelangriff eines Verbündeten die max. Auslösungszahl von Hysilens’ physischem DoT-Effekt auf <nobr>12</nobr> und der SCH-Multiplikator des verursachten SCH um <nobr>20%</nobr> erhöht."
+      "desc": "Während das Feld aktiv ist, wird zu Beginn jeder Runde oder nach einem Einzelangriff eines Verbündeten die max. Auslösungszahl von Hysilens’ physischem DoT-Effekt auf <nobr>12</nobr> und der SCH-Multiplikator des verursachten SCH um <nobr>20%</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11410,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

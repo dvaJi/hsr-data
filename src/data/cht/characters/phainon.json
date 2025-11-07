@@ -2,6 +2,7 @@
   "_id": 1408,
   "id": "phainon",
   "name": "白厄",
+  "description": "哀麗秘榭，遺世獨立的邊陲村落，如今只餘晦澀的傳說。\n無名的英雄█████，容納「負世」火種的黃金裔，銘記全世的理想，背負萬眾的命運，為新世界帶來第一縷曙光\n——「但倘若黎明從不存在，就讓怒火燃盡此身，化作明日的烈陽！」",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "對敵方單體造成少量物理屬性傷害。",
       "type": "普通攻擊",
       "tag": "單體攻擊",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "獲得#3[i]點【火種】，對敵方單體造成大量物理屬性傷害，對相鄰目標造成物理屬性傷害。",
       "type": "戰技",
       "tag": "擴散",
+      "spBase": null,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +762,40 @@
       "simpleDesc": "變身為卡厄斯蘭那並展開境界：使隊友離場且無法行動，敵方全體擁有物理屬性弱點。\n卡厄斯蘭那不會進入自己的回合但擁有#4[i]個卡厄斯蘭那的額外回合，最後的回合內發動最後一擊，造成由敵方全體均分的大量物理屬性傷害。",
       "type": "終結技",
       "tag": "群體攻擊",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000020,
+          "name": "境界",
+          "desc": "境界效果全場唯一，持續期間無法發動其他境界效果的技能。",
+          "params": [],
+          "type": 2,
+          "icon": ""
+        },
+        {
+          "id": 10000016,
+          "name": "離場",
+          "desc": "處於離場狀態的目標無法成為技能目標，且不會出現在行動序列上。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014082,
+          "name": "卡厄斯蘭那的額外回合",
+          "desc": "白厄變身為卡厄斯蘭那時，行動序列上出現的倒數計時。倒數計時回合開始時卡厄斯蘭那獲得1個額外回合，最後1個倒數計時回合開始時改為卡厄斯蘭那發動最後一擊並結束變身。\n倒數計時的初始行動值平均設定在0～<nobr>100%</nobr>之間，每一波開始時不重置行動值。\n當卡厄斯蘭那受到行動提前效果時，改為首個倒數計時行動提前。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1082,6 +1135,15 @@
       "simpleDesc": "白厄的天賦。【火種】達到#4[i]點時可啟動終結技。\n當白厄成為其他目標的技能目標時，獲得【火種】。成為隊友的技能目標時，暴擊傷害提高。",
       "type": "天賦",
       "tag": "強化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1482,24 @@
       "desc": "白厄在隊伍中時，使秘技點上限提高3點。\n主動施放秘技消耗2點秘技點，立即攻擊一定範圍內的所有敵人。進入戰鬥後，為我方隊友恢復#3[i]點能量，獲得#2[i]點【毀傷】和#4[i]個戰技點，並且每一波開始時對敵方全體造成等同於白厄#1[i]%攻擊力的物理屬性傷害。\n若攻擊普通敵人則立即將其消滅，不會進入戰鬥。未命中敵人時不消耗秘技點。",
       "simpleDesc": "秘技點上限提高3點。主動施放消耗2點秘技點攻擊一定範圍內的所有敵人。進入戰鬥後為我方恢復能量、戰技點和【毀傷】，每一波開始時對敵方全體造成物理屬性傷害。\n若攻擊普通敵人則立即將其消滅，不會進入戰鬥。未命中敵人時不消耗秘技點。",
       "type": "秘技",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10014081,
+          "name": "毀傷",
+          "desc": "卡厄斯蘭那的專屬充能，上限為7點。未變身時也會保留。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1439,37 +1519,122 @@
       "_id": 140801,
       "id": "fire_and_light_bind_virtue_and_vice",
       "name": "火與光，善惡的化身",
-      "desc": "<u>卡厄斯蘭那的額外回合</u>的基礎速度繼承比例提高至<nobr>66%</nobr>。單場戰鬥中每有1個敵方目標被消滅，便使其額外提高<nobr>#1[f1]%</nobr>，最多提高至<nobr>84%</nobr>。\n施放終結技時，暴擊傷害提高<nobr>50%</nobr>，持續<nobr>3</nobr>回合。"
+      "desc": "<u>卡厄斯蘭那的額外回合</u>的基礎速度繼承比例提高至<nobr>66%</nobr>。單場戰鬥中每有1個敵方目標被消滅，便使其額外提高<nobr>#1[f1]%</nobr>，最多提高至<nobr>84%</nobr>。\n施放終結技時，暴擊傷害提高<nobr>50%</nobr>，持續<nobr>3</nobr>回合。",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10014082,
+          "name": "卡厄斯蘭那的額外回合",
+          "desc": "白厄變身為卡厄斯蘭那時，行動序列上出現的倒數計時。倒數計時回合開始時卡厄斯蘭那獲得1個額外回合，最後1個倒數計時回合開始時改為卡厄斯蘭那發動最後一擊並結束變身。\n倒數計時的初始行動值平均設定在0～<nobr>100%</nobr>之間，每一波開始時不重置行動值。\n當卡厄斯蘭那受到行動提前效果時，改為首個倒數計時行動提前。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140802,
       "id": "sky_and_earth_churn_mortal_froth",
       "name": "天與地，世間的泡沫",
-      "desc": "卡厄斯蘭那的物理屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。單次施放【支柱•死星天裁】消耗<u>【毀傷】</u>點數達到<nobr>4</nobr>點時，獲得1個<u>額外回合</u>。"
+      "desc": "卡厄斯蘭那的物理屬性<u>抗性穿透</u>提高<nobr>20%</nobr>。單次施放【支柱•死星天裁】消耗<u>【毀傷】</u>點數達到<nobr>4</nobr>點時，獲得1個<u>額外回合</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "造成傷害時，部分無視敵方目標相應屬性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10014081,
+          "name": "毀傷",
+          "desc": "卡厄斯蘭那的專屬充能，上限為7點。未變身時也會保留。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000000,
+          "name": "額外回合",
+          "desc": "獲得1個不消耗回合數的額外回合，在此回合中無法插入施放終結技。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140803,
       "id": "depths_of_quiet_entombed_in_ruin",
       "name": "幾重寂靜深埋歸墟",
-      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。"
+      "desc": "終結技等級+2，最多不超過<nobr>15</nobr>級；普通攻擊等級+1，最多不超過<nobr>10</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140804,
       "id": "faces_of_titans_blurred_by_time",
       "name": "多少泰坦面目模糊",
-      "desc": "施放【災厄•弒魂焚詔】時，額外獲得<nobr>4</nobr>層【弒魂之熾】。"
+      "desc": "施放【災厄•弒魂焚詔】時，額外獲得<nobr>4</nobr>層【弒魂之熾】。",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140805,
       "id": "the_wheel_spins_forevermore",
       "name": "永劫時針，三千萬轉",
-      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。"
+      "desc": "戰技等級+2，最多不超過<nobr>15</nobr>級；天賦等級+2，最多不超過<nobr>15</nobr>級。",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140806,
       "id": "embers_of_old_rise_still",
       "name": "亙古長升，蝕火殘陽",
-      "desc": "【火種】的可溢出點數不再擁有上限。戰鬥開始時，獲得<nobr>6</nobr>點【火種】。\n施放【支柱•死星天裁】的攻擊後，對生命值最高的敵方目標額外造成等同於本次攻擊總傷害值<nobr>36%</nobr>的<u>真實傷害</u>。"
+      "desc": "【火種】的可溢出點數不再擁有上限。戰鬥開始時，獲得<nobr>6</nobr>點【火種】。\n施放【支柱•死星天裁】的攻擊後，對生命值最高的敵方目標額外造成等同於本次攻擊總傷害值<nobr>36%</nobr>的<u>真實傷害</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11408,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000017,
+          "name": "真實傷害",
+          "desc": "不受任何效果所影響的無屬性傷害，本次傷害不視為造成了1次攻擊。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

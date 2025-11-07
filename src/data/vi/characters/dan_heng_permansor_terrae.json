@@ -2,6 +2,7 @@
   "_id": 1414,
   "id": "dan_heng_permansor_terrae",
   "name": "Dan Heng - Permansor Terrae",
+  "description": "Lồng ngực của Georios, thân thể của Phục Long đang nâng đỡ mặt đất vỡ nát, chịu đựng nỗi thống khổ ngàn năm.\nKhách Vô Danh Dan Heng, Hậu Duệ Chrysos bảo vệ Ngọn Lửa \"Mặt Đất\", chống đỡ bát hoang sắp sụp đổ, đưa sinh linh trên mặt đất đến những vùng đất xa xôi.\n- Trăm sông đổ về biển, núi non đồng vọng tiếng vang, con đường bất diệt sẽ trải dài vạn dặm.",
   "rarity": 5,
   "combat_type": {
     "id": "physical",
@@ -247,6 +248,15 @@
       "simpleDesc": "Gây lượng nhỏ Sát Thương Vật Lý cho 1 kẻ địch chỉ định.",
       "type": "Tấn Công Thường",
       "tag": "Đánh Đơn",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +429,15 @@
       "simpleDesc": "Khiến nhân vật chỉ định của phe ta trở thành \"Đồng Bào\" và cung cấp Khiên có thể cộng dồn lượng Khiên cho toàn bộ phe ta.",
       "type": "Chiến Kỹ",
       "tag": "Phòng Thủ",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +777,32 @@
       "simpleDesc": "Gây lượng lớn Sát Thương Vật Lý cho toàn bộ phe địch, và cung cấp Khiên có thể cộng dồn lượng Khiên cho toàn bộ phe ta. Đồng thời cường hóa Hồn Rồng, khi Hồn Rồng hành động sẽ phát động Đòn Đánh Theo Sau, gây lượng nhỏ Sát Thương Vật Lý và lượng nhỏ sát thương thuộc tính tương ứng với \"Đồng Bào\" lên toàn bộ phe địch. Cường hóa duy trì trong #3[i] lần hành động của Hồn Rồng.",
       "type": "Tuyệt Kỹ",
       "tag": "Đánh Lan",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Đòn Đánh Theo Sau",
+          "desc": "Hiệu ứng tự động kích hoạt khi đạt điều kiện, thi triển 1 lần tấn công thêm lên mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1157,6 +1202,32 @@
       "simpleDesc": "Khi nhân vật phe ta trở thành \"Đồng Bào\", Dan Heng - Permansor Terrae sẽ triệu hồi \"Hồn Rồng\" cho nhân vật đó.\nKhi \"Hồn Rồng\" hành động, sẽ giải trừ 1 Hiệu Ứng Xấu cho toàn bộ phe ta và cung cấp Khiên có thể cộng dồn lượng Khiên.",
       "type": "Thiên Phú",
       "tag": "Phòng Thủ",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000010,
+          "name": "Hiệu Ứng Xấu",
+          "desc": "Tất cả trạng thái duy trì có Hiệu Ứng Xấu đối với chiến đấu, nếu không có hướng dẫn đặc biệt thì có thể bị giải trừ.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000007,
+          "name": "Trạng Thái Không Thể Chiến Đấu",
+          "desc": "Khi HP hiện tại của mục tiêu phe ta bị suy giảm còn 0, sẽ vào trạng thái đặc biệt, mục tiêu vào trạng thái này không thể tiếp tục chiến đấu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1526,6 +1597,15 @@
       "simpleDesc": "Khiến kẻ địch trong khu vực nhất định rơi vào trạng thái Choáng, và khiến nhân vật đang hành động nhận được \"Đồng Bào\", khi trận tiếp theo bắt đầu sẽ tự động thi triển Chiến Kỹ lên nhân vật có \"Đồng Bào\".",
       "type": "Bí Kỹ",
       "tag": "Quấy Nhiễu",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1542,37 +1622,114 @@
       "_id": 141401,
       "id": "shed_scales_of_old",
       "name": "Rồng Hoang Lột Vảy Xưa",
-      "desc": "Khi Dan Heng - Permansor Terrae thi triển Tuyệt Kỹ, sẽ hồi <nobr>1</nobr> Điểm Chiến Kỹ, khiến <u>Xuyên Kháng</u> Toàn Thuộc Tính của \"Đồng Bào\" tăng <nobr>18%</nobr>, duy trì <nobr>3</nobr> hiệp."
+      "desc": "Khi Dan Heng - Permansor Terrae thi triển Tuyệt Kỹ, sẽ hồi <nobr>1</nobr> Điểm Chiến Kỹ, khiến <u>Xuyên Kháng</u> Toàn Thuộc Tính của \"Đồng Bào\" tăng <nobr>18%</nobr>, duy trì <nobr>3</nobr> hiệp.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "Xuyên Kháng",
+          "desc": "Khi gây ra sát thương, bỏ qua một phần kháng thuộc tính sát thương tương ứng của mục tiêu địch.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141402,
       "id": "watch_trails_to_blaze",
       "name": "Xích Tử Bảo Vệ Khai Phá",
-      "desc": "Hiệu ứng hành động Hồn Rồng được cường hóa từ Tuyệt Kỹ tăng thêm <nobr>2</nobr> lần, sau khi Dan Heng - Permansor Terrae thi triển Tuyệt Kỹ, \"Hồn Rồng\" <u>Ưu Tiên Hành Động</u> <nobr>100%</nobr>. Khi \"Hồn Rồng\" được cường hóa hành động, <u>Sát Thương Kèm Theo</u> mà \"Đồng Bào\" gây ra bằng <nobr>200%</nobr> sát thương gốc, và lượng khiên lần này cung cấp bằng <nobr>200%</nobr> lượng khiên gốc."
+      "desc": "Hiệu ứng hành động Hồn Rồng được cường hóa từ Tuyệt Kỹ tăng thêm <nobr>2</nobr> lần, sau khi Dan Heng - Permansor Terrae thi triển Tuyệt Kỹ, \"Hồn Rồng\" <u>Ưu Tiên Hành Động</u> <nobr>100%</nobr>. Khi \"Hồn Rồng\" được cường hóa hành động, <u>Sát Thương Kèm Theo</u> mà \"Đồng Bào\" gây ra bằng <nobr>200%</nobr> sát thương gốc, và lượng khiên lần này cung cấp bằng <nobr>200%</nobr> lượng khiên gốc.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000001,
+          "name": "Ưu Tiên Hành Động",
+          "desc": "Rút ngắn khoảng thời gian chờ trước lần hành động tiếp theo của mục tiêu.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 141403,
       "id": "bear_weight_of_worlds",
       "name": "Phó Thác Của Nhật Nguyệt Sơn Hà",
-      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>."
+      "desc": "Cấp Tuyệt Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Tấn Công Thường +1, tối đa không quá cấp <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141404,
       "id": "by_oath_this_vessel_is_i",
       "name": "Thề Nguyện Trên Đá, Thân Này Là Thuyền",
-      "desc": "Sát thương \"Đồng Bào\" phải chịu giảm <nobr>20%</nobr>."
+      "desc": "Sát thương \"Đồng Bào\" phải chịu giảm <nobr>20%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141405,
       "id": "the_path_of_permanence_sweeps_far",
       "name": "Con Đường Bất Diệt Trải Dài Vạn Dặm",
-      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>."
+      "desc": "Cấp Chiến Kỹ +2, tối đa không quá cấp <nobr>15</nobr>; Cấp Thiên Phú +2, tối đa không quá cấp <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 141406,
       "id": "one_dream_to_enfold_all_wilds",
       "name": "Cỏ Cây Bụi Trần Đều Chìm Vào Giấc Mộng",
-      "desc": "Khi trong trận tồn tại \"Đồng Bào\" sẽ khiến sát thương toàn bộ phe địch phải chịu tăng <nobr>20%</nobr>, khi \"Đồng Bào\" gây sát thương sẽ bỏ qua <nobr>12%</nobr> Phòng Thủ của mục tiêu phe địch. Khi Dan Heng - Permansor Terrae thi triển Tuyệt Kỹ, \"Đồng Bào\" sẽ gây <u>Sát Thương Kèm Theo</u> thuộc tính tương ứng bằng <nobr>330%</nobr> Tấn Công của \"Đồng Bào\" cho toàn bộ phe địch."
+      "desc": "Khi trong trận tồn tại \"Đồng Bào\" sẽ khiến sát thương toàn bộ phe địch phải chịu tăng <nobr>20%</nobr>, khi \"Đồng Bào\" gây sát thương sẽ bỏ qua <nobr>12%</nobr> Phòng Thủ của mục tiêu phe địch. Khi Dan Heng - Permansor Terrae thi triển Tuyệt Kỹ, \"Đồng Bào\" sẽ gây <u>Sát Thương Kèm Theo</u> thuộc tính tương ứng bằng <nobr>330%</nobr> Tấn Công của \"Đồng Bào\" cho toàn bộ phe địch.",
+      "unlockCost": [
+        {
+          "ItemID": 11414,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "Sát Thương Kèm Theo",
+          "desc": "Người bị tấn công phải chịu thêm 1 lần sát thương, lần sát thương này không được xem là gây ra 1 lần tấn công.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

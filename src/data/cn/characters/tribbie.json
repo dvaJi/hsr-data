@@ -2,6 +2,7 @@
   "_id": 1403,
   "id": "tribbie",
   "name": "缇宝",
+  "description": "自那三相神谕垂怜的圣地，信使分作千身，启程远行。\n雅努萨波利斯的圣女，缇里西庇俄丝，窃夺「门径」火种的黄金裔，为众生奔走，令救世的讯息晓喻大地\n——找寻那流淌黄金神血的人子，冲破世间至暗，去往星月满天的明日。",
   "rarity": 5,
   "combat_type": {
     "id": "quantum",
@@ -247,6 +248,15 @@
       "simpleDesc": "对敌方单体及其相邻目标造成少量量子属性伤害。",
       "type": "普攻",
       "tag": "扩散",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        15
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -429,6 +439,24 @@
       "simpleDesc": "获得【神启】，持续期间内我方全体目标全属性抗性穿透提高。",
       "type": "战技",
       "tag": "辅助",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000005,
+          "name": "抗性穿透",
+          "desc": "当造成伤害时，无视敌方目标的一部分对应伤害属性的抗性值。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -738,6 +766,24 @@
       "simpleDesc": "开启结界，对敌方全体造成少量量子属性伤害。结界持续期间，敌方受到的伤害提高，并根据攻击敌人的个数对被攻击目标中生命值最高的目标造成少量量子属性附加伤害。",
       "type": "终结技",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1077,6 +1123,24 @@
       "simpleDesc": "我方其他角色施放终结技后，缇宝发动追加攻击，对敌方全体造成少量量子属性伤害。该效果每个角色最多触发1次，缇宝施放终结技时重置我方其他角色可触发次数。",
       "type": "天赋",
       "tag": "群攻",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        15,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1371,6 +1435,15 @@
       "simpleDesc": "进入战斗时获得【神启】。",
       "type": "秘技",
       "tag": "强化",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1387,37 +1460,114 @@
       "_id": 140301,
       "id": "rite_of_sugar_scoop",
       "name": "拾起砂糖的祭典",
-      "desc": "结界持续期间，我方目标攻击敌人后，对结界造成<u>附加伤害</u>的目标额外造成等同于本次攻击总伤害值<nobr>24%</nobr>的<u>真实伤害</u>。"
+      "desc": "结界持续期间，我方目标攻击敌人后，对结界造成<u>附加伤害</u>的目标额外造成等同于本次攻击总伤害值<nobr>24%</nobr>的<u>真实伤害</u>。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000017,
+          "name": "真实伤害",
+          "desc": "不受任何效果所影响的无属性伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140302,
       "id": "guide_of_dream_tour",
       "name": "探访佳梦的向导",
-      "desc": "结界造成的<u>附加伤害</u>提高至原伤害的<nobr>120%</nobr>。结界造成<u>附加伤害</u>时，会额外造成<nobr>1</nobr>次附加伤害。"
+      "desc": "结界造成的<u>附加伤害</u>提高至原伤害的<nobr>120%</nobr>。结界造成<u>附加伤害</u>时，会额外造成<nobr>1</nobr>次附加伤害。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000005,
+          "name": "附加伤害",
+          "desc": "使受击者额外受到1次伤害，本次伤害不视为造成了1次攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 140303,
       "id": "trove_of_morning_glow",
       "name": "盛满晨曦的宝藏",
-      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。"
+      "desc": "终结技等级+2，最多不超过<nobr>15</nobr>级，普攻等级+1，最多不超过<nobr>10</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140304,
       "id": "peace_of_empathy_bond",
       "name": "心意相契的安宁",
-      "desc": "【神启】持续期间，我方全体造成伤害时无视目标<nobr>18%</nobr>的防御力。"
+      "desc": "【神启】持续期间，我方全体造成伤害时无视目标<nobr>18%</nobr>的防御力。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140305,
       "id": "clock_of_wonder_origin",
       "name": "开启奇迹的时钟",
-      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。"
+      "desc": "战技等级+2，最多不超过<nobr>15</nobr>级，天赋等级+2，最多不超过<nobr>15</nobr>级。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 140306,
       "id": "morrow_of_star_shine",
       "name": "星月满天的明日",
-      "desc": "缇宝施放终结技后，对敌方全体发动天赋的<u>追加攻击</u>。天赋的<u>追加攻击</u>造成的伤害提高<nobr>729%</nobr>。"
+      "desc": "缇宝施放终结技后，对敌方全体发动天赋的<u>追加攻击</u>。天赋的<u>追加攻击</u>造成的伤害提高<nobr>729%</nobr>。",
+      "unlockCost": [
+        {
+          "ItemID": 11403,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "追加攻击",
+          "desc": "满足条件时自动触发的效果，对目标施放1次额外的攻击。",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

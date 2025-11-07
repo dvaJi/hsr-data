@@ -2,6 +2,7 @@
   "_id": 1005,
   "id": "kafka",
   "name": "Kafka",
+  "description": "Membro dos Caçadores de Stellaron. Uma beleza calma, centrada e profissional.\nUsou o encantamento do Sussuro de Espírito para preparar {NICKNAME} para absorver o Stellaron.\nGosta de fazer compras e organizar sua coleção de casacos.",
   "rarity": 5,
   "combat_type": {
     "id": "thunder",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Raio leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,15 @@
       "simpleDesc": "Causa Dano de Raio a um único inimigo e Dano de Raio leve a alvos adjacentes.\nSe o inimigo-alvo principal estiver atualmente infligido com efeito de Dano Contínuo, este efeito causa Dano mais 1 vez.",
       "type": "Perícia",
       "tag": "Explosão",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        30
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +765,24 @@
       "simpleDesc": "Causa Dano de Raio leve a todos os inimigos, com altas chances de causar Choque.\nSe os inimigos já estiverem com Choque, o estado de Choque causa Dano mais 1 vez.",
       "type": "Perícia Suprema",
       "tag": "Área",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        60,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1137,32 @@
       "simpleDesc": "Após um aliado usar um ATQ Básico em um inimigo, Kafka realiza imediatamente um Ataque Extra e causa Dano de Raio, com altas chances de infligir \"Choque\" a este alvo. Este efeito só pode ser ativado 1 vez por rodada.",
       "type": "Talento",
       "tag": "Alvo Único",
+      "spBase": 10,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1420,6 +1486,24 @@
       "desc": "Ataca imediatamente todos os inimigos dentro de um alcance específico. Depois de entrar em batalha, causa Dano de Raio igual a #3[i]% do ATQ de Kafka a todos os inimigos, com uma chance-base de #1[i]% de infligir Choque equivalente àquele aplicado pela Perícia Suprema dela a todos os inimigos-alvo por #2[i] rodada(s).",
       "simpleDesc": "Ataca todos os inimigos num certo alcance. Depois de entrar em batalha, causa Dano de Raio leve a todos os inimigos com alta chance de infligir Choque neles.",
       "type": "Técnica",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        60,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1438,37 +1522,105 @@
       "_id": 100501,
       "id": "da_capo",
       "name": "Da Capo",
-      "desc": "Quando o Talento ativa um <u>Ataque Extra</u>, há <nobr>100%</nobr> de <u>chance-base</u> de aumentar o <u>Dano Contínuo</u> recebido pelo alvo em <nobr>30%</nobr> por <nobr>2</nobr> rodada(s)."
+      "desc": "Quando o Talento ativa um <u>Ataque Extra</u>, há <nobr>100%</nobr> de <u>chance-base</u> de aumentar o <u>Dano Contínuo</u> recebido pelo alvo em <nobr>30%</nobr> por <nobr>2</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 30000001,
+          "name": "Chance-base",
+          "desc": "A chance-base de aplicar penalidades aos inimigos-alvos atingidos. \nA probabilidade final é afetada pela Taxa de Acerto do atacante e a RES a Efeito dos inimigos-alvo.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 100502,
       "id": "fortississimo",
       "name": "Fortississimo",
-      "desc": "Enquanto Kafka está no campo, o <u>Dano Contínuo</u> causado por todos os aliados aumenta em <nobr>25%</nobr>."
+      "desc": "Enquanto Kafka está no campo, o <u>Dano Contínuo</u> causado por todos os aliados aumenta em <nobr>25%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100503,
       "id": "capriccio",
       "name": "Capriccio",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100504,
       "id": "recitativo",
       "name": "Recitativo",
-      "desc": "Quando um inimigo-alvo recebe Dano do status de Choque infligido por Kafka, Kafka regenera adicionalmente <nobr>2</nobr> de Energia."
+      "desc": "Quando um inimigo-alvo recebe Dano do status de Choque infligido por Kafka, Kafka regenera adicionalmente <nobr>2</nobr> de Energia.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100505,
       "id": "doloroso",
       "name": "Doloroso",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 100506,
       "id": "leggiero",
       "name": "Leggiero",
-      "desc": "O Choque causado no inimigo pela Perícia Suprema, pela Técnica, ou pelo <u>Ataque Extra</u> ativado pelo Talento tem um aumento de <nobr>156%</nobr> no multiplicador de Dano, e dura <nobr>1</nobr> rodada(s) a mais."
+      "desc": "O Choque causado no inimigo pela Perícia Suprema, pela Técnica, ou pelo <u>Ataque Extra</u> ativado pelo Talento tem um aumento de <nobr>156%</nobr> no multiplicador de Dano, e dura <nobr>1</nobr> rodada(s) a mais.",
+      "unlockCost": [
+        {
+          "ItemID": 11005,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Ataque Extra",
+          "desc": "Inflige um Ataque Extra no alvo. Esse efeito é acionado automaticamente quando os requisitos são cumpridos.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [

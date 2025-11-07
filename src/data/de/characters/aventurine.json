@@ -2,6 +2,7 @@
   "_id": 1304,
   "id": "aventurine",
   "name": "Aventurin",
+  "description": "Eine hochrangige Führungskraft in der Abteilung für strategische Investitionen der IFK.\nEr scheut sich nicht, Risiken einzugehen und sein ständiges Lächeln macht es den Menschen schwer, seine wahren Gefühle zu erkennen.",
   "rarity": 5,
   "combat_type": {
     "id": "imaginary",
@@ -247,6 +248,18 @@
       "simpleDesc": "Fügt einem anvisierten Gegner geringen imaginären SCH zu.",
       "type": "Standardangriff",
       "tag": "Einzelangriff",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Gewährt allen Verbündeten den stapelbaren Schild „Verstärkter Einsatz“.",
       "type": "Fertigkeit",
       "tag": "Verteidigung",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -758,6 +783,18 @@
       "simpleDesc": "Erhält zufällig „Blinde Wette“. Verursacht bei einem Gegner „Panik“ und fügt ihm imaginären SCH zu. Wenn ein Verbündeter einen Gegner im Status Panik angreift, wird der verursachte KRIT-SCH erhöht.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        90,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1134,32 @@
       "simpleDesc": "Besitzt ein Verbündeter „Verstärkter Einsatz“, wird sein Effekt-WDS erhöht. Wenn er angegriffen wird, sammelt er für Aventurin „Blinde Wette“. Besitzt Aventurin Verstärkter Einsatz, kann er Mengenkontrolle-Debuffs widerstehen. Wenn Blinde Wette 7 Pkt. erreicht, verbraucht Aventurin diese Punkte, um einen Folgeangriff zu starten und einem zufälligen Gegner geringen imaginären SCH zuzufügen, wobei der Angriff 7-mal abprallt.",
       "type": "Talent",
       "tag": "Abpraller",
+      "spBase": 1,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        10,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000011,
+          "name": "Mengenkontrolle-Debuff",
+          "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1451,6 +1514,15 @@
       "simpleDesc": "Der Einsatz der Technik gewährt zufällig 1 von 3 Arten von Effekten zur VTD-Erhöhung. Nach dem nächsten Kampfeintritt wird die VTD aller Verbündeten entsprechend erhöht.",
       "type": "Technik",
       "tag": "Verteidigung",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1470,37 +1542,88 @@
       "_id": 130401,
       "id": "prisoners_dilemma",
       "name": "Spiel der Gefangenen",
-      "desc": "Erhöht den KRIT-SCH von Verbündeten mit „Verstärkter Einsatz“ um <nobr>20%</nobr>. Gewährt nach dem Einsatz des Ultimates für <nobr>3</nobr> Rd. den Schild Verstärkter Einsatz für alle Verbündeten. Die Schildmenge entspricht <nobr>100%</nobr> der durch die Fertigkeit gewährten Schildmenge."
+      "desc": "Erhöht den KRIT-SCH von Verbündeten mit „Verstärkter Einsatz“ um <nobr>20%</nobr>. Gewährt nach dem Einsatz des Ultimates für <nobr>3</nobr> Rd. den Schild Verstärkter Einsatz für alle Verbündeten. Die Schildmenge entspricht <nobr>100%</nobr> der durch die Fertigkeit gewährten Schildmenge.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130402,
       "id": "bounded_rationality",
       "name": "Begrenzte Rationalität",
-      "desc": "Beim Einsatz des Standardangriffs wird der WDS aller Typen des Ziels für <nobr>3</nobr> Rd. um <nobr>12%</nobr> reduziert."
+      "desc": "Beim Einsatz des Standardangriffs wird der WDS aller Typen des Ziels für <nobr>3</nobr> Rd. um <nobr>12%</nobr> reduziert.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130403,
       "id": "droprate_maxing",
       "name": "Höchster Multiplikator",
-      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>."
+      "desc": "Ultimate-Stufe +2 bis max. St. <nobr>15</nobr>. Standardangriff-Stufe +1 bis max. St. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130404,
       "id": "unexpected_hanging_paradox",
       "name": "Unerwartete Hinrichtung",
-      "desc": "Wenn der <u>Folgeangriff</u> des Talents ausgelöst wird, wird Aventurins VTD zunächst für <nobr>2</nobr> Rd. um <nobr>40%</nobr> erhöht. Die Trefferzahl des durch das Talent ausgelösten <u>Folgeangriffs</u> wird zusätzlich um <nobr>3</nobr> erhöht."
+      "desc": "Wenn der <u>Folgeangriff</u> des Talents ausgelöst wird, wird Aventurins VTD zunächst für <nobr>2</nobr> Rd. um <nobr>40%</nobr> erhöht. Die Trefferzahl des durch das Talent ausgelösten <u>Folgeangriffs</u> wird zusätzlich um <nobr>3</nobr> erhöht.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000004,
+          "name": "Folgeangriff",
+          "desc": "Führt einen zusätzlichen Angriff auf das Ziel durch. Dieser Effekt wird automatisch ausgelöst, wenn die Voraussetzungen erfüllt sind.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130405,
       "id": "ambiguity_aversion",
       "name": "Vage Abneigung",
-      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>."
+      "desc": "Fertigkeitsstufe +2 bis max. St. <nobr>15</nobr>. Talentstufe +2 bis max. St. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130406,
       "id": "stag_hunt_game",
       "name": "Hirschjagd",
-      "desc": "Erhöht Aventurins verursachten SCH um <nobr>50%</nobr> für jeden Verbündeten mit Schild, bis zu <nobr>150%</nobr>."
+      "desc": "Erhöht Aventurins verursachten SCH um <nobr>50%</nobr> für jeden Verbündeten mit Schild, bis zu <nobr>150%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11304,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     }
   ],
   "skillTreePoints": [

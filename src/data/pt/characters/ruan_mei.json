@@ -2,6 +2,7 @@
   "_id": 1303,
   "id": "ruan_mei",
   "name": "Ruan Mei",
+  "description": "Uma membro da Sociedade de Gênios e especialista em ciências biológicas. Ela se uniu à Herta e aos outros para desenvolver o Universo Simulado.",
   "rarity": 5,
   "combat_type": {
     "id": "ice",
@@ -247,6 +248,18 @@
       "simpleDesc": "Causa Dano de Gelo leve a um único inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
+      "spBase": 20,
+      "bpNeed": -1,
+      "bpAdd": 1,
+      "showStanceList": [
+        30,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -419,6 +432,18 @@
       "simpleDesc": "Após usar sua Perícia, Ruan Mei ganha Tom Acima. Quando Ruan Mei possuir Tom Acima, o Dano e a Eficiência de Quebra de Fraqueza de todos os aliados é aumentada.",
       "type": "Perícia",
       "tag": "Suporte",
+      "spBase": 30,
+      "bpNeed": 1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -743,6 +768,43 @@
       "simpleDesc": "Aumenta a PEN de RES a Todos os Tipos para todos os aliados, e seus ataques aplicam Reflorescer da Ameixa aos inimigos atingidos.",
       "type": "Perícia Suprema",
       "tag": "Suporte",
+      "spBase": 5,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "skillComboValueDelta": {
+        "Value": 10
+      },
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000002,
+          "name": "Ação Atrasada",
+          "desc": "Aumenta o intervalo de espera do alvo antes da próxima ação.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        },
+        {
+          "id": 10000014,
+          "name": "Dano de Quebra",
+          "desc": "O Dano de Quebra aumenta com um maior Efeito de Quebra, maior Tenacidade máxima de alvo, e maiores níveis de personagens.\nO Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1097,6 +1159,24 @@
       "simpleDesc": "Aumenta a VEL para todos os aliados (com exceção desta unidade). Quebrar a Fraqueza de um inimigo-alvo causará adicionalmente Dano de Quebra de Gelo.",
       "type": "Talento",
       "tag": "Suporte",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Dano de Quebra",
+          "desc": "O Dano de Quebra aumenta com um maior Efeito de Quebra, maior Tenacidade máxima de alvo, e maiores níveis de personagens.\nO Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ],
       "levels": [
         {
           "level": 1,
@@ -1406,6 +1486,15 @@
       "simpleDesc": "Da próxima vez que entrar em batalha, ativa automaticamente a Perícia por #1[i] vez(es). Depois de usar a Técnica, aliados atacando inimigos no Universo Simulado ou no Universo Divergente sempre serão considerados como se estivessem atacando a Fraqueza para entrar em batalha, e sua Tenacidade é reduzida independente dos Tipos de Fraqueza. Para cada Bênção em posse, aumenta a Redução de Tenacidade e causa adicionalmente Dano de Quebra ao infligir Quebra de Fraqueza.",
       "type": "Técnica",
       "tag": "Aprimoramento",
+      "spBase": null,
+      "bpNeed": -1,
+      "bpAdd": null,
+      "showStanceList": [
+        0,
+        0,
+        0
+      ],
+      "extra": [],
       "levels": [
         {
           "level": 1,
@@ -1425,37 +1514,97 @@
       "_id": 130301,
       "id": "neuronic_embroidery",
       "name": "Bordado Neurônico",
-      "desc": "Quando o Campo da Perícia Suprema é ativado, o Dano causado por todos os aliados ignora <nobr>20%</nobr> da DEF do alvo."
+      "desc": "Quando o Campo da Perícia Suprema é ativado, o Dano causado por todos os aliados ignora <nobr>20%</nobr> da DEF do alvo.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130302,
       "id": "reedside_promenade",
       "name": "Passeio Pela Relva",
-      "desc": "Enquanto Ruan Mei está no campo, todos os aliados aumentam seus ATQs em <nobr>40%</nobr> ao causar Dano a inimigos com Quebra de Fraqueza."
+      "desc": "Enquanto Ruan Mei está no campo, todos os aliados aumentam seus ATQs em <nobr>40%</nobr> ao causar Dano a inimigos com Quebra de Fraqueza.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000006,
+          "name": "Estado de Quebra de Fraqueza",
+          "desc": "Quando a Tenacidade de inimigos-alvos é reduzida a 0, eles entram no estado de Quebra de Fraqueza, que atrasa suas ações.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     },
     {
       "_id": 130303,
       "id": "viridescent_pirouette",
       "name": "Pirueta Viridescente",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>."
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130304,
       "id": "chatoyant_clat",
       "name": "Chatoyant Éclat",
-      "desc": "Quando um inimigo-alvo sofrer de Quebra de Fraqueza, o Efeito de Quebra de Ruan Mei aumenta em <nobr>100%</nobr> por <nobr>3</nobr> rodada(s)."
+      "desc": "Quando um inimigo-alvo sofrer de Quebra de Fraqueza, o Efeito de Quebra de Ruan Mei aumenta em <nobr>100%</nobr> por <nobr>3</nobr> rodada(s).",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130305,
       "id": "languid_barrette",
       "name": "Presilha Lânguida",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>."
+      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": []
     },
     {
       "_id": 130306,
       "id": "sash_cascade",
       "name": "Cascada de Lenços",
-      "desc": "Estende a duração do Campo da Perícia Suprema por <nobr>1</nobr> rodada(s). O multiplicador do <u>Dano de Quebra</u> do Talento aumenta adicionalmente em <nobr>200%</nobr>."
+      "desc": "Estende a duração do Campo da Perícia Suprema por <nobr>1</nobr> rodada(s). O multiplicador do <u>Dano de Quebra</u> do Talento aumenta adicionalmente em <nobr>200%</nobr>.",
+      "unlockCost": [
+        {
+          "ItemID": 11303,
+          "ItemNum": 1
+        }
+      ],
+      "extra": [
+        {
+          "id": 10000014,
+          "name": "Dano de Quebra",
+          "desc": "O Dano de Quebra aumenta com um maior Efeito de Quebra, maior Tenacidade máxima de alvo, e maiores níveis de personagens.\nO Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.",
+          "params": [],
+          "type": 2,
+          "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+        }
+      ]
     }
   ],
   "skillTreePoints": [
