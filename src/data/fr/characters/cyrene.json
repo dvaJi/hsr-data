@@ -1690,7 +1690,7 @@
             "desc": "Cyrène, Tribbie, Cérydra, Nocterna, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phaénon, Anaxa, Aglaé, Mydei, Castorice, Cipher, {M#le pionnier}{F#la pionnière} (le Souvenir).",
             "params": [],
             "type": 2,
-            "icon": "2"
+            "icon": ""
           }
         ],
         "level": [
@@ -3478,8 +3478,8 @@
       {
         "id": 1141525,
         "name": "Ode à la Terre",
-        "desc": "Lorsque le Démiurge utilise sa compétence de mnémesprit, accorde Ode à la Terre à Dan Heng • Permansor Terrae et les <nobr>#3[i]</nobr> prochaines attaques du Draco spiritus infligent des DGT additionnels équivalents à <span style=\"color:#f29e38ff><nobr>#4[i]%</nobr></span> de la valeur de bouclier de l'Alter ego et de son type. Lorsque Dan Heng • Permansor Terrae bénéficie d'Ode à la Terre, l'Alter ego inflige <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> de DGT supplémentaires. Lorsque Dan Heng • Permansor Terrae est la cible de cette capacité, avance également l'action du Draco spiritus de <nobr>100</nobr> %. La prochaine action du Draco spiritus bénéficie de l'effet de renforcement de l'ultime de Dan Heng • Permansor Terrae et la valeur de bouclier accordée par le Draco spiritus est d'un montant équivalent à <nobr>#5[i]%</nobr> de sa valeur initiale. D'autre part, ne consomme pas la valeur de renforcement de l'ultime de Dan Heng • Permansor Terrae.",
-        "simpleDesc": "Lorsque le Démiurge utilise sa compétence de mnémesprit, le Draco spiritus inflige des DGT additionnels après avoir attaqué et Dan Heng • Permansor Terrae obtient Ode à la Terre, ce qui augmente les DGT infligés par l'Alter ego. Lorsque Dan Heng • Permansor Terrae est la cible de cette capacité, avance l'action du Draco spiritus, lui accorde les effets de renforcement de l'ultime de Dan Heng • Permansor Terrae pour sa prochaine action et augmente le multiplicateur de bouclier accordé.",
+        "desc": "Lorsque le Démiurge utilise sa compétence de mnémesprit, accorde Ode à la Terre à Dan Heng • Permansor Terrae et les <nobr>#3[i]</nobr> prochaines attaques du Draco spiritus infligent des <u>DGT additionnels</u> équivalents à <span style=\"color:#f29e38ff><nobr>#4[i]%</nobr></span> de la valeur de bouclier de l'Alter ego et de son type. Lorsque Dan Heng • Permansor Terrae bénéficie d'Ode à la Terre, l'Alter ego inflige <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> de DGT supplémentaires. Lorsque Dan Heng • Permansor Terrae est la cible de cette capacité, avance également l'action du Draco spiritus de <nobr>100</nobr> %. La prochaine action du Draco spiritus bénéficie de l'effet de renforcement de l'ultime de Dan Heng • Permansor Terrae et la valeur de bouclier accordée par le Draco spiritus est d'un montant équivalent à <nobr>#5[i]%</nobr> de sa valeur initiale. D'autre part, ne consomme pas la valeur de renforcement de l'ultime de Dan Heng • Permansor Terrae.",
+        "simpleDesc": "Lorsque le Démiurge utilise sa compétence de mnémesprit, le Draco spiritus inflige des <u>DGT additionnels</u> après avoir attaqué et Dan Heng • Permansor Terrae obtient Ode à la Terre, ce qui augmente les DGT infligés par l'Alter ego. Lorsque Dan Heng • Permansor Terrae est la cible de cette capacité, avance l'action du Draco spiritus, lui accorde les effets de renforcement de l'ultime de Dan Heng • Permansor Terrae pour sa prochaine action et augmente le multiplicateur de bouclier accordé.",
         "type": {
           "id": "Servant",
           "name": "Compétence du mnémesprit"
@@ -3498,7 +3498,16 @@
           0
         ],
         "hideInUI": true,
-        "extra": [],
+        "extra": [
+          {
+            "id": 10000005,
+            "name": "DGT additionnels",
+            "desc": "DGT infligés à une cible qui ne sont pas considérés comme provenant d'une attaque.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
         "level": [
           {
             "level": 1,

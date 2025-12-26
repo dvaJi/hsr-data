@@ -1690,7 +1690,7 @@
             "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng • Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Remembrance).",
             "params": [],
             "type": 2,
-            "icon": "2"
+            "icon": ""
           }
         ],
         "level": [
@@ -3478,8 +3478,8 @@
       {
         "id": 1141525,
         "name": "Ode to Earth",
-        "desc": "When Demiurge uses Memosprite Skill, grants \"Ode to Earth\" to Dan Heng • Permansor Terrae, and enables the next <nobr>#3[i]</nobr> attack(s) of \"Souldragon\" to deal Additional DMG of the Bondmate's Type, equal to <span style=\"color:#f29e38ff><nobr>#4[i]%</nobr></span> of the Bondmate's Shield Effect. When Dan Heng • Permansor Terrae holds \"Ode to Earth,\" the \"Bondmate\" deals <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> increased DMG. When used on Dan Heng • Permansor Terrae, advances Souldragon's action by <nobr>100%</nobr>. Souldragon's next action gains the enhancement effect of Dan Heng • Permansor Terrae's Ultimate and the Shield Effect provided by Souldragon is <nobr>#5[i]%</nobr> of its original Shield Effect. Does not consume the enhancement number of Dan Heng • Permansor Terrae's Ultimate.",
-        "simpleDesc": "When Demiurge uses Memosprite Skill, \"Souldragon\" deals Additional DMG after attacking and Dan Heng • Permansor Terrae gains \"Ode to Earth\": The \"Bondmate\" deals increased DMG. When used on Dan Heng • Permansor Terrae, advances Souldragon's action, and enables Souldragon's next action to gain the enhancement effect of Dan Heng • Permansor Terrae's Ultimate and increases the multiplier of the Shield provided.",
+        "desc": "When Demiurge uses Memosprite Skill, grants \"Ode to Earth\" to Dan Heng • Permansor Terrae, and enables the next <nobr>#3[i]</nobr> attack(s) of \"Souldragon\" to deal <u>Additional DMG</u> of the Bondmate's Type, equal to <span style=\"color:#f29e38ff><nobr>#4[i]%</nobr></span> of the Bondmate's Shield Effect. When Dan Heng • Permansor Terrae holds \"Ode to Earth,\" the \"Bondmate\" deals <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> increased DMG. When used on Dan Heng • Permansor Terrae, advances Souldragon's action by <nobr>100%</nobr>. Souldragon's next action gains the enhancement effect of Dan Heng • Permansor Terrae's Ultimate and the Shield Effect provided by Souldragon is <nobr>#5[i]%</nobr> of its original Shield Effect. Does not consume the enhancement number of Dan Heng • Permansor Terrae's Ultimate.",
+        "simpleDesc": "When Demiurge uses Memosprite Skill, \"Souldragon\" deals <u>Additional DMG</u> after attacking and Dan Heng • Permansor Terrae gains \"Ode to Earth\": The \"Bondmate\" deals increased DMG. When used on Dan Heng • Permansor Terrae, advances Souldragon's action, and enables Souldragon's next action to gain the enhancement effect of Dan Heng • Permansor Terrae's Ultimate and increases the multiplier of the Shield provided.",
         "type": {
           "id": "Servant",
           "name": "Memosprite Skill"
@@ -3498,7 +3498,16 @@
           0
         ],
         "hideInUI": true,
-        "extra": [],
+        "extra": [
+          {
+            "id": 10000005,
+            "name": "Additional DMG",
+            "desc": "Causes the target being hit to take extra DMG, which is not considered an attack.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
         "level": [
           {
             "level": 1,

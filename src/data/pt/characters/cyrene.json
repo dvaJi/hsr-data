@@ -1690,7 +1690,7 @@
             "desc": "Cyrene, Tribbie, Cerydra, Noite Eterna, Dan Heng - Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, {F#Desbravadora}{M#Desbravador} (A Recordação).",
             "params": [],
             "type": 2,
-            "icon": "2"
+            "icon": ""
           }
         ],
         "level": [
@@ -2811,7 +2811,7 @@
       {
         "id": 1141520,
         "name": "Ode à Trapaça",
-        "desc": "<span style=\"color:#f29e38ff>Efetiva durante toda a batalha</span>. Quando usada em Cipher, aumenta o Dano causado por Cipher em <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>, diminui a DEF do \"Patrono\" em <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span> e deiminu a DEF de todos os outros inimigos-alvo em <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>.",
+        "desc": "<span style=\"color:#f29e38ff>Efetiva durante toda a batalha</span>. Quando usada em Cipher, aumenta o Dano causado por Cipher em <span style=\"color:#f29e38ff><nobr>#1[i]%</nobr></span>, diminui a DEF do \"Patrono\" em <span style=\"color:#f29e38ff><nobr>#2[i]%</nobr></span> e diminui a DEF de todos os outros inimigos-alvo em <span style=\"color:#f29e38ff><nobr>#3[i]%</nobr></span>.",
         "simpleDesc": "<span style=\"color:#f29e38ff>Efetiva durante toda a batalha</span>. Quando usada em Cipher, aumenta o Dano causado por Cipher e diminui a DEF dos inimigos-alvo. A DEF do \"Patrono\" diminui ainda mais.",
         "type": {
           "id": "Servant",
@@ -3478,7 +3478,7 @@
       {
         "id": 1141525,
         "name": "Ode à Terra",
-        "desc": "Quando \"Demiurgo\" usa a Perícia de Memoespírito, concede \"Ode à Terra\" a Dan Heng - Permansor Terrae, e faz com que o(s) próximo(s) <nobr>#3[i]</nobr> ataque(s) de \"Alma de Dragão\" causam Dano Adicional do Tipo do \"Companheiro de Vínculo\", igual a <span style=\"color:#f29e38ff><nobr>#4[i]%</nobr></span> do efeito de <u>Escudo</u> do \"Companheiro de Vínculo\". Quando Dan Heng - Permansor Terrae estiver com \"Ode à Terra\", o Dano causado pelo \"Companheiro de Vínculo\" aumenta em <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>. Quando usada em Dan Heng - Permansor Terrae, Avança Adiante a ação de \"Alma de Dragão\" em <nobr>100%</nobr>. A próxima ação de \"Alma de Dragão\" recebe o efeito de Aprimoramento da Perícia Suprema de Dan Heng - Permansor Terrae, e o efeito de <u>Escudo</u> concedido por \"Alma de Dragão\" é igual a <nobr>#5[i]%</nobr> do efeito original do seu <u>Escudo</u>. Não consome a número de Aprimoramento da Perícia Suprema de Dan Heng - Permansor Terrae.",
+        "desc": "Quando \"Demiurgo\" usa a Perícia de Memoespírito, concede \"Ode à Terra\" a Dan Heng - Permansor Terrae, e faz com que o(s) próximo(s) <nobr>#3[i]</nobr> ataque(s) de \"Alma de Dragão\" causem Dano Adicional do Tipo do \"Companheiro de Vínculo\", igual a <span style=\"color:#f29e38ff><nobr>#4[i]%</nobr></span> do efeito de <u>Escudo</u> do \"Companheiro de Vínculo\". Quando Dan Heng - Permansor Terrae estiver com \"Ode à Terra\", o Dano causado pelo \"Companheiro de Vínculo\" aumenta em <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span>. Quando usada em Dan Heng - Permansor Terrae, Avança Adiante a ação de \"Alma de Dragão\" em <nobr>100%</nobr>. A próxima ação de \"Alma de Dragão\" recebe o efeito de Aprimoramento da Perícia Suprema de Dan Heng - Permansor Terrae, e o efeito de <u>Escudo</u> concedido por \"Alma de Dragão\" é igual a <nobr>#5[i]%</nobr> do efeito original do seu <u>Escudo</u>. Não consome o número de Aprimoramentos da Perícia Suprema de Dan Heng - Permansor Terrae.",
         "simpleDesc": "Quando \"Demiurgo\" usa a Perícia de Memoespírito, \"Alma de Dragão\" causa Dano Adicional depois de atacar, e Dan Heng - Permansor Terrae ganha \"Ode à Terra\": o Dano causado pelo \"Companheiro de Vínculo\" aumenta. Quando usada em Dan Heng - Permansor Terrae, Avança Adiante a ação da \"Alma de Dragão\" e faz com que a próxima ação da \"Alma de Dragão\" receba os efeitos de Aprimoramento da Perícia Suprema de Dan Heng - Permansor Terrae e aumenta o multiplicador do <u>Escudo</u> fornecido.",
         "type": {
           "id": "Servant",
@@ -3498,7 +3498,16 @@
           0
         ],
         "hideInUI": true,
-        "extra": [],
+        "extra": [
+          {
+            "id": 10000005,
+            "name": "Dano adicional",
+            "desc": "Faz o alvo atacado receber Dano extra, e não é considerado um ataque.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
         "level": [
           {
             "level": 1,

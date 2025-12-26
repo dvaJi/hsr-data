@@ -436,7 +436,7 @@
       "id": "bloom_elysium_of_beyond",
       "name": "Blühe, Elysion im Jenseits",
       "desc": "Erhält #3[i] Pkt. „Rückerinnerung“ und erschafft ein Kraftfeld, das #2[i] Rd. lang anhält, wobei sich seine Dauer zu Beginn von Cyrenes Runde jeweils um 1 verringert. Während das Kraftfeld aktiv ist, verursacht jeder von Verbündeten zugefügte SCH zusätzlich 1-mal Tatsächlichen SCH in Höhe von #1[i]% des ursprünglichen SCH. Wenn Cyrene handlungsunfähig wird, wird das Kraftfeld entfernt.",
-      "simpleDesc": "Erhält „Rückerinnerung“ und erschafft ein Kraftfeld. Für jedes Verursachen von SCH durch Verbündete wird zusätzlich 1-mal Tatsächlicher SCH verursacht.",
+      "simpleDesc": "Erhält „Rückerinnerung“ und erschafft ein Kraftfeld. Für jedes Verursachen von SCH durch Verbündete wird zusätzlich Tatsächlicher SCH verursacht.",
       "type": "Fertigkeit",
       "tag": "Unterstützung",
       "spBase": null,
@@ -1690,7 +1690,7 @@
             "desc": "Cyrene, Tribbie, Cerydra, Evernight, Dan Heng – Permansor Terrae, Hysilens, Hyacine, Phainon, Anaxa, Aglaea, Mydei, Castorice, Cipher, Trailblazer (Das Gedenken).",
             "params": [],
             "type": 2,
-            "icon": "2"
+            "icon": ""
           }
         ],
         "level": [
@@ -3478,8 +3478,8 @@
       {
         "id": 1141525,
         "name": "Gedicht an die Erde",
-        "desc": "Wenn der Demiurg die Memogeist-Technik einsetzt, erhält Dan Heng – Permansor Terrae „Gedicht an die Erde“ und die nächsten <nobr>#3[i]</nobr> Angriffe von „Drachenseele“ verursachen zusätzlichen SCH vom Typ des „Kameraden“ in Höhe von <span style=\"color:#f29e38ff><nobr>#4[i]%</nobr></span> seiner Schildmenge. Wenn Dan Heng – Permansor Terrae „Gedicht an die Erde“ besitzt, wird der vom Kameraden verursachte SCH um <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> erhöht. Bei der Anwendung auf Dan Heng – Permansor Terrae wird die Aktion von Drachenseele um <nobr>100</nobr> % vorgezogen. Außerdem erhält die nächste Aktion von Drachenseele den verstärkten Effekt von Dan Heng – Permansor Terraes Ultimate und der von Drachenseele gewährte Schild entspricht <nobr>#5[i]%</nobr> der ursprünglichen Schildmenge. Dies verbraucht nicht die Verstärkungsanzahl von Dan Heng – Permansor Terraes Ultimate.",
-        "simpleDesc": "Wenn der Demiurg die Memogeist-Technik einsetzt, verursacht „Drachenseele“ nach einem Angriff zusätzlichen SCH und Dan Heng – Permansor Terrae erhält „Gedicht an die Erde“: Erhöht den vom „Kameraden“ verursachten SCH. Bei der Anwendung auf Dan Heng – Permansor Terrae wird die Aktion von Drachenseele vorgezogen. Außerdem erhält die nächste Aktion von Drachenseele den verstärkten Effekt von Dan Heng – Permansor Terraes Ultimate und der Multiplikator des gewährten Schilds wird erhöht.",
+        "desc": "Wenn der Demiurg die Memogeist-Technik einsetzt, erhält Dan Heng – Permansor Terrae „Gedicht an die Erde“ und die nächsten <nobr>#3[i]</nobr> Angriffe von „Drachenseele“ verursachen <u>zusätzlichen SCH</u> vom Typ des „Kameraden“ in Höhe von <span style=\"color:#f29e38ff><nobr>#4[i]%</nobr></span> seiner Schildmenge. Wenn Dan Heng – Permansor Terrae „Gedicht an die Erde“ besitzt, wird der vom Kameraden verursachte SCH um <span style=\"color:#f29e38ff><nobr>#1[f1]%</nobr></span> erhöht. Bei der Anwendung auf Dan Heng – Permansor Terrae wird die Aktion von Drachenseele um <nobr>100</nobr> % vorgezogen. Außerdem erhält die nächste Aktion von Drachenseele den verstärkten Effekt von Dan Heng – Permansor Terraes Ultimate und der von Drachenseele gewährte Schild entspricht <nobr>#5[i]%</nobr> der ursprünglichen Schildmenge. Dies verbraucht nicht die Verstärkungsanzahl von Dan Heng – Permansor Terraes Ultimate.",
+        "simpleDesc": "Wenn der Demiurg die Memogeist-Technik einsetzt, verursacht „Drachenseele“ nach einem Angriff <u>zusätzlichen SCH</u> und Dan Heng – Permansor Terrae erhält „Gedicht an die Erde“: Erhöht den vom „Kameraden“ verursachten SCH. Bei der Anwendung auf Dan Heng – Permansor Terrae wird die Aktion von Drachenseele vorgezogen. Außerdem erhält die nächste Aktion von Drachenseele den verstärkten Effekt von Dan Heng – Permansor Terraes Ultimate und der Multiplikator des gewährten Schilds wird erhöht.",
         "type": {
           "id": "Servant",
           "name": "Technik von Memogeist"
@@ -3498,7 +3498,16 @@
           0
         ],
         "hideInUI": true,
-        "extra": [],
+        "extra": [
+          {
+            "id": 10000005,
+            "name": "Zusätzlicher SCH",
+            "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+            "params": [],
+            "type": 2,
+            "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
+          }
+        ],
         "level": [
           {
             "level": 1,
@@ -3809,7 +3818,7 @@
       "_id": 141506,
       "id": "remembrance_sung_in_ripples_",
       "name": "Erinnerungen, verwandelt in Wellen ♪",
-      "desc": "Wenn Cyrene zum ersten Mal ihren Ultimate einsetzt, wird <u>die Aktion</u> aller Verbündeten um <nobr>100%</nobr> <u>vorgezogen</u>. Jedes Mal, wenn der Demiurg die Memogeist-Technik „Gedicht an das Ego“ auslöst und „Walzer von Blumen und Pfeilen“ einsetzt, werden basierend auf der Auslösungsanzahl die folgenden Effekte erhalten:\n1-mal: Reduziert die VTD aller Gegner um <nobr>20%</nobr>, wenn sich der Demiurg auf dem Kampffeld befindet.\n2-mal oder mehr: <u>Die Aktion</u> aller Verbündeten wird um <nobr>24%</nobr> <u>vorgezogen</u>.",
+      "desc": "Wenn Cyrene zum ersten Mal ihren Ultimate einsetzt, wird <u>die Aktion</u> aller Verbündeten um <nobr>100%</nobr> <u>vorgezogen</u>. Jedes Mal, wenn der Demiurg die Memogeist-Technik „Gedicht an das Ego“ auslöst und „Walzer von Blumen und Pfeilen“ einsetzt, werden basierend auf der Auslösungsanzahl in diesem Kampf die folgenden Effekte erhalten:\n1-mal: Reduziert die VTD aller Gegner um <nobr>20%</nobr>, wenn sich der Demiurg auf dem Kampffeld befindet.\n2-mal oder mehr: <u>Die Aktion</u> aller Verbündeten wird um <nobr>24%</nobr> <u>vorgezogen</u>.",
       "unlockCost": [
         {
           "ItemID": 11415,
