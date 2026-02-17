@@ -244,7 +244,7 @@
       "_id": 130601,
       "id": "monodrama",
       "name": "Monodrama",
-      "desc": "Mengakibatkan Quantum DMG sebesar #1[i]% ATK Sparkle pada 1 target musuh.",
+      "desc": "Mengakibatkan Quantum DMG sebesar #1[i]% ATK Sparkle pada 1 musuh yang ditargetkan.",
       "simpleDesc": "Mengakibatkan Quantum DMG dalam jumlah kecil pada 1 musuh.",
       "type": "Basic ATK",
       "tag": "Single Target",
@@ -425,7 +425,7 @@
       "_id": 130602,
       "id": "dreamdiver",
       "name": "Dreamdiver",
-      "desc": "Meningkatkan CRIT DMG 1 rekan tim yang ditargetkan, peningkatannya sebesar #1[f1]% CRIT DMG Sparkle + #2[f1]%, berlangsung selama #3[i] giliran, dan mendahulukan aksi rekan tersebut sebesar #4[i]%.\nSaat Sparkle melancarkan Kemampuan ini pada dirinya sendiri, efek pendahuluan aksi tidak akan terpicu.",
+      "desc": "Meningkatkan CRIT DMG 1 rekan tim yang ditargetkan, peningkatannya sebesar #1[f1]% CRIT DMG Sparkle + #2[f1]%, berlangsung selama #3[i] giliran, dan mendahulukan aksi rekan tersebut sebesar #4[i]%.\nSaat Sparkle melancarkan kemampuan ini pada dirinya sendiri, efek pendahuluan aksi tidak akan terpicu.",
       "simpleDesc": "Meningkatkan CRIT DMG 1 rekan tim dan mendahulukan aksi rekan tersebut.",
       "type": "Skill",
       "tag": "Support",
@@ -1469,8 +1469,8 @@
       "_id": 130607,
       "id": "unreliable_narrator",
       "name": "Unreliable Narrator",
-      "desc": "Setelah menggunakan Technique, seluruh rekan tim akan memasuki status \"Misdirect\" yang berlangsung selama #2[i] detik. Rekan tim dalam status \"Misdirect\" tidak akan terdeteksi musuh. Saat memasuki pertempuran selama durasi status \"Misdirect\", akan memulihkan #1[i] Poin Skill untuk tim.",
-      "simpleDesc": "Setelah menggunakan Technique, seluruh rekan tim akan memasuki status \"Misdirect\". Rekan tim dalam status \"Misdirect\" tidak akan terdeteksi musuh. Saat memasuki pertempuran selama durasi status \"Misdirect\", akan memulihkan Poin Skill untuk tim.",
+      "desc": "Setelah menggunakan Technique, seluruh rekan tim akan memasuki status \"Misdirect\" yang berlangsung selama #2[i] detik. Rekan tim dalam status \"Misdirect\" tidak akan terdeteksi musuh. Saat memasuki pertempuran selama durasi status \"Misdirect\", akan memulihkan #1[i] Poin Skill untuk rekan tim.",
+      "simpleDesc": "Setelah menggunakan Technique, seluruh rekan tim akan memasuki status \"Misdirect\". Rekan tim dalam status \"Misdirect\" tidak akan terdeteksi musuh. Saat memasuki pertempuran selama durasi status \"Misdirect\", akan memulihkan Poin Skill untuk rekan tim.",
       "type": "Technique",
       "tag": "Support",
       "spBase": null,
@@ -1981,6 +1981,471 @@
         },
         {
           "id": 1306207,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "Peningkatan HP",
+            "levelReq": 0,
+            "promotionReq": 5,
+            "statusList": [
+              {
+                "key": "Max HP +<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 45000
+              },
+              {
+                "id": "heavenly_melody",
+                "name": "Heavenly Melody",
+                "amount": 3
+              },
+              {
+                "id": "shards_of_desires",
+                "name": "Shards of Desires",
+                "amount": 3
+              }
+            ]
+          }
+        }
+      ],
+      "embedBuff": {
+        "id": "hp_boost",
+        "name": "Peningkatan HP",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Max HP +<nobr>#1[f1]%</nobr>",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 2500
+          },
+          {
+            "id": "tatters_of_thought",
+            "name": "Tatters of Thought",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11306101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11306202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11306203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "Peningkatan HP",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Max HP +<nobr>#1[f1]%</nobr>",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "celestial_section",
+                    "name": "Celestial Section",
+                    "amount": 3
+                  },
+                  {
+                    "id": "fragments_of_impression",
+                    "name": "Fragments of Impression",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_dmg_boost",
+            "name": "Peningkatan CRIT DMG",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "CRIT DMG +<nobr>#1[f1]%</nobr>",
+                "value": 0.053
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "firmament_note",
+                "name": "Firmament Note",
+                "amount": 3
+              },
+              {
+                "id": "tatters_of_thought",
+                "name": "Tatters of Thought",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "almanac",
+        "name": "Almanac",
+        "desc": "Memulihkan <nobr>10</nobr> Energy tambahan saat melancarkan Basic Attack. Saat karakter tim yang memiliki efek peningkatan CRIT DMG dari Skill mengonsumsi Poin Skill, Sparkle memulihkan <nobr>1</nobr> Energy tambahan.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              10,
+              1
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "firmament_note",
+                "name": "Firmament Note",
+                "amount": 3
+              },
+              {
+                "id": "past_evils_of_the_borehole_planet_disaster",
+                "name": "Past Evils of the Borehole Planet Disaster",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11306102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11306205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11306206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "Peningkatan CRIT DMG",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "CRIT DMG +<nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "heavenly_melody",
+                    "name": "Heavenly Melody",
+                    "amount": 3
+                  },
+                  {
+                    "id": "shards_of_desires",
+                    "name": "Shards of Desires",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "Peningkatan HP",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Max HP +<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "celestial_section",
+                "name": "Celestial Section",
+                "amount": 5
+              },
+              {
+                "id": "fragments_of_impression",
+                "name": "Fragments of Impression",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "artificial_flower",
+        "name": "Artificial Flower",
+        "desc": "Jika Poin Skill yang dikonsumsi karakter tim dalam satu giliran lebih dari atau sama dengan <nobr>3</nobr>, maka Sparkle tidak akan mengonsumsi Poin Skill saat melancarkan Skill di kali berikutnya.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              3
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "celestial_section",
+                "name": "Celestial Section",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "past_evils_of_the_borehole_planet_disaster",
+                "name": "Past Evils of the Borehole Planet Disaster",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11306103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11306208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11306209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "Peningkatan CRIT DMG",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "CRIT DMG +<nobr>#1[f1]%</nobr>",
+                    "value": 0.107
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "heavenly_melody",
+                    "name": "Heavenly Melody",
+                    "amount": 8
+                  },
+                  {
+                    "id": "shards_of_desires",
+                    "name": "Shards of Desires",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11306210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "Peningkatan HP",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Max HP +<nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "heavenly_melody",
+                    "name": "Heavenly Melody",
+                    "amount": 8
+                  },
+                  {
+                    "id": "shards_of_desires",
+                    "name": "Shards of Desires",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "Peningkatan Effect RES",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "Effect RES +<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "heavenly_melody",
+                "name": "Heavenly Melody",
+                "amount": 8
+              },
+              {
+                "id": "shards_of_desires",
+                "name": "Shards of Desires",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "nocturne",
+        "name": "Nocturne",
+        "desc": "ATK seluruh rekan tim meningkat <nobr>45%</nobr>. Saat karakter tim memiliki efek peningkatan CRIT DMG dari Skill, <u>RES PEN</u> Seluruh Tipe meningkat <nobr>10%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.45,
+              0.1
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "heavenly_melody",
+                "name": "Heavenly Melody",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "past_evils_of_the_borehole_planet_disaster",
+                "name": "Past Evils of the Borehole Planet Disaster",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11306201,
+      "type": 1,
+      "children": [
+        {
+          "id": 11306204,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "Peningkatan Effect RES",
+            "levelReq": 0,
+            "promotionReq": 3,
+            "statusList": [
+              {
+                "key": "Effect RES +<nobr>#1[f1]%</nobr>",
+                "value": 0.04
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 10000
+              },
+              {
+                "id": "celestial_section",
+                "name": "Celestial Section",
+                "amount": 3
+              },
+              {
+                "id": "fragments_of_impression",
+                "name": "Fragments of Impression",
+                "amount": 3
+              }
+            ]
+          }
+        },
+        {
+          "id": 11306207,
           "type": 1,
           "children": [],
           "embedBuff": {

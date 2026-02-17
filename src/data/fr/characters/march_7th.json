@@ -1595,87 +1595,155 @@
   ],
   "skillTreePoints": [
     {
-      "id": 1001201,
-      "type": 1,
+      "id": 1001103,
+      "type": 3,
       "children": [
         {
-          "id": 1001101,
-          "type": 3,
-          "children": [],
-          "embedBonusSkill": {
-            "id": "purify",
-            "name": "Purification",
-            "desc": "Supprime 1 <u>malus</u> d'un allié désigné lors de l'utilisation de la compétence.",
-            "type": "",
-            "tag": "",
-            "levels": [
-              {
-                "level": 1,
-                "params": [],
-                "materials": [
+          "id": 1001208,
+          "type": 1,
+          "children": [
+            {
+              "id": 1001209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "dmg_boost_ice",
+                "name": "Augmentation des DGT de glace",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
                   {
-                    "id": "credit",
-                    "name": "Crédits",
-                    "amount": 4000
-                  },
-                  {
-                    "id": "endurance_of_bronze",
-                    "name": "Endurance de bronze",
-                    "amount": 2
-                  },
-                  {
-                    "id": "destroyers_final_road",
-                    "name": "Route finale du destructeur",
-                    "amount": 1
+                    "key": "Les DGT de glace augmentent de <nobr>#1[f1]%</nobr>.",
+                    "value": 0.064
                   }
-                ]
-              }
-            ]
-          }
-        },
-        {
-          "id": 1001102,
-          "type": 3,
-          "children": [],
-          "embedBonusSkill": {
-            "id": "reinforce",
-            "name": "Renforcement",
-            "desc": "La durée du bouclier généré par la compétence du personnage est prolongée d'<nobr>1</nobr> tour.",
-            "type": "",
-            "tag": "",
-            "levels": [
-              {
-                "level": 1,
-                "params": [
-                  1
                 ],
                 "materials": [
                   {
                     "id": "credit",
                     "name": "Crédits",
-                    "amount": 16000
+                    "amount": 128000
                   },
                   {
-                    "id": "oath_of_steel",
-                    "name": "Serment d'acier",
-                    "amount": 4
+                    "id": "safeguard_of_amber",
+                    "name": "Protection d'ambre",
+                    "amount": 6
                   },
                   {
-                    "id": "tracks_of_destiny",
-                    "name": "Voies de la destinée",
-                    "amount": 1
-                  },
-                  {
-                    "id": "destroyers_final_road",
-                    "name": "Route finale du destructeur",
-                    "amount": 1
+                    "id": "conquerors_will",
+                    "name": "Volonté de conquérant",
+                    "amount": 6
                   }
                 ]
+              }
+            },
+            {
+              "id": 1001210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "def_boost",
+                "name": "Augmentation de DÉF",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "La DÉF augmente de <nobr>#1[f1]%</nobr>.",
+                    "value": 0.1
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédits",
+                    "amount": 128000
+                  },
+                  {
+                    "id": "safeguard_of_amber",
+                    "name": "Protection d'ambre",
+                    "amount": 6
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Volonté de conquérant",
+                    "amount": 6
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "dmg_boost_ice",
+            "name": "Augmentation des DGT de glace",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "Les DGT de glace augmentent de <nobr>#1[f1]%</nobr>.",
+                "value": 0.048
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 128000
+              },
+              {
+                "id": "safeguard_of_amber",
+                "name": "Protection d'ambre",
+                "amount": 6
+              },
+              {
+                "id": "conquerors_will",
+                "name": "Volonté de conquérant",
+                "amount": 6
               }
             ]
           }
         }
       ],
+      "embedBonusSkill": {
+        "id": "ice_spell",
+        "name": "Sortilège de glace",
+        "desc": "Augmente de <nobr>15%</nobr> les <u>chances de base</u> de geler les ennemis lors de l'utilisation de l'ultime.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.15
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 128000
+              },
+              {
+                "id": "safeguard_of_amber",
+                "name": "Protection d'ambre",
+                "amount": 6
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Voies de la destinée",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Route finale du destructeur",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 1001201,
+      "type": 1,
+      "children": [],
       "embedBuff": {
         "id": "dmg_boost_ice",
         "name": "Augmentation des DGT de glace",
@@ -1765,48 +1833,6 @@
             "id": "conquerors_will",
             "name": "Volonté de conquérant",
             "amount": 2
-          }
-        ]
-      }
-    },
-    {
-      "id": 1001103,
-      "type": 3,
-      "children": [],
-      "embedBonusSkill": {
-        "id": "ice_spell",
-        "name": "Sortilège de glace",
-        "desc": "Augmente de <nobr>15%</nobr> les <u>chances de base</u> de geler les ennemis lors de l'utilisation de l'ultime.",
-        "type": "",
-        "tag": "",
-        "levels": [
-          {
-            "level": 1,
-            "params": [
-              0.15
-            ],
-            "materials": [
-              {
-                "id": "credit",
-                "name": "Crédits",
-                "amount": 128000
-              },
-              {
-                "id": "safeguard_of_amber",
-                "name": "Protection d'ambre",
-                "amount": 6
-              },
-              {
-                "id": "tracks_of_destiny",
-                "name": "Voies de la destinée",
-                "amount": 1
-              },
-              {
-                "id": "destroyers_final_road",
-                "name": "Route finale du destructeur",
-                "amount": 1
-              }
-            ]
           }
         ]
       }
