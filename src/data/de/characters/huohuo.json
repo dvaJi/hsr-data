@@ -428,7 +428,7 @@
       "_id": 121702,
       "id": "talisman_protection",
       "name": "Talisman: Schutz des Lebens",
-      "desc": "Entfernt #5[i] Debuff(s) von einem Verbündeten und stellt bei ihm sofort LP in Höhe von #1[f1]% von Huohuos max. LP plus #2[i] wieder her. Stellt gleichzeitig bei angrenzenden Verbündeten LP in Höhe von #3[f1]% von Huohuos max. LP plus #4[i] wieder her.",
+      "desc": "Entfernt #5[i] Debuff von einem anvisierten Verbündeten und stellt bei ihm sofort LP in Höhe von #1[f1]% von Huohuos max. LP plus #2[i] wieder her. Stellt gleichzeitig bei angrenzenden Verbündeten LP in Höhe von #3[f1]% von Huohuos max. LP plus #4[i] wieder her.",
       "simpleDesc": "Entfernt 1 Debuff von einem Verbündeten und stellt die LP dieses Verbündeten und angrenzender Verbündeter wieder her.",
       "type": "Fertigkeit",
       "tag": "Wiederherstellung",
@@ -803,8 +803,8 @@
       "_id": 121703,
       "id": "tail_spiritual_domination",
       "name": "Schweif: Unterwerfung von Teufeln",
-      "desc": "Stellt Energie für alle Verbündeten außer Huohuo in Höhe von #1[f1]% ihrer jeweiligen max. Energie wieder her. Erhöht gleichzeitig den ANG für #3[i] Rd. um #2[f1]%.",
-      "simpleDesc": "Energie-Wiederherstellung für alle Verbündeten außer Huohuo und ANG-Erhöhung.",
+      "desc": "Stellt Energie für alle Teammitglieder außer dieser Einheit in Höhe von #1[f1]% ihrer jeweiligen max. Energie wieder her. Erhöht gleichzeitig ihren ANG für #3[i] Rd. um #2[f1]%.",
+      "simpleDesc": "Stellt bei allen Teammitgliedern außer dieser Einheit Energie wieder her und erhöht ihren ANG.",
       "type": "Ultimate",
       "tag": "Unterstützung",
       "spBase": 5,
@@ -1139,8 +1139,8 @@
       "_id": 121704,
       "id": "possession_ethereal_metaflow",
       "name": "Besessenheit: Metaphysische Verbindung",
-      "desc": "Nach dem Einsatz der Fertigkeit erhält Huohuo für #1[i] Rd. „Gesegnete Heilung“. Diese Dauer verringert sich zu Beginn jeder Runde von Huohuo um 1. Besitzt Huohuo Gesegnete Heilung, wird zu Beginn jeder Runde eines Verbündeten oder beim Einsatz eines Ultimates seine LP um #3[f1]% von Huohuos max. LP plus #5[i] wiederhergestellt. Gleichzeitig werden alle Verbündeten, deren LP-Prozentsatz zu diesem Zeitpunkt bei #6[i]% oder niedriger liegt, einmal geheilt.\nWird ein Verbündeter durch den Einsatz von Gesegnete Heilung geheilt, werden #2[i] Debuff(s) von ihm entfernt. Dieser Effekt kann #7[i]-mal ausgelöst werden. Bei erneutem Einsatz der Fertigkeit wird die Anzahl der Auslösungen zurückgesetzt.",
-      "simpleDesc": "Nach dem Einsatz der Fertigkeit erhält Huohuo „Gesegnete Heilung“. Besitzt Huohuo Gesegnete Heilung, wird zu Beginn jeder Runde eines Verbündeten oder beim Einsatz eines Ultimates seine LP wiederhergestellt und gleichzeitig alle Verbündeten mit niedrigen LP 1-mal geheilt.Wird ein Verbündeter durch den Einsatz von Gesegnete Heilung geheilt, wird 1 Debuff von ihm entfernt.",
+      "desc": "Nach dem Einsatz der Fertigkeit erhält Huohuo für #1[i] Rd. „Gesegnete Heilung“. Diese Dauer wird zu Beginn jeder Runde von Huohuo um 1 verringert. Wenn Huohuo Gesegnete Heilung besitzt, wird zu Beginn der Runde eines Verbündeten oder beim Einsatz seines Ultimates dessen LP um #3[f1]% von Huohuos max. LP plus #5[i] wiederhergestellt. Gleichzeitig werden alle Verbündeten, deren LP-Prozentsatz zu diesem Zeitpunkt bei #6[i]% oder niedriger liegt, 1-mal geheilt.\nWird ein Verbündeter durch das Auslösen von Gesegnete Heilung geheilt, wird #2[i] Debuff von ihm entfernt. Dieser Effekt kann #7[i]-mal ausgelöst werden. Bei erneutem Einsatz der Fertigkeit wird die Auslösungsanzahl zurückgesetzt.",
+      "simpleDesc": "Nach dem Einsatz der Fertigkeit erhält Huohuo „Gesegnete Heilung“. Wenn Huohuo Gesegnete Heilung besitzt, wird zu Beginn der Runde eines Verbündeten oder beim Einsatz seines Ultimates dessen LP wiederhergestellt und gleichzeitig alle Verbündeten mit niedrigen LP 1-mal geheilt. Wird ein Verbündeter durch das Auslösen von Gesegnete Heilung geheilt, wird 1 Debuff von ihm entfernt.",
       "type": "Talent",
       "tag": "Wiederherstellung",
       "spBase": null,
@@ -1582,7 +1582,7 @@
       "_id": 121701,
       "id": "anchored_to_vessel_specters_nestled",
       "name": "Von Heliobi besessen, vom Bösen ergriffen",
-      "desc": "Die Dauer von „Gesegnete Heilung“, das vom Talent bewirkt wird, wird um <nobr>1</nobr> Rd. verlängert. Wenn Huohuo Gesegnete Heilung besitzt, wird die GES aller Verbündeten um <nobr>12%</nobr> erhöht.",
+      "desc": "Die Dauer von „Gesegnete Heilung“ des Talents wird um <nobr>1</nobr> Rd. verlängert. Wenn Huohuo Gesegnete Heilung besitzt, wird die GES aller Verbündeten um <nobr>12%</nobr> erhöht.",
       "unlockCost": [
         {
           "ItemID": 11217,
@@ -1656,7 +1656,7 @@
       "_id": 121706,
       "id": "woven_together_cohere_forever",
       "name": "Einmal verwoben, auf ewig vereint",
-      "desc": "Erhöht den zugefügten SCH eines Verbündeten für <nobr>2</nobr> Rd. um <nobr>50%</nobr>, wenn dieser geheilt wird.",
+      "desc": "Erhöht den verursachten SCH eines Verbündeten für <nobr>2</nobr> Rd. um <nobr>50%</nobr>, wenn dieser geheilt wird.",
       "unlockCost": [
         {
           "ItemID": 11217,
@@ -1851,7 +1851,7 @@
       "embedBonusSkill": {
         "id": "the_cursed_one",
         "name": "Verfluchtes Schicksal",
-        "desc": "Erhöht die Chance von WDS gegen <u>Mengenkontrolle-Debuffs</u> um <nobr>35%</nobr>.",
+        "desc": "Erhöht die Chance, <u>Mengenkontrolle-Debuffs</u> zu widerstehen, um <nobr>35%</nobr>.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1962,7 +1962,7 @@
       "embedBonusSkill": {
         "id": "stress_reaction_to_horror",
         "name": "Stressreaktion auf Horror",
-        "desc": "Wenn das Talent ausgelöst wird, um Verbündete zu heilen, erhält Huohuo <nobr>1</nobr> Pkt. Energie zurück.",
+        "desc": "Wenn das Talent ausgelöst wird, um Verbündete zu heilen, stellt Huohuo <nobr>1</nobr> Energie wieder her.",
         "type": "",
         "tag": "",
         "levels": [
@@ -2028,6 +2028,402 @@
     },
     {
       "id": 1217210,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "hp_boost",
+        "name": "LP-Erhöhung",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Erhöht max. LP um <nobr>#1[f1]%</nobr>.",
+            "value": 0.08
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 160000
+          },
+          {
+            "id": "flower_of_eternity",
+            "name": "Blume der Ewigkeit",
+            "amount": 8
+          },
+          {
+            "id": "immortal_lumintwig",
+            "name": "Unsterblicher glorreicher Zweig",
+            "amount": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11217202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11217203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "LP-Erhöhung",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Erhöht max. LP um <nobr>#1[f1]%</nobr>.",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "sprout_of_life",
+                    "name": "Spross des Lebens",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_aeroblossom",
+                    "name": "Unsterbliche ätherische Blume",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "Effekt-WDS-Verstärkung",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "Erhöht Effekt-WDS um <nobr>#1[f1]%</nobr>.",
+                "value": 0.04
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "seed_of_abundance",
+                "name": "Saat des Überflusses",
+                "amount": 3
+              },
+              {
+                "id": "immortal_scionette",
+                "name": "Unsterbliche junge Knospe",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "fearful_to_act",
+        "name": "Starr vor Scheu",
+        "desc": "Zu Beginn des Kampfes stellt Huohuo <nobr>30</nobr> Energie wieder her und erhält für <nobr>2</nobr> Rd. „Gesegnete Heilung“.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              30,
+              2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "seed_of_abundance",
+                "name": "Saat des Überflusses",
+                "amount": 3
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Bedauern des unendlichen Pseudokörpers",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11217205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11217206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "effect_res_boost",
+                "name": "Effekt-WDS-Verstärkung",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "Erhöht Effekt-WDS um <nobr>#1[f1]%</nobr>.",
+                    "value": 0.06
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "flower_of_eternity",
+                    "name": "Blume der Ewigkeit",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Unsterblicher glorreicher Zweig",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "LP-Erhöhung",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Erhöht max. LP um <nobr>#1[f1]%</nobr>.",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "sprout_of_life",
+                "name": "Spross des Lebens",
+                "amount": 5
+              },
+              {
+                "id": "immortal_aeroblossom",
+                "name": "Unsterbliche ätherische Blume",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "the_cursed_one",
+        "name": "Verfluchtes Schicksal",
+        "desc": "Erhöht die Chance, <u>Mengenkontrolle-Debuffs</u> zu widerstehen, um <nobr>35%</nobr>. Wenn beim Einsatz des Ultimates die max. Energie eines Verbündeten größer oder gleich <nobr>160</nobr> ist, wird sein ANG zusätzlich um <nobr>24%</nobr> erhöht.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.35,
+              160,
+              0.24
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "sprout_of_life",
+                "name": "Spross des Lebens",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Spuren des Schicksals",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Bedauern des unendlichen Pseudokörpers",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11217208,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "spd_boost",
+            "name": "GES-Erhöhung",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "Erhöht GES um <nobr>#1[i]</nobr>.",
+                "value": 3
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "flower_of_eternity",
+                "name": "Blume der Ewigkeit",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "Unsterblicher glorreicher Zweig",
+                "amount": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": 11217209,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "Effekt-WDS-Verstärkung",
+            "levelReq": 75,
+            "promotionReq": 0,
+            "statusList": [
+              {
+                "key": "Erhöht Effekt-WDS um <nobr>#1[f1]%</nobr>.",
+                "value": 0.08
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "flower_of_eternity",
+                "name": "Blume der Ewigkeit",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "Unsterblicher glorreicher Zweig",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "stress_reaction_to_horror",
+        "name": "Stressreaktion auf Horror",
+        "desc": "Wenn das Talent ausgelöst wird, um Verbündete zu heilen, stellt Huohuo <nobr>1</nobr> Energie wieder her.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "flower_of_eternity",
+                "name": "Blume der Ewigkeit",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Spuren des Schicksals",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Bedauern des unendlichen Pseudokörpers",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "hp_boost",
+        "name": "LP-Erhöhung",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Erhöht max. LP um <nobr>#1[f1]%</nobr>.",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 2500
+          },
+          {
+            "id": "immortal_scionette",
+            "name": "Unsterbliche junge Knospe",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217210,
       "type": 1,
       "children": [],
       "embedBuff": {

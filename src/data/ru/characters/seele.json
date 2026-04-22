@@ -1070,7 +1070,7 @@
       "_id": 110204,
       "id": "resurgence",
       "name": "Повторное появление",
-      "desc": "При победе над противником базовой атакой, навыком или сверхспособностью получает 1 дополнительный ход и входит в усиленное состояние, которое повышает урон Зеле на #1[i]% на #2[i] ход.\nПротивник, побеждённый во время дополнительного хода от таланта Повторное появление, не может повторно активировать эффект этого таланта.",
+      "desc": "При победе над противником базовой атакой, навыком или сверхспособностью получает 1 дополнительный ход и входит в усиленное состояние, которое повышает урон Зеле на #1[i]% на #2[i] ход.\nЕсли противник побеждён во время дополнительного хода от таланта Повторное появление, эффект таланта не может активироваться повторно.",
       "simpleDesc": "Победа над противником с помощью базовой атаки, навыка или сверхспособности даёт персонажу дополнительный ход и позволяет ему войти в усиленное состояние. Усиленное состояние повышает наносимый персонажем урон.",
       "type": "Талант",
       "tag": "Усиление",
@@ -1953,6 +1953,470 @@
     },
     {
       "id": 1102207,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "Усиление атаки",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [
+          {
+            "key": "Сила атаки повышается на <nobr>#1[f1]%</nobr>.",
+            "value": 0.06
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Кредиты",
+            "amount": 45000
+          },
+          {
+            "id": "arrow_of_the_starchaser",
+            "name": "Стрела охотника за звёздами",
+            "amount": 3
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Воля завоевателя",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "Усиление атаки",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Сила атаки повышается на <nobr>#1[f1]%</nobr>.",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Кредиты",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "arrow_of_the_demon_slayer",
+                    "name": "Стрела убийцы демонов",
+                    "amount": 3
+                  },
+                  {
+                    "id": "usurpers_scheme",
+                    "name": "Искажённые амбиции",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_dmg_boost",
+            "name": "Усиление крит. урона",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "Крит. урон повышается на <nobr>#1[f1]%</nobr>.",
+                "value": 0.053
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Кредиты",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Стрела охотника",
+                "amount": 3
+              },
+              {
+                "id": "thiefs_instinct",
+                "name": "Инстинкт вора",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "nightshade",
+        "name": "Путь в ночи",
+        "desc": "При победе над целью собственный наносимый урон повышается на <nobr>50%</nobr>, эффект может складываться до <nobr>3</nobr> раз и длится <nobr>3</nobr> хода.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.5,
+              3,
+              3
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Кредиты",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Стрела охотника",
+                "amount": 3
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Скорбь хранительницы",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "Усиление крит. урона",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "Крит. урон повышается на <nobr>#1[f1]%</nobr>.",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Кредиты",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Стрела охотника за звёздами",
+                    "amount": 3
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Воля завоевателя",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "atk_boost",
+            "name": "Усиление атаки",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Сила атаки повышается на <nobr>#1[f1]%</nobr>.",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Кредиты",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Стрела убийцы демонов",
+                "amount": 5
+              },
+              {
+                "id": "usurpers_scheme",
+                "name": "Искажённые амбиции",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "lacerate",
+        "name": "Рваная рана",
+        "desc": "В усиленном состоянии <u>пробитие квантового сопротивления</u> Зеле повышается на <nobr>25%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Кредиты",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Стрела убийцы демонов",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Отпечатки судьбы",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Скорбь хранительницы",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "Усиление крит. урона",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Крит. урон повышается на <nobr>#1[f1]%</nobr>.",
+                    "value": 0.107
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Кредиты",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Стрела охотника за звёздами",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Воля завоевателя",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11102210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "Усиление атаки",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Сила атаки повышается на <nobr>#1[f1]%</nobr>.",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Кредиты",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Стрела охотника за звёздами",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Воля завоевателя",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "def_boost",
+            "name": "Усиление защиты",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "Защита повышается на <nobr>#1[f1]%</nobr>.",
+                "value": 0.075
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Кредиты",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Стрела охотника за звёздами",
+                "amount": 8
+              },
+              {
+                "id": "conquerors_will",
+                "name": "Воля завоевателя",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "rippling_waves",
+        "name": "Рябь на воде",
+        "desc": "После использования базовой атаки следующее действие Зеле <u>продвигается вперёд</u> на <nobr>20%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Кредиты",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Стрела охотника за звёздами",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Отпечатки судьбы",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Скорбь хранительницы",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "Усиление атаки",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Сила атаки повышается на <nobr>#1[f1]%</nobr>.",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Кредиты",
+            "amount": 2500
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Инстинкт вора",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102204,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "def_boost",
+        "name": "Усиление защиты",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [
+          {
+            "key": "Защита повышается на <nobr>#1[f1]%</nobr>.",
+            "value": 0.05
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Кредиты",
+            "amount": 10000
+          },
+          {
+            "id": "arrow_of_the_demon_slayer",
+            "name": "Стрела убийцы демонов",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Искажённые амбиции",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102207,
       "type": 1,
       "children": [],
       "embedBuff": {

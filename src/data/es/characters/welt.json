@@ -1518,7 +1518,7 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "Legado de honor",
-      "desc": "Tras usar su habilidad definitiva, Welt obtiene una potenciación: las <nobr>2</nobr> siguientes veces que ataque usando el ATQ básico o la habilidad básica, inflige <u>daño adicional</u> a los objetivos 1 vez. El <u>daño adicional</u> que inflige el ATQ básico es igual al <nobr>50%</nobr> del multiplicador del daño de ATQ básico, y el <u>daño adicional</u> que inflige la habilidad básica es igual al <nobr>80%</nobr> del multiplicador del daño de habilidad básica.",
+      "desc": "Tras usar su habilidad definitiva, Welt obtiene una potenciación: las <nobr>2</nobr> siguientes veces que ataque usando el ATQ básico o la habilidad básica, inflige <u>daño adicional</u> a los objetivos 1 vez. El <u>daño adicional</u> que inflige el ATQ básico es igual al <nobr>50%</nobr> del multiplicador de daño del ATQ básico, y el <u>daño adicional</u> que inflige la habilidad básica es igual al <nobr>80%</nobr> del multiplicador de daño de la habilidad básica.",
       "unlockCost": [
         {
           "ItemID": 11004,
@@ -1991,6 +1991,408 @@
         "statusList": [
           {
             "key": "ATQ +<nobr>#1[f1]%</nobr>",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 2500
+          },
+          {
+            "id": "silvermane_badge",
+            "name": "Pin del guardia",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11004101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11004202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11004203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "effect_hit_rate_boost",
+                "name": "Bonificación de acierto de efecto",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Acierto de efecto +<nobr>#1[f1]%</nobr>",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "obsidian_of_desolation",
+                    "name": "Obsidiana del vacío",
+                    "amount": 3
+                  },
+                  {
+                    "id": "silvermane_insignia",
+                    "name": "Insignia del guardia",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "dmg_boost_imaginary",
+            "name": "Bonificación de daño: Imaginario",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "Daño Imaginario +<nobr>#1[f1]%</nobr>",
+                "value": 0.032
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 5000
+              },
+              {
+                "id": "obsidian_of_dread",
+                "name": "Obsidiana lúgubre",
+                "amount": 3
+              },
+              {
+                "id": "silvermane_badge",
+                "name": "Pin del guardia",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "retribution",
+        "name": "Retribución",
+        "desc": "Cuando un aliado ataca a un objetivo en estado de Ingravidez, el daño infligido aumenta en un <nobr>10%</nobr>. Este efecto se puede acumular hasta <nobr>10</nobr> veces y dura <nobr>2</nobr> turnos. Al comienzo del combate, Welt recupera <nobr>30</nobr> pts. de energía.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              10,
+              2,
+              30
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 5000
+              },
+              {
+                "id": "obsidian_of_dread",
+                "name": "Obsidiana lúgubre",
+                "amount": 3
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Senda final del destructor",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11004102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11004205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11004206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "dmg_boost_imaginary",
+                "name": "Bonificación de daño: Imaginario",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "Daño Imaginario +<nobr>#1[f1]%</nobr>",
+                    "value": 0.048
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "obsidian_of_obsession",
+                    "name": "Obsidiana de la obsesión",
+                    "amount": 3
+                  },
+                  {
+                    "id": "silvermane_medal",
+                    "name": "Medalla del guardia",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "effect_hit_rate_boost",
+            "name": "Bonificación de acierto de efecto",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Acierto de efecto +<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 20000
+              },
+              {
+                "id": "obsidian_of_desolation",
+                "name": "Obsidiana del vacío",
+                "amount": 5
+              },
+              {
+                "id": "silvermane_insignia",
+                "name": "Insignia del guardia",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "judgment",
+        "name": "Juicio",
+        "desc": "Al lanzar el ATQ básico o la habilidad básica, inflige <u>daño adicional</u> al enemigo una vez. El <u>daño adicional</u> que inflige el ATQ básico es igual al <nobr>80%</nobr> del multiplicador de daño del ATQ básico, y el <u>daño adicional</u> que inflige la habilidad básica es igual al <nobr>120%</nobr> del multiplicador de daño de la habilidad básica.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.8,
+              1.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 20000
+              },
+              {
+                "id": "obsidian_of_desolation",
+                "name": "Obsidiana del vacío",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Huellas del destino",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Senda final del destructor",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11004103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11004208,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "Bonificación de RES a efecto",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "RES a efecto +<nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidiana de la obsesión",
+                "amount": 8
+              },
+              {
+                "id": "silvermane_medal",
+                "name": "Medalla del guardia",
+                "amount": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": 11004209,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "dmg_boost_imaginary",
+            "name": "Bonificación de daño: Imaginario",
+            "levelReq": 75,
+            "promotionReq": 0,
+            "statusList": [
+              {
+                "key": "Daño Imaginario +<nobr>#1[f1]%</nobr>",
+                "value": 0.064
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidiana de la obsesión",
+                "amount": 8
+              },
+              {
+                "id": "silvermane_medal",
+                "name": "Medalla del guardia",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "punishment",
+        "name": "Castigo",
+        "desc": "Cuando el <u>acierto de efecto</u> de Welt es superior al <nobr>40%</nobr>, su ATQ aumenta en un <nobr>20%</nobr> por cada <nobr>10%</nobr> de exceso, hasta un máximo del <nobr>80%</nobr>. Al lanzar la habilidad definitiva, recupera <nobr>5</nobr> pts. de energía adicionales.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.4,
+              0.1,
+              0.2,
+              0.8,
+              5
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidiana de la obsesión",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Huellas del destino",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Senda final del destructor",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11004201,
+      "type": 1,
+      "children": [
+        {
+          "id": 11004210,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "effect_hit_rate_boost",
+            "name": "Bonificación de acierto de efecto",
+            "levelReq": 80,
+            "promotionReq": 0,
+            "statusList": [
+              {
+                "key": "Acierto de efecto +<nobr>#1[f1]%</nobr>",
+                "value": 0.08
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidiana de la obsesión",
+                "amount": 8
+              },
+              {
+                "id": "silvermane_medal",
+                "name": "Medalla del guardia",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBuff": {
+        "id": "effect_hit_rate_boost",
+        "name": "Bonificación de acierto de efecto",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Acierto de efecto +<nobr>#1[f1]%</nobr>",
             "value": 0.04
           }
         ],

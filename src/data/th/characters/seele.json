@@ -1401,7 +1401,7 @@
       "id": "phantom_illusion",
       "name": "Phantom Illusion",
       "desc": "หลังจากใช้เทคนิคแล้ว จะติดสถานะซ่อนตัวเป็นเวลา #1[i] วินาที ขณะที่ติดสถานะซ่อนตัว จะไม่ถูกศัตรูเป้าหมายค้นพบ และเมื่อเข้าสู่การต่อสู้แล้ว หากเป็นฝ่ายโจมตีศัตรูก่อน Seele จะติดสถานะ Buff โดยทันที",
-      "simpleDesc": "เมื่อเข้าสู่สถานะซ่อนตัว หลังจากโจมตีศัตรูและเข้าสู่การต่อสู้ จะติดสถานะ Buff ทันที",
+      "simpleDesc": "เข้าสู่สถานะซ่อนตัว และหลังจากโจมตีศัตรูแล้วเข้าสู่การต่อสู้ จะติดสถานะ Buff ทันที",
       "type": "เทคนิค",
       "tag": "เสริมพลัง",
       "spBase": null,
@@ -1707,7 +1707,7 @@
       "embedBonusSkill": {
         "id": "lacerate",
         "name": "Lacerate",
-        "desc": "ขณะที่ติดสถานะส่วนเสริม <u>การทะลวงความต้านทาน</u> ควอนตัมของ Seele จะเพิ่มขึ้น <nobr>20%</nobr>",
+        "desc": "ขณะที่ติดสถานะ Buff <u>การทะลวงความต้านทาน</u> ควอนตัมของ Seele จะเพิ่มขึ้น <nobr>20%</nobr>",
         "type": "",
         "tag": "",
         "levels": [
@@ -1953,6 +1953,470 @@
     },
     {
       "id": 1102207,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "เสริมการโจมตี",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [
+          {
+            "key": "ATK เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+            "value": 0.06
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "เครดิต",
+            "amount": 45000
+          },
+          {
+            "id": "arrow_of_the_starchaser",
+            "name": "Arrow of the Starchaser",
+            "amount": 3
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Conqueror's Will",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "เสริมการโจมตี",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "ATK เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "เครดิต",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "arrow_of_the_demon_slayer",
+                    "name": "Arrow of the Demon Slayer",
+                    "amount": 3
+                  },
+                  {
+                    "id": "usurpers_scheme",
+                    "name": "Usurper's Scheme",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_dmg_boost",
+            "name": "เสริม DMG คริติคอล",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "DMG คริติคอลเพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+                "value": 0.053
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "เครดิต",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Arrow of the Beast Hunter",
+                "amount": 3
+              },
+              {
+                "id": "thiefs_instinct",
+                "name": "Thief's Instinct",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "nightshade",
+        "name": "Nightshade",
+        "desc": "เมื่อกำจัดศัตรูเป้าหมาย จะทำให้ตัวเองสร้าง DMG เพิ่มขึ้น <nobr>50%</nobr> โดยเอฟเฟกต์นี้ จะซ้อนทับได้มากสุด <nobr>3</nobr> ชั้น เป็นเวลา <nobr>3</nobr> เทิร์น",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.5,
+              3,
+              3
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "เครดิต",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Arrow of the Beast Hunter",
+                "amount": 3
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Guardian's Lament",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "เสริม DMG คริติคอล",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "DMG คริติคอลเพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "เครดิต",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Arrow of the Starchaser",
+                    "amount": 3
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Conqueror's Will",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "atk_boost",
+            "name": "เสริมการโจมตี",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "ATK เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "เครดิต",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Arrow of the Demon Slayer",
+                "amount": 5
+              },
+              {
+                "id": "usurpers_scheme",
+                "name": "Usurper's Scheme",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "lacerate",
+        "name": "Lacerate",
+        "desc": "ขณะที่ติดสถานะ Buff <u>การทะลวงความต้านทาน</u> ควอนตัมของ Seele จะเพิ่มขึ้น <nobr>25%</nobr>",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "เครดิต",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Arrow of the Demon Slayer",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Guardian's Lament",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "เสริม DMG คริติคอล",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "DMG คริติคอลเพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+                    "value": 0.107
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "เครดิต",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Arrow of the Starchaser",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Conqueror's Will",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11102210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "เสริมการโจมตี",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "ATK เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "เครดิต",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Arrow of the Starchaser",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Conqueror's Will",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "def_boost",
+            "name": "เสริมการป้องกัน",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "DEF เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+                "value": 0.075
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "เครดิต",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Arrow of the Starchaser",
+                "amount": 8
+              },
+              {
+                "id": "conquerors_will",
+                "name": "Conqueror's Will",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "rippling_waves",
+        "name": "Rippling Waves",
+        "desc": "หลังจากทำการโจมตีปกติ จะ <u>เร่งแอ็กชัน</u> ครั้งต่อไปของ Seele <nobr>20%</nobr>",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "เครดิต",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Arrow of the Starchaser",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Guardian's Lament",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "เสริมการโจมตี",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "ATK เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "เครดิต",
+            "amount": 2500
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Thief's Instinct",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102204,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "def_boost",
+        "name": "เสริมการป้องกัน",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [
+          {
+            "key": "DEF เพิ่มขึ้น <nobr>#1[f1]%</nobr>",
+            "value": 0.05
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "เครดิต",
+            "amount": 10000
+          },
+          {
+            "id": "arrow_of_the_demon_slayer",
+            "name": "Arrow of the Demon Slayer",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Usurper's Scheme",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102207,
       "type": 1,
       "children": [],
       "embedBuff": {

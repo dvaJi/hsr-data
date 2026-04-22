@@ -1429,7 +1429,7 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Golpe Extirpador",
-      "desc": "Ao causar Dano a um inimigo com <nobr>80%</nobr> ou menos de PV, a Chance de CRIT aumenta em <nobr>15%</nobr>.",
+      "desc": "Ao causar Dano a um inimigo com <nobr>80%</nobr> ou menos de PV, aumenta a Chance de CRIT em <nobr>15%</nobr>.",
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1853,7 +1853,7 @@
       "embedBonusSkill": {
         "id": "rippling_waves",
         "name": "Ondulação",
-        "desc": "Após usar um ATQ Básico, a próxima ação de Seele será Avançada Adiante em <nobr>20%</nobr>.",
+        "desc": "Após usar um ATQ Básico, Avança Adiante a próxima ação de Seele em <nobr>20%</nobr>.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1953,6 +1953,470 @@
     },
     {
       "id": 1102207,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "Bônus de ATQ",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [
+          {
+            "key": "Aumenta o ATQ em <nobr>#1[f1]%</nobr>",
+            "value": 0.06
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 45000
+          },
+          {
+            "id": "arrow_of_the_starchaser",
+            "name": "Flecha de Caça-Estrela",
+            "amount": 3
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Vontade de Conquistador",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "Bônus de ATQ",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Aumenta o ATQ em <nobr>#1[f1]%</nobr>",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "arrow_of_the_demon_slayer",
+                    "name": "Flecha de Caça-Demônio",
+                    "amount": 3
+                  },
+                  {
+                    "id": "usurpers_scheme",
+                    "name": "Esquema do Usurpador",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_dmg_boost",
+            "name": "Bônus de Dano CRIT",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "Aumenta o Dano CRIT em <nobr>#1[f1]%</nobr>",
+                "value": 0.053
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Flecha de Caça-Feras",
+                "amount": 3
+              },
+              {
+                "id": "thiefs_instinct",
+                "name": "Instinto de Ladrão",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "nightshade",
+        "name": "Sombra Noturna",
+        "desc": "Ao derrotar um inimigo-alvo, aumenta o Dano causado do usuário em <nobr>50%</nobr>. Esse efeito pode acumular até <nobr>3</nobr> vez(es) e dura <nobr>3</nobr> rodada(s).",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.5,
+              3,
+              3
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Flecha de Caça-Feras",
+                "amount": 3
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Lamento do Guardião",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "Bônus de Dano CRIT",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "Aumenta o Dano CRIT em <nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Flecha de Caça-Estrela",
+                    "amount": 3
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Vontade de Conquistador",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "atk_boost",
+            "name": "Bônus de ATQ",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Aumenta o ATQ em <nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Flecha de Caça-Demônio",
+                "amount": 5
+              },
+              {
+                "id": "usurpers_scheme",
+                "name": "Esquema do Usurpador",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "lacerate",
+        "name": "Laceração",
+        "desc": "Enquanto Seele estiver no estado de \"Amplificação\", a PEN de RES a Quântico dela aumenta em <nobr>25%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Flecha de Caça-Demônio",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Rastros de Destino",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Lamento do Guardião",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "Bônus de Dano CRIT",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Aumenta o Dano CRIT em <nobr>#1[f1]%</nobr>",
+                    "value": 0.107
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Flecha de Caça-Estrela",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Vontade de Conquistador",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11102210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "Bônus de ATQ",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Aumenta o ATQ em <nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédito",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Flecha de Caça-Estrela",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Vontade de Conquistador",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "def_boost",
+            "name": "Bônus de DEF",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "Aumenta a DEF em <nobr>#1[f1]%</nobr>",
+                "value": 0.075
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Flecha de Caça-Estrela",
+                "amount": 8
+              },
+              {
+                "id": "conquerors_will",
+                "name": "Vontade de Conquistador",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "rippling_waves",
+        "name": "Ondulação",
+        "desc": "Após usar um ATQ Básico, a próxima ação de Seele é Avançada Adiante em <nobr>20%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédito",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Flecha de Caça-Estrela",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Rastros de Destino",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Lamento do Guardião",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "Bônus de ATQ",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Aumenta o ATQ em <nobr>#1[f1]%</nobr>",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 2500
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Instinto de Ladrão",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102204,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "def_boost",
+        "name": "Bônus de DEF",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [
+          {
+            "key": "Aumenta a DEF em <nobr>#1[f1]%</nobr>",
+            "value": 0.05
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédito",
+            "amount": 10000
+          },
+          {
+            "id": "arrow_of_the_demon_slayer",
+            "name": "Flecha de Caça-Demônio",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Esquema do Usurpador",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102207,
       "type": 1,
       "children": [],
       "embedBuff": {

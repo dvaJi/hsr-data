@@ -429,7 +429,7 @@
       "id": "edge_of_the_void",
       "name": "Rand der Leere",
       "desc": "Fügt einem anvisierten Gegner imaginären SCH in Höhe von #1[i]% von Welts ANG zu und verursacht zusätzlich 2-mal SCH. Jedes Mal wird einem zufälligen Gegner imaginärer SCH in Höhe von #1[i]% von Welts ANG zugefügt. Beim Treffen hat eine Grundchance von #2[i]%, die GES des getroffenen Ziels für #4[i] Rd. um #3[i]% zu reduzieren.",
-      "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu. Dieser Angriff kann 3-mal abprallen und hat eine Chance, betroffene Ziele zu verlangsamen.",
+      "simpleDesc": "Fügt einem Gegner geringen imaginären SCH zu, der 3-mal abprallt. Hat eine Chance, Ziele zu verlangsamen.",
       "type": "Fertigkeit",
       "tag": "Abpraller",
       "spBase": 10,
@@ -788,7 +788,7 @@
       "_id": 100403,
       "id": "synthetic_black_hole",
       "name": "Synthetisches Schwarzes Loch",
-      "desc": "Fügt allen Gegnern imaginären SCH in Höhe von #1[i]% von Welts ANG zu und verursacht bei getroffenen Gegnern mit einer Grundchance von #3[i]% den Status Gefangenschaft, der für 1 Rd. hält.\nDie Aktionen der gefangenen Gegner werden um #2[f1]% verzögert und ihre GES sinkt um #4[i]%.",
+      "desc": "Fügt allen Gegnern imaginären SCH in Höhe von #1[i]% von Welts ANG zu und verursacht bei getroffenen Gegnern mit einer Grundchance von #3[i]% den Status Gefangenschaft, der 1 Rd. anhält.\nDie Aktionen der Gegner im Status Gefangenschaft werden um #2[f1]% verzögert und ihre GES um #4[i]% reduziert.",
       "simpleDesc": "Fügt allen Gegnern imaginären SCH zu und verursacht mit hoher Chance Gefangenschaft.",
       "type": "Ultimate",
       "tag": "Flächenangriff",
@@ -1153,7 +1153,7 @@
       "_id": 100404,
       "id": "time_distortion",
       "name": "Zeitverzerrung",
-      "desc": "Fügt dem getroffenen Gegner 1-mal zusätzlichen imaginären SCH in Höhe von #1[i]% von Welts ANG zu, wenn der Gegner verlangsamt wird.",
+      "desc": "Wenn ein verlangsamter Gegner getroffen wird, wird noch 1-mal zusätzlicher imaginärer SCH in Höhe von #1[i]% von Welts ANG verursacht.",
       "simpleDesc": "Fügt einem verlangsamten Gegner zusätzlich geringen imaginären SCH zu.",
       "type": "Talent",
       "tag": "Verstärkung",
@@ -1518,7 +1518,7 @@
       "_id": 100401,
       "id": "legacy_of_honor",
       "name": "Nachlass der Ehre",
-      "desc": "Nach dem Einsatz des Ultimates wird Welt verstärkt. Die nächsten <nobr>2</nobr> Einsätze seines Standardangriffs oder seiner Fertigkeit fügen dem Gegner 1-mal <u>zusätzlichen SCH</u> in Höhe von <nobr>50%</nobr> des SCH-Multiplikators seines Standardangriffs bzw. <nobr>80%</nobr> des SCH-Multiplikators seiner Fertigkeit zu.",
+      "desc": "Nach dem Einsatz des Ultimates wird Welt verstärkt. Die nächsten <nobr>2</nobr> Einsätze seines Standardangriffs oder seiner Fertigkeit fügen den Gegnern noch 1-mal <u>zusätzlichen SCH</u> in Höhe von <nobr>50%</nobr> des SCH-Multiplikators seines Standardangriffs bzw. <nobr>80%</nobr> des SCH-Multiplikators seiner Fertigkeit zu.",
       "unlockCost": [
         {
           "ItemID": 11004,
@@ -1601,7 +1601,7 @@
       "_id": 100406,
       "id": "prospect_of_glory",
       "name": "Glänzende Aussichten",
-      "desc": "Fügt einem zufälligen Gegner beim Einsatz der Fertigkeit 1-mal zusätzlichen SCH zu.",
+      "desc": "Fügt einem zufälligen Gegner beim Einsatz der Fertigkeit zusätzlich 1-mal SCH zu.",
       "unlockCost": [
         {
           "ItemID": 11004,
@@ -1798,7 +1798,7 @@
       "embedBonusSkill": {
         "id": "judgment",
         "name": "Urteil",
-        "desc": "Stellt beim Einsatz des Ultimates zusätzlich <nobr>10</nobr> Pkt. Energie wieder her.",
+        "desc": "Stellt beim Einsatz des Ultimates zusätzlich <nobr>10</nobr> Energie wieder her.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1991,6 +1991,408 @@
         "statusList": [
           {
             "key": "Erhöht ANG um <nobr>#1[f1]%</nobr>.",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 2500
+          },
+          {
+            "id": "silvermane_badge",
+            "name": "Anstecker der Silbermähnen-Wache",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11004101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11004202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11004203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "effect_hit_rate_boost",
+                "name": "Effekt-Trefferrate-Erhöhung",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Erhöht Effekt-Trefferrate um <nobr>#1[f1]%</nobr>.",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "obsidian_of_desolation",
+                    "name": "Obsidian der Trostlosigkeit",
+                    "amount": 3
+                  },
+                  {
+                    "id": "silvermane_insignia",
+                    "name": "Insignien der Silbermähnen-Wache",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "dmg_boost_imaginary",
+            "name": "SCH-Verstärkung: Imaginär",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "Erhöht imaginären SCH um <nobr>#1[f1]%</nobr>.",
+                "value": 0.032
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "obsidian_of_dread",
+                "name": "Obsidian der Glanzlosigkeit",
+                "amount": 3
+              },
+              {
+                "id": "silvermane_badge",
+                "name": "Anstecker der Silbermähnen-Wache",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "retribution",
+        "name": "Vergeltung",
+        "desc": "Wenn ein Verbündeter einen Gegner mit dem Status „Schwerelosigkeit“ angreift, wird der verursachte SCH um <nobr>10%</nobr> erhöht. Dieser Effekt ist bis zu <nobr>10</nobr>-fach stapelbar und hält <nobr>2</nobr> Rd. an. Zu Beginn des Kampfes stellt Welt <nobr>30</nobr> Energie wieder her.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.1,
+              10,
+              2,
+              30
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "obsidian_of_dread",
+                "name": "Obsidian der Glanzlosigkeit",
+                "amount": 3
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Ende des Zerstörers",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11004102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11004205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11004206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "dmg_boost_imaginary",
+                "name": "SCH-Verstärkung: Imaginär",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "Erhöht imaginären SCH um <nobr>#1[f1]%</nobr>.",
+                    "value": 0.048
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "obsidian_of_obsession",
+                    "name": "Obsidian der Besessenheit",
+                    "amount": 3
+                  },
+                  {
+                    "id": "silvermane_medal",
+                    "name": "Orden der Silbermähnen-Wache",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "effect_hit_rate_boost",
+            "name": "Effekt-Trefferrate-Erhöhung",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Erhöht Effekt-Trefferrate um <nobr>#1[f1]%</nobr>.",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "obsidian_of_desolation",
+                "name": "Obsidian der Trostlosigkeit",
+                "amount": 5
+              },
+              {
+                "id": "silvermane_insignia",
+                "name": "Insignien der Silbermähnen-Wache",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "judgment",
+        "name": "Urteil",
+        "desc": "Fügt dem Gegner beim Einsatz von Standardangriff oder Fertigkeit noch 1-mal <u>zusätzlichen SCH</u> in Höhe von <nobr>80%</nobr> des SCH-Multiplikators des Standardangriffs bzw. <nobr>120%</nobr> des SCH-Multiplikators der Fertigkeit zu.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.8,
+              1.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "obsidian_of_desolation",
+                "name": "Obsidian der Trostlosigkeit",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Spuren des Schicksals",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Ende des Zerstörers",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11004103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11004208,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "Effekt-WDS-Verstärkung",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "Erhöht Effekt-WDS um <nobr>#1[f1]%</nobr>.",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidian der Besessenheit",
+                "amount": 8
+              },
+              {
+                "id": "silvermane_medal",
+                "name": "Orden der Silbermähnen-Wache",
+                "amount": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": 11004209,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "dmg_boost_imaginary",
+            "name": "SCH-Verstärkung: Imaginär",
+            "levelReq": 75,
+            "promotionReq": 0,
+            "statusList": [
+              {
+                "key": "Erhöht imaginären SCH um <nobr>#1[f1]%</nobr>.",
+                "value": 0.064
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidian der Besessenheit",
+                "amount": 8
+              },
+              {
+                "id": "silvermane_medal",
+                "name": "Orden der Silbermähnen-Wache",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "punishment",
+        "name": "Bestrafung",
+        "desc": "Wenn Welts <u>Effekt-Trefferrate</u> höher als <nobr>40%</nobr> ist, wird sein ANG für jeweils <nobr>10%</nobr> darüber hinaus um <nobr>20%</nobr> erhöht, bis zu <nobr>80%</nobr>. Stellt beim Einsatz des Ultimates zusätzlich <nobr>5</nobr> Energie wieder her.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.4,
+              0.1,
+              0.2,
+              0.8,
+              5
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidian der Besessenheit",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Spuren des Schicksals",
+                "amount": 1
+              },
+              {
+                "id": "destroyers_final_road",
+                "name": "Ende des Zerstörers",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11004201,
+      "type": 1,
+      "children": [
+        {
+          "id": 11004210,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "effect_hit_rate_boost",
+            "name": "Effekt-Trefferrate-Erhöhung",
+            "levelReq": 80,
+            "promotionReq": 0,
+            "statusList": [
+              {
+                "key": "Erhöht Effekt-Trefferrate um <nobr>#1[f1]%</nobr>.",
+                "value": 0.08
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "obsidian_of_obsession",
+                "name": "Obsidian der Besessenheit",
+                "amount": 8
+              },
+              {
+                "id": "silvermane_medal",
+                "name": "Orden der Silbermähnen-Wache",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBuff": {
+        "id": "effect_hit_rate_boost",
+        "name": "Effekt-Trefferrate-Erhöhung",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Erhöht Effekt-Trefferrate um <nobr>#1[f1]%</nobr>.",
             "value": 0.04
           }
         ],

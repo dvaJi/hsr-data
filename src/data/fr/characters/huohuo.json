@@ -244,7 +244,7 @@
       "_id": 121701,
       "id": "banner_stormcaller",
       "name": "Bannière de tempête",
-      "desc": "Inflige des DGT de vent équivalents à #1[i]% des PV max de Huohuo à une cible ennemie.",
+      "desc": "Inflige des DGT de vent équivalents à #1[i]% des PV max de Huohuo à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de vent mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
@@ -428,7 +428,7 @@
       "_id": 121702,
       "id": "talisman_protection",
       "name": "Talisman de protection",
-      "desc": "Dissipe #5[i] malus d'une cible alliée unique et lui rend immédiatement un montant de PV équivalent à #1[f1]% des PV max de Huohuo + #2[i]. Restaure également aux alliés adjacents à la cible un montant de PV équivalent à #3[f1]% des PV max de Huohuo + #4[i].",
+      "desc": "Dissipe #5[i] malus d'un allié désigné et lui rend immédiatement un montant de PV équivalent à #1[f1]% des PV max de Huohuo + #2[i]. Restaure également aux alliés adjacents à la cible un montant de PV équivalent à #3[f1]% des PV max de Huohuo + #4[i].",
       "simpleDesc": "Dissipe 1 malus d'un allié et restaure des PV à cet allié et aux alliés adjacents.",
       "type": "Compétence",
       "tag": "Restauration",
@@ -2028,6 +2028,402 @@
     },
     {
       "id": 1217210,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "hp_boost",
+        "name": "Augmentation de PV",
+        "levelReq": 80,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
+            "value": 0.08
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédits",
+            "amount": 160000
+          },
+          {
+            "id": "flower_of_eternity",
+            "name": "Fleur de l'éternité",
+            "amount": 8
+          },
+          {
+            "id": "immortal_lumintwig",
+            "name": "Branche-lumière immortelle",
+            "amount": 8
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11217202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11217203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "hp_boost",
+                "name": "Augmentation de PV",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédits",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "sprout_of_life",
+                    "name": "Pousse de la vie",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_aeroblossom",
+                    "name": "Aérofleur immortelle",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "RÉS aux effets ↑",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "La RÉS aux effets augmente de <nobr>#1[f1]%</nobr>.",
+                "value": 0.04
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 5000
+              },
+              {
+                "id": "seed_of_abundance",
+                "name": "Graine d'abondance",
+                "amount": 3
+              },
+              {
+                "id": "immortal_scionette",
+                "name": "Jeune pousse immortelle",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "fearful_to_act",
+        "name": "Paralysée",
+        "desc": "Au début du combat, Huohuo régénère <nobr>30</nobr> points d'énergie et obtient Intervention divine pour une durée de <nobr>2</nobr> tours.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              30,
+              2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 5000
+              },
+              {
+                "id": "seed_of_abundance",
+                "name": "Graine d'abondance",
+                "amount": 3
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Regret de l'ochéma infini",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11217205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11217206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "effect_res_boost",
+                "name": "RÉS aux effets ↑",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "La RÉS aux effets augmente de <nobr>#1[f1]%</nobr>.",
+                    "value": 0.06
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Crédits",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "flower_of_eternity",
+                    "name": "Fleur de l'éternité",
+                    "amount": 3
+                  },
+                  {
+                    "id": "immortal_lumintwig",
+                    "name": "Branche-lumière immortelle",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "hp_boost",
+            "name": "Augmentation de PV",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 20000
+              },
+              {
+                "id": "sprout_of_life",
+                "name": "Pousse de la vie",
+                "amount": 5
+              },
+              {
+                "id": "immortal_aeroblossom",
+                "name": "Aérofleur immortelle",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "the_cursed_one",
+        "name": "Maudite",
+        "desc": "Augmente les chances de résister aux <u>malus de contrôle</u> de <nobr>35%</nobr>. Lors de l'utilisation de l'ultime, si l'énergie max d'une cible alliée est supérieure ou égale à <nobr>160</nobr>, augmente également son ATQ de <nobr>24%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.35,
+              160,
+              0.24
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 20000
+              },
+              {
+                "id": "sprout_of_life",
+                "name": "Pousse de la vie",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Voies de la destinée",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Regret de l'ochéma infini",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11217208,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "spd_boost",
+            "name": "VIT ↑",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "La VIT augmente de <nobr>#1[i]</nobr>.",
+                "value": 3
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 160000
+              },
+              {
+                "id": "flower_of_eternity",
+                "name": "Fleur de l'éternité",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "Branche-lumière immortelle",
+                "amount": 8
+              }
+            ]
+          }
+        },
+        {
+          "id": 11217209,
+          "type": 1,
+          "children": [],
+          "embedBuff": {
+            "id": "effect_res_boost",
+            "name": "RÉS aux effets ↑",
+            "levelReq": 75,
+            "promotionReq": 0,
+            "statusList": [
+              {
+                "key": "La RÉS aux effets augmente de <nobr>#1[f1]%</nobr>.",
+                "value": 0.08
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 160000
+              },
+              {
+                "id": "flower_of_eternity",
+                "name": "Fleur de l'éternité",
+                "amount": 8
+              },
+              {
+                "id": "immortal_lumintwig",
+                "name": "Branche-lumière immortelle",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "stress_reaction_to_horror",
+        "name": "Stressée",
+        "desc": "Lorsque le talent de Huohuo se déclenche pour soigner des cibles alliées, elle régénère aussi <nobr>1</nobr> point d'énergie.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              1
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Crédits",
+                "amount": 160000
+              },
+              {
+                "id": "flower_of_eternity",
+                "name": "Fleur de l'éternité",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Voies de la destinée",
+                "amount": 1
+              },
+              {
+                "id": "regret_of_infinite_ochema",
+                "name": "Regret de l'ochéma infini",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "hp_boost",
+        "name": "Augmentation de PV",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Les PV max augmentent de <nobr>#1[f1]%</nobr>.",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Crédits",
+            "amount": 2500
+          },
+          {
+            "id": "immortal_scionette",
+            "name": "Jeune pousse immortelle",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11217210,
       "type": 1,
       "children": [],
       "embedBuff": {

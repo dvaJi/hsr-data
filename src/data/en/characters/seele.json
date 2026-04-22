@@ -1070,7 +1070,7 @@
       "_id": 110204,
       "id": "resurgence",
       "name": "Resurgence",
-      "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, the DMG of Seele's attacks increases by #1[i]% for #2[i] turn(s).\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
+      "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG of Seele's attacks by #1[i]% for #2[i] turn(s).\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
       "simpleDesc": "When defeating enemy targets with Basic ATK, Skill, or Ultimate, gains an extra turn and enters the Amplification state. While in Amplification, increases the DMG dealt by this unit.",
       "type": "Talent",
       "tag": "Enhance",
@@ -1429,7 +1429,7 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Extirpating Slash",
-      "desc": "When dealing DMG to an enemy whose HP percentage is <nobr>80%</nobr> or lower, CRIT Rate increases by <nobr>15%</nobr>.",
+      "desc": "When dealing DMG to an enemy whose HP percentage is <nobr>80%</nobr> or lower, increases CRIT Rate by <nobr>15%</nobr>.",
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1853,7 +1853,7 @@
       "embedBonusSkill": {
         "id": "rippling_waves",
         "name": "Rippling Waves",
-        "desc": "After using a Basic ATK, Seele's next <u>action advances</u> by <nobr>20%</nobr>.",
+        "desc": "After using a Basic ATK, advances Seele's next <u>action </u> by <nobr>20%</nobr>.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1953,6 +1953,470 @@
     },
     {
       "id": 1102207,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "ATK Boost",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [
+          {
+            "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+            "value": 0.06
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 45000
+          },
+          {
+            "id": "arrow_of_the_starchaser",
+            "name": "Arrow of the Starchaser",
+            "amount": 3
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Conqueror's Will",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "ATK Boost",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "arrow_of_the_demon_slayer",
+                    "name": "Arrow of the Demon Slayer",
+                    "amount": 3
+                  },
+                  {
+                    "id": "usurpers_scheme",
+                    "name": "Usurper's Scheme",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_dmg_boost",
+            "name": "CRIT DMG Boost",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "CRIT DMG increases by <nobr>#1[f1]%</nobr>",
+                "value": 0.053
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Arrow of the Beast Hunter",
+                "amount": 3
+              },
+              {
+                "id": "thiefs_instinct",
+                "name": "Thief's Instinct",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "nightshade",
+        "name": "Nightshade",
+        "desc": "When defeating an enemy target, increases the wearer's DMG dealt by <nobr>50%</nobr>. This effect can stack up to <nobr>3</nobr> time(s) and lasts for <nobr>3</nobr> turn(s).",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.5,
+              3,
+              3
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Arrow of the Beast Hunter",
+                "amount": 3
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Guardian's Lament",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "CRIT DMG Boost",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "CRIT DMG increases by <nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Arrow of the Starchaser",
+                    "amount": 3
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Conqueror's Will",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "atk_boost",
+            "name": "ATK Boost",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Arrow of the Demon Slayer",
+                "amount": 5
+              },
+              {
+                "id": "usurpers_scheme",
+                "name": "Usurper's Scheme",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "lacerate",
+        "name": "Lacerate",
+        "desc": "While Seele is in the Amplification state, her Quantum <u>RES PEN</u> increases by <nobr>25%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Arrow of the Demon Slayer",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Guardian's Lament",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "CRIT DMG Boost",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "CRIT DMG increases by <nobr>#1[f1]%</nobr>",
+                    "value": 0.107
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Arrow of the Starchaser",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Conqueror's Will",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11102210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "ATK Boost",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Arrow of the Starchaser",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Conqueror's Will",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "def_boost",
+            "name": "DEF Boost",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "DEF increases by <nobr>#1[f1]%</nobr>",
+                "value": 0.075
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Arrow of the Starchaser",
+                "amount": 8
+              },
+              {
+                "id": "conquerors_will",
+                "name": "Conqueror's Will",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "rippling_waves",
+        "name": "Rippling Waves",
+        "desc": "After using a Basic ATK, advances Seele's next <u>action </u> by <nobr>20%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Arrow of the Starchaser",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Tracks of Destiny",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Guardian's Lament",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "ATK Boost",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 2500
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Thief's Instinct",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102204,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "def_boost",
+        "name": "DEF Boost",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [
+          {
+            "key": "DEF increases by <nobr>#1[f1]%</nobr>",
+            "value": 0.05
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 10000
+          },
+          {
+            "id": "arrow_of_the_demon_slayer",
+            "name": "Arrow of the Demon Slayer",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Usurper's Scheme",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102207,
       "type": 1,
       "children": [],
       "embedBuff": {

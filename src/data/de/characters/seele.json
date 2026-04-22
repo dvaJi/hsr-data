@@ -428,8 +428,8 @@
       "_id": 110202,
       "id": "sheathed_blade",
       "name": "Ungezückte Klinge",
-      "desc": "Erhöht Seeles GES für #3[i] Rd. um #2[i]% und fügt einem anvisierten Gegner Quanten-SCH in Höhe von #1[i]% ihres ANG zu.",
-      "simpleDesc": "Fügt einem Gegner Quanten-SCH zu und erhöht die GES.",
+      "desc": "Erhöht Seeles GES für #3[i] Rd. um #2[i]% und fügt einem anvisierten Gegner Quanten-SCH in Höhe von #1[i]% von Seeles ANG zu.",
+      "simpleDesc": "Fügt einem Gegner Quanten-SCH zu und erhöht die eigene GES.",
       "type": "Fertigkeit",
       "tag": "Einzelangriff",
       "spBase": 30,
@@ -764,8 +764,8 @@
       "_id": 110203,
       "id": "butterfly_flurry",
       "name": "Schmetterlingssturm",
-      "desc": "Tritt in den verstärkten Zustand ein und fügt einem anvisierten Gegner Quanten-SCH in Höhe von #1[i]% von Seeles ANG zu.",
-      "simpleDesc": "Tritt in den verstärkten Zustand ein und fügt einem Gegner massiven Quanten-SCH zu.",
+      "desc": "Tritt in den Verstärkten Zustand ein und fügt einem anvisierten Gegner Quanten-SCH in Höhe von #1[i]% von Seeles ANG zu.",
+      "simpleDesc": "Tritt in den Verstärkten Zustand ein und fügt einem Gegner massiven Quanten-SCH zu.",
       "type": "Ultimate",
       "tag": "Einzelangriff",
       "spBase": 5,
@@ -1070,8 +1070,8 @@
       "_id": 110204,
       "id": "resurgence",
       "name": "Erneute Erscheinung",
-      "desc": "Seele tritt beim Besiegen eines Gegners durch Standardangriff, Fertigkeit oder Ultimate in den verstärkten Zustand ein und erhält unmittelbar eine zusätzliche Runde. Während des verstärkten Zustands wird ihr SCH für #2[i] Rd. um #1[i]% erhöht.\nGegner, die in der zusätzlichen Runde des Talents „Erneute Erscheinung“ besiegt werden, lösen das Talent nicht aus.",
-      "simpleDesc": "Seele tritt beim Besiegen eines Gegners durch Standardangriff, Fertigkeit oder Ultimate in den verstärkten Zustand ein und erhält unmittelbar eine zusätzliche Runde. Während des verstärkten Zustands wird ihr SCH erhöht.",
+      "desc": "Tritt beim Besiegen eines Gegners durch Standardangriff, Fertigkeit oder Ultimate in den Verstärkten Zustand ein und erhält sofort eine zusätzliche Runde. Während des Verstärkten Zustands wird Seeles durch Angriffe verursachter SCH für #2[i] Rd. um #1[i]% erhöht.\nGegner, die in der zusätzlichen Runde des Talents „Erneute Erscheinung“ besiegt werden, lösen dieses Talent nicht aus.",
+      "simpleDesc": "Tritt beim Besiegen eines Gegners durch Standardangriff, Fertigkeit oder Ultimate in den Verstärkten Zustand ein und erhält eine zusätzliche Runde. Während des Verstärkten Zustands wird der verursachte SCH dieser Einheit erhöht.",
       "type": "Talent",
       "tag": "Verstärkung",
       "spBase": null,
@@ -1400,8 +1400,8 @@
       "_id": 110207,
       "id": "phantom_illusion",
       "name": "Phantomillusion",
-      "desc": "Nach dem Einsatz der Technik erhält Seele für #1[i] s Tarnung. Während Tarnung aktiv ist, ist Seele für Gegner unsichtbar und tritt zu Beginn des Kampfs sofort in den verstärkten Zustand ein, wenn sie einen Gegner aktiv angreift.",
-      "simpleDesc": "Tritt in den Zustand Tarnung ein. Seele tritt zu Beginn des Kampfs sofort in den verstärkten Zustand ein, wenn sie einen Gegner aktiv angreift.",
+      "desc": "Nach dem Einsatz der Technik erhält Seele für #1[i] Sek. Tarnung. Während Tarnung aktiv ist, ist Seele für Gegner unsichtbar. Wenn sie durch einen aktiven Angriff auf Gegner in den Kampf eintritt, tritt Seele sofort in den Verstärkten Zustand ein.",
+      "simpleDesc": "Tritt in den Status Tarnung ein. Nachdem diese Einheit durch einen Angriff auf Gegner in den Kampf eingetreten ist, tritt sie sofort in den Verstärkten Zustand ein.",
       "type": "Technik",
       "tag": "Verstärkung",
       "spBase": null,
@@ -1468,7 +1468,7 @@
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Ein kurzer Blick",
-      "desc": "Besiegt Seele einen Gegner, erhält sie <nobr>15</nobr> Pkt. Energie zurück.",
+      "desc": "Besiegt Seele einen Gegner, stellt sie <nobr>15</nobr> Energie wieder her.",
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1494,7 +1494,7 @@
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Trennung",
-      "desc": "Nach einem Angriff mit dem Ultimate werden getroffene Gegner für <nobr>1</nobr> Rd. mit dem Status „Schmetterlingssturm“ belegt. Gegner im Schmetterlingssturm erleiden nach einem erlittenen Angriff 1-mal <u>zusätzlichen Quanten-SCH</u> in Höhe von <nobr>15%</nobr> von Seeles Ultimate-SCH. Wenn ein anderer Verbündeter das Ziel durch den <u>zusätzlichen SCH</u> von Schmetterlingssturm besiegt, wird Seeles Talent nicht ausgelöst.\nIst Seele <u>handlungsunfähig</u>, wird der Status Schmetterlingssturm vom Gegner entfernt.",
+      "desc": "Ein Angriff mit dem Ultimate verursacht beim getroffenen Gegner für <nobr>1</nobr> Rd. den Status „Schmetterlingssturm“. Gegner im Schmetterlingssturm erleiden bei Treffern 1-mal <u>zusätzlichen Quanten-SCH</u> in Höhe von <nobr>15%</nobr> von Seeles Ultimate-SCH. Wenn ein anderer Verbündeter das Ziel durch den <u>zusätzlichen SCH</u> von Schmetterlingssturm besiegt, wird Seeles Talent nicht ausgelöst.\nIst Seele <u>handlungsunfähig</u>, wird der Status Schmetterlingssturm vom Gegner entfernt.",
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1953,6 +1953,470 @@
     },
     {
       "id": 1102207,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "ANG-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 5,
+        "statusList": [
+          {
+            "key": "Erhöht ANG um <nobr>#1[f1]%</nobr>.",
+            "value": 0.06
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 45000
+          },
+          {
+            "id": "arrow_of_the_starchaser",
+            "name": "Pfeil des Sternenfängers",
+            "amount": 3
+          },
+          {
+            "id": "conquerors_will",
+            "name": "Wille des Eroberers",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102101,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102202,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102203,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "ANG-Verstärkung",
+                "levelReq": 0,
+                "promotionReq": 3,
+                "statusList": [
+                  {
+                    "key": "Erhöht ANG um <nobr>#1[f1]%</nobr>.",
+                    "value": 0.04
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 10000
+                  },
+                  {
+                    "id": "arrow_of_the_demon_slayer",
+                    "name": "Pfeil des Dämonentöters",
+                    "amount": 3
+                  },
+                  {
+                    "id": "usurpers_scheme",
+                    "name": "Ehrgeiz der Verzerrung",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "crit_dmg_boost",
+            "name": "KRIT-SCH-Verstärkung",
+            "levelReq": 0,
+            "promotionReq": 2,
+            "statusList": [
+              {
+                "key": "Erhöht KRIT-SCH um <nobr>#1[f1]%</nobr>.",
+                "value": 0.053
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Pfeil des Bestienjägers",
+                "amount": 3
+              },
+              {
+                "id": "thiefs_instinct",
+                "name": "Instinkt des Diebes",
+                "amount": 6
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "nightshade",
+        "name": "Nachtschatten",
+        "desc": "Erhöht den verursachten SCH dieser Einheit beim Besiegen eines Gegners um <nobr>50%</nobr>. Dieser Effekt ist bis zu <nobr>3</nobr>-fach stapelbar und hält <nobr>3</nobr> Rd. an.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.5,
+              3,
+              3
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 5000
+              },
+              {
+                "id": "arrow_of_the_beast_hunter",
+                "name": "Pfeil des Bestienjägers",
+                "amount": 3
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Lamento der Wächterin",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102102,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102205,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102206,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "KRIT-SCH-Verstärkung",
+                "levelReq": 0,
+                "promotionReq": 5,
+                "statusList": [
+                  {
+                    "key": "Erhöht KRIT-SCH um <nobr>#1[f1]%</nobr>.",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 45000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Pfeil des Sternenfängers",
+                    "amount": 3
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Wille des Eroberers",
+                    "amount": 3
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "atk_boost",
+            "name": "ANG-Verstärkung",
+            "levelReq": 0,
+            "promotionReq": 4,
+            "statusList": [
+              {
+                "key": "Erhöht ANG um <nobr>#1[f1]%</nobr>.",
+                "value": 0.06
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Pfeil des Dämonentöters",
+                "amount": 5
+              },
+              {
+                "id": "usurpers_scheme",
+                "name": "Ehrgeiz der Verzerrung",
+                "amount": 4
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "lacerate",
+        "name": "Zerreißen",
+        "desc": "Erhöht im Verstärkten Zustand die <u>Quanten-WDS-DUR</u> von Seele um <nobr>25%</nobr>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.25
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 20000
+              },
+              {
+                "id": "arrow_of_the_demon_slayer",
+                "name": "Pfeil des Dämonentöters",
+                "amount": 5
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Spuren des Schicksals",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Lamento der Wächterin",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102103,
+      "type": 3,
+      "children": [
+        {
+          "id": 11102208,
+          "type": 1,
+          "children": [
+            {
+              "id": 11102209,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "crit_dmg_boost",
+                "name": "KRIT-SCH-Verstärkung",
+                "levelReq": 75,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Erhöht KRIT-SCH um <nobr>#1[f1]%</nobr>.",
+                    "value": 0.107
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Pfeil des Sternenfängers",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Wille des Eroberers",
+                    "amount": 8
+                  }
+                ]
+              }
+            },
+            {
+              "id": 11102210,
+              "type": 1,
+              "children": [],
+              "embedBuff": {
+                "id": "atk_boost",
+                "name": "ANG-Verstärkung",
+                "levelReq": 80,
+                "promotionReq": 0,
+                "statusList": [
+                  {
+                    "key": "Erhöht ANG um <nobr>#1[f1]%</nobr>.",
+                    "value": 0.08
+                  }
+                ],
+                "materials": [
+                  {
+                    "id": "credit",
+                    "name": "Credit",
+                    "amount": 160000
+                  },
+                  {
+                    "id": "arrow_of_the_starchaser",
+                    "name": "Pfeil des Sternenfängers",
+                    "amount": 8
+                  },
+                  {
+                    "id": "conquerors_will",
+                    "name": "Wille des Eroberers",
+                    "amount": 8
+                  }
+                ]
+              }
+            }
+          ],
+          "embedBuff": {
+            "id": "def_boost",
+            "name": "VTD-Verstärkung",
+            "levelReq": 0,
+            "promotionReq": 6,
+            "statusList": [
+              {
+                "key": "Erhöht VTD um <nobr>#1[f1]%</nobr>.",
+                "value": 0.075
+              }
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Pfeil des Sternenfängers",
+                "amount": 8
+              },
+              {
+                "id": "conquerors_will",
+                "name": "Wille des Eroberers",
+                "amount": 8
+              }
+            ]
+          }
+        }
+      ],
+      "embedBonusSkill": {
+        "id": "rippling_waves",
+        "name": "Gekräuselte Oberfläche",
+        "desc": "Nach dem Einsatz eines Standardangriffs wird Seeles nächste Aktion um <nobr>20%</nobr> <u>vorgezogen</u>.",
+        "type": "",
+        "tag": "",
+        "levels": [
+          {
+            "level": 1,
+            "params": [
+              0.2
+            ],
+            "materials": [
+              {
+                "id": "credit",
+                "name": "Credit",
+                "amount": 160000
+              },
+              {
+                "id": "arrow_of_the_starchaser",
+                "name": "Pfeil des Sternenfängers",
+                "amount": 8
+              },
+              {
+                "id": "tracks_of_destiny",
+                "name": "Spuren des Schicksals",
+                "amount": 1
+              },
+              {
+                "id": "guardians_lament",
+                "name": "Lamento der Wächterin",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102201,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "atk_boost",
+        "name": "ANG-Verstärkung",
+        "levelReq": 1,
+        "promotionReq": 0,
+        "statusList": [
+          {
+            "key": "Erhöht ANG um <nobr>#1[f1]%</nobr>.",
+            "value": 0.04
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 2500
+          },
+          {
+            "id": "thiefs_instinct",
+            "name": "Instinkt des Diebes",
+            "amount": 2
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102204,
+      "type": 1,
+      "children": [],
+      "embedBuff": {
+        "id": "def_boost",
+        "name": "VTD-Verstärkung",
+        "levelReq": 0,
+        "promotionReq": 3,
+        "statusList": [
+          {
+            "key": "Erhöht VTD um <nobr>#1[f1]%</nobr>.",
+            "value": 0.05
+          }
+        ],
+        "materials": [
+          {
+            "id": "credit",
+            "name": "Credit",
+            "amount": 10000
+          },
+          {
+            "id": "arrow_of_the_demon_slayer",
+            "name": "Pfeil des Dämonentöters",
+            "amount": 3
+          },
+          {
+            "id": "usurpers_scheme",
+            "name": "Ehrgeiz der Verzerrung",
+            "amount": 3
+          }
+        ]
+      }
+    },
+    {
+      "id": 11102207,
       "type": 1,
       "children": [],
       "embedBuff": {
