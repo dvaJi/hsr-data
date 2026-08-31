@@ -450,8 +450,8 @@
       "extra": [
         {
           "id": 10000017,
-          "name": "Tatsächlicher Schaden",
-          "desc": "SCH ohne Typ, der durch Effekte nicht beeinflusst wird. Dieser SCH wird nicht als 1-mal Angriff gewertet.",
+          "name": "Tatsächlicher SCH",
+          "desc": "SCH ohne Typ, der nicht von Effekten beeinflusst wird. Dieser SCH wird nicht als Angriff gewertet.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -459,7 +459,7 @@
         {
           "id": 10000007,
           "name": "Handlungsunfähig",
-          "desc": "Ein Verbündeter wird außer Gefecht gesetzt, sobald seine LP auf 0 reduziert sind.",
+          "desc": "Ein besonderer Status, der ausgelöst wird, wenn die aktuellen LP eines Verbündeten auf 0 reduziert werden. Ein Ziel in diesem Status kann nicht weiterkämpfen.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -801,7 +801,7 @@
         {
           "id": 10000018,
           "name": "Memogeist beschwören",
-          "desc": "Beschwört einen Memogeist auf das Kampffeld. Wenn sich bereits ein Memogeist auf dem Feld befindet, werden alle Mengenkontrolle-Debuffs von ihm entfernt.",
+          "desc": "Beschwört einen Memogeist auf das Kampffeld. Befindet sich der Memogeist bereits auf dem Kampffeld, werden alle Mengenkontroll-Debuffs von ihm entfernt.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -809,7 +809,7 @@
         {
           "id": 10000000,
           "name": "Zusätzliche Runde",
-          "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+          "desc": "Erhält 1 zusätzliche Runde, die keine Runden verbraucht. In dieser Runde kann kein Ultimate eingesetzt werden.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1166,7 +1166,7 @@
         {
           "id": 10000010,
           "name": "Debuff",
-          "desc": "Debuffs sind negative Statuseffekte, die Einheiten schwächen. Wenn nicht anders angegeben, können Debuffs entfernt werden.",
+          "desc": "Alle anhaltenden Status, die im Kampf Debuffs gewähren. Können entfernt werden, sofern nicht anders angegeben.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1679,7 +1679,7 @@
           {
             "id": 10000009,
             "name": "Buff",
-            "desc": "Kann eine Kampffähigkeit für eine bestimmte Dauer verstärken. Wenn nicht anders angegeben, können Buffs entfernt werden.",
+            "desc": "Alle anhaltenden Status, die im Kampf Buffs gewähren. Können entfernt werden, sofern nicht anders angegeben.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1913,7 +1913,7 @@
           {
             "id": 10000011,
             "name": "Mengenkontrolle-Debuff",
-            "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre, Glücksmarionette, Brennender Groll.",
+            "desc": "Einfrieren, Verschränkung, Gefangenschaft, Dominieren, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre, Glücksmarionette, Brennender Groll.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1989,7 +1989,7 @@
           {
             "id": 10000000,
             "name": "Zusätzliche Runde",
-            "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+            "desc": "Erhält 1 zusätzliche Runde, die keine Runden verbraucht. In dieser Runde kann kein Ultimate eingesetzt werden.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -2224,7 +2224,7 @@
           {
             "id": 10000005,
             "name": "Zusätzlicher SCH",
-            "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+            "desc": "Fügt dem angegriffenen Ziel zusätzlich 1-mal SCH zu. Dieser SCH zählt nicht als Angriff.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -2354,7 +2354,7 @@
           {
             "id": 10000011,
             "name": "Mengenkontrolle-Debuff",
-            "desc": "Gefroren, Verschränkung, Gefangenschaft, Dominiert, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre, Glücksmarionette, Brennender Groll.",
+            "desc": "Einfrieren, Verschränkung, Gefangenschaft, Dominieren, Empörung, Starker Nachhall, Fremdartiger Traum, Verschränkte Gefangenschaft, Angst, Aktionssperre, Glücksmarionette, Brennender Groll.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -2948,7 +2948,7 @@
           {
             "id": 10014082,
             "name": "Khaslanas zusätzliche Runde",
-            "desc": "Wenn Phainon sich in Khaslana verwandelt, erscheint ein Countdown in der Aktionsreihenfolge. Wenn der Countdown beginnt, erhält Khaslana eine zusätzliche Runde. Wenn die letzte Runde des Countdowns beginnt, verwandelt Phainon sich in Khaslana und führt einen Finalen Angriff aus, bevor die Verwandlung abgeschlossen ist.\nDer anfängliche Aktionswert des Countdowns wird auf einen Wert zwischen 0-<nobr>100</nobr> % gesetzt. Der Aktionswert wird zu Beginn jeder Kampfwelle nicht zurückgesetzt.\nWenn Khaslana einen Aktionsvorzug erhält, wird stattdessen die Aktion des ersten Countdowns vorgezogen.",
+            "desc": "Wenn Phainon sich in Khaslana verwandelt, erscheint ein Countdown in der Aktionsreihenfolge. Wenn der Countdown beginnt, erhält Khaslana eine zusätzliche Runde. Wenn die letzte Runde des Countdowns beginnt, führt Khaslana einen letzten Schlag aus und beendet die Verwandlung.\nDer anfängliche Aktionswert des Countdowns wird auf einen Wert zwischen 0 und <nobr>100</nobr> % gesetzt. Der Aktionswert wird zu Beginn jeder Kampfwelle nicht zurückgesetzt.\nErhält Khaslana einen Aktionsvorzug, wird stattdessen die Aktion des ersten Countdowns vorgezogen.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -2956,7 +2956,7 @@
           {
             "id": 10000005,
             "name": "Zusätzlicher SCH",
-            "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+            "desc": "Fügt dem angegriffenen Ziel zusätzlich 1-mal SCH zu. Dieser SCH zählt nicht als Angriff.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -2972,7 +2972,7 @@
           {
             "id": 10000000,
             "name": "Zusätzliche Runde",
-            "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+            "desc": "Erhält 1 zusätzliche Runde, die keine Runden verbraucht. In dieser Runde kann kein Ultimate eingesetzt werden.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -3502,7 +3502,7 @@
           {
             "id": 10000005,
             "name": "Zusätzlicher SCH",
-            "desc": "Bewirkt, dass das getroffene Ziel zusätzlichen SCH erleidet, was nicht als Angriff gewertet wird.",
+            "desc": "Fügt dem angegriffenen Ziel zusätzlich 1-mal SCH zu. Dieser SCH zählt nicht als Angriff.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -3644,7 +3644,7 @@
           {
             "id": 10000000,
             "name": "Zusätzliche Runde",
-            "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+            "desc": "Erhält 1 zusätzliche Runde, die keine Runden verbraucht. In dieser Runde kann kein Ultimate eingesetzt werden.",
             "params": [],
             "type": 2,
             "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -3760,15 +3760,15 @@
         {
           "id": 10000009,
           "name": "Buff",
-          "desc": "Kann eine Kampffähigkeit für eine bestimmte Dauer verstärken. Wenn nicht anders angegeben, können Buffs entfernt werden.",
+          "desc": "Alle anhaltenden Status, die im Kampf Buffs gewähren. Können entfernt werden, sofern nicht anders angegeben.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
         },
         {
           "id": 10000017,
-          "name": "Tatsächlicher Schaden",
-          "desc": "SCH ohne Typ, der durch Effekte nicht beeinflusst wird. Dieser SCH wird nicht als 1-mal Angriff gewertet.",
+          "name": "Tatsächlicher SCH",
+          "desc": "SCH ohne Typ, der nicht von Effekten beeinflusst wird. Dieser SCH wird nicht als Angriff gewertet.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"

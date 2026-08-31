@@ -782,7 +782,7 @@
         {
           "id": 10000016,
           "name": "Abgang",
-          "desc": "Einheiten im Status Abgang können weder als Ziel für eine Fähigkeit anvisiert werden, noch erscheinen sie in der Aktionsleiste.",
+          "desc": "Einheiten im Status Abgang können weder als Ziel für eine Fähigkeit anvisiert werden, noch erscheinen sie in der Aktionsreihenfolge.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -790,7 +790,7 @@
         {
           "id": 10014082,
           "name": "Khaslanas zusätzliche Runde",
-          "desc": "Wenn Phainon sich in Khaslana verwandelt, erscheint ein Countdown in der Aktionsreihenfolge. Wenn der Countdown beginnt, erhält Khaslana eine zusätzliche Runde. Wenn die letzte Runde des Countdowns beginnt, verwandelt Phainon sich in Khaslana und führt einen Finalen Angriff aus, bevor die Verwandlung abgeschlossen ist.\nDer anfängliche Aktionswert des Countdowns wird auf einen Wert zwischen 0-<nobr>100</nobr> % gesetzt. Der Aktionswert wird zu Beginn jeder Kampfwelle nicht zurückgesetzt.\nWenn Khaslana einen Aktionsvorzug erhält, wird stattdessen die Aktion des ersten Countdowns vorgezogen.",
+          "desc": "Wenn Phainon sich in Khaslana verwandelt, erscheint ein Countdown in der Aktionsreihenfolge. Wenn der Countdown beginnt, erhält Khaslana eine zusätzliche Runde. Wenn die letzte Runde des Countdowns beginnt, führt Khaslana einen letzten Schlag aus und beendet die Verwandlung.\nDer anfängliche Aktionswert des Countdowns wird auf einen Wert zwischen 0 und <nobr>100</nobr> % gesetzt. Der Aktionswert wird zu Beginn jeder Kampfwelle nicht zurückgesetzt.\nErhält Khaslana einen Aktionsvorzug, wird stattdessen die Aktion des ersten Countdowns vorgezogen.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1530,7 +1530,7 @@
         {
           "id": 10014082,
           "name": "Khaslanas zusätzliche Runde",
-          "desc": "Wenn Phainon sich in Khaslana verwandelt, erscheint ein Countdown in der Aktionsreihenfolge. Wenn der Countdown beginnt, erhält Khaslana eine zusätzliche Runde. Wenn die letzte Runde des Countdowns beginnt, verwandelt Phainon sich in Khaslana und führt einen Finalen Angriff aus, bevor die Verwandlung abgeschlossen ist.\nDer anfängliche Aktionswert des Countdowns wird auf einen Wert zwischen 0-<nobr>100</nobr> % gesetzt. Der Aktionswert wird zu Beginn jeder Kampfwelle nicht zurückgesetzt.\nWenn Khaslana einen Aktionsvorzug erhält, wird stattdessen die Aktion des ersten Countdowns vorgezogen.",
+          "desc": "Wenn Phainon sich in Khaslana verwandelt, erscheint ein Countdown in der Aktionsreihenfolge. Wenn der Countdown beginnt, erhält Khaslana eine zusätzliche Runde. Wenn die letzte Runde des Countdowns beginnt, führt Khaslana einen letzten Schlag aus und beendet die Verwandlung.\nDer anfängliche Aktionswert des Countdowns wird auf einen Wert zwischen 0 und <nobr>100</nobr> % gesetzt. Der Aktionswert wird zu Beginn jeder Kampfwelle nicht zurückgesetzt.\nErhält Khaslana einen Aktionsvorzug, wird stattdessen die Aktion des ersten Countdowns vorgezogen.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1552,7 +1552,7 @@
         {
           "id": 30000005,
           "name": "WDS-DUR",
-          "desc": "Beim Verursachen von SCH wird ein Teil des Widerstands des gegnerischen Ziels gegen die entsprechende Schadensart ignoriert.",
+          "desc": "Ignoriert beim Verursachen von SCH einen Teil des WDS des Gegners für den entsprechenden Schadenstyp.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1568,7 +1568,7 @@
         {
           "id": 10000000,
           "name": "Zusätzliche Runde",
-          "desc": "Erhalte 1 zusätzliche Runde, die deine verbleibenden Runden nicht verbraucht, wenn du eine Aktion ausführst. Während dieser zusätzlichen Runde kann kein Ultimate eingesetzt werden.",
+          "desc": "Erhält 1 zusätzliche Runde, die keine Runden verbraucht. In dieser Runde kann kein Ultimate eingesetzt werden.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1628,8 +1628,8 @@
       "extra": [
         {
           "id": 10000017,
-          "name": "Tatsächlicher Schaden",
-          "desc": "SCH ohne Typ, der durch Effekte nicht beeinflusst wird. Dieser SCH wird nicht als 1-mal Angriff gewertet.",
+          "name": "Tatsächlicher SCH",
+          "desc": "SCH ohne Typ, der nicht von Effekten beeinflusst wird. Dieser SCH wird nicht als Angriff gewertet.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
