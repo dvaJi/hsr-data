@@ -244,7 +244,7 @@
       "_id": 101301,
       "id": "what_are_you_looking_at",
       "name": "What Are You Looking At?",
-      "desc": "Deals Ice DMG equal to #1[i]% of Herta's ATK to one designated enemy.",
+      "desc": "Deals Ice DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Herta's ATK to one designated enemy.",
       "simpleDesc": "Deals minor Ice DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
@@ -428,7 +428,7 @@
       "_id": 101302,
       "id": "onetime_offer",
       "name": "One-Time Offer",
-      "desc": "Deals Ice DMG equal to #1[i]% of Herta's ATK to all enemies. If the enemy's HP percentage is #2[i]% or higher, DMG dealt to this target increases by #3[i]%.",
+      "desc": "Deals Ice DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Herta's ATK to all enemies. If the enemy's HP percentage is #2[i]% or higher, DMG dealt to this target increases by #3[i]%.",
       "simpleDesc": "Deals minor Ice DMG to all enemies. Targets with higher HP will receive increased DMG.",
       "type": "Skill",
       "tag": "AoE",
@@ -591,7 +591,7 @@
         {
           "level": 7,
           "params": [
-            0.81,
+            0.8125,
             0.5,
             0.2
           ],
@@ -619,7 +619,7 @@
         {
           "level": 8,
           "params": [
-            0.88,
+            0.875,
             0.5,
             0.2
           ],
@@ -653,7 +653,7 @@
         {
           "level": 9,
           "params": [
-            0.94,
+            0.9375,
             0.5,
             0.2
           ],
@@ -758,7 +758,7 @@
       "_id": 101303,
       "id": "its_magic_i_added_some_magic",
       "name": "It's Magic, I Added Some Magic",
-      "desc": "Deals Ice DMG equal to #1[i]% of Herta's ATK to all enemies.",
+      "desc": "Deals Ice DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Herta's ATK to all enemies.",
       "simpleDesc": "Deals Ice DMG to all enemies.",
       "type": "Ultimate",
       "tag": "AoE",
@@ -1058,8 +1058,8 @@
       "_id": 101304,
       "id": "fine_ill_do_it_myself",
       "name": "Fine, I'll Do It Myself",
-      "desc": "When an ally target's attack causes an enemy target's HP percentage to fall to #1[i]% or lower, Herta will launch a Follow-Up ATK, dealing Ice DMG equal to #2[i]% of Herta's ATK to all enemies.",
-      "simpleDesc": "When any ally target's attack reduces the enemy target's current HP percentage to #1[i]% or lower, Herta immediately launches Follow-Up ATK, dealing minor Ice DMG to all enemies.",
+      "desc": "When an ally target's attack causes an enemy target's HP percentage to fall to #1[i]% or lower, Herta will launch a <u>Follow-Up ATK</u>, dealing Ice DMG equal to <span style=\"color:#f29e38ff\">#2[i]%</span> of Herta's ATK to all enemies.",
+      "simpleDesc": "When any ally target's attack reduces the enemy target's current HP percentage to <span style=\"color:#f29e38ff\">#1[i]%</span> or lower, Herta immediately launches <span style=\"color:#f29e38ff\"><u>Follow-Up ATK</u></span>, dealing minor Ice DMG to all enemies.",
       "type": "Talent",
       "tag": "AoE",
       "spBase": 5,
@@ -1093,7 +1093,7 @@
           "level": 2,
           "params": [
             0.5,
-            0.27
+            0.265
           ],
           "materials": [
             {
@@ -1141,7 +1141,7 @@
           "level": 4,
           "params": [
             0.5,
-            0.29
+            0.295
           ],
           "materials": [
             {
@@ -1195,7 +1195,7 @@
           "level": 6,
           "params": [
             0.5,
-            0.33
+            0.325
           ],
           "materials": [
             {
@@ -1222,7 +1222,7 @@
           "level": 7,
           "params": [
             0.5,
-            0.34
+            0.34375
           ],
           "materials": [
             {
@@ -1249,7 +1249,7 @@
           "level": 8,
           "params": [
             0.5,
-            0.36
+            0.3625
           ],
           "materials": [
             {
@@ -1282,7 +1282,7 @@
           "level": 9,
           "params": [
             0.5,
-            0.38
+            0.38125
           ],
           "materials": [
             {
@@ -1342,7 +1342,7 @@
           "level": 11,
           "params": [
             0.5,
-            0.41
+            0.415
           ]
         },
         {
@@ -1356,7 +1356,7 @@
           "level": 13,
           "params": [
             0.5,
-            0.45
+            0.445
           ]
         },
         {
@@ -1370,7 +1370,7 @@
           "level": 15,
           "params": [
             0.5,
-            0.47
+            0.475
           ]
         }
       ]
@@ -1409,7 +1409,11 @@
       "_id": 101301,
       "id": "kick_you_when_youre_down",
       "name": "Kick You When You're Down",
-      "desc": "When using Basic ATK, if the designated enemy's HP percentage is at <nobr>50%</nobr> or less, additionally deals Ice <u>Additional DMG</u> equal to <nobr>40%</nobr> of Herta's ATK.",
+      "desc": "When using Basic ATK, if the designated enemy's HP percentage is at 50% or less, additionally deals Ice <u>Additional DMG</u> equal to 40% of Herta's ATK.",
+      "params": [
+        0.5,
+        0.4
+      ],
       "unlockCost": [
         {
           "ItemID": 11013,
@@ -1431,7 +1435,11 @@
       "_id": 101302,
       "id": "keep_the_ball_rolling",
       "name": "Keep the Ball Rolling",
-      "desc": "Every time Talent is triggered, this character's CRIT Rate increases by <nobr>3%</nobr>. This effect can stack up to <nobr>5</nobr> time(s).",
+      "desc": "Every time Talent is triggered, this character's CRIT Rate increases by 3%. This effect can stack up to 5 time(s).",
+      "params": [
+        0.03,
+        5
+      ],
       "unlockCost": [
         {
           "ItemID": 11013,
@@ -1444,7 +1452,8 @@
       "_id": 101303,
       "id": "thats_the_kind_of_girl_i_am",
       "name": "That's the Kind of Girl I Am",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "desc": "Skill Lv. +2, up to a maximum of Lv. 15.<br>Basic ATK Lv. +1, up to a maximum of Lv. 10.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11013,
@@ -1457,7 +1466,10 @@
       "_id": 101304,
       "id": "hit_where_it_hurts",
       "name": "Hit Where It Hurts",
-      "desc": "When Talent is triggered, DMG increases by <nobr>10%</nobr>.",
+      "desc": "When Talent is triggered, DMG increases by 10%.",
+      "params": [
+        0.1
+      ],
       "unlockCost": [
         {
           "ItemID": 11013,
@@ -1470,7 +1482,8 @@
       "_id": 101305,
       "id": "cuss_big_or_cuss_nothing",
       "name": "Cuss Big or Cuss Nothing",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.<br>Talent Lv. +2, up to a maximum of Lv. 15.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11013,
@@ -1483,7 +1496,11 @@
       "_id": 101306,
       "id": "no_one_can_betray_me",
       "name": "No One Can Betray Me",
-      "desc": "After using Ultimate, this character's ATK increases by <nobr>25%</nobr> for <nobr>1</nobr> turn(s).",
+      "desc": "After using Ultimate, this character's ATK increases by 25% for 1 turn(s).",
+      "params": [
+        0.25,
+        1
+      ],
       "unlockCost": [
         {
           "ItemID": 11013,
@@ -1513,7 +1530,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "Ice DMG increases by <nobr>#1[f1]%</nobr>",
+                    "key": "Ice DMG increases by #1[f1]%",
                     "value": 0.032
                   }
                 ],
@@ -1547,7 +1564,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "CRIT Rate increases by <nobr>#1[f1]%</nobr>",
+                    "key": "CRIT Rate increases by #1[f1]%",
                     "value": 0.027
                   }
                 ],
@@ -1578,7 +1595,7 @@
             "promotionReq": 2,
             "statusList": [
               {
-                "key": "DEF increases by <nobr>#1[f1]%</nobr>",
+                "key": "DEF increases by #1[f1]%",
                 "value": 0.05
               }
             ],
@@ -1605,7 +1622,7 @@
       "embedBonusSkill": {
         "id": "efficiency",
         "name": "Efficiency",
-        "desc": "When Skill is used, the DMG Boost effect on target enemies increases by an extra <nobr>25%</nobr>.",
+        "desc": "When Skill is used, the DMG Boost effect on target enemies increases by an extra 25%.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1654,7 +1671,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "DEF increases by <nobr>#1[f1]%</nobr>",
+                    "key": "DEF increases by #1[f1]%",
                     "value": 0.075
                   }
                 ],
@@ -1688,7 +1705,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "Ice DMG increases by <nobr>#1[f1]%</nobr>",
+                    "key": "Ice DMG increases by #1[f1]%",
                     "value": 0.048
                   }
                 ],
@@ -1719,7 +1736,7 @@
             "promotionReq": 4,
             "statusList": [
               {
-                "key": "Ice DMG increases by <nobr>#1[f1]%</nobr>",
+                "key": "Ice DMG increases by #1[f1]%",
                 "value": 0.048
               }
             ],
@@ -1746,7 +1763,7 @@
       "embedBonusSkill": {
         "id": "puppet",
         "name": "Puppet",
-        "desc": "Increases the chance to resist <u>Crowd Control debuffs</u> by <nobr>35%</nobr>.",
+        "desc": "Increases the chance to resist <u>Crowd Control debuffs</u> by 35%.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1796,7 +1813,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "CRIT Rate increases by <nobr>#1[f1]%</nobr>",
+                "key": "CRIT Rate increases by #1[f1]%",
                 "value": 0.04
               }
             ],
@@ -1830,7 +1847,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "DEF increases by <nobr>#1[f1]%</nobr>",
+                "key": "DEF increases by #1[f1]%",
                 "value": 0.1
               }
             ],
@@ -1857,7 +1874,7 @@
       "embedBonusSkill": {
         "id": "icing",
         "name": "Icing",
-        "desc": "When Ultimate is used, deals <nobr>20%</nobr> more DMG to Frozen enemies.",
+        "desc": "When Ultimate is used, deals 20% more DMG to Frozen enemies.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1903,7 +1920,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "Ice DMG increases by <nobr>#1[f1]%</nobr>",
+            "key": "Ice DMG increases by #1[f1]%",
             "value": 0.032
           }
         ],
@@ -1932,7 +1949,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "Ice DMG increases by <nobr>#1[f1]%</nobr>",
+            "key": "Ice DMG increases by #1[f1]%",
             "value": 0.064
           }
         ],

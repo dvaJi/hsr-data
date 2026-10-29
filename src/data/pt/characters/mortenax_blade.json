@@ -244,7 +244,7 @@
       "_id": 150701,
       "id": "a_broken_blade_still_slays",
       "name": "Uma Lâmina Quebrada Ainda Mata",
-      "desc": "Causa Dano de Fogo igual a #1[i]% dos PV máximos de Mortenax Blade a um inimigo designado e faz o alvo entrar no estado de \"Provocação\" por 1 rodada.",
+      "desc": "Causa Dano de Fogo igual a <span style=\"color:#f29e38ff\">#1[i]%</span> dos PV máximos de Mortenax Blade a um inimigo designado e faz o alvo entrar no estado de \"Provocação\" por 1 rodada.",
       "simpleDesc": "Causa Dano de Fogo leve a um inimigo e inflige o estado de \"Provocação\" no alvo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
@@ -425,8 +425,8 @@
       "_id": 150702,
       "id": "a_rain_of_blades_seals_fate",
       "name": "Uma Chuva de Lâminas Sela o Destino",
-      "desc": "Consome PV em um valor igual a #4[f1]% dos PV máximos de Mortenax Blade e causa Dano de Fogo em um valor igual a #1[i]% dos PV máximos de Mortenax Blade a todos os inimigos, e causa adicionalmente #2[i] instância(s) de Dano, com cada instância causando Dano de Fogo em um valor igual a #3[f1]% dos PV máximos de Mortenax Blade a um inimigo aleatório.\nSe os PV atuais forem insuficientes, os PV atuais de Mortenax Blade serão reduzidos a 1 ao usar a Perícia.\nQuando não estiver no estado de \"Fúria Infinita\" ou quando os PV atuais forem iguais ou inferiores a 1, Mortenax Blade não pode usar sua Perícia.\nUsar a Perícia não consome Pontos de Perícia.",
-      "simpleDesc": "Consome PV e causa Dano de Fogo a todos os inimigos. Depois, causa Dano de Fogo leve a inimigos únicos, ricocheteando #2[i] vez(es).",
+      "desc": "Consome PV em um valor igual a #4[f1]% dos PV máximos de Mortenax Blade e causa Dano de Fogo em um valor igual a <span style=\"color:#f29e38ff\">#1[i]%</span> dos PV máximos de Mortenax Blade a todos os inimigos, e causa adicionalmente #2[i] instância(s) de Dano, com cada instância causando Dano de Fogo em um valor igual a <span style=\"color:#f29e38ff\">#3[f1]%</span> dos PV máximos de Mortenax Blade a um inimigo aleatório.<br>Se os PV atuais forem insuficientes, os PV atuais de Mortenax Blade serão reduzidos a 1 ao usar a Perícia.<br>Quando não estiver no estado de \"Fúria Infinita\" ou quando os PV atuais forem iguais ou inferiores a 1, Mortenax Blade não pode usar sua Perícia.<br>Usar a Perícia não consome Pontos de Perícia.",
+      "simpleDesc": "Consome PV e causa Dano de Fogo a todos os inimigos. Depois, causa Dano de Fogo leve a inimigos únicos, ricocheteando <span style=\"color:#f29e38ff\">#2[i]</span> vez(es).",
       "type": "Perícia",
       "tag": "Área",
       "spBase": 30,
@@ -452,9 +452,9 @@
         {
           "level": 2,
           "params": [
-            0.4,
+            0.396,
             4,
-            0.13,
+            0.132,
             0.1
           ],
           "materials": [
@@ -475,9 +475,9 @@
         {
           "level": 3,
           "params": [
-            0.43,
+            0.432,
             4,
-            0.14,
+            0.144,
             0.1
           ],
           "materials": [
@@ -504,9 +504,9 @@
         {
           "level": 4,
           "params": [
-            0.47,
+            0.468,
             4,
-            0.16,
+            0.156,
             0.1
           ],
           "materials": [
@@ -533,9 +533,9 @@
         {
           "level": 5,
           "params": [
-            0.5,
+            0.504,
             4,
-            0.17,
+            0.168,
             0.1
           ],
           "materials": [
@@ -591,9 +591,9 @@
         {
           "level": 7,
           "params": [
-            0.58,
+            0.585,
             4,
-            0.2,
+            0.195,
             0.1
           ],
           "materials": [
@@ -655,9 +655,9 @@
         {
           "level": 9,
           "params": [
-            0.68,
+            0.675,
             4,
-            0.23,
+            0.225,
             0.1
           ],
           "materials": [
@@ -725,36 +725,36 @@
         {
           "level": 11,
           "params": [
-            0.76,
+            0.756,
             4,
-            0.25,
+            0.252,
             0.1
           ]
         },
         {
           "level": 12,
           "params": [
-            0.79,
+            0.792,
             4,
-            0.26,
+            0.264,
             0.1
           ]
         },
         {
           "level": 13,
           "params": [
-            0.83,
+            0.828,
             4,
-            0.28,
+            0.276,
             0.1
           ]
         },
         {
           "level": 14,
           "params": [
-            0.86,
+            0.864,
             4,
-            0.29,
+            0.288,
             0.1
           ]
         },
@@ -773,8 +773,8 @@
       "_id": 150703,
       "id": "fornax_ex_corpore",
       "name": "Fornax Ex Corpore",
-      "desc": "Inflige \"Abraço das Chamas Malditas\" em todos os inimigos. Os inimigos-alvo no estado de \"Abraço das Chamas Malditas\" têm sua DEF reduzida em #7[f1]% e o Dano recebido aumentado em #4[f1]%, durando por #8[i] rodada(s). Depois, consome PV em um valor igual a #1[i]% dos PV máximos de Mortenax Blade para implantar um Campo. Enquanto o Campo estiver ativo, Mortenax Blade entra no estado de \"Fúria Infinita\".\nDurante o estado de \"Fúria Infinita\", a Chance de CRIT aumenta em #2[i]%, o Dano CRIT aumenta em #3[f1]%, o ATQ Básico é aprimorado, a Perícia é desbloqueada e uma nova Perícia Suprema, \"Tenax Per Ignem\", é obtida. Ao receber um golpe fatal, essa unidade não será derrubada, mas o Campo será dissipado, sairá do estado de \"Fúria Infinita\" e restaurará PV em um valor igual a #6[i]% dos PV máximos dessa unidade.\nAo ganhar o estado de \"Fúria Infinita\", uma contagem regressiva correspondente aparece na Ordem de Ação. A contagem regressiva tem uma VEL fixa de #5[i]. No início da rodada da contagem regressiva, dissipa o Campo e sai do estado de \"Fúria Infinita\".\nSe os PV atuais forem insuficientes, os PV atuais de Mortenax Blade serão reduzidos a 1 ao usar essa habilidade.",
-      "simpleDesc": "Inflige \"Abraço das Chamas Malditas\" em todos os inimigos, fazendo com que a DEF dos alvos seja reduzida e o Dano sofrido por eles aumente. Depois, consome os PV dessa unidade para ativar um Campo. Enquanto o Campo estiver ativo, esta unidade entra no estado de \"Fúria Infinita\", aumentando a Chance de CRIT e o Dano CRIT, aprimorando o ATQ Básico, desbloqueando a Perícia e ganhando uma nova Perícia Suprema, durando até o contador terminar.\nQuando Mortenax Blade recebe um golpe fatal, o Campo é dissipado.",
+      "desc": "Inflige \"Abraço das Chamas Malditas\" em todos os inimigos. Os inimigos-alvo no estado de \"Abraço das Chamas Malditas\" têm sua DEF reduzida em <span style=\"color:#f29e38ff\">#7[f1]%</span> e o Dano recebido aumentado em <span style=\"color:#f29e38ff\">#4[f1]%</span>, durando por #8[i] rodada(s). Depois, consome PV em um valor igual a #1[i]% dos PV máximos de Mortenax Blade para implantar um Campo. Enquanto o Campo estiver ativo, Mortenax Blade entra no estado de \"Fúria Infinita\".<br>Durante o estado de \"Fúria Infinita\", a Chance de CRIT aumenta em #2[i]%, o Dano CRIT aumenta em <span style=\"color:#f29e38ff\">#3[f1]%</span>, o ATQ Básico é aprimorado, a Perícia é desbloqueada e uma nova Perícia Suprema, \"Tenax Per Ignem\", é obtida. Ao receber um golpe fatal, essa unidade não será derrubada, mas o Campo será dissipado, sairá do estado de \"Fúria Infinita\" e restaurará PV em um valor igual a #6[i]% dos PV máximos dessa unidade.<br>Ao ganhar o estado de \"Fúria Infinita\", uma contagem regressiva correspondente aparece na Ordem de Ação. A contagem regressiva tem uma VEL fixa de #5[i]. No início da rodada da contagem regressiva, dissipa o Campo e sai do estado de \"Fúria Infinita\".<br>Se os PV atuais forem insuficientes, os PV atuais de Mortenax Blade serão reduzidos a 1 ao usar essa habilidade.",
+      "simpleDesc": "Inflige \"Abraço das Chamas Malditas\" em todos os inimigos, fazendo com que <span style=\"color:#f29e38ff\">a DEF dos alvos seja reduzida e o Dano sofrido por eles aumente</span>. Depois, consome os PV dessa unidade para ativar um Campo. Enquanto o Campo estiver ativo, esta unidade entra no estado de \"Fúria Infinita\", aumentando a Chance de CRIT e o Dano CRIT, aprimorando o ATQ Básico, desbloqueando a Perícia e ganhando uma <span style=\"color:#f29e38ff\">nova Perícia Suprema</span>, durando até o contador terminar.<br>Quando Mortenax Blade recebe um golpe fatal, o Campo é dissipado.",
       "type": "Perícia Suprema",
       "tag": "Aprimoramento",
       "spBase": 5,
@@ -974,11 +974,11 @@
           "params": [
             0.2,
             0.2,
-            0.49,
-            0.42,
+            0.4875,
+            0.425,
             70,
             0.5,
-            0.26,
+            0.2625,
             2
           ],
           "materials": [
@@ -1007,11 +1007,11 @@
           "params": [
             0.2,
             0.2,
-            0.53,
+            0.525,
             0.45,
             70,
             0.5,
-            0.28,
+            0.275,
             2
           ],
           "materials": [
@@ -1046,11 +1046,11 @@
           "params": [
             0.2,
             0.2,
-            0.56,
-            0.47,
+            0.5625,
+            0.475,
             70,
             0.5,
-            0.29,
+            0.2875,
             2
           ],
           "materials": [
@@ -1190,8 +1190,8 @@
       "_id": 150704,
       "id": "all_karma_comes_due",
       "name": "Todo Carma Cobra Seu Preço",
-      "desc": "Enquanto o Campo está ativo, após cada ataque que um aliado-alvo usa em um inimigo, inflige o estado de \"Abraço das Chamas Malditas\" no inimigo-alvo correspondente e concede 1 Carga a Mortenax Blade. Quando a Carga atinge #1[i] pontos e os PV atuais de Mortenax Blade são superiores a 1, consome #1[i] Carga, regenera #2[f1] de Energia e permite que Mortenax Blade use a Perícia 1 vez adicional. Esse uso extra de Perícia é considerado como um Ataque Extra.",
-      "simpleDesc": "Enquanto o Campo está ativo, após um aliado-alvo atacar um inimigo, inflige o estado de \"Abraço das Chamas Malditas\" no inimigo e concede Carga a Mortenax Blade. Quando a Carga atinge #1[i] pontos e seus PV são maiores que 1, consome #1[i] de Carga para regenerar Energia e permite que Mortenax Blade use sua Perícia 1 vez extra.",
+      "desc": "Enquanto o Campo está ativo, após cada ataque que um aliado-alvo usa em um inimigo, inflige o estado de \"Abraço das Chamas Malditas\" no inimigo-alvo correspondente e concede 1 Carga a Mortenax Blade. Quando a Carga atinge #1[i] pontos e os PV atuais de Mortenax Blade são superiores a 1, consome #1[i] Carga, regenera <span style=\"color:#f29e38ff\">#2[f1]</span> de Energia e permite que Mortenax Blade use a Perícia 1 vez adicional. Esse uso extra de Perícia é considerado como um <u>Ataque Extra</u>.",
+      "simpleDesc": "Enquanto o Campo está ativo, após um aliado-alvo atacar um inimigo, inflige o estado de \"Abraço das Chamas Malditas\" no inimigo e concede Carga a Mortenax Blade. Quando a Carga atinge <span style=\"color:#f29e38ff\">#1[i]</span> pontos e seus PV são maiores que 1, consome <span style=\"color:#f29e38ff\">#1[i]</span> de Carga para regenerar Energia e permite que Mortenax Blade use sua <span style=\"color:#f29e38ff\">Perícia</span> 1 <span style=\"color:#f29e38ff\">vez extra</span>.",
       "type": "Talento",
       "tag": "Suporte",
       "spBase": null,
@@ -1546,7 +1546,11 @@
       "_id": 150701,
       "id": "ere_my_death_i_stood_unmade",
       "name": "Antes da Minha Morte, Eu Era Incompleto",
-      "desc": "Enquanto o Campo está ativo, reduz a RES a Todos os Tipos de todos os inimigos em <nobr>20%</nobr>. Após usar a Perícia extra do Talento, a contagem regressiva de \"Fúria Infinita\" tem sua ação atrasada em <nobr>15%</nobr>.",
+      "desc": "Enquanto o Campo está ativo, reduz a RES a Todos os Tipos de todos os inimigos em 20%. Após usar a Perícia extra do Talento, a contagem regressiva de \"Fúria Infinita\" tem sua ação atrasada em 15%.",
+      "params": [
+        0.2,
+        0.15
+      ],
       "unlockCost": [
         {
           "ItemID": 11507,
@@ -1568,7 +1572,11 @@
       "_id": 150702,
       "id": "ash_was_my_heart_yet_the_flame_stayed",
       "name": "Meu Coração Era Cinza, Mas a Chama Permaneceu",
-      "desc": "Quando um personagem aliado usa a Perícia Suprema para causar Dano, considera-se como se ele tivesse utilizado um <u>Ataque Extra</u>. O Dano causado pelo <u>Ataque Extra</u> de aliados-alvo aumenta em <nobr>75%</nobr>. O limite superior de Carga de Mortenax Blade diminui em <nobr>7</nobr>.",
+      "desc": "Quando um personagem aliado usa a Perícia Suprema para causar Dano, considera-se como se ele tivesse utilizado um <u>Ataque Extra</u>. O Dano causado pelo <u>Ataque Extra</u> de aliados-alvo aumenta em 75%. O limite superior de Carga de Mortenax Blade diminui em 7.",
+      "params": [
+        0.75,
+        7
+      ],
       "unlockCost": [
         {
           "ItemID": 11507,
@@ -1590,7 +1598,8 @@
       "_id": 150703,
       "id": "across_the_shore_wrath_laid_bare",
       "name": "Além da Margem, a Ira Revelada",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. 15.<br>Nv. do Talento +2, até no máximo Nv. 15.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11507,
@@ -1603,7 +1612,10 @@
       "_id": 150704,
       "id": "odium_ive_smitten_thence_came_the_blade",
       "name": "O Ressentimento Forjado, a Lâmina Originou",
-      "desc": "\"Coração, Refinado ao Infinito\" aumenta adicionalmente o Dano causado dos aliados-alvo em <nobr>50%</nobr>.",
+      "desc": "\"Coração, Refinado ao Infinito\" aumenta adicionalmente o Dano causado dos aliados-alvo em 50%.",
+      "params": [
+        0.5
+      ],
       "unlockCost": [
         {
           "ItemID": 11507,
@@ -1616,7 +1628,8 @@
       "_id": 150705,
       "id": "i_severed_my_woes_knowing_death_begets_life",
       "name": "Rompi Meus Infortúnios, Sabendo que a Morte Gera Vida",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "desc": "Nv. da Perícia +2, até no máximo Nv. 15.<br>Nv. do ATQ Básico +1, até no máximo Nv. 10.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11507,
@@ -1629,7 +1642,10 @@
       "_id": 150706,
       "id": "if_immortality_could_die_i_swore_them_slain",
       "name": "Se a Imortalidade Pudesse Morrer, Eu Tomaria SUA Vida",
-      "desc": "Enquanto o Campo persistir, quando Mortenax Blade recebe Dano ou consome PV, ele ganha 1 Carga. Esse efeito pode ser ativado novamente após o término da rodada de qualquer alvo. O multiplicador de Dano de \"Tenax Per Ignem\" aumenta para <nobr>150%</nobr> do valor original.",
+      "desc": "Enquanto o Campo persistir, quando Mortenax Blade recebe Dano ou consome PV, ele ganha 1 Carga. Esse efeito pode ser ativado novamente após o término da rodada de qualquer alvo. O multiplicador de Dano de \"Tenax Per Ignem\" aumenta para 150% do valor original.",
+      "params": [
+        1.5
+      ],
       "unlockCost": [
         {
           "ItemID": 11507,
@@ -1659,7 +1675,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "Aumenta o Dano de Fogo em <nobr>#1[f1]%</nobr>",
+                    "key": "Aumenta o Dano de Fogo em #1[f1]%",
                     "value": 0.032
                   }
                 ],
@@ -1690,7 +1706,7 @@
             "promotionReq": 2,
             "statusList": [
               {
-                "key": "Aumenta a Chance de CRIT em <nobr>#1[f1]%</nobr>",
+                "key": "Aumenta a Chance de CRIT em #1[f1]%",
                 "value": 0.027
               }
             ],
@@ -1717,7 +1733,7 @@
       "embedBonusSkill": {
         "id": "bone_hardened_ad_nauseam",
         "name": "Osso Endurecidos Até a Náusea",
-        "desc": "Mortenax Blade pode acumular até <nobr>80</nobr> de Energia excedente. Após usar a Perícia Suprema, a Energia excedente é redefinida e uma quantidade correspondente de Energia é regenerada. Quando a batalha começa ou quando o Campo é dissipado, se a Energia estiver abaixo de <nobr>75%</nobr>, ela é imediatamente regenerada para <nobr>75%</nobr>. Quando a Energia é regenerada ao máximo, dissipa todas as penalidades desta unidade.",
+        "desc": "Mortenax Blade pode acumular até 80 de Energia excedente. Após usar a Perícia Suprema, a Energia excedente é redefinida e uma quantidade correspondente de Energia é regenerada. Quando a batalha começa ou quando o Campo é dissipado, se a Energia estiver abaixo de 75%, ela é imediatamente regenerada para 75%. Quando a Energia é regenerada ao máximo, dissipa todas as penalidades desta unidade.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1767,7 +1783,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "Aumenta a Chance de CRIT em <nobr>#1[f1]%</nobr>",
+                    "key": "Aumenta a Chance de CRIT em #1[f1]%",
                     "value": 0.04
                   }
                 ],
@@ -1798,7 +1814,7 @@
             "promotionReq": 4,
             "statusList": [
               {
-                "key": "Aumenta o Dano de Fogo em <nobr>#1[f1]%</nobr>",
+                "key": "Aumenta o Dano de Fogo em #1[f1]%",
                 "value": 0.048
               }
             ],
@@ -1825,7 +1841,7 @@
       "embedBonusSkill": {
         "id": "soul_tempered_ad_mortem",
         "name": "Alma Temperada até a Morte",
-        "desc": "Enquanto o Campo está ativo, aumenta a chance de ser atacado por inimigos, reduz o Dano recebido por esta unidade em <nobr>50%</nobr> e aumenta a <u>Cura Recebida</u> em <nobr>50%</nobr>. Após ser atacado, inflige o estado de \"Abraço das Chamas Malditas\" no atacante e Mortenax Blade ganha 1 Carga.",
+        "desc": "Enquanto o Campo está ativo, aumenta a chance de ser atacado por inimigos, reduz o Dano recebido por esta unidade em 50% e aumenta a <u>Cura Recebida</u> em 50%. Após ser atacado, inflige o estado de \"Abraço das Chamas Malditas\" no atacante e Mortenax Blade ganha 1 Carga.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1877,7 +1893,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "Aumenta os PV máximos em <nobr>#1[f1]%</nobr>",
+                "key": "Aumenta os PV máximos em #1[f1]%",
                 "value": 0.06
               }
             ],
@@ -1911,7 +1927,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "Aumenta a Chance de CRIT em <nobr>#1[f1]%</nobr>",
+                "key": "Aumenta a Chance de CRIT em #1[f1]%",
                 "value": 0.053
               }
             ],
@@ -1938,7 +1954,7 @@
       "embedBonusSkill": {
         "id": "heart_refined_ad_infinitum",
         "name": "Coração Infinitamente Temperado",
-        "desc": "Enquanto o Campo estiver ativo, aliados-alvo causam <nobr>50%</nobr> a mais de Dano. Se houver outros personagens da Inexistência além de Mortenax Blade na equipe, o Dano de Perícia Suprema causado pelos aliados-alvo aumenta em <nobr>75%</nobr>. Caso contrário, o Dano causado por Mortenax Blade aumenta adicionalmente em <nobr>75%</nobr>.",
+        "desc": "Enquanto o Campo estiver ativo, aliados-alvo causam 50% a mais de Dano. Se houver outros personagens da Inexistência além de Mortenax Blade na equipe, o Dano de Perícia Suprema causado pelos aliados-alvo aumenta em 75%. Caso contrário, o Dano causado por Mortenax Blade aumenta adicionalmente em 75%.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1990,7 +2006,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "Aumenta o Dano de Fogo em <nobr>#1[f1]%</nobr>",
+                "key": "Aumenta o Dano de Fogo em #1[f1]%",
                 "value": 0.064
               }
             ],
@@ -2021,7 +2037,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "Aumenta o Dano de Fogo em <nobr>#1[f1]%</nobr>",
+            "key": "Aumenta o Dano de Fogo em #1[f1]%",
             "value": 0.032
           }
         ],

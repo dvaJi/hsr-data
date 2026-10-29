@@ -244,7 +244,7 @@
       "_id": 132101,
       "id": "fiddle_fissured_memory",
       "name": "Fiddle... Fissured Memory",
-      "desc": "Deals Fire DMG equal to #1[i]% of The Dahlia's ATK to one designated enemy.",
+      "desc": "Deals Fire DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of The Dahlia's ATK to one designated enemy.",
       "simpleDesc": "Deals minor Fire DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
@@ -425,8 +425,8 @@
       "_id": 132102,
       "id": "lick_enkindled_betrayal",
       "name": "Lick... Enkindled Betrayal",
-      "desc": "Deploys a Zone that lasts for #2[i] turn(s). This duration decreases by 1 at the start of The Dahlia's turn. Then, deals Fire DMG equal to #1[i]% of The Dahlia's ATK to one designated enemy and their adjacent targets.\nWhile the Zone lasts, increases all allies' Weakness Break Efficiency by #3[i]%. Toughness Reduction taken by enemy targets while not Weakness Broken can also be converted into Super Break DMG.",
-      "simpleDesc": "Deploys a Zone. Deals Fire DMG to one enemy and their adjacent targets.\nWhile the Zone lasts, increases all allies' Weakness Break Efficiency, and enemy targets will also take Super Break DMG even when they are not Weakness Broken.",
+      "desc": "Deploys a Zone that lasts for #2[i] turn(s). This duration decreases by 1 at the start of The Dahlia's turn. Then, deals Fire DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of The Dahlia's ATK to one designated enemy and their adjacent targets.<br>While the Zone lasts, increases all allies' Weakness Break Efficiency by #3[i]%. Toughness Reduction taken by enemy targets while not <u>Weakness Broken</u> can also be converted into <u>Super Break DMG</u>.",
+      "simpleDesc": "Deploys a Zone. Deals Fire DMG to one enemy and their adjacent targets.<br>While the Zone lasts, increases all allies' <span style=\"color:#f29e38ff\">Weakness Break Efficiency</span>, and enemy targets <span style=\"color:#f29e38ff\">will also take <u>Super Break DMG</u> even when they are not <u>Weakness Broken</u></span>.",
       "type": "Skill",
       "tag": "Blast",
       "spBase": 30,
@@ -449,7 +449,7 @@
         {
           "id": 10000015,
           "name": "Super Break DMG",
-          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\nSuper Break DMG is also considered Break DMG.",
+          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.<br>Super Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.<br>Super Break DMG is also considered Break DMG.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -775,8 +775,8 @@
       "_id": 132103,
       "id": "wallow_entombed_ash",
       "name": "Wallow... Entombed Ash",
-      "desc": "Inflicts a \"Wilt\" state on all enemies, lasting for #2[i] turn(s). Then, deals Fire DMG equal to #1[i]% of The Dahlia's ATK, which is distributed evenly across all enemies.\nEnemy targets in the \"Wilt\" state have their DEF reduced by #3[f1]% and will be implanted with Weakness of all Dance Partners' Types.",
-      "simpleDesc": "Applies Weaknesses of Dance Partners' Types to all enemies and reduces their DEF. Deals massive Fire DMG, which is distributed evenly across all enemies.",
+      "desc": "Inflicts a \"Wilt\" state on all enemies, lasting for #2[i] turn(s). Then, deals Fire DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of The Dahlia's ATK, which is distributed evenly across all enemies.<br>Enemy targets in the \"Wilt\" state have their DEF reduced by <span style=\"color:#f29e38ff\">#3[f1]%</span> and will be implanted with Weakness of all Dance Partners' Types.",
+      "simpleDesc": "<span style=\"color:#f29e38ff\">Applies Weaknesses of Dance Partners' Types</span> to all enemies and reduces their DEF. Deals massive Fire DMG, which is distributed evenly across all enemies.",
       "type": "Ultimate",
       "tag": "AoE",
       "spBase": 5,
@@ -937,7 +937,7 @@
           "params": [
             2.55,
             4,
-            0.14
+            0.1425
           ],
           "materials": [
             {
@@ -965,7 +965,7 @@
           "params": [
             2.7,
             4,
-            0.15
+            0.155
           ],
           "materials": [
             {
@@ -999,7 +999,7 @@
           "params": [
             2.85,
             4,
-            0.17
+            0.1675
           ],
           "materials": [
             {
@@ -1108,8 +1108,8 @@
       "_id": 132104,
       "id": "whos_afraid_of_constance",
       "name": "Who's Afraid of Constance?",
-      "desc": "When entering combat, The Dahlia regenerates #4[i] Energy and becomes \"Dance Partners\" along with the teammate that triggered combat. Whenever there is no other \"Dance Partner\" on the field, this unit and the teammate with the highest Break Effect become \"Dance Partners\" together. After a \"Dance Partner\" attacks a Weakness Broken enemy target, the Toughness Reduction from this attack will be converted into 1 instance of Super Break DMG at #5[i]%.\nAfter an enemy target gets attacked by the other \"Dance Partner,\" The Dahlia launches Follow-Up ATK and deals #2[i] instance(s) of DMG, each dealing Fire DMG equal to #1[i]% of The Dahlia's ATK to one random enemy. After each instance of DMG dealt to a Weakness Broken enemy target, the Toughness Reduction from this DMG will be converted into 1 instance of Super Break DMG at #3[i]%.\nThis effect can only trigger once per turn. If the target is defeated before the Follow-Up ATK is used, it will be launched at one random enemy instead.",
-      "simpleDesc": "When entering combat, The Dahlia regenerates Energy and becomes \"Dance Partner\" along with the teammate that triggered combat. When a \"Dance Partner\" attacks a Weakness Broken enemy target, additionally deals Super Break DMG.\nAfter an enemy target gets attacked by the other \"Dance Partner,\" The Dahlia triggers Follow-Up ATK, deals minor Fire DMG to random enemies, and additionally deals Super Break DMG to Weakness Broken enemy targets, bouncing a total of #2[i] time(s).",
+      "desc": "When entering combat, The Dahlia regenerates #4[i] Energy and becomes \"Dance Partners\" along with the teammate that triggered combat. Whenever there is no other \"Dance Partner\" on the field, this unit and the teammate with the highest Break Effect become \"Dance Partners\" together. After a \"Dance Partner\" attacks a <u>Weakness Broken</u> enemy target, the Toughness Reduction from this attack will be converted into 1 instance of <u>Super Break DMG</u> at <span style=\"color:#f29e38ff\">#5[i]%</span>.<br>After an enemy target gets attacked by the other \"Dance Partner,\" The Dahlia launches <u>Follow-Up ATK</u> and deals #2[i] instance(s) of DMG, each dealing Fire DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of The Dahlia's ATK to one random enemy. After each instance of DMG dealt to a <u>Weakness Broken</u> enemy target, the Toughness Reduction from this DMG will be converted into 1 instance of <u>Super Break DMG</u> at <span style=\"color:#f29e38ff\">#3[i]%</span>.<br>This effect can only trigger once per turn. If the target is defeated before the <u>Follow-Up ATK</u> is used, it will be launched at one random enemy instead.",
+      "simpleDesc": "When entering combat, The Dahlia regenerates Energy and becomes \"Dance Partner\" along with the teammate that triggered combat. When a \"Dance Partner\" attacks a <u>Weakness Broken</u> enemy target, additionally deals <span style=\"color:#f29e38ff\"><u>Super Break DMG</u></span>.<br>After an enemy target gets attacked by the other \"Dance Partner,\" The Dahlia triggers <span style=\"color:#f29e38ff\"><u>Follow-Up ATK</u></span>, deals minor Fire DMG to random enemies, and additionally deals <u>Super Break DMG</u> to <u>Weakness Broken</u> enemy targets, bouncing a total of <span style=\"color:#f29e38ff\">#2[i]</span> time(s).",
       "type": "Talent",
       "tag": "Bounce",
       "spBase": 2,
@@ -1132,7 +1132,7 @@
         {
           "id": 10000015,
           "name": "Super Break DMG",
-          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\nSuper Break DMG is also considered Break DMG.",
+          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.<br>Super Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.<br>Super Break DMG is also considered Break DMG.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1161,7 +1161,7 @@
         {
           "level": 2,
           "params": [
-            0.17,
+            0.165,
             5,
             1.1,
             35,
@@ -1215,7 +1215,7 @@
         {
           "level": 4,
           "params": [
-            0.2,
+            0.195,
             5,
             1.3,
             35,
@@ -1275,7 +1275,7 @@
         {
           "level": 6,
           "params": [
-            0.23,
+            0.225,
             5,
             1.5,
             35,
@@ -1305,11 +1305,11 @@
         {
           "level": 7,
           "params": [
-            0.24,
+            0.24375,
             5,
-            1.63,
+            1.625,
             35,
-            0.49
+            0.4875
           ],
           "materials": [
             {
@@ -1335,11 +1335,11 @@
         {
           "level": 8,
           "params": [
-            0.26,
+            0.2625,
             5,
             1.75,
             35,
-            0.53
+            0.525
           ],
           "materials": [
             {
@@ -1371,11 +1371,11 @@
         {
           "level": 9,
           "params": [
-            0.28,
+            0.28125,
             5,
-            1.88,
+            1.875,
             35,
-            0.56
+            0.5625
           ],
           "materials": [
             {
@@ -1443,7 +1443,7 @@
         {
           "level": 11,
           "params": [
-            0.32,
+            0.315,
             5,
             2.1,
             35,
@@ -1463,7 +1463,7 @@
         {
           "level": 13,
           "params": [
-            0.34,
+            0.345,
             5,
             2.3,
             35,
@@ -1483,7 +1483,7 @@
         {
           "level": 15,
           "params": [
-            0.38,
+            0.375,
             5,
             2.5,
             35,
@@ -1496,8 +1496,8 @@
       "_id": 132107,
       "id": "the_heart_makes_the_finest_tomb",
       "name": "The Heart Makes the Finest Tomb",
-      "desc": "After using Technique, creates a Special Dimension that lasts for #1[i] second(s). Enemies within this dimension will not actively attack ally targets. After entering combat with enemies in the Special Dimension, The Dahlia immediately deploys her Skill's Zone, and converts the combat-triggering Toughness Reduction into 1 instance of Super Break DMG at #2[i]% against enemy targets that are Weakness Broken.\nOnly 1 Dimension Effect created by allies can exist at the same time.",
-      "simpleDesc": "Creates a Special Dimension where enemies within will not attack ally targets. After entering combat with enemies in the dimension, The Dahlia immediately deploys a Zone and deals Super Break DMG to enemy targets in the Weakness Break state.",
+      "desc": "After using Technique, creates a Special Dimension that lasts for #1[i] second(s). Enemies within this dimension will not actively attack ally targets. After entering combat with enemies in the Special Dimension, The Dahlia immediately deploys her Skill's Zone, and converts the combat-triggering Toughness Reduction into 1 instance of <u>Super Break DMG</u> at #2[i]% against enemy targets that are <u>Weakness Broken</u>.<br>Only 1 Dimension Effect created by allies can exist at the same time.",
+      "simpleDesc": "Creates a Special Dimension where enemies within will not attack ally targets. After entering combat with enemies in the dimension, The Dahlia immediately deploys a Zone and deals <span style=\"color:#f29e38ff\"><u>Super Break DMG</u></span> to enemy targets in the <u>Weakness Break</u> state.",
       "type": "Technique",
       "tag": "Impair",
       "spBase": null,
@@ -1520,7 +1520,7 @@
         {
           "id": 10000015,
           "name": "Super Break DMG",
-          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\nSuper Break DMG is also considered Break DMG.",
+          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.<br>Super Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.<br>Super Break DMG is also considered Break DMG.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1543,7 +1543,13 @@
       "_id": 132101,
       "id": "when_a_bud_readies_to_bloom",
       "name": "When a Bud Readies to Bloom",
-      "desc": "The <u>Super Break DMG</u> multiplier provided by Talent to \"Dance Partners\" now applies to all ally characters, with \"Dance Partners\" additionally receiving a <nobr>40%</nobr> boost. After \"Dance Partners\" use an attack, additionally deals the attacked enemy targets a fixed amount of Toughness Reduction equal to <nobr>25%</nobr> of their Max Toughness (minimum <nobr>10</nobr>, maximum <nobr>300</nobr>). This effect can only trigger once per enemy target, and this trigger count resets after the enemy target receives a killing blow.",
+      "desc": "The <u>Super Break DMG</u> multiplier provided by Talent to \"Dance Partners\" now applies to all ally characters, with \"Dance Partners\" additionally receiving a 40% boost. After \"Dance Partners\" use an attack, additionally deals the attacked enemy targets a fixed amount of Toughness Reduction equal to 25% of their Max Toughness (minimum 10, maximum 300). This effect can only trigger once per enemy target, and this trigger count resets after the enemy target receives a killing blow.",
+      "params": [
+        0.25,
+        10,
+        300,
+        0.4
+      ],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1554,7 +1560,7 @@
         {
           "id": 10000015,
           "name": "Super Break DMG",
-          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.\nSuper Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.\nSuper Break DMG is also considered Break DMG.",
+          "desc": "Super Break DMG increases with higher Break Effect, higher Toughness Reduction of the attack, and higher character levels.<br>Super Break DMG cannot CRIT Hit and is not affected by DMG Boost effects.<br>Super Break DMG is also considered Break DMG.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1565,7 +1571,11 @@
       "_id": 132102,
       "id": "fresh_ethereal_and_beloved",
       "name": "Fresh, Ethereal, and Beloved",
-      "desc": "When The Dahlia is on the field, decreases all enemies' All-Type RES by <nobr>20%</nobr>. When an enemy target enters the field, immediately inflicts \"Wilt\" on them, lasting for <nobr>3</nobr> turn(s).",
+      "desc": "When The Dahlia is on the field, decreases all enemies' All-Type RES by 20%. When an enemy target enters the field, immediately inflicts \"Wilt\" on them, lasting for 3 turn(s).",
+      "params": [
+        0.2,
+        3
+      ],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1578,7 +1588,8 @@
       "_id": 132103,
       "id": "pity_its_petals_thin_as_mist",
       "name": "Pity Its Petals Thin as Mist",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.<br>Basic ATK Lv. +1, up to a maximum of Lv. 10.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1591,7 +1602,12 @@
       "_id": 132104,
       "id": "pity_its_heart_gnawed_by_worms",
       "name": "Pity Its Heart Gnawed by Worms",
-      "desc": "Increases the number of DMG instances dealt by Talent's <u>Follow-Up ATK</u> by <nobr>5</nobr>. Upon its use, the DMG taken by all enemy targets increases by <nobr>12%</nobr>, lasting for <nobr>2</nobr> turn(s).",
+      "desc": "Increases the number of DMG instances dealt by Talent's <u>Follow-Up ATK</u> by 5. Upon its use, the DMG taken by all enemy targets increases by 12%, lasting for 2 turn(s).",
+      "params": [
+        0.12,
+        2,
+        5
+      ],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1613,7 +1629,8 @@
       "_id": 132105,
       "id": "fallen_decayed_and_despised",
       "name": "Fallen, Decayed, and Despised",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "desc": "Skill Lv. +2, up to a maximum of Lv. 15.<br>Talent Lv. +2, up to a maximum of Lv. 15.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1626,7 +1643,11 @@
       "_id": 132106,
       "id": "and_yet_always_deathly_beautiful",
       "name": "And Yet, Always, Deathly Beautiful",
-      "desc": "Increases Dance Partners' Break Effect by <nobr>150%</nobr>. When using Talent's <u>Follow-Up ATK</u>, <u>advances the next action</u> of all \"Dance Partners\" by <nobr>20%</nobr>.",
+      "desc": "Increases Dance Partners' Break Effect by 150%. When using Talent's <u>Follow-Up ATK</u>, <u>advances the next action</u> of all \"Dance Partners\" by 20%.",
+      "params": [
+        1.5,
+        0.2
+      ],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1673,7 +1694,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "Break Effect increases by <nobr>#1[f1]%</nobr>",
+                    "key": "Break Effect increases by #1[f1]%",
                     "value": 0.053
                   }
                 ],
@@ -1704,7 +1725,7 @@
             "promotionReq": 2,
             "statusList": [
               {
-                "key": "Effect RES increases by <nobr>#1[f1]%</nobr>",
+                "key": "Effect RES increases by #1[f1]%",
                 "value": 0.04
               }
             ],
@@ -1731,7 +1752,7 @@
       "embedBonusSkill": {
         "id": "yet_another_funeral",
         "name": "Yet Another Funeral",
-        "desc": "When entering combat, increases other characters' Break Effect by an amount equal to <nobr>24%</nobr> of The Dahlia's Break Effect plus <nobr>50%</nobr>, lasting for <nobr>1</nobr> turn(s). When The Dahlia receives healing or a Shield provided by a teammate, this effect triggers again, lasting for <nobr>3</nobr> turn(s). Cannot trigger repeatedly within one turn.",
+        "desc": "When entering combat, increases other characters' Break Effect by an amount equal to 24% of The Dahlia's Break Effect plus 50%, lasting for 1 turn(s). When The Dahlia receives healing or a Shield provided by a teammate, this effect triggers again, lasting for 3 turn(s). Cannot trigger repeatedly within one turn.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1783,7 +1804,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "Effect RES increases by <nobr>#1[f1]%</nobr>",
+                    "key": "Effect RES increases by #1[f1]%",
                     "value": 0.06
                   }
                 ],
@@ -1814,7 +1835,7 @@
             "promotionReq": 4,
             "statusList": [
               {
-                "key": "Break Effect increases by <nobr>#1[f1]%</nobr>",
+                "key": "Break Effect increases by #1[f1]%",
                 "value": 0.08
               }
             ],
@@ -1841,7 +1862,7 @@
       "embedBonusSkill": {
         "id": "lament_lost_soul",
         "name": "Lament, Lost Soul",
-        "desc": "When using Talent's <u>Follow-Up ATK</u>, recovers 1 Skill Point for allies. For every <nobr>2</nobr> instance(s) of Talent's <u>Follow-Up ATK</u> used, this effect can trigger once.",
+        "desc": "When using Talent's <u>Follow-Up ATK</u>, recovers 1 Skill Point for allies. For every 2 instance(s) of Talent's <u>Follow-Up ATK</u> used, this effect can trigger once.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1891,7 +1912,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "SPD increases by <nobr>#1[i]</nobr>",
+                "key": "SPD increases by #1[i]",
                 "value": 3
               }
             ],
@@ -1925,7 +1946,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "Effect RES increases by <nobr>#1[f1]%</nobr>",
+                "key": "Effect RES increases by #1[f1]%",
                 "value": 0.08
               }
             ],
@@ -1952,7 +1973,7 @@
       "embedBonusSkill": {
         "id": "outgrow_the_old_espouse_the_new",
         "name": "Outgrow the Old, Espouse the New",
-        "desc": "When an ally target adds Weakness to an enemy target, increases SPD by <nobr>30%</nobr> for <nobr>2</nobr> turn(s). If a Fire ally character has implanted a Weakness when using an attack, then after the attack, additionally deals a fixed amount of <nobr>20</nobr> Fire Toughness Reduction to every target implanted with Weakness. Also, regenerates Energy equal to <nobr>10%</nobr> of Max Energy. This effect can regenerate Energy up to <nobr>50%</nobr> of Max Energy.",
+        "desc": "When an ally target adds Weakness to an enemy target, increases SPD by 30% for 2 turn(s). If a Fire ally character has implanted a Weakness when using an attack, then after the attack, additionally deals a fixed amount of 20 Fire Toughness Reduction to every target implanted with Weakness. Also, regenerates Energy equal to 10% of Max Energy. This effect can regenerate Energy up to 50% of Max Energy.",
         "type": "",
         "tag": "",
         "levels": [
@@ -2006,7 +2027,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "Break Effect increases by <nobr>#1[f1]%</nobr>",
+                "key": "Break Effect increases by #1[f1]%",
                 "value": 0.107
               }
             ],
@@ -2037,7 +2058,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "Break Effect increases by <nobr>#1[f1]%</nobr>",
+            "key": "Break Effect increases by #1[f1]%",
             "value": 0.053
           }
         ],

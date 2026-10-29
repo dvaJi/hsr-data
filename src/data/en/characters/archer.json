@@ -244,7 +244,7 @@
       "_id": 101501,
       "id": "kanshou_and_bakuya",
       "name": "Kanshou and Bakuya",
-      "desc": "Deals Quantum DMG equal to #1[i]% of Archer's ATK to one designated enemy.",
+      "desc": "Deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Archer's ATK to one designated enemy.",
       "simpleDesc": "Deals minor Quantum DMG to one designated enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
@@ -419,8 +419,8 @@
       "_id": 101502,
       "id": "caladbolg_ii_fake_spiral_sword",
       "name": "Caladbolg II: Fake Spiral Sword",
-      "desc": "Enters the \"Circuit Connection\" state. Deals Quantum DMG equal to #1[i]% of Archer's ATK to one designated enemy. After using Skill in the \"Circuit Connection\" state, the current turn does not end, and the DMG dealt by Archer's Skill increases by #2[i]%. This effect can stack up to #3[i] time(s), lasting until he exits the \"Circuit Connection\" state. After actively using Skill #5[i] time(s) or when Skill Points are insufficient to use Skill again, exits the \"Circuit Connection\" state. After all enemy targets have been defeated in each wave, exits the \"Circuit Connection\" state.",
-      "simpleDesc": "Enters the \"Circuit Connection\" state. Deals massive Quantum DMG to one designated enemy. During the \"Circuit Connection\" state, the current turn does not end after using his Skill, and the DMG dealt by Archer's Skill increases. When Skill Points are insufficient to use Skill again, exits the \"Circuit Connection\" state.",
+      "desc": "Enters the \"Circuit Connection\" state. Deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Archer's ATK to one designated enemy. After using Skill in the \"Circuit Connection\" state, the current turn does not end, and the DMG dealt by Archer's Skill increases by <span style=\"color:#f29e38ff\">#2[i]%</span>. This effect can stack up to #3[i] time(s), lasting until he exits the \"Circuit Connection\" state. After actively using Skill #5[i] time(s) or when Skill Points are insufficient to use Skill again, exits the \"Circuit Connection\" state. After all enemy targets have been defeated in each wave, exits the \"Circuit Connection\" state.",
+      "simpleDesc": "Enters the \"Circuit Connection\" state. Deals massive Quantum DMG to one designated enemy. During the \"Circuit Connection\" state, <span style=\"color:#f29e38ff\">the current turn does not end after using his Skill</span>, and the <span style=\"color:#f29e38ff\">DMG dealt by Archer's Skill</span> increases. When Skill Points are insufficient to use Skill again, exits the \"Circuit Connection\" state.",
       "type": "Skill",
       "tag": "Single Target",
       "spBase": 30,
@@ -591,7 +591,7 @@
         {
           "level": 7,
           "params": [
-            2.92,
+            2.925,
             0.85,
             2,
             1,
@@ -657,7 +657,7 @@
         {
           "level": 9,
           "params": [
-            3.38,
+            3.375,
             0.95,
             2,
             1,
@@ -782,7 +782,7 @@
       "_id": 101503,
       "id": "unlimited_blade_works",
       "name": "Unlimited Blade Works",
-      "desc": "Deals Quantum DMG equal to #1[i]% of Archer's ATK to one designated enemy and gains #2[i] point(s) of Charge, up to a maximum of #3[i].",
+      "desc": "Deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Archer's ATK to one designated enemy and gains #2[i] point(s) of Charge, up to a maximum of #3[i].",
       "simpleDesc": "Deals massive Quantum DMG to one designated enemy and gains Charge.",
       "type": "Ultimate",
       "tag": "Single Target",
@@ -1115,8 +1115,8 @@
       "_id": 101504,
       "id": "minds_eye_true",
       "name": "Mind's Eye (True)",
-      "desc": "After Archer's teammates attack enemy targets, Archer consumes 1 Charge and immediately launches Follow-Up ATK on the primary target, dealing Quantum DMG equal to #1[i]% of Archer's ATK and recovering 1 Skill Point. If the target is defeated before this Follow-Up ATK is launched, the Follow-Up ATK will be directed at one random enemy instead.",
-      "simpleDesc": "After a teammate uses an attack, Archer consumes 1 Charge and launches Follow-Up ATK on the primary target, dealing Quantum DMG and recovering 1 Skill Point.",
+      "desc": "After Archer's teammates attack enemy targets, Archer consumes 1 Charge and immediately launches <u>Follow-Up ATK</u> on the primary target, dealing Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Archer's ATK and recovering 1 Skill Point. If the target is defeated before this <u>Follow-Up ATK</u> is launched, the <u>Follow-Up ATK</u> will be directed at one random enemy instead.",
+      "simpleDesc": "After a teammate uses an attack, Archer consumes 1 Charge and launches <span style=\"color:#f29e38ff\"><u>Follow-Up ATK</u></span> on the primary target, dealing Quantum DMG and <span style=\"color:#f29e38ff\">recovering 1 Skill Point</span>.",
       "type": "Talent",
       "tag": "Single Target",
       "spBase": 5,
@@ -1272,7 +1272,7 @@
         {
           "level": 7,
           "params": [
-            1.63
+            1.625
           ],
           "materials": [
             {
@@ -1330,7 +1330,7 @@
         {
           "level": 9,
           "params": [
-            1.88
+            1.875
           ],
           "materials": [
             {
@@ -1456,7 +1456,11 @@
       "_id": 101501,
       "id": "the_unreached_dream",
       "name": "The Unreached Dream",
-      "desc": "After using Skill <nobr>3</nobr> time(s) within one turn, recovers <nobr>2</nobr> Skill Point(s) for allies.",
+      "desc": "After using Skill 3 time(s) within one turn, recovers 2 Skill Point(s) for allies.",
+      "params": [
+        3,
+        2
+      ],
       "unlockCost": [
         {
           "ItemID": 11015,
@@ -1469,7 +1473,11 @@
       "_id": 101502,
       "id": "the_unfulfilled_happiness",
       "name": "The Unfulfilled Happiness",
-      "desc": "When using Ultimate, reduces the enemy target's Quantum RES by <nobr>20%</nobr>, and applies Quantum Weakness to it, lasting for <nobr>2</nobr> turn(s).",
+      "desc": "When using Ultimate, reduces the enemy target's Quantum RES by 20%, and applies Quantum Weakness to it, lasting for 2 turn(s).",
+      "params": [
+        0.2,
+        2
+      ],
       "unlockCost": [
         {
           "ItemID": 11015,
@@ -1482,7 +1490,8 @@
       "_id": 101503,
       "id": "the_untamed_will",
       "name": "The Untamed Will",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "desc": "Skill Lv. +2, up to a maximum of Lv. 15.<br>Basic ATK Lv. +1, up to a maximum of Lv. 10.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11015,
@@ -1495,7 +1504,10 @@
       "_id": 101504,
       "id": "the_unsung_life",
       "name": "The Unsung Life",
-      "desc": "Increases the Ultimate DMG dealt by <nobr>150%</nobr>.",
+      "desc": "Increases the Ultimate DMG dealt by 150%.",
+      "params": [
+        1.5
+      ],
       "unlockCost": [
         {
           "ItemID": 11015,
@@ -1508,7 +1520,8 @@
       "_id": 101505,
       "id": "the_nameless_watch",
       "name": "The Nameless Watch",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.<br>Talent Lv. +2, up to a maximum of Lv. 15.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11015,
@@ -1521,7 +1534,11 @@
       "_id": 101506,
       "id": "the_endless_pilgrimage",
       "name": "The Endless Pilgrimage",
-      "desc": "When the turn starts, recovers 1 Skill Point for allies. The maximum number of stacks allowed for the DMG boost effect provided by this unit's Skill increases by <nobr>1</nobr>. The Skill DMG dealt ignores <nobr>20%</nobr> of DEF.",
+      "desc": "When the turn starts, recovers 1 Skill Point for allies. The maximum number of stacks allowed for the DMG boost effect provided by this unit's Skill increases by 1. The Skill DMG dealt ignores 20% of DEF.",
+      "params": [
+        1,
+        0.2
+      ],
       "unlockCost": [
         {
           "ItemID": 11015,
@@ -1551,7 +1568,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "Quantum DMG increases by <nobr>#1[f1]%</nobr>",
+                    "key": "Quantum DMG increases by #1[f1]%",
                     "value": 0.032
                   }
                 ],
@@ -1582,7 +1599,7 @@
             "promotionReq": 2,
             "statusList": [
               {
-                "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                "key": "ATK increases by #1[f1]%",
                 "value": 0.04
               }
             ],
@@ -1609,7 +1626,7 @@
       "embedBonusSkill": {
         "id": "projection_magecraft",
         "name": "Projection Magecraft",
-        "desc": "When <nobr>Archer</nobr> is on the field, increases the maximum Skill Point limit by <nobr>2</nobr>.",
+        "desc": "When Archer is on the field, increases the maximum Skill Point limit by 2.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1658,7 +1675,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                    "key": "ATK increases by #1[f1]%",
                     "value": 0.06
                   }
                 ],
@@ -1689,7 +1706,7 @@
             "promotionReq": 4,
             "statusList": [
               {
-                "key": "Quantum DMG increases by <nobr>#1[f1]%</nobr>",
+                "key": "Quantum DMG increases by #1[f1]%",
                 "value": 0.048
               }
             ],
@@ -1716,7 +1733,7 @@
       "embedBonusSkill": {
         "id": "hero_of_justice",
         "name": "Hero of Justice",
-        "desc": "When <nobr>Archer</nobr> enters combat, gains <nobr>1</nobr> point(s) of Charge.",
+        "desc": "When Archer enters combat, gains 1 point(s) of Charge.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1770,7 +1787,7 @@
                 "promotionReq": 0,
                 "statusList": [
                   {
-                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                    "key": "ATK increases by #1[f1]%",
                     "value": 0.08
                   }
                 ],
@@ -1804,7 +1821,7 @@
                 "promotionReq": 0,
                 "statusList": [
                   {
-                    "key": "Quantum DMG increases by <nobr>#1[f1]%</nobr>",
+                    "key": "Quantum DMG increases by #1[f1]%",
                     "value": 0.064
                   }
                 ],
@@ -1835,7 +1852,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "CRIT Rate increases by <nobr>#1[f1]%</nobr>",
+                "key": "CRIT Rate increases by #1[f1]%",
                 "value": 0.04
               }
             ],
@@ -1862,7 +1879,7 @@
       "embedBonusSkill": {
         "id": "guardian",
         "name": "Guardian",
-        "desc": "After allies gain a Skill Point, if there are <nobr>4</nobr> Skill Points or more, increases <nobr>Archer's</nobr> CRIT DMG by <nobr>120%</nobr> for <nobr>1</nobr> turn(s).",
+        "desc": "After allies gain a Skill Point, if there are 4 Skill Points or more, increases Archer's CRIT DMG by 120% for 1 turn(s).",
         "type": "",
         "tag": "",
         "levels": [
@@ -1910,7 +1927,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "Quantum DMG increases by <nobr>#1[f1]%</nobr>",
+            "key": "Quantum DMG increases by #1[f1]%",
             "value": 0.032
           }
         ],
@@ -1939,7 +1956,7 @@
         "promotionReq": 3,
         "statusList": [
           {
-            "key": "CRIT Rate increases by <nobr>#1[f1]%</nobr>",
+            "key": "CRIT Rate increases by #1[f1]%",
             "value": 0.027
           }
         ],
@@ -1973,7 +1990,7 @@
         "promotionReq": 5,
         "statusList": [
           {
-            "key": "Quantum DMG increases by <nobr>#1[f1]%</nobr>",
+            "key": "Quantum DMG increases by #1[f1]%",
             "value": 0.048
           }
         ],

@@ -244,7 +244,7 @@
       "_id": 140601,
       "id": "oops_a_missed_catch",
       "name": "Oops, a Missed Catch",
-      "desc": "Deals Quantum DMG equal to #1[i]% of Cipher's ATK to one designated enemy.",
+      "desc": "Deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Cipher's ATK to one designated enemy.",
       "simpleDesc": "Deals minor Quantum DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
@@ -425,7 +425,7 @@
       "_id": 140602,
       "id": "hey_jackpot_for_the_taking",
       "name": "Hey, Jackpot for the Taking",
-      "desc": "Has a #6[i]% base chance to Weaken one designated enemy and its adjacent targets (decreasing their DMG dealt by #3[i]%) and increases Cipher's ATK by #5[i]%, lasting for #4[i] turn(s). Moreover, deals Quantum DMG equal to #1[i]% of Cipher's ATK to one designated enemy, and Quantum DMG equal to #2[i]% of Cipher's ATK to the adjacent targets.",
+      "desc": "Has a #6[i]% <u>base chance</u> to Weaken one designated enemy and its adjacent targets (decreasing their DMG dealt by #3[i]%) and increases Cipher's ATK by #5[i]%, lasting for #4[i] turn(s). Moreover, deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Cipher's ATK to one designated enemy, and Quantum DMG equal to <span style=\"color:#f29e38ff\">#2[i]%</span> of Cipher's ATK to the adjacent targets.",
       "simpleDesc": "Has a high chance to decrease one enemy and adjacent targets' DMG dealt and increases Cipher's ATK. Deals Quantum DMG to one designated enemy and minor Quantum DMG to adjacent targets.",
       "type": "Skill",
       "tag": "Blast",
@@ -441,7 +441,7 @@
         {
           "id": 30000001,
           "name": "Base Chance",
-          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "desc": "The base chance of applying debuffs to targets hit. <br>The final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -612,8 +612,8 @@
         {
           "level": 7,
           "params": [
-            1.63,
-            0.81,
+            1.625,
+            0.8125,
             0.1,
             2,
             0.3,
@@ -644,7 +644,7 @@
           "level": 8,
           "params": [
             1.75,
-            0.88,
+            0.875,
             0.1,
             2,
             0.3,
@@ -680,8 +680,8 @@
         {
           "level": 9,
           "params": [
-            1.88,
-            0.94,
+            1.875,
+            0.9375,
             0.1,
             2,
             0.3,
@@ -812,8 +812,8 @@
       "_id": 140603,
       "id": "yours_truly_kitty_phantom_thief",
       "name": "Yours Truly, Kitty Phantom Thief!",
-      "desc": "Deals Quantum DMG equal to #1[i]% of Cipher's ATK to one designated enemy. Then, deals True DMG equal to #2[i]% of the current tally kept by Talent to the one designated enemy. Moreover, deals Quantum DMG equal to #4[i]% of Cipher's ATK alongside True DMG equal to #3[i]% of the current tally kept by Talent to the one designated enemy and its adjacent targets. And this True DMG is distributed evenly among all targets of this ability.",
-      "simpleDesc": "Deals Quantum DMG and True DMG equal to a percentage of the current tally kept by Talent to one enemy. Moreover, deals minor Quantum DMG and True DMG equal to a percentage of the current tally kept by Talent to the one enemy and its adjacent targets. And this True DMG is distributed evenly among all targets of this ability.",
+      "desc": "Deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Cipher's ATK to one designated enemy. Then, deals <u>True DMG</u> equal to #2[i]% of the current tally kept by Talent to the one designated enemy. Moreover, deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#4[i]%</span> of Cipher's ATK alongside <u>True DMG</u> equal to #3[i]% of the current tally kept by Talent to the one designated enemy and its adjacent targets. And this <u>True DMG</u> is distributed evenly among all targets of this ability.",
+      "simpleDesc": "Deals Quantum DMG and <u>True DMG</u> equal to a percentage of the current tally kept by Talent to one enemy. Moreover, deals minor Quantum DMG and <u>True DMG</u> equal to a percentage of the current tally kept by Talent to the one enemy and its adjacent targets. And this <u>True DMG</u> is distributed evenly among all targets of this ability.",
       "type": "Ultimate",
       "tag": "Blast",
       "spBase": 5,
@@ -987,10 +987,10 @@
         {
           "level": 7,
           "params": [
-            0.97,
+            0.975,
             0.25,
             0.75,
-            0.33
+            0.325
           ],
           "materials": [
             {
@@ -1051,10 +1051,10 @@
         {
           "level": 9,
           "params": [
-            1.13,
+            1.125,
             0.25,
             0.75,
-            0.38
+            0.375
           ],
           "materials": [
             {
@@ -1169,8 +1169,8 @@
       "_id": 140604,
       "id": "the_hospitable_dolosian",
       "name": "The Hospitable Dolosian",
-      "desc": "When there are no enemy targets in the \"Patron\" state on the battlefield, Cipher immediately causes one enemy target with the highest Max HP on the battlefield to become the \"Patron.\" When using Skill and Ultimate, the primary target becomes the \"Patron.\" The \"Patron\" state only takes effect on the most recent target.\nAfter the \"Patron\" gets attacked by other ally targets, Cipher immediately launches Follow-Up ATK against the \"Patron,\" dealing Quantum DMG equal to #1[i]% of Cipher's ATK. This effect can trigger up to #3[i] time(s) per turn, and this trigger count resets at the start of Cipher's turn.\nCipher will tally #2[i]% of the non-True DMG dealt by ally targets to the \"Patron.\" Overflow DMG will not be tallied. After using Ultimate, clears this tally.",
-      "simpleDesc": "Cipher causes one enemy target to enter the \"Patron\" state. After the target in this state gets attacked by teammates, Cipher launches Follow-Up ATK, dealing Quantum DMG to the target. This can trigger #3[i] time(s) per turn.\nCipher will keep a tally of the DMG dealt by allies to the target in the \"Patron\" state. After using Ultimate, clears this tally.",
+      "desc": "When there are no enemy targets in the \"Patron\" state on the battlefield, Cipher immediately causes one enemy target with the highest Max HP on the battlefield to become the \"Patron.\" When using Skill and Ultimate, the primary target becomes the \"Patron.\" The \"Patron\" state only takes effect on the most recent target.<br>After the \"Patron\" gets attacked by other ally targets, Cipher immediately launches <u>Follow-Up ATK</u> against the \"Patron,\" dealing Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Cipher's ATK. This effect can trigger up to #3[i] time(s) per turn, and this trigger count resets at the start of Cipher's turn.<br>Cipher will tally #2[i]% of the non-<u>True DMG</u> dealt by ally targets to the \"Patron.\" Overflow DMG will not be tallied. After using Ultimate, clears this tally.",
+      "simpleDesc": "Cipher causes one enemy target to enter the \"Patron\" state. After the target in this state gets attacked by teammates, Cipher launches <u>Follow-Up ATK</u>, dealing Quantum DMG to the target. This can trigger <span style=\"color:#f29e38ff\">#3[i]</span> time(s) per turn.<br>Cipher will keep a tally of the DMG dealt by allies to the target in the \"Patron\" state. After using Ultimate, clears this tally.",
       "type": "Talent",
       "tag": "Single Target",
       "spBase": 5,
@@ -1213,7 +1213,7 @@
         {
           "level": 2,
           "params": [
-            0.82,
+            0.825,
             0.12,
             1,
             5
@@ -1265,7 +1265,7 @@
         {
           "level": 4,
           "params": [
-            0.97,
+            0.975,
             0.12,
             1,
             5
@@ -1323,7 +1323,7 @@
         {
           "level": 6,
           "params": [
-            1.13,
+            1.125,
             0.12,
             1,
             5
@@ -1352,7 +1352,7 @@
         {
           "level": 7,
           "params": [
-            1.22,
+            1.21875,
             0.12,
             1,
             5
@@ -1381,7 +1381,7 @@
         {
           "level": 8,
           "params": [
-            1.31,
+            1.3125,
             0.12,
             1,
             5
@@ -1416,7 +1416,7 @@
         {
           "level": 9,
           "params": [
-            1.41,
+            1.40625,
             0.12,
             1,
             5
@@ -1486,7 +1486,7 @@
         {
           "level": 11,
           "params": [
-            1.57,
+            1.575,
             0.12,
             1,
             5
@@ -1504,7 +1504,7 @@
         {
           "level": 13,
           "params": [
-            1.73,
+            1.725,
             0.12,
             1,
             5
@@ -1522,7 +1522,7 @@
         {
           "level": 15,
           "params": [
-            1.88,
+            1.875,
             0.12,
             1,
             5
@@ -1534,7 +1534,7 @@
       "_id": 140607,
       "id": "puss_in_boots",
       "name": "Puss in Boots",
-      "desc": "Gains \"Zagreus's Blessing\" that lasts for #1[i] second(s). During this time, Cipher will be undetectable by enemies and her movement speed increases by 50%. When approaching an enemy in the overworld/Simulated Universe/Divergent Universe, can immediately gain a random Consumable. Consumables can be gained this way for up to #4[i] time(s) in each Earth day.\nWhen entering battle with \"Zagreus's Blessing\" active, deals Quantum DMG equal to #3[i]% of Cipher's ATK to all enemies. And the tallied amount Cipher gains from this instance of DMG increases by #2[i]%.",
+      "desc": "Gains \"Zagreus's Blessing\" that lasts for #1[i] second(s). During this time, Cipher will be undetectable by enemies and her movement speed increases by 50%. When approaching an enemy in the overworld/Simulated Universe/Divergent Universe, can immediately gain a random Consumable. Consumables can be gained this way for up to #4[i] time(s) in each Earth day.<br>When entering battle with \"Zagreus's Blessing\" active, deals Quantum DMG equal to #3[i]% of Cipher's ATK to all enemies. And the tallied amount Cipher gains from this instance of DMG increases by #2[i]%.",
       "simpleDesc": "Gains \"Zagreus's Blessing.\" While it is active, Cipher cannot be detected by enemies, and gains random Consumables when approaching them. When entering battle, Cipher deals minor Quantum DMG to all enemies.",
       "type": "Technique",
       "tag": "Enhance",
@@ -1566,7 +1566,12 @@
       "_id": 140601,
       "id": "read_the_room_seek_the_glee",
       "name": "Read the Room, Seek the Glee",
-      "desc": "Cipher's tally of DMG is <nobr>150%</nobr> of its original value. When using the Talent's <u>Follow-Up ATK</u>, increases Cipher's ATK by <nobr>80%</nobr>, lasting for <nobr>2</nobr> turn(s).",
+      "desc": "Cipher's tally of DMG is 150% of its original value. When using the Talent's <u>Follow-Up ATK</u>, increases Cipher's ATK by 80%, lasting for 2 turn(s).",
+      "params": [
+        0.8,
+        2,
+        1.5
+      ],
       "unlockCost": [
         {
           "ItemID": 11406,
@@ -1588,7 +1593,12 @@
       "_id": 140602,
       "id": "in_the_fray_nab_on_a_spree",
       "name": "In the Fray, Nab On a Spree",
-      "desc": "When Cipher hits an enemy target, there is a <nobr>120%</nobr> <u>base chance</u> to increase the DMG it receives by <nobr>30%</nobr>, lasting for <nobr>2</nobr> turn(s).",
+      "desc": "When Cipher hits an enemy target, there is a 120% <u>base chance</u> to increase the DMG it receives by 30%, lasting for 2 turn(s).",
+      "params": [
+        2,
+        1.2,
+        0.3
+      ],
       "unlockCost": [
         {
           "ItemID": 11406,
@@ -1599,7 +1609,7 @@
         {
           "id": 30000001,
           "name": "Base Chance",
-          "desc": "The base chance of applying debuffs to targets hit. \nThe final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
+          "desc": "The base chance of applying debuffs to targets hit. <br>The final probability is affected by the attacker's Effect Hit Rate and enemy targets' Effect RES.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1610,7 +1620,8 @@
       "_id": 140603,
       "id": "from_thin_air_hard_to_foresee",
       "name": "From Thin Air, Hard to Foresee",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.<br>Basic ATK Lv. +1, up to a maximum of Lv. 10.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11406,
@@ -1623,7 +1634,10 @@
       "_id": 140604,
       "id": "the_jig_is_up_quick_to_flee",
       "name": "The Jig Is Up, Quick to Flee",
-      "desc": "After the \"Patron\" gets attacked by an ally target, Cipher deals Quantum <u>Additional DMG</u> to it equal to <nobr>50%</nobr> of Cipher's ATK.",
+      "desc": "After the \"Patron\" gets attacked by an ally target, Cipher deals Quantum <u>Additional DMG</u> to it equal to 50% of Cipher's ATK.",
+      "params": [
+        0.5
+      ],
       "unlockCost": [
         {
           "ItemID": 11406,
@@ -1645,7 +1659,8 @@
       "_id": 140605,
       "id": "safe_in_numbers_light_as_a_bee",
       "name": "Safe in Numbers, Light as a Bee",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "desc": "Skill Lv. +2, up to a maximum of Lv. 15.<br>Talent Lv. +2, up to a maximum of Lv. 15.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11406,
@@ -1658,7 +1673,12 @@
       "_id": 140606,
       "id": "the_thiefs_game_unsung_and_free",
       "name": "The Thief's Game, Unsung and Free",
-      "desc": "The DMG dealt by <u>Follow-Up ATK</u> from Cipher's Talent increases by <nobr>350%</nobr>. During the tally, an additional <nobr>16%</nobr> of non-Overflow DMG dealt by this attack is tallied. After the tally is cleared by using Ultimate, <nobr>20%</nobr> of the cleared tally is returned.",
+      "desc": "The DMG dealt by <u>Follow-Up ATK</u> from Cipher's Talent increases by 350%. During the tally, an additional 16% of non-Overflow DMG dealt by this attack is tallied. After the tally is cleared by using Ultimate, 20% of the cleared tally is returned.",
+      "params": [
+        0.2,
+        3.5,
+        0.16
+      ],
       "unlockCost": [
         {
           "ItemID": 11406,
@@ -1697,7 +1717,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "SPD increases by <nobr>#1[i]</nobr>",
+                    "key": "SPD increases by #1[i]",
                     "value": 2
                   }
                 ],
@@ -1728,7 +1748,7 @@
             "promotionReq": 2,
             "statusList": [
               {
-                "key": "Quantum DMG increases by <nobr>#1[f1]%</nobr>",
+                "key": "Quantum DMG increases by #1[f1]%",
                 "value": 0.032
               }
             ],
@@ -1755,7 +1775,7 @@
       "embedBonusSkill": {
         "id": "empyrean_strides",
         "name": "Empyrean Strides",
-        "desc": "When Cipher's SPD is higher than or equal to <nobr>140</nobr>/<nobr>170</nobr>, CRIT Rate increases by <nobr>25%</nobr>/<nobr>50%</nobr>, and the gained tally increases by <nobr>50%</nobr>/<nobr>100%</nobr>.",
+        "desc": "When Cipher's SPD is higher than or equal to 140/170, CRIT Rate increases by 25%/50%, and the gained tally increases by 50%/100%.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1807,7 +1827,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "Quantum DMG increases by <nobr>#1[f1]%</nobr>",
+                    "key": "Quantum DMG increases by #1[f1]%",
                     "value": 0.048
                   }
                 ],
@@ -1838,7 +1858,7 @@
             "promotionReq": 4,
             "statusList": [
               {
-                "key": "SPD increases by <nobr>#1[i]</nobr>",
+                "key": "SPD increases by #1[i]",
                 "value": 3
               }
             ],
@@ -1865,7 +1885,7 @@
       "embedBonusSkill": {
         "id": "unbreak300unbreak_rogues",
         "name": "<unbreak>300</unbreak> Rogues",
-        "desc": "Cipher can tally <nobr>8%</nobr> of the non-<u>True DMG</u> dealt by ally targets to the enemy targets other than the \"Patron.\" Overflow DMG is not tallied.",
+        "desc": "Cipher can tally 8% of the non-<u>True DMG</u> dealt by ally targets to the enemy targets other than the \"Patron.\" Overflow DMG is not tallied.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1915,7 +1935,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "Effect Hit Rate increases by <nobr>#1[f1]%</nobr>",
+                "key": "Effect Hit Rate increases by #1[f1]%",
                 "value": 0.06
               }
             ],
@@ -1949,7 +1969,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "Quantum DMG increases by <nobr>#1[f1]%</nobr>",
+                "key": "Quantum DMG increases by #1[f1]%",
                 "value": 0.064
               }
             ],
@@ -1976,7 +1996,7 @@
       "embedBonusSkill": {
         "id": "sleight_of_sky",
         "name": "Sleight of Sky",
-        "desc": "Increases the CRIT DMG dealt by the Talent's <u>Follow-Up ATK</u> by <nobr>100%</nobr>. When Cipher is on the battlefield, DMG received by all enemy targets increases by <nobr>40%</nobr>.",
+        "desc": "Increases the CRIT DMG dealt by the Talent's <u>Follow-Up ATK</u> by 100%. When Cipher is on the battlefield, DMG received by all enemy targets increases by 40%.",
         "type": "",
         "tag": "",
         "levels": [
@@ -2027,7 +2047,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "SPD increases by <nobr>#1[i]</nobr>",
+                "key": "SPD increases by #1[i]",
                 "value": 4
               }
             ],
@@ -2058,7 +2078,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "SPD increases by <nobr>#1[i]</nobr>",
+            "key": "SPD increases by #1[i]",
             "value": 2
           }
         ],

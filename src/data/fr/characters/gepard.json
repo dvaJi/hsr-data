@@ -244,7 +244,7 @@
       "_id": 110401,
       "id": "fist_of_conviction",
       "name": "Poing de la conviction",
-      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Gepard à un ennemi désigné.",
+      "desc": "Inflige des DGT de glace équivalents à <span style=\"color:#f29e38ff\">#1[i]%</span> de l'ATQ de Gepard à un ennemi désigné.",
       "simpleDesc": "Inflige des DGT de glace mineurs à un ennemi unique.",
       "type": "ATQ normale",
       "tag": "Cible unique",
@@ -428,8 +428,8 @@
       "_id": 110402,
       "id": "daunting_smite",
       "name": "Frappe intimidante",
-      "desc": "Inflige des DGT de glace équivalents à #1[i]% de l'ATQ de Gepard à un ennemi désigné avec #2[i]% de chances de base de geler l'ennemi pendant #3[i] tour.\nUn ennemi gelé ne peut pas agir et subit des DGT de glace additionnels équivalents à #4[i]% de l'ATQ de Gepard au début de chaque tour.",
-      "simpleDesc": "Inflige des DGT de glace à un ennemi unique, avec une chance de le geler.",
+      "desc": "Inflige des DGT de glace équivalents à <span style=\"color:#f29e38ff\">#1[i]%</span> de l'ATQ de Gepard à un ennemi désigné avec #2[i]% de <u>chances de base</u> de geler l'ennemi pendant #3[i] tour.<br>Un ennemi gelé ne peut pas agir et subit des DGT de glace <u>additionnels</u> équivalents à <span style=\"color:#f29e38ff\">#4[i]%</span> de l'ATQ de Gepard au début de chaque tour.",
+      "simpleDesc": "Inflige des DGT de glace à un ennemi unique, avec une <span style=\"color:#f29e38ff\">chance de le geler</span>.",
       "type": "Compétence",
       "tag": "Cible unique",
       "spBase": 30,
@@ -447,7 +447,7 @@
         {
           "id": 30000001,
           "name": "Chances de base",
-          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.<br>La probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -614,10 +614,10 @@
         {
           "level": 7,
           "params": [
-            1.63,
+            1.625,
             0.65,
             1,
-            0.49
+            0.4875
           ],
           "materials": [
             {
@@ -646,7 +646,7 @@
             1.75,
             0.65,
             1,
-            0.53
+            0.525
           ],
           "materials": [
             {
@@ -678,10 +678,10 @@
         {
           "level": 9,
           "params": [
-            1.88,
+            1.875,
             0.65,
             1,
-            0.56
+            0.5625
           ],
           "materials": [
             {
@@ -796,8 +796,8 @@
       "_id": 110403,
       "id": "enduring_bulwark",
       "name": "Rempart d'endurance",
-      "desc": "Accorde à tous les alliés un bouclier qui absorbe une quantité de DGT équivalente à #1[i]% de la DÉF de Gepard + #3[i] pendant #2[i] tours.",
-      "simpleDesc": "Accorde un bouclier à tous les alliés.",
+      "desc": "Accorde à tous les alliés un bouclier qui absorbe une quantité de DGT équivalente à <span style=\"color:#f29e38ff\">#1[i]%</span> de la DÉF de Gepard + <span style=\"color:#f29e38ff\">#3[i]</span> pendant #2[i] tours.",
+      "simpleDesc": "<span style=\"color:#f29e38ff\">Accorde un bouclier</span> à tous les alliés.",
       "type": "Ultime",
       "tag": "Défense",
       "spBase": 5,
@@ -825,7 +825,7 @@
         {
           "level": 2,
           "params": [
-            0.32,
+            0.31875,
             3,
             240
           ],
@@ -847,7 +847,7 @@
         {
           "level": 3,
           "params": [
-            0.34,
+            0.3375,
             3,
             307.5
           ],
@@ -875,7 +875,7 @@
         {
           "level": 4,
           "params": [
-            0.36,
+            0.35625,
             3,
             375
           ],
@@ -903,7 +903,7 @@
         {
           "level": 5,
           "params": [
-            0.38,
+            0.375,
             3,
             420
           ],
@@ -959,7 +959,7 @@
         {
           "level": 7,
           "params": [
-            0.41,
+            0.405,
             3,
             498.75
           ],
@@ -1021,7 +1021,7 @@
         {
           "level": 9,
           "params": [
-            0.43,
+            0.435,
             3,
             566.25
           ],
@@ -1089,7 +1089,7 @@
         {
           "level": 11,
           "params": [
-            0.47,
+            0.465,
             3,
             633.75
           ]
@@ -1105,7 +1105,7 @@
         {
           "level": 13,
           "params": [
-            0.49,
+            0.495,
             3,
             701.25
           ]
@@ -1121,7 +1121,7 @@
         {
           "level": 15,
           "params": [
-            0.53,
+            0.525,
             3,
             768.75
           ]
@@ -1132,8 +1132,8 @@
       "_id": 110404,
       "id": "unyielding_will",
       "name": "Volonté inflexible",
-      "desc": "Au lieu de tomber à terre lorsqu'il subit un coup fatal, Gepard restaure immédiatement #1[i]% de ses PV max. Cet effet ne peut se déclencher qu'une fois par combat.",
-      "simpleDesc": "Au lieu de tomber à terre lorsqu'il subit un coup fatal, restaure immédiatement des PV. Cet effet ne peut se déclencher qu'1 fois par combat.",
+      "desc": "Au lieu de tomber <u>à terre</u> lorsqu'il subit un coup fatal, Gepard restaure immédiatement <span style=\"color:#f29e38ff\">#1[i]%</span> de ses PV max. Cet effet ne peut se déclencher qu'une fois par combat.",
+      "simpleDesc": "<span style=\"color:#f29e38ff\">Au lieu de tomber <u>à terre</u></span> lorsqu'il subit un coup fatal, restaure immédiatement des PV. Cet effet ne peut se déclencher qu'1 fois par combat.",
       "type": "Talent",
       "tag": "Restauration",
       "spBase": null,
@@ -1165,7 +1165,7 @@
         {
           "level": 2,
           "params": [
-            0.28
+            0.275
           ],
           "materials": [
             {
@@ -1211,7 +1211,7 @@
         {
           "level": 4,
           "params": [
-            0.33
+            0.325
           ],
           "materials": [
             {
@@ -1263,7 +1263,7 @@
         {
           "level": 6,
           "params": [
-            0.38
+            0.375
           ],
           "materials": [
             {
@@ -1289,7 +1289,7 @@
         {
           "level": 7,
           "params": [
-            0.41
+            0.40625
           ],
           "materials": [
             {
@@ -1315,7 +1315,7 @@
         {
           "level": 8,
           "params": [
-            0.44
+            0.4375
           ],
           "materials": [
             {
@@ -1347,7 +1347,7 @@
         {
           "level": 9,
           "params": [
-            0.47
+            0.46875
           ],
           "materials": [
             {
@@ -1411,7 +1411,7 @@
         {
           "level": 11,
           "params": [
-            0.53
+            0.525
           ]
         },
         {
@@ -1423,7 +1423,7 @@
         {
           "level": 13,
           "params": [
-            0.57
+            0.575
           ]
         },
         {
@@ -1435,7 +1435,7 @@
         {
           "level": 15,
           "params": [
-            0.63
+            0.625
           ]
         }
       ]
@@ -1475,7 +1475,10 @@
       "_id": 110401,
       "id": "due_diligence",
       "name": "Devoir de diligence",
-      "desc": "Augmente les <u>chances de base</u> que la cible ennemie attaquée soit gelée lors de l'utilisation de la compétence de <nobr>35%</nobr>.",
+      "desc": "Augmente les <u>chances de base</u> que la cible ennemie attaquée soit gelée lors de l'utilisation de la compétence de 35%.",
+      "params": [
+        0.35
+      ],
       "unlockCost": [
         {
           "ItemID": 11104,
@@ -1486,7 +1489,7 @@
         {
           "id": 30000001,
           "name": "Chances de base",
-          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.\nLa probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
+          "desc": "Les chances de base sont les probabilités de base d'infliger un malus à des cibles ennemies.<br>La probabilité finale est affectée par les chances d'appliquer des effets de l'attaquant et la RÉS aux effets des cibles ennemies.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1497,7 +1500,11 @@
       "_id": 110402,
       "id": "lingering_cold",
       "name": "Froid persistant",
-      "desc": "Quand un ennemi gelé par la compétence est dégelé, sa VIT diminue de <nobr>20%</nobr> pendant <nobr>1</nobr> tour.",
+      "desc": "Quand un ennemi gelé par la compétence est dégelé, sa VIT diminue de 20% pendant 1 tour.",
+      "params": [
+        0.2,
+        1
+      ],
       "unlockCost": [
         {
           "ItemID": 11104,
@@ -1510,7 +1517,8 @@
       "_id": 110403,
       "id": "never_surrender",
       "name": "Sans reddition",
-      "desc": "Niv. de l'ultime +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. du talent +2, jusqu'au Niv. <nobr>15</nobr> maximum.",
+      "desc": "Niv. de l'ultime +2, jusqu'au Niv. 15 maximum.<br>Niv. du talent +2, jusqu'au Niv. 15 maximum.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11104,
@@ -1523,7 +1531,10 @@
       "_id": 110404,
       "id": "faith_moves_mountains",
       "name": "La foi déplace les montagnes",
-      "desc": "Lorsque Gepard participe au combat, la RÉS aux effets de tous les alliés augmente de <nobr>20%</nobr>.",
+      "desc": "Lorsque Gepard participe au combat, la RÉS aux effets de tous les alliés augmente de 20%.",
+      "params": [
+        0.2
+      ],
       "unlockCost": [
         {
           "ItemID": 11104,
@@ -1536,7 +1547,8 @@
       "_id": 110405,
       "id": "cold_iron_fist",
       "name": "Poing de fer froid",
-      "desc": "Niv. de la compétence +2, jusqu'au Niv. <nobr>15</nobr> maximum.\nNiv. de l'ATQ normale +1, jusqu'au Niv. <nobr>10</nobr> maximum.",
+      "desc": "Niv. de la compétence +2, jusqu'au Niv. 15 maximum.<br>Niv. de l'ATQ normale +1, jusqu'au Niv. 10 maximum.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11104,
@@ -1549,7 +1561,10 @@
       "_id": 110406,
       "id": "unyielding_resolve",
       "name": "Détermination sans faille",
-      "desc": "Lorsque son talent se déclenche, Gepard agit immédiatement et restaure des PV supplémentaires équivalents à <nobr>50%</nobr> de ses PV max.",
+      "desc": "Lorsque son talent se déclenche, Gepard agit immédiatement et restaure des PV supplémentaires équivalents à 50% de ses PV max.",
+      "params": [
+        0.5
+      ],
       "unlockCost": [
         {
           "ItemID": 11104,
@@ -1579,7 +1594,7 @@
                 "promotionReq": 0,
                 "statusList": [
                   {
-                    "key": "La RÉS aux effets augmente de <nobr>#1[f1]%</nobr>.",
+                    "key": "La RÉS aux effets augmente de #1[f1]%.",
                     "value": 0.08
                   }
                 ],
@@ -1613,7 +1628,7 @@
                 "promotionReq": 0,
                 "statusList": [
                   {
-                    "key": "Les DGT de glace augmentent de <nobr>#1[f1]%</nobr>.",
+                    "key": "Les DGT de glace augmentent de #1[f1]%.",
                     "value": 0.064
                   }
                 ],
@@ -1644,7 +1659,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "La DÉF augmente de <nobr>#1[f1]%</nobr>.",
+                "key": "La DÉF augmente de #1[f1]%.",
                 "value": 0.075
               }
             ],
@@ -1671,7 +1686,7 @@
       "embedBonusSkill": {
         "id": "grit",
         "name": "Esprit combatif",
-        "desc": "L'ATQ de Gepard augmente à hauteur de <nobr>35%</nobr> de sa DÉF actuelle. Cet effet s'actualise au début de chaque tour.",
+        "desc": "L'ATQ de Gepard augmente à hauteur de 35% de sa DÉF actuelle. Cet effet s'actualise au début de chaque tour.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1717,7 +1732,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "Les DGT de glace augmentent de <nobr>#1[f1]%</nobr>.",
+            "key": "Les DGT de glace augmentent de #1[f1]%.",
             "value": 0.032
           }
         ],
@@ -1746,7 +1761,7 @@
         "promotionReq": 3,
         "statusList": [
           {
-            "key": "La DÉF augmente de <nobr>#1[f1]%</nobr>.",
+            "key": "La DÉF augmente de #1[f1]%.",
             "value": 0.05
           }
         ],
@@ -1780,7 +1795,7 @@
         "promotionReq": 5,
         "statusList": [
           {
-            "key": "Les DGT de glace augmentent de <nobr>#1[f1]%</nobr>.",
+            "key": "Les DGT de glace augmentent de #1[f1]%.",
             "value": 0.048
           }
         ],

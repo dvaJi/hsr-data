@@ -244,7 +244,7 @@
       "_id": 132101,
       "id": "fiddle_fissured_memory",
       "name": "Abertura da Fissura Mnemônica",
-      "desc": "Causa Dano de Fogo igual a #1[i]% do ATQ de A Dália a um único inimigo-alvo.",
+      "desc": "Causa Dano de Fogo igual a <span style=\"color:#f29e38ff\">#1[i]%</span> do ATQ de A Dália a um único inimigo-alvo.",
       "simpleDesc": "Causa Dano de Fogo leve a um inimigo.",
       "type": "ATQ Básico",
       "tag": "Alvo Único",
@@ -425,8 +425,8 @@
       "_id": 132102,
       "id": "lick_enkindled_betrayal",
       "name": "Língua Ígnea da Traição",
-      "desc": "Implanta um Campo que dura por #2[i] rodada(s). Esta duração é reduzida em 1 no início da rodada de A Dália. Em seguida, causa Dano de Fogo igual a #1[i]% do ATQ de A Dália a um inimigo designado e aos alvos adjacentes.\nEnquanto o Campo estiver ativo, aumenta a Eficiência de Quebra de Fraqueza de todos os aliados em #3[i]%. A Redução de Tenacidade sofrida pelos inimigos-alvo que não estiverem em Quebra de Fraqueza pode ser convertida em Super Dano de Quebra.",
-      "simpleDesc": "Implanta um Campo. Causa Dano de Fogo a um inimigo e aos alvos adjacentes.\nEnquanto o Campo estiver ativo, aumenta a Eficiência de Quebra de Fraqueza de todos os aliados, e os inimigos-alvo também receberão Super Dano de Quebra mesmo sem estarem afligidos com Quebra de Fraqueza.",
+      "desc": "Implanta um Campo que dura por #2[i] rodada(s). Esta duração é reduzida em 1 no início da rodada de A Dália. Em seguida, causa Dano de Fogo igual a <span style=\"color:#f29e38ff\">#1[i]%</span> do ATQ de A Dália a um inimigo designado e aos alvos adjacentes.<br>Enquanto o Campo estiver ativo, aumenta a Eficiência de Quebra de Fraqueza de todos os aliados em #3[i]%. A Redução de Tenacidade sofrida pelos inimigos-alvo que não estiverem em Quebra de Fraqueza pode ser convertida em Super Dano de Quebra.",
+      "simpleDesc": "Implanta um Campo. Causa Dano de Fogo a um inimigo e aos alvos adjacentes.<br>Enquanto o Campo estiver ativo, aumenta a <span style=\"color:#f29e38ff\">Eficiência de Quebra de Fraqueza</span> de todos os aliados, e os inimigos-alvo <span style=\"color:#f29e38ff\">também receberão Super Dano de Quebra mesmo sem estarem afligidos com Quebra de Fraqueza</span>.",
       "type": "Perícia",
       "tag": "Explosão",
       "spBase": 30,
@@ -449,7 +449,7 @@
         {
           "id": 10000015,
           "name": "Super Dano de Quebra",
-          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.\nO Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.\nSuper Dano de Quebra também é considerado Dano de Quebra.",
+          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.<br>O Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.<br>Super Dano de Quebra também é considerado Dano de Quebra.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -775,8 +775,8 @@
       "_id": 132103,
       "id": "wallow_entombed_ash",
       "name": "Repouso... em Cinzas",
-      "desc": "Inflige o estado de \"Murchar\" a todos os inimigos, com duração de #2[i] rodada(s). Em seguida, causa Dano de Fogo igual a #1[i]% do ATQ de A Dália, distribuído igualmente entre todos os inimigos.\nReduz a DEF dos inimigos-alvo no estado \"Murchar\" em #3[f1]% e implanta Fraqueza de todos os Tipos dos \"Pares de Dança\".",
-      "simpleDesc": "Aplica a Fraqueza dos Tipos dos \"Pares de Dança\" a todos os inimigos e reduz a DEF deles. Causa Dano de Fogo massivo, que é distribuído igualmente entre todos os inimigos.",
+      "desc": "Inflige o estado de \"Murchar\" a todos os inimigos, com duração de #2[i] rodada(s). Em seguida, causa Dano de Fogo igual a <span style=\"color:#f29e38ff\">#1[i]%</span> do ATQ de A Dália, distribuído igualmente entre todos os inimigos.<br>Reduz a DEF dos inimigos-alvo no estado \"Murchar\" em <span style=\"color:#f29e38ff\">#3[f1]%</span> e implanta Fraqueza de todos os Tipos dos \"Pares de Dança\".",
+      "simpleDesc": "<span style=\"color:#f29e38ff\">Aplica a Fraqueza dos Tipos dos \"Pares de Dança\"</span> a todos os inimigos e reduz a DEF deles. Causa Dano de Fogo massivo, que é distribuído igualmente entre todos os inimigos.",
       "type": "Perícia Suprema",
       "tag": "Área",
       "spBase": 5,
@@ -937,7 +937,7 @@
           "params": [
             2.55,
             4,
-            0.14
+            0.1425
           ],
           "materials": [
             {
@@ -965,7 +965,7 @@
           "params": [
             2.7,
             4,
-            0.15
+            0.155
           ],
           "materials": [
             {
@@ -999,7 +999,7 @@
           "params": [
             2.85,
             4,
-            0.17
+            0.1675
           ],
           "materials": [
             {
@@ -1108,8 +1108,8 @@
       "_id": 132104,
       "id": "whos_afraid_of_constance",
       "name": "Quem Tem Medo da Constance?",
-      "desc": "Ao entrar em combate, A Dália regenera #4[i] de Energia e se torna \"Par de Dança\" junto com o aliado que iniciou o combate. Sempre que não houver outro \"Par de Dança\" em campo, esta unidade e o aliado com o maior Efeito de Quebra se tornam \"Par de Dança\". Após um \"Par de Dança\" atacar um inimigo-alvo com Quebra de Fraqueza, a Redução de Tenacidade desse ataque é convertida em 1 instância de Super Dano de Quebra de #5[i]%.\nApós um inimigo-alvo ser atacado pelo outro \"Par de Dança\", A Dália realiza um Ataque Extra e causa #2[i] instância(s) de Dano, cada uma causando Dano de Fogo igual a #1[i]% do ATQ de A Dália a um inimigo aleatório. Após cada instância de Dano causado a um inimigo-alvo com Quebra de Fraqueza, a Redução de Tenacidade desse Dano é convertida em 1 instância de Super Dano de Quebra de #3[i]%.\nEste efeito só pode ser ativado uma vez por rodada. Se o alvo for derrotado antes que o Ataque Extra seja realizado, ele será realizado contra um inimigo aleatório.",
-      "simpleDesc": "Ao entrar em combate, A Dália regenera Energia e se torna \"Par de Dança\" junto com o aliado que iniciou o combate. Quando um \"Par de Dança\" ataca um inimigo-alvo com Quebra de Fraqueza, causa adicionalmente Super Dano de Quebra.\nApós um inimigo-alvo ser atacado pelo outro \"Par de Dança\", A Dália realiza um Ataque Extra, causando Dano de Fogo leve a inimigos-alvo aleatórios e infligindo Super Dano de Quebra adicional a inimigos-alvo com Quebra de Fraqueza, ricocheteando #2[i] vez(es).",
+      "desc": "Ao entrar em combate, A Dália regenera #4[i] de Energia e se torna \"Par de Dança\" junto com o aliado que iniciou o combate. Sempre que não houver outro \"Par de Dança\" em campo, esta unidade e o aliado com o maior Efeito de Quebra se tornam \"Par de Dança\". Após um \"Par de Dança\" atacar um inimigo-alvo com Quebra de Fraqueza, a Redução de Tenacidade desse ataque é convertida em 1 instância de Super Dano de Quebra de <span style=\"color:#f29e38ff\">#5[i]%</span>.<br>Após um inimigo-alvo ser atacado pelo outro \"Par de Dança\", A Dália realiza um <u>Ataque Extra</u> e causa #2[i] instância(s) de Dano, cada uma causando Dano de Fogo igual a <span style=\"color:#f29e38ff\">#1[i]%</span> do ATQ de A Dália a um inimigo aleatório. Após cada instância de Dano causado a um inimigo-alvo com Quebra de Fraqueza, a Redução de Tenacidade desse Dano é convertida em 1 instância de Super Dano de Quebra de <span style=\"color:#f29e38ff\">#3[i]%</span>.<br>Este efeito só pode ser ativado uma vez por rodada. Se o alvo for derrotado antes que o <u>Ataque Extra</u> seja realizado, ele será realizado contra um inimigo aleatório.",
+      "simpleDesc": "Ao entrar em combate, A Dália regenera Energia e se torna \"Par de Dança\" junto com o aliado que iniciou o combate. Quando um \"Par de Dança\" ataca um inimigo-alvo com Quebra de Fraqueza, causa adicionalmente <span style=\"color:#f29e38ff\">Super Dano de Quebra</span>.<br>Após um inimigo-alvo ser atacado pelo outro \"Par de Dança\", A Dália realiza um <span style=\"color:#f29e38ff\"><u>Ataque Extra</u></span>, causando Dano de Fogo leve a inimigos-alvo aleatórios e infligindo Super Dano de Quebra adicional a inimigos-alvo com Quebra de Fraqueza, ricocheteando <span style=\"color:#f29e38ff\">#2[i]</span> vez(es).",
       "type": "Talento",
       "tag": "Rebote",
       "spBase": 2,
@@ -1132,7 +1132,7 @@
         {
           "id": 10000015,
           "name": "Super Dano de Quebra",
-          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.\nO Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.\nSuper Dano de Quebra também é considerado Dano de Quebra.",
+          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.<br>O Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.<br>Super Dano de Quebra também é considerado Dano de Quebra.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1161,7 +1161,7 @@
         {
           "level": 2,
           "params": [
-            0.17,
+            0.165,
             5,
             1.1,
             35,
@@ -1215,7 +1215,7 @@
         {
           "level": 4,
           "params": [
-            0.2,
+            0.195,
             5,
             1.3,
             35,
@@ -1275,7 +1275,7 @@
         {
           "level": 6,
           "params": [
-            0.23,
+            0.225,
             5,
             1.5,
             35,
@@ -1305,11 +1305,11 @@
         {
           "level": 7,
           "params": [
-            0.24,
+            0.24375,
             5,
-            1.63,
+            1.625,
             35,
-            0.49
+            0.4875
           ],
           "materials": [
             {
@@ -1335,11 +1335,11 @@
         {
           "level": 8,
           "params": [
-            0.26,
+            0.2625,
             5,
             1.75,
             35,
-            0.53
+            0.525
           ],
           "materials": [
             {
@@ -1371,11 +1371,11 @@
         {
           "level": 9,
           "params": [
-            0.28,
+            0.28125,
             5,
-            1.88,
+            1.875,
             35,
-            0.56
+            0.5625
           ],
           "materials": [
             {
@@ -1443,7 +1443,7 @@
         {
           "level": 11,
           "params": [
-            0.32,
+            0.315,
             5,
             2.1,
             35,
@@ -1463,7 +1463,7 @@
         {
           "level": 13,
           "params": [
-            0.34,
+            0.345,
             5,
             2.3,
             35,
@@ -1483,7 +1483,7 @@
         {
           "level": 15,
           "params": [
-            0.38,
+            0.375,
             5,
             2.5,
             35,
@@ -1496,8 +1496,8 @@
       "_id": 132107,
       "id": "the_heart_makes_the_finest_tomb",
       "name": "Coração, o Melhor dos Túmulos",
-      "desc": "Após usar a Técnica, cria uma Dimensão Especial que dura por #1[i] segundo(s). Os inimigos dentro dessa dimensão não atacarão ativamente os aliados-alvo. Ao entrar em combate com inimigos na Dimensão Especial, A Dália implanta imediatamente o Campo de sua Perícia e converte a Redução de Tenacidade que ativou o combate em 1 instância de Super Dano de Quebra de #2[i]% contra inimigos-alvo no estado de Quebra de Fraqueza. \nApenas 1 Efeito de Dimensão criado por aliados pode existir ao mesmo tempo.",
-      "simpleDesc": "Cria uma Dimensão Especial onde os inimigos dentro dela não atacam os aliados-alvo. Ao entrar em combate com os inimigos dentro da dimensão, A Dália implanta imediatamente um Campo e causa Super Dano de Quebra aos inimigos-alvo em estado de Quebra de Fraqueza.",
+      "desc": "Após usar a Técnica, cria uma Dimensão Especial que dura por #1[i] segundo(s). Os inimigos dentro dessa dimensão não atacarão ativamente os aliados-alvo. Ao entrar em combate com inimigos na Dimensão Especial, A Dália implanta imediatamente o Campo de sua Perícia e converte a Redução de Tenacidade que ativou o combate em 1 instância de Super Dano de Quebra de #2[i]% contra inimigos-alvo no estado de Quebra de Fraqueza. <br>Apenas 1 Efeito de Dimensão criado por aliados pode existir ao mesmo tempo.",
+      "simpleDesc": "Cria uma Dimensão Especial onde os inimigos dentro dela não atacam os aliados-alvo. Ao entrar em combate com os inimigos dentro da dimensão, A Dália implanta imediatamente um Campo e causa <span style=\"color:#f29e38ff\">Super Dano de Quebra</span> aos inimigos-alvo em estado de Quebra de Fraqueza.",
       "type": "Técnica",
       "tag": "Incapacitação",
       "spBase": null,
@@ -1520,7 +1520,7 @@
         {
           "id": 10000015,
           "name": "Super Dano de Quebra",
-          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.\nO Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.\nSuper Dano de Quebra também é considerado Dano de Quebra.",
+          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.<br>O Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.<br>Super Dano de Quebra também é considerado Dano de Quebra.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1543,7 +1543,13 @@
       "_id": 132101,
       "id": "when_a_bud_readies_to_bloom",
       "name": "Quando a Flor Desabrocha",
-      "desc": "O multiplicador do Super Dano de Quebra do Talento concedido aos \"Pares de Dança\" agora se aplica a todos os personagens aliados, com os \"Pares de Dança\" recebendo adicionalmente um bônus de <nobr>40%</nobr>. Após os \"Pares de Dança\" usarem um Ataque, causa uma quantidade fixa adicional de Redução de Tenacidade igual a <nobr>25%</nobr> da Tenacidade Máxima dos inimigos-alvo (mínimo de <nobr>10</nobr>, máximo de <nobr>300</nobr>). Este efeito só pode ser ativado uma vez por inimigo-alvo, e a contagem de ativação é redefinida após o inimigo-alvo receber um golpe fatal.",
+      "desc": "O multiplicador do Super Dano de Quebra do Talento concedido aos \"Pares de Dança\" agora se aplica a todos os personagens aliados, com os \"Pares de Dança\" recebendo adicionalmente um bônus de 40%. Após os \"Pares de Dança\" usarem um Ataque, causa uma quantidade fixa adicional de Redução de Tenacidade igual a 25% da Tenacidade Máxima dos inimigos-alvo (mínimo de 10, máximo de 300). Este efeito só pode ser ativado uma vez por inimigo-alvo, e a contagem de ativação é redefinida após o inimigo-alvo receber um golpe fatal.",
+      "params": [
+        0.25,
+        10,
+        300,
+        0.4
+      ],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1554,7 +1560,7 @@
         {
           "id": 10000015,
           "name": "Super Dano de Quebra",
-          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.\nO Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.\nSuper Dano de Quebra também é considerado Dano de Quebra.",
+          "desc": "O Super Dano de Quebra aumenta com um maior Efeito de Quebra, maior Redução de Tenacidade do ataque, e maiores níveis de personagens.<br>O Super Dano de Quebra não pode ser um Acerto CRIT e não é afetado por efeitos de Bônus de Dano.<br>Super Dano de Quebra também é considerado Dano de Quebra.",
           "params": [],
           "type": 2,
           "icon": "SpriteOutput/BuffIcon/Inlevel/IconBuffCommon.png"
@@ -1565,7 +1571,11 @@
       "_id": 132102,
       "id": "fresh_ethereal_and_beloved",
       "name": "Vida, Pureza e Carinho",
-      "desc": "Quando A Dália estiver no campo, reduz a RES a Todos os Tipos de todos os inimigos em <nobr>20%</nobr>. Quando um inimigo-alvo entra em campo, ele é imediatamente infligido com \"Murchar\", durando por <nobr>3</nobr> rodada(s).",
+      "desc": "Quando A Dália estiver no campo, reduz a RES a Todos os Tipos de todos os inimigos em 20%. Quando um inimigo-alvo entra em campo, ele é imediatamente infligido com \"Murchar\", durando por 3 rodada(s).",
+      "params": [
+        0.2,
+        3
+      ],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1578,7 +1588,8 @@
       "_id": 132103,
       "id": "pity_its_petals_thin_as_mist",
       "name": "Lamento das Pétalas Delicadas",
-      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do ATQ Básico +1, até no máximo Nv. <nobr>10</nobr>.",
+      "desc": "Nv. da Perícia Suprema +2, até no máximo Nv. 15.<br>Nv. do ATQ Básico +1, até no máximo Nv. 10.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1591,7 +1602,12 @@
       "_id": 132104,
       "id": "pity_its_heart_gnawed_by_worms",
       "name": "Lamento do Coração Corroído",
-      "desc": "Aumenta as instâncias de Dano causadas pelo <u>Ataque Extra</u> do Talento em <nobr>5</nobr>. Ao ser usado, o Dano recebido por todos os inimigos-alvo aumenta em <nobr>12%</nobr>, durando por <nobr>2</nobr> rodada(s).",
+      "desc": "Aumenta as instâncias de Dano causadas pelo <u>Ataque Extra</u> do Talento em 5. Ao ser usado, o Dano recebido por todos os inimigos-alvo aumenta em 12%, durando por 2 rodada(s).",
+      "params": [
+        0.12,
+        2,
+        5
+      ],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1613,7 +1629,8 @@
       "_id": 132105,
       "id": "fallen_decayed_and_despised",
       "name": "Queda, Podridão e Ódio",
-      "desc": "Nv. da Perícia +2, até no máximo Nv. <nobr>15</nobr>.\nNv. do Talento +2, até no máximo Nv. <nobr>15</nobr>.",
+      "desc": "Nv. da Perícia +2, até no máximo Nv. 15.<br>Nv. do Talento +2, até no máximo Nv. 15.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1626,7 +1643,11 @@
       "_id": 132106,
       "id": "and_yet_always_deathly_beautiful",
       "name": "Beleza Mortal, Hoje e Sempre",
-      "desc": "Aumenta o Efeito de Quebra do \"Par de Dança\" em <nobr>150%</nobr>. Ao usar o <u>Ataque Extra</u> do Talento, Avança Adiante a próxima ação de todos os \"Pares de Dança\" em <nobr>20%</nobr>.",
+      "desc": "Aumenta o Efeito de Quebra do \"Par de Dança\" em 150%. Ao usar o <u>Ataque Extra</u> do Talento, Avança Adiante a próxima ação de todos os \"Pares de Dança\" em 20%.",
+      "params": [
+        1.5,
+        0.2
+      ],
       "unlockCost": [
         {
           "ItemID": 11321,
@@ -1673,7 +1694,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "Aumenta em <nobr>#1[f1]%</nobr> o Efeito de Quebra",
+                    "key": "Aumenta em #1[f1]% o Efeito de Quebra",
                     "value": 0.053
                   }
                 ],
@@ -1704,7 +1725,7 @@
             "promotionReq": 2,
             "statusList": [
               {
-                "key": "Aumenta a RES a Efeito em <nobr>#1[f1]%</nobr>",
+                "key": "Aumenta a RES a Efeito em #1[f1]%",
                 "value": 0.04
               }
             ],
@@ -1731,7 +1752,7 @@
       "embedBonusSkill": {
         "id": "yet_another_funeral",
         "name": "Mais um Funeral",
-        "desc": "Ao entrar em combate, aumenta o Efeito de Quebra de outros personagens em um valor igual a <nobr>24%</nobr> do Efeito de Quebra de A Dália mais <nobr>50%</nobr>, durando por <nobr>1</nobr> rodada(s). Quando A Dália recebe <u>Cura</u> ou um <u>Escudo</u> fornecido por um companheiro de equipe, esse efeito é ativado novamente, durando por <nobr>3</nobr> rodada(s). Não pode ser ativado repetidamente dentro de uma rodada.",
+        "desc": "Ao entrar em combate, aumenta o Efeito de Quebra de outros personagens em um valor igual a 24% do Efeito de Quebra de A Dália mais 50%, durando por 1 rodada(s). Quando A Dália recebe <u>Cura</u> ou um <u>Escudo</u> fornecido por um companheiro de equipe, esse efeito é ativado novamente, durando por 3 rodada(s). Não pode ser ativado repetidamente dentro de uma rodada.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1783,7 +1804,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "Aumenta a RES a Efeito em <nobr>#1[f1]%</nobr>",
+                    "key": "Aumenta a RES a Efeito em #1[f1]%",
                     "value": 0.06
                   }
                 ],
@@ -1814,7 +1835,7 @@
             "promotionReq": 4,
             "statusList": [
               {
-                "key": "Aumenta em <nobr>#1[f1]%</nobr> o Efeito de Quebra",
+                "key": "Aumenta em #1[f1]% o Efeito de Quebra",
                 "value": 0.08
               }
             ],
@@ -1841,7 +1862,7 @@
       "embedBonusSkill": {
         "id": "lament_lost_soul",
         "name": "Descanse em Paz, Amigo",
-        "desc": "Ao usar o <u>Ataque Extra</u> do Talento, recupera 1 Ponto de Perícia para os aliados. A cada <nobr>2</nobr> instância(s) do <u>Ataque Extra</u> do Talento utilizada(s), esse efeito pode ser ativado uma vez.",
+        "desc": "Ao usar o <u>Ataque Extra</u> do Talento, recupera 1 Ponto de Perícia para os aliados. A cada 2 instância(s) do <u>Ataque Extra</u> do Talento utilizada(s), esse efeito pode ser ativado uma vez.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1891,7 +1912,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "Aumenta a VEL em <nobr>#1[i]</nobr>.",
+                "key": "Aumenta a VEL em #1[i].",
                 "value": 3
               }
             ],
@@ -1925,7 +1946,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "Aumenta a RES a Efeito em <nobr>#1[f1]%</nobr>",
+                "key": "Aumenta a RES a Efeito em #1[f1]%",
                 "value": 0.08
               }
             ],
@@ -1952,7 +1973,7 @@
       "embedBonusSkill": {
         "id": "outgrow_the_old_espouse_the_new",
         "name": "Dar Lugar ao Novo",
-        "desc": "Quando um aliado-alvo adiciona Fraqueza a um inimigo-alvo, aumenta a VEL em <nobr>30%</nobr> por <nobr>2</nobr> rodada(s). Se um aliado de Fogo tiver implantado Fraqueza ao usar um Ataque, então após o Ataque, causa adicionalmente uma quantidade fixa de <nobr>20</nobr> de Redução de Tenacidade de Fogo a todos os alvos com Fraqueza implantada. Além disso, regenera Energia igual a <nobr>10%</nobr> da Energia Máxima. Este efeito pode regenerar Energia até <nobr>50%</nobr> da Energia Máxima.",
+        "desc": "Quando um aliado-alvo adiciona Fraqueza a um inimigo-alvo, aumenta a VEL em 30% por 2 rodada(s). Se um aliado de Fogo tiver implantado Fraqueza ao usar um Ataque, então após o Ataque, causa adicionalmente uma quantidade fixa de 20 de Redução de Tenacidade de Fogo a todos os alvos com Fraqueza implantada. Além disso, regenera Energia igual a 10% da Energia Máxima. Este efeito pode regenerar Energia até 50% da Energia Máxima.",
         "type": "",
         "tag": "",
         "levels": [
@@ -2006,7 +2027,7 @@
             "promotionReq": 0,
             "statusList": [
               {
-                "key": "Aumenta em <nobr>#1[f1]%</nobr> o Efeito de Quebra",
+                "key": "Aumenta em #1[f1]% o Efeito de Quebra",
                 "value": 0.107
               }
             ],
@@ -2037,7 +2058,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "Aumenta em <nobr>#1[f1]%</nobr> o Efeito de Quebra",
+            "key": "Aumenta em #1[f1]% o Efeito de Quebra",
             "value": 0.053
           }
         ],

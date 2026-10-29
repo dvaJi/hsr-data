@@ -244,7 +244,7 @@
       "_id": 110201,
       "id": "thwack",
       "name": "Thwack",
-      "desc": "Deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
+      "desc": "Deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Seele's ATK to one designated enemy.",
       "simpleDesc": "Deals minor Quantum DMG to one enemy.",
       "type": "Basic ATK",
       "tag": "Single Target",
@@ -428,7 +428,7 @@
       "_id": 110202,
       "id": "sheathed_blade",
       "name": "Sheathed Blade",
-      "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to #1[i]% of Seele's ATK to one designated enemy.",
+      "desc": "Increases Seele's SPD by #2[i]% for #3[i] turn(s) and deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of Seele's ATK to one designated enemy.",
       "simpleDesc": "Deals Quantum DMG to one enemy and increases SPD.",
       "type": "Skill",
       "tag": "Single Target",
@@ -591,7 +591,7 @@
         {
           "level": 7,
           "params": [
-            1.79,
+            1.7875,
             0.25,
             2
           ],
@@ -619,7 +619,7 @@
         {
           "level": 8,
           "params": [
-            1.93,
+            1.925,
             0.25,
             2
           ],
@@ -653,7 +653,7 @@
         {
           "level": 9,
           "params": [
-            2.06,
+            2.0625,
             0.25,
             2
           ],
@@ -764,8 +764,8 @@
       "_id": 110203,
       "id": "butterfly_flurry",
       "name": "Butterfly Flurry",
-      "desc": "Seele enters the Amplification state and deals Quantum DMG equal to #1[i]% of her ATK to one designated enemy.",
-      "simpleDesc": "Enters the Amplification state and deals massive Quantum DMG to one enemy.",
+      "desc": "Seele enters the Amplification state and deals Quantum DMG equal to <span style=\"color:#f29e38ff\">#1[i]%</span> of her ATK to one designated enemy.",
+      "simpleDesc": "Enters the <span style=\"color:#f29e38ff\">Amplification state</span> and deals massive Quantum DMG to one enemy.",
       "type": "Ultimate",
       "tag": "Single Target",
       "spBase": 5,
@@ -915,7 +915,7 @@
         {
           "level": 7,
           "params": [
-            3.61
+            3.6125
           ],
           "materials": [
             {
@@ -941,7 +941,7 @@
         {
           "level": 8,
           "params": [
-            3.83
+            3.825
           ],
           "materials": [
             {
@@ -973,7 +973,7 @@
         {
           "level": 9,
           "params": [
-            4.04
+            4.0375
           ],
           "materials": [
             {
@@ -1070,8 +1070,8 @@
       "_id": 110204,
       "id": "resurgence",
       "name": "Resurgence",
-      "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an extra turn. While in the Amplification state, increases the DMG of Seele's attacks by #1[i]% for #2[i] turn(s).\nEnemies defeated in the extra turn provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
-      "simpleDesc": "When defeating enemy targets with Basic ATK, Skill, or Ultimate, gains an extra turn and enters the Amplification state. While in Amplification, increases the DMG dealt by this unit.",
+      "desc": "Enters the Amplification state upon defeating an enemy with Basic ATK, Skill, or Ultimate, and receives an <u>extra turn</u>. While in the Amplification state, increases the DMG of Seele's attacks by <span style=\"color:#f29e38ff\">#1[i]%</span> for #2[i] turn(s).<br>Enemies defeated in the <u>extra turn</u> provided by \"Resurgence\" will not trigger another \"Resurgence.\"",
+      "simpleDesc": "When <span style=\"color:#f29e38ff\">defeating enemy targets</span> with Basic ATK, Skill, or Ultimate, gains an <span style=\"color:#f29e38ff\"><u>extra turn</u> and enters the Amplification state</span>. While in Amplification, increases the DMG dealt by this unit.",
       "type": "Talent",
       "tag": "Enhance",
       "spBase": null,
@@ -1401,7 +1401,7 @@
       "id": "phantom_illusion",
       "name": "Phantom Illusion",
       "desc": "After using her Technique, Seele gains Stealth for #1[i] second(s). While Stealth is active, Seele cannot be detected by enemies. And when entering battle by attacking enemies, Seele will immediately enter the Amplification state.",
-      "simpleDesc": "Enter Stealth mode. After attacking an enemy and entering battle, enters the Amplification state.",
+      "simpleDesc": "Enter <span style=\"color:#f29e38ff\">Stealth</span> mode. After attacking an enemy and entering battle, enters the <span style=\"color:#f29e38ff\">Amplification state</span>.",
       "type": "Technique",
       "tag": "Enhance",
       "spBase": null,
@@ -1429,7 +1429,11 @@
       "_id": 110201,
       "id": "extirpating_slash",
       "name": "Extirpating Slash",
-      "desc": "When dealing DMG to an enemy whose HP percentage is <nobr>80%</nobr> or lower, increases CRIT Rate by <nobr>15%</nobr>.",
+      "desc": "When dealing DMG to an enemy whose HP percentage is 80% or lower, increases CRIT Rate by 15%.",
+      "params": [
+        0.8,
+        0.15
+      ],
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1442,7 +1446,10 @@
       "_id": 110202,
       "id": "dancing_butterfly",
       "name": "Dancing Butterfly",
-      "desc": "The SPD Boost effect of Seele's Skill can stack up to <nobr>2</nobr> time(s).",
+      "desc": "The SPD Boost effect of Seele's Skill can stack up to 2 time(s).",
+      "params": [
+        2
+      ],
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1455,7 +1462,8 @@
       "_id": 110203,
       "id": "dazzling_tumult",
       "name": "Dazzling Tumult",
-      "desc": "Skill Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nTalent Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.",
+      "desc": "Skill Lv. +2, up to a maximum of Lv. 15.<br>Talent Lv. +2, up to a maximum of Lv. 15.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1468,7 +1476,10 @@
       "_id": 110204,
       "id": "flitting_phantasm",
       "name": "Flitting Phantasm",
-      "desc": "Seele regenerates <nobr>15</nobr> Energy when she defeats an enemy.",
+      "desc": "Seele regenerates 15 Energy when she defeats an enemy.",
+      "params": [
+        15
+      ],
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1481,7 +1492,8 @@
       "_id": 110205,
       "id": "piercing_shards",
       "name": "Piercing Shards",
-      "desc": "Ultimate Lv. +2, up to a maximum of Lv. <nobr>15</nobr>.\nBasic ATK Lv. +1, up to a maximum of Lv. <nobr>10</nobr>.",
+      "desc": "Ultimate Lv. +2, up to a maximum of Lv. 15.<br>Basic ATK Lv. +1, up to a maximum of Lv. 10.",
+      "params": [],
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1494,7 +1506,11 @@
       "_id": 110206,
       "id": "shattering_shambles",
       "name": "Shattering Shambles",
-      "desc": "After attacking with Ultimate, Seele inflicts \"Butterfly Flurry\" on the attacked enemy target for <nobr>1</nobr> turn(s). Enemies in \"Butterfly Flurry\" will additionally take 1 instance of Quantum <u>Additional DMG</u> equal to <nobr>15%</nobr> of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"Butterfly Flurry\" state's <u>Additional DMG</u> triggered by other allies' attacks, Seele's Talent will not be triggered.\nWhen Seele is <u>knocked down</u>, the \"Butterfly Flurry\" inflicted on the enemies will be removed.",
+      "desc": "After attacking with Ultimate, Seele inflicts \"<link kind=\"skill\" to=\"butterfly_flurry\">Butterfly Flurry</link>\" on the attacked enemy target for 1 turn(s). Enemies in \"<link kind=\"skill\" to=\"butterfly_flurry\">Butterfly Flurry</link>\" will additionally take 1 instance of Quantum <u>Additional DMG</u> equal to 15% of Seele's Ultimate DMG every time they are attacked. If the target is defeated by the \"<link kind=\"skill\" to=\"butterfly_flurry\">Butterfly Flurry</link>\" state's <u>Additional DMG</u> triggered by other allies' attacks, Seele's Talent will not be triggered.<br>When Seele is <u>knocked down</u>, the \"<link kind=\"skill\" to=\"butterfly_flurry\">Butterfly Flurry</link>\" inflicted on the enemies will be removed.",
+      "params": [
+        0.15,
+        1
+      ],
       "unlockCost": [
         {
           "ItemID": 11102,
@@ -1541,7 +1557,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                    "key": "ATK increases by #1[f1]%",
                     "value": 0.04
                   }
                 ],
@@ -1572,7 +1588,7 @@
             "promotionReq": 2,
             "statusList": [
               {
-                "key": "CRIT DMG increases by <nobr>#1[f1]%</nobr>",
+                "key": "CRIT DMG increases by #1[f1]%",
                 "value": 0.053
               }
             ],
@@ -1599,7 +1615,7 @@
       "embedBonusSkill": {
         "id": "nightshade",
         "name": "Nightshade",
-        "desc": "When current HP percentage is <nobr>50%</nobr> or lower, reduces the chance of being attacked by enemies.",
+        "desc": "When current HP percentage is 50% or lower, reduces the chance of being attacked by enemies.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1649,7 +1665,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "CRIT DMG increases by <nobr>#1[f1]%</nobr>",
+                    "key": "CRIT DMG increases by #1[f1]%",
                     "value": 0.08
                   }
                 ],
@@ -1680,7 +1696,7 @@
             "promotionReq": 4,
             "statusList": [
               {
-                "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                "key": "ATK increases by #1[f1]%",
                 "value": 0.06
               }
             ],
@@ -1707,7 +1723,7 @@
       "embedBonusSkill": {
         "id": "lacerate",
         "name": "Lacerate",
-        "desc": "While Seele is in the Amplification state, her Quantum <u>RES PEN</u> increases by <nobr>20%</nobr>.",
+        "desc": "While Seele is in the Amplification state, her Quantum <u>RES PEN</u> increases by 20%.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1761,7 +1777,7 @@
                 "promotionReq": 0,
                 "statusList": [
                   {
-                    "key": "CRIT DMG increases by <nobr>#1[f1]%</nobr>",
+                    "key": "CRIT DMG increases by #1[f1]%",
                     "value": 0.107
                   }
                 ],
@@ -1795,7 +1811,7 @@
                 "promotionReq": 0,
                 "statusList": [
                   {
-                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                    "key": "ATK increases by #1[f1]%",
                     "value": 0.08
                   }
                 ],
@@ -1826,7 +1842,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "DEF increases by <nobr>#1[f1]%</nobr>",
+                "key": "DEF increases by #1[f1]%",
                 "value": 0.075
               }
             ],
@@ -1853,7 +1869,7 @@
       "embedBonusSkill": {
         "id": "rippling_waves",
         "name": "Rippling Waves",
-        "desc": "After using a Basic ATK, advances Seele's next <u>action </u> by <nobr>20%</nobr>.",
+        "desc": "After using a Basic ATK, advances Seele's next <u>action </u> by 20%.",
         "type": "",
         "tag": "",
         "levels": [
@@ -1899,7 +1915,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+            "key": "ATK increases by #1[f1]%",
             "value": 0.04
           }
         ],
@@ -1928,7 +1944,7 @@
         "promotionReq": 3,
         "statusList": [
           {
-            "key": "DEF increases by <nobr>#1[f1]%</nobr>",
+            "key": "DEF increases by #1[f1]%",
             "value": 0.05
           }
         ],
@@ -1962,7 +1978,7 @@
         "promotionReq": 5,
         "statusList": [
           {
-            "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+            "key": "ATK increases by #1[f1]%",
             "value": 0.06
           }
         ],
@@ -2004,7 +2020,7 @@
                 "promotionReq": 3,
                 "statusList": [
                   {
-                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                    "key": "ATK increases by #1[f1]%",
                     "value": 0.04
                   }
                 ],
@@ -2035,7 +2051,7 @@
             "promotionReq": 2,
             "statusList": [
               {
-                "key": "CRIT DMG increases by <nobr>#1[f1]%</nobr>",
+                "key": "CRIT DMG increases by #1[f1]%",
                 "value": 0.053
               }
             ],
@@ -2062,7 +2078,7 @@
       "embedBonusSkill": {
         "id": "nightshade",
         "name": "Nightshade",
-        "desc": "When defeating an enemy target, increases this unit's DMG dealt by <nobr>50%</nobr>. This effect can stack up to <nobr>3</nobr> time(s) and lasts for <nobr>3</nobr> turn(s).",
+        "desc": "When defeating an enemy target, increases this unit's DMG dealt by 50%. This effect can stack up to 3 time(s) and lasts for 3 turn(s).",
         "type": "",
         "tag": "",
         "levels": [
@@ -2113,7 +2129,7 @@
                 "promotionReq": 5,
                 "statusList": [
                   {
-                    "key": "CRIT DMG increases by <nobr>#1[f1]%</nobr>",
+                    "key": "CRIT DMG increases by #1[f1]%",
                     "value": 0.08
                   }
                 ],
@@ -2144,7 +2160,7 @@
             "promotionReq": 4,
             "statusList": [
               {
-                "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                "key": "ATK increases by #1[f1]%",
                 "value": 0.06
               }
             ],
@@ -2171,7 +2187,7 @@
       "embedBonusSkill": {
         "id": "lacerate",
         "name": "Lacerate",
-        "desc": "While Seele is in the Amplification state, her Quantum <u>RES PEN</u> increases by <nobr>25%</nobr>.",
+        "desc": "While Seele is in the Amplification state, her Quantum <u>RES PEN</u> increases by 25%.",
         "type": "",
         "tag": "",
         "levels": [
@@ -2225,7 +2241,7 @@
                 "promotionReq": 0,
                 "statusList": [
                   {
-                    "key": "CRIT DMG increases by <nobr>#1[f1]%</nobr>",
+                    "key": "CRIT DMG increases by #1[f1]%",
                     "value": 0.107
                   }
                 ],
@@ -2259,7 +2275,7 @@
                 "promotionReq": 0,
                 "statusList": [
                   {
-                    "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+                    "key": "ATK increases by #1[f1]%",
                     "value": 0.08
                   }
                 ],
@@ -2290,7 +2306,7 @@
             "promotionReq": 6,
             "statusList": [
               {
-                "key": "DEF increases by <nobr>#1[f1]%</nobr>",
+                "key": "DEF increases by #1[f1]%",
                 "value": 0.075
               }
             ],
@@ -2317,7 +2333,7 @@
       "embedBonusSkill": {
         "id": "rippling_waves",
         "name": "Rippling Waves",
-        "desc": "After using a Basic ATK, advances Seele's next <u>action </u> by <nobr>20%</nobr>.",
+        "desc": "After using a Basic ATK, advances Seele's next <u>action </u> by 20%.",
         "type": "",
         "tag": "",
         "levels": [
@@ -2363,7 +2379,7 @@
         "promotionReq": 0,
         "statusList": [
           {
-            "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+            "key": "ATK increases by #1[f1]%",
             "value": 0.04
           }
         ],
@@ -2392,7 +2408,7 @@
         "promotionReq": 3,
         "statusList": [
           {
-            "key": "DEF increases by <nobr>#1[f1]%</nobr>",
+            "key": "DEF increases by #1[f1]%",
             "value": 0.05
           }
         ],
@@ -2426,7 +2442,7 @@
         "promotionReq": 5,
         "statusList": [
           {
-            "key": "ATK increases by <nobr>#1[f1]%</nobr>",
+            "key": "ATK increases by #1[f1]%",
             "value": 0.06
           }
         ],
